@@ -1,0 +1,145 @@
+---
+permalink: commands-category/replication-commands.html 
+sidebar: sidebar 
+keywords: replication, commands, consistency group, command, repository volume, 
+summary: レプリケーションコマンド 
+---
+= レプリケーションコマンド
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 整合グループのコマンド
+
+link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["整合グループにメンバーを追加します"]
+
+link:../commands-a-z/create-consistencygroup.html["整合グループを作成する"]
+
+link:../commands-a-z/create-cgsnapimage-consistencygroup.html["整合性グループのSnapshotイメージを作成する"]
+
+link:../commands-a-z/create-cgsnapvolume.html["整合性グループのSnapshotボリュームを作成します"]
+
+link:../commands-a-z/create-mapping-cgsnapvolume.html["整合性グループのSnapshotボリュームマッピングを作成します"]
+
+link:../commands-a-z/delete-consistencygroup.html["整合グループを削除します"]
+
+link:../commands-a-z/delete-cgsnapimage-consistencygroup.html["整合性グループのSnapshotイメージの削除"]
+
+link:../commands-a-z/delete-sgsnapvolume.html["整合性グループのSnapshotボリュームを削除します"]
+
+link:../commands-a-z/remove-member-volume-from-consistency-group.html["整合性グループからメンバーボリュームを削除します"]
+
+link:../commands-a-z/resume-cgsnapvolume.html["整合性グループのSnapshotボリュームを再開します"]
+
+link:../commands-a-z/set-consistency-group-attributes.html["整合グループの属性を設定します"]
+
+link:../commands-a-z/set-cgsnapvolume.html["整合性グループのSnapshotボリュームを設定します"]
+
+link:../commands-a-z/show-consistencygroup.html["整合グループを表示します"]
+
+link:../commands-a-z/show-cgsnapimage.html["整合性グループのSnapshotイメージの表示"]
+
+link:../commands-a-z/start-cgsnapimage-rollback.html["整合性グループのSnapshotロールバックを開始する"]
+
+link:../commands-a-z/stop-cgsnapimage-rollback.html["整合性グループのSnapshotロールバックを停止します"]
+
+link:../commands-a-z/stop-cgsnapvolume.html["整合性グループのSnapshotボリュームの停止"]
+
+link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["整合性グループ上の保留中のSnapshotイメージを停止します"]
+
+
+
+== リポジトリボリュームの分析のコマンド
+
+link:../commands-a-z/check-repositoryconsistency.html["リポジトリの整合性を確認します"]
+
+
+
+== Snapshotグループのコマンド
+
+link:../commands-a-z/create-snapgroup.html["Snapshotグループを作成します"]
+
+link:../commands-a-z/delete-snapvolume.html["Snapshotボリュームを削除します"]
+
+link:../commands-a-z/revive-snapgroup.html["Snapshotグループを回復します"]
+
+link:../commands-a-z/set-snapgroup.html["Snapshotグループの属性を設定します"]
+
+link:../commands-a-z/set-snapgroup-mediascanenabled.html["Snapshotグループのメディアスキャンの設定"]
+
+link:../commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html["Snapshotグループのリポジトリボリューム容量の設定"]
+
+link:../commands-a-z/set-snapgroup-enableschedule.html["Snapshotグループのスケジュールを設定します"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["ボリュームのSSDキャッシュを設定します"]
+
+link:../commands-a-z/show-snapgroup.html["Snapshotグループの表示"]
+
+link:../commands-a-z/stop-pendingsnapimagecreation.html["Snapshotグループの保留中のSnapshotイメージを停止します"]
+
+
+
+== Snapshotイメージのコマンド
+
+link:../commands-a-z/create-snapimage.html["Snapshotイメージを作成する"]
+
+link:../commands-a-z/delete-snapimage.html["Snapshotイメージを削除します"]
+
+link:../commands-a-z/resume-snapimage-rollback.html["Snapshotイメージのロールバックを再開します"]
+
+link:../commands-a-z/show-snapimage.html["Snapshotイメージの表示"]
+
+link:../commands-a-z/start-snapimage-rollback.html["Snapshotイメージのロールバックを開始します"]
+
+link:../commands-a-z/stop-snapimage-rollback.html["Snapshotイメージのロールバックを停止します"]
+
+
+
+== Snapshotボリュームのコマンド
+
+link:../commands-a-z/create-read-only-snapshot-volume.html["読み取り専用Snapshotボリュームを作成します"]
+
+link:../commands-a-z/create-snapshot-volume.html["Snapshotボリュームを作成します"]
+
+link:../commands-a-z/delete-snapgroup.html["Snapshotグループを削除します"]
+
+link:../commands-a-z/set-snapvolume.html["Snapshotボリュームの名前を変更します"]
+
+link:../commands-a-z/resume-snapvolume.html["Snapshotボリュームを再開します"]
+
+link:../commands-a-z/revive-snapvolume.html["Snapshotボリュームを回復します"]
+
+link:../commands-a-z/set-snapvolume-converttoreadwrite.html["読み取り専用Snapshotボリュームを読み取り/書き込みボリュームに設定します"]
+
+link:../commands-a-z/set-snapvolume-mediascanenabled.html["Snapshotボリュームのメディアスキャンの設定"]
+
+link:../commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html["Snapshotボリュームのリポジトリボリューム容量の設定"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["ボリュームのSSDキャッシュを設定します"]
+
+link:../commands-a-z/show-snapvolume.html["Snapshotボリュームの表示"]
+
+link:../commands-a-z/stop-snapvolume.html["Snapshotボリュームの停止"]
+
+
+
+== volume copyコマンド
+
+link:../commands-a-z/create-volumecopy.html["ボリュームコピーを作成する"]
+
+link:../commands-a-z/recopy-volumecopy-target.html["ボリュームコピーの再コピー"]
+
+link:../commands-a-z/remove-volumecopy-target.html["ボリュームコピーを削除する"]
+
+link:../commands-a-z/set-volumecopy-target.html["ボリュームコピーを設定する"]
+
+link:../commands-a-z/show-volumecopy.html["ボリュームコピーの表示"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["ボリュームコピーのソース候補の表示"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["ボリュームコピーのターゲット候補の表示"]
+
+link:../commands-a-z/stop-volumecopy-target-source.html["ボリュームコピーの停止"]

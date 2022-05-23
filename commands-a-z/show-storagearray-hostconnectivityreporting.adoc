@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: show, storage, array, host, connectivity, report 
+summary: show storageArray hostConnectivityReportingコマンドは、ホスト接続レポート機能の有効化ステータスを返します。 
+---
+= ストレージアレイのホスト接続のレポートの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray hostConnectivityReporting」コマンドは、ホスト接続レポート機能の有効化ステータスを返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray hostConnectivityReporting
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.42新しいコマンドパラメータ。

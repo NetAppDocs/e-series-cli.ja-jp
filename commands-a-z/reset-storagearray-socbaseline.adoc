@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/reset-storagearray-socbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, soc, baseline 
+summary: reset storageArray SOCBaselineコマンドは、コントローラ経由でアクセスされるすべてのSwitch-On-a-Chip（SOC）デバイスのベースラインをリセットします。 
+---
+= ストレージアレイのSOCベースラインをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray SOCBaseline'コマンドは、コントローラを介してアクセスされるすべてのSwitch-On-a-Chip（SOC）デバイスのベースラインをリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、すべてのSOCの数を0に設定することで、ベースラインをリセットします。このコマンドは、アービトレーテッドループトポロジ内のFibre Channelデバイスに対してのみ有効です。
+
+
+
+== 構文
+
+[listing]
+----
+reset storageArray SOCBaseline
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.16

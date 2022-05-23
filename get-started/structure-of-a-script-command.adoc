@@ -1,0 +1,161 @@
+---
+permalink: get-started/structure-of-a-script-command.html 
+sidebar: sidebar 
+keywords: structure, script command 
+summary: すべてのスクリプトコマンドは次の構造になります。 
+---
+= スクリプトコマンドの構造
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+すべてのスクリプトコマンドは次の構造になります。
+
+[listing]
+----
+
+      *command operand-data* (*statement-data*)
+----
+* 「command」は実行するアクションを示します。
+* operator-dataは'構成または管理するストレージ・アレイに関連づけられているオブジェクトを表します
+* 「statement-data」はコマンドを実行するために必要な情報を提供します。
+
+
+`_operator-data_`の構文は次の構造を持っています
+
+[listing]
+----
+(*object-type* | all *object-types* | [*qualifier*] (*object-type* [*identifier*] (*object-type* [*identifier*] | *object-types* [*identifier-list*])))
+----
+オブジェクトは次の4つの方法で識別できます。
+
+* オブジェクトタイプ--コマンドが特定のオブジェクトを参照していない場合に使用します
+* `*all*`パラメータ接頭辞--コマンドがストレージアレイ内の指定された型のすべてのオブジェクトを参照している場合に使用します(例:`*allVolumes *')
+* 角括弧--特定のオブジェクトに対してコマンドを実行してオブジェクトを識別するときに使用します(例:'*volume[engineering]*')
+* 識別子のリスト--一部のオブジェクトを指定するために使用しますオブジェクト識別子は角かっこで囲みます（例：「* volumes [sales engineering marketing]*」）。
+
+
+追加情報 にオブジェクトの説明を含める場合は、修飾子が必要です。
+
+オブジェクトタイプと各オブジェクトタイプに関連付けられている識別子を次の表に示します。
+
+[cols="2*"]
+|===
+| オブジェクトタイプ（ Object Type ） | 識別子 
+
+
+ a| 
+「* controller *」と入力します
+ a| 
+a または b
+
+
+
+ a| 
+'*drive*'
+ a| 
+ドロワーを備えたエンクロージャの場合は、トレイID、ドロワーID、およびスロットIDを使用します。または、トレイIDとスロットIDのみを使用します。
+
+
+
+ a| 
+'*replacementDrive*'
+ a| 
+ドロワーを備えたエンクロージャの場合は、トレイID、ドロワーID、およびスロットIDを使用します。または、トレイIDとスロットIDのみを使用します。
+
+
+
+ a| 
+「* driveChannel *」
+ a| 
+ドライブチャネルの識別子
+
+
+
+ a| 
+「* host *」と入力します
+ a| 
+ユーザラベル
+
+
+
+ a| 
+「* hostChannel *」と入力します
+ a| 
+ホストチャネル識別子
+
+
+
+ a| 
+「* hostGroup *」と入力します
+ a| 
+ユーザラベル
+
+
+
+ a| 
+「*ホストポート*」
+ a| 
+ユーザラベル
+
+
+
+ a| 
+「* iscsiInitiator *」と入力します
+ a| 
+ユーザラベルまたはiSCSI Qualified Name（IQN）
+
+
+
+ a| 
+「* iscsiTarget *」と入力します
+ a| 
+ユーザラベルまたはIQN
+
+
+
+ a| 
+「* storageArray *」と入力します
+ a| 
+該当なし
+
+
+
+ a| 
+「*トレイ*」
+ a| 
+トレイID
+
+
+
+ a| 
+'*volume*
+ a| 
+ボリューム・ユーザー・ラベルまたはボリュームのWorld Wide Identifier（WWID）（setコマンドのみ）
+
+
+
+ a| 
+「* VolumeCopy *」
+ a| 
+ターゲットボリュームのユーザラベルと、必要に応じてソースボリュームのユーザラベルも指定します
+
+
+
+ a| 
+'*volumeGroup *
+ a| 
+ユーザラベル
+
+有効な文字は、英数字、ハイフン、アンダースコアです。
+
+|===
+ステートメントデータは次の形式になります。
+
+* パラメータ=値(`*raidLevel=5*`など)
+* パラメータ名(`*batteryInstallDate*`など)
+* オペレーション名(`*redundancyCheck*`など)
+
+
+ユーザ定義エントリ（ユーザラベルなど）は変数と呼ばれます。構文では斜体で表示されます(例: trayID'または'volumeGroupName')

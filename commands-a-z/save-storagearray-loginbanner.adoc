@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/save-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: save, storage, array, login, banner 
+summary: save storageArray loginBannerコマンドを使用すると、ログインバナーをローカルマシンに保存できます。バナーテキストには、ユーザがセッションを確立する前に表示される注意と同意を求めるメッセージを含めることができます。 
+---
+= ストレージアレイのログインバナーを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray loginBanner'コマンドを使用すると、ログインバナーをローカルマシンに保存できます。バナーテキストには、ユーザがセッションを確立する前に表示される注意と同意を求めるメッセージを含めることができます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドは、どのロールのユーザも実行できます。
+
+
+
+== 構文
+
+[listing]
+----
+save storageArray loginBanner file="file_name"
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+ログインバナーファイルの名前。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

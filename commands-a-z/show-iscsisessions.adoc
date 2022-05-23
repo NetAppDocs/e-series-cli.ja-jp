@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/show-iscsisessions.html 
+sidebar: sidebar 
+keywords: show, current, iscsi, sessions 
+summary: show iscsiSessionsコマンドは、iSCSIイニシエータまたはiSCSIターゲットのiSCSIセッションに関する情報を返します。 
+---
+= 現在のiSCSIセッションを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show iscsiSessionsコマンドは'iSCSIイニシエータまたはiSCSIターゲットのiSCSIセッションに関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show iscsiInitiator pass:quotes[["_initiatorName_"] | <"iqn">] iscsiSessions
+----
+[listing, subs="+macros"]
+----
+show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「iscsiInitiator」と入力します
+ a| 
+セッション情報を取得するiSCSIイニシエータの名前。
+
+iSCSIイニシエータがラベルまたはエイリアスを使用している場合は、そのラベルまたはエイリアスを二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+iSCSIイニシエータがiSCSI修飾名（IQN）を使用している場合は、IQNを二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+
+
+ a| 
+「iscsiTarget」と入力します
+ a| 
+セッション情報を取得するiSCSIターゲットの名前。
+
+iSCSIターゲットがラベルまたはエイリアスを使用している場合は、iSCSIターゲットラベルまたはエイリアスを二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+iSCSIターゲットがiSCSI修飾名（IQN）を使用している場合は、IQNを二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドを引数なしで入力すると、現在実行中のすべてのiSCSIセッションに関する情報が返されます。次のコマンドは、現在のすべてのiSCSIセッションに関する情報を返します。
+
+[listing]
+----
+show iscsiSessions
+----
+情報を限定するには、特定のiSCSIイニシエータまたはiSCSIターゲットを入力します。このコマンドは、指定したiSCSIイニシエータまたはiSCSIターゲットのセッションに関する情報のみを返します。
+
+イニシエータ名は、1~30文字の英数字を任意に組み合わせて指定できます。IQNは255文字以内で指定し、次の形式を使用します。
+
+[listing]
+----
+iqn.yyyy-mm.naming-authority:unique name
+----
+
+
+== 最小ファームウェアレベル
+
+7.10

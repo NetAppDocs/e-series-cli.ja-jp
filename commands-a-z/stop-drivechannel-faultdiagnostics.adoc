@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/stop-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: stop, drive, channel, fault, isolation, diagnostics 
+summary: stop driveChannel faultDiagnosticsコマンドは、ドライブチャネルの障害切り分け診断を停止します。これにより、start drive channel fault isolation diagnosticsコマンドが完了する前に停止します。 
+---
+= ドライブチャネルの障害切り分け診断を停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop driveChannel faultDiagnosticsコマンドは'ドライブ・チャネルの障害切り分け診断を停止しますこれにより'start drive channel fault isolation diagnosticsコマンドが完了する前に停止します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェアバージョン8.10では、「stop driveChannel faultDiagnostics」コマンドは廃止されました。
+
+====
+
+
+== 構文
+
+[listing]
+----
+stop driveChannel faultDiagnostics
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+start driveChannel faultDiagnosticsコマンドと'stop driveChannel faultDiagnosticsコマンドを使用しますこれらのコマンドは、診断テストを開始し、診断テストの結果をファイルに保存するために必要です。
+
+「start driveChannel faultDiagnostics」コマンドは、Ctrl + Cキーを押すといつでも停止できます。
+
+
+
+== 最小ファームウェアレベル
+
+7.15

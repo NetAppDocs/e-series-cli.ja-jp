@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/delete-snapgroup.html 
+sidebar: sidebar 
+keywords: delete, snapgroup, command, entire, snapshot, group, option, associate, repository, volume 
+summary: DELETE SnapGroupコマンドは、Snapshotグループ全体、およびオプションで関連付けられているリポジトリボリュームを削除します。 
+---
+= Snapshotグループを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete snapGroupコマンドは'スナップショット・グループ全体と'オプションで関連するリポジトリ・ボリュームを示します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+*ストレージアレイ構成への損傷の可能性*--このコマンドを実行するとすぐに'スナップショットグループ内のすべてのデータが失われます
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapGroup ["_snapGroupName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+削除するSnapshotグループの名前。Snapshotグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+deleteRepositoryMembersを指定します
+ a| 
+リポジトリボリュームを削除または保存するパラメータ。リポジトリ・ボリュームを削除するには'このパラメータをTRUEに設定しますリポジトリボリュームを保存するには'このパラメータをFALSEに設定しますデフォルト値は'FALSE'です
+
+|===
+
+
+== 注：
+
+ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
+
+Snapshotグループは、空の場合、またはSnapshotイメージが含まれている場合に削除できます。Snapshotグループ内のすべてのSnapshotイメージが、Snapshotグループと一緒に削除されます。Snapshotグループ内の既存のSnapshotイメージに関連付けられているSnapshotボリュームがある場合は、各Snapshotボリュームが停止され、Snapshotイメージとの関連付けが解除されます。Snapshotグループを削除すると、関連付けられているリポジトリボリュームも削除されます。デフォルトでは、リポジトリボリューム内のすべてのメンバーボリュームが、未使用でマッピングされていない標準ボリュームとして保持されます。メンバー・ボリュームを削除するには'deleteRepositoryMembers'パラメータをTRUEに設定するか'このパラメータを使用しないでくださいメンバー・ボリュームを保持するには'deleteRepositoryMembers'パラメータを'FALSE'に設定します
+
+
+
+== 最小ファームウェアレベル
+
+7.83

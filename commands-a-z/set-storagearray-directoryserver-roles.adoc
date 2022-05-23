@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver-roles.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server, role, map 
+summary: set storageArray DirectoryServer rolesコマンドでは、指定したディレクトリサーバのロールマッピングを定義できます。ロールマッピングは、各種のSMcliコマンドを実行しようとするユーザを認証するために使用されます。 
+---
+= ストレージアレイのディレクトリサーバのロールマッピングの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray DirectoryServer rolesコマンドでは、指定したディレクトリサーバのロールマッピングを定義できます。ロールマッピングは、各種のSMcliコマンドを実行しようとするユーザを認証するために使用されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 必要なもの
+
+マッピングできるロールは次のとおりです。
+
+* * Storage admin *--ストレージ・オブジェクト（ボリュームやディスク・プールなど）への読み取り/書き込みのフル・アクセス。セキュリティ構成へのアクセスはありません。
+* * Security admin *--アクセス管理、証明書管理、監査ログ管理のセキュリティ構成へのアクセス、および従来の管理インターフェイス（SYMbol）のオン/オフの切り替え機能。
+* * Support admin *--ストレージアレイのすべてのハードウェアリソース、障害データ、MELイベント、およびコントローラファームウェアアップグレードへのアクセス。ストレージオブジェクトやセキュリティ設定にはアクセスできません。
+* *Monitor *--すべてのストレージオブジェクトへの読み取り専用アクセスが可能ですが、セキュリティ設定へのアクセスはありません。
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer pass:quotes[["_domainId_"]]
+    groupDN=pass:quotes["_groupDistinguishedName_"] roles=pass:quotes[("_role1_"..."_roleN_")]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「DirectoryServer」を参照してください
+ a| 
+ロールマッピングを設定するドメインをIDで指定できます。
+
+
+
+ a| 
+「groupDN」
+ a| 
+マッピングリストに追加するグループの識別名（DN）を指定できます。
+
+
+
+ a| 
+「役割」
+ a| 
+定義したグループ内のユーザに1つ以上のロールを指定できます。複数のロールを入力する場合は、値をスペースで区切ります。有効な選択肢は次のとおりです。
+
+* 「storage.monitor」
+* 「storage.admin」
+* 「security.admin」と入力します
+* 「support.admin」と入力します
+
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-hsg-bc-madridsecurity,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("storage.monitor" "security.admin" "storage.admin");"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-epg-engr-manageability,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("support.admin");"
+
+SMcli completed successfully.
+----

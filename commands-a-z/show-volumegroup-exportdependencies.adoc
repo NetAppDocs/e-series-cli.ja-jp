@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/show-volumegroup-exportdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, export, dependencies 
+summary: show volumeGroup exportDependenciesコマンドは、1つのストレージアレイから2つ目のストレージアレイに移動するボリュームグループ内のドライブの依存関係のリストを表示します。 
+---
+= ボリュームグループのエクスポート依存関係の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show volumeGroup exportDependenciesコマンドは'あるストレージ・アレイから別のストレージ・アレイに移動するボリューム・グループ内のドライブの依存関係のリストを表示します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] exportDependencies
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+エクスポート依存関係を表示するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドは、ボリュームグループ内のドライブをスピンアップし、DACstoreを読み取った上で、ボリュームグループのインポート依存関係のリストを表示します。ボリュームグループはエクスポート状態または強制状態である必要があります。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

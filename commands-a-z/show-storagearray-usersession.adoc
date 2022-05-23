@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-usersession.html 
+sidebar: sidebar 
+keywords: display, storage, array, user, session 
+summary: show storageArray userSessionコマンドを使用すると、System Managerのセッションタイムアウト時間を表示できます。 
+---
+= ストレージアレイのユーザセッションを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray userSession」コマンドを使用すると、System Managerのセッションタイムアウト時間を表示できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support AdminまたはStorage Monitorロールが必要です。
+
+
+
+== パラメータ
+
+なし
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray userSession
+----
+
+
+== 最小ファームウェアレベル
+
+8.41

@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-allhostports.html 
+sidebar: sidebar 
+keywords: show, host, ports 
+summary: show allHostPortsコマンドは、設定されているホストポートに関する情報を返します。 
+---
+= ホストポートを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allHostPorts」コマンドは、設定されたホストポートに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ストレージアレイに接続されているすべてのホストポートについて次の情報を返します。
+
+* ホストポートの識別子
+* ホストポート名
+* ホストタイプ
+
+
+
+
+== 構文
+
+[listing]
+----
+show allHostPorts
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドから返されるHBAホストポート情報の例を次に示します。
+
+[listing]
+----
+HOST PORT IDENTIFIER     HOST PORT NAME  HOST TYPE
+12:34:56:54:33:22:22:22  Jupiter1        Solaris
+12:34:56:78:98:98:88:88  Pluto1          Windows 2000/Server 2003 Clustered
+54:32:12:34:34:55:65:66  Undefined       Undefined
+----
+
+
+== 最小ファームウェアレベル
+
+5.40

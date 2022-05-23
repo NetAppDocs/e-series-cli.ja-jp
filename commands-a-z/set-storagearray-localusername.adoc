@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/set-storagearray-localusername.html 
+sidebar: sidebar 
+keywords: set, storage, array, local, user, password, symbol 
+summary: set storageArray localUsernameコマンドとset storageArray symbolコマンドでは、特定のロールのローカルユーザ名パスワードまたはSYMbolパスワードを設定できます。 
+---
+= ストレージアレイのローカルユーザパスワードまたはSYMbolパスワードを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray localUsernameコマンドとset storageArray symbolコマンドを使用すると、特定のロールにローカルユーザ名パスワードまたはSYMbolパスワードを設定できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set storageArray (localUsername=pass:quotes[{ _admin_ | _storage_ | _security_ | _support_ | _monitor_}]
+| symbol [userRole={admin | monitor}])
+password="string" adminPassword="string"
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「localUsername」と入力します
+ a| 
+パスワードを変更するユーザを指定できます。有効な選択肢は、「admin」、「storage」、「support」、「monitor」、「security」です。
+
+
+
+ a| 
+「symbol」
+ a| 
+SYMbolパスワードを変更できます。有効な選択肢は「admin」と「monitor」です。
+
+[NOTE]
+====
+これは、非推奨の「set storageArray password’コマンドに代わるコマンドです。
+
+====
+
+
+ a| 
+「 password 」と入力します
+ a| 
+ロールのパスワードを指定できます。
+
+
+
+ a| 
+「adminPassword」のように入力します
+ a| 
+adminパスワードを指定できます。adminパスワードは新しいパスワードを設定する際に必要です。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray localUsername=storage password="newPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray localUsername=admin password="newAdminPassword" adminPassword="theAdminPassword";"
+SMcli -n Array1 -c "set storageArray symbol userRole=admin password="newSymbolPassword" adminPassword="theAdminPassword";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40で、コマンドが追加されました。

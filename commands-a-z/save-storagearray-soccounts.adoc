@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/save-storagearray-soccounts.html 
+sidebar: sidebar 
+keywords: save, storage, array, soc, counts 
+summary: save storageArray SOCCountsコマンドは、SOCエラー統計をファイルに保存します。 
+---
+= ストレージアレイのSOCカウンタを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray SOCCountsコマンドは'SOCエラー統計をファイルに保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、アービトレーテッドループトポロジ内のFibre Channelデバイスに対してのみ有効です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray SOCCounts file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+SOCエラー統計の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\logs\sockstat.csv "`
+
+SOCエラー統計を格納するファイルのデフォルト名は、「SoC-statistics.csv」です。任意のファイル名を使用できますが'.csv拡張子を使用する必要があります
+
+|===
+
+
+== 注：
+
+SOCエラー統計を効率的にファイルに保存するには、次の手順を実行します。
+
+. すべてのSOCカウンタを0に設定するには、「reset storageArray SOCBaseline.」コマンドを実行します。
+. ストレージアレイをあらかじめ決めた時間だけ実行します（2時間など）。
+. save storageArray SOCCountsファイル`="[.code]`_filename_`コマンドを実行します。
+
+
+
+
+== 最小ファームウェアレベル
+
+6.16

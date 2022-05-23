@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/download-storagearray-drivefirmware-file.html 
+sidebar: sidebar 
+keywords: download, storage, array, drive, firmware, command, images, roles, supported 
+summary: download storageArray driveFirmware fileコマンドは、ストレージアレイ内のすべてのドライブにファームウェアイメージをダウンロードします。 
+---
+= ストレージアレイのドライブファームウェアをダウンロードします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download storageArray driveFirmware fileコマンドは、ストレージアレイ内のすべてのドライブにファームウェアイメージをダウンロードします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[download storageArray driveFirmware file="_filename_"]
+pass:quotes[[file="_filename2_"... file="_filenameN_"]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+ファームウェアイメージが含まれているファイルのファイルパスとファイル名。ファームウェアイメージのファイルパスとファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\dnld\scadrvfrm.dlp "`
+
+有効なファイル名の拡張子は「.dlp」です。
+
+|===
+
+
+== 注：
+
+このコマンドを実行すると、ストレージアレイ内のドライブに複数のファームウェアイメージファイルをダウンロードできます。ダウンロード可能なファームウェアイメージファイルの数は、ストレージアレイによって異なります。ストレージアレイの許容数よりも多くのファームウェアイメージファイルをダウンロードしようとすると、ストレージ管理ソフトウェアはエラーを返します。
+
+冗長ボリュームグループ内の複数のドライブを含めて、複数のドライブのダウンロードを同時にスケジュールできます。各ファームウェアイメージファイルには、ファームウェアイメージが実行されるドライブタイプに関する情報が含まれています。指定したファームウェアイメージは、互換性のあるドライブにのみダウンロードできます。特定のドライブにファームウェア・イメージをダウンロードするには'download drive firmware'コマンドを使用します
+
+download storageArray driveFirmware'コマンドは'各候補ドライブに対してダウンロードが試行されるか'stop storageArray downloadDriveFirmware'コマンドを実行するまで'すべてのI/Oアクティビティをブロックしますdownload storageArray driveFirmware'コマンドがファームウェアイメージのダウンロードを完了すると、各候補ドライブは各ドライブのダウンロードステータスを表示します。次のいずれかのステータスが返されます。
+
+* 成功しました
+* 理由で失敗しました
+* 理由がない
+
+
+
+
+== 最小ファームウェアレベル
+
+5.20

@@ -1,0 +1,351 @@
+---
+permalink: commands-a-z/set-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: set, iscsi, initiator 
+summary: set iscsiInitiatorコマンドは、iSCSIイニシエータの属性を設定します。 
+---
+= iSCSIイニシエータを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set iscsiInitiatorコマンドは'iSCSIイニシエータの属性を設定します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:set-initiator.adoc[イニシエータの設定] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set iscsiInitiator (pass:quotes[["_initiatorUserLabel_"]] | <"_iscsiInitiatorName_">)
+(userLabel=pass:quotes["_newName_"] |
+host=pass:quotes["_newHostName_"] |
+chapSecret=pass:quotes["_newSecurityKey_"])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「initiatorUserLabel」のように入力します
+ a| 
+属性を設定するiSCSIイニシエータのユーザラベル。iSCSIイニシエータのユーザラベルは、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+[NOTE]
+====
+イニシエータのユーザラベルの先頭には、ホストポートが接続されているホスト名を指定します。ホストにはホストポート識別子が複数存在する可能性があるため、ホストポートIDには一意のサフィックスを使用します。ホスト名がICTM1590S02H1の場合、イニシエータラベルは次のようになります。
+
+====
+[listing]
+----
+set iscsiInitiator ["ICTM1590S02H1_AA"]
+----
+
+
+ a| 
+「iscsiInitiatorName」のように指定します
+ a| 
+属性を設定するイニシエータの名前。「iscsiInitiatorName」は、二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+[NOTE]
+====
+「iscsiInitiatorName」は、iSCSI Qualified Name（iqn）です。次に例を示します。
+
+====
+[listing]
+----
+set iscsiInitiator <"iqn.2016-11.com.vmware.iscsi:ictm1509s02h1">
+----
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+iSCSIイニシエータに使用する新しいユーザラベル。新しいユーザラベルは二重引用符（""）で囲みます。
+
+[NOTE]
+====
+イニシエータユーザラベルは、ホストポートが接続されているホスト名で始めることを推奨します。ホストにはホストポート識別子が複数存在する可能性があるため、ホストポートIDには一意のサフィックスを使用します。ホスト名がICTM1590S02H1の場合、イニシエータのユーザラベルの例を次に示します。
+
+====
+[listing]
+----
+set iscsiInitiator ["ICTM1590S02H1_AA"]
+----
+
+
+ a| 
+ホスト
+ a| 
+ホストポートを接続する新しいホストの名前。ホスト名は二重引用符（""）で囲みます。次に例を示します。
+
+[listing]
+----
+["ICTM1590S02H2"]
+----
+
+
+ a| 
+「チャプターシークレット」
+ a| 
+ピア接続の認証に使用するセキュリティキー。セキュリティキーは二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+チャレンジハンドシェイク認証プロトコル（CHAP）は、接続のピアを認証するプロトコルです。CHAPは、_secret_を共有するピアに基づいています。シークレットとは、パスワードのようなセキュリティキーのことです。
+
+相互認証を必要とするイニシエータのセキュリティ・キーを設定するには'chapSecretパラメータを使用しますCHAPシークレットは12~57文字で指定する必要があります。次の表に、有効な文字を示します。
+
+[cols="1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a"]
+|===
+
+
+ a| 
+スペース
+ a| 
+！
+ a| 
+"
+ a| 
+#
+ a| 
+$
+ a| 
+%
+ a| 
+&
+ a| 
+'
+ a| 
+（
+ a| 
+)
+ a| 
+*
+ a| 
+
+
+
+ a| 
+、
+ a| 
+-
+ a| 
+。
+ a| 
+/
+ a| 
+0
+ a| 
+1.
+ a| 
+2.
+ a| 
+3.
+ a| 
+4.
+ a| 
+5.
+ a| 
+6.
+ a| 
+7.
+
+
+
+ a| 
+8.
+ a| 
+9.
+ a| 
+：
+ a| 
+;
+ a| 
+<
+ a| 
+=
+ a| 
+>
+ a| 
+？
+ a| 
+@
+ a| 
+A
+ a| 
+B
+ a| 
+C
+
+
+
+ a| 
+D
+ a| 
+E
+ a| 
+F
+ a| 
+G
+ a| 
+h
+ a| 
+私
+ a| 
+J
+ a| 
+K
+ a| 
+L
+ a| 
+M
+ a| 
+N
+ a| 
+o
+
+
+
+ a| 
+P
+ a| 
+Q
+ a| 
+R
+ a| 
+s
+ a| 
+t
+ a| 
+U
+ a| 
+V
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+[
+
+
+
+ a| 
+\
+ a| 
+]
+ a| 
+^
+ a| 
+_
+ a| 
+'
+ a| 
+A
+ a| 
+B
+ a| 
+C
+ a| 
+D ： \
+ a| 
+E
+ a| 
+F
+ a| 
+G
+
+
+
+ a| 
+h
+ a| 
+私
+ a| 
+J
+ a| 
+K
+ a| 
+L
+ a| 
+M
+ a| 
+N
+ a| 
+o
+ a| 
+P
+ a| 
+Q
+ a| 
+R
+ a| 
+s
+
+
+
+ a| 
+t
+ a| 
+U
+ a| 
+V
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+｛
+ a| 
+|
+ a| 
+｝
+ a| 
+~
+ a| 
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.41で、このコマンドは廃止されました。

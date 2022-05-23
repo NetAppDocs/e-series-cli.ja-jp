@@ -1,0 +1,111 @@
+---
+permalink: commands-a-z/stop-cgsnapimage-rollback.html 
+sidebar: sidebar 
+keywords: stop, consistency, group, snapshot, rollback 
+summary: stop cgSnapImage rollbackコマンドを実行すると、Snapshot整合性グループ内のメンバーベースボリュームへのロールバック処理が停止します。 
+---
+= 整合性グループのSnapshotロールバックを停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop cgSnapImage rollbackコマンドは'スナップショット・コンシステンシ・グループのメンバー・ベース・ボリュームへのロールバック・オペレーションを停止します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+整合性グループのSnapshotのロールバック処理をキャンセルすると、ベースボリュームが不確定な状態になり、データが無効になるか整合性を失う可能性があります。関連する整合性グループのSnapshotボリュームは無効になり、使用できなくなります。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop cgSnapImage["_snapCGID:imageID_"]] rollback
+memberVolumeSet pass:quotes[("_memberVolumeName1_" ... "_memberVolumeNamen_")]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「cgSnapImage」をクリックします
+ a| 
+ロールバック処理を停止する整合性グループのSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新--スナップショットグループで作成された最新のスナップショットイメージを表示する場合に'このオプションを使用します
+* oldest --スナップショットグループで作成された最も古いスナップショットイメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「memberVolumeSet」をクリックします
+ a| 
+ロールバック処理を停止する整合性グループ内のメンバーベースボリュームの名前。各メンバーベースボリューム名は、二重引用符（""）で囲んだ上で丸かっこで囲みます。
+
+複数のメンバーベースボリューム名を入力できます。すべてのメンバーベースボリューム名を1組の角かっこ（[]）で囲みます。各メンバーベースボリューム名は二重引用符（""）で囲みます。メンバーベースボリューム名はそれぞれスペースで区切ります。
+
+memberVolumeSet'パラメータが使用されていない場合は'ロールバック・プロセスを停止します環境 は'コンシステンシ・グループのすべてのメンバー・ボリュームを停止します
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、CG1という名前の整合性グループ内にある最新のSnapshotイメージのロールバック処理を停止する場合は、次のコマンドを使用します。
+
+[listing]
+----
+stop cgSnapImage ["CG1:newest"] rollback;
+----
+CG2という名前の整合性グループ内にあるベースボリュームメンバーmemVol1、memVol2、memVol3のSnapshotイメージ12345のロールバック処理を停止するには、次のコマンドを使用します。
+
+[listing]
+----
+stop cgSnapImage ["CG2:12345"] rollback memberVolumeset=("memVol1 memVol2 memVol3");
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/clear-syslog-configuration.html 
+sidebar: sidebar 
+keywords: clear, syslog, configuration 
+summary: clear syslog configurationコマンドは、syslogアラート情報をクリアします。 
+---
+= syslog設定をクリアします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear syslog configurationコマンドは、syslogアラート情報をクリアします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+clear syslog configuration
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "clear syslog configuration;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

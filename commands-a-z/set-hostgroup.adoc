@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-hostgroup.html 
+sidebar: sidebar 
+keywords: set, host, group 
+summary: set hostGroupコマンドは、ホストグループの名前を変更します。 
+---
+= ホストグループを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set hostGroupコマンドは'ホスト・グループの名前を変更します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set hostGroup pass:quotes[[_hostGroupName_]]
+userLabel=pass:quotes["_newHostGroupName_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「hostGroup」と入力します
+ a| 
+名前を変更するホストグループの名前。ホストグループ名は角かっこ（[]）で囲みます。ホストグループ名に特殊文字または数字が含まれている場合は、ホストグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+ホストグループの新しい名前。新しいホストグループ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+6.10

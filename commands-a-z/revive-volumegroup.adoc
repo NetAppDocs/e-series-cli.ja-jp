@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/revive-volumegroup.html 
+sidebar: sidebar 
+keywords: revive, volume, group 
+summary: volumeGroupコマンドは、指定したボリュームグループとその関連する障害が発生したドライブを強制的に最適な状態に回復します。 
+---
+= ボリュームグループを回復します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「revive volumegroup」コマンドは、指定されたボリュームグループとその関連する障害が発生したドライブを強制的に最適な状態に設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+*データアクセスが失われる可能性*-このコマンドの正しい使用方法は、ボリュームグループ内のすべてのドライブのデータ構成によって異なります。テクニカルサポートの指示がないかぎり、ドライブの再活性化を試行しないでください。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+revive volumeGroup pass:quotes[[_volumeGroupName_]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+最適状態に設定するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

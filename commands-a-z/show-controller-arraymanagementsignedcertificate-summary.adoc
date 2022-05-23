@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html 
+sidebar: sidebar 
+keywords: show, signed, certificate 
+summary: show controller arrayManagementSignedCertificate summaryコマンドは、指定したコントローラの現在の署名済み証明書の概要を表示します。 
+---
+= 署名済み証明書を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show controller arrayManagementSignedCertificate summaryコマンドは、指定されたコントローラからの現在の署名付き証明書の概要を表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+show controller [(a|b)] arrayManagementSignedCertificate summary
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ルート/中間証明書を取得するコントローラを指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 例
+
+出力例は、以下に示すものと異なる場合があります。
+
+[listing]
+----
+
+SMcli -n Array1 -c "show controller[a] arrayManagementSignedCertificate all summary;"
+
+============================
+Controller A Signed Certificate
+============================
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+Start:        <date>
+Expire:       <date>
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/delete-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
+summary: delete storageArray trustedCertificateコマンドは、指定されたユーザがインストールしたCA証明書をアレイのWebサーバから削除します。 
+---
+= インストールされている信頼されたCA証明書を
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete storageArray trustedCertificate'コマンドは'指定されたユーザーがインストールしたCA証明書をアレイのWebサーバから削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[delete storageArray trustedCertificate [(allUserInstalled |
+aliases=("_alias1_" ... "_aliasN_]"))]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allUserInstalled」
+ a| 
+ユーザがインストールした証明書をすべて削除するように指定できます。
+
+
+
+ a| 
+「別名」
+ a| 
+削除する1つ以上のCA証明書をエイリアス名を使用して指定するか、またはすべての証明書を指定できます。エイリアスは任意のコントローラから指定できます。すべてのエイリアスをかっこで囲みます。複数のエイリアスを入力する場合は、エイリアスをスペースで区切ります。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate allUserInstalled;"
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate
+   aliases=("19527b38-8d26-44e5-8c7f-5bf2ca9db7cf" "04bf744c-413a-49f1-9666-88d74189591d");"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

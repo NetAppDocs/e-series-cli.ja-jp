@@ -1,0 +1,135 @@
+---
+permalink: commands-a-z/set-controller-ntpservers.html 
+sidebar: sidebar 
+keywords: set, controller, ntp 
+summary: set controller NTPServersコマンドは、コントローラのNTP設定を行い、コントローラがSNTP（Simple Network Time Protocol）を使用してクロックを外部ホストと自動的に同期できるようにします。 
+---
+= コントローラのNTPを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set controller NTPServers'コマンドは、コントローラのNTP設定を設定し、コントローラがSNTP（Simple Network Time Protocol）を使用してクロックを外部ホストと自動的に同期できるようにします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この機能を有効にすると、コントローラは設定されたNTPサーバを定期的に照会し、その結果を使用して内部のクロックを更新します。一方のコントローラだけでNTPが有効になっている場合、代替コントローラのクロックはNTPが有効なコントローラと定期的に同期されます。どちらのコントローラでもNTPが有効になっていない場合は、定期的にコントローラ間で相互にクロックが同期されます。
+
+[NOTE]
+====
+このコマンドはコントローラ固有です。両方のコントローラでNTPを設定する必要はありませんが、設定しておくことで、ハードウェア障害や通信障害が発生した場合にアレイの同期度が向上します。
+
+====
+[NOTE]
+====
+完全修飾ドメイン名を使用してNTPを設定する場合、操作が成功するためにはそれらのコントローラにもDNSを設定する必要があります。を参照してください xref:set-controller-dnsservers.adoc[コントローラのDNS設定を指定します] を参照してください。
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+NTP設定を変更するコントローラ。有効なコントローラ識別子は、aまたはbです
+
+
+
+ a| 
+「NTPサーバ」
+ a| 
+このパラメータは、コントローラのNTPサーバを設定します。
+
+* NTPサポートをオフにするには'disabled'を指定します
+* DHCPサーバから提供されるNTPサーバ・アドレスを使用するには'auto'を指定します
++
+[NOTE]
+====
+このオプションは、コントローラの少なくとも1つの管理ポートがDHCP経由でインターフェイスパラメータを取得するように設定され、かつDHCPサーバにNTPサーバが少なくとも1つ設定されている場合にのみ使用してください。
+
+====
+* それ以外の場合は、1つまたは2つのNTPサーバをスペースで区切って指定します。アドレスは、ドメイン名、IPv4アドレス、またはIPv6アドレスのいずれかで指定できます。複数のアドレスを指定する場合、アドレスタイプが一致している必要はありません。複数のアドレスを指定すると、指定した順にアドレスが使用されます（1番目がプライマリアドレス、2番目がバックアップアドレス）。
+
+
+[NOTE]
+====
+「例」セクションに示すように、NTPサーバ名は引用符で囲む必要があります。
+
+====
+
+
+ a| 
+「住所」
+ a| 
+"DomainName"| IPv4Address | IPv6Address
+
+[NOTE]
+====
+ドメイン名を指定する場合は、コントローラがサーバのIPアドレスを解決できるようにDNSサーバも設定する必要があります。
+
+====
+
+
+ a| 
+「keyIdentifier」は「KeyType」です
+
+パスフレーズ
+ a| 
+必要に応じて、次のパラメータでNTP認証を有効にするためのキークレデンシャルを指定できます。
+
+* 'key Identifier'は0～65535の整数です
+* 「KeyType」は、none、sha1、sha224、sha256、sha384、sha512のいずれかです。
+* 「passphrase」は、stringLiteralとして入力される40桁の16進数（0~9およびa~f）、または最長20バイトの英数字文字列のいずれかです。
+
+
+|===
+
+
+== 例
+
+[listing]
+----
+set controller[a] NTPServers=disabled;
+set controller[a] NTPServers=auto;
+set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+----
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+8.42で、NTP認証用のキークレデンシャルパラメータが追加されました。

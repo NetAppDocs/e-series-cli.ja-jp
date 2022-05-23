@@ -1,0 +1,638 @@
+---
+permalink: get-started/recurring-syntax-elements.html 
+sidebar: sidebar 
+keywords: recur, syntax, elements 
+summary: 共通の構文要素は、スクリプトコマンドで使用できるパラメータとオプションの一般的なカテゴリです。 
+---
+= 共通の構文要素
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+共通の構文要素は、スクリプトコマンドで使用できるパラメータとオプションの一般的なカテゴリです。次の表に、共通の構文要素で使用される表記規則を示します。
+
+[cols="2*"]
+|===
+| 表記規則 | 定義（ Definition ） 
+
+
+ a| 
+'*a|b*'
+ a| 
+選択肢（「a」または「b」）
+
+
+
+ a| 
+「斜体-単語」
+ a| 
+パラメータを指定するには、ユーザ入力が必要です（変数への応答）。
+
+
+
+ a| 
+'+[... ]+`(角括弧)
+ a| 
+0または1回のみ使用可能（角かっこは、一部のコマンドパラメータの区切り文字としても使用されます）
+
+
+
+ a| 
+'+{... }-->(中かっこ)
+ a| 
+0個以上のオカレンス
+
+
+
+ a| 
+`(*a|b|c*)`
+ a| 
+選択肢を1つだけ選択してください
+
+|===
+次の表に、共通の構文のパラメータとその有効な値を示します。
+
+[cols="2*"]
+|===
+| 共通の構文 | 構文の値 
+
+
+ a| 
+`_autoconfig-vols-attr-value-list_`
+ a| 
+`_autoconfig-attr-value-pair_`{`_autoconfig-vols-attr-value-pair_`}
+
+
+
+ a| 
+`_autoconfig-vols-attr-value-pair_`
+ a| 
+[listing]
+----
+driveType=drive-type | driveMediaType=drive-media-type |
+raidLevel=raid-level | volumeGroupWidth=integer-literal |
+volumeGroupCount=integer-literal | volumesPerGroupCount=integer-literal6|
+hotSpareCount=integer-literal | segmentSize=segment-size-spec | cacheReadPrefetch=(TRUE | FALSE)
+securityType=(none | capable | enabled)7| dataAssurance=(none | enabled)5
+----
+
+
+ a| 
+`_boolean_`
+ a| 
+[listing]
+----
+(TRUE | FALSE)
+----
+
+
+ a| 
+`_cache-flush-modifier-setting_`
+ a| 
+[listing]
+----
+immediate, 0, .25, .5, .75, 1, 1.5, 2, 5, 10, 20, 60, 120, 300, 1200, 3600, infinite
+----
+
+
+ a| 
+`_capacity-spec
+ a| 
+`_INTEGER -リテラル_`[KB|MB|GB|TB|Bytes]`
+
+
+
+ a| 
+`_count-based - repository-spec_`
+ a| 
+[listing]
+----
+repositoryRAIDLevel =repository-raid-level repositoryDriveCount=integer-literal
+[repositoryVolumeGroupUserLabel =user-label] [driveType=drive-type4
+] [trayLossProtect=(TRUE | FALSE)1] | [drawerLossProtect=(TRUE | FALSE)2] |
+[dataAssurance=(none | enabled)5] |
+----
+
+
+ a| 
+`_create -raid-vol-attr-value-list_`
+ a| 
+`_create-raid-volume-attribute-value-pair_`{`_create-raid-volume -attribute-value-pair_`}
+
+
+
+ a| 
+`_create-raid-volume-attribute-value-pair_`
+ a| 
+[listing]
+----
+capacity=capacity-spec | owner=(a | b) |
+cacheReadPrefetch=(TRUE | FALSE) | segmentSize=integer-literal |
+usageHint=usage-hint-spec
+----
+
+
+ a| 
+`_create -volume -copy -attr-value-list_`
+ a| 
+`_create-volume-copy-attr-value-pair_`{`_create -volume -copy-attr-value-pair_`}
+
+
+
+ a| 
+`_create -volume -copy -attr-value-pair_`
+ a| 
+[listing]
+----
+copyPriority=(highest | high | medium | low | lowest) |
+targetReadOnlyEnabled=(TRUE | FALSE) | copyType=(offline | online) |
+repositoryPercentOfBase=(20 | 40 | 60 | 120 | default) |
+repositoryGroupPreference=(sameAsSource | otherThanSource | default)
+----
+
+
+ a| 
+`_drive-media-type_`
+ a| 
+'(HDD|SSD|UNKNOWN | allMedia)`_HDD_はハードディスクドライブを意味します_ssd _はソリッドステートディスクを意味します。
+
+
+
+ a| 
+`_drive-spec_`
+ a| 
+trayID'slotID'またはtrayID'drawerID'slotID_'ドライブは'コンマで区切られた2つまたは3つの整数リテラル値として定義されます低密度のトレイには2つの値が必要です。高密度トレイには、ドロワーを搭載したトレイには3つの値が必要です。
+
+
+
+ a| 
+`_drive-spec-list_`
+ a| 
+`_drive-spec_`_drive-spec_`
+
+
+
+ a| 
+「ドライブタイプ」
+ a| 
+「(ファイバ|SATA|SAS)」
+
+[NOTE]
+====
+ファームウェアバージョン7.86以降でサポートされているのはSASドライブのみです。
+
+====
+
+
+ a| 
+`_error-action_`
+ a| 
+`(stop|continue)」
+
+
+
+ a| 
+`_ethernet-port-options_`
+ a| 
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+IPv6LocalAddress=ipv6-address | IPv6RoutableAddress=ipv6-address |
+IPv6RouterAddress=ipv6-address | IPv4Address=ip-address |
+IPv4ConfigurationMethod= (static | dhcp) | IPv4GatewayIP=ip-address |
+IPv4SubnetMask=ip-address | duplexMode=(TRUE | FALSE) | portSpeed=(autoNegotiate | 10 | 100 |
+1000)
+----
+
+
+ a| 
+`_feature-identifier`
+ a| 
+[NOTE]
+====
+SANtricity 11.40のすべての機能はデフォルトで有効になっています。
+
+====
+
+
+ a| 
+「_FILENAME_`」
+ a| 
+`_string-literal_`
+
+
+
+ a| 
+`_gid _
+ a| 
+`_string-literal_`
+
+
+
+ a| 
+「_hex -リテラル_」
+ a| 
+0x00~0xFFの範囲のリテラル。
+
+
+
+ a| 
+`_host-card-identifier`
+ a| 
+'(1|2|3|4)`
+
+
+
+ a| 
+`_host-type_`
+ a| 
+「string-literal」|「integer -literal」
+
+
+
+ a| 
+`_instance-based-repository-spec_`
+ a| 
+[listing]
+----
+(repositoryRAIDLevel =repository-raid-level repositoryDrives= (drive-spec-list)
+[repositoryVolumeGroupUserLabel =user-label] [trayLossProtect=(TRUE | FALSE)1]) |
+[drawerLossProtect=(TRUE | FALSE)2]) | (repositoryVolumeGroup=user-label
+[freeCapacityArea=integer-literal3])
+----
+*repositoryRAIDLevel*'パラメータには'*repositoryDrives*'パラメータを指定しますRAIDレベルまたはドライブをボリュームグループとともに指定しないでください。ボリュームグループを指定するときは、「* trayLossProtect *」パラメータに値を設定しないでください。
+
+
+
+ a| 
+「_IP-address_`」
+ a| 
+'*(0-255).(0-255).(0-255).(0-255)*`
+
+
+
+ a| 
+「_ipv6-address_`」
+ a| 
+*(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)：(0-FFFF)*`
+
+32文字の16進数をすべて入力する必要があります。
+
+
+
+ a| 
+`_iscsi-host-port_`
+ a| 
+[listing]
+----
+(1 | 2 | 3 | 4)
+----
+使用するコントローラのタイプに応じて、ホストポート番号は2、3、4のいずれかになります。
+
+
+
+ a| 
+`_iscsi-host-port-options_`
+ a| 
+[listing]
+----
+IPv4Address=ip-address | IPv6LocalAddress=ipv6-address |
+IPv6RoutableAddress=ipv6-address | IPv6RouterAddress=ipv6-address |
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) | enableIPv4Priority=(TRUE | FALSE) |
+enableIPv6Priority=(TRUE | FALSE) | IPv4ConfigurationMethod=(static | dhcp) |
+IPv6ConfigurationMethod= (static | auto) | IPv4GatewayIP=ip-address |
+IPv6HopLimit=integer | IPv6NdDetectDuplicateAddress=integer |
+IPv6NdReachableTime=time-interval | IPv6NdRetransmitTime=time-interval |
+IPv6NdTimeOut=time-interval | IPv4Priority=integer |
+IPv6Priority=integer | IPv4SubnetMask=ip-address |
+IPv4VlanId=integer | IPv6VlanId=integer |
+maxFramePayload=integer | tcpListeningPort=tcp-port-id |
+portSpeed=(autoNegotiate | 1 | 10)
+----
+
+
+ a| 
+`_iscsiSession_`
+ a| 
+[listing]
+----
+[session-identifier]
+----
+
+
+ a| 
+`_NVSRAM - offset_`
+ a| 
+「_hex -リテラル_」
+
+
+
+ a| 
+`_nvsramBitSetting_`
+ a| 
+`_NVSRAMマスク'NVSRAM値_`=_0x16進数'0x16進数_`|`_INTEGERリテラル_
+
+0x00から0xFFまでの値は通常'0x16進数の値です
+
+
+
+ a| 
+`_nvsramByteSetting_`
+ a| 
+`_NVSRAM値_`=_0x16進数_`|`_integer -リテラル_
+
+0x16進値は通常、0x00~0xFFの値です。
+
+
+
+ a| 
+`_portID_`
+ a| 
+[listing]
+----
+(0-127)
+----
+
+
+ a| 
+「_raid-level_」
+ a| 
+[listing]
+----
+(0 | 1 | 3 | 5 | 6)
+----
+
+
+ a| 
+`_recover-raid-volume-attr-value-list_`
+ a| 
+`_recover-raid-volume-attr-value-pair_`{`_recover-raid-volume-attr-value-pair_`}
+
+
+
+ a| 
+`_recover-raid-volume-attr-value-pair_`
+ a| 
+[listing]
+----
+owner=(a|b) |cacheReadPrefetch=(TRUE | FALSE) | dataAssurance=(none | enabled)
+----
+
+
+ a| 
+`_repository -raid-level_`
+ a| 
+[listing]
+----
+(1 | 3 | 5 | 6)
+----
+
+
+ a| 
+`_repository-spec_`
+ a| 
+「instance-based-repository-spec」|「count-based repository-spec」を指定します
+
+
+
+ a| 
+`_dsegment -size-spec_`
+ a| 
+`_integer-literal_-すべての容量はbase-2の形式です。
+
+
+
+ a| 
+`_serial-number_`
+ a| 
+[listing]
+----
+string-literal
+----
+
+
+ a| 
+`_slotID_`
+ a| 
+大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。
+
+スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルに応じて0または1で始まります。
+
+トレイIDの値、ドロワーIDの値、およびスロットIDの値は角かっこ（[]）で囲みます。
+
+[listing]
+----
+(drive=\(trayID,[drawerID,]slotID\)|
+drives=\(trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn\) )
+----
+
+
+ a| 
+`_test -device_name
+ a| 
+[listing]
+----
+controller=(a|b)
+esms=(esm-spec-list)drives=(drive-spec-list)
+----
+
+
+ a| 
+`_test -devices -list_
+ a| 
+`_test -device_name {`_test -device_name }
+
+
+
+ a| 
+`_time-zone-spec_`
+ a| 
+[listing]
+----
+(GMT+HH:MM | GMT-HH:MM) [dayLightSaving=HH:MM]
+----
+
+
+ a| 
+`_trayID-list_
+ a| 
+`_trayID_`{`_trayID_`}
+
+
+
+ a| 
+`_usage-hint-spec_`
+ a| 
+[listing]
+----
+usageHint=(multiMedia | database | fileSystem)
+----
+ボリュームの使用方法のヒント、または予測されるI/O特性は、コントローラによって使用され、適切なデフォルトボリュームセグメントサイズおよび動的キャッシュ読み取りプリフェッチを示します。ファイルシステムおよびデータベースの場合は、128KBのセグメントサイズが使用されます。マルチメディアの場合は、256KBのセグメントサイズが使用されます。使用方法のヒントを3つすべて使用すると、動的キャッシュ読み取りプリフェッチが有効になります
+
+
+
+ a| 
+`_user-label_`
+ a| 
+`_string-literal_`
+
+有効な文字は、英数字、ダッシュ、アンダースコアです。
+
+
+
+ a| 
+`_user-label-list_
+ a| 
+`_user-label_`{`_user-label_`}
+
+
+
+ a| 
+`_volumeGroup -number_`
+ a| 
+「_INTEGER -リテラル_」
+
+
+
+ a| 
+'_wwid _
+ a| 
+`_string-literal_`
+
+|===
+1トレイ損失の保護を使用するには、次のガイドラインに従って設定を行う必要があります。
+
+[cols="3*"]
+|===
+| レベル | トレイ損失の保護の基準 | 必要なトレイの最小数 
+
+
+ a| 
+ディスクプール
+ a| 
+ディスクプールに同じトレイのドライブが3本以上含まれない
+ a| 
+6.
+
+
+
+ a| 
+RAID 6
+ a| 
+ボリュームグループに同じトレイのドライブが3本以上含まれない
+ a| 
+3.
+
+
+
+ a| 
+RAID 3またはRAID 5
+ a| 
+ボリュームグループ内のドライブがすべて別々のトレイに配置されている
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1ペアのドライブがそれぞれ別のトレイに配置されている
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+トレイ損失の保護は実現できない。
+ a| 
+該当なし
+
+|===
+2ドロワー損失の保護を使用するには、次のガイドラインに従って設定を行う必要があります。
+
+[cols="3*"]
+|===
+| レベル | ドロワー損失の保護の基準 | 必要なドロワーの最小数 
+
+
+ a| 
+ディスクプール
+ a| 
+プールに5つのドロワーすべてのドライブが含まれていて、各ドロワーに同じ数のドライブが配置されている。60ドライブのトレイでは、ディスクプールの構成が15、20、25、30、35の場合にドロワー損失の保護を実現できます。 40、45、50、55、または60ドライブ。
+ a| 
+5.
+
+
+
+ a| 
+RAID 6
+ a| 
+ボリュームグループに同じドロワーのドライブが3本以上含まれない。
+ a| 
+3.
+
+
+
+ a| 
+RAID 3またはRAID 5
+ a| 
+ボリュームグループ内のドライブがすべて別々のドロワーに配置されている。
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+ミラーペアのドライブがそれぞれ別のドロワーに配置されている。
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+ドロワー損失の保護は実現できない。
+ a| 
+該当なし
+
+|===
+ボリュームグループが複数のトレイにまたがるストレージアレイの構成では、ドロワー損失の保護の設定がトレイ損失の保護の設定と連携していることを確認する必要があります。ドロワー損失の保護はトレイ損失の保護がなくても使用できます。トレイ損失の保護はドロワー損失の保護がなければ使用できません。「* trayLossProtect*」パラメータと「* drawerLossProtect *」パラメータが同じ値に設定されていない場合、ストレージアレイはエラーメッセージを返し、ストレージアレイ構成は作成されません。
+
+3空き容量領域が存在するかどうかを確認するには、「show volumegroup」コマンドを実行します。
+
+4デフォルトのドライブ(ドライブタイプ)はSAS'です
+
+ストレージ・アレイにドライブのタイプが1つしかない場合'*drivetype *'パラメータは不要です「* drivetype *」パラメータを使用する場合は、「* hotSpareCount *」パラメータと「* volumeGroupWidth *」パラメータも使用する必要があります。
+
+5 '*dataAssurance *'パラメータはData Assurance (DA)機能に関連しています
+
+Data Assurance（DA）機能を使用すると、ストレージシステム全体のデータの整合性が向上します。ホストとドライブの間でデータが移動されたときにストレージアレイがエラーの有無をチェックします。この機能を有効にすると、ボリューム内の各データブロックに巡回冗長検査（CRC）と呼ばれるエラーチェック用のコードが付加されます。データブロックが移動されると、ストレージアレイはこれらのCRCコードを使用して、転送中にエラーが発生したかどうかを判断します。破損している可能性があるデータはディスクに書き込まれず、ホストにも返されません。
+
+DA機能を使用する場合は、まず最初にDAがサポートされているドライブのみを含むプールまたはボリュームグループを作成します。次に、DA対応ボリュームを作成します。最後に、DAに対応したI/Oインターフェイスを使用してDA対応ボリュームをホストにマッピングします。DAに対応したI/Oインターフェイスには、Fibre Channel、SAS、iSER over InfiniBand（iSCSI Extensions for RDMA/IB）があります。iSCSI over EthernetやSRP over InfiniBandではDAはサポートされていません。
+
+[NOTE]
+====
+必要なすべてのハードウェアとI/OインターフェイスがDA対応である場合は'*dataAssurance *'パラメータを[Enabled]に設定し'特定の操作でDAを使用できますたとえば、DA対応ドライブが含まれるボリュームグループを作成し、そのボリュームグループにDA対応のボリュームを作成できます。DA対応ボリュームを使用する他の処理には、DA機能をサポートするオプションがあります。
+
+====
+6 `* volumesPerGroupCount*`パラメータは、各ボリュームグループの容量が等しいボリュームの数です。
+
+7 '*securityType*'パラメータを使用すると'作成するボリューム・グループのセキュリティ設定を指定できます選択したセキュリティ設定がすべてのボリュームにも適用されます。セキュリティ設定を設定するためのオプションは次のとおりです。
+
+* 'none`--ボリュームグループは安全ではありません。
+* capable --ボリュームグループはセキュリティに対応していますが'セキュリティが有効になっていません
+* 有効-ボリューム・グループはセキュリティが有効になっています
+
+
+[NOTE]
+====
+'*securityType=enabled*'を設定する場合は'ストレージ・アレイのセキュリティ・キーを作成しておく必要があります（ストレージアレイのセキュリティキーを作成するには、create storageArray securityKeyコマンドを使用します）。
+
+====

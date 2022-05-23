@@ -1,0 +1,93 @@
+---
+permalink: commands-a-z/create-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: create, iscsi, initiator 
+summary: create iscsiInitiatorコマンドは、新しいiSCSIイニシエータオブジェクトを作成します。 
+---
+= iSCSIイニシエータを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create iscsiInitiatorコマンドは'新しいiSCSIイニシエータ・オブジェクトを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:create-initiator.adoc[イニシエータを作成する] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create iscsiInitiator iscsiName=pass:quotes[_"iscsiID"_
+userLabel="_name_"
+host="_hostName"_]
+[chapSecret=pass:quotes[_"securityKey"_]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「iscsiName」と入力します
+ a| 
+iSCSIイニシエータのデフォルトの識別子。識別子は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+iSCSIイニシエータに使用する名前。名前は二重引用符（""）で囲みます。
+
+
+
+ a| 
+ホスト
+ a| 
+iSCSIイニシエータがインストールされているホストの名前。名前は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「チャプターシークレット」
+ a| 
+ピア接続の認証に使用するセキュリティキー。セキュリティキーは二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+チャレンジハンドシェイク認証プロトコル（CHAP）は、接続のピアを認証するプロトコルです。CHAPは、_secret_を共有するピアに基づいています。シークレットとは、パスワードのようなセキュリティキーのことです。
+
+相互認証を必要とするイニシエータのセキュリティ・キーを設定するには'chapSecretパラメータを使用します
+
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.41で、このコマンドは廃止されました。

@@ -1,0 +1,229 @@
+---
+permalink: commands-a-z/create-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot, volume 
+summary: create cgSnapVolumeコマンドは、整合性グループのベースボリュームに特定のイメージのSnapshotボリュームを作成します。 
+---
+= 整合性グループのSnapshotボリュームを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create cgSnapVolumeコマンドは'整合性グループのベース・ボリュームに特定のイメージのスナップショット・ボリュームを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+整合性グループから1つ以上のベースボリュームを選択してSnapshotボリュームに含めることができます。整合性グループのSnapshotボリュームを作成する場合は、表示可能な内容を含むボリュームを作成することになります。
+
+
+
+== ユーザ指定のベースボリュームを含む構文
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
+----
+
+
+== 整合性グループのSnapshotボリュームを読み取り専用に設定する場合の構文
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+readOnly
+----
+
+
+== リポジトリフル制限を設定する場合の構文
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX_] |
+baseVolume1: (pass:quotes[_volumeGroupName_] pass:quotes[[_capacity=capacityValue_])] |
+(baseVolume1:pass:quotes[_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+... baseVolumen:repos_YYYY |
+baseVolumen: (pass:quotes[_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]]) |
+baseVolumen: (pass:quotes[_diskPoolName_] [capacity=pass:quotes{_capacityValue_]]))
+repositoryFullLimit=pass:quotes[_percentValue_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+作成する整合性グループのSnapshotボリュームに付ける名前。整合性グループのSnapshotボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+cgSnapImageID`
+ a| 
+整合性グループ内のSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* 整合グループの名前
+* 整合性グループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* ’new’-整合性グループに作成された最新のSnapshotイメージを表示する場合は、このオプションを使用します。
+* oldest -整合性グループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は二重引用符（""）で囲みます。
+
+複数のSnapshotイメージ名またはシーケンス番号を入力できます。すべてのSnapshotイメージ名をかっこで囲みます。Snapshotイメージ名はそれぞれスペースで区切ります。
+
+
+
+ a| 
+「メンバー」
+ a| 
+追加する1つ以上のベースボリュームの識別子。メンバーの識別子は、ベースボリューム名とリポジトリボリューム名を連結したものです。2つの名前の間にはコロン（:）を使用する必要があります。すべてのメンバー識別子をかっこで囲みます。複数のメンバーを入力する場合は、それぞれスペースで区切ります。
+
+membersパラメータを使用しない場合は、すべてのメンバーが新しい整合性グループのSnapshotボリュームに自動的に追加されます。
+
+
+
+ a| 
+リポジトリボリューム
+ a| 
+整合性グループのメンバーボリュームが含まれるリポジトリボリュームの名前。
+
+リポジトリボリュームの名前を定義する方法は2つあります。
+
+* 既存のリポジトリボリュームの名前を使用します
+* このコマンドを実行するときに新しいリポジトリボリュームを作成します
+
+
+既存のリポジトリボリュームの名前は次の2つの部分で構成されます。
+
+* 「repos」という用語
+* ストレージ管理ソフトウェアがリポジトリボリューム名に割り当てる4桁の数値識別子
+
+
+既存のリポジトリボリュームの名前は二重引用符（""）で囲みます。
+
+このコマンドを実行するときに新しいリポジトリボリュームを作成する場合は、リポジトリボリュームを含めるボリュームグループまたはディスクプールの名前を入力する必要があります。必要に応じて、リポジトリボリュームの容量を定義することもできます。容量を定義する場合は、次の値を使用できます。
+
+* ベースボリュームの容量の割合を表す整数値
+* ベースボリュームの容量の割合を表す小数値
+* リポジトリボリュームの具体的なサイズ。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます
+
+
+容量オプションを使用しない場合は、ストレージ管理ソフトウェアによって、ベースボリュームの容量の20%に設定されます。
+
+このコマンドを実行すると、ストレージ管理ソフトウェアによって、Snapshotボリューム用のリポジトリボリュームが作成されます。
+
+
+
+ a| 
+repositoryFullLimit
+ a| 
+整合性グループのSnapshotリポジトリボリュームが上限に近づいていることを示す基準となるリポジトリ容量の割合。整数値を使用します。たとえば、70という値は70%を意味します。
+
+
+
+ a| 
+「readOnly」
+ a| 
+Snapshotボリュームへの書き込みを可能にするか、Snapshotボリュームからの読み取りのみを可能にするかを決定する設定。Snapshotボリュームに書き込む場合は、このパラメータを含めないでください。Snapshotボリュームに書き込みできないようにする場合は、このパラメータを含めます。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+repositoryVolumeTypeパラメータまたはreadOnlyパラメータを指定しない場合'ストレージ管理ソフトウェアは'整合性グループのスナップショットボリュームのリポジトリを選択しますベースボリュームが配置されているボリュームグループまたはディスクプールに十分なスペースがない場合、このコマンドは失敗します。
+
+create cgSnapVolumeコマンドには、次の例で説明する固有の形式があります。
+
+* cgm1、cgm2、cgm3の3つのメンバーが含まれる「snapCG1」というSnapshot整合性グループに、読み取り/書き込みのSnapshotボリュームを作成する場合。リポジトリボリュームはすでに存在し、このコマンドでユーザによって選択されています。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume1"
+cgSnapImageID="snapCG1:oldest"
+members=(cgm1:repos_0010 cgm2:repos_0011 cgm3:repos_0007);
+----
++
+整合性グループのSnapshotボリュームに含めるSnapshotイメージの名前に、コロン（：）が使用されていることを確認します。このコロンは区切り文字であり、Snapshotボリュームの名前と使用する特定のSnapshotイメージを区切っています。コロンのあとには、次のいずれかのオプションを使用できます。
+
++
+** Snapshotイメージの実際のシーケンス番号である整数値。
+** 最新の整合グループSnapshotイメージを表示する場合は、このオプションを使用します。
+** 最も古い'-最も古いスナップショットイメージを表示する場合は'このオプションを使用しますSnapshot整合性グループのメンバーの名前のあとにコロンを使用すると、メンバーとリポジトリボリュームの間のマッピングが定義されます。たとえば、「cgm1：repos_10」にあるメンバーcgm1は、リポジトリボリュームrepos_0010にマッピングされます。
+
+
+* メンバーがcgm1とcgm2のみの「snapCG1」というSnapshot整合性グループに、読み取り/書き込みのSnapshotボリュームを作成する場合。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume2"
+cgSnapImageID="snapCG1:14214"
+members=(cgm1:repos_1000 cgm2:repos_1001);
+----
+* cgm1、cgm2、cgm3の3つのメンバーが含まれるsnapCG1というSnapshot整合性グループに、読み取り専用のSnapshotボリュームを作成する場合。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest" readOnly;
+----
+* cgm1、cgm2、cgm3の3つのメンバーが含まれるsnapCG1というSnapshot整合性グループに、リポジトリフル制限が60%に設定されているSnapshotボリュームを作成する場合。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest"
+repositoryFullLimit=60;
+----
+* cgm1、cgm2、cgm3の3つのメンバーが含まれるsnapCG1というSnapshot整合性グループに、リポジトリが自動で選択される読み取り/書き込みのSnapshotボリュームを作成する場合。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume4"
+cgSnapImageID="snapCG1:oldest";
+----
+
+
+
+
+== 最小ファームウェアレベル
+
+7.83

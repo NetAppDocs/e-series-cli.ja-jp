@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/enable-diskpool-security.html 
+sidebar: sidebar 
+keywords: enable, diskpool, security, command, convert, non secure, diskpool, support, arrays, role, context 
+summary: enable diskPool securityコマンドは、セキュアでないディスクプールをセキュアなディスクプールに変換します。 
+---
+= ディスクプールのセキュリティを有効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+enable diskPool securityコマンドは'セキュアでないディスク・プールをセキュアなディスク・プールに変換します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ディスクプールを構成するすべてのドライブがセキュリティ対応である必要があります。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable diskPool [_diskPoolName_]] security
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「diskPool」
+ a| 
+Security Enabled状態にするディスクプールの名前。ディスクプールの識別子は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+ディスクプール名は一意である必要があります。ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

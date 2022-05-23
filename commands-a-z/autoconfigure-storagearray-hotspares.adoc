@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/autoconfigure-storagearray-hotspares.html 
+sidebar: sidebar 
+keywords: autoconfigure, storage, array, hot spares, supported, roles, syntax, parameters, minimum firmware level 
+summary: autoConfigure storageArray hotsparesコマンドは、ストレージアレイ内のホットスペアを自動的に定義および設定します。このコマンドはいつでも実行できます。このコマンドは、ストレージアレイに最適なホットスペア対象範囲を指定します。 
+---
+= ストレージアレイのホットスペアを自動設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+autoConfigure storageArray hotsparesコマンドは、ストレージアレイ内のホットスペアを自動的に定義および設定します。このコマンドはいつでも実行できます。このコマンドは、ストレージアレイに最適なホットスペア対象範囲を指定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+autoConfigure storageArray hotSpares
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+「autoconfigure storageArray hotspares」コマンドを実行すると、コントローラファームウェアは、ストレージアレイ内のドライブの総数とタイプに基づいて、作成するホットスペアの数を決定します。SASドライブの場合、コントローラファームウェアはストレージアレイ用に1つのホットスペアを作成し、ストレージアレイのドライブ60本ごとに1つずつ追加のホットスペアを作成します。
+
+
+
+== 最小ファームウェアレベル
+
+6.10

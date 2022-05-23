@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/smcli-enable-disable-autosupportremotediag.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
+summary: SMcli enable|disable autoSupportRemoteDiagコマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。 
+---
+= EMW管理ドメインレベルでのAutoSupport リモート診断機能の有効化または無効化（SMcliのみ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+[NOTE]
+====
+このコマンドは、管理ドメイン内のすべてのASUP対応ストレージアレイに影響します。
+
+====
+この機能を有効にする前に、まずAutoSupport 機能、次にAutoSupport OnDemand機能を管理ドメイン上で有効にします。
+
+3つの機能はこの順序で有効にする必要があります。
+
+. * AutoSupport を有効にします。*
+. * AutoSupport OnDemand*を有効にします
+. * AutoSupport Remote Diagnosticsを有効にします。*
+
+
+
+
+== 構文
+
+[listing]
+----
+SMcli enable|disable autoSupportRemoteDiag
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 検証
+
+SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の3行には、AutoSupport 機能とAutoSupport OnDemand機能の有効ステータス、およびAutoSupport Remote Diagnostics機能のステータスが順番に表示されます。
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management
+station.
+The AutoSupport OnDemand feature is activated on this storage management
+station.
+The AutoSupport Remote Diagnostics feature is activated on this storage
+management station.
+----
+
+
+== 最小ファームウェアレベル
+
+8.25

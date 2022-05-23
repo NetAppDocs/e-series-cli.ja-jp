@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/reset-storagearray-hostportstatisticsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, host, port, statistics, baseline 
+summary: reset storageArray hostPortStatisticsBaselineコマンドは、ストレージアレイのホストポートの統計ベースラインをリセットします。 
+---
+= ストレージアレイのホストポート統計のベースラインをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray hostPortStatisticsBaselineコマンドは、ストレージアレイのホストポートの統計ベースラインをリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、廃止されたを置き換えます xref:reset-storagearray-ibstatsbaseline.adoc[ストレージアレイのInfiniBandの統計ベースラインをリセットします]、 xref:reset-storagearray-iscsistatsbaseline.adoc[ストレージアレイのiSCSIベースラインをリセットします]および xref:reset-storagearray-iserstatsbaseline.adoc[ストレージアレイのiSERベースラインをリセットします] コマンド
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+reset storageArray hostPortStatisticsBaseline type=(ISCSI| ISER | SRP | NVMEOF)
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「type」と入力します
+ a| 
+収集する統計のタイプを指定できます。有効な選択肢は、「iscsi」、「isER」、「srp」、「NVMEOF」です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

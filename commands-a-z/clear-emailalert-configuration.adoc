@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/clear-emailalert-configuration.html 
+sidebar: sidebar 
+keywords: clear email, alert, configuration 
+summary: clear emailAlert configurationコマンドは、電子メールアラート設定をデフォルト値にクリアします。 
+---
+= Eメールアラート設定のクリア
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear emailAlert configurationコマンドは'電子メールアラート設定をデフォルト値にクリアします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+clear emailAlert configuration
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "clear emailAlert configuration;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

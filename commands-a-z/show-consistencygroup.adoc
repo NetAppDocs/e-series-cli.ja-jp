@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/show-consistencygroup.html 
+sidebar: sidebar 
+keywords: show, consistency, group 
+summary: show consistencyGroupコマンドは、1つ以上のコンシステンシグループに関する情報を返します。 
+---
+= 整合グループを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show consistencyGroup」コマンドは、1つ以上のコンシステンシグループに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show (allConsistencyGroups | consistencyGroup pass:quotes[[_consistencyGroupName_]] |
+consistencyGroups pass:quotes[[_consistencyGroupName1_ ... _consistencyGroupNameN_]])
+[(summary | schedule)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allConsistencyGroups」
+ a| 
+ストレージアレイ内のすべての整合性グループに関する情報を返すための設定。
+
+
+
+ a| 
+「consistencyGroup」
+ a| 
+情報を取得する整合性グループの名前。整合性グループ名は角かっこ（[]）で囲みます。整合性グループ名に特殊文字または数字が含まれている場合は、整合性グループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「consistencyGroups」
+ a| 
+情報を取得する複数の整合性グループの名前。すべてのボリュームに同じプロパティが適用されます。以下のルールを使用して、ボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+ボリューム名が特殊文字を含んでいる場合または数字のみで構成されている場合は、次のルールに従って名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「概要」
+ a| 
+整合グループに関する概要情報をリストで返すための設定。
+
+
+
+ a| 
+「スケジュール」
+ a| 
+このパラメータは、整合性グループのスケジュールに関する情報を返します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

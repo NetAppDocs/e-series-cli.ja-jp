@@ -1,0 +1,35 @@
+---
+permalink: get-started/formatting-cli-commands-in-windows-powershell.html 
+sidebar: sidebar 
+keywords: format, rules, cli, commands, windows, powershell 
+summary: Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。 
+---
+= Windows PowerShellのCLIコマンドの表記規則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。Windows PowerShellはWindowsコマンドプロンプトを改良したもので、一連のコマンドとスクリプト機能が強化されています。CLIコマンドとスクリプトコマンドはすべてWindows PowerShellで実行できますが、Windows PowerShellには独自の表記要件がいくつかあります。要件は次のとおりです。
+
+* SMcliコマンドはすべてピリオドとスラッシュ（/）で開始
+* SMcliのラッパーは.exe拡張子を持つ実行可能コマンド（SMcli.exe）として識別
+* スクリプトコマンドは単一引用符（''）で囲みます。
+* 名前、ファイルパス、または値の一部である二重引用符の前にはバックスラッシュが必要です（\）。
+
+
+次の例は、Windows PowerShellでストレージアレイ名を作成するCLIコマンドを示しています。スクリプトコマンドの区切り文字として単一引用符が使用されていることと、コマンド構文では「userLabel」として識別されているストレージアレイ名の前後にバックスラッシュと二重引用符があることを確認してください。
+
+[listing]
+----
+PS C:\...\StorageManager\client> ./SMcli.exe 123.45.67.88 123.45.67.89
+-c ’set storageArray userLabel=\"Engineering\";’
+----
+次の例は、Windows PowerShellでプレミアム機能を有効にするCLIコマンドを示しています。プレミアム機能キーのファイルパスの前にバックスラッシュと二重引用符が使用されていることを確認してください。
+
+[listing]
+----
+PS C:\...\StorageManager\client> ./SMcli.exe 123.45.67.88 123.45.67.89
+-c ’enable storageArray feature file=\"C:\licenseKey.bin\";’
+----
+上記の例では、大文字と小文字の両方が使用されています。これは、コマンドの形式を明確に示すためです。Windows PowerShellでは大文字と小文字が区別されないため、どちらを使用しても構いません。

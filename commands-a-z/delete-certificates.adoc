@@ -1,0 +1,48 @@
+---
+permalink: commands-a-z/delete-certificates.html 
+sidebar: sidebar 
+keywords: delete, certificates 
+summary: Delete certificatesコマンドを使用すると、CLIパッケージの信頼ストアから証明書を削除できます。 
+---
+= 証明書を削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Delete certificatesコマンドを使用すると、CLIパッケージの信頼ストアから証明書を削除できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、EF600およびEF300ストレージアレイを環境 します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+delete localCertificate all | alias pass:quotes[_alias_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「alias」
+ a| 
+ユーザ定義のエイリアスを使用して証明書を指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.60

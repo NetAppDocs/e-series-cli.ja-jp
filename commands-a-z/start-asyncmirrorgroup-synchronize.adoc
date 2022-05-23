@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/start-asyncmirrorgroup-synchronize.html 
+sidebar: sidebar 
+keywords: start, asynchronous, mirror, synchronization 
+summary: start asyncMirrorGroup synchronizeコマンドは、非同期ミラーリングの同期を開始します。 
+---
+= 非同期ミラーリングの同期を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start asyncMirrorGroup synchronizeコマンドは'非同期ミラーリングの同期を開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start asyncMirrorGroup pass:quotes[["_asyncMirrorGroupName_"]] synchronize [deleteRecoveryPointIfNecessary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+同期を開始する非同期ミラーグループの名前。非同期ミラーグループ名は、二重引用符（""）で囲んだ上で角かっこ（""）で囲みます。
+
+
+
+ a| 
+「deleteRecoveryPointIfNecessary」です
+ a| 
+リカバリ可能な同期データがリカバリの時間のしきい値を超えた場合にリカバリポイントを削除するためのパラメータ。リカバリポイントの経過時間は、プライマリストレージアレイでデータが取得された時間から計測されます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.84
+
+8.10で、「deleteRecoveryPointIfNecessary」パラメータが追加されました。

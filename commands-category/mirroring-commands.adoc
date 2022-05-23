@@ -1,0 +1,87 @@
+---
+permalink: commands-category/mirroring-commands.html 
+sidebar: sidebar 
+keywords: commands, mirroring, asynchronous, synchronous, command 
+summary: ミラーリングコマンド 
+---
+= ミラーリングコマンド
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 非同期ミラーリングのコマンド
+
+link:../commands-a-z/activate-asynchronous-mirroring.html["非同期ミラーリングをアクティブ化する"]
+
+link:../commands-a-z/add-volume-asyncmirrorgroup.html["非同期ミラーグループにボリュームを追加します"]
+
+link:../commands-a-z/stop-asyncmirrorgroup-rolechange.html["非同期ミラーグループのロール反転をキャンセルします"]
+
+link:../commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html["非同期ミラーグループの整合性を確認します"]
+
+link:../commands-a-z/clear-asyncmirrorfault.html["非同期ミラーリングのエラーをクリアします"]
+
+link:../commands-a-z/create-asyncmirrorgroup.html["非同期ミラーグループを作成する"]
+
+link:../commands-a-z/deactivate-storagearray.html["非同期ミラーリングを非アクティブ化する"]
+
+link:../commands-a-z/delete-asyncmirrorgroup.html["非同期ミラーグループを削除します"]
+
+link:../commands-a-z/establish-asyncmirror-volume.html["非同期ミラーペアを確立します"]
+
+link:../commands-a-z/remove-asyncmirrorgroup.html["非同期ミラーグループから不完全な非同期ミラーペアを削除します"]
+
+link:../commands-a-z/remove-volume-asyncmirrorgroup.html["非同期ミラーグループからボリュームを削除します"]
+
+link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["非同期ミラーグループの統計をリセットします"]
+
+link:../commands-a-z/reset-iscsiipaddress.html["iSCSI IPアドレスをリセットします"]
+
+link:../commands-a-z/resume-asyncmirrorgroup.html["非同期ミラーグループを再開します"]
+
+link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["非同期ミラーグループの統計を保存します"]
+
+link:../commands-a-z/set-asyncmirrorgroup.html["非同期ミラーグループを設定します"]
+
+link:../commands-a-z/show-asyncmirrorgroup-summary.html["非同期ミラーグループを表示します"]
+
+link:../commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html["非同期ミラーグループの同期の進捗状況を表示します"]
+
+link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["非同期ミラーリングの同期を開始します"]
+
+link:../commands-a-z/suspend-asyncmirrorgroup.html["非同期ミラーグループを中断します"]
+
+link:../commands-a-z/diagnose-asyncmirrorgroup.html["非同期ミラーグループ接続をテストします"]
+
+
+
+== 同期ミラーリングのコマンド
+
+link:../commands-a-z/activate-synchronous-mirroring.html["同期ミラーリングをアクティブ化します"]
+
+link:../commands-a-z/check-syncmirror.html["同期ミラーリングのステータスを確認します"]
+
+link:../commands-a-z/create-syncmirror.html["同期ミラーリングを作成します"]
+
+link:../commands-a-z/deactivate-storagearray-feature.html["同期ミラーリングを非アクティブ化する"]
+
+link:../commands-a-z/diagnose-syncmirror.html["同期ミラーリングの診断"]
+
+link:../commands-a-z/recreate-storagearray-mirrorrepository.html["同期ミラーリングリポジトリボリュームを再作成します"]
+
+link:../commands-a-z/remove-syncmirror.html["同期ミラーリングを削除します"]
+
+link:../commands-a-z/resume-syncmirror.html["同期ミラーリングを再開します"]
+
+link:../commands-a-z/set-syncmirror.html["同期ミラーリングを設定します"]
+
+link:../commands-a-z/show-syncmirror-candidates.html["同期ミラーリングのボリューム候補を表示します"]
+
+link:../commands-a-z/show-syncmirror-synchronizationprogress.html["同期ミラーリングのボリューム同期の進捗状況を表示します"]
+
+link:../commands-a-z/start-syncmirror-primary-synchronize.html["同期ミラーリングを開始します"]
+
+link:../commands-a-z/suspend-syncmirror-primaries.html["同期ミラーリングを中断します"]

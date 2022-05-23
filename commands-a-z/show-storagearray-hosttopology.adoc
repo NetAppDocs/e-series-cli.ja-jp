@@ -1,0 +1,87 @@
+---
+permalink: commands-a-z/show-storagearray-hosttopology.html 
+sidebar: sidebar 
+keywords: show, storage, array, host, topology 
+summary: show storageArray hostTopologyコマンドは、ストレージパーティショントポロジ、ホストタイプラベル、およびホストストレージアレイのホストタイプインデックスを返します。 
+---
+= ストレージアレイのホストトポロジを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray hostTopology'コマンドは'ストレージ・パーティション・トポロジー'ホスト・タイプ・ラベル'ホスト・ストレージ・アレイのホスト・タイプ・インデックスを返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray hostTopology
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドから返されるホストトポロジ情報の例を次に示します。
+
+[listing]
+----
+TOPOLOGY DEFINITIONS
+ DEFAULT GROUP
+  Default type: Windows 2000/Server 2003 Non-Clustered
+  Host Group: scott
+   Host: scott1
+    Host Port: 28:37:48:55:55:55:55:55
+     Alias: scott11
+     Type: Windows 2000/Server 2003 Clustered
+   Host: scott2
+    Host Port: 98:77:66:55:44:33:21:23
+     Alias: scott21
+     Type: Windows 2000/Server 2003 Clustered
+   Host: Bill
+    Host Port: 12:34:55:67:89:88:88:88
+     Alias: Bill1
+     Type: Windows 2000/Server 2003 Non-Clustered
+NVSRAM HOST TYPE INDEX DEFINITIONS
+HOST TYPE                         ALUA/AVT STATUS   ASSOCIATED INDEXS
+AIX MPIO                          Disabled          9
+AVT_4M                            Enabled           5
+Factory Default                   Disabled          0
+HP-UX                             Enabled           15
+Linux (ATTO)                      Enabled           24
+Linux (DM-MP)                     Disabled          6
+Linux (Pathmanager)               Enabled           25
+Mac OS                            Enabled           22
+ONTAP                             Disabled          4
+SVC                               Enabled           18
+Solaris (v11 or Later)            Enabled           17
+Solaris (version 10 or earlier)   Disabled          2
+VMWare                            Enabled           10 (Default)
+Windows                           Enabled           1
+----
+
+
+== 最小ファームウェアレベル
+
+5.20

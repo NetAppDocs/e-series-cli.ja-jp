@@ -1,0 +1,87 @@
+---
+permalink: commands-a-z/show-controller-nvsram.html 
+sidebar: sidebar 
+keywords: show, controller, nvsram 
+summary: show controller NVSRAMコマンドは、NVSRAMバイト値に関する情報を返します。 
+---
+= コントローラのNVSRAMを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show controller NVSRAMコマンドは'NVSRAMバイト値に関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、指定したホストタイプのNVSRAMバイト値のリストを返します。オプションのパラメータを入力しない場合は、すべてのNVSRAMバイト値のリストが返されます。
+
+このコマンドは、指定したホストタイプのNVSRAMバイト値のリストを返します。オプションのパラメータを入力しない場合は、すべてのNVSRAMバイト値のリストが返されます。
+
+このコマンドは、指定したホストタイプのNVSRAMバイト値のリストを返します。オプションのパラメータを入力しない場合は、すべてのNVSRAMバイト値のリストが返されます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show (allControllers | controller [(a|b)])
+NVSRAM pass:quotes[[hostType=_hostTypeIndexLabel_ | host="_hostName_"]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allControllers」
+ a| 
+ストレージアレイ内の両方のコントローラに関する情報を返すための設定。
+
+
+
+ a| 
+「controller」と入力します
+ a| 
+ストレージアレイ内の特定のコントローラに関する情報を返すための設定。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「hostType」
+ a| 
+ホストタイプのインデックスラベルまたはインデックス番号。使用可能なホストタイプ識別子のリストを生成するには、「show storageArray hostTypeTable」コマンドを使用します。
+
+
+
+ a| 
+ホスト
+ a| 
+コントローラに接続されているホストの名前。ホスト名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+set controllerコマンドを使用してNVSRAM値を変更する前に'show controller NVSRAMコマンドを使用して'NVSRAMの一部またはすべてを表示しますNVSRAMに変更を加える場合は、事前にテクニカルサポートに連絡して変更可能なNVSRAMの領域を確認してください。

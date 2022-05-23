@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/set-storagearray-revocationchecksettings.html 
+sidebar: sidebar 
+keywords: set, certificate, revocation, check, set 
+summary: set storageArray revocationCheckSettingsコマンドを使用すると、失効チェックを有効または無効にしたり、Online Certificate Status Protocol（OCSP）サーバを設定したりできます。 
+---
+= 証明書失効チェックの設定を行います
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray revocationCheckSettingsコマンドを使用すると、失効チェックを有効または無効にしたり、Online Certificate Status Protocol（OCSP）サーバを設定したりできます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+OCSPサーバは、スケジュールされた有効期限よりも前に認証局（CA）によって取り消された証明書がないかどうかをチェックします。CAによる証明書の発行に問題がある場合や、秘密鍵が侵害された場合は、失効チェックを有効にすることができます。
+
+[NOTE]
+====
+OCSPサーバの完全修飾ドメイン名を使用できるようにするために、両方のコントローラにDNSサーバが設定されていることを確認してください。
+
+====
+失効チェックを有効にすると、ストレージアレイは失効した証明書を使用したサーバへの接続を拒否します。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray revocationCheckSettings ([revocationCheckEnable = boolean] &| [ocspResponderUrl=stringLiteral])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「revocationCheckEnable」と入力します
+ a| 
+証明書失効チェックを有効にするには'true'に設定します
+
+
+
+ a| 
+「ocspResponderUrl」
+ a| 
+証明書失効チェックに使用するOCSPレスポンダサーバのURL。
+
+[NOTE]
+====
+OCSPレスポンダアドレスを指定すると、証明書ファイル内のOCSPアドレスが指定したアドレスで上書きされます。
+
+====
+|===
+
+
+== 最小ファームウェアレベル
+
+8.42

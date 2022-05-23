@@ -1,0 +1,605 @@
+---
+permalink: commands-a-z/set-controller-hostport.html 
+sidebar: sidebar 
+keywords: set, controller, host, port, properties 
+summary: set controller HostPortコマンドは、iSCSI、iSER、NVMe over InfiniBand、およびNVMe over RoCEのホストポートのネットワークプロパティを変更します。プロパティの変更には、IPv4とIPv6のプロパティ、ポート速度、最大フレームペイロードが含まれます。 
+---
+= コントローラのホストポートのプロパティを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set controller HostPortコマンドは'iSCSI'iSER'NVMe over InfiniBand 'およびNVMe over RoCEホストポートのネットワーク・プロパティを変更しますプロパティの変更には、IPv4とIPv6のプロパティ、ポート速度、最大フレームペイロードが含まれます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、廃止されたを置き換えます xref:set-controller-iscsihostport.adoc[iSCSIのホストポートのネットワークプロパティを設定します] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
+    (IPV4Address=(0-255).(0-255).(0-255).(0-255) |
+    IPv6LocalAddress=(FE80):(0000):(0000):(0000):(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    enableIPv4=(TRUE | FALSE) |
+    enableIPv6=(TRUE | FALSE) |
+    enableIPv4Vlan=(TRUE | FALSE) |
+    enableIPv6Vlan=(TRUE | FALSE) |
+    enableIPv4Priority=(TRUE | FALSE) |
+    enableIPv6Priority=(TRUE | FALSE) |
+    fecMode=(auto:none:reedSolomon:fireCode) |
+    IPv4ConfigurationMethod=(static | dhcp) |
+    IPv6ConfigurationMethod=(static | auto) |
+    IPv4GatewayIP=(0-255).(0-255).(0-255).(0-255) |
+    IPv6HopLimit=[0-255] |
+    IPv6NdDetectDuplicateAddress=[0-255] |
+    IPv6NdReachableTime=[0-65535] |
+    IPv6NdRetransmitTime=[0-65535] |
+    IPv6NdTimeOut=[0-65535] |
+    IPv4Priority=[0-7] |
+    IPv6Priority=[0-7] |
+    IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+    IPv4VlanId=[1-4094] |
+    IPv6VlanId=[1-4094] |
+    maxFramePayload=[1500-9000] |
+    tcpListeningPort=(3260 | [49152-65535]) |
+    portSpeed=(autoNegotiate | 10 | 25 | 40 | 50 | 100))
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+プロパティを定義するコントローラを指定できます。
+
+
+
+ a| 
+「ホストポート」
+ a| 
+プロパティを定義するホストポートラベルを指定できます。200 GBのホスト・ポートの場合に限り' physicalまたはvirtualをパラメータとして指定できます
+
+[NOTE]
+====
+200 GBのホスト・ポート接続に値を指定しない場合'デフォルトでphysicalパラメータが設定されます
+
+====
+
+
+ a| 
+「ipv4address」と入力します
+ a| 
+アドレスを次の形式で入力できます：（0-255）.（0-255）.（0-255）.（0-255）。
+
+
+
+ a| 
+「IPV6LocalAddress」と入力します
+ a| 
+アドレスを次の形式で入力できます：（FE80）：（0000）：（0000）：（0000）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+IPv6RoutableAddress
+ a| 
+アドレスを次の形式で入力できます：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+「IPV6RouterAddress」
+ a| 
+アドレスを次の形式で入力できます：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+「enableIPV4」と入力します
+ a| 
+IPv4を有効にすることができます。
+
+
+
+ a| 
+「enableIPV6」
+ a| 
+IPv6を有効にすることができます。IPv6アドレススペースは128ビットです。コロンで区切られた8つの16ビット16進ブロックで表されます。
+
+
+
+ a| 
+enableIPv4Vlan
+ a| 
+IPv4 VLANを有効にすることができます。VLAN は、同じスイッチ、同じルータ、またはその両方でサポートされる他の物理 LAN （ローカルエリアネットワーク）および仮想 LAN から物理的に分離されたように動作する論理ネットワークです。
+
+
+
+ a| 
+enableIPv6Vlan
+ a| 
+IPv6 VLANを有効にすることができます。VLAN は、同じスイッチ、同じルータ、またはその両方でサポートされる他の物理 LAN （ローカルエリアネットワーク）および仮想 LAN から物理的に分離されたように動作する論理ネットワークです。
+
+
+
+ a| 
+enableIPv4Priority
+ a| 
+ネットワークアクセスの優先度を決定するパラメータを有効にできます。共有 LAN 環境（イーサネットなど）では、多数のステーションがネットワークアクセスで競合する可能性があります。アクセスは先に行われたものから順に処理されます。2 つのステーションが同時にネットワークにアクセスしようとすると、両方のステーションがオフになり、再試行するまで待機します。スイッチイーサネットでは、 1 つのステーションだけがスイッチポートに接続されるため、このプロセスは最小限に抑えられます。
+
+
+
+ a| 
+enableIPv6Priority
+ a| 
+ネットワークアクセスの優先度を決定するパラメータを有効にできます。共有 LAN 環境（イーサネットなど）では、多数のステーションがネットワークアクセスで競合する可能性があります。アクセスは先に行われたものから順に処理されます。2 つのステーションが同時にネットワークにアクセスしようとすると、両方のステーションがオフになり、再試行するまで待機します。スイッチイーサネットでは、 1 つのステーションだけがスイッチポートに接続されるため、このプロセスは最小限に抑えられます。
+
+
+
+ a| 
+「fecMode」
+ a| 
+ホストポートのFECモードを次のいずれかのオプションに設定できます。
+
+* 「 auto 」と入力します
+* 「 NONE 」
+* 「ReedSolomon」
+* 「fireCode」
+
+
+
+
+ a| 
+IPv4ConfigurationMethodを指定します
+ a| 
+IPv4の静的アドレスまたはDHCPアドレスを設定できます。
+
+
+
+ a| 
+IPv6ConfigurationMethod`
+ a| 
+IPv6の静的アドレスまたはDHCPアドレスを設定できます。
+
+
+
+ a| 
+'IPv4GatewayIP'
+ a| 
+ゲートウェイアドレスを次の形式で入力できます：（0-255）.（0-255）.（0-255）.（0-255）。
+
+
+
+ a| 
+IPv6HopLimit`
+ a| 
+IPv6パケットが経由できるホップの最大数を設定できます。デフォルト値は64です。
+
+
+
+ a| 
+IPv6NdDetectDuplicateAddress
+ a| 
+IPアドレスが一意であることを確認するために送信する近隣要求メッセージの数を設定できます。
+
+
+
+ a| 
+IPv6NdReachableTime
+ a| 
+リモートIPv6ノードが到達可能とみなされる時間（ミリ秒）を設定できます。デフォルト値は30000ミリ秒です。
+
+
+
+ a| 
+IPv6NdRetransmitTime`
+ a| 
+パケットをIPv6ノードに再送信し続ける時間をミリ秒単位で設定できます。デフォルト値は1000ミリ秒です。
+
+
+
+ a| 
+IPv6NdTimeOut`
+ a| 
+IPv6ノードのタイムアウト値をミリ秒単位で設定できます。デフォルト値は30000ミリ秒です。
+
+
+
+ a| 
+「IPv4Priority」のように表示されます
+ a| 
+IPv4パケットのプライオリティ割り当てを設定できます。
+
+
+
+ a| 
+IPv6Priority
+ a| 
+IPv6パケットのプライオリティ割り当てを設定できます。
+
+
+
+ a| 
+「IPv4SubnetMask」のように指定します
+ a| 
+サブネットマスクアドレスを次の形式で入力できます：（0-255）.（0-255）.（0-255）.（0-255）。
+
+
+
+ a| 
+'IPv4VlanId'
+ a| 
+IPv4 VLAN IDを設定できます
+
+
+
+ a| 
+IPv6VlanId
+ a| 
+IPv6 VLAN IDを設定できます
+
+
+
+ a| 
+maxFramePayload
+ a| 
+ネットワークで送信されるパケットまたはフレームの最大サイズを設定できます。標準イーサネットフレームのペイロード部分は1500に、ジャンボイーサネットフレームは9000に設定されます。ジャンボフレームを使用している場合は、ネットワークパス内のすべてのデバイスが大きなフレームサイズを処理できる必要があります。デフォルト値は1500バイト/フレームです。
+
+[NOTE]
+====
+NVMe over RoCE環境で最大限のパフォーマンスを実現するには、フレームサイズを4200に設定します。
+
+====
+
+
+ a| 
+tcpListeningPort
+ a| 
+イニシエータからのiSCSIログインをリスンするために使用するTCPポート番号を設定できます。デフォルトポートは3260です。
+
+
+
+ a| 
+「portSpeed」
+ a| 
+ポートの通信速度をメガビット/秒（Mb/秒）単位で設定できます。
+
+[NOTE]
+====
+このパラメータは、25GbpsのiSCSIホストインターフェイスカードと100Gbpsのイーサネットホストインターフェイスカードでのみサポートされます。25GbpsのiSCSIホストインターフェイスカードでは、1つのポートの速度を変更すると、カード上の4つのポートすべての速度が変更されます。この場合に使用できるオプションは10または25です。100Gbpsイーサネットホストインターフェイスカードで、リリース8.50で新たに1つのポートの速度を変更しても、カード上の他のポートには影響しません。この場合の選択可能なオプションは、autoNegotiate、10、25、40、50です。 100GbEと表示されます。
+
+====
+|===
+
+
+== ホストポートタイプ別のパラメータサポート状況
+
+パラメータがサポートされるかどうかは、次の表に示すように、ホストポートタイプ（iSCSI、iSER、NVMe over InfiniBand、またはNVMe over RoCE）によって異なります。
+
+[cols="5*"]
+|===
+| パラメータ | iSCSI | iSER | NVMe over InfiniBandの略 | NVMe over RoCE 
+
+
+ a| 
+「ipv4address」と入力します
+ a| 
+はい。
+ a| 
+はい。
+ a| 
+はい。
+ a| 
+はい。
+
+
+
+ a| 
+「IPV6LocalAddress」と入力します
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+IPv6RoutableAddress
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+「IPV6RouterAddress」
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+「enableIPV4」と入力します
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+「enableIPV6」
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+enableIPv4Vlan
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+enableIPv6Vlan
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+enableIPv4Priority
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+enableIPv6Priority
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+IPv4ConfigurationMethodを指定します
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+IPv6ConfigurationMethod`
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+'IPv4GatewayIP'
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+IPv6HopLimit`
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+IPv6NdDetectDuplicateAddress
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+IPv6NdReachableTime
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+IPv6NdRetransmitTime`
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+IPv6NdTimeOut`
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+「IPv4Priority」のように表示されます
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+IPv6Priority
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+「IPv4SubnetMask」のように指定します
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+'IPv4VlanId'
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+IPv6VlanId
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+いいえ
+
+
+
+ a| 
+maxFramePayload
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+
+
+ a| 
+tcpListeningPort
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+「portSpeed」
+ a| 
+はい。
+ a| 
+ a| 
+ a| 
+はい。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41
+
+8.50 - NVMe over RoCE環境についての情報が追加されました。
+
+11.70.1に'fecMode'パラメータが追加されました

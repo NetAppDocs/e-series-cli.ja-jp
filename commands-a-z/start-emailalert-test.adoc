@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-emailalert-test.html 
+sidebar: sidebar 
+keywords: test, email, alert, configuration 
+summary: start emailAlert testコマンドを使用すると、サンプルの電子メールメッセージを送信して、アラート設定をテストできます。 
+---
+= Eメールアラート設定のテスト
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「start emailAlert test」コマンドを使用すると、サンプルの電子メールメッセージを送信して、アラート設定をテストできます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+start emailAlert test
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start emailAlert test;"
+
+The sample alert message was successfully sent to the email addresses.
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

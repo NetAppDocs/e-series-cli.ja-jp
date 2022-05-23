@@ -1,0 +1,138 @@
+---
+permalink: commands-a-z/create-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: create, storage, array, directory server 
+summary: create storageArray DirectoryServerコマンドを使用すると、ユーザの認証および許可に使用する新しいディレクトリサーバを追加できます。 
+---
+= ストレージアレイのディレクトリサーバを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create storageArray DirectoryServer'コマンドを使用すると、ユーザーの認証および許可に使用する新しいディレクトリサーバーを追加できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+create storageArray directoryServer
+       [domainId=pass:quotes[_"domainId"_
+       domainNames=(_"domainName1"..."domainNameN"_)
+       serverUrl="_serverUrl"_]
+       [bindAccount=pass:quotes[_"username_" bindPassword="_password_"]]
+       searchBaseDN=pass:quotes[_"distinguishedName"_
+       usernameAttribute="_attributeName_"
+       groupAttributes=("_attrName1"..."attrNameN_")]
+        [skipConfigurationTest={true | false}]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「domainId」
+ a| 
+このドメインの一意のIDを指定できます。指定しない場合は、一意のGUIDが生成されます。
+
+
+
+ a| 
+「ドメイン名」
+ a| 
+ディレクトリサーバに対して有効なドメイン名を1つ以上指定できます。複数の名前を入力する場合は、値をスペースで区切ります。
+
+
+
+ a| 
+「serverURL」
+ a| 
+LDAPサーバにアクセスするためのURLをldap[s]：//hostAddress：portの形式で指定できます。LDAPSプロトコルが使用されている場合は、証明書コマンドを使用して、ディレクトリサーバの署名済み証明書を検証するルート/中間証明書がインポートされていることを確認します。
+
+
+
+ a| 
+bindAccount
+ a| 
+バインドアカウントとして使用するユーザ名またはバインドIDを指定できます。
+
+
+
+ a| 
+bindPassword
+ a| 
+バインドパスワードとして使用するパスワードを指定できます。
+
+
+
+ a| 
+「SearchBaseDN」
+ a| 
+グループメンバーシップを判断するためにLDAPユーザオブジェクトを検索する検索ベースの識別名を指定できます。
+
+
+
+ a| 
+「ユーザ名属性」
+ a| 
+グループメンバーシップを判断するためのユーザオブジェクトの検索に使用する属性を指定できます。指定した場合'文字列には'ログイン時に使用されるユーザー名に置き換えられる変数'+{uid}+`を含める必要があります例:`+sAMAccountName={uid}+`
+
+
+
+ a| 
+「groupAttributes」を参照してください
+ a| 
+グループの識別名の検索に使用するグループ属性を設定できます。識別名は、ロールマッピングのグループメンバーシップを判断するために使用されます。
+
+[NOTE]
+====
+複数のグループを入力する場合は、値をスペースで区切ります。
+
+====
+[NOTE]
+====
+このパラメータを使用すると、既存のグループが消去されます。
+
+====
+
+
+ a| 
+skipConfigurationTest
+ a| 
+設定が保存される前に、設定テストをスキップできます。デフォルトは「 false 」です。
+
+|===
+
+
+== 例
+
+[listing]
+----
+SMcli -n Array1 -c "create storageArray directoryServer
+domainNames=("company.com") serverUrl="ldap://hqldap.company.com:389"
+bindAccount="dummyBindDN" bindPassword="dummyPassword"
+searchBaseDN="OU=_Users,DC=hq, DC=company,DC=com"
+usernameAttributes="sAMAccountName={uid}" groupAttributes="memberOf";"
+
+SMcli completed successfully.
+----

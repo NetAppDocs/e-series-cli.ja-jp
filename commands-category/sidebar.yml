@@ -1,0 +1,24 @@
+---
+section: commands-category
+title: カテゴリ別のコマンド
+entries:
+- title: 管理者のコマンド
+  url: "/commands-category/administrator-commands.html"
+- title: アラート設定コマンド
+  url: "/commands-category/alert-configuration-commands.html"
+- title: アレイ構成コマンド
+  url: "/commands-category/array-configuration-commands.html"
+- title: AutoSupportのコマンドです
+  url: "/commands-category/auto-support-commands.html"
+- title: ミラーリングコマンド
+  url: "/commands-category/mirroring-commands.html"
+- title: パフォーマンス調整のコマンド
+  url: "/commands-category/performance-tuning-commands.html"
+- title: レプリケーションコマンド
+  url: "/commands-category/replication-commands.html"
+- title: セキュリティコマンド
+  url: "/commands-category/security-commands.html"
+- title: ストレージ監視担当者のコマンド
+  url: "/commands-category/storage-monitor-personal-commands.html"
+- title: ボリューム構成のコマンド
+  url: "/commands-category/volume-configuration-commands.html"

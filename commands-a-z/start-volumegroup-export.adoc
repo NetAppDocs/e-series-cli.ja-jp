@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/start-volumegroup-export.html 
+sidebar: sidebar 
+keywords: start, volume, group, export 
+summary: start volumeGroup exportコマンドは、ボリュームグループをエクスポート状態に移行します。 
+---
+= ボリュームグループのエクスポートの開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volumeGroup exportコマンドは'ボリューム・グループをエクスポート状態に移行します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+その後、ボリュームグループを構成するドライブを取り外して、別のストレージアレイに再度取り付けることができます。
+
+[CAUTION]
+====
+これらの手順を実行する前に、に記載されている手順を実行してください xref:../commands-category/learn-about-volume-group-migration.adoc[ボリュームグループの移行について説明します。]
+
+====
+[NOTE]
+====
+ボリュームグループ内では、機能に関連付けられているボリュームをストレージアレイ間で移動することはできません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] export
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+エクスポートするボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドが正常に実行されると'start volumeGroup importコマンドを実行して'ボリューム・グループの完全な状態への移動を完了できますこれにより'ボリューム・グループを新しいストレージ・アレイで使用できるようになります
+
+ハードウェアの問題によってエクスポートが完了できなかったためにこのコマンドが失敗した場合は、「set volumeGroup forceState」コマンドを使用します。set volumeGroup forceStateコマンドを使用すると'start volumeGroup importコマンドを使用してボリュームグループをインポートできます
+
+ボリュームグループがエクスポート状態または強制状態になったら、ボリュームグループを構成するドライブをストレージアレイから取り外すことができます。ドライブを別のストレージアレイに再度取り付けることができます。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

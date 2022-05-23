@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/clear-storagearray-eventlog.html 
+sidebar: sidebar 
+keywords: clear, storage array, event log 
+summary: clear storageArray EventLogコマンドは、イベントログバッファのデータを削除することでストレージアレイのイベントログをクリアします。 
+---
+= ストレージアレイイベントログをクリアします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear storageArray EventLogコマンドは、イベントログバッファのデータを削除することでストレージアレイのイベントログをクリアします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+*ストレージアレイ構成への損傷の可能性*--このコマンドを実行すると'ストレージアレイ内の既存のイベントログがただちに削除されます
+
+====
+
+
+== 構文
+
+[listing]
+----
+clear storageArray eventLog
+----
+
+
+== パラメータ
+
+なし

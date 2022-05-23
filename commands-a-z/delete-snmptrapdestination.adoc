@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-snmptrapdestination.html 
+sidebar: sidebar 
+keywords: delete, command, snmptrapdestination, existing, simple, network, management, protocol, trap, destination, previous, create, registered 
+summary: delete snmpTrapDestinationコマンドを使用すると、create snmpTrapDestinationコマンドを使用して以前に作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）トラップの送信先が削除されます。 
+---
+= SNMPトラップの送信先の登録を解除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete snmpTrapDestination」コマンドは、「create snmpTrapDestination」コマンドを使用して以前に作成および登録した、既存の簡易ネットワーク管理プロトコル（SNMP）トラップの送信先を削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpTrapDestination trapReceiverIP=_ipAddress_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「trapReceverIP」と入力します
+ a| 
+トラップメッセージの送信を停止するSNMPマネージャのIPアドレス。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

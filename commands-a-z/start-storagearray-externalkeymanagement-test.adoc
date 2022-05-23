@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/start-storagearray-externalkeymanagement-test.html 
+sidebar: sidebar 
+keywords: test, external key, management, communication 
+summary: start storageArray externalKeyManagement testコマンドは、設定されているクレデンシャル（証明書、KMIPサーバのアドレス、KMIPポート番号）を使用して、ストレージアレイが外部KMIPサーバと通信できるかどうかを確認します。 
+---
+= 外部キー管理通信のテスト
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start storageArray externalKeyManagement testコマンドは、設定されたクレデンシャル（証明書、KMIPサーバのアドレス、KMIPポート番号）を使用して、ストレージアレイが外部KMIPサーバと通信できるかどうかを確認します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing]
+----
+start storageArray externalKeyManagement test
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.40

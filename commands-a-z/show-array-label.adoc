@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-array-label.html 
+sidebar: sidebar 
+keywords: show, array, label 
+summary: Show array labelコマンドは、ストレージアレイラベルが定義されているか、または既存のすべてのストレージアレイラベルを返します。 
+---
+= アレイラベルを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Show array label'コマンドは'ストレージ・アレイ・ラベルが定義されているか'または既存のすべてのストレージ・アレイ・ラベルが定義されているかを示す情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、EF600ストレージアレイを環境 します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show storageArrayLabel label _userDefinedString_]
+show storageArrayLabel all
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「userDefinedString」
+ a| 
+ストレージアレイのユーザ定義のラベルを指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.60

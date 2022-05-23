@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-isnslisteningport.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, listen, port 
+summary: set storageArray isnsListeningPortコマンドは、iSNSサーバのリスニングポートを設定します。 
+---
+= ストレージアレイのiSNSサーバのリスニングポートを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray isnsListeningPortコマンドは、iSNSサーバのリスニングポートを設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set storageArray isnsListeningPort=pass:quotes[_listeningPortIPAddress_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「isnsListeningPort」
+ a| 
+iSNSサーバのリスニングポートに使用するIPアドレス。リスニング・ポートの値の範囲は'49152'～65535ですデフォルト値は「53205」です。
+
+リスニングポートはサーバ上で次のアクティビティを実行します。
+
+* 受信するクライアント接続要求を監視します
+* サーバへのトラフィックを管理します
+
+
+クライアントがサーバとのネットワークセッションを要求すると、リスナーが実際の要求を受信します。クライアントの情報がリスナーの情報と一致した場合は、リスナーがデータベースサーバへの接続を許可します。
+
+|===
+
+
+== 注：
+
+リスニングポートはデータベースサーバ上で次のアクティビティを実行します。
+
+* 受信するクライアント接続要求をリスン（監視）しています
+* サーバへのトラフィックの管理
+
+
+クライアントがサーバとのネットワークセッションを要求すると、リスナーが実際の要求を受信します。クライアントの情報がリスナーの情報と一致した場合は、リスナーがデータベースサーバへの接続を許可します。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

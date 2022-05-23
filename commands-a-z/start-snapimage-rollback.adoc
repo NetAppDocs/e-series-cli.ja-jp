@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/start-snapimage-rollback.html 
+sidebar: sidebar 
+keywords: start, snapshot, image, rollback 
+summary: start snapImage rollbackコマンドは、一連のSnapshotイメージのロールバック処理を開始します。 
+---
+= Snapshotイメージのロールバックを開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start snapImage rollbackコマンドは'スナップショット・イメージ・セットのロールバック・オペレーションを開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ベースボリュームの内容は、選択したSnapshotイメージボリュームの任意の時点の内容に合わせてすぐに変更されます。ロールバック処理が完了すると、ベースボリュームに対する読み取り/書き込み要求をすぐに実行できるようになります。スナップショット・イメージのロールバック操作を停止するには'stop rollback SnapImageコマンドを使用します
+
+Snapshotイメージに関連付けられているリポジトリボリュームは、ロールバック処理の完了後に発生するベースボリュームとSnapshotイメージボリューム間の新しい変更を引き続き追跡します。
+
+[NOTE]
+====
+オンラインボリュームコピーに関与するSnapshotイメージには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start snapImage ["_snapImageName_"]] rollback
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapImage」
+ a| 
+Snapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新--スナップショットグループで作成された最新のスナップショットイメージを表示する場合に'このオプションを使用します
+* oldest --スナップショットグループで作成された最も古いスナップショットイメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、SnapshotグループsnapGroup1内のSnapshotイメージ12345をロールバックする場合は、次のコマンドを使用します。
+
+[listing]
+----
+start snapImage ["snapGroup1:12345"] rollback;
+----
+SnapshotグループsnapGroup1内の最も新しいSnapshotイメージをロールバックするには、次のコマンドを使用します。
+
+[listing]
+----
+start snapImage ["snapGroup1:newest"]rollback;
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

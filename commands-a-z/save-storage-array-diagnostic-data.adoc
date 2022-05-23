@@ -1,0 +1,88 @@
+---
+permalink: commands-a-z/save-storage-array-diagnostic-data.html 
+sidebar: sidebar 
+keywords: save, storage, array, diagnostic, data 
+summary: save storageArray diagnosticDataコマンドは、ストレージアレイの診断データをコントローラまたは環境サービスモジュール（ESM）からファイルに保存します。 
+---
+= ストレージアレイの診断データを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray diagnosticDataコマンドは、ストレージアレイの診断データをコントローラまたは環境サービスモジュール（ESM）からファイルに保存します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ファイルの内容はあとで確認できます。また、ファイルをテクニカルサポートに送信して詳しい確認を依頼することもできます。
+
+診断データを保存したら、古いデータを上書きできるように、診断データが含まれているNVSRAMレジスタをリセットできます。診断データレジスタをリセットするには、「reset storageArray diagnosticData」コマンドを使用します。
+
+[NOTE]
+====
+このコマンドは、テクニカルサポートの助言の下で実行してください。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray diagnosticData [(controller | tray)]
+file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「diagnosticData」を参照してください
+ a| 
+このパラメータでは、診断データをコントローラとESMのどちらからダウンロードするかを指定できます。
+
+
+
+ a| 
+'file'
+ a| 
+ストレージアレイ診断データの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\sadag.zip "`
+
+このコマンドではデータが自動的に圧縮ファイルに保存されますが、ファイルには自動的にファイル拡張子が付加されません。ファイル名を入力するときは'.zip拡張子を指定する必要があります
+
+|===
+
+
+== 注：
+
+このコマンドの7.77より前のバージョンでは'ユーザ・オプションはtrayではなくESMでした7.77では'trayは'ESMを置き換えます「ESM」の使用はまだサポートされていますが、今後のリリースとの互換性を最大限に高めるために、「ESM」を「tray」に置き換えてください。
+
+
+
+== 最小ファームウェアレベル
+
+6.16
+
+7.77「tray」は「ESM」に代わるものです。

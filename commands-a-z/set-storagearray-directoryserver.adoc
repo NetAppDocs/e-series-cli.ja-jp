@@ -1,0 +1,161 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server 
+summary: set storageArray DirectoryServerコマンドは、ディレクトリサーバ設定を更新します。 
+---
+= ストレージアレイのディレクトリサーバを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray DirectoryServer`コマンドは、ディレクトリサーバの設定を更新します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer ["domainId"]
+    (domainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     addDomainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     serverUrl=pass:quotes["_serverUrl_"] |
+     bindAccount=pass:quotes["_username_"] bindPassword=pass:quotes["_password_"] |
+     searchBaseDN=pass:quotes["_distinguishedName_"] |
+     usernameAttribute=pass:quotes["_attributeName_"] |
+     groupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_")] |
+     addGroupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_"))]
+    [skipConfigurationTest={true | false}]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「DirectoryServer」を参照してください
+ a| 
+設定を更新するドメインIDを指定できます。
+
+
+
+ a| 
+「ドメイン名」
+ a| 
+ディレクトリサーバに対して有効なドメイン名を1つ以上設定できます。複数の名前を入力する場合は、値をスペースで区切ります。この設定オプションを使用すると、既存のドメイン名が消去されます。
+
+
+
+ a| 
+「addDomainNames」
+ a| 
+ディレクトリサーバに対して有効なドメイン名を1つ以上追加できます。複数の名前を入力する場合は、値をスペースで区切ります。
+
+
+
+ a| 
+「serverURL」
+ a| 
+サーバのURLを指定できます。
+
+
+
+ a| 
+bindAccount
+ a| 
+バインドアカウントとして使用するユーザ名を指定できます。
+
+
+
+ a| 
+bindPassword
+ a| 
+バインドパスワードとして使用するパスワードを指定できます。
+
+
+
+ a| 
+「SearchBaseDN」
+ a| 
+グループメンバーシップを判断するためにLDAPユーザオブジェクトを検索する検索ベース識別名を指定できます。
+
+
+
+ a| 
+「ユーザ名属性」
+ a| 
+グループメンバーシップを判断するためのユーザオブジェクトの検索に使用する属性を指定できます。指定した場合'文字列には'ログイン時に使用されるユーザー名に置き換えられる変数'+{uid}+`を含める必要があります例:`+sAMAccountName={uid}+`
+
+
+
+ a| 
+「groupAttributes」を参照してください
+ a| 
+グループの識別名の検索に使用するグループ属性を設定できます。識別名は、ロールマッピングのグループメンバーシップを判断するために使用されます。
+
+[NOTE]
+====
+複数のグループを入力する場合は、値をスペースで区切ります。
+
+====
+[NOTE]
+====
+このパラメータを使用すると、既存のグループが消去されます。
+
+====
+
+
+ a| 
+「addGroupAttributes」を参照してください
+ a| 
+グループの識別名の検索に使用するグループ属性を追加できます。識別名は、ロールマッピングの目的でグループメンバーシップを判断するために使用されます。
+
+[NOTE]
+====
+複数のグループを入力する場合は、値をスペースで区切ります。
+
+====
+
+
+ a| 
+skipConfigurationTest
+ a| 
+設定が保存される前に、設定テストをスキップできます。デフォルトは「 false 」です。
+
+|===
+
+
+== 例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+     serverUrl="ldaps://hqldap.eng.mycompany.com:636";"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    bindAccount="bindDN2" bindPassword="thePassword2"
+                    searchBaseDN="OU=_Users,DC=hq,DC=mycompany,DC=com"
+                    usernameAttribute="sAMAccountName" groupAttributes=("memberOf");"
+
+SMcli completed successfully.
+----

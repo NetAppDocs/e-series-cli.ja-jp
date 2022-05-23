@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-locate.html 
+sidebar: sidebar 
+keywords: start, volume, group, locate 
+summary: start volumeGroup locateコマンドは、ドライブのインジケータライトを点滅させることにより、指定したボリュームグループを構成するために論理的にグループ化されたドライブを特定します。 
+---
+= ボリュームグループの特定の開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volumegroup locateコマンドは'ドライブ上のインジケータライトを点滅させることにより'指定したボリュームグループを構成するために論理的にグループ化されたドライブを特定します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ドライブのインジケータライトをオフにするには'stop volumegroup locateコマンドを使用します
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] locate
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+特定するドライブが所属するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.16

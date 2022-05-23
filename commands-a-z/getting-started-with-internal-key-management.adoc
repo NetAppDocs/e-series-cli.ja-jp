@@ -1,0 +1,34 @@
+---
+permalink: commands-a-z/getting-started-with-internal-key-management.html 
+sidebar: sidebar 
+keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
+summary: セキュリティキーは、ストレージアレイのセキュリティ有効ドライブとコントローラで共有される文字列です。内部キー管理を使用する場合は、セキュリティキーを作成してコントローラの永続的メモリに保持します。 
+---
+= 内部キー管理の開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+セキュリティキーは、ストレージアレイのセキュリティ有効ドライブとコントローラで共有される文字列です。内部キー管理を使用する場合は、セキュリティキーを作成してコントローラの永続的メモリに保持します。
+
+内部セキュリティキーの使用の概念については、SANtricity System Managerのオンラインヘルプを参照してください。
+
+内部セキュリティキーを使用するための基本的なワークフローを次に示します。
+
+. *セキュリティキーを作成*
+. *セキュリティキーを設定*
+. *セキュリティキーの検証*
+
+
+
+
+== ワークフローの手順
+
+内部セキュリティキーの使用を開始するコマンドは次のとおりです。
+
+. create storageArray securityKeyコマンドを使用して、ストレージアレイのセキュリティキーを作成します。を参照してください xref:create-storagearray-securitykey.adoc[ストレージアレイのセキュリティキーを作成しています]。
+. set storageArray securityKeyコマンドを使用して、ストレージアレイのセキュリティキーを設定します。を参照してください xref:set-storagearray-securitykey.adoc[ストレージアレイのセキュリティキーを設定する]。
+. 「validate storageArray securityKey」コマンドを使用して、セキュリティキーを検証します。を参照してください xref:validate-storagearray-securitykey.adoc[ストレージアレイのセキュリティキーを検証しています]。
+

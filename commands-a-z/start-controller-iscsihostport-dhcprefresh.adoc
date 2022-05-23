@@ -1,0 +1,131 @@
+---
+permalink: commands-a-z/start-controller-iscsihostport-dhcprefresh.html 
+sidebar: sidebar 
+keywords: start, iscsi, dhcp, refresh 
+summary: start controller iscsiHostPort dhcpRefreshコマンドは、iSCSIインターフェイスのDHCPパラメータの更新を開始します。 
+---
+= iSCSI DHCP更新を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start controller iscsiHostPort dhcpRefreshコマンドは'iSCSIインタフェースのDHCPパラメータの更新を開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+インターフェイスの設定方法がDHCPに設定されていない場合、手順 はエラーを返します。
+
+
+
+== 構文
+
+[listing]
+----
+start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+iSCSIホストポートが搭載されたコントローラの識別子。有効なコントローラ識別子の値は'a'またはb'ですここで'a'はスロットAのコントローラ'b'はスロットBのコントローラです
+
+
+
+ a| 
+「iscsiHostPort」のように入力します
+ a| 
+DHCPパラメータを更新するiSCSIホストポートのラベルまたは番号。
+
+詳細については、次を参照してください。
+
+<<Identifying an iSCSI host port label,"iSCSIホストポートラベルの識別">>
+
+|===
+
+
+== iSCSIホストポートラベルの特定
+
+ホストポートのラベルを指定する必要があります。ホストポートのラベルを指定する手順は、次のとおりです。
+
+.手順
+. iSCSIホスト・ポートのポート・ラベルがわからない場合は、「show controller」コマンドを実行します。
+. 結果のHost interfaceセクションで、選択するホストポートを特定します。
++
+[NOTE]
+====
+ポート・ラベルは'Port'フィールドに返される完全な値です
+
+====
+. ポートラベルの値全体を引用符と角かっこで囲みます。["portLabel"]たとえば、ポートラベルが「Ch 2」の場合は、iSCSIホストポートを次のように指定します。
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+Windowsのコマンドラインを使用していて、ラベルにパイプ（|）が含まれている場合は、文字をエスケープする必要があります（｛キャレット｝を使用）。エスケープしない場合は、コマンドと解釈されます。たとえば、ポートラベルが「e0b|0b'」の場合は、iSCSIホストポートを次のように指定します。
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+下位互換性のために、引用符と角かっこではなく角かっこ[]で囲まれているiscsiPortNumberも、引き続きE2700、E5600、EF560の各コントローラ（およびEシリーズまたはEFシリーズの他の旧世代コントローラ）に使用できます。これらのコントローラでは、iscsiPortNumberの有効な値は次のとおりです。
+
+* ホストポートが統合されたコントローラの場合、番号は3、4、5、または6です。
+* ホストインターフェイスカード上にのみホストポートがあるコントローラの場合、番号は1、2、3、または4です。
+
+
+以前の構文の例を次に示します。
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 注：
+
+この処理を実行すると、ポータルのiSCSI接続が終了し、ポータルが一時的に停止します。
+
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.10で、iSCSIホストポートの番号付け方法が改定されました。
+
+8.30で、E2800のiSCSIホストポートの識別方法が改定されました。

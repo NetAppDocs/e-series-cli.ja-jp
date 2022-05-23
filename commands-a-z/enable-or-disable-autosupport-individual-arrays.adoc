@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/enable-or-disable-autosupport-individual-arrays.html 
+sidebar: sidebar 
+keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
+summary: このコマンドは、ストレージアレイのAutoSupport （ASUP）機能を有効または無効にし、テクニカルサポートサイトへのメッセージ送信を可能にします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。 
+---
+= AutoSupport の有効化または無効化（すべてのアレイ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+このコマンドは、ストレージアレイのAutoSupport （ASUP）機能を有効または無効にし、テクニカルサポートサイトへのメッセージ送信を可能にします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この機能を有効にしたあとに、必要に応じてAutoSupport OnDemand機能を有効にし、さらに必要に応じてAutoSupport リモート診断機能を有効にすることができます。
+
+次の3つの機能は、この順序で有効にする必要があります。
+
+. * AutoSupport を有効にします。*
+. * AutoSupport OnDemand*を有効にします
+. * AutoSupport Remote Diagnosticsを有効にします。*
+
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray autoSupport (enable | disable)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'enable|disable
+ a| 
+AutoSupport を有効または無効にできます。OnDemand機能とRemote Diagnostics機能が有効な場合、無効化の操作を行うと、OnDemand機能とRemote Diagnostics機能もオフになります。
+
+|===
+
+
+=== 例
+
+[listing]
+----
+
+   SMcli -n Array1 -c "set storageArray autoSupport enable;"
+
+   SMcli completed successfully.
+----
+
+
+== 検証
+
+このAutoSupport 機能を有効にしたかどうかを確認するには、「show storageArray autoSupport」コマンドを使用します。表示される出力の最初の行に、有効化のステータスが表示されます。
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+----
+
+
+== 最小ファームウェアレベル
+
+7.86 -モデルE2700およびE5600までのすべてのストレージアレイ用のコマンドが追加されました
+
+8.40 - E2800およびE5700のサポートが追加されました

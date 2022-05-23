@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/delete-emailalert.html 
+sidebar: sidebar 
+keywords: delete, email, alert, recipient 
+summary: delete emailAlertコマンドは、電子メールアラート設定から受信者の電子メールアドレスを削除します。 
+---
+= Eメールアラートの受信者を削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete emailAlert」コマンドは、電子メールアラート設定から受信者の電子メールアドレスを削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+delete emailAlert
+       (allEmailRecipients |
+        emailRecipients pass:quotes[[_emailAddress1 ... emailAddressN_]])
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allEmailRecipients」を参照してください
+ a| 
+すべてのEメール受信者を削除できます。
+
+
+
+ a| 
+「Eメール受信者」
+ a| 
+受信者アドレスを削除できます。Eメールアドレスは角かっこ（[]）で囲みます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete emailAlert allEmailRecipients;"
+
+SMcli -n Array1 -c "delete emailAlert emailRecipients ["person1@email.domain.com" "person3@email.domain.com"];"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

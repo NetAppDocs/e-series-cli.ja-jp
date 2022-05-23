@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-textstring.html 
+sidebar: sidebar 
+keywords: show, str 
+summary: show textstringコマンドは、スクリプトファイルからテキスト文字列を表示します。このコマンドは、MS-DOSとUNIXのechoコマンドに似ています。 
+---
+= 文字列を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show textstring」コマンドは、スクリプトファイルのテキスト文字列を表示します。このコマンドは、MS-DOSおよびUNIXの「echo」コマンドと似ています。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show "_textString_"]
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+文字列は二重引用符（""）で囲みます。
+
+
+
+== 最小ファームウェアレベル
+
+6.10

@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/set-snapgroup-mediascanenabled.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, media, scan 
+summary: set snapGroup mediaScanEnabledコマンドは、スナップショットグループ上でメディアスキャンを実行します。 
+---
+= Snapshotグループのメディアスキャンの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set snapGroup mediaScanEnabledコマンドは'スナップショット・グループ上でメディア・スキャンを実行します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+mediaScanEnabled=(TRUE | FALSE)
+redundancyCheckEnabled=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+メディアスキャンを実行するSnapshotグループの名前。Snapshotグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+mediaScanEnabled
+ a| 
+ボリュームのメディアスキャンをオンまたはオフにするための設定。メディア・スキャンをオンにするには'このパラメータをTRUEに設定しますメディアスキャンをオフにするには、このパラメータを「FALSE」に設定します。（メディアスキャンがストレージアレイレベルで無効になっている場合、このパラメータは機能しません）。
+
+
+
+ a| 
+「redundancyCheckEnabled」
+ a| 
+メディアスキャン中に冗長性チェックをオンまたはオフにするための設定。冗長性チェックをオンにするには'このパラメータをTRUEに設定します冗長性チェックをオフにするには'このパラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

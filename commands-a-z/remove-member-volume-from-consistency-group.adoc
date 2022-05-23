@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/remove-member-volume-from-consistency-group.html 
+sidebar: sidebar 
+keywords: remove, member, volume, consistency group 
+summary: set consistencyGroupコマンドは、既存のSnapshot整合性グループからメンバーボリュームを削除します。 
+---
+= 整合性グループからメンバーボリュームを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set consistencyGroupコマンドは、既存のSnapshot整合性グループからメンバーボリュームを削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+必要に応じて、整合性グループからリポジトリボリュームメンバーを削除できます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set consistencyGroup pass:quotes[[_"consistencyGroupName"_]]
+removeCGMemberVolume=pass:quotes["_memberVolumeName_"]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「consistencyGroupName」
+ a| 
+メンバーを削除する整合性グループの名前。整合性グループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「removeCGMemberVolume」
+ a| 
+削除するメンバーボリュームの名前。メンバーグループ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+deleteRepositoryMembersを指定します
+ a| 
+整合性グループからすべてのリポジトリメンバーを削除するかどうかを指定します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

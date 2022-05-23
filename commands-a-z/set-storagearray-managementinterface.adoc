@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-managementinterface.html 
+sidebar: sidebar 
+keywords: set, storage, array, management, interface 
+summary: set storageArray ManagementInterfaceコマンドは、コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。 
+---
+= ストレージアレイ管理インターフェイスを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray ManagementInterfaceコマンドは、コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+set storageArray managementInterface restOnly={true | false}
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「リストア専用」
+ a| 
+trueに設定すると'RESTfulインターフェイスのみが使用可能な管理インターフェイスになりますこのインターフェイスでは、ストレージアレイと管理ソフトウェアの間の接続が暗号化されます。
+
+falseに設定すると'ストレージ・アレイと管理ソフトウェア間の従来のインタフェースが許可されますこのインターフェイスは暗号化されません。
+
+従来の管理インターフェイス（SANtricity SMI-SプロバイダやOnCommand Insight （OCI）など）と直接通信するツールには、「restOnly」パラメータを「false」に設定しないかぎり機能しません。詳細については、テクニカルサポートにお問い合わせください。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray managementInterface restOnly=true;"
+
+SMcli completed successfully.
+----

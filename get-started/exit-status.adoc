@@ -1,0 +1,639 @@
+---
+permalink: get-started/exit-status.html 
+sidebar: sidebar 
+keywords: exit, status 
+summary: 次の表に、返される可能性がある終了ステータスと、各ステータスの意味を示します。 
+---
+= 終了ステータス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+次の表に、返される可能性がある終了ステータスと、各ステータスの意味を示します。
+
+[cols="3*"]
+|===
+| ステータスの値 | エラー名 | 意味 
+
+
+ a| 
+0
+ a| 
+成功しました
+ a| 
+コマンドはエラーなしで終了しました。
+
+
+
+ a| 
+1.
+ a| 
+無効な使用方法です
+ a| 
+コマンドがエラーで終了しました。エラーに関する情報も表示されます。
+
+
+
+ a| 
+2.
+ a| 
+script_file_ds_not_存在します
+ a| 
+スクリプトファイルが存在しません。
+
+
+
+ a| 
+3.
+ a| 
+ERROR_opening_output_file
+ a| 
+出力ファイルを開くときにエラーが発生しました。
+
+
+
+ a| 
+4.
+ a| 
+no_storage_array_at_address
+ a| 
+指定されたアドレスにストレージアレイがありませんでした。
+
+
+
+ a| 
+5.
+ a| 
+addresss_specify_different _arrays.
+ a| 
+アドレスは別のストレージアレイを指定しています。
+
+
+
+ a| 
+6.
+ a| 
+NO_SANAME_OF_HOST_AGEER_CONNECT
+ a| 
+接続されているホストエージェントのストレージアレイ名が存在しません。
+
+
+
+ a| 
+7.
+ a| 
+SANAME_not_at_address
+ a| 
+ストレージアレイ名は指定されたアドレスにありませんでした。
+
+
+
+ a| 
+8.
+ a| 
+SANAME_not_unique
+ a| 
+ストレージアレイ名は一意ではありませんでした。
+
+
+
+ a| 
+9.
+ a| 
+SANAME_IN_CONFIG_FILE
+ a| 
+ストレージアレイ名は構成ファイル内にありませんでした。
+
+
+
+ a| 
+10.
+ a| 
+SA用の_MANAGEMENT _class_for _SAがありません
+ a| 
+ストレージアレイの管理クラスが存在しません。
+
+
+
+ a| 
+11.
+ a| 
+sa_in_config_file_が見つかりません
+ a| 
+構成ファイルでストレージアレイが見つかりませんでした。
+
+
+
+ a| 
+12.
+ a| 
+INTERNAL ERROR
+ a| 
+内部エラーが発生しました。この終了ステータスは、コマンドラインからCLIコマンドを実行するための権限がないことを示します。コマンドラインからすべてのCLIコマンドを実行するには、管理者権限が必要です。
+
+
+
+ a| 
+13
+ a| 
+invalid_script_syntax
+ a| 
+無効なスクリプト構文が見つかりました。
+
+
+
+ a| 
+14
+ a| 
+通信できません
+ a| 
+コントローラがストレージアレイと通信できませんでした。
+
+
+
+ a| 
+15
+ a| 
+duplicate_argument
+ a| 
+重複する引数が入力されました。
+
+
+
+ a| 
+16
+ a| 
+実行エラー
+ a| 
+実行エラーが発生しました。
+
+
+
+ a| 
+17
+ a| 
+no_host_at_address
+ a| 
+指定されたアドレスにホストがありませんでした。
+
+
+
+ a| 
+18
+ a| 
+WWN_not_in_config_files
+ a| 
+WWIDは構成ファイル内にありませんでした。
+
+
+
+ a| 
+19
+ a| 
+WWN_not_at_address
+ a| 
+WWIDはこのアドレスにありませんでした。
+
+
+
+ a| 
+20
+ a| 
+unknown_ip
+ a| 
+不明なIPアドレスが指定されました。
+
+
+
+ a| 
+21
+ a| 
+PM_CONFIG_FILE_corrupted
+ a| 
+イベントモニタ構成ファイルが破損していました。
+
+
+
+ a| 
+22
+ a| 
+Unable to Communicate _to PM（PMと通信できません。
+ a| 
+ストレージアレイがイベントモニタと通信できませんでした。
+
+
+
+ a| 
+23
+ a| 
+UNEXIST_ALERT
+ a| 
+コントローラがアラート設定を書き込めませんでした。
+
+
+
+ a| 
+24
+ a| 
+wrong _organizer_node
+ a| 
+間違ったオーガナイザノードが指定されました。
+
+
+
+ a| 
+25
+ a| 
+cmd_not_availableというプロンプトが表示されます
+ a| 
+コマンドを使用できませんでした。
+
+
+
+ a| 
+26
+ a| 
+DEVICE_not_in_CONFIG_FILE
+ a| 
+デバイスが構成ファイルにありませんでした。
+
+
+
+ a| 
+27
+ a| 
+ERROR_updating_CONFIG_FILE
+ a| 
+構成ファイルの更新中にエラーが発生しました。
+
+
+
+ a| 
+28
+ a| 
+UNKNOWNホストエラーです
+ a| 
+不明なホストエラーが発生しました。
+
+
+
+ a| 
+29
+ a| 
+sender_contact_file_not_found
+ a| 
+送信者の連絡先情報ファイルが見つかりませんでした。
+
+
+
+ a| 
+30
+ a| 
+READ_SENDER_CONTLE_FILE_FAILED
+ a| 
+送信者連絡先情報ファイルを読み取れませんでした。
+
+
+
+ a| 
+31.
+ a| 
+Userdata_file_が存在します
+ a| 
+「userdata.txt」ファイルが存在します。
+
+
+
+ a| 
+32
+ a| 
+bAD_EMAIL_information_to _ include
+ a| 
+電子メールアラート通知に無効な「-i」値が指定されました。
+
+
+
+ a| 
+33
+ a| 
+bAD_EMAIL_frequencyです
+ a| 
+電子メールアラート通知に無効な「-f」値が指定されました。
+
+
+
+ a| 
+34
+ a| 
+OPTION_Removed
+ a| 
+-rオプションはサポートされなくなりました
+
+
+
+ a| 
+35
+ a| 
+unknown_alert_priority
+ a| 
+アラートの重大度が無効です。
+
+
+
+ a| 
+36
+ a| 
+password _必須
+ a| 
+処理を実行するには、管理者パスワードまたは監視パスワードのいずれかが設定されている必要があります。
+
+
+
+ a| 
+37
+ a| 
+無効な_MONITOR_PASSWORDです
+ a| 
+無効なMonitorパスワードが入力されたため、処理を完了できませんでした。
+
+
+
+ a| 
+38
+ a| 
+無効なAdminパスワードです
+ a| 
+無効な管理者パスワードが入力されたため、処理を完了できませんでした。
+
+
+
+ a| 
+39
+ a| 
+パスワードの最大文字数を超えています
+ a| 
+指定したパスワードが文字数の制限を超えています。
+
+
+
+ a| 
+40
+ a| 
+Invalid _monitor_token（無効なモニタートークン
+ a| 
+-Rモニタは'このアレイではサポートされていません有効なロールを使用して処理を再試行してください。
+
+
+
+ a| 
+41.
+ a| 
+asa_config_errorというエラーです
+ a| 
+AutoSupport 構成ファイルへの書き込みまたはからの読み取り中にエラーが発生しました。この処理を再実行してください。
+
+
+
+ a| 
+42
+ a| 
+mail_server_unknown
+ a| 
+ホストアドレスまたはメールサーバのアドレスが正しくありません。
+
+
+
+ a| 
+43
+ a| 
+asa_smtp_reply_address_requiredに設定されています
+ a| 
+ASUP設定テストを試行中に、正常なASUPが有効なアレイが検出されませんでした。
+
+
+
+ a| 
+44
+ a| 
+ASUPアレイが検出されませんでした
+ a| 
+ASUP配信タイプがSMTPの場合は、返信Eメール要求が必要です。
+
+
+
+ a| 
+45
+ a| 
+asa_invalid_mail_relay _server
+ a| 
+ASUPメールリレーサーバを検証できません。
+
+
+
+ a| 
+46
+ a| 
+asa_invalid_sender _email
+ a| 
+指定した送信者Eメールアドレスは有効な形式ではありません。
+
+
+
+ a| 
+47
+ a| 
+asa_invalid_pac_script
+ a| 
+Proxy Auto-Configuration（PAC）スクリプトファイルが有効なURLではありません。
+
+
+
+ a| 
+48
+ a| 
+asa_invalid_proxy_server_host_address
+ a| 
+指定したホストアドレスが見つからないか、形式が正しくありません。
+
+
+
+ a| 
+49
+ a| 
+asa_invalid_proxy_server_port_numberを指定します
+ a| 
+指定したポート番号の形式が無効です。
+
+
+
+ a| 
+50
+ a| 
+asa_invalid_authentication_parameter
+ a| 
+指定したユーザ名またはパスワードが無効です。
+
+
+
+ a| 
+51
+ a| 
+asa_invalid_daily_time_parameter
+ a| 
+指定した日単位の時間のパラメータが無効です。
+
+
+
+ a| 
+52
+ a| 
+asa_invalid_day_OF_week_parameter
+ a| 
+入力された「-dayofweek」パラメータが無効です。
+
+
+
+ a| 
+53
+ a| 
+asa_invalid_weekly_time_parameter
+ a| 
+週単位の時間のパラメータが無効です。
+
+
+
+ a| 
+54
+ a| 
+asa_invalid_schedule_parsing
+ a| 
+指定されたスケジュール情報を正常に解析できません。
+
+
+
+ a| 
+55
+ a| 
+asa_invalid_sa_specified
+ a| 
+ストレージアレイ指定子が無効です。
+
+
+
+ a| 
+56
+ a| 
+asa_invalid_input_archiveを実行します
+ a| 
+入力された入力アーカイブが無効です。入力アーカイブ・パラメータは'`-pinputArchive=<n>``の形式で指定する必要がありますここで'-n'は0～5の整数です
+
+
+
+ a| 
+57
+ a| 
+asa_invalid_output_log
+ a| 
+有効な出力ログが指定されていません。
+
+
+
+ a| 
+58
+ a| 
+asa_transmission_file-copy_errorというエラーです
+ a| 
+AutoSupport 送信ログファイルをコピーするときにエラーが発生しました。送信ログが存在しないか、データをコピーしようとしてIOエラーが発生しました。
+
+
+
+ a| 
+59
+ a| 
+asa_duplicate_named_arrays
+ a| 
+同じ名前のストレージアレイが複数見つかりました。World Wide Nameパラメータの「-w <wwwwwwid >」を使用してコマンドを再試行してください。
+
+
+
+ a| 
+60
+ a| 
+asa_no_specified _array_foundです
+ a| 
+n <storage-system-name>パラメータで指定されたストレージアレイが存在しないか、このコマンドではサポートされていません。
+
+
+
+ a| 
+61
+ a| 
+asa_no_specified _WWIDが見つかりません
+ a| 
+「-w <wwwwwwid >」パラメータで指定されたストレージアレイが存在しないか、このコマンドではサポートされていません。
+
+
+
+ a| 
+62
+ a| 
+asa_filtered_transmission_LOG_ERROR
+ a| 
+フィルタリングされた送信ログを取得するときに不明なエラーが発生しました。
+
+
+
+ a| 
+63
+ a| 
+asa_transmission_archive_does _ not_存在します
+ a| 
+「-inputArchive=<n>``」パラメータで指定されたAutoSupport 入力アーカイブ送信ログが存在しません。
+
+
+
+ a| 
+64
+ a| 
+無効なRESTクライアント_が検出されました
+ a| 
+HTTPS経由でストレージアレイと通信できません。
+
+
+
+ a| 
+65
+ a| 
+無効なCLI_versionです
+ a| 
+クライアントのCLIバージョンに、ストレージアレイで実行されているCLIバージョンとの互換性がありません。
+
+
+
+ a| 
+66
+ a| 
+無効なユーザ名_または_パスワードです
+ a| 
+入力したユーザ名またはパスワードが無効です。
+
+
+
+ a| 
+67
+ a| 
+untrusted_connectionの場合
+ a| 
+ストレージアレイへのセキュアな接続を確立できません。
+
+
+
+ a| 
+68
+ a| 
+無効なパスワードファイルです
+ a| 
+パスワードファイルが見つからないか、読み取りできません。
+
+|===

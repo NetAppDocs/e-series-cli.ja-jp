@@ -1,0 +1,100 @@
+---
+permalink: commands-a-z/show-storagearray-trustedcertificate-summary.html 
+sidebar: sidebar 
+keywords: show, installed, trusted, ca, certificates, summary 
+summary: show storageArray trustedCertificate summaryコマンドは、アレイからインストールされた信頼されたCA証明書の概要を表示します。このコマンドを使用してdelete storageArray trustedCertificateコマンドを実行する前に、削除する証明書のエイリアス名を確認しておくと便利です。 
+---
+= インストールされている信頼されたCA証明書の概要の
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray trustedCertificate summaryコマンドは、アレイから信頼されてインストールされたCA証明書の概要を表示します。このコマンドを使用すると、「delete storageArray trustedCertificate」コマンドを実行する前に、削除する証明書のエイリアス名を確認できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+show storageArray trustedCertificate [all | allUserInstalled|
+ aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「すべて」
+ a| 
+プリインストールされている証明書とユーザがインストールした証明書を含むすべての証明書を取得するように指定できます。
+
+
+
+ a| 
+「allUserInstalled」
+ a| 
+ユーザがインストールした証明書をすべて取得するように指定できます。これがデフォルトのオプションです。
+
+
+
+ a| 
+「別名」
+ a| 
+取得するプリインストールされている証明書またはユーザがインストールした証明書をエイリアスで指定できます。すべてのエイリアスをかっこで囲みます。複数のエイリアスを入力する場合は、エイリアスをスペースで区切ります。
+
+|===
+
+
+== 例
+
+出力例は、以下に示すものと異なる場合があります。
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show storageArray trustedCertificate allUserInstalled summary;"
+============================
+Trusted Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

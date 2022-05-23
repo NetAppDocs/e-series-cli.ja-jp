@@ -1,0 +1,27 @@
+---
+permalink: commands-a-z/getting-started-with-authentication.html 
+sidebar: sidebar 
+keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
+summary: 認証を行うには、割り当てられたログインクレデンシャルを使用してユーザがシステムにアクセスする必要各ユーザログインには、特定のロールとアクセス権限が設定されたユーザプロファイルが関連付けられます。 
+---
+= 認証の開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+認証を行うには、割り当てられたログインクレデンシャルを使用してユーザがシステムにアクセスする必要各ユーザログインには、特定のロールとアクセス権限が設定されたユーザプロファイルが関連付けられます。
+
+管理者は次の方法でシステム認証を実装できます。
+
+* ストレージアレイに組み込みのロールベースアクセス制御（RBAC）機能を使用する方法。RBACにはユーザとロールが事前に定義されています。
+* LDAP（Lightweight Directory Access Protocol）サーバとディレクトリサービス（MicrosoftのActive Directoryなど）に接続し、ストレージアレイの組み込みロールにLDAPユーザをマッピングする方法。
+* Security Assertion Markup Language（SAML）2.0を使用してIdentity Provider（IdP；アイデンティティプロバイダ）に接続し、ストレージアレイに組み込まれたロールにユーザをマッピングする。
++
+[NOTE]
+====
+SAMLは、ストレージアレイに組み込まれた機能（ファームウェアレベル8.42以上）であり、SANtricity System Managerユーザインターフェイスからのみ設定できます。
+
+====
+

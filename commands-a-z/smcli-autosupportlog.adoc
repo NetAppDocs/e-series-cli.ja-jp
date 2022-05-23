@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/smcli-autosupportlog.html 
+sidebar: sidebar 
+keywords: capture, view, autosupport, log 
+summary: SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファイルを表示できます。このファイルには、ステータスに関する情報、送信アクティビティの履歴、およびAutoSupport メッセージの配信中に発生したエラーが格納されます。AutoSupportに対応したストレージアレイとAutoSupportが有効なストレージアレイのすべてについてログを使用できます。 
+---
+= AutoSupport ログをキャプチャまたは表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファイルを表示できます。このファイルには、ステータスに関する情報、送信アクティビティの履歴、およびAutoSupport メッセージの配信中に発生したエラーが格納されます。AutoSupportに対応したストレージアレイとAutoSupportが有効なストレージアレイのすべてについてログを使用できます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを使用すると、次の2種類のログを表示できます。
+
+* 現在のログ-現時点でキャプチャされたログを表示します。
+* アーカイブログ-アーカイブファイルからログを表示します。
+
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
+pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]
+----
+
+
+== パラメータ
+
+次の表に、コマンドのパラメータを示します。
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「すべて」
+ a| 
+このパラメータは、管理ドメイン内のすべてのストレージアレイの転送ログを、AutoSupport が有効になっているAutoSupport 機能を使用して作成する場合に使用します。
+
+
+
+ a| 
+`_n_`
+ a| 
+AutoSupport ログを表示するストレージアレイの名前。
+
+
+
+ a| 
+「_w_」
+ a| 
+AutoSupport ログを表示するストレージアレイのWorld Wide Identifier（WWID）。
+
+
+
+ a| 
+「inputArchive」と入力します
+ a| 
+アーカイブされたAutoSupport ログを指定できますアーカイブ・ファイルは'0～5の整数である'_n_'です
+
+[NOTE]
+====
+このパラメータを省略する場合は、現在のAutoSupport ログ（現時点でキャプチャ）を選択します。
+
+====
+
+
+ a| 
+「outputLog」と入力します
+ a| 
+出力AutoSupport ログファイル名を指定できます。
+
+[NOTE]
+====
+このパラメータは必須です。
+
+====
+|===
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== 例
+
+[listing]
+----
+SMcli -autosupportLog -n StorageArrayName inputArchive=0 outputLog=ASUPTransmissionLog
+----
+
+
+== 検証
+
+要求したAutoSupport ログを確認します。ログは、ストレージ管理ソフトウェアがインストールされているクライアントディレクトリにあります。

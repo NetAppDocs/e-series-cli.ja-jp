@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, volume, group, resource, provision 
+summary: start volumeGroup resourceProvisioningコマンドは、指定されたボリュームグループでリソースプロビジョニングを有効にし、ボリュームグループ内の各ボリュームで非同期処理を実行するリソースプロビジョニング有効化処理を開始します。リソースのプロビジョニングでは、ボリュームグループ内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。 
+---
+= ボリュームグループリソースのプロビジョニングを開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volumeGroup resourceProvisioningコマンドは'指定されたボリュームグループでリソースプロビジョニングを有効にし'ボリュームグループ内の各ボリュームで非同期オペレーションを実行するリソースプロビジョニングを開始しますリソースをプロビジョニングするには、ボリュームグループ内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminのロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ボリュームグループでリソースのプロビジョニングを無効にするには、フルプロビジョニングコマンドとオプションを使用して、リソースのプロビジョニングを無効にします。すべてのドライブがDULBE対応で、ストレージアレイの「resourceProvisionedVolumes」設定が「true」の場合、ボリュームグループは作成時にリソースをプロビジョニングします。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroupName」と入力します
+ a| 
+リソースプロビジョニング機能を有効にするボリュームグループ。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.73

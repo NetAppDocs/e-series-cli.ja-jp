@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/set-storagearray-isnsregistration.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, registration 
+summary: set storageArray isnsRegistrationコマンドでは、IPv4またはIPv6のInternet Storage Name Service（iSNS）サーバにストレージアレイを登録できます。 
+---
+= ストレージアレイのiSNS登録を設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray isnsRegistrationコマンドを使用すると'IPv4またはIPv6のInternet Storage Name Service（iSNS）サーバのいずれかにストレージ・アレイを一覧表示できます
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== IPv4の構文
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv4ConfigurationMethod=[static | dhcp]
+isnsIPv4Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== IPv6の構文
+
+[listing, subs="+macros"]
+----
+set storageArray isnsRegistration=(TRUE | FALSE)
+isnsIPv6Address=pass:quotes[_ipAddress_]
+[isnsListeningPort]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「isnsRegistration」
+ a| 
+iSNSサーバにiSCSIターゲットを登録するかどうか。iSCSIターゲットを一覧表示するには'パラメータをTRUEに設定します
+
+このパラメータを「true」に設定した場合、IPv4設定にも次のパラメータを使用する必要があります。
+
+* 「isnsIPV4ConfigurationMethod」
+* 「isnsIPV4Address」と入力します
+
+
+このパラメータを「true」に設定した場合、IPv6設定にも次のパラメータを使用する必要があります。
+
+* 「isnsIPV6Address」
+
+
+オプションで'isnsListeningPort'パラメータを使用して'ポートモニタを定義し'サーバへのトラフィックを管理することもできます
+
+iSNSサーバからストレージアレイの登録を削除するには、このパラメータをFALSEに設定します。
+
+
+
+ a| 
+「isnsIPv4ConfigurationMethod」を参照してください
+ a| 
+iSNSサーバ設定を定義する方法。IPv4 iSNSサーバのIPアドレスを入力するには'static'を選択しますIPv4の場合'dhcp'と入力することにより'Dynamic Host Configuration Protocol (DHCP)サーバがiSNSサーバのIPアドレスを選択するように選択できますDHCPを有効にするには'isnsIPV4Address'パラメータを0.0.0.0に設定する必要があります
+
+
+
+ a| 
+「isnsIPV4Address」と入力します
+ a| 
+iSNSサーバへの接続に使用するIPv4アドレス。このパラメータは、IPv4設定の「static」値とともに使用します。DHCPサーバでIPv4インターネットiSNSサーバのIPアドレスを設定する場合は'isnsIPV4Address'パラメータを0.0.0.0に設定する必要があります
+
+
+
+ a| 
+「isnsIPv6Address」
+ a| 
+iSNSサーバへの接続に使用するIPv6アドレス。
+
+
+
+ a| 
+「isnsListeningPort」
+ a| 
+iSNSサーバのリスニングポートに使用するポート番号。リスニング・ポートの値の範囲は'49152'～65535ですデフォルト値は「3205」です。
+
+リスニングポートはサーバ上で次のアクティビティを実行します。
+
+* 受信するクライアント接続要求を監視します
+* サーバへのトラフィックを管理します
+
+
+クライアントがサーバとのネットワークセッションを要求すると、リスナーが実際の要求を受信します。クライアントの情報がリスナーの情報と一致した場合は、リスナーがデータベースサーバへの接続を許可します。
+
+|===
+
+
+== 注：
+
+iSNSプロトコルは、TCP / IPネットワーク上のiSCSIデバイスとFibre Channelデバイスの自動検出、管理、および設定を支援します。iSNSは、Fibre Channelネットワークと同等のインテリジェントなストレージ検出/管理サービスを提供します。これにより、ストレージエリアネットワークとほぼ同じ容量で機能する汎用IPネットワークが実現します。また、iSNSは、Fibre ChannelファブリックサービスをエミュレートしてiSCSIデバイスとFibre Channelデバイスの両方を管理する機能によって、IPネットワークとFibre Channelネットワークのシームレスな統合を支援します。
+
+DHCPサーバは、ネットワークアドレスなどの設定パラメータをIPノードに渡します。クライアントは、必要なすべてのIP設定パラメータをDHCPから取得できます。再利用可能なネットワークアドレスを自動的に割り当てることができます。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

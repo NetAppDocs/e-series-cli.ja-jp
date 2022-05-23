@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/diagnose-syncmirror.html 
+sidebar: sidebar 
+keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
+summary: SyncMirror コマンドは、同期ミラーリング機能が有効になっているストレージアレイ上の指定されたプライマリボリュームとミラーボリュームの間の接続をテストします。 
+---
+= 同期ミラーリングの診断
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SyncMirror コマンドは'同期ミラーリング機能が有効になっているストレージ・アレイ上の指定されたプライマリ・ボリュームとミラー・ボリュームの間の接続をテストします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドの以前のバージョンでは、機能識別子は「remoteMirror」でした。この機能識別子は有効ではなくなり' SyncMirror に置き換えられます
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[diagnose syncMirror (_primary [primaryVolumeName_]] |pass:quotes[primaries ["_primaryVolumeName1_]" ... pass:quotes[_"primaryVolumeNameN"_]])
+testID=connectivity
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「プライマリ」
+ a| 
+テストするリモートミラーペアのプライマリボリュームの名前。プライマリボリューム名は角かっこ（[]）で囲みます。プライマリボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、プライマリボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「原色」
+ a| 
+ボリューム名は複数入力できます。すべてのボリューム名は一組の角かっこ（[]）で囲みます。各ボリューム名は二重引用符（""）で囲みます。ボリューム名はそれぞれスペースで区切ります。
+
+プライマリボリュームとして使用する複数のボリュームの名前。以下のルールを使用して、プライマリボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

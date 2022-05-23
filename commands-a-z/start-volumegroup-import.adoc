@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/start-volumegroup-import.html 
+sidebar: sidebar 
+keywords: start, volume, group, import 
+summary: start volumeGroup importコマンドは、ボリュームグループを完了状態に移行して、新たに導入したボリュームグループを新しいストレージアレイで使用できるようにします。 
+---
+= ボリュームグループのインポートを開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volumeGroup importコマンドは'ボリューム・グループを完了状態に移行して'新しく導入したボリューム・グループを新しいストレージ・アレイで使用できるようにします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを実行するには、ボリュームグループがエクスポート状態または強制状態である必要があります。コマンドが正常に実行されると、ボリュームグループを使用できるようになります。
+
+[NOTE]
+====
+ボリュームグループ内では、機能に関連付けられているボリュームをストレージアレイ間で移動することはできません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] import
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+インポートするボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+特定の機能（同期ミラーリング、ボリュームコピー、マッピング、永続的予約）に関連する上位のボリュームは、インポート処理から除外されます。
+
+start volumeGroup importコマンドを実行する前に'show volumeGroup importDependenciesコマンドを実行する必要があります
+
+
+
+== 最小ファームウェアレベル
+
+7.10

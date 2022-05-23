@@ -1,0 +1,145 @@
+---
+permalink: commands-a-z/start-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: start, drive channel, fault, isolation, diagnostics 
+summary: start driveChannel faultDiagnosticsコマンドは、ドライブチャネルの障害切り分け診断を実行し、結果を保存します。 
+---
+= ドライブチャネルの障害切り分け診断を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start driveChannel faultDiagnosticsコマンドは'ドライブチャネルの障害切り分け診断を実行し'結果を保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェアバージョン8.10では、start driveChannel faultDiagnosticsコマンドは廃止されました。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)]
+controller [(a|b)] faultDiagnostics
+testDevices=[all |
+controller=(a|b) |
+esms=pass:quotes[[_trayID1_ (left | right), ... , _trayIDN_] (left | right)] |
+drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]]
+|[dataPattern=(fixed | pseudoRandom) |
+patternNumber=[pass:quotes[(_0xhexadecimal_ | _number_)]] |
+pass:quotes[maxErrorCount=_integer_] |
+pass:quotes[testIterations=_integer_] |
+pass:quotes[timeout=_timeInterval_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+driveChannel
+ a| 
+特定するドライブチャネルの識別番号。ドライブ・チャネルの有効な識別番号は'1''2'3`'4''5''です '6`'7`'または'8`ドライブチャネルの識別番号は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「controller」と入力します
+ a| 
+テストするコントローラの識別子。有効なコントローラ識別子の値は'a'またはb'ですここで'a'はスロットAのコントローラ'b'はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「testDevices」
+ a| 
+テストするデバイス（コントローラ、環境サービスモジュール[ESM]、またはドライブ）の識別子。「all」を指定するか、診断するデバイスの特定の識別子を入力します。「controller」の識別子は「a」または「b」です。「a」はスロットAのRAIDコントローラモジュール、「b」はスロットBのRAIDコントローラモジュールです
+
+ESMS'識別子はトレイIDと左または右ですトレイIDは0～99の値で'左または右は背面からドライブトレイを見るときに決定されます
+
+'drive'識別子には'トレイ識別子'トレイにドロワーがある場合のドロワー識別子'スロット識別子が含まれます
+
+大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。
+
+スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルに応じて0または1で始まります。E2800コントローラおよびE5700コントローラと互換性があるドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラと互換性のあるドライブトレイのスロットID番号は1から始まります。
+
+トレイIDの値、ドロワーIDの値、およびスロットIDの値は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「dataPattern」
+ a| 
+テストする再現性の方法。
+
+
+
+ a| 
+「patternNumber」と入力します
+ a| 
+テストの実行に使用する16進数のデータパターン。この数は'0000'からFFFF'までの任意の16進数にすることができます16進数値を示すためには'0x'を前面に配置する必要があります
+
+
+
+ a| 
+'maxErrorCount'
+ a| 
+テストを終了するまでに許容するエラーの数。
+
+
+
+ a| 
+「testIterations」
+ a| 
+テストを繰り返す回数。
+
+
+
+ a| 
+タイムアウト
+ a| 
+テストを実行する時間（分）。
+
+|===
+
+
+== 注：
+
+テストするデバイスのタイプを複数入力したり、実行するテストのタイプを複数入力したりできます。
+
+「start driveChannel faultDiagnostics」コマンドと「stop driveChannel faultDiagnostics」コマンドを「start driveChannel faultDiagnostics」コマンドとともに使用します。これらのコマンドは、診断テストの結果をファイルに保存し、診断テストを停止するために必要です。
+
+有効な「patternNumber」エントリの例としては、「0xA5A5"」、「0x3C3C」、「8787」、「1234」などがあります。
+
+このコマンドは'Ctrl + Cキーを押すといつでも停止できます
+
+
+
+== 最小ファームウェアレベル
+
+7.15

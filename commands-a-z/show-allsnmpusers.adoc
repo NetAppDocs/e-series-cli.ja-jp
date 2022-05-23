@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/show-allsnmpusers.html 
+sidebar: sidebar 
+keywords: show, snmpv3, usm, user 
+summary: show allsnmpUsersコマンドは、ストレージアレイに対して定義された簡易ネットワーク管理（SNMP）USMユーザに関する情報を返します。 
+---
+= SNMPv3 USMユーザを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allsnmpUsers」コマンドは、ストレージアレイに対して定義された簡易ネットワーク管理（SNMP）USMユーザに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show (allSnmpUsers |
+    snmpUser userName="snmpUsername" |
+    snmpUsers [snmpUserName1 ... snmpUserNameN])
+    [summary]
+----
+[NOTE]
+====
+このコマンドから返されるSNMPユーザ情報は次のようになります
+
+[listing]
+----
+SNMP USERS------------------------------
+
+SUMMARY
+
+   Total SNMP Users: 2
+   Total SNMP Trap Destinations: 1
+
+DETAILS
+
+   SNMP User: TestUser1
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha
+   SNMP Privacy Protocol: aes128
+
+      Associated Trap Destination:
+
+      Trap Receiver IP Address  Send Authentication Failure Traps
+      10.113.173.133            false
+
+   SNMP User: TestUser2
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha256
+   SNMP Privacy Protocol: none
+
+      Associated Trap Destination:
+----
+====
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allSnmpUsers」を参照してください
+ a| 
+このパラメータは、ストレージアレイ内のすべてのSNMPユーザに関する情報を返します。
+
+
+
+ a| 
+「ユーザ名」
+ a| 
+情報を取得するSNMPユーザの名前。SNMPユーザ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「snmpUsers」
+ a| 
+情報を取得する複数のSNMPユーザの名前。以下のルールを使用して、SNMPユーザの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「概要」
+ a| 
+SNMPユーザの総数とSNMPトラップの送信先の合計数のリストを返すためのパラメータ。このパラメータを使用すると、詳細情報はすべて省略されます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.72

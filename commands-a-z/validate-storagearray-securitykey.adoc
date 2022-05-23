@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/validate-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: validate, storage array, security key 
+summary: validate storageArray securityKeyコマンドは、セキュリティ対応ドライブが搭載されたストレージアレイのセキュリティキーを検証して、バックアップセキュリティキーファイルが破損していないことを確認します。 
+---
+= ストレージアレイのセキュリティキーを検証します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「validate storageArray securityKey」コマンドは、バックアップセキュリティキーファイルが破損していないことを確認するために、セキュリティ対応ドライブを搭載したストレージアレイのセキュリティキーを検証します。
+
+
+
+== サポートされているアレイ
+
+外部キー管理が有効になっている場合、このコマンドはE2800およびE5700のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+セキュリティキーの検証では、ファイルの生成に使用したパスフレーズを使用してキーを復号化し、コントローラのメモリ（内部キーの場合）または外部サーバ（外部キーの場合）に保持されている値と照合します。
+
+[NOTE]
+====
+このコマンドは、内部と外部の両方のキー管理を環境 に行います。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[validate storageArray securityKey file="_fileName_" passPhrase="_passPhraseString_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+セキュリティキーを含むファイルパスとファイル名。ファイルパスとファイル名は二重引用符（""）で囲みます。例：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+ファイル名の拡張子は「.slk」でなければなりません。
+
+====
+
+
+ a| 
+パスフレーズ
+ a| 
+セキュリティキーを外部ファイルに格納できるように、セキュリティキーを暗号化する文字列。パスフレーズは二重引用符（""）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.70

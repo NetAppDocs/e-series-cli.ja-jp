@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/reset-storagearray-diagnosticdata.html 
+sidebar: sidebar 
+keywords: reset ,storage, array, diagnostic, data 
+summary: reset storageArray diagnosticDataコマンドは、ストレージアレイの診断データが格納されているNVSRAMをリセットします。 
+---
+= ストレージアレイの診断データをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray diagnosticDataコマンドは'ストレージ・アレイの診断データを含むNVSRAMをリセットします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドでは診断データは削除されません。このコマンドは、要注意ステータスをDiagnostic Data Availableステータスに置き換えます。古い診断データは、新しいデータがキャプチャされると自動的に上書きされます。診断データを格納するメモリも、コントローラのリブート時にクリアされます。診断データをリセットする前に、「save storageArray diagnosticData」コマンドを使用して診断データをファイルに保存します。
+
+[NOTE]
+====
+このコマンドは、テクニカルサポートの助言の下で実行してください。
+
+====
+
+
+== 構文
+
+[listing]
+----
+reset storageArray diagnosticData
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.16

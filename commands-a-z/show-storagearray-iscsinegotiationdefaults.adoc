@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-storagearray-iscsinegotiationdefaults.html 
+sidebar: sidebar 
+keywords: show, storage, array, negotiation, defaults 
+summary: show storageArray iscsiNegotiationDefaultsコマンドは、イニシエータとターゲットのネゴシエーションによって決まる接続レベルの設定に関する情報を返します。 
+---
+= ストレージアレイのネゴシエーションのデフォルトを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray iscsiNegotiationDefaultsコマンドは、イニシエータとターゲットのネゴシエーションによって決まる接続レベルの設定に関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray iscsiNegotiationDefaults
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+返される情報には、コントローラトレイのデフォルト設定（つまり、ネゴシエーションの開始点である設定）および現在のアクティブな設定が含まれます。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

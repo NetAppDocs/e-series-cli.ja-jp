@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-iserstatsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, iser, baseline 
+summary: reset storageArray iserStatsBaselineコマンドは、ストレージアレイのiSERベースラインを0にリセットします。 
+---
+= ストレージアレイのiSERベースラインをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray iserStatsBaselineコマンドは、ストレージアレイのiSERベースラインを0にリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E2700、E5600、E2800、E5700を含む個々のストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:reset-storagearray-hostportstatisticsbaseline.adoc[ストレージアレイのホストポート統計のベースラインをリセットします] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing]
+----
+reset storageArray iserStatsBaseline
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドは、ハードウェアとファームウェアで維持される生の数を実際にリセットするわけではありません。代わりに、ファームウェアは現在のカウンタ値のSnapshotを作成し、これらの値を使用して、統計が取得されるときに数の違いを報告します。新しいベースライン時間は両方のコントローラに適用されるため、コントローラの数が相互に同期されます。一方のコントローラがリセットされ、もう一方のコントローラがリセットされない場合は、カウンタが同期されなくなります。統計とともに報告されるタイムスタンプデータが両方のコントローラで異なるため、クライアントはコントローラが同期されていないことを認識します。
+
+
+
+== 最小ファームウェアレベル
+
+8.20で
+
+8.41で、このコマンドは廃止されました。

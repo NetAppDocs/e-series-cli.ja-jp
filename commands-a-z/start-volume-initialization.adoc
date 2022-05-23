@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/start-volume-initialization.html 
+sidebar: sidebar 
+keywords: start, volume, initialization 
+summary: start volume initializeコマンドは、ストレージアレイ内のボリュームのフォーマットを開始します。 
+---
+= ボリュームの初期化を開始する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volume initializeコマンドは'ストレージ・アレイ内のボリュームのフォーマットを開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ボリュームのフォーマットは長時間の処理で、途中で停止することはできません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volume [_volumeName_]] initialize
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「 volume 」
+ a| 
+フォーマットするボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

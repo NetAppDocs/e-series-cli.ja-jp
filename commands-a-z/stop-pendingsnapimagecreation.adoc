@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/stop-pendingsnapimagecreation.html 
+sidebar: sidebar 
+keywords: stop, snapshot, group, snapshot, images 
+summary: stop pendingSnapImageCreationコマンドは、SnapshotまたはSnapshot整合性グループに作成する保留中のSnapshotイメージをすべてキャンセルします。 
+---
+= Snapshotグループの保留中のSnapshotイメージを停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'stop pendingSnapImageCreation'コマンドは、スナップショットまたはスナップショット整合性グループに作成される保留中のスナップショットイメージをすべてキャンセルします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+Snapshotグループに保留中のSnapshotイメージがない場合はエラーメッセージが表示され、コマンドは実行されません。このコマンドは、SnapshotグループまたはSnapshot整合性グループに対して実行できます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+stop (snapGroup pass:quotes[[_snapGroupName_]] |
+consistencyGroup pass:quotes[[_snapConsistencyGroupName_]])
+pendingSnapImageCreation
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+保留中のSnapshotイメージを停止するSnapshotグループの名前。Snapshotグループ名は角かっこ（[]）で囲みます。Snapshotグループ名に特殊文字または数字が含まれている場合は、Snapshotグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「consistencyGroup」
+ a| 
+保留中のSnapshotイメージを停止するSnapshot整合性グループの名前。Snapshot整合性グループ名は角かっこ（[]）で囲みます。Snapshot整合性グループ名に特殊文字または数字が含まれている場合は、Snapshotグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

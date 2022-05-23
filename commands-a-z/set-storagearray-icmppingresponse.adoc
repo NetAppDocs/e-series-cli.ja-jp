@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/set-storagearray-icmppingresponse.html 
+sidebar: sidebar 
+keywords: set, storage, array, icmp, response 
+summary: set storageArray icmpPingResponseコマンドは、セッションおよび接続のネゴシエーション可能な設定のデフォルト値を返します。このデフォルト値は、ストレージアレイでのネゴシエーションの開始点を表します。 
+---
+= ストレージアレイのICMP応答を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray icmpPingResponse'コマンドは'セッションと接続のネゴシエーション可能な設定のデフォルト値を返しますこのデフォルト値は'ストレージ・アレイのネゴシエーション開始点を表します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray icmpPingResponse=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「icmpPingResponse」
+ a| 
+このパラメータは、エコー要求メッセージをオンまたはオフにします。エコー要求メッセージをオンにするには、パラメータを「true」に設定します。エコー要求メッセージをオフにするには、パラメータをFALSEに設定します。
+
+|===
+
+
+== 注：
+
+Internet Control Message Protocol（ICMP）は、ネットワーク内のオペレーティングシステムが、要求されたサービスを使用できない、ホストまたはルータにアクセスできないなど、IPに関連するエラーメッセージ、テストパケット、および情報メッセージを送信するために使用されます。ICMP応答コマンドは、ICMPエコー要求メッセージを送信し、ICMPエコー応答メッセージを受信して、ホストに到達できるかどうか、およびそのホストとのパケットの送受信にかかる時間を判断します。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-snapgroup.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, attributes 
+summary: set snapGroupコマンドは、Snapshotグループのプロパティを定義します。 
+---
+= Snapshotグループの属性を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set snapGroupコマンドは'スナップショット・グループのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+[userLabel=pass:quotes["_snapGroupName_"]] |
+[repositoryFullPolicy=(failBaseWrites | purgeSnapImages) |
+[repositoryFullLimit=pass:quotes[_percentValue_] |
+[autoDeleteLimit=pass:quotes[_numberOfSnapImages_]] |
+[rollbackPriority=(lowest | low | medium | high | highest)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+プロパティを設定するSnapshotグループの名前。Snapshotグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+Snapshotグループに付ける新しい名前。このパラメータは、Snapshotグループの名前を変更する場合に使用します。新しいSnapshotグループ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+repositoryFullPolicy
+ a| 
+Snapshotイメージグループのリポジトリボリュームが上限に達している場合にSnapshotイメージ処理をどのように続行するかを指定します。ベースボリュームへの書き込みを停止する（failBaseWrites）か、Snapshotイメージを削除（パージ）する（purgeSnapImages）かを選択できます。デフォルトのアクションはpurgeSnapImagesです
+
+
+
+ a| 
+repositoryFullLimit
+ a| 
+リポジトリボリュームの容量がこの割合に達すると、Snapshotイメージのリポジトリボリュームの上限に近づいているという警告が表示されます。整数値を使用します。たとえば、70という値は70%を意味します。デフォルト値は75です。
+
+
+
+ a| 
+'autoDeleteLimit'
+ a| 
+リポジトリフルポリシーのSnapshotイメージのパージを選択した場合に自動的に削除するSnapshotイメージの最大数。整数値を使用します。デフォルト値は32です。
+
+
+
+ a| 
+「rollBackPriority」を参照してください
+ a| 
+このパラメータを使用して、システムパフォーマンスを犠牲にしてシステムリソースをロールバック処理に割り当てるかどうかを決定します。有効な値は'high`'high`''medium'low'''low'''low''low''ですは'ロールバック操作が他のすべてのホストI/Oより優先されることを示しますlowestの値は'ホストI/Oへの影響を最小限に抑えてロールバック操作を実行することを示します
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+このコマンドではパラメータを1つ以上指定できます。ただし、すべてのパラメータを使用する必要はありません。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

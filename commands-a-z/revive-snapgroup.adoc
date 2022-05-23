@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/revive-snapgroup.html 
+sidebar: sidebar 
+keywords: revive, snapshot, group 
+summary: '[Forrevive SnapGroup]コマンドは"指定したスナップショット・グループを強制的に最適状態に設定します' 
+---
+= Snapshotグループを回復します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+[revive SnapGroup]コマンドは'指定したスナップショット・グループを強制的に最適状態にします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+Snapshotグループが失敗状態でない場合はエラーメッセージが表示され、このコマンドは実行されません。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+revive snapGroup pass:quotes[[_snapGroupName_]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+最適状態に設定するSnapshotグループの名前。Snapshotグループ名は角かっこ（[]）で囲みます。Snapshotグループ名が特殊文字を含んでいる場合または数字のみで構成される場合は、Snapshotグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

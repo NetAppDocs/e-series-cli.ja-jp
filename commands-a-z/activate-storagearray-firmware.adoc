@@ -1,0 +1,47 @@
+---
+permalink: commands-a-z/activate-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
+summary: activate storageArray firmwareコマンド は、ストレージアレイのコントローラの保留中の設定領域にダウンロードしたファームウェアをアクティブ化します。 
+---
+= ストレージアレイのファームウェアをアクティブ化します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+activate storageArray firmware'コマンドは'ストレージ・アレイのコントローラ上の保留中の構成領域に以前ダウンロードしたファームウェアをアクティブ化します
+
+
+
+== 構文
+
+[listing]
+----
+activate storageArray firmware
+[healthCheckMelOverride=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「healthCheckMelOverride」
+ a| 
+メジャーイベントログ（MEL）の健全性チェックの結果を無視する設定。MELの検証は引き続き行われ、バイパスされません。MELのチェックに失敗した場合は、コマンドの実行時にこのパラメータを使用することで、エラーをバイパスできます。
+
+アクティブ化の前に、コントローラがイベントログをチェックし、新しいコントローラファームウェアのアクティブ化を妨げる可能性のあるイベントが発生したかどうかを確認します。そのようなイベントが発生した場合、コントローラは、通常は新しいファームウェアをアクティブにしません。
+
+このパラメータを指定すると、コントローラは新しいファームウェアを強制的にアクティブにします。デフォルト値は'FALSE'ですコントローラに新しいコントローラファームウェアを強制的にアクティブにする場合は、この値を「true」に設定します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.10で、「healthCheckMelOverride」パラメータが追加されました。

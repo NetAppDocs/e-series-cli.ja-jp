@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/enable-controller-datatransfer.html 
+sidebar: sidebar 
+keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
+summary: コントローラデータ転送の有効化コマンドは、診断の実行中に休止したコントローラを回復します。 
+---
+= コントローラのデータ転送を有効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+enable controller dataTransferコマンドは、診断の実行中に休止されたコントローラを再起動します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+enable controller [(a|b)] dataTransfer
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+回復するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。コントローラを指定しないと、ストレージ管理ソフトウェアから構文エラーが返されます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

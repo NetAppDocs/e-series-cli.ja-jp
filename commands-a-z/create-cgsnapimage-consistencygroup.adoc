@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/create-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot image 
+summary: cgSnapImage consistencyGroupコマンドを作成すると、Snapshot整合性グループのメンバーである各ベースボリュームの新しいSnapshotイメージが作成されます。 
+---
+= 整合性グループのSnapshotイメージを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create cgSnapImage consistencyGroupコマンドは、Snapshot整合性グループのメンバーである各ベースボリュームの新しいSnapshotイメージを作成します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「consistencyGroup」
+ a| 
+Snapshotイメージを作成する整合性グループの名前。整合性グループ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+このコマンドを実行すると、Snapshotイメージの作成前に、整合性グループのメンバーである各ベースボリュームに対する保留中のI/O処理がすべて削除され、中断されます。整合性グループのすべてのメンバーに関してSnapshotイメージの作成を正常に完了できない場合は、処理が失敗し、新しいSnapshotイメージは作成されません。
+
+通常は、Snapshot整合性グループのメンバーはすべて、Snapshotイメージの数が同じになります。Snapshot整合性グループに新しいメンバーを追加する場合、そのSnapshot整合性グループの既存のメンバー上で以前に作成されたSnapshotイメージは、新しいメンバーにはありません。これはエラー状態ではありません。Snapshot整合性グループの一部のメンバーのみに存在するSnapshotイメージの削除またはロールバックの要求は、指定したSnapshotイメージが実際に存在するメンバーのみに影響します。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

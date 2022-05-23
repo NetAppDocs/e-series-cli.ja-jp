@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/enable-volumegroup-security.html 
+sidebar: sidebar 
+keywords: enable, volumegroup, security, command, non secure, volume, group 
+summary: enable volumeGroup securityコマンドは、セキュアでないボリュームグループをセキュアなボリュームグループに変換します。 
+---
+= ボリュームグループのセキュリティを有効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「enable volumeGroup security」コマンドは、セキュアでないボリュームグループをセキュアなボリュームグループに変換します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable volumeGroup [_volumeGroupName_]] security
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+Security Enabled状態にするボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドを正常に実行するには、次の条件を満たしている必要があります。
+
+* ボリュームグループ内のすべてのドライブがFull Disk Encryptionドライブである必要があります。
+* ドライブセキュリティ機能を有効にする必要があります。
+* ストレージアレイのセキュリティキーを設定する必要があります。
+* ボリュームグループが最適状態であり、リポジトリボリュームが含まれていない必要があります。
+
+
+コントローラファームウェアによってロックが作成され、FDEドライブへのアクセスが制限されます。FDEドライブには、Security Capableという状態があります。セキュリティキーを作成すると、状態はSecurity Enabledに設定され、これによって、ストレージアレイ内に存在するすべてのFDEドライブへのアクセスが制限されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.40

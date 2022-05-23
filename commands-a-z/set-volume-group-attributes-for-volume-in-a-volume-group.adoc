@@ -1,0 +1,567 @@
+---
+permalink: commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html 
+sidebar: sidebar 
+keywords: set, volume, attributes, group 
+summary: set volumeコマンドは、ボリュームグループ内のボリュームのプロパティを定義します。 
+---
+= ボリュームグループ内のボリュームのボリューム属性を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set volumeコマンドは'ボリューム・グループ内のボリュームのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ほとんどのパラメータでは、1つ以上のボリュームのプロパティを定義できます。一部のパラメータでは、1つのボリュームのプロパティのみを定義することもできます。構文の定義は、複数のボリュームに適用できるパラメータと、1つのボリュームにしか適用できないパラメータを、別々に示しています。
+
+[NOTE]
+====
+ボリュームグループ内のボリューム数が32を超える構成では、このコマンドの実行中にタイムアウトとなり、ホストI/Oエラーまたは内部コントローラのリブートが発生する可能性があります。ホストI/Oエラーまたは内部コントローラのリブートが発生した場合は、ホストI/Oを休止し、処理をやり直してください。
+
+====
+
+
+== 1つ以上のボリュームに適用される構文
+
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+reservedFutureOption1=(TRUE | FALSE)
+----
+
+
+== 1つのボリュームのみに適用される構文
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_ ... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[["_volumeName_"]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_
+... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_slotID1_ ... _trayIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allVolumes」
+ a| 
+このパラメータは、ストレージアレイ内のすべてのボリュームのプロパティを設定します。
+
+
+
+ a| 
+「 volume 」
+ a| 
+プロパティを定義するボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、ボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「 volume 」
+ a| 
+プロパティを定義するボリュームのWorld Wide Identifier（WWID）。WWIDは二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+[NOTE]
+====
+このコマンドを実行するときは、WWIDにコロンは使用しないでください。
+
+====
+
+
+ a| 
+「ボリューム」
+ a| 
+プロパティを定義する複数のボリュームの名前。すべてのボリュームに同じプロパティが適用されます。以下のルールを使用して、ボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+ボリューム名に特殊文字または数字が含まれる場合は、次のルールに従って名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「cacheFlushModifier」
+ a| 
+ボリュームのデータが物理ストレージにフラッシュされる前にキャッシュに保持される最大時間。有効な値については、「メモ」セクションを参照してください。
+
+
+
+ a| 
+「cacheWithoutBatteryEnabled」
+ a| 
+バッテリなしのキャッシュをオンまたはオフにするための設定。バッテリなしのキャッシュをオンにするには、このパラメータを「true」に設定します。バッテリなしのキャッシュをオフにするには、このパラメータを「FALSE」に設定します。
+
+
+
+ a| 
+mediaScanEnabled
+ a| 
+ボリュームのメディアスキャンをオンまたはオフにするための設定。メディア・スキャンをオンにするには'このパラメータをTRUEに設定しますメディアスキャンをオフにするには、このパラメータを「FALSE」に設定します。（メディアスキャンがストレージアレイレベルで無効になっている場合、このパラメータは機能しません）。
+
+
+
+ a| 
+「mirrorCacheEnabled」
+ a| 
+ミラーキャッシュをオンまたはオフにするための設定。ミラー・キャッシュをオンにするには'このパラメータをTRUEに設定しますミラー・キャッシュをオフにするには'このパラメータをFALSEに設定します
+
+
+
+ a| 
+「modificationPriority」
+ a| 
+ストレージアレイが稼働している間のボリューム変更の優先度。有効な値は'highest'high`'high`'medium`'low''low'lowest`です
+
+
+
+ a| 
+「owner」をクリックします
+ a| 
+ボリュームを所有するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですこのパラメータは、ボリュームの所有者を変更する場合にのみ使用します。
+
+
+
+ a| 
+「preReadRedundancyCheck」
+ a| 
+読み取り前冗長性チェックをオンまたはオフにするための設定。読み取り前冗長性チェックをオンにすると、読み取りデータを含むストライプに対してRAID冗長性データの整合性が検証されます。読み取り前冗長性チェックは読み取り処理でのみ実行されます。読み取り前冗長性チェックをオンにするには'このパラメータをTRUEに設定します読み取り前冗長性チェックをオフにするには'このパラメータをFALSEに設定します
+
+[NOTE]
+====
+RAID 0ボリュームなどの非冗長ボリュームでは、このパラメータを使用しないでください。
+
+====
+
+
+ a| 
+readCacheEnabled
+ a| 
+読み取りキャッシュをオンまたはオフにするための設定。リード・キャッシュをオンにするには'このパラメータをTRUEに設定しますリード・キャッシュをオフにするには'このパラメータをFALSEに設定します
+
+
+
+ a| 
+「writeCacheEnabled」を使用します
+ a| 
+書き込みキャッシュをオンまたはオフにするための設定。ライト・キャッシュをオンにするには'このパラメータをTRUEに設定しますライト・キャッシュをオフにするには'このパラメータをFALSEに設定します
+
+
+
+ a| 
+「cacheReadPrefetch」というメッセージが表示されます
+ a| 
+キャッシュ読み取りプリフェッチをオンまたはオフにする設定。キャッシュ読み取りプリフェッチをオフにするには'このパラメータをFALSEに設定しますキャッシュ読み取りプリフェッチをオンにするには'このパラメータをTRUEに設定します
+
+
+
+ a| 
+「dataAssuranceDisabled」
+ a| 
+特定のボリュームのData Assuranceをオフにするための設定。
+
+このパラメータは、ボリュームがData Assuranceに対応している場合にのみ有効です。このパラメータは、Data Assuranceをサポートするボリュームが、Data Assuranceをサポートできないボリュームに変更します。
+
+[NOTE]
+====
+このオプションを有効にできるのは、ドライブがDAをサポートする場合のみです。
+
+====
+Data AssuranceをサポートするボリュームからData Assuranceを削除するには、このパラメータを「true」に設定します。
+
+[NOTE]
+====
+いったんData Assuranceを削除したボリュームでは、Data Assuranceをリセットすることはできません。
+
+====
+Data Assuranceを削除したボリューム上のデータに対してData Assuranceをリセットするには、次の手順を実行します。
+
+. ボリュームからデータを削除します。
+. ボリュームを削除します。
+. 削除したボリュームのプロパティを使用して新しいボリュームを再作成します。
+. 新しいボリュームに対してData Assuranceを設定します。
+. データを新しいボリュームに移動します。
+
+
+
+
+ a| 
+「addCapacity」
+ a| 
+プロパティを定義するボリュームのストレージサイズ（容量）を増やすための設定。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されますデフォルト値は「bytes」です。
+
+
+
+ a| 
+「addDrives」を参照してください
+ a| 
+大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。
+
+スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルに応じて0または1で始まります。E2800コントローラおよびE5700コントローラと互換性があるドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラと互換性のあるドライブトレイのスロットID番号は1から始まります。
+
+トレイIDの値、ドロワーIDの値、およびスロットIDの値は角かっこ（[]）で囲みます。
+
+新しいサイズに対応する追加のドライブを指定する必要がある場合は、このパラメータを「addCapacity」パラメータとともに使用します。
+
+
+
+ a| 
+「redundancyCheckEnabled」
+ a| 
+メディアスキャン中に冗長性チェックをオンまたはオフにするための設定。冗長性チェックをオンにするには'このパラメータをTRUEに設定します冗長性チェックをオフにするには'このパラメータをFALSEに設定します
+
+
+
+ a| 
+「segmentSize」のように表示されます
+ a| 
+コントローラがボリューム内の1つのドライブに書き込めるデータ量（KB）を指定します。有効な値は'8`'16`'32`'64`'128`'です 「256」または「512」。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+既存のボリュームに付ける新しい名前。新しいボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「preReadRedundancyCheck」
+ a| 
+読み取り処理中にストライプのRAID冗長性データの整合性をチェックするための設定。RAIDレベル0などの非冗長ボリュームには、この処理を使用しないでください。冗長性の整合性をチェックするには'このパラメータをTRUEに設定しますストライプ・チェックを行わない場合は'このパラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+ボリューム数が32を超えるボリュームグループでは、ホストI/Oエラーが発生する可能性があります。また、この処理の完了前にタイムアウトとなり、内部コントローラのリブートが発生する可能性もあります。この問題 が表示された場合は、ホストI/Oを休止し、処理をやり直してください。
+
+このコマンドでは、オプションのパラメータを1つ以上指定できます。
+
+これらのパラメータは、一度に1つのボリュームのみに適用できます。
+
+* 「addCapacity」
+* 「segmentSize」のように表示されます
+* 「userLabel」のように入力します
+* 「logicalUnitNumber」と入力します
+
+
+
+
+== 容量の追加、ドライブの追加、およびセグメントサイズの確認
+
+「addCapacity」パラメータ、「addDrives」パラメータ、または「segmentSize」パラメータを設定すると、長時間実行される処理が開始され、途中で停止することはできません。長時間の処理はバックグラウンドで実行され、他のコマンドの実行が妨げられることはありません。長時間実行中の処理の進捗状況を表示するには、「show volume actionProgress」コマンドを使用します。
+
+
+
+== キャッシュフラッシュ修飾子
+
+次の表に、キャッシュフラッシュ修飾子の有効な値を示します。
+
+[cols="2*"]
+|===
+| 価値 | 説明 
+
+
+ a| 
+「即時」
+ a| 
+データはキャッシュに配置され次第フラッシュされます。
+
+
+
+ a| 
+「. 25」
+ a| 
+データは250ミリ秒後にフラッシュされます。
+
+
+
+ a| 
+5.
+ a| 
+データは500ミリ秒後にフラッシュされます。
+
+
+
+ a| 
+「.75」
+ a| 
+データは750ミリ秒後にフラッシュされます。
+
+
+
+ a| 
+「 1 」
+ a| 
+データは1秒後にフラッシュされます
+
+
+
+ a| 
+1.
+ a| 
+データは1500ミリ秒後にフラッシュされます。
+
+
+
+ a| 
+2.
+ a| 
+データは2秒後にフラッシュされます
+
+
+
+ a| 
+「5」
+ a| 
+データは5秒後にフラッシュされます
+
+
+
+ a| 
+「10」
+ a| 
+データは10秒後にフラッシュされます
+
+
+
+ a| 
+２０歳
+ a| 
+データは20秒後にフラッシュされます
+
+
+
+ a| 
+「60」
+ a| 
+データは60秒（1分）後にフラッシュされます。
+
+
+
+ a| 
+120
+ a| 
+データは120秒（2分）後にフラッシュされます。
+
+
+
+ a| 
+300`
+ a| 
+データは300秒（5分）後にフラッシュされます。
+
+
+
+ a| 
+「1200」
+ a| 
+データは1200秒（20分）後にフラッシュされます。
+
+
+
+ a| 
+「3600」
+ a| 
+データは3600秒（1時間）後にフラッシュされます。
+
+
+
+ a| 
+「無限」
+ a| 
+キャッシュ内のデータには、年齢や時間の制約はありません。データは、コントローラによって管理されるその他の条件に基づいてフラッシュされます。
+
+|===
+[NOTE]
+====
+「cacheFlushModifier」パラメータの値を10秒以上に設定しないでください。テストを目的とした場合は例外です。「cacheFlushModifier」パラメータの値を10秒以上に設定したテストを実行した後、「cacheFlushModifier」パラメータの値を10秒以下に戻します。
+
+====
+
+
+== バッテリなしのキャッシュを有効にしました
+
+バッテリなしの書き込みキャッシュを有効にすると、コントローラのバッテリが完全に放電されている場合、フル充電されていない場合、または取り付けられていない場合でも書き込みキャッシュが続行されます。無停電電源装置（UPS）やその他のバックアップ電源がない場合にこのパラメータを「true」に設定すると、ストレージアレイへの給電が停止した場合にデータが失われる可能性があります。書き込みキャッシュが無効になっている場合、このパラメータは効果がありません。
+
+
+
+== 修正の優先順位
+
+変更優先度は、ボリュームのプロパティを変更する際に使用されるシステムリソースの量を定義します。最高の優先度レベルを選択すると、ほとんどのシステムリソースを使用してボリュームの変更が実行されるため、ホストのデータ転送パフォーマンスが低下します。
+
+
+
+== キャッシュ読み取りプリフェッチ
+
+「cacheReadPrefetch」パラメータを使用すると、コントローラは、ホストによって要求されたデータブロックをドライブから読み取ってキャッシュにコピーする間、追加のデータブロックをキャッシュにコピーできます。これにより、以降のデータ要求をキャッシュから処理できる可能性が高くなります。キャッシュ読み取りプリフェッチは、シーケンシャルデータ転送を使用するマルチメディアアプリケーションにとって重要です。使用するストレージアレイの設定によって、コントローラがキャッシュに読み込む追加のデータブロックの数が決まります。「cacheReadPrefetch」パラメータの有効な値は「TRUE」または「FALSE」です。
+
+
+
+== セグメントサイズ
+
+コントローラがボリューム内の1つのドライブに書き込めるデータブロックの数は、セグメントのサイズによって決まります。各データブロックには512バイトのデータが格納されます。データブロックはストレージの最小単位です。セグメントのサイズによって、格納されるデータブロックの数が決まります。たとえば、8KBのセグメントには16個のデータブロックが含まれます。64KBのセグメントには128個のデータブロックが含まれます。
+
+セグメントサイズの値を入力すると、その値は、実行時にコントローラで指定される、サポートされている値と照合されます。入力した値が無効な場合、コントローラは有効な値のリストを返します。1つの要求に対して1つのドライブを使用することで、他のドライブでは他の要求に同時に対応できます。
+
+ボリュームが属している環境で、1人のユーザが大量のデータ（マルチメディアなど）を転送している場合は、1つのデータ転送要求を1つのデータストライプで処理すると、パフォーマンスが最大化されます。（データストライプはセグメントサイズであり、これに、データ転送に使用されるボリュームグループ内のドライブ数が掛けられます）。 この場合、同じ要求に対して複数のドライブが使用されますが、各ドライブへのアクセスは1回だけとなります。
+
+マルチユーザデータベースまたはファイルシステムのストレージ環境で最適なパフォーマンスを実現するには、データ転送要求を満たすために必要なドライブ数が最小限になるように、セグメントサイズを設定します。
+
+
+
+== 最小ファームウェアレベル
+
+5.00で「addCapacity」パラメータが追加されました。
+
+7.10で、「preReadRedundancyCheck」パラメータが追加されました。
+
+7.60で'drawerID'ユーザ入力が追加されました
+
+7.75で、「dataAssuranceDisabled」パラメータが追加されました。
+
+8.10で、キャッシュフラッシュテーブルの「cacheFlushModifier」パラメータの値が修正されました。

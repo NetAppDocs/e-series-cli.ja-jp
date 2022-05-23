@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/create-mapping-volume.html 
+sidebar: sidebar 
+keywords: create, volume, map 
+summary: create mapping volumeコマンドは、ボリュームからホストまたはホストグループへの論理マッピングを作成します。 
+---
+= ボリュームマッピングの作成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create mapping volumeコマンドは'ボリュームからホストまたはホスト・グループへの論理マッピングを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create mapping volume=pass:quotes[_"VolumeName"_
+(host="_hostName_" | hostGroup=("_hostGroupName_"] | defaultGroup))
+logicalUnitNumber=lun
+mapWaitPeriod=mapWaitPeriodValue
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ボリューム」
+ a| 
+論理マッピングを作成するボリュームの名前。ボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+ホスト
+ a| 
+論理マッピングの作成先のホストの名前。ホスト名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「hostGroup」と入力します
+ a| 
+論理マッピングの作成先のホストグループの名前。ホストグループ名は二重引用符（""）で囲みます。defaultGroupキーワードを使用する場合は'引用符で囲まないでください
+
+
+
+ a| 
+「logicalUnitNumber」と入力します
+ a| 
+特定のホストにマッピングするために使用する論理番号またはネームスペースID。このパラメータは、ホストをホストグループにも割り当てます。
+
+[NOTE]
+====
+LUNまたはネームスペースIDには、ホストオペレーティングシステムでサポートされる範囲内の未使用の値を指定する必要があります。ホストでサポートされないLUNまたはネームスペースIDにボリュームをマッピングした場合、エラーは発生しませんが、ホストはボリュームにアクセスできなくなります。
+
+====
+
+
+ a| 
+「mapWaitPeriod」のように表示されます
+ a| 
+コマンドを完了するまで、または対話操作に影響を与えないようにタイムアウトするまで、マッピングをブロックします。値を入力しない場合、ボリュームをすぐにマッピングできないと処理はデフォルトで失敗します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+8.63で、mapWaitPeriodパラメータが追加されました。

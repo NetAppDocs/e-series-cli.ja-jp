@@ -1,0 +1,311 @@
+---
+permalink: commands-a-z/set-iscsitarget.html 
+sidebar: sidebar 
+keywords: set, iscsi, target, properties 
+summary: set iscsiTargetコマンドは、iSCSIターゲットのプロパティを定義します。 
+---
+= iSCSIターゲットのプロパティを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set iscsiTargetコマンドは'iSCSIターゲットのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:set-target.adoc[ターゲットのプロパティを設定します] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set iscsiTarget pass:quotes[["_userLabel_"]]
+authenticationMethod=(none | chap) |
+chapSecret=pass:quotes[_securityKey_] |
+targetAlias=pass:quotes["_userLabel_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「iscsiTarget」と入力します
+ a| 
+プロパティを設定するiSCSIターゲット。「_userLabel_」は二重引用符（""）で囲みます。また'ユーザー・ラベルがターゲット・エイリアスである場合は'_userLabel_'を角かっこ（[]）で囲む必要がありますユーザー・ラベルがiSCSI Qualified Name（IQN）である場合は'山かっこ（<>）で囲む必要があります
+
+
+
+ a| 
+「authenticationMethod」を指定します
+ a| 
+iSCSIセッションを認証する手段。
+
+
+
+ a| 
+「チャプターシークレット」
+ a| 
+ピア接続の認証に使用するセキュリティキー。
+
+
+
+ a| 
+targetAlias
+ a| 
+ターゲットに使用する新しい名前。名前は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+チャレンジハンドシェイク認証プロトコル（CHAP）は、接続のピアを認証するプロトコルです。CHAPは、_secret_を共有するピアに基づいています。シークレットとは、パスワードのようなセキュリティキーのことです。
+
+相互認証を必要とするイニシエータのセキュリティ・キーを設定するには'chapSecretパラメータを使用しますCHAPシークレットは12~57文字で指定する必要があります。次の表に、有効な文字を示します。
+
+[cols="1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a"]
+|===
+
+
+ a| 
+スペース
+ a| 
+！
+ a| 
+"
+ a| 
+#
+ a| 
+$
+ a| 
+%
+ a| 
+&
+ a| 
+'
+ a| 
+（
+ a| 
+)
+ a| 
+*
+ a| 
+
+
+
+ a| 
+、
+ a| 
+-
+ a| 
+。
+ a| 
+/
+ a| 
+0
+ a| 
+1.
+ a| 
+2.
+ a| 
+3.
+ a| 
+4.
+ a| 
+5.
+ a| 
+6.
+ a| 
+7.
+
+
+
+ a| 
+8.
+ a| 
+9.
+ a| 
+：
+ a| 
+;
+ a| 
+<
+ a| 
+=
+ a| 
+>
+ a| 
+？
+ a| 
+@
+ a| 
+A
+ a| 
+B
+ a| 
+C
+
+
+
+ a| 
+D
+ a| 
+E
+ a| 
+F
+ a| 
+G
+ a| 
+h
+ a| 
+私
+ a| 
+J
+ a| 
+K
+ a| 
+L
+ a| 
+M
+ a| 
+N
+ a| 
+o
+
+
+
+ a| 
+P
+ a| 
+Q
+ a| 
+R
+ a| 
+s
+ a| 
+t
+ a| 
+U
+ a| 
+V
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+[
+
+
+
+ a| 
+\
+ a| 
+]
+ a| 
+^
+ a| 
+_
+ a| 
+'
+ a| 
+A
+ a| 
+B
+ a| 
+C
+ a| 
+D ： \
+ a| 
+E
+ a| 
+F
+ a| 
+G
+
+
+
+ a| 
+h
+ a| 
+私
+ a| 
+J
+ a| 
+K
+ a| 
+L
+ a| 
+M
+ a| 
+N
+ a| 
+o
+ a| 
+P
+ a| 
+Q
+ a| 
+R
+ a| 
+s
+
+
+
+ a| 
+t
+ a| 
+U
+ a| 
+V
+ a| 
+W
+ a| 
+X
+ a| 
+Y
+ a| 
+Z
+ a| 
+｛
+ a| 
+|
+ a| 
+｝
+ a| 
+~
+ a| 
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.41で、このコマンドは廃止されました。

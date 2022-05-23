@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/create-snmpuser-username.html 
+sidebar: sidebar 
+keywords: register, snmpv3 usm, user 
+summary: create snmpUser usernameコマンドは、新しいSimple Network Management Protocol（SNMP）ユーザを作成し、新しいユーザを既知のエンティティとしてSNMPエージェントに登録します。既存のユーザと同じ名前とエンジンIDを持つ新しいユーザを登録しようとすると、拒否されます。 
+---
+= SNMPv3 USMユーザを登録します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create snmpUser usernameコマンドは、新しい簡易ネットワーク管理プロトコル（SNMP）ユーザを作成し、新しいユーザを既知のエンティティとしてSNMPエージェントに登録します。既存のユーザと同じ名前とエンジンIDを持つ新しいユーザを登録しようとすると、拒否されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+create snmpUser userName="snmpUserName"
+    [engineId=(local | engineId)]
+    [authProtocol=(none | sha | sha256 | sha512) authPassword="authPassword"]
+    [privProtocol=(none | aes128) privPassword="privPassword"]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ユーザ名」
+ a| 
+作成するSNMP USMユーザの名前。SNMP USMユーザ名を二重引用符（""）で囲みます。
+
+
+
+ a| 
+「engineID」
+ a| 
+ユーザの信頼できるSNMPエンジンIDの識別子。この値は、権限のあるエージェントになるローカルSNMPエージェントを指定する場合は「[.code]`local`」、リモートSNMPエージェントエンジンIDを指定する場合は16進数の数値文字列です。デフォルト値は「[.code]`local``」です。
+
+
+
+ a| 
+「authProtocol」
+ a| 
+ユーザに使用するHMAC（認証プロトコル）。次のいずれかの値を指定できます。
+
+* 'none'- SNMPメッセージの認証なし（デフォルト）
+* sha`SHA-1認証
+* 「SHA256」-SHA-256認証を使用します
+* 「SHA512`-SHA-512認証」を参照してください
+
+
+
+
+ a| 
+「authPassword」
+ a| 
+ユーザの認証に使用するパスワード。認証プロトコルが「[.code]`sha"」、「[.code]`SHA256 `]」または「[.code]`shSHA512`」の場合に指定する必要があります。
+
+
+
+ a| 
+「プライベートプロトコル」
+ a| 
+ユーザに使用されるプライバシープロトコル（暗号化）。次のいずれかの値を指定できます。
+
+* 'none'- SNMPメッセージの暗号化なし（デフォルト）
+* `aes128`-aes-18暗号化
+
+
+
+
+ a| 
+「プライベートパスワード」
+ a| 
+ユーザのプライバシー/暗号化に使用するパスワード。プライバシープロトコルが「[.code]`aes128``」の場合は、このプロトコルを指定する必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.72

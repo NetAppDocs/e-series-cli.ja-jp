@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/download-controller-trustedcertificate.html 
+sidebar: sidebar 
+keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
+summary: download controller trustedCertificateコマンドは、コントローラのWebサーバに信頼されたCA証明書をインストールして、LDAPサーバの署名付き証明書を検証します。 
+---
+= 信頼されたCA証明書をインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download controller trustedCertificateコマンドは、コントローラのWebサーバに信頼されたCA証明書をインストールして、LDAPサーバの署名付き証明書を検証します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この操作は、証明書に署名したCAの知名度が低い、または一般的に信頼されていない場合にのみ実行してください。コマンドは、両方のコントローラにCA証明書をインストールします。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quotes[file="_filename_"]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「alias」
+ a| 
+信頼されたCA証明書を表すエイリアスを指定できます。このエイリアスは、信頼されたCA証明書に関する情報を検索する場合や、それらの証明書を削除する場合に使用されます。エイリアスは信頼された証明書に関連付けられており、一意である必要があります。
+
+
+
+ a| 
+'file'
+ a| 
+信頼されたCA証明書を含むファイルを指定できます。使用できる拡張子は、.pem、.cer、.crt、.derです。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download storageArray trustedCertificate alias="myAlias"
+   file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download storageArray trustedCertificate
+   file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

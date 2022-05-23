@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/import-storagearray-securitykey-file.html 
+sidebar: sidebar 
+keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
+summary: import storageArray securityKeyファイルコマンドは、ストレージアレイ間で移動した1本以上のFull Disk Encryption（FDE）ドライブのロックを解除します。 
+---
+= ストレージアレイのセキュリティキーをインポートします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+import storageArray securityKey fileコマンドは、ストレージアレイ間で移動した1つ以上のFull Disk Encryption（FDE）ドライブのロックを解除します。
+
+
+
+== サポートされているアレイ
+
+外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、またはEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+セキュリティキーが一致するドライブだけがロック解除されます。ロックが解除されると、新しいストレージアレイのセキュリティキーが適用されます。
+
+[NOTE]
+====
+このコマンドは、内部と外部の両方のキー管理を環境 に行います。
+
+====
+
+
+== 構文
+
+[listing]
+----
+import storageArray securityKey file="fileName"
+passPhrase="passPhraseString"
+[forceOverwrite=(TRUE|FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+インポートされたFDEドライブの元のセキュリティキーを含むファイルのパスと名前。例：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+ファイル名の拡張子は「.slk」でなければなりません。
+
+====
+
+
+ a| 
+パスフレーズ
+ a| 
+セキュリティキーの認証を提供する文字列。
+
+
+
+ a| 
+「forceOverwrite」と入力します
+ a| 
+このパラメータが「true」に設定されている場合、インポートは通常、1台のコントローラが存在しない場合や障害が発生した場合など、インポートが許可されないときにFDEキーを強制的に上書きします。デフォルトでは、force overwriteパラメータがFALSEに設定されます。
+
+|===
+
+
+== 注：
+
+コントローラファームウェアによってロックが作成され、FDEドライブへのアクセスが制限されます。FDEドライブには、Security Capableという状態があります。セキュリティキーを作成すると、状態はSecurity Enabledに設定され、これによって、ストレージアレイ内に存在するすべてのFDEドライブへのアクセスが制限されます。
+
+パスフレーズは次の条件を満たしている必要があります。
+
+* 8~32文字で指定する必要があります。
+* 大文字を1つ以上含む。
+* 小文字を1つ以上含む。
+* 数字を1つ以上含む。
+* 英数字以外の文字（「@+」など）を少なくとも1文字含める必要があります。
+
+
+[NOTE]
+====
+パスフレーズがこれらの条件を満たしていない場合は、エラーメッセージが表示され、コマンドを再試行するように求められます。
+
+====
+
+
+== 最小ファームウェアレベル
+
+7.40
+
+8.40で、ストレージアレイの外部セキュリティキーをインポートする機能が追加されました
+
+11.70.1に「forceOverwrite」パラメータが追加されました。

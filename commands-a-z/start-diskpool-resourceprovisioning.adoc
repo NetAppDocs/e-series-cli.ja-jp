@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-diskpool-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, disk pool, resource, provision 
+summary: start diskPool resourceProvisioningコマンドは、所定のディスクプールでリソースプロビジョニングを有効にし、ディスクプール内の各ボリュームでリソースプロビジョニング有効化非同期処理を開始します。リソースのプロビジョニングでは、ディスクプール内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。 
+---
+= ディスクプールリソースのプロビジョニングを開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start diskPool resourceProvisioningコマンドを使用すると'所定のディスク・プールでリソース・プロビジョニングを有効にし'ディスク・プール内の各ボリュームで非同期オペレーションを実行するリソース・プロビジョニングを開始できますリソースをプロビジョニングするには、ディスクプール内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ディスクプールでリソースのプロビジョニングを無効にするには、フルプロビジョニングコマンドとオプションを使用して、リソースのプロビジョニングを無効にします。すべてのドライブがDULBE対応で'ストレージアレイのresourceProvisionedVolumes設定が「true」の場合'ディスクプールは作成時にリソースをプロビジョニングします
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「diskPoolName」
+ a| 
+リソースプロビジョニング機能を有効にするディスクプール。ディスクプール名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.73

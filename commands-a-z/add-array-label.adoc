@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/add-array-label.html 
+sidebar: sidebar 
+keywords: add array label, supported, syntax, parameters, minimum firmware level 
+summary: Add array labelコマンドを使用すると、ユーザ定義のラベルを使用してストレージアレイを構成に追加できます。これにより、以降のコマンドでは、IPアドレスやホスト名の代わりにユーザ定義のラベルを使用してストレージアレイを指定できます。 
+---
+= アレイラベルを追加します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Add array label'コマンドを使用すると'ユーザー定義のラベルを持つ構成にストレージ・アレイを追加できますこれにより、以降のコマンドでは、IPアドレスやホスト名の代わりにユーザ定義のラベルを使用してストレージアレイを指定できます。
+
+
+
+== サポートされているアレイ
+
+[NOTE]
+====
+指定するラベルは、System Managerに表示されるストレージアレイの名前と同じである必要はありません。これは、CLIからストレージアレイを参照する場合にのみ使用されるローカルラベルです。
+
+====
+このコマンドは、EF600およびEF300ストレージアレイを環境 します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「住所」
+ a| 
+ストレージアレイのIPアドレス（IPv4またはIPv6）または完全修飾ホスト名を指定できます。
+
+[NOTE]
+====
+「Address2」の値はオプションです。
+
+====
+
+
+ a| 
+「userDefinedString」
+ a| 
+ストレージアレイのラベルを指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.60

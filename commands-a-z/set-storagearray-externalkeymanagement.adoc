@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/set-storagearray-externalkeymanagement.html 
+sidebar: sidebar 
+keywords: set, external, key, management, set 
+summary: set storageArray externalKeyManagementコマンドは、外部キー管理サーバのアドレスとポート番号を設定します。 
+---
+= 外部キー管理を設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray externalKeyManagementコマンドは、外部キー管理サーバのアドレスとポート番号を設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+set storageArray externalKeyManagement serverAddress=pass:quotes[_serverAddress_]
+serverPort=pass:quotes[_portNumber_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「serverAddress」と入力します
+ a| 
+外部キー管理サーバのアドレスを指定できます。サーバアドレスは、完全修飾ドメイン名、IPv4アドレス、またはIPv6アドレスのいずれかで指定できます。
+
+
+
+ a| 
+「サーバポート」
+ a| 
+外部キー管理サーバのポート番号を指定できます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray externalKeyManagement serverAddress=192.0.2.1 serverPort=8081;"
+
+   SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

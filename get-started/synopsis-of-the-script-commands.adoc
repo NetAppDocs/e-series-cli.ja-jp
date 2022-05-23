@@ -1,0 +1,294 @@
+---
+permalink: get-started/synopsis-of-the-script-commands.html 
+sidebar: sidebar 
+keywords: synopsis, script commands 
+summary: スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。 
+---
+= スクリプトコマンドの概要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。ただし、これらのコマンドは汎用カテゴリに分類され、このカテゴリはストレージアレイの設定や管理のためにコマンドを適用するときに再利用されます。次の表に、スクリプトコマンドの一般的な形式と各コマンドの定義を示します。
+
+[cols="2*"]
+|===
+| 構文 | 説明 
+
+
+ a| 
+[listing]
+----
+accept object
+{statement-data}
+---- a| 
+保留中の処理を実行します。
+
+
+
+ a| 
+[listing]
+----
+activate object
+{statement-data}
+---- a| 
+処理を実行できるように環境をセットアップするか、環境がすでに正しくセットアップされている場合は処理を実行します。
+
+
+
+ a| 
+[listing]
+----
+autoConfigure storageArray
+{statement-data}
+---- a| 
+コマンドで指定されたパラメータに基づいて設定を自動的に作成します。
+
+
+
+ a| 
+[listing]
+----
+check object
+{statement-data}
+---- a| 
+同期操作であるオブジェクトのエラーに関するレポートを作成する処理を開始します。
+
+
+
+ a| 
+[listing]
+----
+clear object
+{statement-data}
+---- a| 
+オブジェクトの一部の属性の内容を破棄します。この処理はシステムの停止を伴い、元に戻すことはできません。
+
+
+
+ a| 
+[listing]
+----
+create object
+{statement-data}
+---- a| 
+指定したタイプのオブジェクトを作成します。
+
+
+
+ a| 
+[listing]
+----
+deactivate object
+{statement-data}
+---- a| 
+処理のために環境を削除します。
+
+
+
+ a| 
+[listing]
+----
+delete object
+---- a| 
+以前に作成したオブジェクトを削除します。
+
+
+
+ a| 
+[listing]
+----
+diagnose object
+{statement-data}
+---- a| 
+テストを実行し、結果を表示します。
+
+
+
+ a| 
+[listing]
+----
+disable object {statement-data}
+---- a| 
+機能が動作しないようにします。
+
+
+
+ a| 
+[listing]
+----
+download object
+{statement-data}
+---- a| 
+ストレージアレイまたはストレージアレイに関連付けられているハードウェアにデータを転送します。
+
+
+
+ a| 
+[listing]
+----
+enable object
+{statement-data}
+---- a| 
+機能を動作に設定します。
+
+
+
+ a| 
+[listing]
+----
+load object
+{statement-data}
+---- a| 
+ストレージアレイまたはストレージアレイに関連付けられているハードウェアにデータを転送します。このコマンドは'download'コマンドと機能的に似ています
+
+
+
+ a| 
+[listing]
+----
+recopy object
+{statement-data}
+---- a| 
+既存のボリュームコピーペアを使用してボリュームコピー処理を再開します。処理を再開する前にパラメータを変更できます。
+
+
+
+ a| 
+[listing]
+----
+recover object
+{statement-data}
+---- a| 
+保存された設定データとステートメントパラメータからオブジェクトを再作成します。(このコマンドは'create'コマンドと似ています)
+
+
+
+ a| 
+[listing]
+----
+remove object
+{statement-data}
+---- a| 
+オブジェクト間の関係を削除します。
+
+
+
+ a| 
+[listing]
+----
+repair object
+{statement-data}
+---- a| 
+「check」コマンドで見つかったエラーを修復します。
+
+
+
+ a| 
+[listing]
+----
+replace object
+{statement-data}
+---- a| 
+指定したオブジェクトでストレージアレイ内の既存のオブジェクトを置き換えます。
+
+
+
+ a| 
+[listing]
+----
+reset object
+{statement-data}
+---- a| 
+ハードウェアまたはオブジェクトを初期状態に戻します。
+
+
+
+ a| 
+[listing]
+----
+resume object
+---- a| 
+中断した処理を開始します。処理は中断された地点から開始されます。
+
+
+
+ a| 
+[listing]
+----
+revive object
+---- a| 
+失敗状態のオブジェクトを強制的に最適状態に設定します。このコマンドは、エラーリカバリ手順 の一部としてのみ使用してください。
+
+
+
+ a| 
+[listing]
+----
+save object
+{statement-data}
+---- a| 
+オブジェクトに関する情報をファイルに書き込みます。
+
+
+
+ a| 
+[listing]
+----
+set object
+{statement-data}
+---- a| 
+オブジェクトの属性を変更します。すべての変更は、コマンドが戻ると完了します。
+
+
+
+ a| 
+[listing]
+----
+show object
+{statement-data}
+---- a| 
+オブジェクトに関する情報を表示します。
+
+
+
+ a| 
+[listing]
+----
+start object
+{statement-data}
+---- a| 
+非同期処理を開始します。一部の処理は、開始後に停止できます。一部の処理の進捗状況を照会できます。
+
+
+
+ a| 
+[listing]
+----
+stop object
+{statement-data}
+---- a| 
+非同期処理を停止します。
+
+
+
+ a| 
+[listing]
+----
+suspend object
+{statement-data}
+---- a| 
+処理を停止します。その後、中断した処理を再開でき、中断された地点から処理が続行されます。
+
+
+
+ a| 
+[listing]
+----
+validate object
+{statement-data}
+---- a| 
+セキュリティキーを検証します。
+
+|===

@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/set-storagearray-unnameddiscoverysession.html 
+sidebar: sidebar 
+keywords: set, storage, array, unnamed, discovery, session 
+summary: set storageArray unnamedDiscoverySessionコマンドを使用すると、ストレージアレイは名前のない検出セッションに参加できます。 
+---
+= ストレージアレイの名前のない検出セッションを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray unnamedDiscoverySession'コマンドを使用すると'ストレージアレイは名前のない検出セッションに参加できます
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray unnamedDiscoverySession=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「unnamedDiscoverySession」
+ a| 
+このパラメータは、名前のない検出セッションをオンまたはオフにします。名前のない検出セッションをオンにするには、パラメータを「true」に設定します。名前のない検出セッションをオフにするには'パラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+検出は、イニシエータが使用可能なターゲットを判別するプロセスです。検出は、電源投入/初期化時に実行されます。また、バストポロジが変更された場合（追加デバイスが追加された場合など）も実行されます。
+
+名前のない検出セッションは、ログイン要求でターゲットIDを指定せずに確立される検出セッションです。名前のない検出セッションでは、ターゲットのターゲットIDもターゲットポータルグループIDも使用できません。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

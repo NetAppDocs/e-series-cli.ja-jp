@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/delete-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: delete, asynchronous, mirror group 
+summary: DELETE asyncMirrorGroupコマンドは、ローカルストレージアレイとリモートストレージアレイから非同期ミラーグループを削除します。 
+---
+= 非同期ミラーグループを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+DELETE asyncMirrorGroupコマンドは'ローカルストレージアレイとリモートストレージアレイから1つ以上の非同期ミラーグループを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+非同期ミラーグループを削除するには、事前に空にしておく必要があります。このコマンドを使用する前に、非同期ミラーグループから非同期ミラーペアをすべて削除する必要があります。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+delete (allAsyncMirrorGroups | asyncMirrorGrouppass:quotes[[_"asyncMirrorGroupName"_] |
+asyncMirrorGroups pass:quotes[[_"asyncMirrorGroupName_1" ... "asyncMirrorGroupName_n"_]])
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allAsyncMirrorGroups」を参照してください
+ a| 
+このパラメータは、ローカルストレージアレイとリモートストレージアレイからすべての非同期ミラーグループを削除する場合に使用します。
+
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+削除する非同期ミラーグループの名前。非同期ミラーグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「asyncMirrorGroups」を参照してください
+ a| 
+削除する複数の非同期ミラーグループの名前。以下のルールを使用して、非同期ミラーグループの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.84

@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-storagearray-odxsetting.html 
+sidebar: sidebar 
+keywords: show, storage, array, odx, set 
+summary: show storageArray odxsettingコマンドは、ストレージアレイのオフロードデータ転送（ODX）とVMware vStorage API Array Architecture（VAAI）の現在の設定を返します。 
+---
+= ストレージアレイのODX設定の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray odxsettingコマンドは、ストレージアレイのオフロードデータ転送（ODX）およびVMware vStorage API Array Architecture（VAAI）の現在の設定を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドの設定は、次のいずれかになります。
+
+* true -- ODXとVAAIがオンになっています。
+* false -- ODXとVAAIはオフになっています。
+* Inconsistent -コントローラ間で設定が異なります。
+* unknown -- ODXまたはVAAIの設定を特定できません。
+
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray odxsetting
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドから返されるODXとVAAIの情報の例を次に示します。
+
+[listing]
+----
+Windows ODX Setting Status
+odxEnabled  True | False | Inconsistent | Unknown
+vaaiEnabled True | False | Inconsistent | Unknown
+----
+
+
+== 最小ファームウェアレベル
+
+8.20で

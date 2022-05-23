@@ -1,0 +1,545 @@
+---
+permalink: commands-a-z/set-storagearray.html 
+sidebar: sidebar 
+keywords: set, storage, array 
+summary: set storageArrayコマンドは、ストレージアレイのプロパティを定義します。 
+---
+= ストレージアレイを設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArrayコマンドは'ストレージ・アレイのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン8.10で'cacheFlushStop'パラメータが廃止されましたストレージ管理ソフトウェアの今後のリリースで削除される予定です
+
+====
+
+
+== 構文
+
+[listing]
+----
+set storageArray
+([autoLoadBalancingEnable=(TRUE | FALSE)]|
+[autoSupportMaintenanceWindow AutoSupport Maintenance Window parameters]
+[autoSupport schedule AutoSupport Schedule Parameters]|
+[autoSupportConfig (enable | disable)]|
+[autoSupportOnDemand (enable | disable)]|
+[autoSupportRemoteDiag (enable |disable)]|
+[cacheBlockSize=cacheBlockSizeValue]|
+[cacheFlushStart=cacheFlushStartSize]|
+[cacheFlushStop=cacheFlushStopSize]|
+[cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
+[controllerHealthImageAllowOverWrite]|
+[defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
+[directoryServer directory server parameters]|
+[externalKeyManagement external key management parameters]|
+[failoverAlertDelay=delayValue]|
+[hostConnectivityReporting (enable | disable)]|
+[icmpPingResponse=(TRUE | FALSE)]|
+[isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
+[isnsIPv6Address=ipAddress]|
+[isnsListeningPort=listeningPortIPAddress]]|
+[isnsRegistration=(TRUE | FALSE)]|
+[learnCycleDate learn cycle parameters]|
+[localUsername=local user name parameters]|
+[loginBanner file="path_to_login_banner"]|
+[managementInterface restOnly={true | false}]|
+[mediaScanRate=(disabled | 1-30)]|
+[odxEnabled=(TRUE | FALSE)]|
+[password="password"]|
+[passwordLength=<INTEGER>]|
+[pqValidateOnReconstruct P/Q Validate on Reconstruct parameters]|
+[redundancyMode=(simplex | duplex)]|
+[revocationCheckSettings revocation check settings parameters]|
+[securityKey]|
+[symbol SYMbol user name and password parameters]|
+[syslog syslog parameters]|
+[time]|
+[trayPositions=(controller | trayID ... trayIDn)]|
+[unnamedDiscoverySession=(TRUE | FALSE)]|
+[userLabel="storageArrayName"]|
+[userSession sessionTimeout=n]|
+[vaaiEnabled=(TRUE | FALSE)])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+autoLoadBalancingEnable
+ a| 
+このパラメータは、コントローラの自動ロードバランシングを有効にします。オプションを有効にするには'このパラメータをTRUEに設定しますこのオプションを無効にするには'このパラメータをFALSEに設定します
+
+[NOTE]
+====
+自動ロードバランシング機能を有効にすると、ホスト接続レポート機能も有効になります。
+
+====
+
+
+ a| 
+AutoSupport スケジュール
+ a| 
+AutoSupport メッセージを送信する毎日の時間帯および毎週の時間帯と曜日を設定します。
+
+
+
+ a| 
+'autoSupportConfig'
+ a| 
+ファームウェアで重大なMELイベントが検出されるたびにサポートデータを自動収集するかどうかの設定。このパラメータには次の値があります。
+
+* enable --サポートデータの収集をオンにします
+* disable --サポートデータの収集をオフにします
+
+
+このパラメータは、次の場合にのみ使用します。
+
+* ストレージアレイでAutoSupport （ASUP）機能を使用できません
+* 以前にこのパラメータを使用していたストレージアレイの設定をサポートするため
+
+
+[NOTE]
+====
+このパラメータはASUPコマンドと一緒に使用することはできません。
+
+====
+
+
+ a| 
+「autoSupportMaintenanceWindow」
+ a| 
+AutoSupport メンテナンス期間をオンまたはオフにし、設定します。
+
+
+
+ a| 
+「cacheBlockSize」
+ a| 
+コントローラがキャッシュの管理に使用するキャッシュブロックサイズ。有効な値は'4`(4KB)'8`(8KB)'16`(16KB)'または32`(32KB)です
+
+
+
+ a| 
+cacheMirrorDataAssuranceCheckEnable`
+ a| 
+このパラメータは、コントローラでのキャッシュミラーData Assuranceチェックを有効にします。オプションを有効にするには'このパラメータをTRUEに設定しますこのオプションを無効にするには'このパラメータをFALSEに設定します
+
+
+
+ a| 
+「cacheFlushStart」を参照してください
+ a| 
+キャッシュ内の書き込み前のデータがこの割合に達すると、キャッシュフラッシュが発生します。0から100までの整数値を使用してパーセンテージを定義します。デフォルト値は '80' です
+
+
+
+ a| 
+「cacheFlushStop」
+ a| 
+[NOTE]
+====
+このパラメータは廃止予定で、今後のリリースで削除される予定です。
+
+====
+キャッシュ内の書き込み前のデータがこの割合まで下がると、キャッシュフラッシュが停止します。0から100までの整数値を使用してパーセンテージを定義します。この値は'cacheFlushStart'パラメータの値より小さくする必要があります
+
+
+
+ a| 
+controllerHealthImageAllowOverWrite
+ a| 
+コントローラヘルスイメージ機能をサポートするストレージアレイで、新しいコントローラヘルスイメージによる既存のコントローラヘルスイメージの上書きを許可するフラグをコントローラに設定します。
+
+
+
+ a| 
+defaultHostType
+ a| 
+コントローラが接続されている未設定のホストポートに割り当てられるデフォルトのホストタイプ。ストレージアレイの有効なホストタイプのリストを生成するには、「show storageArray hostTypeTable」コマンドを実行します。ホストタイプは名前または数値で識別されます。ホストタイプ名は二重引用符（""）で囲みます。ホストタイプが数値IDの場合、二重引用符で囲まないでください。
+
+
+
+ a| 
+「DirectoryServer」を参照してください
+ a| 
+ロールマッピングを含むディレクトリサーバ設定を更新します。
+
+
+
+ a| 
+「externalKeyManagement」と入力します
+ a| 
+外部キー管理サーバのアドレスとポート番号を設定します
+
+
+
+ a| 
+FailoverAlertDelay
+ a| 
+フェイルオーバーアラートの遅延時間（分単位）。遅延時間の有効値は0～60分です。デフォルト値は「5」です。
+
+
+
+ a| 
+「hostConnectivityReporting」のように入力します
+ a| 
+このパラメータは、コントローラのホスト接続レポートを有効にします。オプションを有効にするには'このパラメータをenableに設定しますオプションを無効にするには'このパラメータをdisableに設定します
+
+[NOTE]
+====
+自動ロードバランシングが有効なときにホスト接続レポートを無効にしようとすると、エラーが発生します。自動ロードバランシング機能を無効にしてから、ホスト接続レポート機能を無効にしてください。
+
+====
+[NOTE]
+====
+自動ロードバランシングが無効な場合も、ホスト接続レポートは有効にしておくことができます。
+
+====
+
+
+ a| 
+「icmpPingResponse」
+ a| 
+このパラメータは、エコー要求メッセージをオンまたはオフにします。エコー要求メッセージをオンにするには、パラメータを「true」に設定します。エコー要求メッセージをオフにするには、パラメータをFALSEに設定します。
+
+
+
+ a| 
+「isnsIPv4ConfigurationMethod」を参照してください
+ a| 
+iSNSサーバ設定を定義する方法。IPv4 iSNSサーバのIPアドレスを入力するには'static'を選択しますIPv4の場合'dhcp'と入力することにより'Dynamic Host Configuration Protocol (DHCP)サーバがiSNSサーバのIPアドレスを選択するように選択できますDHCPを有効にするには'isnsIPV4Address'パラメータを0.0.0.0に設定する必要があります
+
+
+
+ a| 
+「isnsIPv6Address」
+ a| 
+iSNSサーバに使用するIPv6アドレス。
+
+
+
+ a| 
+「isnsListeningPort」
+ a| 
+iSNSサーバのリスニングポートに使用するIPアドレス。リスニング・ポートの値の範囲は'49152'～65535ですデフォルト値は「53205」です。
+
+リスニングポートはサーバ上で次のアクティビティを実行します。
+
+* 受信するクライアント接続要求を監視します
+* サーバへのトラフィックを管理します
+
+
+クライアントがサーバとのネットワークセッションを要求すると、リスナーが実際の要求を受信します。クライアントの情報がリスナーの情報と一致した場合は、リスナーがデータベースサーバへの接続を許可します。
+
+
+
+ a| 
+「isnsRegistration」
+ a| 
+このパラメータは、ストレージアレイをiSCSIターゲットとしてiSNSサーバに登録します。iSNSサーバにストレージ・アレイを登録するには'このパラメータをTRUEに設定しますiSNSサーバからストレージアレイを削除するには、このパラメータをFALSEに設定します。
+
+[NOTE]
+====
+set storageArrayコマンドを実行しているときは、他のパラメータとともに「isnsRegistration」パラメータを使用することはできません。
+
+====
+iSNS登録の詳細については' set storageArray isnsRegistrationコマンドを参照してください
+
+
+
+ a| 
+learnCycleDate
+ a| 
+コントローラのバッテリ学習サイクルを設定します。
+
+
+
+ a| 
+「localUsername」と入力します
+ a| 
+特定のロールのローカルユーザパスワードまたはSYMbolパスワードを設定できます。
+
+
+
+ a| 
+「loginBanner」
+ a| 
+ログインバナーとして使用するテキストファイルをアップロードできます。バナーテキストはユーザがSANtricity System Managerでセッションを確立する前またはコマンドを実行する前に表示されるもので、注意と同意を求めるメッセージを含めることができます
+
+
+
+ a| 
+「管理インターフェイス」
+ a| 
+コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。
+
+
+
+ a| 
+mediaScanRate
+ a| 
+メディアスキャンを実行する日数。有効な値は「disabled」です。これはメディア・スキャンをオフにします。「1日」は最も速いスキャン・レート、「30日」は最も遅いスキャン・レートです。「disabled」または「1」から「30」以外の値を指定すると、メディアスキャンは機能しません。
+
+
+
+ a| 
+「odxEnabled」
+ a| 
+ストレージアレイのオフロードデータ転送（ODX）をオンまたはオフにします。
+
+
+
+ a| 
+「 password 」と入力します
+ a| 
+ストレージアレイのパスワード。パスワードは二重引用符（""）で囲みます。
+
+[NOTE]
+====
+このパラメータは8.40リリースで廃止されました。代わりに'localUsername'またはシンボルの'symbol`パラメータを'password'または'adminPassword'パラメータとともに使用します
+
+====
+
+
+ a| 
+'passwordLength'
+ a| 
+すべての新規または更新されたパスワードの最小文字数を設定できます。0~30の値を指定します。
+
+
+
+ a| 
+pqValidateOnReconstruct`
+ a| 
+再構築時のP/Q検証を変更します。
+
+
+
+ a| 
+「冗長性モード」
+ a| 
+コントローラが1台しかない場合は' simplexモードを使用しますコントローラが2台ある場合は、「duplex」モードを使用します。
+
+
+
+ a| 
+「revocationCheckSettings」
+ a| 
+失効チェックを有効または無効にすることができます。また、Online Certificate Status Protocol（OCSP）サーバを設定できます。
+
+
+
+ a| 
+「securityKey」
+ a| 
+ドライブセキュリティ機能を実装するためにストレージアレイ全体で使用される内部セキュリティキーを設定します。
+
+[NOTE]
+====
+内部セキュリティキーに使用されます。外部キー管理サーバを使用する場合は、「create storageArray securityKey」コマンドを使用します。
+
+====
+
+
+ a| 
+「symbol」
+ a| 
+特定のロールのSYMbolパスワードを設定できます。
+
+
+
+ a| 
+「syslog」
+ a| 
+syslogサーバのアドレス、プロトコル、またはポート番号を変更できます。
+
+
+
+ a| 
+「time」
+ a| 
+コントローラのクロックをこのコマンドを実行するホストのクロックと同期することで、ストレージアレイの両方のコントローラのクロックを設定します。
+
+
+
+ a| 
+「トレイポジション」
+ a| 
+すべてのトレイIDのリスト。リストでのトレイIDの順序によって、ストレージアレイ内のコントローラトレイとドライブトレイの位置が定義されます。有効な値は「0」～「99」です。トレイIDの値はスペースで区切って入力します。トレイID値のリストは丸かっこで囲みます。コントローラトレイに有効なトレイ位置の範囲外の識別子が定義されているストレージアレイの場合は' controller値を使用します
+
+[NOTE]
+====
+'controller'オプションは'ファームウェア・リリース6.14以降は有効ではありません
+
+====
+
+
+ a| 
+「unnamedDiscoverySession」
+ a| 
+ストレージアレイを名前のない検出セッションの対象にします。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+ストレージアレイの名前。ストレージアレイ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「userSession」
+ a| 
+非アクティブな状態が一定の時間続いたユーザセッションは切断されるよう、System Managerでタイムアウトを設定できます。
+
+
+
+ a| 
+「vaaiEnabled」
+ a| 
+ストレージアレイのVMware vStorage API Array Architecture（VAAI）をオンまたはオフにします
+
+|===
+
+
+== 注：
+
+「isnsRegistration」を除き、このコマンドを使用する場合は、オプションのパラメータを1つ以上指定できます。
+
+
+
+== AutoSupportデータ
+
+[NOTE]
+====
+このパラメータはASUPコマンドと一緒に使用することはできません。
+
+====
+set storageArray autoSupportConfigコマンドをイネーブルにすると、重大なメジャーイベントログ（MEL）イベントが検出されるたびに、ストレージアレイのすべての設定および状態情報が返されます。設定と状態の情報はオブジェクトグラフの形式で返されます。オブジェクトグラフには、関連するすべての論理オブジェクトと物理オブジェクト、およびストレージアレイでのそれらの関連する状態情報が表示されます。
+
+set storageArray autoSupportConfigコマンドは'次のように構成情報と状態情報を収集します
+
+* 設定と状態の情報は72時間ごとに自動的に収集されます。設定と状態の情報はストレージアレイのzipアーカイブファイルに保存されます。アーカイブファイルには、アーカイブファイルの管理に使用されるタイムスタンプが記録されます。
+* ストレージアレイごとに2つのzipアーカイブファイルが保持されます。zipアーカイブファイルはドライブに保存されます。72時間後、最も古いアーカイブファイルが新しいサイクルで上書きされます。
+* このコマンドを使用して設定と状態の情報の自動収集を有効にすると、最初の情報収集が開始されます。問題 コマンドの実行後に情報が収集されることにより、アーカイブファイルが1つ作成され、タイムスタンプサイクルが開始されます。
+
+
+set storageArray autoSupportConfigコマンドは、複数のストレージアレイで実行できます。
+
+
+
+== キャッシュブロックサイズ
+
+キャッシュブロックサイズを定義する場合は、一般に小さくてランダムなI/Oストリームを必要とするストレージアレイに4KBのキャッシュブロックサイズを使用します。大半のI/Oストリームが4KBより大きく8KBより小さい場合は、8KBのキャッシュブロックサイズを使用します。大規模なデータ転送、シーケンシャルI/O、または高帯域幅のアプリケーションを必要とするストレージアレイには、16KBまたは32KBのキャッシュブロックサイズを使用します。
+
+「cacheBlockSize」パラメータは、ストレージアレイ内のすべてのボリュームでサポートされるキャッシュブロックサイズを定義します。すべてのコントローラタイプがすべてのキャッシュブロックサイズをサポートするわけではありません。冗長構成の場合は、ストレージアレイ内の両方のコントローラが所有するすべてのボリュームがこのパラメータの対象となります。
+
+
+
+== キャッシュフラッシュが開始されます
+
+キャッシュフラッシュを開始するための値を定義するときに低すぎると、ホスト読み取りに必要なデータがキャッシュに存在しない可能性が高くなります。また、キャッシュレベルを維持するために必要なドライブ書き込み回数が増えるため、システムオーバーヘッドが増大してパフォーマンスが低下します。
+
+
+
+== デフォルトのホストタイプ
+
+ストレージパーティショニングが有効になっているホストタイプを定義する場合、デフォルトのホストタイプはデフォルトグループにマッピングされているボリュームのみに適用されます。ストレージパーティショニングが有効になっていない場合は、ストレージアレイに接続されているすべてのホストが同じオペレーティングシステムを実行していて、デフォルトのホストタイプと互換性がある必要があります。
+
+
+
+== メディアスキャンの速度
+
+メディアスキャンは、ストレージアレイ内の最適なステータスで、変更処理が実行中ではなく、「mediaScanRate」パラメータが有効になっているすべてのボリュームで実行されます。「mediaScanRate」パラメータをイネーブルまたはディセーブルにするには、「set volume」コマンドを使用します。
+
+
+
+== パスワード
+
+パスワードは各ストレージアレイに保存されます。保護を最適化するには、パスワードが次の基準を満たしている必要があります。
+
+* パスワードは8~30文字で指定する必要があります。
+* 大文字を1つ以上含む。
+* 小文字を1つ以上含む。
+* 数字を1つ以上含む。
+* パスワードには、英数字以外の文字（<>@+など）を少なくとも1文字含める必要があります。
+
+
+[NOTE]
+====
+ストレージアレイでFull Disk Encryptionドライブを使用している場合は、ストレージアレイのパスワードに次の基準を使用する必要があります。
+
+====
+[NOTE]
+====
+暗号化されたフルディスク暗号化ドライブのセキュリティキーを作成するには、ストレージアレイのパスワードを設定する必要があります。
+
+====
+
+
+== 最小ファームウェアレベル
+
+5.00で'defaultHostType'パラメータが追加されました
+
+5.40では'failoverAlertDelay'パラメータが追加されています
+
+6.10に、「redundancyMode」、「trayPositions」、「time」パラメータが追加されています。
+
+6.14で'alarm'パラメータが追加されました
+
+7.10で、「icmpPingResponse」、「unnamedDiscoverySession」、「isnsIPv6Address」、および「isnsIPv4ConfigurationMethod」パラメータが追加されました。
+
+7.15で、キャッシュブロックサイズと「learnCycleDate」パラメータが追加されました。
+
+7.86では'alarmパラメータが使用されなくなったので削除され'coreDumpAllowOverWriteパラメータが追加されました
+
+8.10で、「cacheFlushStop」パラメータが廃止されました。
+
+8.20で'odxEnabled'および'vaaiEnabled'パラメータが追加されました。
+
+8.20で、「cacheBlockSize」パラメータが更新され、「cacheBlockSizeValue」が4（4KB）に追加されました。
+
+8.20で、coreDumpAllowOverWriteパラメータが「controllerHealthImageAllowOverWrite」パラメータに置き換えられました。
+
+8.30で'autoLoadBalancingEnable'パラメータが追加されました
+
+8.40で'localUsername'パラメータが追加されました(ユーザ名変数と'password'または'adminPassword'パラメータで使用されます)また'symbolパラメータ(ユーザ名変数と'password'または'adminPassword'パラメータとともに使用されます)も追加されます
+
+8.40で、「password」および「UserRole」スタンドアロンパラメータが廃止されました。
+
+8.40で、「ManagementInterface」パラメータが追加されました。
+
+8.40で、「externalKeyManagement」パラメータが追加されました。
+
+8.41で、「cacheMirrorDataAssuranceCheckEnable」、「DirectoryServer」、「userSession」、「passwordLength」、および「loginBanner」パラメータが追加されました。
+
+8.42で'pqValidateOnReconstruct'syslog'hosttivConnectityReporting'revocationCheckSettings'パラメータが追加されました

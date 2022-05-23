@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-diskpool-locate.html 
+sidebar: sidebar 
+keywords: start, disk pool, locate 
+summary: 'start diskPool locateコマンドは"ドライブのインジケータライトを点滅させることにより"指定したディスクプールを構成するために論理的にグループ化されたドライブを特定します' 
+---
+= ディスクプールの特定を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start diskPool locateコマンドは'ドライブ上のインジケータライトを点滅させることにより'指定されたディスク・プールを構成するために論理的にグループ化されたドライブを識別します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+(ドライブのインジケータライトをオフにするには'stop diskPool locateコマンドを使用します)
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start diskPool pass:quotes[[_diskPoolName_]] locate
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「diskPool」
+ a| 
+特定するディスクプールの名前。ディスクプール名は角かっこ（[]）で囲みます。ディスクプール名に特殊文字または数字が含まれている場合は、ディスクプール名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

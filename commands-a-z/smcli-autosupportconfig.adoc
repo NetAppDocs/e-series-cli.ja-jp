@@ -1,0 +1,177 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig.html 
+sidebar: sidebar 
+keywords: specify, autosupport, delivery, method 
+summary: SMcli -autoSupportConfigコマンドは、AutoSupport メッセージを送信する配信方法を設定します。 
+---
+= AutoSupport の配信方法を指定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli -autoSupportConfigコマンドは、AutoSupport メッセージを送信する配信方法を設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+AutoSupport メッセージを送信するには、次の2種類の配信方法を作成します。
+
+* SMTP -- AutoSupport メッセージを送信するための配信方法として電子メールを使用する場合は'この方法を使用します
+* HTTP/HTTPS -- HTTPまたはHTTPSプロトコルを使用してAutoSupport メッセージを送信する場合は'この方法を使用しますAutoSupport OnDemandまたはAutoSupport Remote Diagnosticsを使用する場合は、HTTPSを使用する必要があります。
+
+
+
+
+== 配信方法がSMTPの場合の構文
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=SMTP
+mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
+----
+
+
+== 配信方法がSMTPの場合のパラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「deliveryMethod」を参照してください
+ a| 
+AutoSupport メッセージの配信方法を指定できます。有効な選択肢はSMTPです。同様に有効なHTTPまたはHTTPSの使用については、このトピックの次のセクションを参照してください。
+
+
+
+ a| 
+mailRelayServer'
+ a| 
+AutoSupport メッセージのメールリレーサーバを指定できます。
+
+
+
+ a| 
+「senderMail」
+ a| 
+AutoSupport メッセージの送信元Eメールアドレスを指定できます。
+
+|===
+
+
+== 配信方法がHTTP / HTTPSの場合の構文
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod={HTTP|HTTPS}
+ {direct|proxyConfigScript=<proxyConfigScript>| proxyServer
+hostAddress:<address>portNumber=<portNumber> [userName=<userName>password=<password>]}
+----
+
+
+== 配信方法がHTTP / HTTPSの場合のパラメータ
+
+次の表に、配信方法がHTTP / HTTPSの場合のパラメータを示します。
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「deliveryMethod」を参照してください
+ a| 
+AutoSupport メッセージの配信方法を指定できます。有効な選択肢はHTTPSとHTTPです（もう1つの選択肢であるSMTPの使用については、前のセクションを参照してください）。
+
+
+
+ a| 
+「直接」
+ a| 
+HTTPSまたはHTTPプロトコルを使用して、テクニカルサポートのシステムに直接接続できます。
+
+
+
+ a| 
+proxyConfigScript
+ a| 
+Proxy Auto-Configuration（PAC）スクリプトファイルの場所を指定できます。
+
+
+
+ a| 
+proxyServer
+ a| 
+テクニカルサポートシステムとの接続を確立するために必要なHTTP（複数可）プロキシサーバの詳細を指定できます。
+
+
+
+ a| 
+「ホストアドレス」
+ a| 
+プロキシサーバのホストIPアドレスを指定します。
+
+
+
+ a| 
+「portNumber」と入力します
+ a| 
+プロキシサーバのポート番号。proxyServerパラメータを使用する場合、このパラメータは必須です。
+
+
+
+ a| 
+「ユーザ名」
+ a| 
+ユーザ名。このパラメータは必須です。
+
+
+
+ a| 
+「 password 」と入力します
+ a| 
+認証パスワード。このパラメータは必須です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== 例
+
+[listing]
+----
+SMcli –autoSupportConfig deliveryMethod=SMTP
+mailRelayServer:server.eng.netapp.com
+senderEmail:user@netapp.com
+----
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=HTTPS
+proxyServer hostAddress:10.117.12.112 portNumber=8080
+userName=user password=0987654321
+----
+
+
+== 検証
+
+SMcli -autoSupportConfig testコマンドを使用してテストメッセージを送信し、配信方法が正しく設定されていることを確認します。

@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/delete-sgsnapvolume.html 
+sidebar: sidebar 
+keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
+summary: DELETE sgSnapVolumeコマンドは、整合性グループのSnapshotボリュームを削除します。必要に応じて、リポジトリメンバーを削除することもできます。 
+---
+= 整合性グループのSnapshotボリュームを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete sgSnapVolume」コマンドは、整合グループのSnapshotボリュームを削除します。必要に応じて、リポジトリメンバーを削除することもできます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete cgSnapVolume ["_snapVolumeName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+cgSnapVolume
+ a| 
+削除する整合性グループのSnapshotボリュームの名前。整合性グループのSnapshotボリュームの名前は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+deleteRepositoryMembersを指定します
+ a| 
+メンバーボリュームを保存または削除するパラメータ。メンバーボリュームを保存するには、このパラメータを「true」に設定します。メンバーボリュームを削除する場合は、このパラメータを「FALSE」に設定します。デフォルト値は「true」です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

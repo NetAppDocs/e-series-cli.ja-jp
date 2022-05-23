@@ -1,0 +1,132 @@
+---
+permalink: commands-a-z/show-volume-performancestats.html 
+sidebar: sidebar 
+keywords: show, volume, performance, statistics 
+summary: show volume performanceStatsコマンドは、ボリュームのパフォーマンスに関する情報を返します。 
+---
+= ボリュームのパフォーマンス統計を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show volume performanceStatsコマンドは'ボリュームのパフォーマンスに関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ストレージアレイ内の各ボリュームについて次の情報を返します。
+
+* ストレージアレイ
+* I/Oの合計数/秒
+* 読み取り率
+* プライマリ読み取りキャッシュヒット率
+* プライマリ書き込みキャッシュヒット率
+* SSDキャッシュヒット率
+* 現在のMBs /秒
+* 最大MBs /秒
+* 現在のIO/秒
+* 最大IOS/s
+* 最小IOs /秒
+* 平均IOs /秒
+* 最小MBs /秒
+* 平均MBs /秒
+* 現在のIOレイテンシ
+* 最大I/Oレイテンシ
+* 最小I/Oレイテンシ
+* 平均I/Oレイテンシ
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[["_volumeName_"]]
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allVolumes」
+ a| 
+ストレージアレイ内のすべてのボリュームに関するパフォーマンス統計を返すためのパラメータ。
+
+
+
+ a| 
+「 volume 」
+ a| 
+情報を取得するボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「ボリューム」
+ a| 
+情報を取得する複数のボリュームの名前。以下のルールを使用して、ボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+ボリューム名に特殊文字または数字が含まれる場合は、次のルールに従って名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+|===
+
+
+== 注：
+
+「show volume performanceStat」コマンドを実行する前に、「set session performanceMonitorInterval」コマンドと「set session performanceMonitorIterations」コマンドを実行して、統計情報を収集する頻度を定義します。
+
+「show volume performanceStat」コマンドは、次の例に示すように、ボリュームのパフォーマンス統計を返します。
+
+[listing]
+----
+Performance Monitor Statistics for Storage Array: Tyler -
+Date/Time: 11/6/12 10:00: 34 AM - Polling interval in seconds: 5
+
+
+"Storage Arrays","Total IOs","Read %","Primary Read Cache Hit %",
+"Primary Write Cache Hit %","SSD Read Cache Hit %","Current MBs/sec",
+"Maximum MBs/sec","Current IOs/sec","Maximum IOs/sec","Minimum IOs/sec",
+"Average IOs/sec","Minimum MBs/sec","Average MBs/sec","Current IO Latency",
+"Maximum IO Latency","Minimum IO Latency","Average IO Latency"
+
+"Capture Iteration: 1","","","","","","","","","","","","","","","","",""
+"Date/Time: 11/6/12 10:00:34 AM","","","","","","","","","","","","","","",
+   "","","""Volume Unnamed","0.0","","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0",
+   "0.0","0.0","0.0","0.0","0.0","0.0","0.0"
+----
+
+
+== 最小ファームウェアレベル
+
+6.10

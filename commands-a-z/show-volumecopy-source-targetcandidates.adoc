@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-volumecopy-source-targetcandidates.html 
+sidebar: sidebar 
+keywords: show, volume, copy, target, candidates 
+summary: show VolumeCopy source targetCandidatesコマンドは、ボリュームコピー処理のターゲットとして使用できるボリューム候補に関する情報を返します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。 
+---
+= ボリュームコピーのターゲット候補の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show VolumeCopy source targetCandidates」コマンドは、ボリュームコピー操作のターゲットとして使用できるボリューム候補に関する情報を返します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show volumeCopy source pass:quotes[["_sourceName_"]] targetCandidates
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「source」を参照してください
+ a| 
+ターゲットボリュームの候補を探すソースボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、ボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===

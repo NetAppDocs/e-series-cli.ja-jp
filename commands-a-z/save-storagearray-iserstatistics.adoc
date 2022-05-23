@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/save-storagearray-iserstatistics.html 
+sidebar: sidebar 
+keywords: save, storage, array, iser, statistics 
+summary: save storageArray iserStatisticsコマンドは、ストレージアレイのiSERパフォーマンス統計をファイルに保存します。 
+---
+= ストレージアレイのiSER統計を保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray iserStatisticsコマンドは、ストレージアレイのiSERパフォーマンス統計をファイルに保存します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:save-storagearray-hostportstatistics.adoc[ストレージアレイのホストポートの統計を保存します] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray iserStatistics [(raw | baseline)] file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「raw」
+ a| 
+コントローラの一日の開始時刻からの統計がすべて収集されます。パラメータは角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「BASELINE」
+ a| 
+コントローラが「reset storageArray iserStatsBaseline」コマンドを使用してゼロにリセットされた時点から収集される統計はすべてです。パラメータは角かっこ（[]）で囲みます。
+
+
+
+ a| 
+'file'
+ a| 
+パフォーマンス統計の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\logs\iserstat.csv "`
+
+iSCSIパフォーマンス統計を格納するファイルのデフォルト名は、「iser-statistics .csv」です。任意のファイル名を使用できますが'.csv拡張子を使用する必要があります
+
+|===
+
+
+== 注：
+
+コントローラの一日の開始時刻以降にiSERベースライン統計をリセットしていない場合は、一日の開始時刻がデフォルトのベースライン時刻です。
+
+
+
+== 最小ファームウェアレベル
+
+8.20で
+
+8.41で、このコマンドは廃止されました。

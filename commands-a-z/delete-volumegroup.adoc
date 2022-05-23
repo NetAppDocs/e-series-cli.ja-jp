@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/delete-volumegroup.html 
+sidebar: sidebar 
+keywords: delete, volume, group, command, entire, associated, support, role 
+summary: delete volumeGroupコマンドは、ボリュームグループ全体と関連付けられているボリュームを削除します。 
+---
+= ボリュームグループを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete volumegroupコマンドは'ボリューム・グループ全体とその関連ボリュームを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[IMPORTANT]
+====
+*ストレージアレイの設定に損傷の可能性*--このコマンドを実行するとすぐに、ボリュームグループ内のすべてのデータが失われます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete volumeGroup [_volumeGroupName_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+削除するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

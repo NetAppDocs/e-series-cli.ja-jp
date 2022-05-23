@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/reset-storagearray-volumedistribution.html 
+sidebar: sidebar 
+keywords: reset, storage array, volume, distribution 
+summary: reset storageArray volumeDistributionコマンドは、すべてのボリュームを優先コントローラに再割り当て（移動）します。 
+---
+= ストレージアレイのボリューム分散をリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray volumeDistributionコマンドは、すべてのボリュームを優先コントローラに再割り当て（移動）します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+reset storageArray volumeDistribution
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+マルチパスドライバがインストールされていないホストでこのコマンドを使用する場合は、アプリケーションエラーを回避するために、このコマンドが完了するまでボリュームへのI/O処理を停止する必要があります。
+
+特定のホストオペレーティングシステム環境では、マルチパスホストドライバの再設定が必要になる場合があります。また、オペレーティングシステムに対する変更を行って、ボリュームの新しいI/Oパスを認識させることが必要になる場合もあります。
+
+
+
+== 最小ファームウェアレベル
+
+5.20

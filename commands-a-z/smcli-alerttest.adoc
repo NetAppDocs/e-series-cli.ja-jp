@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/smcli-alerttest.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: SMcli alertTestコマンドは、Windowsイベントログおよび設定されているすべてのsyslogレシーバにテストアラートを送信します。 
+---
+= アラートをテストする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli alertTestコマンドは、Windowsイベントログおよび設定されているすべてのsyslogレシーバにテストアラートを送信します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700とE5600のストレージアレイにのみ適用されます。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません
+
+====
+
+
+== 構文
+
+[listing]
+----
+SMcli -alertTest
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+7.83

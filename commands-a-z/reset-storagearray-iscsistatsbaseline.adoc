@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-iscsistatsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, iscsi, baseline 
+summary: reset storageArray iscsiStatsBaselineコマンドは、ストレージアレイのiSCSIベースラインを0にリセットします。 
+---
+= ストレージアレイのiSCSIベースラインをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「reset storageArray iscsiStatsBaseline」コマンドは、ストレージアレイのiSCSIベースラインを0にリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+[NOTE]
+====
+このコマンドは廃止され、で置き換えられました xref:reset-storagearray-hostportstatisticsbaseline.adoc[ストレージアレイのホストポート統計のベースラインをリセットします] コマンドを実行します
+
+====
+
+
+== 構文
+
+[listing]
+----
+reset storageArray iscsiStatsBaseline
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドは、ストレージアレイ内の両方のコントローラのベースラインを0にリセットします。両方のコントローラのベースラインをリセットする目的は、コントローラの数をコントローラ間で同期することです。1台目のコントローラがリセットされ、2台目のコントローラがリセットされない場合は、コントローラが同期していないことがホストに通知されます。ホストには、統計とともに報告されるタイムスタンプが通知されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.41で、このコマンドは廃止されました。

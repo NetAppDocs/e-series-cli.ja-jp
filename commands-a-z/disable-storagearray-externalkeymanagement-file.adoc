@@ -1,0 +1,116 @@
+---
+permalink: commands-a-z/disable-storagearray-externalkeymanagement-file.html 
+sidebar: sidebar 
+keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
+summary: disable storageArray externalKeyManagement fileコマンドは、Full Disk Encryptionドライブを含むストレージアレイの外部セキュリティキー管理を無効にします。 
+---
+= 外部セキュリティキー管理を無効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+disable storageArray externalKeyManagement fileコマンドは、Full Disk Encryptionドライブを持つストレージアレイの外部セキュリティキー管理を無効にします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+disable storageArray externalKeyManagement
+pass:quotes[file="_fileName_"]
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[saveFile=(_TRUE_ | _FALSE_)]
+----
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドを使用すると、ドライブセキュリティの代替形式として内部キー管理を有効にできます。
+
+====
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+内部セキュリティキーファイルが格納されているファイルパスとファイル名。例：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[IMPORTANT]
+====
+ファイル名の拡張子は「.slk」でなければなりません。
+
+====
+
+
+ a| 
+パスフレーズ
+ a| 
+セキュリティキーを外部ファイルに格納できるように、セキュリティキーを暗号化する文字列。
+
+
+
+ a| 
+「saveFile」を参照してください
+ a| 
+セキュリティキーを検証してファイルに保存します。保存しない場合は'FALSE'に設定し'ファイルのセキュリティ・キーを確認しますデフォルト値は「true」です。
+
+|===
+
+
+== 注：
+
+パスフレーズは次の条件を満たしている必要があります。
+
+* 8~32文字で指定する必要があります。
+* 空白なし。
+* 大文字を1つ以上含む。
+* 小文字を1つ以上含む。
+* 数字を1つ以上含む。
+* 英数字以外の文字（<>@+など）を少なくとも1文字含める必要があります。
+
+
+[NOTE]
+====
+パスフレーズがこれらの条件を満たしていない場合は、エラーメッセージが表示されます。
+
+====
+
+
+== 最小ファームウェアレベル
+
+8.40
+
+8.70で'saveFile'パラメータが追加されました

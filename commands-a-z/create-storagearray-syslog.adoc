@@ -1,0 +1,100 @@
+---
+permalink: commands-a-z/create-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: create, storage, array, syslog, configuration 
+summary: create storageArray syslogコマンドを使用すると、監査ログを外部syslogサーバにアーカイブできます。ストレージアレイとsyslogサーバの間に接続が確立されると、監査ログは自動的にsyslogサーバに保存されます。 
+---
+= ストレージアレイのsyslog設定を作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create storageArray syslog'コマンドを使用すると'監査ログを外部syslogサーバにアーカイブできますストレージアレイとsyslogサーバの間に接続が確立されると、監査ログは自動的にsyslogサーバに保存されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+create storageArray syslog serverAddress="<address>" port=<port> protocol=("udp" | "tcp" | "tls") components=(componentName=("auditLog") ...)
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「serverAddress」と入力します
+ a| 
+syslog受信側のホスト名またはIPアドレス。
+
+
+
+ a| 
+「PORT」
+ a| 
+syslog受信側のポート番号。
+
+
+
+ a| 
+「プロトコル」
+ a| 
+syslogの転送プロトコル。指定できる値はUDP、TCP、またはTLSです。
+
+
+
+ a| 
+「コンポーネント」
+ a| 
+syslogサーバに記録されるコンポーネントエントリのリスト。現時点では、監査ログのみがサポートされています。
+
+
+
+ a| 
+「componentName」
+ a| 
+コンポーネント名。現時点では「auditLog」のみがサポートされています。
+
+|===
+
+
+=== 例
+
+[listing]
+----
+SMcli -n Array1 -c "create storageArray syslog
+serverAddress=\"192.168.2.1\" port=514 protocol=\"udp\"
+components=(componentName=\"auditLog\");"
+ID: 331998fe-3154-4489-b773-b0bb60c6b48e
+Server Address: 192.168.2.1.com
+Port: 514
+Protocol: udp
+Components
+1. Component Name: auditLog
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.42

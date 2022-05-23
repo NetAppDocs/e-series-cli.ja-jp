@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/create-mapping-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency, group, snapshot, volume, map 
+summary: create mapping cgSnapVolumeコマンドは、整合性グループのSnapshotボリュームからホストまたはホストグループへの論理マッピングを作成します。 
+---
+= 整合性グループのSnapshotボリュームマッピングを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create mapping cgSnapVolumeコマンドは'整合性グループのスナップショットボリュームからホストまたはホストグループへの論理マッピングを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create mapping cgSnapVolume=pass:quotes[_"snapVolumeName"_
+(host="_hostName_" | hostGroup=("_hostGroupName_" | defaultGroup))]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+cgSnapVolume
+ a| 
+論理マッピングを作成する整合性グループのSnapshotボリュームの名前。整合性グループのSnapshotボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+ホスト
+ a| 
+論理マッピングの作成先のホストの名前。ホスト名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「hostGroup」と入力します
+ a| 
+論理マッピングの作成先のホストグループの名前。ホストグループ名は二重引用符（""）で囲みます。defaultGroupキーワードを使用する場合は'引用符で囲まないでください
+
+|===
+
+
+== 注：
+
+ホストとは、ストレージアレイに接続されていて、ホストポート経由でストレージアレイ上のボリュームにアクセスするコンピュータのことです。個々のホストに特定のマッピングを定義できます。また、ボリュームへのアクセスを共有するホストグループにホストを割り当てることもできます。
+
+ホストグループはオプションのトポロジ要素であり、同じボリュームへのアクセスを共有する一連のホストを指定するかどうかを定義できます。ホストグループは論理エンティティです。ホストグループは、同じボリュームへのアクセスを共有するホストが複数ある場合にのみ定義してください。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-storagearray-locate.html 
+sidebar: sidebar 
+keywords: stop, storage, array, locate 
+summary: stop storageArray locateコマンドは、start storageArray locateコマンドによって点灯されたストレージアレイのインジケータライトを消灯します。 
+---
+= ストレージアレイの特定の停止
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop storageArray locateコマンドは'start storageArray locateコマンドによってオンにされたストレージ・アレイのインジケータ・ライトをオフにします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+stop storageArray locate
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.10

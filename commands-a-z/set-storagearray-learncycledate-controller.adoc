@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/set-storagearray-learncycledate-controller.html 
+sidebar: sidebar 
+keywords: set, storage, array, controller, battery, learn, cycle 
+summary: set storageArray learnCycleDateコントローラコマンドは、コントローラのバッテリ学習サイクルを設定します。 
+---
+= ストレージアレイコントローラのバッテリ学習サイクルを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray learnCycleDate controllerコマンドは、コントローラのバッテリ学習サイクルを設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ストレージアレイの各コントローラに別々の学習サイクルを設定するには、両方のコントローラにこのコマンドを送信します。
+
+====
+[NOTE]
+====
+学習サイクルはリンクされないため、一方のコントローラのバッテリ学習サイクルが中断しても、もう一方のコントローラのバッテリ学習サイクルには影響しません。
+
+====
+[NOTE]
+====
+学習サイクルの完了には数時間かかることがあります。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set storageArray learnCycleDate (controller[(a| b)] )
+pass:quotes[(daysToNextLearnCycle=_numberOfDays_ |
+day=_dayOfTheWeek_)] pass:quotes[time=_HH:MM_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「* controller *」と入力します
+ a| 
+バッテリ学習サイクルを指定するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。コントローラを指定しないと、コントローラファームウェアから構文エラーが返されます。
+
+[NOTE]
+====
+このパラメータを省略すると、デュアルコントローラアレイの両方のコントローラのバッテリ学習サイクルが設定されます。
+
+====
+
+
+ a| 
+「dayscToNextLearnCycle」
+ a| 
+有効な値は'0`~7`ですここで'0`はすぐに'7`は7日以内です「dayscToNextLearnCycle」パラメータは、次の学習サイクルのあと7日以内に実行されます。
+
+
+
+ a| 
+日
+ a| 
+'day'パラメータの有効な値は曜日です(`Sunday`,`Monday`,`Tuesday`,`Wednesday',`Thursday`,`Thursday`, 「Friday`, and `Saturday`」)。曜日を設定すると、現在スケジュールされている学習サイクルのあと、指定した曜日に次の学習サイクルがスケジュールされます。
+
+
+
+ a| 
+「time」
+ a| 
+24時間形式の時刻。たとえば、午前8：00などです「08：00」と入力します。午後9時「21：00」と入力し、午後9：30と入力します「21：30」と入力します。
+
+|===
+
+
+== 例
+
+[listing]
+----
+set storageArray learnCycleDate controller [a] daysToNextLearnCycle=4 time=08:30;
+----
+
+
+== 注：
+
+学習サイクルは、7日間に1回だけ実行されるように設定できます。
+
+'time'パラメータは'学習サイクルを実行する特定の時刻を選択します値を入力しない場合、コマンドはデフォルト値の「00：00」（深夜0時）を使用します。
+
+指定した日時が過去の場合、次の学習サイクルは指定した次の曜日に実行されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.15
+
+8.30で'controller'パラメータが追加されました

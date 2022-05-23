@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/show-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: show, installed, root, intermediate, ca, certificates, summary 
+summary: show controller cAcertificateコマンドは、指定されたコントローラからインストールされているCA証明書の概要を表示します。このコマンドを使用すると、delete controller cAcertificateコマンドを実行する前に、削除する証明書のエイリアス名を確認できます。 
+---
+= インストールされているルート/中間CA証明書の概要の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show controller cAcertificate」コマンドは、指定されたコントローラからインストールされたCA証明書の要約を表示します。このコマンドは'delete controller cAcertifate'コマンドを実行する前に使用すると'削除する証明書のエイリアス名を知ることができます
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show controller [(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ルート/中間証明書を取得するコントローラをユーザが指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「すべて」
+ a| 
+すべてのルート/中間証明書を取得するように指定できます。
+
+
+
+ a| 
+「別名」
+ a| 
+取得するルート/中間証明書をエイリアスで指定できます。すべてのエイリアスをかっこで囲みます。複数のエイリアスを入力する場合は、エイリアスをスペースで区切ります。
+
+|===
+
+
+== 例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show controller[a] caCertificate all summary;"
+
+SMcli -n Array1 -c "show controller[b] caCertificate alias=("myAlias" "anotherAlias") summary;"
+============================
+Controller A Authority Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

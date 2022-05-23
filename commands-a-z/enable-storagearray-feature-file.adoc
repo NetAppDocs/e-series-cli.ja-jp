@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/enable-storagearray-feature-file.html 
+sidebar: sidebar 
+keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
+summary: enable storageArray feature fileコマンドを使用すると、ストレージアレイへの永続的なアップグレードまたは試用期間用に機能を有効にできます。 
+---
+= ストレージアレイの機能を有効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+enable storageArray feature file'コマンドを使用すると'ストレージ・アレイへの永続的なアップグレードまたは試用期間用の機能を有効にできます
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、次のいずれかの処理を実行します。
+
+* 機能を永続的にアップグレードするための機能キーを有効にします
+* 機能パックを永続的にアップグレードするための機能キーを有効にします
+* 試用期間用の機能を有効にします
+
+
+機能パックは、ストレージパーティショニングや同期ミラーリングなど、あらかじめ定義された複数の機能のセットです。これらの機能は、ユーザの利便性を高めるために統合されています。機能パックをインストールすると、機能パックのすべての機能が一度にインストールされます。
+
+各機能は、特定の機能または機能パックおよび特定のストレージアレイ用に生成されたライセンスキーによって管理されます。ライセンスキーは、機能のライセンスを適用するために実行するファイルとして提供されます。
+
+ストレージ・アレイにロードされる機能を確認するには'show storageArray features'コマンドを実行しますshow storageArray features'コマンドは'ストレージ・アレイにインストールされているすべての機能を一覧表示しますこれらの機能は'試用期間'有効な機能'および無効な機能について評価できます
+
+
+
+== 機能キーを有効にする構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature file="_filename_"]
+----
+'file'パラメータは'有効な機能キー・ファイルのファイル・パスとファイル名を識別しますファイルパスとファイル名は二重引用符（ "" ）で囲みます。例：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrkey.key"
+----
+機能キー・ファイルの有効なファイル名は'.key'拡張子で終わります
+
+有効にする機能ごとに機能キーファイルが必要です。
+
+
+
+== 機能パックを有効にする構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray featurePack file="_filename_"]
+----
+'file'パラメータは'有効な機能パック・ファイルのファイル・パスとファイル名を識別しますファイルパスとファイル名は二重引用符（ "" ）で囲みます。例：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrpk.key"
+----
+機能キー・ファイルの有効なファイル名は'.key'拡張子で終わります
+
+
+
+== 試用期間用に機能を有効にする構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature=_featureAttributeList_]
+----
+試用期間の機能を評価するには、「featureAttributeList」に次の属性値を1つ以上入力します。複数の属性値を入力する場合は、値をスペースで区切ります。
+
+* 「ドライブセキュリティ」
+
+
+
+
+== 最小ファームウェアレベル
+
+8.25で、有効ではなくなった属性がすべて削除されました。

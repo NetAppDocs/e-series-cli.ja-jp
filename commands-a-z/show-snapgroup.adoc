@@ -1,0 +1,151 @@
+---
+permalink: commands-a-z/show-snapgroup.html 
+sidebar: sidebar 
+keywords: show, snapshot, group 
+summary: show snapGroupコマンドは、1つ以上のSnapshotイメージグループに関する情報を返します。 
+---
+= Snapshotグループの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapGroup」コマンドは、1つ以上のSnapshotイメージ・グループに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show (allSnapGroups | snapGroup pass:quotes[[_snapGroupName_]] |
+snapGroups pass:quotes[["_snapGroupName1_" ... "_snapGroupNamen_"]])
+[summary | schedule]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allSnapGroups」を参照してください
+ a| 
+ストレージアレイ内のすべてのSnapshotグループに関する情報を返すためのパラメータ。
+
+
+
+ a| 
+「SnapGroup」
+ a| 
+情報を取得するSnapshotグループの名前。Snapshotグループ名は角かっこ（[]）で囲みます。Snapshotグループ名に特殊文字または数字が含まれている場合は、Snapshotグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「snapGroups」を参照してください
+ a| 
+情報を取得する複数のSnapshotグループの名前。以下のルールを使用して、Snapshotグループの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+Snapshotグループ名に特殊文字が含まれている場合や、数字のみで構成されている場合は、次のルールに従って名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「概要」
+ a| 
+Snapshotグループに関する概要情報をリストで返すための設定。
+
+
+
+ a| 
+「スケジュール」
+ a| 
+Snapshotグループのコピー処理のスケジュールに関する概要情報をリストで返すための設定。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+このコマンドから返されるSnapshotグループ情報の例を次に示します。
+
+[listing]
+----
+SNAPSHOT GROUP DETAILS
+
+SNAPSHOT GROUPS-----------------------------
+
+SUMMARY
+----
+[listing]
+----
+  Total Snapshot Groups: 1
+  Total Snapshot Images: 0
+  Enabled Snapshot Image Schedules: 0
+  Status: 1 Optimal, 0 Non Optimal
+
+  Name      Type       Status    Associated Base Volume
+  2_SG_01   Standard   Optimal   2
+  Total Repository Capacity  Available Repository Capacity  Snapshot Image Limit
+  10.318 GB                  10.318 GB (100%)               0
+
+  Snapshot Images   Scheduled
+  0                 No
+DETAILS
+
+  Snapshot Group "2_SG_01"
+
+   Status:  Optimal
+   Type:    Standard
+   Associated base volume: 2
+   Cluster size: 65,536 bytes
+
+   Repository
+
+    Total repository volumes: 3
+    Aggregate repository status: Optimal
+    Total repository capacity:   10.318 GB
+    Used capacity:           0.000 MB (0%)
+    Available repository capacity: 10.318 GB (100%)
+    Repository full policy:    Auto-purge Snapshot Images
+    Utilization alert threshold: 75%
+
+   Snapshot images
+
+    Total Snapshot images: 0
+    Auto-delete Snapshot images: Disabled
+    Snapshot image schedule:   Not Applicable
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

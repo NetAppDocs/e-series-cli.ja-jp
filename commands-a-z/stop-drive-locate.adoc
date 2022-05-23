@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-drive-locate.html 
+sidebar: sidebar 
+keywords: stop, drive, locate 
+summary: ドライブの特定の停止コマンドは、start drive locateコマンドによって点灯したドライブのインジケータライトを消灯します。 
+---
+= ドライブの特定を停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop drive locateコマンドは'start drive locateコマンドによってオンにされたドライブのインジケータライトを消灯します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+stop drive locate
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.10

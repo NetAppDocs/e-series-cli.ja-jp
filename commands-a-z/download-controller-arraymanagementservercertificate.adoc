@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/download-controller-arraymanagementservercertificate.html 
+sidebar: sidebar 
+keywords: download, controller, array, management, server, certificate, command, install 
+summary: コントローラのdownload controller arrayManagementServerCertificateコマンドは、コントローラにサーバ証明書をインストールします。 
+---
+= サーバの署名済み証明書をインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download controller arrayManagementServerCertificateコマンドは、コントローラにサーバ証明書をインストールします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+コントローラに適用できる署名済み証明書を使用して、コントローラごとにこの操作を実行します。署名済み証明書にはコントローラのIP / DNS名が含まれている必要があります。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+download controller [(a|b)] pass:quotes[arrayManagementServerCertificate file="_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+サーバの署名済み証明書をインストールするコントローラをユーザが指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+'file'
+ a| 
+署名済み証明書を含むファイルのパスとファイル名を指定できます。使用できる拡張子は、.cer、.crt、.derです。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download controller [a] arrayManagementServerCertificate
+   file="C:\serverSignedCertificateA.cer";"
+
+SMcli -n Array1 -c "download controller [b] arrayManagementServerCertificate
+   file="C:\serverSignedCertificateB.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

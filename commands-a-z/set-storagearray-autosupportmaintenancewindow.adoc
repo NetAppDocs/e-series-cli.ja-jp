@@ -1,0 +1,93 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportmaintenancewindow.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
+summary: set storageArray autoSupportMaintenanceWindowコマンドは、AutoSupport メンテナンス期間機能をオンまたはオフにします。 
+---
+= AutoSupport メンテナンス期間の有効化または無効化（個々のE2800またはE5700アレイ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray autoSupportMaintenanceWindowコマンドは、AutoSupport メンテナンスウィンドウ機能をオンまたはオフにします。
+
+メンテナンス期間を使用して、エラーイベント発生時に自動でチケットが作成されないようにします。通常運用モードでは、問題 がある場合、ストレージアレイはAutoSupport を使用してテクニカルサポートにケースをオープンします。AutoSupport がメンテナンス期間に入ると、この機能は抑制されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray autoSupportMaintenanceWindow (enable | disable)
+    emailAddresses=("emailAddress1" "emailAddress2" ...)
+    [duration=<duration_in_hours>];
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「メールアドレス」
+ a| 
+メンテナンス期間の要求が処理されたときに確認のEメールを受け取るEメールアドレスのリスト。Eメールアドレスは5つまで指定できます。
+
+
+
+ a| 
+「期間」
+ a| 
+任意。メンテナンス期間を有効にする期間（時間数）。省略した場合、サポートされる最大期間（72時間）が使用されます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow enable
+      emailAddresses=\"me@company.com\" duration=5;"
+
+SMcli completed successfully.
+----
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow enable
+      emailAddresses=(\"me1@company.com\" \"me2@company.com\");"
+
+SMcli completed successfully.
+----
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoSupportMaintenanceWindow disable
+      emailAddresses=(\"me1@company.com\" \"me2@company.com\" \"me3@company.com\"
+      \"me4@company.com\" \"me5@company.com\");"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.42

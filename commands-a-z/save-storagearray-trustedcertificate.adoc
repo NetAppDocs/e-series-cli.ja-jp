@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/save-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, trusted, ca, certificates 
+summary: save storageArray trustedCertificateコマンドは、アレイにインストールされている信頼されたCA証明書を取得します。取得したファイルに含まれているのは、アレイのWebサーバから要求されたCA証明書です。 
+---
+= インストールされている信頼されたCA証明書を
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray trustedCertificate'コマンドは'アレイにインストールされている信頼されたCA証明書を取得します取得したファイルに含まれているのは、アレイのWebサーバから要求されたCA証明書です。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+save storageArray trustedCertificate [allUserInstalled |
+aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] path=pass:quotes["_fileLocation_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allUserInstalled」
+ a| 
+ユーザがインストールした証明書の取得を指定できます。エイリアスを指定しなかった場合のデフォルトのオプションは「allUserInstalled」です。
+
+
+
+ a| 
+「別名」
+ a| 
+取得するインストールされている信頼された証明書をエイリアスで指定できます。すべてのエイリアスをかっこで囲みます。複数のエイリアスを入力する場合は、エイリアスをスペースで区切ります。
+
+
+
+ a| 
+「path」
+ a| 
+コントローラの信頼された証明書のローカルの保存先を指定できます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray trustedCertificate allUserInstalled path="C:\";"
+
+SMcli -n Array1 -c "save storageArray trustedCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

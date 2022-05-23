@@ -1,0 +1,114 @@
+---
+permalink: commands-a-z/set-snapgroup-enableschedule.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, schedule 
+summary: set snapGroup enableScheduleコマンドは、SnapshotグループのSnapshotイメージを取得するスケジュールを定義します。 
+---
+= Snapshotグループのスケジュールを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set snapGroup enableScheduleコマンドは'スナップショット・グループのスナップショット・イメージを取得するスケジュールを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+enableSchedule=(TRUE | FALSE)
+schedule (immediate | snapshotSchedule)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+プロパティを設定するSnapshotグループの名前。Snapshotグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「enableSchedule
+ a| 
+このパラメータを使用して、Snapshot処理のスケジュール機能をオンまたはオフにします。スナップショットのスケジュール設定をオンにするには'このパラメータをTRUEに設定しますスナップショットのスケジュール設定をオフにするには'このパラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+enableScheduleパラメータとscheduleパラメータを使用すると'スナップショット・グループのスナップショット・イメージの作成をスケジュールできますこれらのパラメータを使用すると、日単位、週単位、または月単位（曜日単位または日付単位）でSnapshotをスケジュールできます。enableScheduleパラメータは'スナップショットをスケジュールする機能をオンまたはオフにしますスケジューリングをイネーブルにする場合は'schedule'パラメータを使用して'スナップショットをいつ実行するかを定義します
+
+次に'schedule'パラメータのオプションの使用方法を示します
+
+* 「immediate」--コマンドを入力すると'スナップショット・イメージが作成され'コピー・オン・ライト・オペレーションが開始されます
+* startDate --スナップショットイメージを作成してcopy-on-write操作を実行する特定の日付日付の入力形式は「MM：DD：YY」です。開始日を指定しない場合は、現在の日付が使用されます。このオプションの例は'startDate=06:27:11`です
+* scheduleDay --スナップショットイメージを作成してcopy-on-write処理を実行する曜日を指定します。これらの値は'Monday'Tuesday'`Tuesday'`'Wednesday'`'Thursday`'Friday', 「土曜日」、「日曜日」、「すべて」。このオプションの例は'scheduleDay=wednesday'です
+* startTime --スナップショットイメージを作成し'コピー・オン・ライト操作を開始する時刻時刻の入力形式は「HH:MM」です。「HH」は時間、「MM」は時間を過ぎた分です。24時間制を使用します。たとえば、午後2：00は14：00です。このオプションの例は'*startTime=14:27*'です
+* scheduleInterval- copy-on-write処理の間に最小値を設定する時間（分単位）。コピー処理の実行時間によっては、複数のcopy-on-write処理が重複して実行されるようなスケジュールが作成される可能性があります。このオプションを使用すると、copy-on-write処理が間隔を空けて実行されるようになります。「scheduleInterval」オプションの最大値は1440分です。このオプションの例は「* scheduleInterval=180 *」です。
+* endDate --スナップショットイメージの作成を停止してcopy-on-write操作を終了する特定の日付日付の入力形式は「MM：DD：YY」です。このオプションの例は'*endDate=11:26:11*'です
+* `noEndDate`--スケジュールされたcopy-on-write操作を終了させない場合は'このオプションを使用します後でコピー・オン・ライト操作を終了する場合は'set snapGroupコマンドを再入力し'終了日を指定する必要があります
+* timesPerDay-スケジュールを1日に実行する回数このオプションの例は'timesPerDay=4`です
+* timezone-ストレージアレイが動作しているタイムゾーンを定義するには、このパラメータを使用します。タイムゾーンは次の2つの方法のいずれかで定義できます。
++
+** 'GMT±HH:mm'-- GMTからのタイムゾーンオフセット。オフセットを時間と分で入力します。たとえば、GMT-06：00は米国の中央タイムゾーンです。
+** テキスト文字列--標準的なタイムゾーンのテキスト文字列。たとえば、「America/Chicago」または「Australia/Brisbane」と入力します。タイムゾーンのテキスト文字列では大文字と小文字が区別されます。誤ったテキスト文字列を入力すると、GMT時間が使用されます。テキスト文字列は二重引用符で囲みます。
+
+
+
+
+スケジュールを定義するためのコード文字列の例を次に示します。
+
+[listing]
+----
+enableSchedule=true schedule startTime=14:27
+----
+[listing]
+----
+enableSchedule=true schedule scheduleInterval=180
+----
+[listing]
+----
+enableSchedule=true schedule timeZone=GMT-06:00
+----
+[listing]
+----
+enableSchedule=true schedule timeZone="America/Chicago"
+----
+「scheduleInterval」オプションも使用する場合、ファームウェアでは、2つのオプションの最小値を選択することにより、「timesPerDay」オプションと「scheduleInterval」オプションの間が選択されます。ファームウェアは、「scheduleInterval」オプションの値を設定した「scheduleInterval」オプションの値で1440を割ることによって、「scheduleInterval」オプションの整数値を計算します。たとえば、1440/180 = 8のようになります。ファームウェアは'timesPerDay'の整数値と'計算されたscheduleInterval'の整数値を比較し'より小さい値を使用します
+
+スケジュールを削除するには'schedule'パラメータを指定してdelete volumeコマンドを使用します'schedule'パラメータを指定してdelete volumeコマンドを実行すると'スケジュールのみが削除され'スナップショット・ボリュームは削除されません
+
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+7.86で、「scheduleDate」オプションおよび「month」オプションが追加されました。

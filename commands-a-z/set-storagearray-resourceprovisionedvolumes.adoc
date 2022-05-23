@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/set-storagearray-resourceprovisionedvolumes.html 
+sidebar: sidebar 
+keywords: set, storage, array, resource, provisioned, volumes 
+summary: set storageArray resourceProvisionedVolumesコマンドは、DULBE機能を無効にします。 
+---
+= ストレージアレイリソースにプロビジョニングされたボリュームを設定してください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray resourceProvisionedVolumesコマンドは'DULBE機能を無効にします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+リソースプロビジョニングは、大容量のボリュームを迅速に初期化するための機能です。
+
+リソースプロビジョニングボリュームは、SSDボリュームグループまたはプール内のシックボリュームです。ボリュームの作成時にドライブ容量が割り当てられますが（ボリュームに割り当てられます）、ドライブブロックの割り当てが解除されます（マッピングが解除されます）。リソースプロビジョニングボリュームでは、時間制限付きのバックグラウンド初期化は実行されません。代わりに、各RAIDストライプは、ストライプ内のボリュームブロックへの最初の書き込み時に初期化されます
+
+リソースプロビジョニングボリュームはSSDボリュームグループおよびプールでのみサポートされます。グループまたはプール内のすべてのドライブでNVMe Deallocated or Unwritten Logical Block Error Enable（DULBE）エラーリカバリ機能がサポートされます。リソースでプロビジョニングされたボリュームを作成すると、そのボリュームに割り当てられていたすべてのドライブブロックが割り当て解除（マッピング解除）されます。ブロックの割り当てを解除すると、SSDの消耗度が改善され、書き込みパフォーマンスが最大化されます。向上率はドライブのモデルと容量によって異なります。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray resourceProvisionedVolumes=(enable|disable)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+resourceProvisionedVolumes
+ a| 
+リソースプロビジョニング機能が有効かどうかを指定する設定。リソースのプロビジョニングを無効にするには'このパラメータをdisableに設定しますデフォルト値は「enable」です。
+
+[NOTE]
+====
+この値を変更するのは、今後作成される環境 ボリュームグループおよびプールだけです。既存のボリュームグループやプールの値は変更されません。
+
+====
+|===
+
+
+== 最小ファームウェアレベル
+
+8.63

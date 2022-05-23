@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-blockedeventalertlist.html 
+sidebar: sidebar 
+keywords: show, blocked, events 
+summary: show blockedEventAlertListコマンドは、set blockEventAlertコマンドによって現在ブロックされているイベントのリストを返します。このリスト内のイベントは、アラートの端末とパラメータ、つまりEメール、syslog、トラップの通知を使用して設定した通知を送信しないイベントです。 
+---
+= ブロックされたイベントを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show blockedEventAlertList」コマンドは、「set blockEventAlert」コマンドによって現在ブロックされているイベントのリストを返します。このリスト内のイベントは、アラートの端末とパラメータ、つまりEメール、syslog、トラップの通知を使用して設定した通知を送信しないイベントです。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700とE5600のストレージアレイにのみ適用されます。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+
+
+== 構文
+
+[listing]
+----
+show blockedEventAlertList
+----
+
+
+== 例
+
+出力には、ブロックされたイベントごとに1行があり、16進数形式でイベントの種類とイベントの概要 が表示されます。出力の例を次に示します。
+
+[listing]
+----
+Executing Script...
+0x280D Enclosure Failure
+0x282B Tray Redundancy Lost
+Script execution complete.
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.10で

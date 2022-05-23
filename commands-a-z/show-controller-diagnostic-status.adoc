@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-controller-diagnostic-status.html 
+sidebar: sidebar 
+keywords: show, controller, diagnostic, status 
+summary: show controllerコマンドは、start controller diagnosticコマンドで開始されたコントローラ診断のステータスを返します。 
+---
+= コントローラ診断ステータスを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show controllerコマンドは'start controller diagnostic'コマンドによって開始されたコントローラ診断のステータスを返します
+
+診断が完了すると、診断テストの結果がすべて表示されます。診断テストが終了していない場合は、終了したテストの結果のみが表示されます。テストの結果は端末に表示されますが、ファイルに書き込むこともできます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ストレージアレイ内の特定のコントローラに関する情報を返すための設定。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+'file'
+ a| 
+診断テストの結果を格納するファイルの名前。このコマンドでは、ファイル名にファイル拡張子は自動的に付加されません。ファイル名を入力するときに拡張子を追加する必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.70で、コントローラ診断ステータスの機能が追加されました。

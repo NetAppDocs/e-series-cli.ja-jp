@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/delete-storagearray-keymanagementcertificate.html 
+sidebar: sidebar 
+keywords: delete, storage, array, key, management, certificate, command, remove, install, external 
+summary: delete storageArray keyManagementCertificateコマンドは、インストールされている外部キー管理証明書をストレージアレイから削除します。 
+---
+= インストールされている外部キー管理証明書を削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete storageArray keyManagementCertificateコマンドは、インストールされている外部キー管理証明書をストレージアレイから削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[delete storageArray keyManagementCertificate certificateType=_certificate_type_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「certificateType」
+ a| 
+削除する証明書のタイプを指定できます。有効な選択肢は「client」または「server」です。
+
+|===
+
+
+== 例
+
+[listing]
+----
+ SMcli -n Array1 -c "delete storageArray keyManagementCertificate certificateType="client";"
+
+   SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

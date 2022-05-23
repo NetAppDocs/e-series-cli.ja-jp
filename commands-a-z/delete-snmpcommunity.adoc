@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-snmpcommunity.html 
+sidebar: sidebar 
+keywords: delete, snmpcommunity, command, existing, simple, network, management, protocol, community, previously, create, effective, unregister, trap, destination, associate, remove 
+summary: delete snmpcommunityコマンドは、create snmpcommunityコマンドを使用して以前に作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティを削除します。SNMPコミュニティを削除すると、コミュニティの登録が解除されます。そのコミュニティに関連付けられているトラップの送信先も削除されます。 
+---
+= SNMPコミュニティの登録を解除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete snmpcommunity」コマンドは、「create snmpcommunity」コマンドを使用して以前に作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティを削除します。SNMPコミュニティを削除すると、コミュニティの登録が解除されます。そのコミュニティに関連付けられているトラップの送信先も削除されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpCommunity communityName="_snmpCommunityName_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「CommunityName」の略
+ a| 
+削除するSNMPコミュニティの名前。SNMPコミュニティ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

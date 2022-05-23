@@ -1,0 +1,142 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, bundle, collection, set 
+summary: SMcli -autoSupportConfig showコマンドは、管理ドメインのAutoSupport バンドル収集設定を表示します。これらの設定は、AutoSupport を有効にしている管理ドメイン内のすべてのストレージアレイに適用されます。 
+---
+= AutoSupport バンドル収集設定を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli -autoSupportConfig showコマンドは、管理ドメインのAutoSupport バンドル収集設定を表示します。これらの設定は、AutoSupport を有効にしている管理ドメイン内のすべてのストレージアレイに適用されます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+このコマンドからのコマンド出力は、次の設定情報を表示します。
+
+* AutoSupport 機能、AutoSupport OnDemand機能、およびAutoSupport Remote Diagnostics機能の管理ドメインのアクティブ化ステータス
+* 設定された配信方法に応じた配信パラメータ：
++
+** 配信方法がSMTP：送信先のEメールアドレス、メールリレーサーバ、および送信者のEメールアドレスが表示されます
+** 配信方法がHTTPまたはHTTPS：
++
+*** 直接接続-宛先IPアドレスが表示されます
+*** プロキシサーバ接続-ホストアドレス、ポート番号、および認証の詳細が表示されます
+*** 自動プロキシ設定スクリプト（PAC）接続-スクリプトの場所が表示されます
+
+
+
+
+* ストレージアレイごとに、アレイの名前、ASUP対応アレイかどうか、シャーシのシリアル番号、およびアレイのコントローラのIPアドレスをリストするテーブル
+
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+[NOTE]
+====
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+====
+
+
+== 構文
+
+[listing]
+----
+SMcli -autoSupportConfig show
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== アクティブ化ステータスの出力例
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management station.
+The AutoSupport OnDemand feature is de-activated on this storage management station.
+The AutoSupport Remote Diagnostics feature is de-activated on this storage management station.
+----
+
+
+== SMTP配信方式の出力例
+
+[listing]
+----
+Delivery method: SMTP
+Destination email address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Mail relay server: server.eng.netapp.com
+Sender email address:  user@netapp.com
+----
+
+
+== 直接接続のHTTPまたはHTTPS配信方式の出力例
+
+[listing]
+----
+Delivery method:  HTTP
+Destination IP address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Connection:  Direct
+----
+
+
+== プロキシ接続のHTTP配信方式の出力例
+
+[listing]
+----
+Connection:  Proxy server
+Host Address:  10.227.76.123
+Port number: 8080
+Authentication required: Yes
+User name: admin
+Password: **********
+----
+
+
+== 自動プロキシ設定スクリプト（PAC）のHTTP配信方式の出力例
+
+[listing]
+----
+Connection: Automatic proxy configuration script (PAC)
+Script location: http://esgweb.eng.netapp.com/~user/proxy.pac
+----
+
+
+== アレイテーブル（すべての配信方法）の出力例
+
+[listing]
+----
+
+Name  AutoSupport Capable   Chassis Serial Number   IP Address
+SA_1  Yes (enabled)         SX94500434              10.113.173.123, 10.113.173.456
+SA_2  Yes (disabled)        SX94607107              10.113.174.789, 10.113.174.345
+SA_3  No                    Not available           10.113.59.58, 10.113.59.59
+----

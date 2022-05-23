@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/delete-snmpuser-username.html 
+sidebar: sidebar 
+keywords: delete, user, name, command, simple, network, management, protocol, create, register, effective, unregister, trap, destination, associate, remove 
+summary: delete snmpUser usernameコマンドを使用すると、以前に「create snmpUser」コマンドを使用して作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）USMユーザが削除されます。SNMPユーザを削除すると、そのユーザの登録が解除されます。そのユーザに関連付けられているトラップの送信先も削除されます。 
+---
+= SNMPv3 USMユーザの登録を解除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete snmpUser username」コマンドを使用すると、以前に「[.code]`create snmpUser`」コマンドを使用して作成および登録した、既存の簡易ネットワーク管理プロトコル（SNMP）USMユーザが削除されます。SNMPユーザを削除すると、そのユーザの登録が解除されます。そのユーザに関連付けられているトラップの送信先も削除されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpUser userName="_snmpUserName_" [engineId=(local | engineId)]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ユーザ名」
+ a| 
+削除するSNMP USMユーザの名前。SNMP USMユーザ名を二重引用符（""）で囲みます。
+
+
+
+ a| 
+「engineID」
+ a| 
+更新するSNMP USMユーザのエンジンID。同じユーザ名を使用するUSMユーザが複数ある場合は、エンジンIDが必要です。ローカルSNMPエージェントを指定するには、「[.code]`_local_`」を使用します。ローカルSNMPエージェントは、権限のあるエージェントであるか、リモートSNMPエージェントエンジンIDを指定するための16進数値文字列です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.72

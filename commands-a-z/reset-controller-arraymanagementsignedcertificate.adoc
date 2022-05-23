@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/reset-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: reset, installed, signed, certificate 
+summary: reset controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされている署名済み証明書とルート/中間証明書をリセットします。すべてのルート証明書と中間証明書、および署名済み証明書は、1つの自己署名証明書に置き換えられます。 
+---
+= インストールされている署名済み証明書をリセット
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされた署名済み証明書とルート/中間証明書をリセットします。すべてのルート証明書と中間証明書、および署名済み証明書は、1つの自己署名証明書に置き換えられます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+reset controller [(a|b)] arrayManagementSignedCertificate
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ルート/中間証明書を取得するコントローラをユーザが指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset controller [a] arrayManagementSignedCertificate;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

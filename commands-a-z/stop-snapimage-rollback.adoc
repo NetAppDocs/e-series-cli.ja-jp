@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/stop-snapimage-rollback.html 
+sidebar: sidebar 
+keywords: stop, snapshot, image, rollback 
+summary: stop snapImage rollbackコマンドは、start snapImage rollbackコマンドで開始したSnapshotイメージのロールバック処理を停止します。 
+---
+= Snapshotイメージのロールバックを停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop snapImage rollbackコマンドは'start snapImage rollbackコマンドによって開始されたスナップショット・イメージ・ロールバック・オペレーションを停止します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+Snapshotイメージのロールバック処理をキャンセルすると、ベースボリュームが不確定な状態になり、データが無効になるか整合性を失う可能性があります。関連するSnapshotイメージボリュームは無効になり、使用できなくなります。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop snapImage [_snapCGID:imageID_] rollback]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapImage」
+ a| 
+ロールバック処理を停止するSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新--スナップショットグループで作成された最新のスナップショットイメージを表示する場合に'このオプションを使用します
+* oldest --スナップショットグループで作成された最も古いスナップショットイメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、SnapshotグループsnapGroup1内のSnapshotイメージ12345のロールバック処理を停止する場合は、次のコマンドを使用します。
+
+[listing]
+----
+stop snapImage ["snapGroup1:12345"] rollback;
+----
+SnapshotグループsnapGroup1内の最も新しいSnapshotイメージのロールバック処理を停止するには、次のコマンドを使用します。
+
+[listing]
+----
+stop snapImage ["snapGroup1:newest"] rollback;
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

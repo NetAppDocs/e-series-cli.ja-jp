@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportondemand.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, ondemand, feature, individual, E2800, E5700, arrays 
+summary: set storageArray autoSupportOnDemandコマンドは、AutoSupport OnDemand機能をオンまたはオフにします。この機能を使用すると、テクニカルサポートはAutoSupport データ送信を調整でき、不足しているサポートデータの再送信を要求できます。 
+---
+= AutoSupport OnDemand機能を有効または無効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray autoSupportOnDemand'コマンドは、AutoSupport OnDemand機能をオンまたはオフにします。この機能を使用すると、テクニカルサポートはAutoSupport データ送信を調整でき、不足しているサポートデータの再送信を要求できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この機能を有効にする前に、まずストレージアレイでAutoSupport 機能を有効にする必要があります。この機能を有効にすると、必要に応じてAutoSupport リモート診断機能を有効にすることができます。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray autoSupportOnDemand (enable | disable)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'enable|disable
+ a| 
+AutoSupport OnDemand機能を有効または無効にすることができます。AutoSupport が無効になっている場合、有効化の操作はエラーになり、最初に有効化するよう指示されます。Remote Diagnostics機能が有効になっている場合は、無効化の操作を行うとRemote Diagnostics機能もオフになります。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportOnDemand enable;"
+
+SMcli completed successfully.
+----
+
+
+== 検証
+
+show storageArray storageArray autoSupport AutoSupport コマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の2行には、AutoSupport 機能とAutoSupport OnDemand機能の有効ステータスが順番に表示されます。
+
+[listing]
+----
+The AutoSupport is enabled on this storage array.
+The AutoSupport OnDemand feature is enabled on this storage array.
+The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html 
+sidebar: sidebar 
+keywords: show, storage, array, cache, mirror, data, assurance, check, enable 
+summary: show storageArray cacheMirrorDataAssuranceCheckEnableコマンドは、キャッシュミラーData Assuranceチェック機能の有効設定ステータスを返します。 
+---
+= ストレージアレイのキャッシュミラーData Assuranceチェックが有効かどうかの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray cacheMirrorDataAssuranceCheckEnable」コマンドは、キャッシュミラーData Assuranceチェック機能の有効設定ステータスを返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray cacheMirrorDataAssuranceCheckEnable
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.41で、コマンドパラメータが新しくなりました。

@@ -1,0 +1,202 @@
+---
+permalink: commands-a-z/set-thin-volume-attributes.html 
+sidebar: sidebar 
+keywords: set, thin, volume, attributes 
+summary: set volumeコマンドは、シンボリュームのプロパティを定義します。 
+---
+= シンボリュームの属性を設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set volumeコマンドは'シン・ボリュームのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+パラメータを使用して、1つ以上のシンボリュームのプロパティを定義できます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+[newCapacity=pass:quotes[_capacityValue_]]
+[repositoryMaxCapacity=pass:quotes[_capacityValue_]]
+[repositoryExpansionPolicy=(automatic|manual)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[addRepositoryCapacity=capacity-spec][hostReportingPolicy=(standard | thin)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「 volume 」
+ a| 
+プロパティを定義するボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、ボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「 volume 」
+ a| 
+プロパティを定義するボリュームのWorld Wide Identifier（WWID）。WWIDは二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+
+
+ a| 
+「ボリューム」
+ a| 
+プロパティを定義する複数のボリュームの名前。すべてのボリュームに同じプロパティが適用されます。以下のルールを使用して、ボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+ボリューム名が特殊文字を含んでいる場合または数字のみで構成されている場合は、次のルールに従って名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「newCapacity」です
+ a| 
+このパラメータは、シンボリュームの仮想容量を拡張します。仮想容量は、ボリュームにマッピングされているホストにボリュームが報告する値です。既存の容量以下の値を指定すると、エラーが原因 されます。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます
+
+最小仮想容量は32MBです。
+
+最大仮想容量は63TBです。
+
+
+
+ a| 
+repositoryMaxCapacity *'
+ a| 
+このパラメータは、リポジトリボリュームの最大容量を設定します。リポジトリボリュームの物理容量よりも小さい値は指定できません。新しい値を指定した結果、容量が警告しきい値よりも少なくなる場合、コマンドからエラーが返されます。
+
+[NOTE]
+====
+repositoryMaxCapacityコマンドは'repositoryExpansionPolicy=automatic'と連携します
+
+====
+
+
+ a| 
+repositoryExpansionPolic *
+ a| 
+このパラメータは'拡張ポリシーをautomaticまたはmanualに設定しますポリシーをautomaticからmanualに変更すると'最大容量値（クォータ）はリポジトリボリュームの物理容量に変わります
+
+
+
+ a| 
+「warningThresholdPercent」
+ a| 
+シンボリュームの容量がこの割合に達すると、シンボリュームの上限に近づいているという警告アラートが表示されます。整数値を使用します。たとえば、70という値は70%を意味します。
+
+有効な値は1~100です。
+
+このパラメータを100に設定すると、警告アラートは無効になります。
+
+
+
+ a| 
+「addRepositoryCapacity」を参照してください
+ a| 
+このパラメータは、ディスクプールの空きエクステントから容量を割り当てます。十分なスペースがない場合、コマンドは失敗します。
+
+[NOTE]
+====
+コマンド「addRepositoryCapacity」は、「repositoryExpansionPolicy=manual」と連動します。
+
+====
+
+
+ a| 
+「*hostReportingPolicy*`」
+ a| 
+このパラメータは、シンボリュームのホストへの報告方法を変更します。有効な値は「standard」または「thin」です。
+
+|===
+
+
+== 注：
+
+このコマンドでは、オプションのパラメータを1つ以上指定できます。
+
+次の表に、シンボリュームの容量制限を示します。
+
+[cols="2*"]
+|===
+| 容量のタイプ | サイズ 
+
+
+ a| 
+最小仮想容量
+ a| 
+32 MB
+
+
+
+ a| 
+最大仮想容量
+ a| 
+63TB
+
+
+
+ a| 
+最小物理容量
+ a| 
+4 GB
+
+
+
+ a| 
+最大物理容量
+ a| 
+64 TB
+
+|===
+シンボリュームでは、標準ボリュームで行われるすべての処理がサポートされます。ただし、次の例外があります。
+
+* シンボリュームのセグメントサイズは変更できません。
+* シンボリュームでは読み取り前冗長性チェックを有効にできません。
+* ボリュームコピーでは、シンボリュームをターゲットボリュームとして使用できません。
+* 同期ミラーリング処理ではシンボリュームを使用できません。
+
+
+シンボリュームを標準ボリュームに変更する場合は、ボリュームコピー処理を使用してシンボリュームのコピーを作成します。ボリュームコピーのターゲットは常に標準ボリュームです。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/delete-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group, snapshot, image 
+summary: DELETE cgSnapImage consistencyGroupコマンドは、整合性グループ内のSnapshotイメージを削除します。 
+---
+= 整合性グループのSnapshotイメージの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+DELETE cgSnapImage consistencyGroupコマンドは、整合性グループのSnapshotイメージを削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+delete cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+pass:quotes[[deleteCount=_numberOfSnapImages_]
+[retainCount=pass:quotes[_numberOfSnapImages_]
+[ignoreSnapVolume=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「consistencyGroup」
+ a| 
+Snapshotイメージの削除元の整合性グループの名前。整合性グループ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「deleteCount」を指定します
+ a| 
+整合性グループから削除するSnapshotイメージの数。整数値を使用します。
+
+このパラメータは、最も古いSnapshotイメージから順に、指定した数に達するまでSnapshotイメージを削除します。
+
+
+
+ a| 
+「RETAINCOUNT」
+ a| 
+整合性グループに保持するSnapshotイメージの数。整数値を使用します。
+
+このパラメータは、最新のSnapshotイメージを整合性グループ内に保持します。
+
+
+
+ a| 
+「ignoreSnapVolume」を参照してください
+ a| 
+関連付けられている整合性グループのSnapshotボリュームを保持するか削除するかを指定します。このパラメータは、整合性グループのSnapshotイメージが整合性グループのSnapshotボリュームに関連付けられている場合にのみ適用されます。スナップショット・ボリュームを保持するには'このパラメータをTRUEに設定しますスナップショット・ボリュームを削除するには'このパラメータをFALSEに設定しますデフォルト値は'FALSE'です
+
+|===
+
+
+== 注：
+
+整合性グループのすべての関連するメンバーボリュームについてSnapshotイメージを削除できない場合は、処理が失敗し、Snapshotイメージはどれも削除されません。
+
+整合性グループのSnapshotボリュームに関連付けられている整合性グループのSnapshotイメージを削除すると、整合性グループのSnapshotボリューム内の対応するSnapshotボリュームメンバーが停止の状態に移行します。停止状態のSnapshotボリュームメンバーと、削除されたSnapshotイメージのSnapshotグループの関係は削除されました。ただし、停止状態のSnapshotボリュームメンバーと、対応する整合性グループのSnapshotボリュームとの関係は保持されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, database 
+summary: save storageArray dbmDatabaseコマンドは、RAID構成データまたはすべてのデータをホスト上のファイルにバックアップします。データの場所とコントローラは複数指定できます。 
+---
+= ストレージアレイのDBMデータベースの保存
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray dbmDatabaseコマンドは、RAID設定データまたはすべてのデータをホスト上のファイルにバックアップします。データの場所とコントローラは複数指定できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+save storageArray dbmDatabase
+[sourceLocation=(disk | onboard)]
+[controller [(a|b)]]
+[contentType= all]
+ file="fileName"
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+データベースの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\logs\dbmdata.zip "`
+
+このパラメータは、オプションのパラメータのあとに指定する必要があります。
+
+このコマンドでは.zipファイルが作成されます。ファイル拡張子を指定する必要はありません。
+
+
+
+ a| 
+「sourceLocation」と入力します
+ a| 
+このパラメータは、バックアップデータベースの情報を取得する場所を指定します。
+
+* 「disk」は、ドライブ上のデータベースから直接データが取得されることを示します
+* 「onboard」は、RPAメモリ上の場所からデータを取得することを示します
+
+
+デフォルトの場所は「onboard」です。
+
+
+
+ a| 
+「controller」と入力します
+ a| 
+「sourceLocation」が「onboard」に設定されている場合は、データを排他的に取得するコントローラを指定します。「controller」パラメータが指定されていない場合は、どちらのコントローラからもデータが取得される可能性があります。
+
+有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラです
+
+
+
+ a| 
+「contentType」を参照してください
+ a| 
+このパラメータは、取得するデータのコンテンツタイプを指定します。
+
+このパラメータはデフォルトで「all」に設定されているため、ディスク・プール構成データを含むすべてのデータが取得されます。
+
+|===
+
+
+== 注：
+
+このコマンドを使用してホストに保存したデータは、必要に応じてコントローラにリストアできます。ただし、ホスト上のファイルからデータをリストアするにはバリデータが必要です。
+
+
+
+== 最小ファームウェアレベル
+
+7.75
+
+7.83で、次のパラメータが追加されました
+
+* 「sourceLocation」と入力します
+* 「controller」と入力します
+* 「contentType」を参照してください
+

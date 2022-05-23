@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/remove-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: remove, storage array, directory, server, role, mapping 
+summary: remove storageArray DirectoryServerコマンドは、指定されたディレクトリサーバ用に定義されているロールマッピングを削除します。 
+---
+= ストレージアレイのディレクトリサーバのロールマッピングの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「remove storageArray DirectoryServer」コマンドは、指定されたディレクトリサーバの定義済みのロールマッピングを削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+remove storageArray directoryServer pass:quotes[[_domainId_]]
+    (allGroupDNs | groupDNs=pass:quotes[(_groupDN1 ... groupDNN_))]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「DirectoryServer」を参照してください
+ a| 
+ドメインIDを使用して、マッピングを削除するドメインを指定できます。
+
+
+
+ a| 
+「allGroupDDN」
+ a| 
+ドメインからすべてのグループの識別名のマッピングを削除できます。
+
+
+
+ a| 
+「groupDND`
+ a| 
+削除するグループの識別名（DN）を指定できます。
+
+[NOTE]
+====
+複数のグループを入力する場合は、値をスペースで区切ります。
+
+====
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    groupDNs=("CN=company-distlist,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com");"
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    allGroupDNs;"
+
+SMcli completed successfully.
+----

@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/show-storagearray-controllerhealthimage.html 
+sidebar: sidebar 
+keywords: show, storage, array, controller, health, image 
+summary: show storageArray controllerHealthImageコマンドは、コントローラヘルスイメージをサポートするストレージアレイで、コントローラヘルスイメージが使用可能な場合は、コントローラキャッシュ上のコントローラヘルスイメージの詳細を表示します。 
+---
+= ストレージアレイコントローラのヘルスイメージの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+コントローラヘルスイメージをサポートするストレージアレイでコントローラヘルスイメージが使用可能な場合は、「show storageArray controllerHealthImage」コマンドを実行すると、コントローラキャッシュ上のコントローラヘルスイメージの詳細が表示されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン8.20で'coredump'パラメータは'controllerHealthImage'パラメータに置き換えられました
+
+====
+ストレージアレイがコントローラヘルスイメージ機能をサポートしていない場合、このコマンドはエラーを返します。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray controllerHealthImage
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+8.20で'coredump'パラメータが'controllerHealthImage'パラメータに置き換えられました

@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: set, storage, array, login, banner 
+summary: set storageArray loginBannerコマンドを使用すると、ログインバナーとして使用するテキストファイルをアップロードできます。バナーテキストはユーザがSANtricity System Managerでセッションを確立する前またはコマンドを実行する前に表示されるもので、注意と同意を求めるメッセージを含めることができます。 
+---
+= ストレージアレイのログインバナーを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray loginBanner'コマンドを使用すると'ログインバナーとして使用するテキスト・ファイルをアップロードできますバナーテキストはユーザがSANtricity System Managerでセッションを確立する前またはコマンドを実行する前に表示されるもので、注意と同意を求めるメッセージを含めることができます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray loginBanner file="path_to_login_banner"
+----
+
+
+== コンテキスト（Context）
+
+テキストファイルをロードすると、ファイルがストレージアレイに保存されます。バナーテキストは、SANtricity System Managerのログイン画面の前またはコマンドを実行する前に表示されます。
+
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+ログインバナーのテキストファイルが格納されているファイルパスとファイル名。
+
+[NOTE]
+====
+ログインバナーファイルは空にできません。また、サイズは5KB以下である必要があります。
+
+====
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: reset, asynchronous, mirror group, statistics 
+summary: reset storageArray arvmStats asyncMirrorGroupコマンドは、非同期ミラーグループ内の1つ以上のメンバーボリュームの同期統計を相対0にリセットします。 
+---
+= 非同期ミラーグループの統計をリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「reset storageArray arvmStats asyncMirrorGroup」コマンドは、非同期ミラーグループ内の1つ以上のメンバーボリュームの同期統計を相対0にリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+reset storageArray arvmStats asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+volume=pass:quotes[_"volumeName"_] sampleType=(all | mostRecent | longestSyncTime | errors)
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+同期の統計をリセットする非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名に特殊文字または数字が含まれている場合は、非同期ミラーグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「 volume 」
+ a| 
+このパラメータはオプションです。同期の統計をリセットする非同期ミラーグループ内の特定のメンバーボリュームの名前。ボリュームを指定しない場合は、非同期ミラーグループ内のすべてのメンバーボリュームの統計がリセットされます。
+
+ボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「sampleType」
+ a| 
+このパラメータはオプションです。「sampleType」のデフォルト値は「all」です。
+
+* all -- 3つのサンプルタイプすべてのデータがリセットされます
+* 「mostrecent」--最新の50件の再同期サンプルの統計がリセットされます。
+* longestSyncTime'--最新の20件の最も長い再同期サンプルの統計情報がリセットされます
+* `errors`--最新の20個の失敗した再同期サンプルの統計情報がリセットされます
+
+
+|===
+
+
+== 注：
+
+Primaryロールでは、ミラーボリュームの統計がリセットされます。リセットされる統計には次のデータが含まれます。
+
+* 同期の開始時刻
+* 同期タイプ（手動または定期的）
+* 同期の期間
+* 送信バイト数
+* 最大および最小の書き込み時間（単一の書き込みの場合）
+* 最大および最小の同期データ速度
+* 合計書き込み時間
+* リポジトリの使用率(%)
+* リカバリポイントの経過時間
+
+
+
+
+== 最小ファームウェアレベル
+
+7.84

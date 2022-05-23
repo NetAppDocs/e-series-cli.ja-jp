@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-volumegroup-importdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, import, dependencies 
+summary: show volumeGroup importDependenciesコマンドは、あるストレージアレイから別のストレージアレイに移動するボリュームグループ内のドライブの依存関係のリストを表示します。 
+---
+= ボリュームグループのインポート依存関係の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show volumeGroup importDependenciesコマンドは'あるストレージ・アレイから別のストレージ・アレイに移動するボリューム・グループ内のドライブの依存関係のリストを表示します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
+[cancelImport=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+インポート依存関係を表示するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「cancelImport」
+ a| 
+ボリュームグループの依存関係を読み取ったあとにドライブをスピンダウンするための設定。ドライブをスピンダウンするには'このパラメータをTRUEに設定しますドライブを回転させたままにするには'このパラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+このコマンドは特定のボリュームグループの依存関係を返します。ボリュームグループはエクスポート状態または強制状態である必要があります。表示された依存関係を維持することを決定した場合は'cancelImportパラメータを適用してドライブをスピンダウンできます
+
+start volumeGroup importコマンドを実行する前に'show volumeGroup importDependenciesコマンドを実行する必要があります
+
+
+
+== 最小ファームウェアレベル
+
+7.10

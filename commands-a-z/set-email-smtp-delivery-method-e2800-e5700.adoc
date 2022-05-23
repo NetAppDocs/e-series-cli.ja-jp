@@ -1,0 +1,97 @@
+---
+permalink: commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html 
+sidebar: sidebar 
+keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
+summary: set storageArray AutoSupport smtpiveryMethodコマンドは、AutoSupport メッセージをEメール（SMTP）に送信するための配信方法を設定します。 
+---
+= Eメール（SMTP）配信方法を指定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray AutoSupport smtpiveryMethodコマンドは、AutoSupport メッセージを電子メール（SMTP）に送信するための配信方法を設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport deliveryMethod=email
+mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「deliveryMethod」を参照してください
+ a| 
+AutoSupport による収集の配信方法を指定できます。有効な選択肢は次のとおりです。
+
+* E メール
+* HTTP
+* HTTPS
+
+
+[NOTE]
+====
+Eメール方式が設定されている場合、AutoSupport OnDemandとRemote Diagnosticsは無効になります。
+
+====
+
+
+ a| 
+mailRelayServer'
+ a| 
+AutoSupport 収集用のメールリレーサーバを指定できます。
+
+
+
+ a| 
+「senderEmail」
+ a| 
+AutoSupport コレクションの送信メールアドレスを指定できます。
+
+|===
+
+
+=== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportConfig deliveryMethod=email mailRelayServer=\"mailserver.company.com\" senderEmail=\"user@company.com\";"
+
+SMcli completed successfully.
+----
+
+
+=== 検証
+
+「_start storageArray AutoSupport deliveryTest_」コマンドを使用してテストメッセージを送信し、配信方法が正しく設定されていることを確認します。
+
+
+
+== 最小ファームウェアレベル
+
+8.40

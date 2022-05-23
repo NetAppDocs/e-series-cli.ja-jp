@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/deactivate-storagearray-feature.html 
+sidebar: sidebar 
+keywords: deactivate, synchronous, mirror 
+summary: deactivate storageArray featureコマンドは、同期ミラーリング機能を非アクティブ化し、ミラーリポジトリボリュームを逆アセンブルし、セカンダリボリュームのコントローラ所有者を解放します。 
+---
+= 同期ミラーリングを非アクティブ化する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+deactivate storageArray feature'コマンドは'同期ミラーリング機能を非アクティブ化し'ミラー・リポジトリ・ボリュームを逆アセンブルし'セカンダリ・ボリュームのコントローラ所有者を解放します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+セカンダリボリューム専用のコントローラホストポートをホストのデータ転送に使用できます。
+
+[NOTE]
+====
+このコマンドの以前のバージョンでは、機能識別子は「remoteMirror」でした。この機能識別子は有効ではなくなり' SyncMirror に置き換えられます
+
+====
+
+
+== 構文
+
+[listing]
+----
+deactivate storageArray feature=syncMirror
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.10

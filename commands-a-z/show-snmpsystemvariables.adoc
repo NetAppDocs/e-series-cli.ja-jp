@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/show-snmpsystemvariables.html 
+sidebar: sidebar 
+keywords: show, snmp, mib ii, system, group, variables 
+summary: show snmpSystemVariablesコマンドは、簡易ネットワーク管理プロトコル（SNMP）システム変数に関する情報を返します。システム変数は、Management Information Base II（MIB-II）データベースで管理されます。 
+---
+= SNMP MIB-IIシステムグループ変数を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snmpSystemVariables」コマンドは、簡易ネットワーク管理プロトコル（SNMP）システム変数に関する情報を返します。システム変数は、Management Information Base II（MIB-II）データベースで管理されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show snmpSystemVariables
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドから返されるSNMPシステム変数情報の例を次に示します。
+
+[listing]
+----
+SYSTEM VARIABLES
+    Sys Name: NONE
+    Sys Contact: NONE
+    Sys Location: NONE
+----
+
+
+== 最小ファームウェアレベル
+
+8.30

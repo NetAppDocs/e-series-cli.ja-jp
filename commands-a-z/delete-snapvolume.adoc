@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-snapvolume.html 
+sidebar: sidebar 
+keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
+summary: delete snapVolumeコマンドは、Snapshotボリュームを削除します。また、オプションで関連付けられているSnapshotリポジトリメンバーも削除します。 
+---
+= Snapshotボリュームを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete snapVolumeコマンドは'スナップショット・ボリュームを削除し'オプションで'関連づけられているスナップショット・リポジトリ・メンバーを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+オンラインボリュームコピーに関与するSnapshotイメージには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapVolume ["_snapVolumeName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapVolume」
+ a| 
+削除するSnapshotボリュームの名前。Snapshotボリューム名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+deleteRepositoryMembersを指定します
+ a| 
+リポジトリメンバーを保存または削除するパラメータ。リポジトリメンバーを保存するには'このパラメータをFALSEに設定しますリポジトリメンバーを削除するには'このパラメータをTRUEに設定しますデフォルト値は「true」です。このパラメータを使用しない場合、リポジトリメンバーは自動的に削除されます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

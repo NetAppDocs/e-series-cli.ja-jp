@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/smcli-enable-autosupportfeature.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, emw, management, domain, level, smcli 
+summary: SMcli enable autoSupportFeatureコマンドは、すべての管理対象ストレージアレイのAutoSupport （ASUP）機能をオンにして、テクニカルサポートサイトにメッセージを送信できるようにします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。 
+---
+= EMW管理ドメインレベルでのAutoSupport の有効化または無効化（SMcliのみ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli enable autoSupportFeatureコマンドは、すべての管理対象ストレージアレイのAutoSupport （ASUP）機能をオンにし、テクニカルサポートサイトにメッセージを送信できるようにします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+[NOTE]
+====
+AutoSupport 機能を使用するには、Persistent Monitorが有効になっている必要があります。
+
+====
+[NOTE]
+====
+これまでテクニカルサポートサイトに送信された顧客データはありません。
+
+====
+このコマンドは、管理ドメイン内のすべてのASUP対応ストレージアレイに影響します。管理ドメインでこの機能を有効にすると、各ストレージアレイでこの機能を制御できるようになります。
+
+この機能を有効にしたあとに、必要に応じてAutoSupport OnDemand機能を有効にし、さらに必要に応じてAutoSupport リモート診断機能を有効にすることができます。
+
+3つの機能は、次の順序で有効にする必要があります。
+
+. * AutoSupport を有効にします。*
+. * AutoSupport OnDemand*を有効にします
+. * AutoSupport Remote Diagnosticsを有効にします。*
+
+
+
+
+== 構文
+
+[listing]
+----
+SMcli enable|disable autoSupportFeature
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 検証
+
+SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の行に、有効化のステータスが表示されます。
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management station.
+----
+
+
+== 最小ファームウェアレベル
+
+7.86

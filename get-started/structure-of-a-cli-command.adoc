@@ -1,0 +1,35 @@
+---
+permalink: get-started/structure-of-a-cli-command.html 
+sidebar: sidebar 
+keywords: structure, cli, commands 
+summary: CLIコマンドは、コマンドラッパーおよびラッパーに組み込まれた要素で構成されます。 
+---
+= CLIコマンドの構造
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+CLIコマンドは、コマンドラッパーおよびラッパーに組み込まれた要素で構成されます。CLIコマンドは次の要素で構成されます。
+
+* SMcliという用語で識別されるコマンドラッパー
+* ストレージアレイの識別子
+* 実行する処理を定義するターミナル
+* スクリプトコマンド
+
+
+CLIコマンドラッパーは、ストレージアレイコントローラを識別し、処理のターミナルとスクリプトコマンドを指定し、これらの値をスクリプトエンジンに渡すシェルです。
+
+すべてのCLIコマンドは次の構造になります。
+
+[listing]
+----
+SMcli *storageArray terminal script-commands*;
+----
+* SMcliは'コマンド・ライン・インターフェイスを起動します
+* 「storageArray storageArray」は、ストレージアレイの名前またはIPアドレスです。
+* 「terminal」は、コマンドの環境と目的を定義するCLI値です。
+* 「script -commands」は、1つ以上のスクリプトコマンド、またはスクリプトコマンドを含むスクリプトファイルの名前です。（スクリプトコマンドはストレージアレイを設定および管理します）。
+
+
+構文'パラメータ名'オプション'端末が正しくない不完全または不正確なSMcli文字列を入力すると'スクリプト・エンジンは使用情報を返します

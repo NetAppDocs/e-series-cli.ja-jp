@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html 
+sidebar: sidebar 
+keywords: show, asynchronous, mirror, group, synchronization, progress 
+summary: show asyncMirrorGroup synchronizationProgressコマンドは、ローカルとリモートのストレージアレイ間の非同期ミラーグループで実行される、定期的な同期の進捗状況を表示します。 
+---
+= 非同期ミラーグループの同期の進捗状況を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show asyncMirrorGroup synchronizationProgress」コマンドは、ローカルストレージアレイとリモートストレージアレイ間の非同期ミラーグループの_PERIODIC_SYNCHRONIZATIONの進捗状況を表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、非同期ミラーグループ内のすべてのミラーペアについて、データ同期の進捗状況を返します。このコマンドの進捗状況は、完了したデータ同期の割合で示されます。
+
+[NOTE]
+====
+同期には、初期同期と定期的同期の2種類があります。初期非同期ミラー・グループ同期の進行状況は'*Long Running Operations*ダイアログに表示され'show storageArray longRunningOperations'コマンドを実行することによって表示されます
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+[synchronizationProgress]
+[summary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+ローカルとリモートのストレージアレイ間の非同期ミラーグループの同期を表示する非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名に特殊文字または数字が含まれている場合は、非同期ミラーグループ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「synchronizationProgress」と入力します
+ a| 
+このパラメータは、非同期ミラーグループの定期的な同期の進捗状況を表示します。
+
+
+
+ a| 
+「概要」
+ a| 
+このパラメータは、ローカルとリモートのストレージアレイ間の非同期ミラーグループの同期に関する概要を表示します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.84

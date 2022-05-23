@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/show-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: show, storage, array, dbm, database 
+summary: show storageArray dbmDatabaseコマンドは、ストレージアレイのオンボードバックアップの場所のメタデータを取得して表示します。バックアップの場所が複数ある場合は、場所ごとにメタデータが表示されます。 
+---
+= ストレージアレイのDBMデータベースの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray dbmDatabaseコマンドは'ストレージ・アレイのオンボード・バックアップの場所のメタデータを取得して表示しますバックアップの場所が複数ある場合は、場所ごとにメタデータが表示されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray dbmDatabase
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+このコマンドから返される構成データベース情報の形式は次のようになります。
+
+「構成データベースのMetadataLast Host Backup：<日付スタンプ>`」
+
+[cols="7*"]
+|===
+| CTL | 場所 | リビジョン | ID | 生成番号 | ステータス | アクセスモード 
+
+
+ a| 
+A
+ a| 
+キャッシュ
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+R/W
+ a| 
+最適
+
+
+
+ a| 
+B
+ a| 
+キャッシュ
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+R/W
+ a| 
+最適
+
+
+
+ a| 
+該当なし
+ a| 
+ディスク
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+R/W
+ a| 
+最適
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

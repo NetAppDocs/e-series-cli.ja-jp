@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/set-volume-ssdcacheenabled.html 
+sidebar: sidebar 
+keywords: set, ssd, cache, volume 
+summary: set volume ssdCacheEnabledコマンドは、特定のボリュームに対してSSDキャッシュ機能を使用したキャッシュをオンまたはオフにします。 
+---
+= ボリュームのSSDキャッシュを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set volume ssdCacheEnabledコマンドは'特定のボリュームのSSDキャッシュ機能を使用したキャッシュのオン/オフを切り替えます
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Support Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ボリュームは次のいずれかです。
+
+* 標準ボリューム。名前またはWWIDで識別されます
+* Snapshotボリューム
+* 整合性グループのSnapshotボリューム
+
+
+
+
+== 標準ボリュームに適用される構文
+
+[listing, subs="+macros"]
+----
+set volume (pass:quotes[[_volumeName_]] | <"WWID">) ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== Snapshotボリュームに適用される構文
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 整合性グループのSnapshotボリュームに適用される構文
+
+[listing, subs="+macros"]
+----
+set cgSnapVolume pass:quotes[["_cgSnapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「 volume 」
+ a| 
+SSDキャッシュをオンまたはオフにする標準ボリュームの名前。ボリュームの名前は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、ボリューム名を二重引用符（""）で囲んだ上で角かっこ（[]）で囲む必要があります。
+
+
+
+ a| 
+「 volume 」
+ a| 
+SSDキャッシュをオンまたはオフにする標準ボリュームのWorld Wide Identifier（WWID）。WWIDは二重引用符（""）で囲んだ上で山かっこ（<>）で囲みます。
+
+
+
+ a| 
+「SnapVolume」
+ a| 
+SSDキャッシュをオンまたはオフにするSnapshotボリュームの名前。Snapshotボリュームの名前は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+cgSnapVolume
+ a| 
+SSDキャッシュをオンまたはオフにする整合性グループのSnapshotボリュームの名前。整合性グループのSnapshotボリュームの名前は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「ssdCacheEnabled」を入力します
+ a| 
+SSDキャッシュをオンにするには、このパラメータを「true」に設定します。SSDキャッシュをオフにするには、このパラメータを「FALSE」に設定します。
+
+|===
+
+
+== 注：
+
+SSDキャッシュは、一度に1つのボリュームに対してオンまたはオフにすることができます。
+
+ボリュームのSSDキャッシュをオフにすると、そのボリュームのSSDキャッシュがパージされます。
+
+
+
+== 最小ファームウェアレベル
+
+7.84

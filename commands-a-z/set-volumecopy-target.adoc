@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/set-volumecopy-target.html 
+sidebar: sidebar 
+keywords: set, volume, copy 
+summary: set VolumeCopy targetコマンドは、ボリュームコピーペアのプロパティを定義します。 
+---
+= ボリュームコピーを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set VolumeCopy targetコマンドは'ボリューム・コピー・ペアのプロパティを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン7.83では'copyType=(online | offline)パラメータは使用されなくなりました
+
+====
+このコマンドは、Snapshotボリュームコピーペアに対して有効です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set volumeCopy target pass:quotes[[_targetName_]]
+source pass:quotes[[_sourceName_]]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(online | offline)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「target」と入力します
+ a| 
+データのコピー先となるボリュームの名前。ターゲットボリューム名は角かっこ（[]）で囲みます。ターゲットボリューム名に特殊文字または数字が含まれている場合は、ターゲットボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「source」を参照してください
+ a| 
+データのコピー元のボリュームの名前。ソースボリューム名は角かっこ（[]）で囲みます。ソースボリューム名に特殊文字または数字が含まれている場合は、ソースボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「copyPriority」
+ a| 
+ホストのI/Oアクティビティに対するボリュームコピーの優先度。有効な値は'highest'high`'high`'medium`'low''low'lowest`です
+
+
+
+ a| 
+targetReadOnlyEnabled
+ a| 
+ターゲットボリュームへの書き込みを可能にするか、ターゲットボリュームからの読み取りのみを可能にするかを選択する設定。ターゲット・ボリュームに書き込むには'このパラメータをFALSEに設定しますターゲット・ボリュームに書き込みできないようにするには'このパラメータをTRUEに設定します
+
+
+
+ a| 
+「copyType」
+ a| 
+[NOTE]
+====
+このパラメータは廃止されました。
+
+====
+|===
+
+
+== 注：
+
+このコマンドでは、オプションのパラメータを1つ以上指定できます。
+
+
+
+== 最小ファームウェアレベル
+
+5.40
+
+7.83で'copyType=(online | offline)パラメータが削除されました

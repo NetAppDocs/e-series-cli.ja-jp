@@ -1,0 +1,120 @@
+---
+permalink: commands-a-z/set-session-erroraction.html 
+sidebar: sidebar 
+keywords: set, session 
+summary: set session errorActionコマンドは、現在のスクリプトエンジンセッションの実行方法を定義します。 
+---
+= セッションを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set session errorAction」コマンドは、現在のスクリプトエンジンセッションの実行方法を定義します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドでは、セッションはコマンドの実行期間に限定されます。ストレージアレイに対してパラメータが永続的に設定されるわけではありません。
+
+
+
+== 構文
+
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+userRole=(admin | monitor)
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「errorAction」
+ a| 
+処理中にエラーが発生した場合のセッションの応答方法。エラーが発生した場合にセッションを停止するか、セッションを続行するかを選択できます。デフォルト値は「stop」です。（このパラメータは、構文エラーではなく実行エラーに対する処理を定義します。エラー条件によっては、「continue」の値が無効になる場合があります）。
+
+
+
+ a| 
+「 password 」と入力します
+ a| 
+ストレージアレイのパスワード。パスワードは二重引用符（""）で囲みます。
+
+[NOTE]
+====
+クライアント・タイプがhttpsに設定されている場合'このパラメータは使用されませんパスワードはCLIコマンドスクリプトの実行前に指定する必要があり、スクリプトの実行中は変更できません。
+
+====
+
+
+ a| 
+'performanceMonitorInterval'
+ a| 
+パフォーマンスデータを収集する頻度。データをキャプチャするポーリング間隔の整数値を秒単位で入力します。値の範囲は'3`~ 3600秒ですデフォルト値は「5'秒」です。
+
+[NOTE]
+====
+クライアント・タイプがhttpsに設定されている場合'このパラメータは使用されませんデフォルトの間隔を変更するには、代わりに影響を受ける個々のコマンドでこのパラメータを使用します。このコマンドは'save storageArray performanceStatsおよびshow drive performanceStatsです
+
+====
+
+
+ a| 
+'performanceMonitorIterations'
+ a| 
+キャプチャするサンプルの数。整数値を入力します。キャプチャされるサンプルの値の範囲は'1'～3600ですデフォルト値は「5」です。
+
+[NOTE]
+====
+クライアント・タイプがhttpsに設定されている場合'このパラメータは使用されませんデフォルトのイテレーション値を変更するには、代わりに影響を受ける個々のコマンドでこのパラメータを使用します。このコマンドは'save storageArray performanceStatsおよびshow drive performanceStatsです
+
+====
+|===
+
+
+== 注：
+
+このコマンドでは、オプションのパラメータを1つ以上指定できます。
+
+パスワードは、管理ドメイン内の各ストレージアレイに保存されます。以前にパスワードが設定されていない場合は、パスワードは必要ありません。パスワードは、最大30文字の英数字を任意に組み合わせて指定できます。（ストレージアレイのパスワードは、「set storageArray」コマンドを使用して定義できます）。
+
+指定したポーリング間隔とサンプル数は、セッションを終了するまで有効です。セッションを終了すると、ポーリング間隔とサンプル数がデフォルト値に戻ります。
+
+
+
+== 最小ファームウェアレベル
+
+5.20
+
+8.40 -クライアント・タイプがhttpsに設定されている場合'password'UserRole''performanceMonitorInterval'および'performanceMonitorIterations'パラメータを廃止しました

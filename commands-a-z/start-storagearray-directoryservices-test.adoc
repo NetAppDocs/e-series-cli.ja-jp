@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-storagearray-directoryservices-test.html 
+sidebar: sidebar 
+keywords: test, storage, array, directory, server 
+summary: start storageArray DirectoryServices testコマンドは、設定されているすべてのディレクトリサーバとの通信をチェックし、サーバドメイン設定を検証します。 
+---
+= ストレージアレイのディレクトリサーバをテストする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start storageArray DirectoryServices testコマンドは、設定されているすべてのディレクトリサーバとの通信をチェックし、サーバドメイン設定を検証します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ディレクトリサーバがドメインに1つも追加されていない場合にエラーを返します。
+
+
+
+== 構文
+
+[listing]
+----
+
+start storageArray directoryServices test
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start storageArray directoryServices test;"
+
+<test results for each domain configured are returned>
+
+SMcli completed successfully.
+----

@@ -1,0 +1,113 @@
+---
+permalink: commands-a-z/save-storagearray-configuration.html 
+sidebar: sidebar 
+keywords: save, storage, array, configuration 
+summary: save storageArray configurationコマンドは、現在のストレージアレイボリューム構成を再作成するために使用できるスクリプトファイルを作成します。 
+---
+= ストレージアレイの構成を保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray configurationコマンドは'現在のストレージ・アレイ・ボリューム構成を再作成するために使用できるスクリプト・ファイルを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、現在のストレージアレイ上のリモートミラーリングまたはボリュームコピーの構成データをファイルに保存しません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray configuration file=pass:quotes["_filename_"]
+(allconfig|[globalSettings=(TRUE | FALSE)]
+[volumeConfigAndSettings=(TRUE | FALSE)]
+[hostTopology=(TRUE | FALSE)]
+[lunMappings=(TRUE | FALSE)])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+設定の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\saconf.cfgです
+
+構成設定を含むファイルのデフォルト名は'storage-array-configuration.cfgですこのコマンドでは、保存されているファイルにファイル拡張子は自動的に付加されません。ファイル名にはファイル拡張子を指定する必要があります。
+
+
+
+ a| 
+「allConfig」
+ a| 
+すべての設定値をファイルに保存するための設定。（このパラメータを選択すると、すべての設定パラメータが「true」に設定されます）。
+
+
+
+ a| 
+「globalSettings」と入力します
+ a| 
+グローバル設定をファイルに保存するための設定。グローバル設定を保存するには、このパラメータを「true」に設定します。グローバル設定を保存しない場合は、このパラメータを「FALSE」に設定します。デフォルト値は「true」です。
+
+
+
+ a| 
+'volumeConfigAndSettings'
+ a| 
+ボリューム構成の設定とすべてのグローバル設定をファイルに保存するための設定。ボリューム構成の設定とグローバル設定を保存するには'このパラメータをTRUEに設定しますボリューム構成の設定とグローバル設定を保存しない場合は'このパラメータをFALSEに設定しますデフォルト値は「true」です。
+
+
+
+ a| 
+「hostTopology」のようになります
+ a| 
+ホストトポロジをファイルに保存するための設定。ホストトポロジを保存するには、このパラメータを「true」に設定します。ホストトポロジを保存しない場合は、このパラメータを「FALSE」に設定します。デフォルト値は'FALSE'です
+
+
+
+ a| 
+「lunMappings」
+ a| 
+LUNまたはNSIDマッピングをファイルに保存するための設定。LUNまたはNSIDマッピングを保存するには、このパラメータを「true」に設定します。LUNまたはNSIDマッピングを保存しない場合は、このパラメータを「FALSE」に設定します。デフォルト値は'FALSE'です
+
+|===
+
+
+== 注：
+
+このコマンドでは、グローバル設定、ボリューム構成の設定、ホストトポロジ、LUNマッピングの各パラメータを任意に組み合わせて指定できます。すべての設定を入力する場合は'allConfig'パラメータを使用します「allConfig」パラメータを使用するか、その他の4つのパラメータのうちの1つ以上を使用する必要があります。
+
+
+
+== 最小ファームウェアレベル
+
+6.10

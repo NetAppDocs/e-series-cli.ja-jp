@@ -1,0 +1,52 @@
+---
+section: get-started
+title: はじめに
+entries:
+- title: 新機能
+  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
+- title: コマンドのフォーマット
+  entries:
+  - title: 概要
+    url: "/get-started/overview-format-commands.html"
+  - title: CLIの構造
+    entries:
+    - title: CLIコマンドの構造
+      url: "/get-started/structure-of-a-cli-command.html"
+    - title: 対話型モード
+      url: "/get-started/interactive-mode.html"
+    - title: CLIラッパーの構文
+      url: "/get-started/cli-command-wrapper-syntax.html"
+    - title: CLIパラメータ
+      url: "/get-started/command-line-parameters.html"
+  - title: スクリプトコマンドの構造
+    entries:
+    - title: スクリプトコマンドの構造
+      url: "/get-started/structure-of-a-script-command.html"
+    - title: スクリプトコマンドの概要
+      url: "/get-started/synopsis-of-the-script-commands.html"
+    - title: 共通の構文要素
+      url: "/get-started/recurring-syntax-elements.html"
+  - title: 命名規則
+    url: "/get-started/naming-conventions.html"
+  - title: 書式ルール
+    entries:
+    - title: CLIコマンド
+      url: "/get-started/formatting-cli-commands.html"
+    - title: スクリプトコマンド
+      url: "/get-started/formatting-rules-for-script-commands.html"
+    - title: Windows PowerShell の場合
+      url: "/get-started/formatting-cli-commands-in-windows-powershell.html"
+  - title: 詳細なエラーレポート
+    url: "/get-started/detailed-error-reporting.html"
+  - title: 終了ステータス
+    url: "/get-started/exit-status.html"
+  - title: スクリプトファイルにコメントを追加します
+    url: "/get-started/adding-comments-to-a-script-file.html"
+  - title: スクリプトコマンドのガイドライン
+    url: "/get-started/usage-guidelines.html"
+  - title: ファームウェアの互換性レベル
+    url: "/get-started/firmware-compatibility-levels.html"
+- title: SMcli httpsモード
+  url: "/get-started/new-https-mode.html"
+- title: ボリュームグループの移動
+  url: "/get-started/learn-about-volume-group-migration.html"

@@ -1,0 +1,353 @@
+---
+permalink: commands-a-z/set-controller.html 
+sidebar: sidebar 
+keywords: set, controller 
+summary: set controllerコマンドは、コントローラの属性を定義します。 
+---
+= コントローラを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set controllerコマンドは、コントローラの属性を定義します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set controller [(a|b)]
+[availability=(online | offline | serviceMode)]
+[ethernetPort [(1| 2)] ethernetPortOptions]
+[globalNVSRAMByte [nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[hostNVSRAMByte [hostType, nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[IPv4GatewayIP=ipAddress]
+[IPv6RouterAddress=ipv6Address]
+[iscsiHostPort [portLabel] iscsiHostPortOptions]
+[rloginEnabled=(TRUE | FALSE)]
+[serviceAllowedIndicator=(on | off)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+プロパティを定義するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。コントローラを指定しないと、コントローラのファームウェアから構文エラーが返されます。
+
+
+
+ a| 
+可用性
+ a| 
+コントローラのモード。「online」、「offline」、または「serviceMode」（service）に設定できます。
+
+
+
+ a| 
+ethernetPort`
+ a| 
+管理イーサネットポートの属性（オプション）。このパラメータで指定できるエントリについては、このあとの構文要素の表を参照してください。IPアドレス、ゲートウェイアドレス、サブネットマスクアドレスなどの多数の設定を指定できます。
+
+
+
+ a| 
+「globalNVSRAMByte」と入力します
+ a| 
+コントローラNVSRAMの一部。領域内の開始バイトオフセットを使用して変更する領域と、NVSRAMに格納される新しいデータのバイト値またはビット値を指定します。
+
+
+
+ a| 
+「hostNVSRAMByte」と入力します
+ a| 
+ホスト固有の領域のNVSRAM。特定のホストのホストインデックス、領域内の開始オフセット、バイト数、およびNVSRAMに格納される新しいデータのバイト値またはビット値を指定します。
+
+
+
+ a| 
+'IPv4GatewayIP'
+ a| 
+ネットワークへのインターフェイスを提供するノードのIPアドレス。IPv4ゲートウェイのアドレス形式は、*（0 ~ 255）.（0 ~ 255）.（0 ~ 255）.（0 ~ 255）.（0 ~ 255）*です
+
+
+
+ a| 
+IPv6RouterAddress
+ a| 
+2つ以上の論理サブネットを接続するIPv6ルータのIPアドレス。IPv6ルータのアドレス形式は'(0–FFFF):(0–FFFF):(0–FFFF):(0–FFFF):(0–FFFF):(0–FFFF):(0–FFFF):(0)–FFFF)`です
+
+
+
+ a| 
+「iscsiHostPort」のように入力します
+ a| 
+このパラメータでは、コントローラのiSCSIポートのオプションを設定できます。iSCSIポートのラベルまたは番号を入力し、そのポートのオプションを選択します。
+
+詳細については、以下の「iSCSIホストポートラベルの識別」セクションを参照してください。
+
+
+
+ a| 
+rloginEnabled
+ a| 
+リモートログイン機能をオンにするかオフにするかの設定。リモートログイン機能をオンにするには、このパラメータを「true」に設定します。リモートログイン機能をオフにするには、このパラメータをFALSEに設定します。
+
+
+
+ a| 
+「serviceAllowedIndicator」というメッセージが表示されます
+ a| 
+保守操作可能インジケータライトをオンにするかオフにするかの設定。保守操作可能インジケータライトをオンにするには、このパラメータを「オン」に設定します。保守操作可能インジケータライトをオフにするには、このパラメータを「オフ」に設定します。
+
+|===
+
+
+== iSCSIホストポートラベルの特定
+
+ホストポートのラベルを指定する必要があります。ホストポートのラベルを指定する手順は、次のとおりです。
+
+. iSCSIホスト・ポートのポート・ラベルがわからない場合は、「show controller」コマンドを実行します。
+. 結果のHost interfaceセクションで、選択するホストポートを特定します。
++
+[NOTE]
+====
+ポート・ラベルは'Port'フィールドに返される完全な値です
+
+====
+. ポートラベルの値全体を引用符と角かっこで囲みます。["portLabel"]たとえば、ポートラベルが「Ch 2」の場合は、iSCSIホストポートを次のように指定します。
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+Windowsのコマンドラインを使用していて、ラベルにパイプ（|）が含まれている場合は、文字をエスケープする必要があります（｛キャレット｝を使用）。エスケープしない場合は、コマンドと解釈されます。たとえば、ポートラベルが「e0b|0b'」の場合は、iSCSIホストポートを次のように指定します。
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+下位互換性のために、引用符と角かっこではなく角かっこ[]で囲まれているiscsiPortNumberも、引き続きE2700、E5600、EF560の各コントローラ（およびEシリーズまたはEFシリーズの他の旧世代コントローラ）に使用できます。これらのコントローラでは、iscsiPortNumberの有効な値は次のとおりです。
+
+* ホストポートが統合されたコントローラの場合、番号は3、4、5、または6です。
+* ホストインターフェイスカード上にのみホストポートがあるコントローラの場合、番号は1、2、3、または4です。
+
+
+以前の構文の例を次に示します。
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== ethernetPortパラメータのオプション
+
+[listing]
+----
+enableIPv4=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=[(static | dhcp)] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+duplexMode=(TRUE | FALSE) |
+----
+[listing]
+----
+portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
+----
+
+
+== iSCSIHostPortパラメータのオプション
+
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=(static | dhcp) |
+----
+[listing]
+----
+IPv6ConfigurationMethod=(static | auto) |
+----
+[listing]
+----
+IPv4GatewayIP=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6HopLimit=[0-255] |
+----
+[listing]
+----
+IPv6NdDetectDuplicateAddress=[0-256] |
+----
+[listing]
+----
+IPv6NdReachableTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdRetransmitTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdTimeOut=[0-65535] |
+----
+[listing]
+----
+IPv4Priority=[0-7] | IPv6Priority=[0-7] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094] |
+----
+[listing]
+----
+maxFramePayload=[*frameSize*] |
+----
+[listing]
+----
+tcpListeningPort=[3260, 49152-65536] |
+----
+[listing]
+----
+portSpeed=[( 10 | 25)]
+----
+
+
+== 注：
+
+[NOTE]
+====
+ファームウェア・バージョン7.75より前の「set controller」コマンドでは、「NVSRAMByte」パラメータがサポートされていました。「NVSRAMByte」パラメータは廃止されており、「hostNVSRAMByte」パラメータまたは「globalNVSRAMByte」パラメータのいずれかに置き換える必要があります。
+
+====
+このコマンドではパラメータを1つ以上指定できます。すべてのパラメータを使用する必要はありません。
+
+「availability」パラメータを「serviceMode」に設定すると、代替コントローラがすべてのボリュームの所有権を取得します。指定したコントローラはボリュームの割り当てをすべて削除され、ボリュームの所有権の取得を拒否するようになります。サービス・モードは'availability'パラメータが'online]に設定されるまで'リセット・サイクルとパワー・サイクルを越えて維持されます
+
+NVSRAM情報を表示するには'show controller NVSRAMコマンドを使用しますNVSRAMに変更を加える場合は、事前にテクニカルサポートに連絡して変更可能なNVSRAMの領域を確認してください。
+
+duplexModeオプションをTRUEに設定すると'選択したEthernetポートは全二重に設定されますデフォルト値は半二重です(duplexModeパラメータは'FALSE'に設定されています)
+
+IPv4設定またはIPv6設定が確実に適用されるようにするには'iscsiHostPort'オプションを次のように設定する必要があります
+
+* enableIPV4 ='true
+* enableIPV6=「true
+
+
+IPv6アドレススペースは128ビットです。コロンで区切られた8つの16ビット16進ブロックで表されます。
+
+maxFramePayloadオプションは'IPv4とIPv6で共有されます標準イーサネット・フレームのペイロード部分は1500に設定され、ジャンボ・イーサネット・フレームは9000に設定されます。ジャンボフレームを使用している場合は、ネットワークパス内のすべてのデバイスが大きなフレームサイズを処理できる必要があります。
+
+portSpeedオプションは、メガビット/秒（Mb/秒）で表されます。
+
+iscsiHostPortパラメータのportSpeedオプションの値は'メガビット/秒（Mb/s）単位です
+
+次の値は'iscsiHostOptions'のデフォルト値です
+
+* IPv6HopLimit`オプションは64`です。
+* IPv6NdReachableTimeオプションは30000ミリ秒です。
+* IPv6NdRetransmitTime`オプションは1000ミリ秒です。
+* IPv6NdTimeOut'オプションは30000ミリ秒です。
+* tcpListeningPortオプションは'326`です
+
+
+
+
+== 最小ファームウェアレベル
+
+7.15で'bootp'パラメータが削除され'新しいEthernetポート・オプションと新しいiSCSIホスト・ポート・オプションが追加されました
+
+7.50で、「IPV4Gateway」パラメータと「IPV6RouterAddress」パラメータがiSCSIホストポートオプションからコマンドに移動されました。
+
+7.60で'iscsiHostPort'パラメータのportSpeedオプションが追加されました
+
+7.75で、「NVSRAMByte」パラメータが廃止されました。
+
+8.10で、iSCSIホストポートの識別方法が改定されました。

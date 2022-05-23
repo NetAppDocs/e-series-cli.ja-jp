@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-snapvolume.html 
+sidebar: sidebar 
+keywords: show, snapshot, volumes 
+summary: show snapVolumeコマンドは、1つ以上のSnapshotボリュームに関する情報を返します。 
+---
+= Snapshotボリュームの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show snapVolumeコマンドは'1つ以上のスナップショット・ボリュームに関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show (allSnapVolumes | snapVolume pass:quotes[["_snapVolumeName_"]] |
+snapVolumes pass:quotes[["_snapVolumeName1_" ... "_snapVolumeNamen_"]])
+[summary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allSnapVolumes」を参照してください
+ a| 
+ストレージアレイ内のすべてのSnapshotボリュームに関する情報を返すためのパラメータ。
+
+
+
+ a| 
+「SnapVolume」
+ a| 
+情報を取得するSnapshotボリュームの名前。Snapshotボリューム名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「snapVolumes」を参照してください
+ a| 
+情報を取得する複数のSnapshotボリュームの名前。以下のルールを使用して、Snapshotボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「概要」
+ a| 
+Snapshotボリュームに関する概要情報をリストで返すための設定。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+このコマンドから返されるSnapshotボリューム情報の例を次に示します。
+
+[listing]
+----
+SNAPSHOT VOLUME (SNAPSHOT-IMAGE BASED) SUMMARY
+----
+[listing]
+----
+SUMMARY
+
+ Total Snapshot Volumes: 1
+   Most Recent Snapshot Volume: Day month date hh:mm:ss yyyy
+   Status: 1 Optimal, 0 Non Optimal
+
+   Name        Type       Status     Capacity    Associated Base Volume
+   2_SV_0001   Standard   Optimal    3.000 GB    2
+----
+[listing]
+----
+   Snapshot Volume Timestamp   Snapshot Image Timestamp    Mode
+   1/23/12 6:44:31 PM IST      1/23/12 6:27:36 PM IST      Read Write
+----
+[listing]
+----
+   Total Repository Capacity   Available Repository Capacity
+   1.199 GB                    0.125 MB (0%)
+----
+モニタのサイズによって、情報がどのように折り返されるかが決まり、情報がどのように表示されるかが決まります。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

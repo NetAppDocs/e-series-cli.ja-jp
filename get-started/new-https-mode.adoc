@@ -1,0 +1,154 @@
+---
+permalink: get-started/new-https-mode.html 
+sidebar: sidebar 
+keywords: new, smcli, https mode 
+summary: 新しいSMcliは、追加のセキュリティ機能を提供するhttpsモードで動作します。 
+---
+= SMcli httpsモード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcliは、追加のセキュリティ機能を提供する「* https *」モードで動作します。
+
+[NOTE]
+====
+現在SANtricity 11.52以前を使用している場合は、従来のCLIを使用してSANtricity の最新バージョンにアップグレードできません。SANtricity 11.52からそれ以降のバージョンへのアップグレードは、SMcliを使用してのみ実行できます。
+
+====
+11.42バージョンのCLIを使用する場合は、次のいずれかのモードでスクリプトエンジンが作成されます。
+
+* `*https*`--セキュリティ機能を追加して、RESTベースのスクリプトエンジンを作成します。
+* `*symbol*`--シンボルベースのスクリプトエンジンが作成される。
+
+
+「* https *」クライアントで利用できる新しいセキュリティ機能：
+
+* 高度なセキュリティを確保するには、信頼された証明書を使用する証明書認証が必要-k'オプションを使用すると'自己署名証明書を使用し'非セキュア・モードでコマンドを実行できます
+* ロールベースアクセス管理を使用して、さまざまなセキュリティ権限をさまざまなロールに割り当てることができます。ユーザ名引数を指定してコマンドを実行するには'-uオプションを使用します
+* 以前は'*symbol*'モードで使用可能だったパスワード引数を'*https*'モードで使用して'特定のユーザロールのパスワードを指定することもできます-pオプションは'コマンド・ラインでパスワードを指定するために使用しますまたは'-Pオプションは'ファイルまたはstdin'からパスワードを読み込むことができます
+
+
+このトピックのいくつかの例では、新しいコマンドラインパラメータを使用しています。
+
+
+
+== パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がアレイにインストールされている
+
+次の例では、ユーザ名とパスワードの両方のオプションが指定されており、信頼された証明書がアレイにインストールされています。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がアレイにインストールされていない
+
+次の例では'ユーザー名とパスワードの両方のオプションが提供されていますが'信頼された証明書はアレイにインストールされておらず'-kオプションは使用されていません次の例は、返される出力を示しています。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Unable to establish a secure connection to the storage array as we were unable to confirm the connection is secure.
+Please configure the storage array to use a trusted security certificate. If the problem persists, contact Technical Support.
+
+SMcli failed.
+----
+
+
+== パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がインストールされていないが、-kを指定して自己署名証明書を使用します
+
+次の例では、前の例と同様にユーザ名とパスワードの両方のオプションが指定されていますが、信頼された証明書がアレイにインストールされていません。ただし'この場合は'-kオプションを使用して自己署名証明書を使用しています
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+----
+この例では'*symbol*'クライアント・モードを使用していますコマンドを正常に完了するには'passwordオプションのみが必要です
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -p adminPassword -c "set storageArray cacheBlockSize=4;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 読み取り専用の操作、symbolクライアントモード
+
+この例では'*symbol*'クライアント・モードで'ユーザー名もパスワードも指定されていませんこのコマンドは、読み取り専用の処理の場合にのみ正常に完了します。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1  -c "show allVolumes;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+STANDARD/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 読み取り専用の処理、httpクライアントモード
+
+次の例では'読み取り専用操作を使用していますが'*https*'クライアント・モードでは'ユーザ名とパスワードの両方が必要であり'自己署名証明書を受け入れるために'-kとともに指定されていますクライアント・モードでは'読み取り専用操作の場合でもパスワードが必要です
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "show allVolumes;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+THICK/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----

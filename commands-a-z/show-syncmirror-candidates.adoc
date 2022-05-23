@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/show-syncmirror-candidates.html 
+sidebar: sidebar 
+keywords: show, synchronous, mirror, volume, candidates 
+summary: show SyncMirror candidatesコマンドは、同期ミラーリング構成のセカンダリボリュームとして使用できる、リモートストレージアレイのボリューム候補に関する情報を返します。 
+---
+= 同期ミラーリングのボリューム候補を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show SyncMirror candidatesコマンドは'同期ミラーリング構成のセカンダリ・ボリュームとして使用できる'リモート・ストレージ・アレイ上のボリューム候補に関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、一部制限付きで個々のストレージアレイを環境 接続します。E2700またはE5600のアレイに対して実行する場合は、制限はありません。
+
+[NOTE]
+====
+E2800またはE5700アレイに対して実行する場合は、クライアントタイプを「symbol」に設定する必要があります。クライアント・タイプがhttpsに設定されている場合'このコマンドは実行されません
+
+====
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドの以前のバージョンでは、機能識別子は「remoteMirror」でした。この機能識別子は有効ではなくなり' SyncMirror に置き換えられます
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show syncMirror candidates primary="_volumeName_"
+remoteStorageArrayName="_storageArrayName_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「プライマリ」
+ a| 
+リモートミラーペアのプライマリボリュームにするローカルボリュームの名前。プライマリボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+remoteStorageArrayName
+ a| 
+セカンダリボリュームの候補となるボリュームが配置されているリモートストレージアレイ。リモートストレージアレイ名に特殊文字が含まれている場合は、リモートストレージアレイ名も二重引用符（""）で囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+5.40

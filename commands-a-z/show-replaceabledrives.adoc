@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-replaceabledrives.html 
+sidebar: sidebar 
+keywords: show, replaceable, drives 
+summary: show replaceableDrivesコマンドを使用すると、ストレージアレイ内の交換可能ドライブがすべて表示されます。 
+---
+= 交換可能ドライブを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show replaceableDrivesコマンドを使用すると、ストレージアレイ内の交換可能ドライブがすべて表示されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ストレージアレイ内の各交換可能ドライブについて次の情報を返します。
+
+* トレイの場所とスロットの場所
+* ドライブが属するボリュームグループの名前
+* WWN（World Wide Name）
+* ドライブのステータス
+
+
+
+
+== 構文
+
+[listing]
+----
+show replaceableDrives
+----
+
+
+== 出力例
+
+[listing]
+----
+Replaceable drive at Tray 0, Slot 3
+                Volume group: 2
+                World-wide name: 5000c50028785aff0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 23
+                Volume group: 2
+                World-wide name: 5000c500095d46df0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 24
+                Volume group: 2
+                World-wide name: 5000c500287854d70000000000000000
+                Status: Removed
+----
+
+
+== 最小ファームウェアレベル
+
+7.10

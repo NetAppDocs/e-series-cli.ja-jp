@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/start-drivechannel-locate.html 
+sidebar: sidebar 
+keywords: start, drive, channel, locate 
+summary: start driveChannel locateコマンドは、特定のドライブチャネルに接続されているドライブトレイのインジケータライトを点灯することで、そのドライブトレイを特定します。 
+---
+= ドライブチャネルの特定を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start driveChannel locateコマンドは'特定のドライブチャネルに接続されているドライブトレイのインジケータライトを点灯することによって'そのドライブトレイを識別します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ドライブトレイのインジケータライトをオフにするには'stop driveChannel locateコマンドを使用します
+
+
+
+== 構文
+
+[listing]
+----
+start driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)] locate
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+driveChannel
+ a| 
+特定するドライブチャネルの識別番号。ドライブ・チャネルの有効な識別番号は'1''2'3`'4''5''です '6`'7`'または'8`ドライブチャネルの識別番号は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10
+
+7.15で、ドライブチャネル識別子の更新が追加されました。

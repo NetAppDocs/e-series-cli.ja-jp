@@ -1,0 +1,112 @@
+---
+permalink: commands-a-z/start-cgsnapimage-rollback.html 
+sidebar: sidebar 
+keywords: start, consistency, group, snapshot, rollback 
+summary: start cgSnapImage rollbackコマンドを実行すると、Snapshot整合性グループ内のメンバーベースボリュームへのロールバック処理が開始されます。 
+---
+= 整合性グループのSnapshotロールバックを開始する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start cgSnapImage rollbackコマンドは'スナップショット・コンシステンシ・グループのメンバー・ベース・ボリュームへのロールバック操作を開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ベースボリュームの内容は、整合性グループのSnapshotボリュームの任意の時点の内容に合わせてすぐに変更されます。ロールバック処理が完了すると、ベースボリュームに対する読み取り/書き込み要求をすぐに実行できるようになります。
+
+整合性グループのSnapshotボリュームに関連付けられているリポジトリボリュームは、ロールバック処理の完了後に発生するベースボリュームと整合性グループSnapshotボリューム間の新しい変更を引き続き追跡します。
+
+メンバーベースボリュームへのロールバック処理を停止するには、「stop cgSnapImage rollback」コマンドを使用します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start cgSnapImage pass:quotes[["_snapCGID:imageID_"]] rollback
+memberVolumeSet pass:quotes[("_memberVolumeName1_" ... "_memberVolumeNameN_")]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「cgSnapImage」をクリックします
+ a| 
+ロールバック処理を開始する整合性グループのSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子。
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新--スナップショットグループで作成された最新のスナップショットイメージを表示する場合に'このオプションを使用します
+* oldest --スナップショットグループで作成された最も古いスナップショットイメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「memberVolumeSet」をクリックします
+ a| 
+整合性グループ内のロールバックするメンバーベースボリュームの名前。各メンバーベースボリューム名は、二重引用符（""）で囲んだ上で丸かっこで囲みます。
+
+ボリューム名は複数入力できます。すべてのボリューム名は一組の角かっこ（[]）で囲みます。各ボリューム名は二重引用符（""）で囲みます。ボリューム名はそれぞれスペースで区切ります。
+
+memberVolumeSet'パラメータが使用されない場合'ロールバック・プロセス環境 はコンシステンシ・グループのすべてのメンバー・ボリュームを処理します
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、CG1という名前の整合性グループ内にある最新のSnapshotイメージのロールバック処理を開始する場合は、次のコマンドを使用します。
+
+[listing]
+----
+start cgSnapImage ["CG1:newest"] rollback;
+----
+CG2という名前の整合性グループ内にあるベースボリュームメンバーmemVol1、memVol2、memVol3のSnapshotイメージ12345のロールバック処理を開始するには、次のコマンドを使用します。
+
+[listing]
+----
+start cgSnapImage ["CG2:12345"] rollback memberVolumeset=("memVol1 memVol2 memVol3");
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

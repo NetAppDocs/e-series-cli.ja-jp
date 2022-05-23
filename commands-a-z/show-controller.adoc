@@ -1,0 +1,191 @@
+---
+permalink: commands-a-z/show-controller.html 
+sidebar: sidebar 
+keywords: show, controller 
+summary: show controllerコマンドは、コントローラに関する情報を返します。 
+---
+= コントローラを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show controllerコマンドは、コントローラに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ストレージアレイ内の各コントローラについて次の情報を返します。
+
+* ステータス（オンラインまたはオフライン）
+* 現在のファームウェアとNVSRAMの設定
+* 保留中のファームウェア設定とNVSRAM設定（存在する場合）
+* ボードID
+* 製品ID
+* 製品リビジョン
+* シリアル番号
+* 製造日
+* キャッシュサイズまたはプロセッササイズ
+* コントローラが設定されている日付と時刻
+* 関連付けられているボリューム（優先所有者を含む）
+* イーサネットポート
+* 物理ディスクインターフェイス
+* Fibre Channelホストインターフェイスのみに適用されるホストインターフェイス
+
+
+
+
+== 構文
+
+[listing]
+----
+show (allControllers | controller [(a|b)])
+ [summary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allControllers」
+ a| 
+ストレージアレイ内の両方のコントローラに関する情報を返すための設定。
+
+
+
+ a| 
+「controller」と入力します
+ a| 
+ストレージアレイ内の特定のコントローラに関する情報を返すための設定。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「概要」
+ a| 
+ストレージアレイ内の両方のコントローラに関する概要情報をリストで返すための設定。
+
+|===
+
+
+== 注：
+
+次に、show controllerコマンドによって返される情報の例を示します。この例で示されているのはあくまでも出力であり、ストレージアレイ構成のベストプラクティスを示すものではありません。
+
+[listing]
+----
+Controller in slot A
+
+   Status: Online
+   Current configuration
+      Firmware version: 96.10.21.00
+         Appware version: 96.10.21.00
+         Bootware version: 96.10.21.00
+      NVSRAM version: N4884-610800-001
+   Pending configuration
+      Firmware version: Not applicable
+         Appware version: Not applicable
+         Bootware version: Not applicable
+      NVSRAM version: Not applicable
+      Transferred on: Not applicable
+   Board ID: 4884
+   Product ID: INF-01-00
+   Product revision: 9610
+   Serial number: 1T14148766
+   Date of manufacture: October 14, 2006
+   Cache/processor size (MB): 1024/128
+   Date/Time: Wed Feb 18 13:55:53 MST 2008
+   Associated Volumes (* = Preferred Owner):
+      1*, 2*, CTL 0 Mirror Repository*, Mirror Repository 1*,
+      JCG_Remote_MirrorMenuTests*
+   Ethernet port: 1
+      MAC address: 00:a0:b8:0c:c3:f5
+      Host name: ausctlr9
+      Network configuration: Static
+      IP address: 172.22.4.249
+      Subnet mask: 255.255.255.0
+      Gateway: 172.22.4.1
+      Remote login: Enabled
+   Drive interface: Fibre
+      Channel: 1
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 2
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 3
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Drive interface: Fibre
+      Channel: 4
+      Current ID: 125/0x1
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+   Host interface: Fibre
+      Port: 1
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f6
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+   Host interface: Fibre
+      Port: 2
+      Current ID: Not applicable/0xFFFFFFFF
+      Preferred ID: 126/0x0
+      NL-Port ID: 0x011100
+      Maximum data rate: 2 Gbps
+      Current data rate: 1 Gbps
+      Data rate control: Switch
+      Link status: Up
+      Topology: Fabric Attach
+      World-wide port name: 20:2c:00:a0:b8:0c:c3:f7
+      World-wide node name: 20:2c:00:a0:b8:0c:c3:f5
+      Part type: HPFC-5200    revision 10
+----
+summaryパラメータを使用すると、ドライブチャネル情報とホストチャネル情報を含まない情報のリストが返されます。
+
+show storageArrayコマンドは、コントローラに関する詳細情報も返します。
+
+
+
+== 最小ファームウェアレベル
+
+5.43で'summary'パラメータが追加されました

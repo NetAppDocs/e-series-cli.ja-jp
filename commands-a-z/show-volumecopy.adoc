@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/show-volumecopy.html 
+sidebar: sidebar 
+keywords: show, volume, copy 
+summary: show VolumeCopyコマンドは、ボリュームコピー操作に関する情報を返します。 
+---
+= ボリュームコピーの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show VolumeCopyコマンドは'ボリューム・コピー操作に関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ボリュームコピー処理に関する次の情報を返します。
+
+* コピーステータス
+* 開始タイムスタンプ
+* 完了タイムスタンプ
+* コピー優先度
+* ソースボリュームまたはターゲットボリュームのWorld Wide Identifier（WWID）
+* ターゲットボリュームの読み取り専用属性設定
+
+
+ストレージアレイ内の特定のボリュームコピーペアまたはすべてのボリュームコピーペアの情報を取得できます。このコマンドは、Snapshotボリュームコピーペアに対して有効です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show volumeCopy (allVolumes | source pass:quotes[["_sourceName_"]] |
+target pass:quotes[["_targetName_"]])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allVolumes」
+ a| 
+すべてのボリュームコピーペアでのボリュームコピー処理に関する情報を返すための設定。
+
+
+
+ a| 
+「source」を参照してください
+ a| 
+情報を取得するソースボリュームの名前。ソースボリューム名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「target」と入力します
+ a| 
+情報を取得するターゲットボリュームの名前。ターゲットボリューム名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+|===

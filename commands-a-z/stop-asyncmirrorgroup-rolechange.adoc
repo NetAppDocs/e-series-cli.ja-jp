@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/stop-asyncmirrorgroup-rolechange.html 
+sidebar: sidebar 
+keywords: cancel, asynchronous, mirror, group, role, reversal 
+summary: stop asyncMirrorGroup RoleChangeコマンドは、非同期ミラーグループ間の保留中のロール反転処理をキャンセルします。 
+---
+= 非同期ミラーグループのロール反転をキャンセルします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop asyncMirrorGroup RoleChangeコマンドは'非同期ミラーグループ間の保留中のロール反転操作をキャンセルします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop asyncMirrorGroup [_asyncMirrorGroupName_]] rolechange
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+保留中のロール反転処理をキャンセルする非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名が特殊文字を含んでいる場合または数字のみで構成される場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.84

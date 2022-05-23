@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-sasphybaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, sas, phy, baseline 
+summary: reset storageArray SASSPHYBaselineコマンドは、すべてのデバイスのSAS物理レイヤ（SAS PHY）ベースラインをリセットし、.csvファイルからエラーのリストを削除します。 
+---
+= ストレージアレイのSAS PHYベースラインをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray SASSPHYBaseline'コマンドは'すべてのデバイスのSAS物理層（SAS PHY）ベースラインをリセットし'.csvファイルからエラーのリストを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+「save storageArray SASSPHYCounts」コマンドを実行すると、「.csv」ファイルが生成されます。
+
+[NOTE]
+====
+以前のリリースのreset storageArray SASSPHYBaseline'コマンドでは'ドライブを除くすべてのデバイスのエラー数がクリアされていましたこれで'reset storageArray SASSPHYBaseline'コマンドは'ドライブおよびその他のデバイスのSAS PHYベースラインをリセットするようになりましたすべてのエラーは'.csvファイルから削除されます
+
+====
+
+
+== 構文
+
+[listing]
+----
+reset storageArray SASPHYBaseline
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+6.10
+
+7.83で、ドライブのSAS PHYベースラインがリセットされました。

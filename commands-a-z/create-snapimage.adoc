@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/create-snapimage.html 
+sidebar: sidebar 
+keywords: create, snapshot, image 
+summary: create snapImageコマンドは、1つ以上の既存のSnapshotグループに新しいSnapshotイメージを作成します。 
+---
+= Snapshotイメージを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create snapImageコマンドは'1つ以上の既存のスナップショット・グループに新しいスナップショット・イメージを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+Snapshotイメージを作成するには、Snapshotイメージを配置できるSnapshotグループが少なくとも1つ必要です。スナップショット・グループを作成するには'create snapGroupコマンドを使用します
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create snapImage (snapGroup=pass:quotes[_"snapGroupName" |
+snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+Snapshotイメージを格納するSnapshotグループの名前。Snapshotグループの名前は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「snapGroups」を参照してください
+ a| 
+Snapshotイメージを格納する複数のSnapshotグループの名前。以下のルールを使用して、Snapshotグループの名前を入力します。
+
+* すべての名前をかっこで囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+Snapshotイメージは、関連付けられている_base_volumeの内容の論理的なポイントインタイムイメージです。Snapshotイメージは即座に作成され、その瞬間のベースボリュームの状態を記録します。すべてのSnapshotイメージは、ちょうど1_snapshot group_のコンテキストで作成されます。Snapshotグループは、関連付けられているベースボリュームの一連のSnapshotイメージです。Snapshotグループには、Snapshotイメージのすべてのデータを保存するために使用される1_repository volume_usedがあります。Snapshotグループ内のSnapshotイメージには、特定の順序があります。Snapshotイメージの順序を指定することで、特定のSnapshotイメージのベースボリュームへのリストアや不要になったSnapshotイメージの削除など、Snapshotイメージの管理が可能になります。
+
+整合性グループのSnapshotイメージを作成すると、その整合性グループのすべてのメンバーボリュームのSnapshotイメージとなります。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

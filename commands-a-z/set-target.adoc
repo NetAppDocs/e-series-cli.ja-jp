@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/set-target.html 
+sidebar: sidebar 
+keywords: set, target, properties 
+summary: set targetコマンドは、認証方式とエイリアス名など、iSCSI / iSERターゲットのプロパティを変更します。 
+---
+= ターゲットのプロパティを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set target'コマンドは'認証方式やエイリアス名など'iSCSI/iSERターゲットのプロパティを変更します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、廃止されたを置き換えます xref:set-isertarget.adoc[iSERターゲットを設定します] および xref:set-iscsitarget.adoc[iSCSIターゲットのプロパティを設定します] コマンド
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+set target (["targetAliasName"] | <"targetQualifiedName">) (authenticationMethod=(none | chap chapSecret="newSecurityKey") | targetAlias="newAliasName")
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「target」と入力します
+ a| 
+設定するターゲットを指定できます。ターゲットのエイリアス名または修飾名（iqnなど）を指定できます。ターゲット識別子は二重引用符（""）で囲みます。また、識別子がエイリアスである場合は角かっこ（[]）、修飾名である場合は山かっこ（<>）で囲む必要があります。
+
+
+
+ a| 
+「authenticationMethod」を指定します
+ a| 
+セッションの認証方法を設定できます。有効な選択肢は「none」または「chap」です。
+
+
+
+ a| 
+「チャプターシークレット」
+ a| 
+ピア接続を認証するためのセキュリティキーを入力できます。これは、「authenticationMethod」が「CHAP」に設定されている場合にのみ該当します。
+
+
+
+ a| 
+targetAlias
+ a| 
+ターゲットの新しいエイリアス名を指定できます。名前は二重引用符（""）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

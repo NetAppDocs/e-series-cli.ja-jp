@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-cgsnapimage.html 
+sidebar: sidebar 
+keywords: show, consistency, group, snapshot, image 
+summary: show CGSnapImageコマンドを使用すると、1つ以上のSnapshot整合性グループに含まれる1つまたは複数のSnapshotイメージが表示されます。 
+---
+= 整合性グループのSnapshotイメージの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show CGSnapImage」コマンドは、1つ以上のSnapshot整合性グループに含まれる1つまたは複数のSnapshotイメージを表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show ((CGSnapImage pass:quotes[[(_CGSnapImageName_ | _CGSnapImageSequenceNumber_)]]) |
+(CGSnapImages pass:quotes[[(_CGSnapImageNumber1_ ... _CGSnapImageNumbern_ |
+_CGSnapImageSequenceNumber1_ ... _CGSnapImageSequenceNumbern_)]]) |
+allCGSnapImages
+[summary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「CGSnapImage」または「CGSnapImages」
+ a| 
+整合性グループ内のSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* 整合グループの名前
+* 整合性グループ内のSnapshotイメージの識別子。
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* 整合性グループ内のSnapshotのシーケンス番号である整数値。
+* 最新--コンシステンシ・グループで作成された最新のスナップショット・イメージを表示する場合に'このオプションを使用します
+* oldest --コンシステンシ・グループで作成された最も古いスナップショット・イメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+複数のSnapshotイメージ名またはシーケンス番号を入力できます。すべてのSnapshotイメージ名を二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。Snapshotイメージ名はそれぞれスペースで区切ります。
+
+
+
+ a| 
+「allCGSnapImages」を参照してください
+ a| 
+整合性グループのすべてのSnapshotイメージを返すための設定。
+
+
+
+ a| 
+「概要」
+ a| 
+ストレージアレイ内のすべてのSnapshotイメージの概要情報をリストで返すための設定。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshot整合性グループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、Snapshot整合性グループsnapCGroup1内のSnapshotイメージ12345を表示する場合は、次のコマンドを使用します。
+
+[listing]
+----
+show CGsnapImage ["snapCGroup1:12345"];
+----
+Snapshot整合性グループsnapCGroup1内の最も新しいSnapshotイメージを表示する場合は、次のコマンドを使用します。
+
+[listing]
+----
+show CGsnapImage ["snapCGroup1:newest"];
+----
+複数のSnapshot整合性グループsnapCGroup1、snapCGroup2、snapCGroup3内のSnapshotイメージを表示するには、次のコマンドを使用します。
+
+[listing]
+----
+show CGsnapImages ["snapCGroup1:12345 snapCGroup2:newest snapCGroup3:oldest"];
+----
+上記の例では、Snapshot整合性グループの名前とSnapshotイメージの識別子がコロン（：）で区切られています。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

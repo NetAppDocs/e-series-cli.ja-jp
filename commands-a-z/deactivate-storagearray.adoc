@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/deactivate-storagearray.html 
+sidebar: sidebar 
+keywords: deactivate, asynchronous, mirroring 
+summary: これにより、非同期ミラーリング機能が非アクティブ化されます。 
+---
+= 非同期ミラーリングを非アクティブ化する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「これには、ストレージの非アクティブ化機能」を使用します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+非同期ミラーリング機能を非アクティブ化する前に、既存のすべての非同期ミラーグループまたは非同期ミラーペアを、ローカルストレージアレイとリモートストレージアレイから削除する必要があります。
+
+
+
+== 構文
+
+[listing]
+----
+deactivate storageArray feature=asyncRemoteMirror
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+7.84

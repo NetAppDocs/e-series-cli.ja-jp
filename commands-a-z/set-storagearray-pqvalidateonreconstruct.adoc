@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/set-storagearray-pqvalidateonreconstruct.html 
+sidebar: sidebar 
+keywords: set, storage, array, pq validation, reconstruct 
+summary: set storageArray pqValidateOnReconstructコマンドは、再構築時のストレージアレイのP/Q検証を設定します。この機能を有効にすると、データ+Pとデータ+Qの両方を使用してデータが再構築され、再構築結果の整合性がチェックされたうえで、続行方法が決定されます。 
+---
+= 再構築時のストレージアレイPQ検証の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray pqValidateOnReconstructコマンドは、再構築時のストレージアレイのP/Q検証状態を設定します。この機能を有効にすると、データ+Pとデータ+Qの両方を使用してデータが再構築され、再構築結果の整合性がチェックされたうえで、続行方法が決定されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この機能には、環境 ディスクプールと、デュアルパリティを備えたRAID 6ボリュームグループがあります。この場合、1本のドライブで障害が発生してもボリュームグループまたはディスクプールでの冗長性が確保されるため、再構築時にデータとパリティの整合性をチェックすることが可能です。再構築時に不整合が検出された場合、ボリュームでData Assuranceが有効になっていれば、不整合の発生源を特定し、残りのドライブを使用してデータを再構築することができます。この機能が有効で、ボリュームでData Assuranceが有効になっていない場合、あるいは不整合が複数のドライブにまたがる場合、再構築されるブロックは読み取り不能とマークされます。
+
+SSDドライブでは検証によって再構築時間が長くなる可能性があるため、この機能はメディアタイプに応じて有効または無効にすることができます。特定のメディアタイプに対してこの機能を有効にすると、そのメディアタイプを使用するすべてのプールおよびRAID 6ボリュームグループに適用されます。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd | ssd | allMedia)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+pqValidateOnReconstruct`
+ a| 
+再構築時のP/Q検証を変更します。
+
+
+
+ a| 
+「enable」または「disable」
+ a| 
+再構築時のP/Q検証を有効または無効にします。
+
+
+
+ a| 
+driveMediaType
+ a| 
+再構築時のP/Q検証を設定するドライブメディアタイプ。次のドライブメディアタイプがサポートされています。
+
+* 「hdd」は、ハードディスクドライブの検証状態を設定することを示します
+* 「ssd」は、ソリッド・ステート・ディスク上で検証状態を設定することを示します
+* allMediaは'ストレージ・アレイ内のすべてのメディアに対して検証状態を設定することを示します
+
+
+|===
+
+
+== ドライブメディアタイプにハードディスクドライブを指定する例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct enable driveMediaType=hdd;"
+
+SMcli completed successfully.
+----
+
+
+== ドライブメディアタイプにソリッドステートドライブを指定する例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct disable driveMediaType=ssd;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.42

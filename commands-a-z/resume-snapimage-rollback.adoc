@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/resume-snapimage-rollback.html 
+sidebar: sidebar 
+keywords: resume, snapshot, image, rollback 
+summary: 'Resume(Resume) SnapImageロールバックコマンドは"一時停止状態になったロールバック操作を再開します' 
+---
+= Snapshotイメージのロールバックを再開します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+RESUME SnapImage rollbackコマンドは'一時停止状態になったロールバック・オペレーションを再開します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+処理のエラーが原因で、ロールバック処理が一時停止状態になることがあります。これにより、ストレージアレイの要注意状態が発生します。
+
+ロールバック処理を再開できない場合は、選択したSnapshotイメージが一時停止状態に戻り、要注意状態が表示されます。
+
+[NOTE]
+====
+オンラインボリュームコピーに関与するSnapshotイメージには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+resume snapImage pass:quotes[[_snapImageName_]] rollback
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapImage」
+ a| 
+ロールバック処理を再開するSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新-スナップショット・グループで作成された最新のスナップショット・イメージを表示する場合に'このオプションを使用します
+* oldest - Snapshotグループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、snapgroup1という名前のSnapshotグループ内にあるSnapshotイメージ12345のロールバック処理を再開する場合は、次のコマンドを使用します。
+
+[listing]
+----
+resume snapImage ["snapgroup1:12345"] rollback;
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,148 @@
+---
+permalink: commands-a-z/set-emailalert.html 
+sidebar: sidebar 
+keywords: configure, email, alert, set 
+summary: set emailAlertコマンドは、指定されたテクニカルサポートまたは組織にEメールを送信するようにEメールを設定します。Eメールアラートには、イベントの概要、影響を受けるストレージに関する詳細情報、およびお客様の連絡先情報が含まれています。 
+---
+= Eメールアラートを設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set emailAlertコマンドは'指定されたテクニカル・サポートまたは組織に電子メールを送信するように電子メールを設定しますEメールアラートには、イベントの概要、影響を受けるストレージに関する詳細情報、およびお客様の連絡先情報が含まれています。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、およびEF300ストレージアレイを環境 します。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、管理ドメイン内のすべてのアレイを環境 コマンドで指定します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+set emailAlert
+    serverAddress=pass:quotes["_serverAddress_"] |
+    serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]
+    serverPort=pass:quotes[_port value_] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+    senderAddress=pass:quotes["_emailAddress_"] |
+    additionalContactInfo=pass:quotes["_filename_"]  |
+    (recipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_")] |
+ addRecipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_"))]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「serverAddress」と入力します
+ a| 
+Eメールサーバのアドレスを設定できます。Eメールサーバのアドレスには、完全修飾ドメイン名、IPv4アドレス、またはIPv6アドレスを使用できます。
+
+
+
+ a| 
+「serverEncryption」
+ a| 
+サーバとの通信に使用される暗号化。次のいずれかの値を指定できます。
+
+* `_none_`-暗号化なし
+* `_smtps_`- SSL/TLS接続を作成する(暗黙的なTLS)
+* `_STARTTLS -暗号化されていない接続を作成し'SSL/TLSセッションを確立します(明示的TLS)
+
+
+
+
+ a| 
+「サーバポート」
+ a| 
+サーバへの接続に使用するTCPポート。デフォルト値は暗号化タイプによって異なります。
+
+* `_none_`-デフォルトはポート25です
+* `_smtps_`-デフォルトはポート465です
+* `_STARTTLS -デフォルトでポート587に設定します
+
+
+
+
+ a| 
+「serverUsername」と入力します
+ a| 
+サーバに認証クレデンシャルを提供するユーザ名。ユーザ名を指定する場合は、パスワードも指定する必要があります。
+
+
+
+ a| 
+「serverPassword」と入力します
+ a| 
+サーバに認証クレデンシャルを提供するためのパスワード。パスワードを指定する場合は、ユーザ名も指定する必要があります。
+
+
+
+ a| 
+「senderAddress」
+ a| 
+送信者のEメールアドレスを設定できます。
+
+
+
+ a| 
+「additionalContactInfo」
+ a| 
+Eメールアラートで使用する追加の連絡先情報が含まれているファイル名を指定できます。
+
+
+
+ a| 
+「受信者住所」
+ a| 
+受信者Eメールアドレスを設定できます。この設定オプションを使用すると、既存のEメールアドレスが消去されます。すべての名前をかっこで囲みます。各名前は二重引用符（""）で囲みます。名前はそれぞれスペースで区切ります。
+
+
+
+ a| 
+「addRecipientAddressesアドレス」
+ a| 
+受信者Eメールアドレスを既存のリストに追加できます。すべての名前をかっこで囲みます。各名前は二重引用符（""）で囲みます。名前はそれぞれスペースで区切ります。
+
+|===
+
+
+== 例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "set emailAlert
+   serverAddress="email.server.domain.com"
+    serverEncryption=pass:quotes[("_smtps_")] |
+    serverPort=pass:quotes["_smtps_"] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+   senderAddress=\no-reply@server.domain.com
+   additionalContactInfo="C:\additionalInfo.txt"
+   recipientAddresses=("\person1@email.domain.com" "\person2@email.domain.com");"
+
+SMcli -n Array1 -c "set emailAlert addRecipientAddresses=("\person3@netapp.com");"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40
+
+11.70.1では'serverEncryption'ServerPort'serverUsername'serverPassword'パラメータが追加されています

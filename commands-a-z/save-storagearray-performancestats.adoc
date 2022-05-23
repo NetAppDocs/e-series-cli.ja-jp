@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-storagearray-performancestats.html 
+sidebar: sidebar 
+keywords: save, storage, array, performance, statistics 
+summary: save storageArray performanceStatsコマンドは、パフォーマンス統計をファイルに保存します。 
+---
+= ストレージアレイのパフォーマンス統計を保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray performanceStatsコマンドは、パフォーマンス統計をファイルに保存します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを使用する前に'set session performanceMonitorInterval'コマンドとset session performanceMonitorIterations'コマンドを実行して'統計情報の収集頻度を指定します
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray performanceStats file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+パフォーマンス統計の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\sastat.csv "
+
+パフォーマンス統計を含むファイルのデフォルト名は'performanceStatistics.csv'です任意のファイル名を使用できますが'.csv拡張子を使用する必要があります
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

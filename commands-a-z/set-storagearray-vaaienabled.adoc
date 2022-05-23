@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-vaaienabled.html 
+sidebar: sidebar 
+keywords: enable, disable, vaai 
+summary: set storageArray vaaiEnabledコマンドは、ストレージアレイのVMware vStorage API Array Architecture（VAAI）をオンまたはオフにします。 
+---
+= VAAIを有効または無効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray vaaiEnabledコマンドは、ストレージアレイのVMware vStorage API Array Architecture（VAAI）をオンまたはオフにします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ストレージアレイでは最初からVAAIがオンになっています。VAAIを実行しない場合や、VAAIが原因でストレージアレイに問題が発生している場合は、このコマンドを使用してVAAIをオフにします。影響を受けるストレージアレイは、コマンドの実行元のストレージアレイのみです。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray vaaiEnabled=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「vaaiEnabled」
+ a| 
+VAAIをオンまたはオフにするための設定。VAAIをオンにするには、このパラメータを「true」に設定します。VAAIをオフにするには、このパラメータを「FALSE」に設定します。デフォルト設定では、VAAIはオンになっています。
+
+|===
+
+
+== 注：
+
+[NOTE]
+====
+VAAIを使用すると、一部のストレージタスクがサーバハードウェアからストレージアレイにオフロードされます。ストレージタスクをストレージアレイにオフロードすると、ホストで実行する必要のあるタスクが削減されるため、ホストのパフォーマンスが向上します。
+
+====
+[NOTE]
+====
+「show storageArray odxSetting」名を使用してVAAI設定を表示します。
+
+====
+
+
+== 最小ファームウェアレベル
+
+8.20で

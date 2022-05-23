@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-emailalert-summary.html 
+sidebar: sidebar 
+keywords: show, email, alert, configuration 
+summary: show emailAlert summaryコマンドは、Eメールアラートの設定情報を表示します。 
+---
+= Eメールアラート設定を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show emailAlert summary」コマンドは、電子メールアラートの設定情報を表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support AdminまたはStorage Monitorロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show emailAlert summary
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show emailAlert summary;"
+
+EMAIL ALERT SETTINGS
+   Mail server address: email@company.com
+   Mail server encryption: starttls
+   Mail server port: 587
+   Mail server user name: accountName
+   Mail server password: secret123
+   Email sender address: no-reply@company.com
+   Recipient Email
+      recipient@company.com
+      recipient-two@company.com
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40
+
+SMTP暗号化を指定するパラメータ（none、smtps、STARTTLS）、SMTPポート、およびSMTPクレデンシャル（ユーザ名とパスワード）を11.70.01に追加しました。

@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/set-snapvolume-mediascanenabled.html 
+sidebar: sidebar 
+keywords: set, snapshot, volume, media, scan 
+summary: set SnapVolume mediaScanEnabledコマンドは、スナップショットボリュームに使用されているドライブ上でメディアスキャンを実行します。 
+---
+= Snapshotボリュームのメディアスキャンの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set snapVolume mediaScanEnabled」コマンドは、スナップショットボリュームに使用されているドライブ上でメディアスキャンを実行します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+必要に応じて、データの冗長性チェックを実行することもできます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]]
+mediaScanEnabled=(TRUE | FALSE) [redundancyCheckEnabled=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapVolume」
+ a| 
+プロパティを設定するSnapshotボリュームの名前。Snapshotボリュームの識別子は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+mediaScanEnabled
+ a| 
+Snapshotボリュームのメディアスキャンをオンまたはオフにするための設定。メディア・スキャンをオンにするには'このパラメータをTRUEに設定しますメディアスキャンをオフにするには、このパラメータを「FALSE」に設定します。（メディアスキャンがストレージアレイレベルで無効になっている場合、このパラメータは機能しません）。
+
+
+
+ a| 
+「redundancyCheckEnabled」
+ a| 
+メディアスキャン中に冗長性チェックをオンまたはオフにするための設定。冗長性チェックをオンにするには'このパラメータをTRUEに設定します冗長性チェックをオフにするには'このパラメータをFALSEに設定します
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

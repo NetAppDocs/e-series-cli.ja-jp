@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/set-controller-dnsservers.html 
+sidebar: sidebar 
+keywords: set, controller, dns 
+summary: set controller dnsServersコマンドは、コントローラのDomain Name System（DNS;ドメインネームシステム）設定を更新します。DNSは、コントローラとネットワークタイムプロトコル（NTP）サーバの完全修飾ドメイン名を解決するために使用されます。 
+---
+= コントローラのDNSを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set controller dnsServers'コマンドは、コントローラのDomain Name System（DNS;ドメインネームシステム）設定を更新します。DNSは、コントローラとネットワークタイムプロトコル（NTP）サーバの完全修飾ドメイン名を解決するために使用されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+作業を開始する前に、次の点を確認します。
+
+* DNSサーバが設定されている。
+* プライマリDNSサーバに障害が発生した場合に備えて、プライマリDNSサーバとバックアップDNSサーバのアドレスを把握しておきます。IPv4アドレスでもIPv6アドレスでもかまいません。
+
+
+[NOTE]
+====
+このコマンドは両方のコントローラに送信する必要があります。このコマンドはコントローラ固有です。
+
+====
+[NOTE]
+====
+アレイの管理ポートを動的ホスト構成プロトコル（DHCP）ですでに設定し、かつ1つ以上のDNSサーバまたはNTPサーバをDHCPセットアップに関連付けている場合は、DNSまたはNTPを手動で設定する必要がありません。この場合、DNS / NTPサーバのアドレスはアレイによってすでに自動的に検出されているはずです。
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+set controller[a] DNSServers=(auto|(Address1 [Address2]))
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「DNSサーバ」
+ a| 
+このパラメータは、コントローラのDNSサーバを設定します。DHCPが提供するDNSサーバを使用するには'auto'を指定しますそれ以外の場合は、1つまたは2つのDNSサーバをスペースで区切って指定します。
+
+[NOTE]
+====
+アレイの管理イーサネットポートは、IPv4プロトコルとIPv6プロトコルを同時にサポートできます。アドレスはIPv4アドレスでもIPv6アドレスでもかまいません。複数のアドレスを指定する場合、アドレスタイプが一致している必要はありません。
+
+====
+複数のアドレスを指定すると、指定した順にアドレスが使用されます（1番目がプライマリアドレス、2番目がバックアップアドレス）。
+
+
+
+ a| 
+「AddressX」
+ a| 
+ipv4address | IPv6Address
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+set controller[a] DNSServers=auto;
+set controller[a] DNSServers=(192.168.1.1);
+set controller[b] DNSServers=(192.168.1.1 192.168.1.105);
+set controller[b] DNSServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 192.168.1.1)
+----
+
+
+== 最小ファームウェアレベル
+
+8.25

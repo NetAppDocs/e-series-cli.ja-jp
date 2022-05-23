@@ -1,0 +1,36 @@
+---
+permalink: get-started/adding-comments-to-a-script-file.html 
+sidebar: sidebar 
+keywords: add, comments, script file 
+summary: スクリプトエンジンは、特定の文字またはコマンドを検索してコメントを表示します。スクリプトファイルには、3つの方法でコメントを追加できます。 
+---
+= スクリプトファイルにコメントを追加します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+スクリプトエンジンは、特定の文字またはコマンドを検索してコメントを表示します。スクリプトファイルには、次の3つの方法でコメントを追加できます。
+
+* 2つのスラッシュ(`//')の後に'行末文字に達するまでコメントとしてテキストを追加しますスクリプトエンジンがコメントの処理後に行末文字を検出できない場合、エラーメッセージが表示されてスクリプト処理が終了します。通常、このエラーは、コメントがスクリプトの末尾に記述されていて、* Enter *キーを押し忘れた場合に発生します。
++
+[listing]
+----
+// Deletes the existing configuration.
+set storageArray resetConfiguration=true;
+----
+* コメントとして「/*」と「*/」の間にテキストを追加します。スクリプトエンジンが開始と終了のコメント表記を検出できない場合、エラーメッセージが表示されてスクリプトの処理が終了します。
++
+[listing]
+----
+/* Deletes the existing configuration */
+set storageArray resetConfiguration=true;
+----
+* スクリプトファイルの実行中に表示するコメントをスクリプトファイルに埋め込むには'show'文を使用します表示するテキストは二重引用符("`")で囲みます
++
+[listing]
+----
+show “Deletes the existing configuration”;
+set storageArray resetConfiguration=true;
+----
+

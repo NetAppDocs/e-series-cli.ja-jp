@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/resume-snapvolume.html 
+sidebar: sidebar 
+keywords: resume, snapshot, volume 
+summary: resume snapVolumeコマンドは、停止したSnapshotボリュームの処理を再開します。 
+---
+= Snapshotボリュームを再開します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+RESUME SnapVolume'コマンドは'停止したスナップショット・ボリューム操作を再開します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+resume snapVolume pass:quotes[[_"snapVolumeName"_]] snapImage=pass:quotes[_"snapCGID:imageID"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapVolume」
+ a| 
+処理を再開するSnapshotボリュームの名前。Snapshotボリューム名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「SnapImage」
+ a| 
+Snapshotボリュームの処理を再開するSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新-スナップショット・グループで作成された最新のスナップショット・イメージを表示する場合に'このオプションを使用します
+* oldest - Snapshotグループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、snapGroup1という名前のSnapshotグループ内にあるSnapshotイメージ12345のSnapshotボリュームの処理を再開する場合は、次のコマンドを使用します。
+
+[listing]
+----
+resume snapVolume ["snapVol1"] snapImage="snapGroup1:12345";
+----
+snapGroup1という名前のSnapshotグループ内にある最新のSnapshotイメージに対するSnapshotボリュームの処理を再開するには、次のコマンドを使用します。
+
+[listing]
+----
+resume snapVolume ["snapVol1"] snapImage="snapGroup1:newest";
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

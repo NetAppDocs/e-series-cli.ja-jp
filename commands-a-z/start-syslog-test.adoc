@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-syslog-test.html 
+sidebar: sidebar 
+keywords: test, syslog, configuration 
+summary: start syslog testコマンドは、サンプルメッセージを送信してsyslog設定をテストします。 
+---
+= syslog設定をテストします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start syslog testコマンドは、サンプルメッセージを送信して、syslog設定をテストします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+start syslog test
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start syslog test;"
+
+The sample alert message was successfully sent to the syslog servers.
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

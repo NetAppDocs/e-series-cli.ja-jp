@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/set-storagearray-usersession.html 
+sidebar: sidebar 
+keywords: set, storage, array, user, session 
+summary: set storageArray userSessionコマンドを使用すると、非アクティブな状態が一定の時間続いたユーザセッションは切断されるよう、System Managerでタイムアウトを設定できます。 
+---
+= ストレージアレイのユーザセッションを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray userSession'コマンドを使用すると、System Managerでタイムアウトを設定して、非アクティブなユーザセッションを指定した時間が経過すると切断されるようにすることができます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+次のいずれかの処理を実行するには、このコマンドを使用します。
+
+* ユーザセッションのタイムアウトを秒単位で設定します。最小タイムアウト値は900秒（15分）です。
+* 0に設定して、セッションタイムアウトをオフにします。
+
+
+
+
+== パラメータ
+
+なし
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray userSession sessionTimeout=n
+----
+
+
+== 最小ファームウェアレベル
+
+8.41

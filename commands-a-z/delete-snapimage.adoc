@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/delete-snapimage.html 
+sidebar: sidebar 
+keywords: delete, snapimage, command, snapshot, images, group, support, array, roles 
+summary: DELETE SnapImageコマンドは、Snapshotグループから1つ以上のSnapshotイメージを削除します。 
+---
+= Snapshotイメージを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete snapImage」コマンドは、1つ以上のSnapshotイメージをSnapshotグループから削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapImage (snapGroup="snapGroupName" |
+snapGroups=("_snapGroupName1"
+... "snapGroupNamen_"))]
+[deleteCount=numberOfSnapImages]
+[retainCount=numberOfSnapImages]
+[ignoreSnapVolume=(TRUE | FALSE)]
+[snapImageID=OLDEST]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapGroup」
+ a| 
+削除するSnapshotイメージを含むSnapshotグループの名前。Snapshotグループの名前は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「snapGroups」を参照してください
+ a| 
+削除するSnapshotイメージを含む複数のSnapshotグループの名前。以下のルールを使用して、Snapshotグループの名前を入力します。
+
+* すべての名前をかっこで囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「deleteCount」を指定します
+ a| 
+Snapshotグループから削除するSnapshotイメージの数。整数値を使用します。
+
+このパラメータは、最も古いSnapshotイメージから順に、指定した数に達するまでSnapshotイメージを削除します。
+
+Snapshotグループ内のすべてのSnapshotイメージの実際の数より大きい数字を入力すると、すべてのSnapshotイメージが削除されます。Snapshotグループは空のままです。
+
+
+
+ a| 
+「RETAINCOUNT」
+ a| 
+Snapshotグループに保持するSnapshotイメージの数。整数値を使用します。
+
+このパラメータは、最新のSnapshotイメージをSnapshotグループ内に保持し、古いSnapshotイメージを削除します。
+
+Snapshotグループ内の既存のSnapshotイメージの数が、入力した数より少ない場合は、Snapshotイメージは削除されません。
+
+
+
+ a| 
+「ignoreSnapVolume」を参照してください
+ a| 
+Snapshotボリュームに関連付けられているSnapshotイメージを削除しない場合は、このパラメータを使用します。次のいずれかの値を使用できます。
+
+* `true'- Snapshotイメージに関連付けられたSnapshotボリュームがある場合でも'この値を使用してSnapshotイメージを削除します
+* FALSE - Snapshotボリュームが関連付けられているときにSnapshotイメージを保持する場合に使用します。
+
+
+デフォルト値は「true」です。
+
+
+
+ a| 
+「snapImageID」
+ a| 
+「snapImageID」パラメータは、「oldest」オプションのみを受け入れます。このパラメータは、最も古いSnapshotイメージを削除します。
+
+|===
+
+
+== 注：
+
+Snapshotグループのリポジトリボリュームから、最も古いSnapshotイメージを削除できます。削除するSnapshotイメージの定義がシステムから削除されます。Snapshotグループのリポジトリボリュームから削除するSnapshotイメージによって占有されていたスペースは解放され、Snapshotグループ内で再利用可能になります。
+
+SnapGroup'パラメータまたはsnapGroupsパラメータとともにその他のパラメータを使用しない場合'デフォルトでは'最も古いスナップショット・イメージが削除されます
+
+Snapshotイメージが削除されると、そのSnapshotイメージ用に存在するSnapshotボリュームは停止状態に移行します。
+
+このコマンドは、コントローラがロックダウンモードのときは実行されません。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

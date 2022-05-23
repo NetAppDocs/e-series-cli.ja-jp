@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/stop-storagearray-configdbdiagnostic.html 
+sidebar: sidebar 
+keywords: stop, storage, array, configuration, database, diagnostic 
+summary: stop storageArray configDbDiagnosticコマンドは、start storageArray configDbDiagnosticコマンドで開始されたコントローラファームウェア内の構成データベースを検証するための診断テストを停止します。 
+---
+= ストレージアレイの構成データベース診断を停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop storageArray configDbDiagnostic'コマンドは'start storageArray configDbDiagnostic'コマンドによって起動されたコントローラ・ファームウェアの構成データベースを検証する診断テストを停止します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+stop storageArray configDbDiagnostic
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+コントローラファームウェアは、診断テストがキャンセルされたことを確認するメッセージを返します。
+
+また、ストレージ管理ソフトウェアのGUIからデータベース構成の診断テストを開始することもできます。ただし、ストレージ管理ソフトウェアのGUIから診断テストを停止することはできません。実行中の診断テストを停止するには'stop storageArray configDbDiagnostic'コマンドを使用する必要があります
+
+ストレージ・アレイの構成の検証が完了した後に'stop storageArray configDbDiagnostic'コマンドを使用しようとすると'検証が完了したことを示すメッセージは表示されませんこれは想定される動作です。
+
+
+
+== 最小ファームウェアレベル
+
+7.75
+
+7.77で、用法が見直されました。

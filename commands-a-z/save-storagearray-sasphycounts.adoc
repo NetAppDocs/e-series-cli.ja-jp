@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-storagearray-sasphycounts.html 
+sidebar: sidebar 
+keywords: save, storage, array, sas, phy, counts 
+summary: save storageArray SASSPHYCountsコマンドは、SAS物理レイヤ（SAS PHY）カウンタをファイルに保存します。 
+---
+= ストレージアレイのSAS PHYカウンタを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray SASSPHYCountsコマンドは、SAS物理レイヤ（SAS PHY）カウンタをファイルに保存します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+SAS PHYカウンタをリセットするには、「reset storageArray SASSPHYBaseline.」コマンドを実行します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray SASPHYCounts file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+SAS PHYカウンタの保存先となるファイルパスとファイル名。ファイルパスとファイル名は二重引用符（ "" ）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\sasphy.csv
+
+SAS PHYエラー統計を格納するファイルのデフォルト名は'SAS-phy-error-log.csv'です任意のファイル名を使用できますが'.csv拡張子を使用する必要があります
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

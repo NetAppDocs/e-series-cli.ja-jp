@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, message, collection, schedule 
+summary: SMcli -autoSupportSchedule showコマンドは、日単位と週単位の両方のAutoSupport メッセージの収集と処理のスケジュールを表示します。 
+---
+= AutoSupport メッセージ収集スケジュールを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli -autoSupportSchedule showコマンドは、日単位と週単位の両方のAutoSupport メッセージの収集と処理のスケジュールを表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+自動サポートバンドル収集のスケジュールに関しては、次の点に注意してください。
+
+* AutoSupport が有効な場合、管理ソフトウェアは日単位のAutoSupport メッセージと週単位のAutoSupport メッセージの両方を送信します。
+* 管理ソフトウェアは、日単位と週単位のメッセージに関しては時刻を、週単位のメッセージに関しては曜日を、ランダムに選択します。
+* 管理ソフトウェアは、1つの管理ドメイン内の2つのストレージアレイがスケジュールされたAutoSupport メッセージを同時に送信しないように対処します。
+* SMcli -autoSupportSchedule resetコマンドを使用すると、優先される時間帯（時間単位）を指定し、管理ドメイン内のストレージ・アレイの日単位と週単位の両方のメッセージを送信できます。週単位のメッセージのスケジュールに関しては、コマンドを使用して優先される曜日を選択します。
+
+
+
+
+== 構文
+
+[listing]
+----
+SMcli -autoSupportSchedule show
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== 例
+
+出力には、優先される時間帯に続けて、日単位と週単位のスケジュールが表示されます。
+
+[NOTE]
+====
+両方のスケジュールの優先される時間帯および曜日を選択しない場合、このコマンドは、ストレージ管理ソフトウェアがランダムに選択した日単位のスケジュールおよび週単位のスケジュールを表示します。
+
+====
+[listing]
+----
+SMcli -autoSupportSchedule show
+The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+Name           Daily Schedule         Weekly Schedule
+Accounting     12:55 AM               10:08 PM on Thursdays
+Finance        12:02 AM               10:30 PM on Saturdays
+
+SMcli completed successfully.
+----

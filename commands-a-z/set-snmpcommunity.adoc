@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/set-snmpcommunity.html 
+sidebar: sidebar 
+keywords: update, snmp, community 
+summary: set snmpcommunityコマンドは、既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティに新しい名前を設定します。 
+---
+= SNMPコミュニティを更新します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set snmpcommunity」コマンドは、既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティに新しい名前を作成します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snmpCommunity communityName=pass:quotes["_snmpCommunityName_"]
+newCommunityName=pass:quotes["_newSnmpCommunityName_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「CommunityName」の略
+ a| 
+名前を変更する既存のSNMPコミュニティの名前。SNMPコミュニティ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「newCommunityName」と入力します
+ a| 
+SNMPコミュニティに付ける新しい名前。SNMPコミュニティ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

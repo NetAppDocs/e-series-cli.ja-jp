@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: set, consistency, group, snapshot, volume 
+summary: set cgSnapVolumeコマンドは、整合性グループのSnapshotボリュームに一意の名前を作成します。 
+---
+= 整合性グループのSnapshotボリュームを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set cgSnapVolumeコマンドは'整合性グループのスナップショット・ボリュームに一意の名前を作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set cgSnapVolume pass:quotes[[_cgSnapVolumeName_]]
+userLabel=pass:quotes["_cgSnapVolumeName_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+cgSnapVolume
+ a| 
+名前を変更する整合性グループのボリュームの名前。整合性グループのSnapshotボリュームの名前は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+整合性グループのSnapshotボリュームに付ける新しい名前。新しいSnapshotボリューム名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

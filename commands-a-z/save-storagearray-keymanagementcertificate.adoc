@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, external, key management, certificate 
+summary: save storageArray keyManagementCertificateコマンドは、インストールされている証明書を取得します。 
+---
+= インストールされている外部キー管理証明書を取得します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray keyManagementCertificateコマンドは、インストールされている証明書を取得します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementCertificate certificateType=pass:quotes["_certificateType_"]
+file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「certificateType」
+ a| 
+インストールする証明書のタイプを指定できます。有効な選択肢は「client」または「server」です。
+
+
+
+ a| 
+'file'
+ a| 
+署名済み証明書またはサーバCA証明書のファイル名を指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.40

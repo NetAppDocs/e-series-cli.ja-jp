@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/create-snmpcommunity.html 
+sidebar: sidebar 
+keywords: register, snmp, community 
+summary: create snmpcommunityコマンドは、新しい簡易ネットワーク管理プロトコル（SNMP）コミュニティ、コミュニティ名文字列を作成し、新しいコミュニティを既知のエンティティとしてSNMPエージェントに登録します。既存のコミュニティと同じ名前の新しいコミュニティを登録しようとすると拒否され、ファームウェアからエラーメッセージが返されます。 
+---
+= SNMPコミュニティの登録
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create snmpcommunityコマンドは、新しい簡易ネットワーク管理プロトコル（SNMP）コミュニティ、コミュニティ名ストリングを作成し、新しいコミュニティを既知のエンティティとしてSNMPエージェントに登録します。既存のコミュニティと同じ名前の新しいコミュニティを登録しようとすると拒否され、ファームウェアからエラーメッセージが返されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create snmpCommunity communityName=pass:quotes[_"snmpCommunityName"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「CommunityName」の略
+ a| 
+作成するSNMPコミュニティの名前。SNMPコミュニティ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

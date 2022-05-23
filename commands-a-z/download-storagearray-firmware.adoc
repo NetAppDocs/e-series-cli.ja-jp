@@ -1,0 +1,143 @@
+---
+permalink: commands-a-z/download-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: download, storage, array, firmware, command, downloads, optionally, values, controllers, role, context, parameter 
+summary: download storageArray firmwareコマンドは、ファームウェア、および必要に応じてストレージアレイコントローラのNVSRAM値をダウンロードします。 
+---
+= ストレージアレイのファームウェア/ NVSRAMをダウンロードします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download storageArray firmware'コマンドは、ファームウェアと、オプションでストレージアレイコントローラのNVSRAM値をダウンロードします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+NVSRAM値のみをダウンロードする場合は、「download storageArray NVSRAM」コマンドを使用します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+download storageArray firmware [, NVSRAM ]
+pass:quotes[file="_filename_" [, "_NVSRAM-filename_"]]
+[downgrade=(TRUE | FALSE)
+activateNow=(TRUE | FALSE)
+healthCheckMelOverride=(TRUE | FALSE)
+healthCheckNeedsAttnOverride=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+NVSRAM
+ a| 
+このパラメータは、ファームウェアファイルをダウンロードするときに、NVSRAM値を含むファイルをダウンロードします。このパラメータには角かっこを含めないでください。'firmware'パラメータの後にカンマを含めます
+
+
+
+ a| 
+'file'
+ a| 
+このパラメータは、ファイルパスと、ファームウェアが含まれているファイル名を指定します。ファイルパスとファイル名は二重引用符（ "" ）で囲みます。例：
+
+`file="C:\Program Files\CLI\dnld\saferm.dlp "`
+
+有効なファイル名の拡張子は「.dlp」です。
+
+
+
+ a| 
+「NVSRAMファイル名」
+ a| 
+このパラメータは、ファイルパスと、NVSRAM値が含まれているファイル名を指定します。NVSRAMファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\dnld\saferm.dlp有効なファイル名には'.dlpという拡張子が付いています
+
+ファームウェアとNVSRAMの両方をダウンロードする場合は、ファイル名の前にカンマを含めます。
+
+
+
+ a| 
+「downgrade`」
+ a| 
+[CAUTION]
+====
+*ストレージアレイの設定に損傷の可能性*-以前のバージョンのコントローラファームウェアまたはNVSRAMを誤ってダウンロードすると、コントローラが損傷したり、データアクセスが失われる可能性があります。このパラメータを使用する前に、テクニカルサポートにお問い合わせください。
+
+====
+この設定を使用すると、以前のバージョンのファームウェアをロードできます。デフォルト値は'FALSE'です以前のバージョンのファームウェアをダウンロードする場合は'downgrade]パラメータをtrueに設定します
+
+[NOTE]
+====
+NVSRAMのみをダウンロードする場合は、このパラメータは無効です。
+
+====
+
+
+ a| 
+「activateNow」と入力します
+ a| 
+この設定により、ファームウェアイメージとNVSRAMイメージがアクティブになります。デフォルト値は「true」です。'activateNow'パラメータを'FALSE'に設定した場合は'activate storageArray firmware'コマンドを実行して'ファームウェアとNVSRAMをあとでアクティブにする必要があります
+
+[NOTE]
+====
+NVSRAMのみをダウンロードする場合は、このパラメータは無効です。
+
+====
+
+
+ a| 
+「healthCheckMelOverride」
+ a| 
+この設定は、メジャーイベントログ（MEL）の健全性チェックの結果より優先されます。MELの検証は引き続き行われ、バイパスされません。MELのチェックに失敗した場合は、コマンドの実行時にこのパラメータを使用することで、エラーをバイパスできます。
+
+ダウンロードの前に、コントローラがイベントログをチェックし、新しいコントローラファームウェアのダウンロードを妨げる可能性のあるイベントが発生したかどうかを確認します。そのようなイベントが発生した場合、コントローラは、通常は新しいファームウェアをダウンロードしません。
+
+このパラメータを指定すると、コントローラは新しいファームウェアを強制的にダウンロードします。デフォルト値は'FALSE'ですコントローラに新しいコントローラファームウェアを強制的にダウンロードさせる場合は、この値を「true」に設定します。
+
+
+
+ a| 
+「healthCheckNeedsAttnOverride」
+ a| 
+この設定は、特定の一連の要注意状態からの健全性チェックの結果を上書きします。特定の条件セットに対する要注意の検証が引き続き行われ、バイパスされません。Needs Attentionチェックに失敗した場合は、コマンドの実行時にこのパラメータを使用することで、エラーをバイパスできます。
+
+ダウンロードの前に、コントローラは特定の要注意状態をチェックし、新しいコントローラファームウェアのダウンロードを妨げる可能性のある障害が発生したかどうかを判断します。そのようなイベントが発生した場合、コントローラは、通常は新しいファームウェアをダウンロードしません。
+
+このパラメータを指定すると、コントローラは新しいファームウェアを強制的にダウンロードします。デフォルト値は'FALSE'ですコントローラに新しいコントローラファームウェアを強制的にダウンロードさせる場合は、この値を「true」に設定します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+5.00
+
+8.10で、「* healthCheckMelOverride *」パラメータが追加されました。
+
+8.70で'*healthCheckNeedsAttnOverride*'パラメータが追加されました。

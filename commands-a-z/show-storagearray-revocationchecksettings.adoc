@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/show-storagearray-revocationchecksettings.html 
+sidebar: sidebar 
+keywords: show, certificate, revocation, check, set 
+summary: show storageArray revocationCheckSettingsコマンドを使用すると、ストレージアレイの証明書失効設定を表示できます。 
+---
+= 証明書失効チェック設定を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray revocationCheckSettingsコマンドを使用すると、ストレージアレイの証明書失効設定を表示できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== パラメータ
+
+なし
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray revocationCheckSettings
+----
+
+
+=== 例
+
+[listing]
+----
+SMcli -n Array1 c "show storageArray revocationCheckSettings;"
+Revocation Checking: Disabled
+OCSP Responder Server URL: https://ocspResponderURL.com
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.42

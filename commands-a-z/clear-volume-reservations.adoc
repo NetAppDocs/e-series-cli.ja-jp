@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/clear-volume-reservations.html 
+sidebar: sidebar 
+keywords: clear, volume, reservations 
+summary: clear volume reservationsコマンドは、永続的なボリューム予約をクリアします。 
+---
+= ボリュームリザベーションをクリアします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+clear volume reservation'コマンドは'永続的なボリューム予約をクリアします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+clear (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_"volumeName1" ... "volumeNameN"_]]) reservations
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allVolumes」
+ a| 
+ストレージアレイのすべてのボリュームで永続的なボリューム予約をクリアするための設定。
+
+
+
+ a| 
+「 volume 」
+ a| 
+永続的予約をクリアするボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「ボリューム」
+ a| 
+永続的予約をクリアする複数のボリュームの名前。以下のルールを使用して、メンバーボリュームの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+|===
+
+
+== 注：
+
+名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。

@@ -1,0 +1,149 @@
+---
+permalink: commands-a-z/create-snapshot-volume.html 
+sidebar: sidebar 
+keywords: create, snapshot, volume 
+summary: create snapVolumeコマンドは、ベースボリュームのSnapshotイメージに対して読み取り/書き込みが可能なSnapshotボリュームを作成します。 
+---
+= Snapshotボリュームを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create snapVolumeコマンドは'ベース・ボリュームのスナップショット・イメージの読み取り/書き込み機能を持つスナップショット・ボリュームを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+Snapshotボリュームをホストにマッピングすると、ホスト書き込みはすべて、Snapshotボリュームに関連付けられているリポジトリボリュームに配置されます。新しいSnapshotボリュームを既存のリポジトリボリュームに割り当てることができます。また、ボリュームグループまたはディスクプールに新しいリポジトリボリュームを作成することもできます。
+
+[NOTE]
+====
+オンラインボリュームコピーで使用されているSnapshotイメージには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create snapVolume userLabel=pass:quotes[_"snapVolumeName_" snapImageID="_snapCGID:imageID_"]
+[(repositoryVolume="repos_xxxx"]
+[repositoryVolume=pass:quotes[_(volumeGroupName_]pass:quotes[[capacity=_capacityValue_]]]
+[repositoryVolume=pass:quotes[(_diskPoolName_]pass:quotes[[capacity=_capacityValue_])]]
+[repositoryFullLimit=pass:quotes[_percentValue_]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+Snapshotボリュームに付ける名前。Snapshotボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「snapImageID」
+ a| 
+新しいSnapshotボリュームに追加するSnapshotイメージの英数字識別子。Snapshotイメージの識別子は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新-スナップショット・グループで作成された最新のスナップショット・イメージを表示する場合に'このオプションを使用します
+* oldest - Snapshotグループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+リポジトリボリューム
+ a| 
+Snapshotイメージの変更されたデータが格納されるリポジトリボリュームの名前。
+
+リポジトリボリュームの名前を定義する方法は2つあります。
+
+* 既存のリポジトリボリューム名を使用します
+* このコマンドを実行するときに新しいリポジトリボリュームを作成します
+
+
+既存のリポジトリボリュームの名前は次の2つの部分で構成されます。
+
+* 「repos」という用語
+* ストレージ管理ソフトウェアがリポジトリボリューム名に割り当てる4桁の数値識別子
+
+
+既存のリポジトリボリュームの名前は二重引用符（""）で囲みます。
+
+このコマンドを実行するときに新しいリポジトリボリュームを作成する場合は、リポジトリボリュームを含めるボリュームグループまたはディスクプールの名前を入力する必要があります。必要に応じて、リポジトリボリュームの容量を定義することもできます。容量を定義する場合は、次の値を使用できます。
+
+* ベースボリュームの容量の割合を表す整数値
+* ベースボリュームの容量の割合を表す小数値
+* リポジトリボリュームの具体的なサイズ。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます
+
+
+容量オプションを使用しない場合は、ストレージ管理ソフトウェアによって、ベースボリュームの容量の20%に設定されます。
+
+このコマンドを実行すると、ストレージ管理ソフトウェアによって、Snapshotボリューム用のリポジトリボリュームが作成されます。
+
+
+
+ a| 
+repositoryFullLimit
+ a| 
+リポジトリの容量がこの割合に達すると、Snapshotリポジトリボリュームの上限に近づいているという警告が表示されます。整数値を使用します。たとえば、70という値は70%を意味します。デフォルト値は75です。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+Snapshotイメージの識別子は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの名前
+* Snapshotイメージの識別子
+
+
+たとえば、snapGroup1という名前を持つSnapshotグループ内の最新のSnapshotイメージを使用し、リポジトリボリュームの容量の上限を80%として、snapData1という名前のSnapshotボリュームを作成する場合は、次のコマンドを使用します。
+
+[listing]
+----
+create snapVolume userLabel="snapData1" snapImageID="snapGroup1:newest"
+repositoryVolume="repos_1234" repositoryFullLimit=80;
+----
+リポジトリボリュームの識別子は、新しいSnapshotグループを作成するときに、ストレージ管理ソフトウェアおよびファームウェアによって自動的に作成されます。リポジトリボリュームの名前は変更できません。名前を変更すると、Snapshotイメージとのリンクが切断されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-volumegroup-forcedstate.html 
+sidebar: sidebar 
+keywords: set, volume, group, forced, state 
+summary: set volumeGroup forcedStateコマンドは、ボリュームグループを強制状態に移行します。 
+---
+= ボリュームグループの強制状態を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set volumegroup forcedState'コマンドは'ボリュームグループを強制状態に移行します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+start volumeGroup importコマンドを使用してボリュームグループをインポート済みの状態に移行しない場合、またはハードウェアエラーのためにインポート操作が機能しない場合は、このコマンドを使用します。強制状態のボリュームグループはインポート可能です。インポート後にハードウェアエラーを特定できます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set volumeGroup pass:quotes[[_volumeGroupName_]] forcedState
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+強制状態に移行するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+ボリュームグループを構成するドライブを、あるストレージアレイから別のストレージアレイに移動できます。CLIには、ドライブを移動するためのコマンドが3つあります。コマンドは'start volumeGroup export'start volumeGroup import'およびset volumeGroup forcedState'です
+
+強制状態のボリュームグループにはインポート処理を実行できます。
+
+
+
+== 最小ファームウェアレベル
+
+7.10

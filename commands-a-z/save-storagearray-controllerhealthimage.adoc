@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-controllerhealthimage.html 
+sidebar: sidebar 
+keywords: save, storage, array, controller, health, image 
+summary: save storageArray controllerHealthImageコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイのコントローラヘルスイメージを、ホスト上の指定されたファイルに保存します。 
+---
+= ストレージアレイコントローラのヘルスイメージを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray controllerHealthImage'コマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイのコントローラヘルスイメージを、ホスト上の指定されたファイルに保存します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン8.20で'coredump'パラメータは'controllerHealthImage'パラメータに置き換えられました
+
+====
+ストレージアレイがコントローラヘルスイメージ機能をサポートしていない場合、コマンドはエラーを返します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray controllerHealthImage file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+コントローラヘルスイメージの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+[listing]
+----
+file="C:\Array Backups\DBMbackup_03302010.core"
+----
+|===
+
+
+== 注：
+
+コントローラヘルスイメージファイルは、サイズが1~2ギガバイト程度になり、保存に数分を要します。このコマンドは、コントローラヘルスイメージ自体を保存するとともに、コントローラヘルスイメージのメタデータを基にXML記述子ファイルを生成します。この記述子ファイルは、コントローラヘルスイメージと同じパスにZIPファイル形式で保存されます。次の例は、この記述子ファイルのXML形式を示しています。
+
+[listing]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+- <DPLcontrollerHealthImageInfo>
+<dplcontrollerHealthImageTag>sometag#</dplcontrollerHealthImageTag>
+<captureTime>12/22/10 3:58:53 PM IST</captureTime>
+- <StorageArrayData>
+<ArraySAID>600a0b80006e006a000000004c65efc1</ArraySAID>
+<ManagementApiVersion>devmgr.v1083api01.Manager</ManagementApiVersion>
+<fwVersion>07.83.01.00</fwVersion>
+<platformType>7091</platformType>
+</StorageArrayData>
+<fullcontrollerHealthImageCtlr>controllerserialNumber1
+     </fullcontrollerHealthImageCtlr>
+<fullcontrollerHealthImageSize>fullCaptureSize</fullcontrollerHealthImageSize>
+<altcontrollerHealthImageCtlr>controllerserialNumber2</altcontrollerHealthImage
+     Ctlr>
+<altcontrollerHealthImageSize>altCaptureSize</altcontrollerHealthImageSize>
+<triggerReason>Exception</triggerReason>-<DPLcontrollerHealthImageDetail>
+<dplcontrollerHealthImageReason>DPLcontrollerHealthImageReason
+     </dplcontrollerHealthImageReason>
+- <fwLocation >
+<filename>filename</filename>
+<lineNumber>line#</lineNumber>
+</fwLocation >
+<panicReason>panicString</panicReason>
+</DPLcontrollerHealthImageDetail>
+</DPLcontrollerHealthImageInfo>
+----
+コントローラヘルスイメージをコントローラキャッシュからホストに取得すると、コントローラヘルスイメージの取得が不要であることを示すフラグがコントローラに設定されます。この設定は48時間持続します。この期間に新しいコントローラヘルスイメージが発生すると、新しいコントローラヘルスイメージがコントローラキャッシュに保存され、キャッシュ内の以前のコントローラヘルスイメージが上書きされます。
+
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+8.20で'coredump'パラメータが'controllerHealthImage'パラメータに置き換えられました

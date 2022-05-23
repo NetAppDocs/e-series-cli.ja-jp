@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/start-storagearray-controllerhealthimage-controller.html 
+sidebar: sidebar 
+keywords: start, storage, array, controller, health, image 
+summary: start storageArray controllerHealthImage controllerコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、ストレージアレイコントローラのヘルスイメージを作成します。 
+---
+= ストレージアレイコントローラのヘルスイメージの開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start storageArray controllerHealthImage controllerコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、ストレージアレイコントローラヘルスイメージを作成します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン8.20で'coredump'パラメータは'controllerHealthImage'パラメータに置き換えられました
+
+====
+[NOTE]
+====
+このコマンドは、必ずテクニカルサポートの指示に従って使用してください。
+
+====
+ストレージアレイがコントローラヘルスイメージ機能をサポートしていない場合、コマンドはエラーを返します。
+
+
+
+== 構文
+
+[listing]
+----
+start storageArray controllerHealthImage controller [(a|b)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+このパラメータは、コントローラのヘルスイメージの作成元のコントローラを指定します。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。コントローラを指定しないと、ストレージ管理ソフトウェアから構文エラーが返されます。
+
+|===
+
+
+== 注：
+
+このコマンドは、選択したコントローラのコアデータを強制的にキャッシュにダンプします。キャッシュデータのコピーをホストファイルに保存するには、「save storageArray controllerHealthImage」コマンドを使用します。
+
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+8.20で'coredump'パラメータが'controllerHealthImage'パラメータに置き換えられました

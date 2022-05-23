@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/set-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: set, autosupport, message, collection, schedule, individual, E2800, E5700, arrays 
+summary: set storageArray storageArray autoSupport AutoSupport コマンドは、AutoSupport メッセージを送信する毎日/毎週の時間と曜日を設定します。 
+---
+= AutoSupport メッセージの収集スケジュールを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray autoschedule' AutoSupport コマンドは、AutoSupport メッセージを送信する毎日および毎週の時間と曜日を設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+* AutoSupport が有効な場合、管理ソフトウェアは日単位のAutoSupport メッセージと週単位のAutoSupport メッセージの両方を送信します。
+* 管理ドメイン内のストレージアレイについて、毎日および毎週のどのタイミングでメッセージを送信するかの範囲（時間単位）を指定できます。
+* 週次スケジュールの場合は、AutoSupport による収集と送信を優先する曜日を選択します。
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport schedule dailyTime=pass:quotes[_startTime-endTime_]
+ [dayOfWeek=(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)]
+weeklyTime=pass:quotes[_startTime-endTime_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「dailyTime」
+ a| 
+<`startTime`>-<`endTime`>-すべてのストレージアレイのAutoSupport データの収集を開始および終了する時刻を指定しますstartTimeとendTimeは24時間形式のHH：00で、時刻を指定する必要があります。たとえば、午後9時などです「21：00」と入力する必要があります。
+
+
+
+ a| 
+「DayOfWeek」
+ a| 
+（Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday）AutoSupport バンドル収集データの収集を優先する曜日（日曜~土曜）を指定します（複数可）。「DayOfWeek」パラメータは、括弧で囲み、スペースで区切る必要があります。
+
+
+
+ a| 
+「weeklyTime」
+ a| 
+<`startTime`>-<`endTime`>-選択した曜日ごとにAutoSupport バンドル収集データの収集を開始および終了する時刻を指定します。「startTime」と「endTime」はHH：MM[am|pm]の形式で指定する必要があります。
+
+|===
+
+
+=== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 weeklyTime=1:00-5:00;"
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 dayOfWeek=(Monday Friday) weeklyTime=1:00-5:00;"
+
+SMcli completed successfully.
+----
+
+
+=== 検証
+
+スケジュールの変更結果を確認するには、「show storageArray autoSupport AutoSupport 」コマンドを使用します。
+
+
+
+== 最小ファームウェアレベル
+
+8.40

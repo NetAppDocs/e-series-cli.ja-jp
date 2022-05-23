@@ -1,0 +1,407 @@
+---
+permalink: commands-a-z/show-storagearray.html 
+sidebar: sidebar 
+keywords: show, storage, array 
+summary: show storageArrayコマンドは、ストレージアレイに関する設定情報を返します。 
+---
+= ストレージアレイを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArrayコマンドは'ストレージ・アレイに関する構成情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+パラメータを指定すると、ストレージアレイのコンポーネントと機能の値がリスト形式で返されます。1つまたは複数のパラメータを指定してコマンドを入力できます。パラメータを指定せずにコマンドを入力すると、ストレージ・アレイ・プロファイル全体が表示されます（「* profile *」パラメータを入力した場合と同じ情報）。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray
+[autoSupport| autoSupportConfig | profile |
+batteryAge | connections | defaultHostType | healthStatus |
+hostTypeTable | hotSpareCoverage | features | time |
+volumeDistribution | longRunningOperations | summary | preferredVolumeOwners |
+iscsiNegotiationDefaults | unconfiguredIscsiInitiators | autoLoadBalancingEnable |
+cacheMirrorDataAssuranceCheckEnable | hostConnectivityReporting]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+autoLoadBalancingEnable
+ a| 
+自動ロードバランシング機能の有効設定ステータスを返すためのパラメータ。
+
+[NOTE]
+====
+自動ロードバランシング機能を有効にすると、ホスト接続レポート機能も有効になります。
+
+====
+
+
+ a| 
+「AutoSupport 」
+ a| 
+[NOTE]
+====
+このパラメータは、「https」クライアントタイプで実行されているE2800またはE5700ストレージアレイに対してのみ有効です。E2800またはE5700ストレージアレイがクライアントタイプで実行されている場合は、「autoSupportConfig」パラメータを使用します。
+
+====
+
+
+ a| 
+'autoSupportConfig'
+ a| 
+サポートデータの自動収集処理の現在の状態を返すためのパラメータ。次の情報が返されます。
+
+* 処理が有効か無効か
+* サポートデータファイルが格納されているフォルダの場所
+
+
+[NOTE]
+====
+このパラメータは、「symbol」クライアントタイプで実行されているE2800またはE5700ストレージアレイに対してのみ有効です。E2800またはE5700ストレージ・アレイがHTTPSクライアント・タイプで稼働している場合はAutoSupport *パラメータを使用します
+
+====
+
+
+ a| 
+「batteryAge」
+ a| 
+ステータス、バッテリの寿命（日数）、およびバッテリの交換が必要になるまでの日数を表示するためのパラメータ。両方のバッテリの情報が表示されます。
+
+
+
+ a| 
+cacheMirrorDataAssuranceCheckEnable`
+ a| 
+キャッシュミラーData Assurance機能の有効設定ステータスを返すためのパラメータ。
+
+
+
+ a| 
+「接続」
+ a| 
+ドライブチャネルポートの場所とドライブチャネルの接続先をリスト形式で表示するためのパラメータ。
+
+
+
+ a| 
+defaultHostType
+ a| 
+デフォルトのホストタイプとホストタイプインデックスを表示するためのパラメータ。
+
+
+
+ a| 
+「特長」
+ a| 
+ストレージアレイの機能設定を表示するためのパラメータ。
+
+
+
+ a| 
+「healthStatus」
+ a| 
+ストレージアレイの健常性、論理プロパティ、および物理コンポーネントのプロパティを表示するためのパラメータ。
+
+
+
+ a| 
+「hostConnectivityReporting」のように入力します
+ a| 
+ホスト接続レポート機能の有効設定ステータスを返すためのパラメータ。
+
+
+
+ a| 
+「hostTypeTable」
+ a| 
+コントローラが認識するすべてのホストタイプを表形式で表示するためのパラメータ。表の各行には、ホストタイプインデックスとホストタイプインデックスが表すプラットフォームが表示されます。
+
+
+
+ a| 
+「hotSpareCoverage」と入力します
+ a| 
+ストレージアレイ内でホットスペアが適用されるボリュームと適用されないボリュームに関する情報を表示するためのパラメータ。
+
+
+
+ a| 
+iscsiNegotiationDefaults
+ a| 
+イニシエータとターゲットのネゴシエーションによって決まる接続レベルの設定に関する情報を返すためのパラメータ。
+
+
+
+ a| 
+'longRunningOperations'
+ a| 
+ストレージアレイ内のボリュームグループおよびボリュームごとに実行時間の長い処理を表示するためのパラメータ。
+
+longRunningOperationパラメータは'次の情報を返します
+
+* ボリュームグループまたはボリュームの名前
+* 実行時間の長い処理です
+* ステータス
+* %完了
+* 残り時間
+
+
+
+
+ a| 
+「preredVolumeOwners」のように指定します
+ a| 
+ストレージアレイ内の各ボリュームの優先コントローラ所有者を表示するためのパラメータ。
+
+
+
+ a| 
+「プロファイル」
+ a| 
+ストレージアレイを構成する論理コンポーネントと物理コンポーネントのすべてのプロパティを表示するためのパラメータ。この情報は複数の画面に表示されます。
+
+[NOTE]
+====
+profileパラメータを指定すると、ストレージアレイに関する詳細情報が返されます。この情報は、ディスプレイ上の複数の画面にわたって表示されます。場合によっては、すべての情報を表示するために、ディスプレイバッファのサイズを増やす必要があります。この情報は非常に詳細であるため、出力をファイルに保存することを推奨します。
+
+====
+プロファイル出力をファイルに保存するには、次のコマンドを使用します。
+
+[listing]
+----
+c:\...\smX\client>smcli 123.45.67.88
+123.45.67.89 -c "show storagearray profile;"
+-o "c:\folder\storagearray
+profile.txt"
+----
+
+
+ a| 
+「概要」
+ a| 
+ストレージアレイ構成に関する概要情報をリストで表示するためのパラメータ。
+
+
+
+ a| 
+「time」
+ a| 
+ストレージアレイ内の両方のコントローラに設定されている現在時刻を表示するためのパラメータ。
+
+
+
+ a| 
+「unconfiguredIscsiInitiators」
+ a| 
+ストレージアレイで検出されたイニシエータのうち、ストレージアレイトポロジに設定されていないイニシエータのリストを返すためのパラメータ。
+
+
+
+ a| 
+'volumeDistribution'のように指定します
+ a| 
+ストレージアレイ内の各ボリュームの現在のコントローラ所有者を表示するためのパラメータ。
+
+|===
+
+
+== 注：
+
+「profile」パラメータを指定すると、ストレージ・アレイに関する詳細情報が表示されます。この情報は、ディスプレイモニタの複数の画面に表示されます。場合によっては、すべての情報を表示するために、ディスプレイバッファのサイズを増やす必要があります。この情報は非常に詳細であるため、出力をファイルに保存することを推奨します。出力をファイルに保存するには、この例のような「show storageArray」コマンドを実行します。
+
+[listing]
+----
+-c "show storageArray profile;" -o "c:\\folder\\storageArrayProfile.txt"
+----
+上記のコマンド構文は、Windowsオペレーティングシステムを実行しているホストを対象としています。実際の構文はオペレーティングシステムによって異なります。
+
+ファイルに情報を保存する場合は、その情報を設定の記録として使用したり、リカバリ時に情報を参照したりできます。
+
+[NOTE]
+====
+ストレージアレイプロファイルからは大量のデータがラベルとともに返されますが、8.41リリースで、E2800またはE5700ストレージアレイのSSDドライブに関する消耗度レポート情報が新たに追加されました。以前の消耗度レポートに含まれる平均消去回数とスペアブロックの残量に関する情報に加えて、使用済み寿命の割合が追加されました。使用済み寿命は、これまでにSSDドライブに書き込まれたデータ量を、ドライブの理論上の合計書き込み量で割った値です。
+
+====
+「batteryAge」パラメータは、この形式で情報を返します。
+
+[listing]
+----
+Battery status: Optimal
+    Age: 1 day(s)
+    Days until replacement: 718 day(s)
+----
+新しいコントローラトレイは'batteryAgeパラメータをサポートしていません
+
+defaultHostTypeパラメータは'この形式で情報を返します
+
+[listing]
+----
+Default host type: Linux (Host type index 6)
+----
+「healthStatus」パラメータは、この形式で情報を返します。
+
+[listing]
+----
+Storage array health status = optimal.
+----
+「hostTypeTable」パラメータは、この形式で情報を返します。
+
+[listing]
+----
+NVSRAM HOST TYPE INDEX DEFINITIONS
+HOST TYPE                         ALUA/AVT STATUS   ASSOCIATED INDEXS
+AIX MPIO                          Disabled          9
+AVT_4M                            Enabled           5
+Factory Default                   Disabled          0
+HP-UX                             Enabled           15
+Linux (ATTO)                      Enabled           24
+Linux (DM-MP)                     Disabled          6
+Linux (Pathmanager)               Enabled           25
+Mac OS                            Enabled           22
+ONTAP                             Disabled          4
+SVC                               Enabled           18
+Solaris (v11 or Later)            Enabled           17
+Solaris (version 10 or earlier)   Disabled          2
+VMWare                            Enabled           10 (Default)
+Windows                           Enabled           1
+----
+「hotSpareCoverage」パラメータは、この形式で情報を返します。
+
+[listing]
+----
+The following volume groups are not protected: 2, 1
+Total hot spare drives: 0
+   Standby: 0
+   In use: 0
+----
+'features'パラメータは'有効'無効'評価'およびインストール可能な機能を示す情報を返しますこのコマンドから返される機能情報の形式は次のとおりです。
+
+[listing]
+----
+PREMIUM FEATURE           STATUS
+
+asyncMirror               Trial available
+syncMirror                Trial available/Deactivated
+thinProvisioning          Trial available
+driveSlotLimit            Enabled (12 of 192 used)
+snapImage                 Enabled (0 of 512 used) - Trial version expires m/d/y
+snapshot                  Enabled (1 of 4 used)
+storagePartition          Enabled (0 of 2 used)
+volumeCopy                Enabled (1 of 511 used)
+SSDSupport                Disabled (0 of 192 used) - Feature Key required
+driveSecurity             Disabled - Feature Key required
+enterpriseSecurityKeyMgr  Disabled - Feature Key required
+highPerformanceTier       Disabled - Feature Key required
+----
+時刻パラメータは'この形式で情報を返します
+
+[listing]
+----
+Controller in Slot A
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+Controller in Slot B
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+----
+'longRunningOperations'パラメータは'次の形式で情報を返します
+
+[listing]
+----
+LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
+Volume-2         Volume Disk Copy  10% COMPLETED  5 min
+----
+権利。
+
+'longRunningOperations'パラメータによって返される情報フィールドには'次の意味があります
+
+* 「name」は、長時間の処理が現在実行されているボリュームの名前です。ボリューム名には、「Volume」がプレフィックスとして含まれている必要があります。
+* 「operation」は、ボリューム・グループまたはボリューム上で実行される操作を示します。
+* '*%complete*'は'実行時間の長いオペレーションのどれだけが実行されたかを示します
+* 「status」には、次のいずれかの意味があります。
++
+** Pending -長時間の処理はまだ開始されていませんが、現在の処理が完了したあとに開始されます。
+** 実行中--長時間の処理が開始されており'完了するか'ユーザーの要求によって停止されるまで実行されます
+
+
+* 「残り時間」は、現在の長時間実行動作を完了するまでの残り時間を示します。「時間数と分数」の形式で指定します。残り時間が1時間未満の場合は、分だけが表示されます。残り時間が1分未満の場合は、「[.code]``less than a minute ``」というメッセージが表示されます。
+
+
+volumeDistributionパラメータは'次の形式で情報を返します
+
+[listing]
+----
+volume name: 10
+     Current owner is controller in slot: A
+
+volume name: CTL 0 Mirror Repository
+     Current owner is controller in slot: A
+
+volume name: Mirror Repository 1
+     Current owner is controller in slot:A
+
+volume name: 20
+     Current owner is controller in slot:A
+
+volume name: JCG_Remote_MirrorMenuTests
+     Current owner is controller in slot:A
+----
+
+
+== 最小ファームウェアレベル
+
+5.00で'defaultHostType'パラメータが追加されました
+
+5.43で'summary'パラメータが追加されました
+
+6.10で'volumeDistributionパラメータが追加されました
+
+6.14で'connections'パラメータが追加されました
+
+7.10で、「autoSupportConfig」パラメータが追加されました。
+
+7.77で、'longRunningOperations'パラメータが追加されました。
+
+7.83で、ストレージ管理ソフトウェアバージョン10.83でリリースされた新機能のサポートを含む情報が返されるようになりました。また、ストレージアレイの機能のステータスも表示されるようになりました。
+
+8.30で'autoLoadBalancingEnable'パラメータが追加されました
+
+8.40で、「AutoSupport 」パラメータが追加されました。
+
+8.40で、「https」クライアントタイプで実行されているE2800またはE5700ストレージアレイに対する「autoSupportConfig」パラメータは廃止されました。
+
+8.41で、SSDドライブの消耗度の監視がストレージアレイプロファイルに追加されました。この情報は、E2800およびE5700ストレージアレイでのみ表示されます。
+
+8.42で、「hostConnectivityReporting」パラメータが追加されました。
+
+8.63で'profile'パラメータ結果の下に'Resource-Provisioned Volumesエントリが追加されました

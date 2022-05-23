@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group 
+summary: DELETE consistencyGroupコマンドは、Snapshot整合性グループを削除します。 
+---
+= 整合グループを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「delete consistencyGroup」コマンドは、Snapshot整合性グループを削除します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、次の2つの方法で機能します。
+
+* 整合性グループと、整合性グループに含まれているリポジトリボリュームの両方を削除できます。
+* 整合性グループのみを削除し、整合性グループに含まれているリポジトリボリュームはそのまま残すことができます。
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+delete consistencyGroup pass:quotes[[_"consistencyGroupName"_]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「consistencyGroup」
+ a| 
+削除するSnapshot整合性グループの名前。Snapshot整合性グループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+deleteRepositoryMembersを指定します
+ a| 
+リポジトリボリュームを削除するか保持するかの設定。リポジトリ・ボリュームを削除するには'このパラメータをTRUEに設定しますリポジトリボリュームを保持するには'このパラメータをFALSEに設定しますデフォルト設定は'FALSE'です
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

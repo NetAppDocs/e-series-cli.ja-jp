@@ -1,0 +1,160 @@
+---
+permalink: commands-a-z/set-consistencygroup-addcgmembervolume.html 
+sidebar: sidebar 
+keywords: add, member, consistency, group 
+summary: set consistencyGroup addCGMemberVolumeコマンドは、新しいベースボリュームをメンバーとして既存の整合性グループに追加します。 
+---
+= 整合グループにメンバーを追加します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set consistencyGroup addCGMemberVolumeコマンドは、新しいベースボリュームを既存のコンシステンシグループにメンバーとして追加します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+新しい整合性グループのメンバーとして既存のリポジトリボリュームを指定するか、または新しいリポジトリボリュームを作成できます。新しいリポジトリボリュームを作成するときは、そのボリュームを追加する既存のボリュームグループまたは既存のディスクプールを指定します。
+
+
+
+== 既存のリポジトリボリュームを使用する場合の構文
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup ["consistencyGroupName"]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes["_volumeGroupName_"]
+----
+
+
+== ボリュームグループに新しいリポジトリボリュームを作成する場合の構文
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_volumeGroupName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== ディスクプールに新しいリポジトリボリュームを作成する場合の構文
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_diskPoolName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「consistencyGroup」
+ a| 
+新しいメンバーボリュームを追加する整合性グループの名前。新しいメンバーボリュームは、Snapshot処理のベースボリュームです。整合性グループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「addCGMemberVolume」
+ a| 
+追加するベースボリュームの名前。ボリューム名は二重引用符（""）で囲みます。
+
+既存のリポジトリボリュームまたは既存のSnapshotボリュームを指定すると、コマンドは失敗します。
+
+
+
+ a| 
+リポジトリボリューム
+ a| 
+このパラメータには2つの機能があります。
+
+* 既存の整合性グループ内のリポジトリボリュームを使用する場合は、そのリポジトリボリュームを指定します。
+* 新しいリポジトリボリュームを作成する場合は、そのボリュームを作成するボリュームグループまたはディスクプールを指定します。
+
+
+ボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「容量」
+ a| 
+ボリュームグループまたはディスクプールに作成する新しいリポジトリボリュームのサイズ。サイズは、bytes、KB、MB、GB、TBのいずれかの単位で定義します。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+整合性グループは、Snapshotのソースボリュームであるベースボリュームの集まりです。複数のベースボリュームを1つの整合性グループにまとめることで、各ベースボリュームに対して同じSnapshot処理を実行できるようになります。このコマンドでは、_MEMBER_はSnapshot処理のベースボリュームを意味します。整合性グループのメンバーに関連付けられたSnapshotイメージは、イメージ間の整合性を維持しながら、バッチ形式で操作できます。
+
+各メンバーボリュームには、対応するリポジトリボリュームが必要です。repositoryVolumeパラメータを使用すると、メンバーボリュームとリポジトリボリュームの関係を定義できます。repositoryVolumeパラメータでは、次のいずれかの操作を実行できます。
+
+* 整合性グループに接続されている既存のリポジトリボリューム
+* 新しいリポジトリボリュームを作成するボリュームグループまたはディスクプール
+
+
+既存のリポジトリを含む整合性グループにメンバーを追加する目的は次の2つです。
+
+* repositoryVolumeパラメータを指定せずにコマンドを実行すると、新しいリポジトリボリュームを作成できます。repositoryVolumeパラメータを指定せずにコマンドを実行すると、他のすべてのリポジトリボリュームが格納されたボリュームグループまたはディスクプールに新しいリポジトリボリュームが作成されます。このコマンドの使用例を次に示します。
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+----
+* 既存のリポジトリボリュームが空で、別のメンバーボリュームに関連付けられていない場合は、そのリポジトリボリュームを再利用できます。リポジトリボリュームの特定の順序や関係を維持したい場合は、再利用を推奨します。既存の空のリポジトリボリュームを再利用するには、そのボリュームの名前を確認しておく必要があります。リポジトリ・ボリュームの名前を確認するには'show allVolumes summaryコマンドを使用しますすべてのリポジトリボリューム名の形式は「repos_XXXX」です。「XXXX」は、ストレージ管理ソフトウェアによって生成された一意の識別子です。このコマンドの使用例を次に示します。
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume="repos_0011"
+----
+
+
+リポジトリボリュームは、任意のボリュームグループまたはディスクプールに配置できます。他のリポジトリボリュームと同じ場所に配置する必要はありません。リポジトリ・ボリュームを任意のボリューム・グループまたはディスク・プールに配置するには'repositoryVolume'パラメータを使用して'ボリューム・グループまたはディスク・プールとリポジトリ・ボリュームのサイズを指定しますこのコマンドの使用例を次に示します。
+
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume=("12" capacity=2 GB)
+----
+この例では、「[.code]`12`]」は既存のボリュームグループまたは既存のディスクプールの名前です。capacityパラメータには、リポジトリボリュームグループに必要なサイズを定義します。
+
+ボリュームグループまたはディスクプールに新しいリポジトリボリュームを作成する場合は、ボリュームグループ名と容量、またはディスクプール名と容量を丸かっこで囲む必要があります。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

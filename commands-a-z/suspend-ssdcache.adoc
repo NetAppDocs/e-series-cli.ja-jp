@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/suspend-ssdcache.html 
+sidebar: sidebar 
+keywords: suspend, ssd cache 
+summary: suspend ssdCacheコマンドは、SSDキャッシュを使用しているすべてのボリュームのキャッシュを一時的に停止します。 
+---
+= SSDキャッシュを中断します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+suspend ssdCacheコマンドは、SSDキャッシュを使用しているすべてのボリュームのキャッシュを一時的に停止します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Support Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+キャッシュの停止中、ホストの読み取りはSSDキャッシュではなくベースボリュームから処理されます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[suspend ssdCache [_ssdCacheName_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ssdCache」
+ a| 
+中断するSSDキャッシュの名前。SSDキャッシュ名は角かっこ（[]）で囲みます。SSDキャッシュ名に特殊文字または数字が含まれている場合は、SSDキャッシュ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 注：
+
+キャッシュを再開するには'resume ssdCacheコマンドを使用します
+
+
+
+== 最小ファームウェアレベル
+
+7.84

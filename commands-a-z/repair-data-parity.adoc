@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/repair-data-parity.html 
+sidebar: sidebar 
+keywords: repair, data, parity 
+summary: データパリティの修復コマンドは、データパリティエラーを修復します。 
+---
+= データパリティを修復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+データパリティの修復コマンドは'データパリティエラーを修復します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを使用する前に、ネットアップサポートに問い合わせて、影響を受けるファームウェア、ドライブ、RAIDストライプに関するガイダンスを確認してください。
+
+
+
+== 構文
+
+[listing]
+----
+repair volume[volumeName] parity
+   [startingLBA=LBAvalue]
+   [endingLBA=LBAvalue]
+   [repairMethods=(repairMethod . . . repairMethod)]
+           Space delimited list where possible repair methods are: reconstruct, unmap, updateP, updateQ, updateData, and writeZeros
+   [repairPI=(TRUE|FALSE)]
+   [suspectDrives=(trayID1,[drawerID1,]slotID1 . . . trayIDn,[drawerIDn,]slotIDn)]
+   [timeout=(0-65535)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「 volume 」
+ a| 
+パリティを修復するボリュームの名前。ボリューム名は角かっこで囲みます（[]）。
+
+
+
+ a| 
+「StartingLBA」
+ a| 
+論理ブロックの開始アドレス。
+
+
+
+ a| 
+「endinglba`」
+ a| 
+論理ブロックの終了アドレス。
+
+
+
+ a| 
+「修繕の神」
+ a| 
+パリティエラーを修復する方法。使用可能な方法は次のとおりです
+
+* reconstruct：「suspectDrives」パラメータで指定されたドライブを再構築します。
+* UNMAP：R5/R6 dripbeボリュームで、R5/R6 RAIDストライプをマッピング解除する場合に使用します
+* updateP：データパリティの不一致タイプを修正するために使用します。
+* updateQ：データパリティの不一致タイプを修正するために使用します。
+* updateData：データパリティの不一致タイプを修正するために使用します。
+* writeZeros：R5/R6 drbeボリュームで、マッピングされたデータとマッピングされていないデータが混在する予期しないRAID 5 / 6ストライプが検出された場合に使用します。ストライプ内のマッピングされていないブロックを取得し、ゼロを書き込むと、パリティを更新します
+
+
+
+
+ a| 
+「修繕PI」
+ a| 
+StartingLBAで始まるエクステント内のPIを修復するには、trueに設定します。
+
+
+
+ a| 
+「サスペンス・ドライブ」
+ a| 
+再構築するドライブを指定します。
+
+
+
+ a| 
+タイムアウト
+ a| 
+処理を実行する時間（分）。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.63

@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html 
+sidebar: sidebar 
+keywords: check, asynchronous mirror group, consistency 
+summary: check asyncMirrorGroup repositoryConsistencyコマンドは、指定した非同期ミラーグループの基盤となるリポジトリボリューム内のデータの分析に基づいてレポートを作成します。 
+---
+= 非同期ミラーグループの整合性を確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+check asyncMirrorGroup repositoryConsistencyコマンドは'指定された非同期ミラーグループの基になるリポジトリボリューム内のデータの分析に基づいてレポートを生成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+check asyncMirrorGrouppass:quotes[[_asyncMirrorGroupName_]]
+repositoryConsistency localVolume=pass:quotes[[_localVolumeName"_]]
+file=pass:quotes[_"filePath"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+整合性チェックを実行する非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+リポジトリ整合性
+ a| 
+非同期ミラーグループの整合性をチェックするように指定します。
+
+
+
+ a| 
+「localVolume」です
+ a| 
+ミラー関係にあるローカルボリュームの名前を指定します。ミラー関係のソースまたはデスティネーションであるローカルボリュームを指定できます。ローカルボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+'file'
+ a| 
+整合性チェックの結果レポートの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\repoConsistency.txt"このパラメータは'オプションのパラメータのいずれかの後に最後に表示する必要があります
+
+|===
+
+
+== 注：
+
+このコマンドで生成されるレポートは、テクニカルサポートが問題を分析するために使用します。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

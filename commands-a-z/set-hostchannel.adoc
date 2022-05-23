@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-hostchannel.html 
+sidebar: sidebar 
+keywords: set, host, channel 
+summary: set hostChannelコマンドは、ホストチャネルのループIDを定義します。 
+---
+= ホストチャネルを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set hostChannelコマンドは'ホスト・チャネルのループIDを定義します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set hostChannel pass:quotes[[_hostChannelNumber_]]
+preferredID=pass:quotes[_portID_]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ホストチャネル」
+ a| 
+ループIDを設定するホストチャネルの識別番号。ホストチャネルの識別番号は角かっこ（[]）で囲みます。
+
+使用するコントローラモデルに適したホストチャネル値を使用してください。コントローラトレイは、1つのホストチャネルまたは最大8つのホストチャネルをサポートします。有効なホスト・チャネル値は'A1' A2'A3"''A4'A5'です A6`, A7 `, A8`, B1 `, B2 `, 「B3」、「B4」、「B5」、「B6」、「B7」、 または「B8`」。
+
+
+
+ a| 
+「preferredID`」
+ a| 
+指定したホストチャネルのポート識別子。ポートIDの値は'0～127です
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10
+
+6.14で、ホストチャネル識別子の更新が追加されました。
+
+7.15で、ホストチャネル識別子の更新が追加されました。

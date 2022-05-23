@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/resume-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: resume, consistency, group, snapshot, volume 
+summary: resume cgSnapVolumeコマンドは、stop cgSnapVolumeコマンドで停止した整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理を再開します。 
+---
+= 整合性グループのSnapshotボリュームを再開します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「stop cgSnapVolume」コマンドを使用して停止した整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理を再開するには、「resume cgSnapVolume」コマンドを使用します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+resume cgSnapVolume pass:quotes[[_"snapVolumeName"_]]
+cgSnapImage=pass:quotes[_"snapImageName"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+cgSnapVolume
+ a| 
+再開する整合性グループのSnapshotボリュームの名前。整合性グループのSnapshotボリュームの名前は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「cgSnapImage」をクリックします
+ a| 
+再開する整合性グループ内のSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* 整合グループの名前
+* 整合性グループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* 整合性グループ内のSnapshotのシーケンス番号である整数値。
+* ’new’-整合性グループに作成された最新のSnapshotイメージを表示する場合は、このオプションを使用します。
+* oldest -整合性グループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は二重引用符（""）で囲みます。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* 整合性グループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、snapVol1という名前の整合性グループのSnapshotボリュームにあるSnapshot整合性グループsnapgroup1で、Snapshotイメージ12345のcopy-on-write処理を再開する場合は、次のコマンドを使用します。
+
+[listing]
+----
+resume cgSnapVolume ["snapVol1"] cgSnapImage=["snapgroup1:12345"]
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/save-storagearray-hostportstatistics.html 
+sidebar: sidebar 
+keywords: save, storage, array, host, port, statistics 
+summary: save storageArray hostPortStatisticsコマンドは、ストレージアレイのホストポートの統計を保存します。 
+---
+= ストレージアレイのホストポートの統計を保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray hostPortStatisticsコマンドは'ストレージ・アレイのホスト・ポートの統計情報を保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSecurity Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、廃止されたを置き換えます xref:save-storagearray-iscsistatistics.adoc[ストレージアレイのiSCSI統計を保存します]、 xref:save-storagearray-iserstatistics.adoc[ストレージアレイのiSER統計を保存します]および xref:save-storagearray-ibstats.adoc[ストレージアレイのInfiniBandの統計を保存します] コマンド
+
+====
+
+
+== 構文
+
+[listing]
+----
+save storageArray hostPortStatistics [(raw | baseline)] type=(ISCSI| ISER | SRP | NVMEOF) file="filename"
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「raw」
+ a| 
+一日の開始時刻以降に収集された統計を取得できます。パラメータは角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「BASELINE」
+ a| 
+コントローラのベースラインがゼロにリセットされた時刻から収集された統計を取得できます。パラメータは角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「type」と入力します
+ a| 
+収集する統計のタイプを指定できます。有効な選択肢は、「iscsi」、「isER」、「srp」、「NVMEOF」です。
+
+
+
+ a| 
+'file'
+ a| 
+統計の保存先となるファイルパスとファイル名を指定できます。ファイル名は二重引用符（""）で囲みます。拡張子が「.csv」のファイル名を使用します。
+
+|===
+[cols="6*"]
+|===
+| を入力します | イーサネットMAC、イーサネットTCP / IP、ローカルイニシエータ（プロトコル）、DCBXの動作状態、LLDP TLV、 DCBX TLV | ターゲット（プロトコル） | InfiniBandインターフェイス | NVMeサブシステム | ASUPファイル名 
+
+
+ a| 
+「iSCSI」
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+「iSER」
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+「srp」
+ a| 
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+'nvmeof
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+ a| 
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

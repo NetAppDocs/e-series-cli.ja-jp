@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-reset.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: SMcli -autoSupportSchedule resetコマンドは、AutoSupport メッセージを送信する毎日/毎週の時間と曜日をリセットします。管理ソフトウェアが生成するデフォルトのランダムな値をそのまま使用することも、このコマンドで値を指定することもできます。 
+---
+= AutoSupport メッセージ収集スケジュールをリセットします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli autoSupportSchedule resetコマンドは、AutoSupport メッセージが送信される毎日および毎週の時刻と曜日をリセットします。管理ソフトウェアが生成するデフォルトのランダムな値をそのまま使用することも、このコマンドで値を指定することもできます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+* AutoSupport が有効な場合、管理ソフトウェアは日単位のAutoSupport メッセージと週単位のAutoSupport メッセージの両方を送信します。
+* 管理ソフトウェアは、日単位と週単位のメッセージに関しては時刻を、週単位のメッセージに関しては曜日を、ランダムに選択します。管理ソフトウェアは、1つの管理ドメイン内の2つのストレージアレイがスケジュールされたAutoSupport メッセージを同時に送信しないように対処します。
+* 管理ドメイン内のストレージアレイについて、毎日および毎週のどのタイミングでメッセージを送信するかの範囲（時間単位）を指定できます。
+* 週次スケジュールの場合は、AutoSupport による収集と送信を優先する曜日を選択します。
+
+
+
+
+== 構文
+
+[listing]
+----
+SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
+   dayOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+   weeklyTime=<startTime>-<endTime>)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「リセット」
+ a| 
+スケジュールをリセットし、24時間/週7日（日曜日から土曜日）の間隔で新しいスケジュールを生成します。
+
+
+
+ a| 
+「dailyTime」
+ a| 
+<`startTime`>-<`endTime`>-すべてのストレージアレイのAutoSupport データの収集を開始および終了する時刻を指定しますstartTimeとendTimeの形式は、HH：MM[am|pm]にする必要があります。
+
+
+
+ a| 
+「DayOfWeek」
+ a| 
+[Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday]すべてのストレージアレイのAutoSupport バンドル収集データの収集を優先する曜日（日曜日から土曜日）を指定します。`_dayofweekパラメータは角かっこで囲み、スペースで区切る必要があります。
+
+
+
+ a| 
+「weeklyTime」
+ a| 
+<`startTime`>-<`endTime`>-選択した曜日ごとにAutoSupport バンドル収集データの収集を開始および終了する時刻を指定します。「_startTime_」と「_endTime_」はHH：MM[am|pm]の形式で指定する必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== 例
+
+[listing]
+----
+ SMcli -autoSupportSchedule dailyTime=10:00am-11:00am
+dayOfWeek=[Monday Thursday Friday] weeklyTime=2:00am-3:00am
+----
+SMcli -autoSupportSchedule dailyTime = 10：00am - 11：00am DayOfWeek =[月曜日の金曜日] weeklyTime = 2：00am - 3：00am
+
+
+
+== 検証
+
+管理ドメインのスケジュールの変更結果を確認するには'SMcli -autoSupportSchedule showコマンドを使用します

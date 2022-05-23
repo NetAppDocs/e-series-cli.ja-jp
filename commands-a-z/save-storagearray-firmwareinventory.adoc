@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/save-storagearray-firmwareinventory.html 
+sidebar: sidebar 
+keywords: save, storage, array, firmware, inventory 
+summary: save storageArray firmwareInventoryコマンドは、ストレージアレイで現在実行されているすべてのファームウェアのレポートをファイルに保存します。 
+---
+= ストレージアレイのファームウェアインベントリを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray firmwareInventoryコマンドは'ストレージ・アレイで現在実行されているすべてのファームウェアのファイルにレポートを保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このレポートには、次のコンポーネントのファームウェアが表示されます。
+
+* コントローラ
+* ドライブ
+* ドロワー（該当する場合）
+* 環境サービスモジュール（ESM）
+* 電源装置
+
+
+この情報から、古くなったファームウェアや、ストレージアレイ内の他のファームウェアと一致しないファームウェアを特定できます。また、レポートをテクニカルサポートに送信して詳しい確認を依頼することもできます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray firmwareInventory file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+ファームウェアインベントリの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\fwinvent.txt
+
+ファームウェアインベントリを格納するファイルのデフォルト名は、「firmware-inventory.txt」です。このコマンドでは、保存されているファイルにファイル拡張子は自動的に付加されません。ファイル名にはファイル拡張子を指定する必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.70

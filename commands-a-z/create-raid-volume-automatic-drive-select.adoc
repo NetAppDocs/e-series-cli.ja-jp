@@ -1,0 +1,450 @@
+---
+permalink: commands-a-z/create-raid-volume-automatic-drive-select.html 
+sidebar: sidebar 
+keywords: create, raid, volume, automatic, drive, select 
+summary: create volumeコマンドは、ストレージアレイ内の複数のドライブをまたがってボリュームグループを作成し、そのボリュームグループ内に新しいボリュームを作成します。ストレージアレイコントローラによって、ボリュームに含めるドライブが選択されます。 
+---
+= RAIDボリュームの作成（自動ドライブ選択）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create volumeコマンドは'ストレージ・アレイ内のドライブと'ボリューム・グループ内の新しいボリューム間にボリューム・グループを作成しますストレージアレイコントローラによって、ボリュームに含めるドライブが選択されます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+容量の異なるドライブがある場合は'driveCount'パラメータを指定してボリュームを自動的に作成することはできません容量の異なるドライブを含むボリュームを作成する場合は、を参照してください link:create-raid-volume-manual-drive-select.html["RAIDボリュームの作成（手動ドライブ選択）"]。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create volume driveCount=pass:quotes[_numberOfDrives_]
+[volumeGroupUserLabel=pass:quotes[_"volumeGroupUserLabel"_]]
+raidLevel=(0 | 1 | 3 | 5 | 6)
+userLabel=pass:quotes[_"userLabel"_]
+driveMediaType=(HDD | SSD | unknown | allMedia)
+[driveType=(SAS | NVMe4K)]
+[capacity=pass:quotes[_volumeCapacity_]]
+[owner=(a|b)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[segmentSize=pass:quotes[_segmentSizeValue_]]
+[usageHint=(fileSystem | dataBase | multiMedia)]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dssPreAllocate=(TRUE | FALSE)]
+[securityType=(none | capable | enabled)]
+[secureDrives=(fips | fde )]
+[dataAssurance=(none | enabled)]
+[resourceProvisioningCapable=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+create volume driveCount=pass:quotes[_numberOfDrives_]
+[volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+raidLevel=(0 | 1 | 5 | 6)
+userLabel=pass:quotes[_"volumeName"_]
+driveMediaType=(HDD | SSD | unknown | allMedia)
+[driveType=SAS]
+[capacity=pass:quotes[_volumeCapacity_]]
+[owner=(a|b)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[segmentSize=pass:quotes[_segmentSizeValue_]]
+[usageHint=(fileSystem | dataBase | multiMedia)]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dssPreAllocate=(TRUE | FALSE)]
+[securityType=(none | capable | enabled)]
+[secureDrives=(fips | fde )]
+[dataAssurance=(none | enabled)]
+[resourceProvisioningCapable=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「driveCount」
+ a| 
+ボリュームグループで使用する未割り当てのドライブの数。
+
+
+
+ a| 
+'volumeGroupUserLabel'
+ a| 
+新しいボリュームグループに付ける名前。新しいボリュームグループ名は二重引用符（""）で囲みます。
+
+[NOTE]
+====
+ボリュームグループのユーザラベルを指定しない場合、コントローラファームウェアによって番号が割り当てられます。
+
+====
+
+
+ a| 
+raidLevel
+ a| 
+ボリュームが含まれているボリュームグループのRAIDレベル。有効な値は'0`'1' 3`'5`または'6`です
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+新しいボリュームに付ける名前。新しいボリューム名は二重引用符（""）で囲みます。
+
+[NOTE]
+====
+このパラメータは必須です。
+
+====
+
+
+ a| 
+driveMediaType
+ a| 
+ボリュームグループに使用するドライブメディアのタイプ。有効なドライブメディアは、次のとおりです。
+
+* [HDD]--ドライブトレイにハードドライブがある場合は'このオプションを使用します
+* SSD'--ドライブトレイにソリッドステートドライブがある場合は'このオプションを使用します
+* 不明--どのタイプのドライブメディアがドライブトレイにあるかわからない場合は'このオプションを使用します
+* [allMedia]--ドライブトレイにあるすべてのタイプのドライブメディアを使用する場合に'このオプションを使用します
+
+
+
+
+ a| 
+「ドライブタイプ」
+ a| 
+ボリュームで使用するドライブのタイプ。ドライブタイプを混在させることはできません。
+
+ストレージアレイ内に複数のドライブタイプがある場合は、このパラメータを使用する必要があります。
+
+有効なドライブタイプは、次のとおりです。
+
+* 「SAS」
+* 「NVMe4K」
+
+
+ドライブ・タイプを指定しない場合'このコマンドはデフォルトでany typeになります
+
+
+
+ a| 
+「容量」
+ a| 
+ストレージアレイに追加するボリュームのサイズ。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます
+
+
+
+ a| 
+「owner」をクリックします
+ a| 
+ボリュームを所有するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラです所有者を指定しない場合は、コントローラファームウェアによって所有者が決定されます。
+
+
+
+ a| 
+「cacheReadPrefetch」というメッセージが表示されます
+ a| 
+キャッシュ読み取りプリフェッチをオンまたはオフにする設定。キャッシュ読み取りプリフェッチをオフにするには'このパラメータをFALSEに設定しますキャッシュ読み取りプリフェッチをオンにするには'このパラメータをTRUEに設定します
+
+
+
+ a| 
+「segmentSize」のように表示されます
+ a| 
+コントローラがボリューム内の1つのドライブに書き込めるデータ量（KB）を指定します。有効な値は'8`'16`'32`'64`'128`'です 「256」または「512」。
+
+
+
+ a| 
+「usageHint`」
+ a| 
+'cacheReadPrefetch'パラメータと'segmentSize'パラメータの両方をデフォルト値に設定しますデフォルト値は、ボリュームを使用しているアプリケーションの標準的なI/O使用パターンに基づいています。有効な値は'filesystem'database'または'multiMediaです
+
+
+
+ a| 
+「trayLossProtect`」
+ a| 
+ボリュームグループを作成するときにトレイ損失の保護を有効にする設定。トレイ損失の保護を有効にするには'このパラメータをTRUEに設定しますデフォルト値は'FALSE'です
+
+
+
+ a| 
+「drawerLossProtect`」
+ a| 
+ミラーリポジトリボリュームグループを作成するときにドロワー損失の保護を有効にする設定。ドロワー損失の保護を有効にするには、このパラメータを「true」に設定します。デフォルト値は'FALSE'です
+
+
+
+ a| 
+dssPreAllocate
+ a| 
+今後のセグメントサイズの拡大に備えてリザーブ容量が割り当てられていることを確認する設定。デフォルト値は「true」です。
+
+
+
+ a| 
+「securityType」
+ a| 
+ボリュームグループおよび関連するすべてのボリュームの作成時にセキュリティレベルを指定する設定。有効な設定は次のとおりです。
+
+* 'none`--ボリュームグループとボリュームは安全ではありません。
+* capable --ボリュームグループとボリュームにはセキュリティを設定する機能がありますが'セキュリティは有効になっていません
+* 有効-ボリューム・グループとボリュームでセキュリティが有効になっています
+
+
+
+
+ a| 
+「resourceProvisioningCapability」
+ a| 
+リソースプロビジョニング機能が有効かどうかを指定する設定。リソースプロビジョニングをディセーブルにするには、このパラメータをFALSEに設定します。デフォルト値は「true」です。
+
+|===
+
+
+== 注：
+
+名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+driveCountパラメータでは'ボリューム・グループで使用するドライブの数を選択できますトレイIDとスロットIDでドライブを指定する必要はありません。ボリュームグループで使用する特定のドライブは、コントローラが選択します。
+
+ownerパラメータは'ボリュームを所有するコントローラを定義します
+
+「capacity」パラメータに容量を指定しない場合は、ボリュームグループ内の使用可能なすべてのドライブ容量が使用されます。容量の単位を指定しない場合'デフォルト値としてbytesが使用されます
+
+
+
+== セグメントサイズ
+
+コントローラがボリューム内の1つのドライブに書き込めるデータブロックの数は、セグメントのサイズによって決まります。各データブロックには512バイトのデータが格納されます。データブロックはストレージの最小単位です。セグメントのサイズによって、格納されるデータブロックの数が決まります。たとえば、8KBのセグメントには16個のデータブロックが含まれます。64KBのセグメントには128個のデータブロックが含まれます。
+
+セグメントサイズの値を入力すると、その値は、実行時にコントローラで指定される、サポートされている値と照合されます。入力した値が無効な場合、コントローラは有効な値のリストを返します。1つの要求に対して1つのドライブを使用することで、他のドライブでは他の要求に同時に対応できます。ボリュームが属している環境で、1人のユーザが大量のデータ（マルチメディアなど）を転送している場合は、1つのデータ転送要求を1つのデータストライプで処理すると、パフォーマンスが最大化されます。（データストライプはセグメントサイズであり、これに、データ転送に使用されるボリュームグループ内のドライブ数が掛けられます）。 この場合、同じ要求に対して複数のドライブが使用されますが、各ドライブへのアクセスは1回だけとなります。
+
+マルチユーザデータベースまたはファイルシステムのストレージ環境で最適なパフォーマンスを実現するには、データ転送要求を満たすために必要なドライブ数が最小限になるように、セグメントサイズを設定します。
+
+
+
+== 使用上のヒント
+
+[NOTE]
+====
+「cacheReadPrefetch」パラメータまたは「segmentSize」パラメータの値を入力する必要はありません。値を入力しない場合'コントローラ・ファームウェアは'filesystem'をデフォルト値として'usageHint'パラメータを使用します「usageHint」パラメータの値と「cacheReadPrefetch」パラメータの値、または「segmentSize」パラメータの値を入力しても、原因 にエラーは表示されません。「cacheReadPrefetch」パラメータまたは「segmentSize」パラメータに入力する値は、「usageHint」パラメータの値よりも優先されます。さまざまな使用方法のヒントに対するセグメントサイズおよびキャッシュ読み取りプリフェッチの設定を、次の表に示します。
+
+====
+|===
+| 使用方法のヒント | セグメントサイズの設定 | 動的キャッシュ読み取りプリフェッチの設定 
+
+
+ a| 
+ファイルシステム
+ a| 
+128 KB
+ a| 
+有効
+
+
+
+ a| 
+データベース
+ a| 
+128 KB
+ a| 
+有効
+
+
+
+ a| 
+マルチメディア
+ a| 
+256 KB
+ a| 
+有効
+
+|===
+
+
+== キャッシュ読み取りプリフェッチ
+
+キャッシュ読み取りプリフェッチを使用すると、コントローラは、ホストによって要求されたデータブロックをドライブから読み取ってキャッシュにコピーすると同時に、追加のデータブロックをキャッシュにコピーできます。これにより、以降のデータ要求をキャッシュから処理できる可能性が高くなります。キャッシュ読み取りプリフェッチは、シーケンシャルデータ転送を使用するマルチメディアアプリケーションにとって重要です。「cacheReadPrefetch」パラメータの有効な値は「TRUE」または「FALSE」です。デフォルトは「true」です。
+
+
+
+== セキュリティタイプ
+
+ストレージ・アレイのセキュリティ設定を指定するには'securityType'パラメータを使用します
+
+'securityType'パラメータを'enabled'に設定する前に'ストレージ・アレイのセキュリティ・キーを作成する必要がありますストレージ・アレイのセキュリティ・キーを作成するには'create storageArray securityKey'コマンドを使用します次のコマンドがセキュリティキーに関連しています。
+
+* 「create storageArray securityKey」のように指定します
+* 「export storageArray securityKey」のように指定します
+* 「import storageArray securityKey」のように入力します
+* 「set storageArray securityKey」のように指定します
+* [Enable volumeGroup [volumeGroupName] security]を有効にします
+* 「enable diskPool [diskPoolName]のセキュリティ」を参照してください
+
+
+
+
+== セキュアドライブ
+
+セキュリティ対応ドライブには、Full Disk Encryption（FDE）ドライブと連邦情報処理標準（FIPS）ドライブがあります。secureDrivesパラメータを使用して、使用するセキュアドライブのタイプを指定します。使用できる値は'FIPs'とFDEです
+
+
+
+== トレイ損失の保護およびドロワー損失の保護が必要です
+
+トレイ/ドロワー損失の保護を有効にする場合のその他の条件については、次の表を参照してください。
+
+|===
+| レベル | トレイ損失の保護の基準 | 必要なトレイの最小数 
+
+
+ a| 
+ディスク・プール
+ a| 
+ディスクプールに同じトレイのドライブが3本以上含まれない
+ a| 
+6.
+
+
+
+ a| 
+「RAID 6」
+ a| 
+ボリュームグループに同じトレイのドライブが3本以上含まれない
+ a| 
+3.
+
+
+
+ a| 
+RAID 3またはRAID 5
+ a| 
+ボリュームグループ内のドライブがすべて別々のトレイに配置されている
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1ペアのドライブがそれぞれ別のトレイに配置されている
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+トレイ損失の保護は実現できない。
+ a| 
+該当なし
+
+|===
+|===
+| レベル | ドロワー損失の保護の基準 | 必要なドロワーの最小数 
+
+
+ a| 
+ディスク・プール
+ a| 
+プールに5つのドロワーすべてのドライブが含まれていて、各ドロワーに同じ数のドライブが配置されている。60ドライブのトレイでは、ディスクプールの構成が15、20、25、30、35の場合にドロワー損失の保護を実現できます。 40、45、50、55、または60ドライブ。
+ a| 
+5.
+
+
+
+ a| 
+「RAID 6」
+ a| 
+ボリュームグループに同じドロワーのドライブが3本以上含まれない。
+ a| 
+3.
+
+
+
+ a| 
+RAID 3またはRAID 5
+ a| 
+ボリュームグループ内のドライブがすべて別々のドロワーに配置されている。
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+ミラーペアのドライブがそれぞれ別のドロワーに配置されている。
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+ドロワー損失の保護は実現できない。
+ a| 
+該当なし
+
+|===
+
+
+== コマンドの例
+
+[listing]
+----
+create volume driveCount=2 volumeGroupUserLabel="FIPS_VG" raidLevel=1 userLabel="FIPS_V"
+----
+[listing]
+----
+driveMediaType=HDD securityType=capable secureDrives=fips
+----
+
+
+== 最小ファームウェアレベル
+
+7.10で、RAIDレベル6機能と「dssPreAllocate」パラメータが追加されました。
+
+7.50で、「securityType」パラメータが追加されました。
+
+7.60で'drawerLossProtect'パラメータが追加されました
+
+7.75で'dataAssuranceパラメータが追加されました
+
+8.25で'secureDrives'パラメータが追加されました
+
+8.63で'resourceProvisioningCapableパラメータが追加されました

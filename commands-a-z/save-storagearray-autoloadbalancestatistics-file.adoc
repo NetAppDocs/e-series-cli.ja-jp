@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autoloadbalancestatistics-file.html 
+sidebar: sidebar 
+keywords: save, auto-load, balance, statistics 
+summary: save storageArray autoLoadBalanceStatistics fileコマンドは、自動I/Oワークロードバランシングを提供し、ホストからの受信I/Oトラフィックが動的に管理されて両方のコントローラに分散されるようにします。 
+---
+= 自動ロードバランシングの統計を保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray autoLoadBalanceStatistics fileコマンドは、I/Oワークロードの自動バランシングを提供し、ホストからの受信I/Oトラフィックが動的に管理され、両方のコントローラに分散されるようにします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ストレージアレイの自動ロードバランシングの統計をファイルに保存します。これらの統計には、アレイ内の各ボリュームにおける所有権の変更履歴が表示されます。
+
+[NOTE]
+====
+このファイルをテクニカルサポートに送信し、調査を依頼してください。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+ save storageArray autoLoadBalanceStatistics file=pass:quotes["_filename_"]
+(numberOfDays=pass:quotes[_numberOfDays_]);
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「storageArray storageArray storageArray」
+ a| 
+このコマンドがストレージアレイに対して機能するように指定します。
+
+
+
+ a| 
+'file'
+ a| 
+自動ロードバランシングの統計の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「日数」
+ a| 
+統計を保存する日数。このパラメータはオプションで、デフォルト値は0です。これは、使用可能なすべてのデータを示します。
+
+|===
+
+
+== 例
+
+[listing]
+----
+SMcli -n Array1 -c "save storageArray autoLoadBalanceStatistics file="filename" numberOfDays=30;"
+----
+[NOTE]
+====
+「ドライブがプライマリパスを喪失」状態がアクティブな場合、自動ロードバランシングがワークロードを分散することができません。自動ロードバランシング機能でワークロードが分散されるためには、この状態が非アクティブである必要があります。
+
+====
+
+
+== 最小ファームウェアレベル
+
+8.30

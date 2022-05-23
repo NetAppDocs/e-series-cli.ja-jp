@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/delete-syslog.html 
+sidebar: sidebar 
+keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
+summary: delete syslogコマンドは、1つ以上のサーバをsyslog設定から削除して、アラートを受信しないようにします。 
+---
+= syslogサーバを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete syslogコマンドは、1つ以上のサーバをsyslog設定から削除して、アラートを受信しないようにします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+delete syslog (allServers | serverAddresses pass:quotes[[_serverAddress1_ ... _serverAddressN_]])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allServers」を参照してください
+ a| 
+すべてのsyslogサーバを削除できます。
+
+
+
+ a| 
+「serverAddresses」と入力します
+ a| 
+syslogサーバを削除できます。サーバは角かっこ（[]）で囲みます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete syslog allServers;
+
+SMcli -n Array1 -c "delete syslog serverAddresses ["serverName1.company.com"]";
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

@@ -1,0 +1,260 @@
+---
+permalink: commands-a-z/create-volume-diskpool.html 
+sidebar: sidebar 
+keywords: create, volume, disk pool 
+summary: create volume diskPoolコマンドは、既存のディスクプール内に新しい標準RAIDボリュームまたはシンボリュームを作成します。 
+---
+= ディスクプール内にボリュームを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create volume diskPool'コマンドは'既存のディスク・プール内に新しい標準RAIDボリュームまたはシン・ボリュームを作成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ボリュームグループ内に標準的なRAIDボリュームを作成するためのパラメータには、ディスクプール内に任意のタイプのボリュームを作成するための互換性がないものがあります。古いスクリプトを使用してディスクプール内にボリュームを作成する場合は、すべてのパラメータがディスクプールに対して有効であることを確認してください。パラメータが無効なため、スクリプトが正しく実行されず、原因 にエラーが記録されます。
+
+====
+
+
+== 標準ボリュームを作成するための構文
+
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[dataAssurance=(none|enabled)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[raidLevel=(1 | 6)]
+----
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[raidLevel=(1 | 6)]
+----
+
+
+== シンプロビジョニングボリュームを作成するための構文
+
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[dataAssurance=(none|enabled)]
+[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
+[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
+[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
+[repositoryExpansionPolicy=(automatic|manual)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
+[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
+[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[repositoryExpansionPolicy=(automatic|manual)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「diskPool」
+ a| 
+新しいボリュームを作成するディスクプールの名前を指定します。ディスクプール名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+新しいボリュームに付ける名前。ボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「容量」
+ a| 
+作成するボリュームのサイズ。
+
+標準的なRAIDボリュームの場合は、ボリュームに割り当てられる容量です。
+
+シンボリュームの場合は、シンボリュームによって公開される仮想容量の値です。
+
+サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます構文の例を次に示します。
+
+* 「capacity = 500MB」と表示されます
+* 'capacity = 2GB
+
+
+
+
+ a| 
+「thinProvised`」
+ a| 
+このパラメータを使用すると、新しいボリュームのシンプロビジョニングが有効になります。シンプロビジョニングを使用するには、このパラメータを「true」に設定します。シンプロビジョニングが不要な場合は、このパラメータをFALSEに設定します。
+
+
+
+ a| 
+「owner」をクリックします
+ a| 
+ボリュームを所有するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラです所有者を指定しない場合は、コントローラファームウェアによって所有者が決定されます。
+
+
+
+ a| 
+「マッピング」
+ a| 
+このパラメータを使用すると、ホストにボリュームをマッピングできます。後でマップする場合は、このパラメータを「none」に設定します。今すぐマッピングする場合は、このパラメータを「default」に設定します。ボリュームは、ストレージプールにアクセスできるすべてのホストにマッピングされます。
+
+デフォルト値は「 NONE 」です。
+
+
+
+ a| 
+'existingRepositoryLabel'です
+ a| 
+このパラメータは、シンボリュームの既存のリポジトリを特定します。リポジトリボリュームには、シンボリュームの物理容量が割り当てられます。このパラメータは、シンプロビジョニングにのみ適用されます。'existingRepositoryLabel'パラメータを使用する場合は'newRepositoryCapacity'パラメータを使用しないでください
+
+
+
+ a| 
+'newRepositoryCapacity'
+ a| 
+このパラメータは、シンボリュームの新しいリポジトリを作成します。リポジトリボリュームには、シンボリュームの物理容量が割り当てられます。このパラメータは'thinProvised'パラメータの値を'true'に設定した場合にのみ使用します
+
+サイズは'MB'GB'TB'の単位で定義されます構文の例を次に示します。
+
+* 「capacity = 500MB」と表示されます
+* 'capacity = 2GB
+
+
+デフォルト値は仮想容量の50%です。
+
+
+
+ a| 
+repositoryMaxCapacity
+ a| 
+このパラメータは、シンボリュームのリポジトリの最大容量を定義します。このパラメータは'thinProvised'パラメータの値を'true'に設定した場合にのみ使用します
+
+サイズは'MB'GB'TB'の単位で定義されます構文の例を次に示します。
+
+* 「capacity = 500MB」と表示されます
+* 'capacity = 2GB
+
+
+
+
+ a| 
+「warningThresholdPercent」
+ a| 
+シンボリュームの容量がこの割合に達すると、シンボリュームの上限に近づいているという警告アラートが表示されます。整数値を使用します。たとえば、70という値は70%を意味します。
+
+有効な値は1~100です。
+
+このパラメータを100に設定すると、警告アラートは無効になります。
+
+
+
+ a| 
+repositoryExpansionPolicy
+ a| 
+このパラメータは、拡張ポリシーを「automatic」または「manual」に設定します。ポリシーを「automatic」から「manual」に変更すると、最大容量値（クォータ）はリポジトリボリュームの物理容量に変わります。
+
+
+
+ a| 
+「cacheReadPrefetch」というメッセージが表示されます
+ a| 
+キャッシュ読み取りプリフェッチをオンまたはオフにする設定。キャッシュ読み取りプリフェッチをオフにするには'このパラメータをFALSEに設定しますキャッシュ読み取りプリフェッチをオンにするには'このパラメータをTRUEに設定します
+
+
+
+ a| 
+raidLevel
+ a| 
+ディスクプール内に作成されるボリュームのRAIDレベルを設定します。RAID1を指定するには'1'に設定しますRAID6を指定するには'6'に設定しますRAIDレベルが設定されていない場合は、デフォルトでRAID 6がディスクプールに使用されます。
+
+|===
+
+
+== 注：
+
+ボリューム名は一意である必要があります。ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
+
+シン・ボリュームの場合'capacity'パラメータはボリュームの仮想容量を指定し'repositoryCapacityパラメータは'リポジトリ・ボリュームとして作成されるボリュームの容量を指定します新しいボリュームを作成する代わりに'既存の未使用のリポジトリ・ボリュームを指定するには'existingRepositoryLabelパラメータを使用します
+
+最善の結果を得るためには、シンボリュームの作成時に、リポジトリボリュームがすでに存在しているか、既存のディスクプールにリポジトリボリュームを作成する必要があります。シンボリュームの作成時に一部のオプションパラメータを指定しない場合は、ストレージ管理ソフトウェアによってリポジトリボリュームが作成されます。最も望ましい候補ボリュームは、すでに存在していて、サイズ要件の範囲内のリポジトリボリュームです。次に望ましい候補ボリュームは、ディスクプールの空きエクステント内に作成される新しいリポジトリボリュームです。
+
+シンボリュームのリポジトリボリュームは、ボリュームグループには作成できません。
+
+
+
+== Data Assurance管理
+
+Data Assurance（DA）機能を使用すると、ストレージシステム全体のデータの整合性が向上します。ホストとドライブの間でデータが移動されたときにストレージアレイがエラーの有無をチェックします。この機能を有効にすると、ボリューム内の各データブロックに巡回冗長検査（CRC）と呼ばれるエラーチェック用のコードが付加されます。データブロックが移動されると、ストレージアレイはこれらのCRCコードを使用して、転送中にエラーが発生したかどうかを判断します。破損している可能性があるデータはディスクに書き込まれず、ホストにも返されません。
+
+DA機能を使用する場合は、まず最初にDAがサポートされているドライブのみを含むプールまたはボリュームグループを作成します。次に、DA対応ボリュームを作成します。最後に、DAに対応したI/Oインターフェイスを使用してDA対応ボリュームをホストにマッピングします。DAに対応したI/Oインターフェイスには、Fibre Channel、SAS、iSER over InfiniBand（iSCSI Extensions for RDMA/IB）があります。iSCSI over EthernetやSRP over InfiniBandではDAはサポートされていません。
+
+[NOTE]
+====
+すべてのドライブがDA対応の場合は'dataAssuranceパラメータをEnabledに設定し'特定の操作でDAを使用できますたとえば、DA対応ドライブが含まれるボリュームグループを作成し、そのボリュームグループにDA対応のボリュームを作成できます。DA対応ボリュームを使用する他の処理には、DA機能をサポートするオプションがあります。
+
+====
+「dataAssurance」パラメータが「enabled」に設定されている場合、Data Assurance対応のドライブのみがボリューム候補とみなされます。それ以外の場合は、Data Assurance対応ドライブとData Assurance対応でないドライブの両方が考慮されます。DA対応ドライブのみが使用可能な場合、新しいボリュームは、有効なDA対応ドライブを使用して作成されます。
+
+
+
+== 最小ファームウェアレベル
+
+7.83
+
+8.70で'_raidLevel_'パラメータが追加されました

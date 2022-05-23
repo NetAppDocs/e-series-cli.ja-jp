@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/create-read-only-snapshot-volume.html 
+sidebar: sidebar 
+keywords: create, read only, snapshot, volume 
+summary: create snapVolumeコマンドは、ベースボリュームのSnapshotイメージに対して読み取り専用のSnapshotボリュームを作成します。読み取り専用のSnapshotボリュームを読み取り/書き込みボリュームに変更するには、set SnapVolume convertToReadWriteコマンドを使用します。 
+---
+= 読み取り専用Snapshotボリュームを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+create snapVolumeコマンドは'ベース・ボリュームのスナップショット・イメージの読み取り専用スナップショット・ボリュームを作成します読み取り専用のスナップショット・ボリュームを読み取り/書き込みボリュームに変更するには'set snapVolume convertToReadWriteコマンドを使用します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+オンラインボリュームコピーで使用されているSnapshotイメージには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+create snapVolume userLabel=pass:quotes[_"snapVolumeName"_
+snapImageID="_snapCGID:imageID"_]
+readOnly
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+Snapshotボリュームに付ける名前。Snapshotボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「snapImageID」
+ a| 
+新しい読み取り専用Snapshotボリュームに追加するSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新-スナップショット・グループで作成された最新のスナップショット・イメージを表示する場合に'このオプションを使用します
+* oldest - Snapshotグループに作成された最も古いSnapshotイメージを表示する場合は、このオプションを使用します。
+
+
+Snapshotイメージ名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「readOnly」
+ a| 
+このパラメータは、Snapshotボリュームを読み取り専用に設定します。このパラメータは、実際はブール値です。ただし、このコマンドのコンテキストでは、ブール値は常に「true」です。
+
+[NOTE]
+====
+readOnlyパラメータを指定すると'スナップショット・ボリュームは作成されません
+
+====
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+Snapshotイメージの識別子は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの名前
+* Snapshotイメージの識別子
+
+
+たとえば、snapGroup1という名前を持つSnapshotグループ内の最新のSnapshotイメージを使用して、engData1という名前の読み取り専用のボリュームを作成する場合は、次のコマンドを使用します。
+
+[listing]
+----
+create snapVolume userLabel="engData1" snapImageID="snapGroup1:newest" readOnly;
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

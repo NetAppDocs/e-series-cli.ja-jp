@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html 
+sidebar: sidebar 
+keywords: set, storage, array, controller, health, image, allow, overwrite 
+summary: set storageArray controllerHealthImageAllowOverWriteコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、新しいコントローラヘルスイメージによる既存のコントローラヘルスイメージの上書きを許可するフラグをコントローラに設定します。 
+---
+= ストレージアレイコントローラのヘルスイメージの上書き許可の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray controllerHealthImageAllowOverWriteコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、新しいコントローラヘルスイメージによって既存のコントローラヘルスイメージが上書きされるようにするフラグをコントローラに設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+ストレージアレイがコントローラヘルスイメージ機能をサポートしていない場合、コマンドはエラーを返します。
+
+[NOTE]
+====
+ファームウェア・バージョン8.20で'coreDumpAllowOverWriteパラメータが'controllerHealthImageAllowOverWriteパラメータに置き換えられました
+
+====
+
+
+== 構文
+
+[listing]
+----
+set storageArray controllerHealthImageAllowOverWrite
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+コントローラヘルスイメージが取得されると、「allow overwrite」フラグが設定されます。コントローラヘルスイメージが取得されない場合、イメージは48時間で期限切れになり、その後「allow overwrite」フラグが設定されます。「set storageArray controllerHealthImageAllowOverWrite」コマンドを使用して「allow overwrite」フラグを設定すると、イメージが取得された場合と同様に、48時間の期限が適用されなくなります。
+
+
+
+== 最小ファームウェアレベル
+
+7.86
+
+8.20で'*coreDumpAllowOverWrite *'パラメータが'controllerHealthImageAllowOverWriteパラメータに置き換えられました

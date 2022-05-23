@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/rename-ssd-cache.html 
+sidebar: sidebar 
+keywords: rename, ssd, cache 
+summary: set ssdCacheコマンドは、SSDキャッシュの名前を変更します。 
+---
+= SSDキャッシュの名前を変更します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set ssdCacheコマンドは、SSDキャッシュの名前を変更します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Support Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set ssdCache pass:quotes[[_old_ssdCacheName_] userLabel=pass:quotes[_"new_ssdCacheName_"]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ssdCache」
+ a| 
+名前を変更するSSDキャッシュの名前。SSDキャッシュ名は角かっこ（[]）で囲みます。SSDキャッシュ名が特殊文字を含んでいる場合または数字のみで構成される場合は、SSDキャッシュ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+SSDキャッシュの新しい名前。名前は二重引用符（""）で囲みます。識別子には、英数字、アンダースコア（_）、ハイフン（-）、ポンド（#）の任意の組み合わせを使用できます。識別子の最大文字数は30文字です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.84

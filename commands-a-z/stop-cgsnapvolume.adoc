@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/stop-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: stop, consistency, group, snapshot, volume 
+summary: stop cgSnapVolumeコマンドは、整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理を停止します。 
+---
+= 整合性グループのSnapshotボリュームの停止
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop cgSnapVolumeコマンドを実行すると、整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理が停止します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+copy-on-write処理を再開するには、「resume cgSnapVolume」コマンドを使用します。
+
+[NOTE]
+====
+このコマンドによって整合性グループのSnapshotボリュームが削除されることはありません。整合性グループのスナップショットボリュームを削除するには'delete cgSnapVolumeコマンドを使用します
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop cgSnapVolume [_snapVolumeName_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+cgSnapVolume
+ a| 
+作成を停止する整合性グループのSnapshotボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+7.83

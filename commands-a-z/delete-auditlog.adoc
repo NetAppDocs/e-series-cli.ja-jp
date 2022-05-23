@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/delete-auditlog.html 
+sidebar: sidebar 
+keywords: delete, audit, log, records 
+summary: delete auditLogコマンドは、監査ログ内のレコードの一部またはすべてを削除します。 
+---
+= 監査ログレコードを削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete auditLogコマンドは'監査ログ内のレコードの一部またはすべてを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+delete auditLog (all | (endRecord=pass:quotes[_timestamp_ | endDate=_date_) |
+ (retentionCount=_integer_))]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「すべて」
+ a| 
+すべての監査ログレコードを削除できます。
+
+
+
+ a| 
+「endRecord」
+ a| 
+最も古いレコードから始めて、最後に削除するレコードを指定できます。この値は、最後の監査ログレコードのタイムスタンプを表す整数値です。
+
+
+
+ a| 
+「endDate」
+ a| 
+最も古いレコードから始めて、削除する終了日を指定できます。日付の入力形式は、クライアントタイムゾーンでMM：DD：YYです。
+
+[NOTE]
+====
+指定した日付を含む監査ログレコードが削除されます。
+
+====
+
+
+ a| 
+「retentionCount」
+ a| 
+最新の監査ログレコードを保持する数を指定できます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete auditLog all;"
+
+SMcli -n Array1 -c "delete auditLog endRecord=1493070393313;"
+
+SMcli -n Array1 -c "delete auditLog endDate=04:30:17;"
+
+SMcli -n Array1 -c "delete auditLog retentionCount=1000;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

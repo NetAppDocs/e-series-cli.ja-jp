@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/remove-volumecopy-target.html 
+sidebar: sidebar 
+keywords: remove, volume, copy 
+summary: remove VolumeCopy targetコマンドは、ボリュームコピーペアを削除します。 
+---
+= ボリュームコピーを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'remove VolumeCopy target'コマンドは'ボリューム・コピー・ペアを削除します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、Snapshotボリュームコピーペアに対して有効です。
+
+[NOTE]
+====
+ファームウェア・バージョン7.83では'copyType=(online | offline)パラメータは使用されなくなりました
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+remove volumeCopy target pass:quotes[[_targetName_]] [source pass:quotes[[_sourceName_]]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「target」と入力します
+ a| 
+削除するターゲットボリュームの名前。ターゲットボリューム名は角かっこ（[]）で囲みます。ターゲットボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、ターゲットボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「source」を参照してください
+ a| 
+削除するソースボリュームの名前。ソースボリューム名は角かっこ（[]）で囲みます。ソースボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、ソースボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+5.40
+
+7.83で'copyType=(online | offline)パラメータが削除されました

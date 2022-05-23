@@ -1,0 +1,139 @@
+---
+permalink: get-started/cli-command-wrapper-syntax.html 
+sidebar: sidebar 
+keywords: cli, command, wrapper, syntax 
+summary: このセクションでは、CLIコマンドラッパーの一般的な構文を示します。 
+---
+= CLIコマンドラッパーの構文
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+このセクションでは、CLIコマンドラッパーの一般的な構文を示します。CLIコマンドラッパーの構文で使用される表記規則を次の表に示します。
+
+[cols="2*"]
+|===
+| 表記規則 | 定義（ Definition ） 
+
+
+ a| 
+「a|b`
+ a| 
+選択肢（「a」または「b」）
+
+
+
+ a| 
+「_italic」-「words_`」
+ a| 
+パラメータを指定するには、ユーザ入力が必要です（変数への応答）。
+
+
+
+ a| 
+'+[... ]+`(角括弧)
+ a| 
+0または1回のみ使用可能（角かっこは、一部のコマンドパラメータの区切り文字としても使用されます）
+
+
+
+ a| 
+'+{... }-->(中かっこ)
+ a| 
+0個以上のオカレンス
+
+
+
+ a| 
+'(a|b|c)`
+ a| 
+選択肢を1つだけ選択してください
+
+
+
+ a| 
+「a&|b`」
+ a| 
+および/または。一方または両方のコントローラIPアドレスを使用できるhttpsクライアントモードで使用します。一方のコントローラが応答しない場合、SMcliは代替のIPアドレスを使用します。また、ファームウェアのダウンロードなど、両方のIPアドレスが必要な場合にも対応します。
+
+|===
+[NOTE]
+====
+すべてのCLIコマンドを実行するには、管理者権限が必要です。一部のCLIコマンドは管理者権限がなくても実行されますが、ただし、コマンドの多くは実行されません。適切な権限がないためにCLIコマンドが実行されない場合は、CLIから終了コード12が返されます。
+
+====
+
+
+== httpsクライアントモードでの例
+
+次の例では'で説明している'https'クライアント・モードのコマンド・ライン・パラメータを示します xref:command-line-parameters.adoc[コマンドラインパラメータ]。
+
+[listing]
+----
+SMcli (Controller A host-name-or-IP-address&|
+Controller B host-name-or-IP-address)  -u username -p password -c "commands;" [-clientType (auto | https | symbol)]
+----
+[NOTE]
+====
+clientTypeを指定せずに'-u'オプションと'username'変数を指定した場合'システムは'http'または'symbol'クライアント・モードのいずれかを使用します
+
+====
+
+
+== symbolクライアントモードの例
+
+次の例は'で説明する'symbolクライアントモードのコマンドラインパラメータを示しています xref:command-line-parameters.adoc[コマンドラインパラメータ]。
+
+[listing]
+----
+SMcli **-a** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-I** information-to-include] [**-q** frequency] [**-S**]
+----
+[NOTE]
+====
+-aコマンド・ライン・オプションは'E2800またはE5700ストレージ・アレイではサポートされていません
+
+====
+[listing]
+----
+SMcli **-x** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+-x'コマンド・ライン・オプションは'E2800またはE5700ストレージ・アレイではサポートされていません
+
+====
+[listing]
+----
+SMcli (**-a** | **-x**) **trap:** community, host-name-or-IP-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+-aおよび-xコマンド・ライン・オプションは'E2800またはE5700ストレージ・アレイではサポートされていません
+
+====
+[listing]
+----
+SMcli **-d** [**-w**] [**-i**] [**-s**] [**-v**] [**-S**]
+----
+[NOTE]
+====
+-sコマンド・ライン・オプションは'E2800またはE5700ストレージ・アレイではサポートされていません
+
+====
+[listing]
+----
+SMcli host-name-or-IP-address **-F** email-address [**-g** contactInfoFile] [**-S**]
+----
+[listing]
+----
+SMcli **-A** [host-name-or-IP-address [host-name-or-IP-address]] [**-S**]
+----
+[listing]
+----
+SMcli **-X **(**-n** storage-system-name | **-w** wwID | **-h** host-name)
+----
+[listing]
+----
+SMcli **-?**
+----

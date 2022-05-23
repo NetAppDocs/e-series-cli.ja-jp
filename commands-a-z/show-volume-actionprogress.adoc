@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/show-volume-actionprogress.html 
+sidebar: sidebar 
+keywords: show, volume, action, progress 
+summary: show volume actionProgressコマンドは、ボリュームで長時間実行されている処理のうち、長時間実行されている処理の量に関する情報を返します。 
+---
+= ボリューム操作の進捗状況を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volume actionProgress」コマンドは、ボリューム上で長時間実行されている操作のボリューム操作および実行時間に関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ファームウェア・バージョン7.77では'show volume actionProgressコマンドは廃止されましたこのコマンドは、「show storageArray longRunningOperations」に置き換えてください。
+
+====
+完了している長時間の処理の量は割合で示されます（たとえば、25は長時間実行されている処理の25%が完了したことを意味します）。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show volume pass:quotes[[_volumeName_]] actionProgress
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「 volume 」
+ a| 
+長時間の処理に関する情報を取得するボリュームの名前。ボリューム名は角かっこ（[]）で囲みます。ボリューム名に特殊文字または数字が含まれている場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+5.43

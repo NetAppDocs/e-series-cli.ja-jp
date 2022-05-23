@@ -1,0 +1,89 @@
+---
+permalink: commands-a-z/download-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
+summary: download controller cacertifateコマンドは、ルート/中間CA証明書をコントローラのWebサーバにインストールして、Webサーバの署名付き証明書を検証します。 
+---
+= ルート/中間CA証明書をインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download controller cacertifate'コマンドは、ルート/中間CA証明書をコントローラのWebサーバにインストールし、Webサーバの署名付き証明書を検証します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+この処理はコントローラごとに実行します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+download controller[(a|b)] caCertificate pass:quotes[[alias="_string_"]]
+         pass:quotes[file="_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ルート/中間署名済み証明書をインストールするコントローラを指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「alias」
+ a| 
+ルート/中間証明書を表すエイリアスを指定できます。このエイリアスは、ルート/中間証明書に関する情報を検索する場合や、それらの証明書を削除する場合に使用されます。エイリアスはルート/中間証明書に関連付けられており、一意である必要があります。
+
+
+
+ a| 
+'file'
+ a| 
+ルート/中間CA証明書を含むファイルを指定できます。使用できる拡張子は、.pem、.cer、.crt、.derです。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download controller[a] caCertificate alias="myAlias" file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download controller[b] caCertificate file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

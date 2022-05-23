@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/revive-snapvolume.html 
+sidebar: sidebar 
+keywords: revive, snapshot, volume 
+summary: '[revive SnapVolume]コマンドは、指定したスナップショットボリュームを強制的に最適状態に設定します。' 
+---
+= Snapshotボリュームを回復します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「revive SnapVolume」コマンドは、指定されたスナップショットボリュームを強制的に最適状態にします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+Snapshotボリュームは次のいずれかです。
+
+* スタンドアロンのSnapshotボリューム
+* 整合性グループのメンバーであるSnapshotボリューム
+
+
+Snapshotボリュームが失敗状態でない場合はエラーメッセージが表示され、このコマンドは実行されません。
+
+[NOTE]
+====
+オンラインボリュームコピーで使用されているSnapshotボリュームには、このコマンドは使用できません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+revive snapVolume pass:quotes[[_snapVolumeName_]]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「SnapVolume」
+ a| 
+最適状態に設定するSnapshotボリュームの名前。Snapshotボリューム名は角かっこ（[]）で囲みます。Snapshotボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、Snapshotボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 注：
+
+名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

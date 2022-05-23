@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-storagearray-unconfigurediscsiinitiators.html 
+sidebar: sidebar 
+keywords: show, storage, array, unconfigured, iscsi, initiators 
+summary: show storageArray unconfiguredIscsiInitiatorsコマンドは、ストレージアレイで検出されたイニシエータのうち、ストレージアレイトポロジに設定されていないイニシエータのリストを返します。 
+---
+= ストレージアレイの未設定のiSCSIイニシエータの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray unconfiguredIscsiInitiatorsコマンドは'ストレージ・アレイによって検出されたイニシエータのうち'まだストレージ・アレイ・トポロジーに設定されていないイニシエータのリストを返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+このコマンドは廃止されました。置き換えられるコマンドはです link:show-storagearray-unconfiguredinitiators.html["show storageArray unconfiguredInitiatorsの例を示します"]。
+
+
+
+== 構文
+
+[listing]
+----
+show storageArray unconfiguredIscsiInitiators
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+7.10
+
+8.50で、このコマンドは廃止されました

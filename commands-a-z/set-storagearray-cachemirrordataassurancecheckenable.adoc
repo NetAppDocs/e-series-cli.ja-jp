@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html 
+sidebar: sidebar 
+keywords: set, storage, array, enable, disable, cache, mirror, data, assurance, check 
+summary: set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。 
+---
+= ストレージアレイでキャッシュミラーのData Assuranceチェックを有効または無効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.41で、コマンドパラメータが新しくなりました。

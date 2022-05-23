@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/smcli-enable-disable-autosupportondemand.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, ondemand, feature, emw, management, domain, level, smcli 
+summary: SMcli enable | disable autoSupportOnDemandコマンドは、AutoSupport OnDemand機能をオンまたはオフにします。この機能を使用すると、テクニカルサポートはAutoSupport データ送信を調整でき、不足しているサポートデータの再送信を要求できます。 
+---
+= EMW管理ドメインレベルでのAutoSupport OnDemand機能の有効化または無効化（SMcliのみ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli enable | disable autoSupportOnDemandコマンドは、AutoSupport OnDemand機能をオンまたはオフにします。この機能を使用すると、テクニカルサポートはAutoSupport データ送信を調整でき、不足しているサポートデータの再送信を要求できます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+この機能を有効にする前に、まず管理ドメインでAutoSupport 機能を有効にする必要があります。この機能を有効にすると、必要に応じてAutoSupport リモート診断機能を有効にすることができます。AutoSupport OnDemand機能が有効になっている場合、AutoSupport リモート診断機能はデフォルトで有効になっています。
+
+
+
+== 構文
+
+[listing]
+----
+SMcli enable|disable autoSupportOnDemand
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 検証
+
+SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の2行には、AutoSupport 機能とAutoSupport OnDemand機能の有効ステータスが順番に表示されます。
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management
+station.
+The AutoSupport OnDemand feature is activated on this storage
+management station.
+----
+
+
+== 最小ファームウェアレベル
+
+8.25

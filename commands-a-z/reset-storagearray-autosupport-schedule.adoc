@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/reset-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: reset storageArray autoSupport AutoSupport scheduleコマンドは、AutoSupport メッセージを管理ソフトウェアによって生成されたランダムな値に送信する、毎日または毎週の特定の時刻および曜日をリセットします。 
+---
+= AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+reset storageArray autoschedule' AutoSupport コマンドは、AutoSupport メッセージが管理ソフトウェアによって生成されたランダムな値に送信される毎日および毎週の時間と曜日をリセットします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+* 管理ソフトウェアは、日単位と週単位のメッセージに関しては時刻を、週単位のメッセージに関しては曜日を、ランダムに選択します。
+* 管理ソフトウェアは、1つの管理ドメイン内の2つのストレージアレイがスケジュールされたAutoSupport メッセージを同時に送信しないように対処します。
+
+
+
+
+== 構文
+
+[listing]
+----
+reset storageArray autoSupport schedule
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset storageArray autoSupport schedule;"
+
+SMcli completed successfully.
+----
+
+
+== 検証
+
+スケジュールの変更結果を確認するには、「show storageArray autoSupport AutoSupport 」コマンドを使用します。
+
+
+
+== 最小ファームウェアレベル
+
+8.40

@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-diskpool-locate.html 
+sidebar: sidebar 
+keywords: stop, disk pool, locate 
+summary: 'stop diskPool locateコマンドは"start diskPool locateコマンドによってオンにされたドライブのインジケータライトをオフにします' 
+---
+= ディスクプールの特定を停止します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop diskPool locateコマンドは'start diskPool locateコマンドによってオンにされたドライブのインジケータ・ライトをオフにします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+stop diskPool locate
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+7.83

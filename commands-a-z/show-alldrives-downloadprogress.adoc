@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/show-alldrives-downloadprogress.html 
+sidebar: sidebar 
+keywords: show, drive, download, progress 
+summary: show allDrives downloadProgressコマンドは、download drive firmwareコマンドまたはdownload storageArray driveFirmwareコマンドで対象となるドライブのファームウェアダウンロードのステータスを返します。 
+---
+= ドライブのダウンロードの進捗状況を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allDrives downloadProgress」コマンドは、「download drive firmware」コマンドまたは「download storageArray driveFirmware」コマンドの対象となるドライブのファームウェアダウンロードのステータスを返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+show allDrives downloadProgress
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 注：
+
+すべてのファームウェアダウンロードが正常に完了すると、このコマンドはSuccessfulを返します。ファームウェアダウンロードが1つでも失敗した場合、対象の各ドライブのファームウェアダウンロードのステータスが表示されます。このコマンドから返されるステータスを次の表に示します。
+
+[cols="2*"]
+|===
+| ステータス | 定義（ Definition ） 
+
+
+ a| 
+「成功しました」
+ a| 
+ダウンロードはエラーなしで完了しました。
+
+
+
+ a| 
+「未試行」
+ a| 
+ダウンロードは開始されませんでした。
+
+
+
+ a| 
+「部分的なダウンロード」
+ a| 
+ダウンロードが進行中です。
+
+
+
+ a| 
+「失敗しました」
+ a| 
+ダウンロードは完了しましたが、エラーがあります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

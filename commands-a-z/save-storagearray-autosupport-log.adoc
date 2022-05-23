@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autosupport-log.html 
+sidebar: sidebar 
+keywords: retrieve, autosupport, log, individual, E2800, E5700, arrays 
+summary: save storageArray autolog AutoSupport コマンドを使用すると、AutoSupport ログファイルを表示できます。このファイルには、ステータスに関する情報、送信アクティビティの履歴、およびAutoSupport メッセージの配信中に発生したエラーが格納されます。AutoSupportに対応したストレージアレイとAutoSupportが有効なストレージアレイのすべてについてログを使用できます。 
+---
+= AutoSupport ログを取得します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray autolog' AutoSupport コマンドを使用すると、AutoSupport ログファイルを表示できます。このファイルには、ステータスに関する情報、送信アクティビティの履歴、およびAutoSupport メッセージの配信中に発生したエラーが格納されます。AutoSupportに対応したストレージアレイとAutoSupportが有効なストレージアレイのすべてについてログを使用できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを使用すると、次の2種類のログを表示できます。
+
+* 現在のログ--この時点でキャプチャされたログを表示します
+* アーカイブログ--アーカイブされたファイルからログを表示します
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray autoSupport log [inputArchive=n]
+file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「inputArchive」と入力します
+ a| 
+アーカイブされたAutoSupport ログを指定できますアーカイブ・ファイルは'n'0から始まる整数です
+
+[NOTE]
+====
+このパラメータを省略する場合は、現在のAutoSupport ログ（現時点でキャプチャ）を選択します。
+
+====
+
+
+ a| 
+'file'
+ a| 
+出力のASUP送信ログファイル名を指定できます。
+
+[NOTE]
+====
+このパラメータは必須です。
+
+====
+|===
+
+
+=== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray autoSupport log inputArchive=0 file=\"ASUPTransmissionLog\";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

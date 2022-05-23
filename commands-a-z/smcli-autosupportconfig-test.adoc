@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-test.html 
+sidebar: sidebar 
+keywords: test, autosupport, configuration 
+summary: テストメッセージを送信してAutoSupport の設定をテストするには、SMcli -autoSupportConfig testコマンドを使用します。このコマンドは管理ドメインで動作します。テストメッセージに含めるサンプルデータとして、管理ドメイン内のAutoSupport対応のアレイが選択されます。 
+---
+= AutoSupport 構成をテストします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+テスト・メッセージを送信してAutoSupport 構成をテストするには'SMcli -autoSupportConfig test'コマンドを使用しますこのコマンドは管理ドメインで動作します。テストメッセージに含めるサンプルデータとして、管理ドメイン内のAutoSupport対応のアレイが選択されます。
+
+
+
+== サポートされているアレイ
+
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドはSMcliコマンドであり、スクリプトコマンドではありません。このコマンドはコマンドラインから実行する必要があります。このコマンドは、ストレージ管理ソフトウェア内のスクリプトエディタから実行することはできません。
+
+====
+[NOTE]
+====
+スケジュールされたAutoSupport メッセージまたはイベントトリガー型メッセージを送信するには、管理ステーションでPersistent Monitorが実行されている必要があります。このコマンドを使用する前にサービスを開始してください。
+
+====
+
+
+== 構文
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail<address>
+----
+
+
+== パラメータ
+
+次の表に、AutoSupport テストメッセージを送信するためのパラメータを示します。
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「test」のようになります
+ a| 
+コマンドの必須パラメータ。値は不要です。
+
+
+
+ a| 
+「返信メール」
+ a| 
+SMTP配信タイプのAutoSupport メッセージの返信先のEメールアドレスを指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.25
+
+
+
+== HTTP / HTTPS配信を使用したテストの例
+
+HTTPまたはHTTPS配信タイプを使用する場合のこのコマンドの使用例を次に示します。配信用のEメールアドレスは指定しません。
+
+[listing]
+----
+SMcli -autoSupportConfig test
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+SMcli completed successfully.
+----
+
+
+== SMTP配信を使用したテストの例
+
+このコマンドの使用例を次に示します。SMTP配信方式を使用する場合は、「reply-toEmail」パラメータを使用して宛先アドレスを指定できます。
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail:user@netapp.com
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+An email has been sent to 'user@netapp.com', please check the mailbox
+for delivery confirmation.
+
+SMcli completed successfully.
+----

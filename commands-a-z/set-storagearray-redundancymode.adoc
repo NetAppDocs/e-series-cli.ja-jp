@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/set-storagearray-redundancymode.html 
+sidebar: sidebar 
+keywords: set, storage, array, redundancy, mode 
+summary: set storageArray redundancyModeコマンドは、ストレージアレイの冗長モードをシンプレックスまたはデュプレックスに設定します。 
+---
+= ストレージアレイの冗長性モードを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set storageArray redundancyModeコマンドは'ストレージ・アレイの冗長モードをシンプレックスまたはデュプレックスに設定します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+set storageArray redundancyMode=(simplex | duplex)
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「冗長性モード」
+ a| 
+コントローラが1台しかない場合は' simplexモードを使用しますコントローラが2台ある場合は、「duplex」モードを使用します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/start-snmptrapdestination.html 
+sidebar: sidebar 
+keywords: test, snmp, trap, destination 
+summary: start snmpTrapDestinationコマンドは、特定の簡易ネットワーク管理プロトコル（SNMP）コミュニティまたはユーザのトラップレシーバーの接続とIDをテストします。このコマンドは、トラップレシーバーにトラップメッセージを送信することによって、トラップの送信先をテストします。 
+---
+= SNMPトラップの送信先をテストします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start snmpTrapDestinationコマンドは'特定の簡易ネットワーク管理プロトコル(SNMP)コミュニティまたはユーザのトラップレシーバーの接続と識別をテストしますこのコマンドは、トラップレシーバーにトラップメッセージを送信することによって、トラップの送信先をテストします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start snmpTrapDestination trapReceiverIP=ipAddress
+    pass:quotes[(communityName="_communityName_" | (userName="_userName_"] [engineId=(local | engineId)]))
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「trapReceverIP」と入力します
+ a| 
+トラップメッセージの送信先であるSNMPマネージャのIPアドレス。
+
+
+
+ a| 
+「CommunityName」の略
+ a| 
+トラップメッセージを送信するSNMPコミュニティの名前。
+
+
+
+ a| 
+「ユーザ名」
+ a| 
+トラップメッセージを送信するSNMPユーザの名前。
+
+
+
+ a| 
+「engineID」
+ a| 
+トラップメッセージを送信するSNMPユーザのエンジンID。同じユーザ名を使用するUSMユーザが複数ある場合は、エンジンIDが必要です。ローカルSNMPエージェントを指定する値は「[.code]`local`」です。ローカルSNMPエージェントは権限のあるエージェントで、16進数の数字で、リモートSNMPエージェントエンジンIDを指定します。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

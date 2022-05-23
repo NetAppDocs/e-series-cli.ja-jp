@@ -1,0 +1,95 @@
+---
+permalink: commands-a-z/save-storagearray-dbmvalidatorinfo.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, validator, information, file 
+summary: save storageArray dbmValidatorInfoコマンドは、ストレージアレイのデータベース管理（DBM）検証情報をXMLファイルに保存します。 
+---
+= ストレージアレイのDBMバリデータ情報ファイルを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray dbmValidatorInfoコマンドは'ストレージ・アレイのデータベース管理（DBM）検証情報をXMLファイルに保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+テクニカルサポートでは、このXMLファイルを使用してバリデータ文字列（セキュリティコード）を生成できます。バリデータ文字列は'ストレージ・アレイを既存の構成にリストアするときに'load storageArray dbmDatabase'コマンドに含める必要があります
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save storageArray dbmValidatorInfo file=pass:quotes["_filename_"] dbmDatabase=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+テクニカルサポートが必要とするDBMバリデータのファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+「file="C:\Array Backups\DBMvalidator.xml"」このコマンドでは、保存されたファイルにファイル拡張子は自動的に付加されません。ファイル名を入力するときに、.xmlファイル拡張子を指定する必要があります。
+
+
+
+ a| 
+「dbmDatabase」と入力します
+ a| 
+XML情報ファイルの生成元となるDBMデータベースのファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+dbmDatabase="C:\Array Backups\DBMbackup_03302010.dbm"このコマンドでは'保存されたファイルにファイル拡張子が自動的に付加されませんファイル名を入力するときに、.dbmファイル拡張子を指定する必要があります。
+
+|===
+
+
+== 注：
+
+バリデータ文字列を取得するためにXML情報ファイルを生成する場合は、データベースをリストアするコントローラに接続した状態でこのコマンドを実行する必要があります。次の例は、XMLファイルの形式を示しています。
+
+[listing]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<DbmImageMetadata>
+<Controllers>
+<A>1IT0nnnnnnnnnABCD</A>
+<B>1T0nnnnnnnnnABCD</B>
+</Controllers>
+<Header>
+<ImageVersion>1</ImageVersion>
+<TimeStamp>1269388283</TimeStamp>
+</Header>
+<Trailer>
+<CRC>nnnnnnnnnn</CRC><
+/Trailer>
+</DbmImageMetadata>
+----
+
+
+== 最小ファームウェアレベル
+
+7.75

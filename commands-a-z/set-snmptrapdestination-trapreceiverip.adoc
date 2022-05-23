@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/set-snmptrapdestination-trapreceiverip.html 
+sidebar: sidebar 
+keywords: update, snmp, trap, destination 
+summary: set snmpTrapDestination trapReciverIPコマンドは、SNMPトラップの送信先に関する認証エラーメッセージの送信をオンまたはオフにします。エラーは、SNMPエージェントがSNMPマネージャからメッセージを受信したが、メッセージに無効なコミュニティ名またはユーザ名が含まれている場合に発生します。 
+---
+= SNMPトラップの送信先を更新してください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set snmpTrapDestination trapReciveripコマンドを使用すると、SNMPトラップの送信先に関する認証エラーメッセージの送信をオンまたはオフにできます。エラーは、SNMPエージェントがSNMPマネージャからメッセージを受信したが、メッセージに無効なコミュニティ名またはユーザ名が含まれている場合に発生します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snmpTrapDestination trapReceiverIP=ipAddress
+(communityName=pass:quotes["_communityName_"] | (userName=pass:quotes["_userName_"] [engineId=(local | engineId)]))
+[sendAuthenticationFailureTraps=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「trapReceverIP」と入力します
+ a| 
+トラップメッセージの送信先であるSNMPマネージャのIPアドレス。
+
+
+
+ a| 
+「CommunityName」の略
+ a| 
+トラップメッセージを送信するSNMPコミュニティの名前。
+
+
+
+ a| 
+「ユーザ名」
+ a| 
+トラップメッセージを送信するSNMPユーザの名前。
+
+
+
+ a| 
+「engineID」
+ a| 
+トラップメッセージを送信するSNMPユーザのエンジンID。同じユーザ名を使用するUSMユーザが複数ある場合は、エンジンIDが必要です。ローカルSNMPエージェントを指定する値は、「[.code]`local`」です。ローカルSNMPエージェントは、権限のあるエージェントであるか、リモートSNMPエージェントエンジンIDを指定する16進数の文字列です。
+
+
+
+ a| 
+「sendAuthenticationFailureTraps」
+ a| 
+このパラメータは、SNMPマネージャへの認証エラーメッセージの送信をオンまたはオフにします。認証失敗メッセージを送信するには、パラメータを「true」に設定します。認証失敗メッセージを送信しないようにするには、パラメータをFALSEに設定します。デフォルトは「true」です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

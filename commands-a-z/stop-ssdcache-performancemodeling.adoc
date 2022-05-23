@@ -1,0 +1,123 @@
+---
+permalink: commands-a-z/stop-ssdcache-performancemodeling.html 
+sidebar: sidebar 
+keywords: stop, ssd, cache, performance, model 
+summary: stop ssdCache performanceModelingコマンドは、パフォーマンスモデリング処理を停止し、SSDキャッシュのパフォーマンスモデリングデータを表示します。 
+---
+= SSDキャッシュのパフォーマンスモデリングを停止する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+stop ssdCache performanceModelingコマンドは'パフォーマンスモデリング処理を停止し'SSDキャッシュのパフォーマンスモデリングデータを表示します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Support Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドを実行する前に'start ssdCache performanceModelingコマンドを使用して'パフォーマンスモデリング操作を開始する必要があります必要に応じて、データをファイルに保存することができます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop ssdCache [_ssdCacheName_]] performanceModeling pass:quotes[[file="_filename_"]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ssdCache」
+ a| 
+パフォーマンスモデリングを停止するSSDキャッシュの名前。SSDキャッシュ名は角かっこ（[]）で囲みます。SSDキャッシュ名に特殊文字または数字が含まれている場合は、SSDキャッシュ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+'file'
+ a| 
+パフォーマンスモデリングデータの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\ssdcacheperfcsv"
+
+任意のファイル名を使用できますが'.csv拡張子を使用する必要があります
+
+|===
+
+
+== 注：
+
+このコマンドから返されるパフォーマンスモデリング情報の例を次に示します。モニタのサイズによって、情報がどのように折り返されるかが決まり、情報がどのように表示されるかが決まります。
+
+[listing]
+----
+SSD Cache Name: my_cache
+Start time: 4/18/12 2:38:26  PM IST
+Stop time: 4/18/12 2:38:45 PM IST
+Duration : 00:00:19
+
+SSD Cache Performance Modeling Data (Response Time):
+
+                        SSD Reads            HDD Reads           HDD Writes
+            Overall     Avg.                 Avg.                Avg.
+Cache       Response    Response    % of    Response    % of    Response    % of
+Capacity    Time        Time        I/Os    Time        I/Os    Time        I/Os
+186 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+372 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+557 GB *    0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+558 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+744 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+931 GB      0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1117 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1303 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1489 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1675 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+1862 GB     0 ms        0 ms        0.0 %   0 ms        0.0 %   0 ms        0.0 %
+
+* = Current SSD cache physical capacity.
+
+
+SSD Cache Performance Modeling Data (Cache Hit %):
+
+Cache Capacity    Cache Hit %
+186 GB            0 %
+372 GB            0 %
+557 GB *          0 %
+558 GB            0 %
+744 GB            0 %
+931 GB            0 %
+1117 GB           0 %
+1303 GB           0 %
+1489 GB           0 %
+1675 GB           0 %
+1862 GB           0 %
+* = Current SSD cache physical capacity.
+----
+
+
+== 最小ファームウェアレベル
+
+7.84

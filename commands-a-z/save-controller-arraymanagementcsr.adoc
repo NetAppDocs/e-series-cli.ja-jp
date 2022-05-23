@@ -1,0 +1,153 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementcsr.html 
+sidebar: sidebar 
+keywords: generate, web server, certificate, sign, request, csr 
+summary: save controller arrayManagementCSRコマンドは、コントローラの証明書署名要求（CSR）を生成します。 
+---
+= Webサーバ証明書署名要求（CSR）の生成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save controller arrayManagementCSR'コマンドは'コントローラの証明書署名要求(CSR)を生成します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+CSRには、認証局（CA）による署名が必要です。署名された証明書はコントローラのWebサーバにインストールされます。これにより、アレイを管理するときに、ブラウザはコントローラのWebサーバを自動的に信頼できます。この処理はコントローラごとに実行します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementCSR
+     commonName=pass:quotes["_ipOrDnsName_"]
+     [alternateIPAddresses=pass:quotes[(_ipvX1_..._ipvXN_)]]
+     [alternateDnsNames=pass:quotes[("_dnsName1_"..."_dnsNameN_")]]
+     organization=pass:quotes["_organizationName_"]
+     [organizationalUnit=pass:quotes["_organizationalUnitName_"]]
+     locality=pass:quotes["_cityOrLocality_"]
+     [stateProvince=pass:quotes["_stateOrRegion_"]]
+     country=pass:quotes["_string_"]
+     file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+CSR作成の対象となるコントローラを指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「commonName」
+ a| 
+コントローラのIPアドレスまたはDNS名を指定できます。これは、ブラウザでSystem Managerにアクセスする際に入力したアドレス（http：//またはhttps：//を除く）と正確に一致している必要があります。一致していないと、名前不一致エラーが発生します。
+
+
+
+ a| 
+「alternateIPAddresses」
+ a| 
+コントローラの追加のIPアドレスまたはエイリアスを指定できます。すべてのIPアドレスをかっこで囲みます。複数のIPアドレスを入力する場合は、それぞれスペースで区切ります。
+
+
+
+ a| 
+「alternateDnsNames」
+ a| 
+コントローラの追加のDNS名を指定できます。すべてのDNS名をかっこで囲みます。複数の名前を入力する場合は、それぞれスペースで区切ります。
+
+
+
+ a| 
+「組織」
+ a| 
+ストレージアレイが属する組織の正式名称を指定できます。省略はせず、Inc、Corp、LLCなどのサフィックスもすべて含めてください。
+
+
+
+ a| 
+organizationalUnit
+ a| 
+証明書を処理する組織の部門を指定できます。
+
+
+
+ a| 
+「ローカリティ」
+ a| 
+ストレージアレイが配置されている市区町村を指定できます。
+
+
+
+ a| 
+「州」
+ a| 
+ストレージアレイが配置されている都道府県を指定できます。これは省略しないでください。
+
+
+
+ a| 
+「country」
+ a| 
+ISO（国際標準化機構）の2桁の国別コード（USなど）を指定できます。
+
+
+
+ a| 
+'file'
+ a| 
+コントローラのCSRファイルの保存先となるファイルを指定できます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementCSR
+   commonName="ictd0702s05c01-a.ict.englab.xyz.com"
+   alternateIPAddresses=(10.113.174.190 10.113.174.191)
+   alternateDnsNames=("ictd0702s05c01-b.ict.englab.xyz.com")
+   organization="Company"
+   locality="Wichita"
+   stateProvince="Kansas"
+   country="US"
+   file="C:\storage_array_csr.csr";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

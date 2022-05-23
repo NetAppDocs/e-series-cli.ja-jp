@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/set-snmpsystemvariables.html 
+sidebar: sidebar 
+keywords: update, snmp, mib, system, group, variables 
+summary: set snmpSystemVariablesコマンドは、簡易ネットワーク管理プロトコル（SNMP）のシステム変数を変更します。 
+---
+= SNMP MIB-IIシステムグループ変数を更新します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set snmpSystemVariablesコマンドは、簡易ネットワーク管理プロトコル（SNMP）のシステム変数を変更します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+次のシステム変数は、Management Information Base II（MIB-II）データベースで管理されています。
+
+* システムの名前
+* システム担当者の名前
+* システムの場所
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+set snmpSystemVariables
+[sysName=pass:quotes[_newSystemName_]]
+[sysContact=pass:quotes[_contactName_]]
+[sysLocation=pass:quotes[_systemLocation_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「sysName」と入力します
+ a| 
+SNMPシステムに付ける新しい名前。システム名には、SNMPおよびMIBの標準の規則を使用します。SNMPシステム名は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「sysContact」と入力します
+ a| 
+管理下システムの担当者の名前と、この担当者への連絡方法に関する情報。SNMP担当者名は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「sysLocation」と入力します
+ a| 
+システムの物理的な場所（「3rd FLR」など）。SNMPシステムの場所は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.30

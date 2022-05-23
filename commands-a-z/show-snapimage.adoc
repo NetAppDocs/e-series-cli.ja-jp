@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/show-snapimage.html 
+sidebar: sidebar 
+keywords: show, snapshot, image 
+summary: show snapImageコマンドは、ユーザが以前に作成したSnapshotイメージに関する情報を返します。 
+---
+= Snapshotイメージの表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapImage」コマンドは、ユーザが以前に作成したSnapshotイメージに関する情報を返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 特定のSnapshotイメージを表示するための構文
+
+[listing, subs="+macros"]
+----
+show (allSnapImages | snapImage pass:quotes[["_snapImageName_"]] |
+snapImages pass:quotes[["_snapImageName1_" ... "_snapImageNamen_"]])
+[summary]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allSnapImages」
+ a| 
+ストレージアレイ内のすべてのSnapshotイメージに関する情報を返すためのパラメータ。
+
+
+
+ a| 
+「SnapImage」
+ a| 
+情報を取得するSnapshotイメージの名前。Snapshotイメージの名前は次の2つの部分で構成されます。
+
+* Snapshotグループの名前
+* Snapshotグループ内のSnapshotイメージの識別子
+
+
+Snapshotイメージの識別子には次のいずれかを使用できます。
+
+* Snapshotグループ内のSnapshotのシーケンス番号である整数値。
+* 最新--スナップショットグループで作成された最新のスナップショットイメージを表示する場合に'このオプションを使用します
+* oldest --スナップショットグループで作成された最も古いスナップショットイメージを表示する場合に'このオプションを使用します
+
+
+Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「snapImages」
+ a| 
+情報を取得する複数のSnapshotイメージの名前。以下のルールを使用して、Snapshotイメージの名前を入力します。
+
+* すべての名前は角かっこ（[]）で囲みます。
+* 各名前は二重引用符（""）で囲みます。
+* 名前はそれぞれスペースで区切ります。
+
+
+
+
+ a| 
+「概要」
+ a| 
+このパラメータは、Snapshotイメージに関する概要情報をリストで返します。
+
+|===
+
+
+== 注：
+
+Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
+
+* Snapshotグループの識別子
+* Snapshotイメージの識別子
+
+
+たとえば、SnapshotグループsnapGroup1内のSnapshotイメージ12345を表示する場合は、次のコマンドを使用します。
+
+[listing]
+----
+show snapImage ["snapGroup1:12345"];
+----
+SnapshotグループsnapGroup1内の最も新しいSnapshotイメージを表示する場合は、次のコマンドを使用します。
+
+[listing]
+----
+show snapImage ["snapGroup1:newest"];
+----
+複数のSnapshotグループsnapGroup1、snapGroup2、snapGroup3内のSnapshotイメージを表示するには、次のコマンドを使用します。
+
+[listing]
+----
+show snapImages ["snapGroup1:12345 snapGroup2:newest snapGroup3:oldest"];
+----
+
+
+== 最小ファームウェアレベル
+
+7.83

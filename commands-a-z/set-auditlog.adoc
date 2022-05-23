@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/set-auditlog.html 
+sidebar: sidebar 
+keywords: set, audit log 
+summary: set auditLogコマンドは、監査ログの設定を構成します。 
+---
+= 監査ログを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+監査ログの設定は'set auditLogコマンドで行います
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+set auditLog (logLevel={all | writeOnly} |
+    fullPolicy={overwrite | preventSystemAccess} |
+    pass:quotes[maxRecords=_n_] | pass:quotes[warningThreshold=_n_)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「logLevel」
+ a| 
+ロギングのレベルを指定できます。有効な選択肢は、「all」と「writeOnly」です。デフォルト値は「writeOnly」です。
+
+
+
+ a| 
+「FullPolicy」を選択します
+ a| 
+ログがフルになったときのポリシーを指定できます。有効な選択肢は、「overwrite」と「preventSystemAccess」です。
+
+
+
+ a| 
+「maxRecords」です
+ a| 
+格納する最大レコード数を指定できます。「n」は30000から50000までの整数です。
+
+
+
+ a| 
+「warningThreshold」
+ a| 
+フルポリシーが「preventSystemAccess」に設定されている場合に、監査ログがフルに近づいていることを示す警告アラートを送信するパーセンテージを指定できます。0~100の整数値を指定します。このパラメータを0（ゼロ）に設定すると、警告アラートが無効になります。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set auditLog logLevel=writeOnly fullPolicy=preventSystemAccess maxRecords=40000 warningThreshold=90;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

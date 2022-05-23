@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-storagearray-ocspresponderurl-test.html 
+sidebar: sidebar 
+keywords: start, ocsp, server, url, test 
+summary: start storageArray ocspResponderUrlテストコマンドは、Online Certificate Status Protocol（OCSP）サーバの指定したURLへの接続が開いているかどうかをチェックします。 
+---
+= OCSPサーバURLテストを開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start storageArray ocspResponderUrl testコマンドは、Online Certificate Status Protocol（OCSP）サーバの指定したURLへの接続が開いているかどうかをチェックします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「URL」
+ a| 
+OCSPサーバURLのリテラル文字列。
+
+[NOTE]
+====
+URLを指定しない場合、証明書失効の設定にあるOCSPレスポンダURLが使用されます。
+
+====
+|===
+
+
+== 構文
+
+[listing]
+----
+start storageArray ocspResponderUrl test (url=stringLiteral)
+----
+
+
+== 最小ファームウェアレベル
+
+8.42

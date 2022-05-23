@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/show-certificates.html 
+sidebar: sidebar 
+keywords: show, certificates 
+summary: Show certificatesコマンドを使用すると、CLIパッケージの信頼ストアにインストールされている証明書を表示できます。 
+---
+= 証明書を表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+[Show certificates]コマンドを使用すると、CLIパッケージの信頼ストアにインストールされている証明書を表示できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、EF600ストレージアレイを環境 します。
+
+
+
+== 構文
+
+[listing]
+----
+show localCertificate all | alias alias
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「alias」
+ a| 
+ユーザ定義のエイリアスを使用して証明書を指定できます。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.60

@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/download-storagearray-keymanagementcertificate.html 
+sidebar: sidebar 
+keywords: download, storage, array, management, key, certificate, command, intall, external, support, role 
+summary: download storageArray keyManagementCertificateコマンドは、外部キー管理証明書をストレージアレイにインストールします。 
+---
+= ストレージアレイの外部キー管理証明書をインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download storageArray keyManagementCertificateコマンドは、外部キー管理証明書をストレージアレイにインストールします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「certificateType」
+ a| 
+証明書ファイルのタイプを指定できます。有効な選択肢は'client'または'server'です
+
+
+
+ a| 
+'file'
+ a| 
+クライアントの署名済み証明書またはサーバのルート/中間CA証明書を指定できます。ファイルはPEM / DER形式である必要があります。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download storageArray keyManagementClientCertificate certificateType=client
+   file="C:\serverSignedKeyMgmtClientCert.cer";"
+
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

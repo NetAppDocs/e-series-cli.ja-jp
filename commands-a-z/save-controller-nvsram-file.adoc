@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/save-controller-nvsram-file.html 
+sidebar: sidebar 
+keywords: save, controller, nvsram 
+summary: save controller NVSRAM fileコマンドは、選択された一連のコントローラNVSRAM領域をファイルに保存します。 
+---
+= コントローラのNVSRAMを保存します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save controller NVSRAM fileコマンドは'選択したコントローラNVSRAM領域のセットをファイルに保存します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save controller [(a|b)] NVSRAM file=pass:quotes["_filename_"]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+NVSRAM値を保存するコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+'file'
+ a| 
+NVSRAM値の保存先となるファイルパスとファイル名。NVSRAMファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\nvsramb.txt
+
+NVSRAM値を格納するファイルのデフォルト名は、「NVSRAMデータ.txt」です。このコマンドでは、保存されているファイルにファイル拡張子は自動的に付加されません。ファイル名にはファイル拡張子を指定する必要があります。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10

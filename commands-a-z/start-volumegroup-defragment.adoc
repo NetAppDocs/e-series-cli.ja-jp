@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/start-volumegroup-defragment.html 
+sidebar: sidebar 
+keywords: start, volume, group, defragment 
+summary: start volumeGroup defフラク 定義コマンドは、指定したボリュームグループでデフラグ処理を開始します。 
+---
+= ボリュームグループのデフラグの開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start volumeGroup defr`コマンドは'指定したボリュームグループ上でデフラグ操作を開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+ボリュームグループのデフラグは長時間の処理で、途中で停止することはできません。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] defragment
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+デフラグするボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+ボリュームグループ内のボリューム数が32を超えると、ホストI/Oエラーが発生する可能性があります。また、ボリュームグループ定義が設定される前にタイムアウト時間が終了したために、内部コントローラのリブートが発生する場合もあります。この問題 が表示された場合は、ホストI/O処理を休止し、もう一度コマンドを実行します。
+
+
+
+== 最小ファームウェアレベル
+
+6.10

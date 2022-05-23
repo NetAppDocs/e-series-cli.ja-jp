@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/download-storagearray-nvsram.html 
+sidebar: sidebar 
+keywords: download, storagearray, down, values, controller, support, role, command, array 
+summary: download storageArray NVSRAMコマンドは、ストレージアレイコントローラのNVSRAM値をダウンロードします。 
+---
+= ストレージアレイのNVSRAMをダウンロードします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+download storageArray NVSRAMコマンドは、ストレージアレイコントローラのNVSRAM値をダウンロードします。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[download storageArray NVSRAM file="_filename_"]
+[healthCheckMelOverride=(TRUE | FALSE)]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+'file'
+ a| 
+ファイルパスと、NVSRAM値が含まれているファイル名。NVSRAMファイル名は二重引用符（""）で囲みます。例：
+
+`file="C:\Program Files\CLI\dnld\afrm.dlp "`
+
+有効なファイル名の拡張子は「.dlp」です。
+
+
+
+ a| 
+「healthCheckMelOverride」
+ a| 
+メジャーイベントログ（MEL）の健全性チェックの結果を無視する設定。MELの検証は引き続き行われ、バイパスされません。MELのチェックに失敗した場合は、コマンドの実行時にこのパラメータを使用することで、エラーをバイパスできます。
+
+ダウンロードの前に、コントローラがイベントログをチェックし、新しいNVSRAMのダウンロードを妨げる可能性のあるイベントが発生したかどうかを確認します。そのようなイベントが発生した場合、コントローラは、通常は新しいNVSRAMをダウンロードしません。
+
+このパラメータを指定すると、コントローラは新しいNVSRAMを強制的にダウンロードします。デフォルト値は'FALSE'ですコントローラに新しいNVSRAMを強制的にダウンロードさせる場合は'この値をTRUEに設定します
+
+|===
+
+
+== 最小ファームウェアレベル
+
+6.10
+
+8.10で、「healthCheckMelOverride」パラメータが追加されました。

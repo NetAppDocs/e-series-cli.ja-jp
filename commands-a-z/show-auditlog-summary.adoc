@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-auditlog-summary.html 
+sidebar: sidebar 
+keywords: show, audit, log, summary 
+summary: show auditLog summaryコマンドは、監査ログの概要情報を表示します。 
+---
+= 監査ログの概要の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show auditLog summaryコマンドは'監査ログの概要情報を表示します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+
+show auditLog summary
+----
+
+
+== パラメータ
+
+なし
+
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog summary;"
+
+Total log records: 1,532
+First log record: 1493070393313 (2017-04-24T16:46:33.313-0500)
+Last log record: 1493134565128 (2017-04-25T10:36:05.128-0500)
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

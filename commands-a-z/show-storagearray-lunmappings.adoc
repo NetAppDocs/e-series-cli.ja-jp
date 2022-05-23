@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/show-storagearray-lunmappings.html 
+sidebar: sidebar 
+keywords: show, storage, array, lun, map 
+summary: show storageArray lunMappingsコマンドは、ストレージアレイでの論理ユニット番号（LUN）マッピングまたはネームスペースID（NSID）マッピングに関する情報を、ストレージアレイプロファイルから返します。 
+---
+= ストレージアレイのLUNマッピングを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show storageArray lunMappingsコマンドは、ストレージアレイの論理ユニット番号（LUN）マッピングまたはネームスペースID（NSID）マッピングに関する情報を、ストレージアレイプロファイルから返します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+デフォルトグループのLUNマッピングまたはNSIDマッピングは常に表示されます。パラメータを指定せずにこのコマンドを実行すると、すべてのLUNマッピングまたはNSIDマッピングが返されます。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show storageArray lunMappings (host pass:quotes[["_hostName_"]] |
+hostgroup pass:quotes[["_hostGroupName_"]])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+ホスト
+ a| 
+LUNマッピングまたはNSIDマッピングを表示する特定のホストの名前。ホスト名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「hostGroup」と入力します
+ a| 
+LUNマッピングまたはNSIDマッピングを表示する特定のホストグループの名前。ホストグループ名は、二重引用符（""）で囲んだ上で角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドから返されるホストトポロジ情報の例を次に示します。
+
+[listing]
+----
+MAPPINGS (Storage Partitioning - Enabled (0 of 16 used))
+VOLUME NAME  LUN  CONTROLLER  ACCESSIBLE BY  VOLUME STATUS
+Access Volume 7   A,B         Default Group  Optimal
+21           21   B           Default Group  Optimal
+22           22   B           Default Group  Optimal
+----
+
+
+== 最小ファームウェアレベル
+
+6.10

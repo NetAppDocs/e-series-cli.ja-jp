@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/delete-storagearray-directoryservers.html 
+sidebar: sidebar 
+keywords: delete, storage, array, directory, servers, command, allow, directory, role 
+summary: delete storageArray directoryServersコマンドを使用すると、1つ以上のディレクトリサーバを削除できます。 
+---
+= ストレージアレイのディレクトリサーバを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+delete storageArray directoryServersコマンドを使用すると、1つ以上のディレクトリサーバを削除できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete storageArray (allDirectoryServers |
+ directoryServers ["_domainId1_" ... "_domainIdN_"])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「allDirectoryServers」を参照してください
+ a| 
+すべてのディレクトリサーバを削除できます。
+
+
+
+ a| 
+「directoryServers」
+ a| 
+削除するディレクトリサーバを、それぞれドメインIDで識別して、指定できます。
+
+[NOTE]
+====
+IDは角かっこ（[]）で囲みます。複数指定する場合は、それぞれスペースで区切ります。
+
+====
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete storageArray directoryServers ["domain1" "domain3"];"
+
+SMcli -n Array1 -c "delete storageArray allDirectoryServers;"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40で、コマンドが追加されました。

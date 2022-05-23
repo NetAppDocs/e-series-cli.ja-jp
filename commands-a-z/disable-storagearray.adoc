@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/disable-storagearray.html 
+sidebar: sidebar 
+keywords: disable, storage, array, command, storage, feature 
+summary: disable storageArrayコマンドは、ストレージアレイ機能を無効にします。 
+---
+= ストレージアレイの機能を無効にします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+disable storageArrayコマンドは'ストレージ・アレイ機能を無効にします
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+show storageArrayコマンドを実行して、ストレージアレイ内で有効になっているすべての機能の識別子のリストを表示します。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[disable storageArray (featurePack | feature=_featureAttributeList_)]
+----
+pass: quotes [`_featureAttributeList_`]には'これらの属性値の1つ以上を指定できます複数の属性値を入力する場合は、値をスペースで区切ります。
+
+* 「ドライブセキュリティ」
+
+
+
+
+== パラメータ
+
+なし
+
+
+
+== 最小ファームウェアレベル
+
+8.20で'driveSecurity'属性が追加され'その他の属性がすべて削除されました

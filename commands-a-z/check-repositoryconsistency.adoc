@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/check-repositoryconsistency.html 
+sidebar: sidebar 
+keywords: check, repository, consistency 
+summary: check repositoryConsistencyコマンドは、指定したオブジェクトの基になるリポジトリボリューム内のデータの分析に基づいてレポートを作成します。 
+---
+= リポジトリの整合性を確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「check repositoryConsistency」コマンドは、指定されたオブジェクトの基になるリポジトリボリューム内のデータの分析に基づいてレポートを作成します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+check (snapGroup pass:quotes[[_snapGroupName_]] repositoryConsistency |
+snapVolume pass:quotes[[_snapVolumeName_]] repositoryConsistency |
+volume pass:quotes[[_volumeName_]] repositoryConsistency |
+volumeCopy target pass:quotes[[_targetName_]] repositoryConsistency |
+asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+repositoryConsistency localVolume=pass:quotes[_"localVolumeName"_]]
+file=pass:quotes[_"filePath"_]
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+リポジトリ整合性
+ a| 
+Snapshotグループ、Snapshotボリューム、ボリューム、または非同期ミラーグループ（対応するパラメータで指定されている内容によって異なります）の整合性をチェックするように指定します。
+
+
+
+ a| 
+「SnapGroup」
+ a| 
+整合性チェックを実行するSnapshotグループの名前。Snapshotグループ名は角かっこ（[]）で囲みます。Snapshotグループ名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「SnapVolume」
+ a| 
+整合性チェックを実行するSnapshotボリュームの名前。Snapshotボリューム名は角かっこ（[]）で囲みます。Snapshotボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「 volume 」
+ a| 
+整合性チェックを実行するシンボリュームの名前。シンボリューム名は角かっこ（[]）で囲みます。シンボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「VolumeCopy」を選択します
+ a| 
+ボリュームコピー関係のターゲットの整合性をチェックするように指定します。
+
+
+
+ a| 
+「target」と入力します
+ a| 
+ボリュームコピー関係のターゲットであるボリュームの名前を指定する場合は、必ず「VolumeCopy」パラメータと組み合わせて使用します。ボリューム名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「asyncMirrorGroup」
+ a| 
+整合性チェックを実行する非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名が特殊文字を含んでいる場合または数字のみで構成される場合は、二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「localVolume」です
+ a| 
+asyncMirrorGroupパラメータでのみ使用して、ミラー関係に参加するローカルボリュームの名前を指定します。ミラー関係のソースまたはデスティネーションであるローカルボリュームを指定できます。ローカルボリューム名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+'file'
+ a| 
+整合性チェックの結果レポートの保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：
+
+'file="C:\Program Files\CLI\logs\repoConsistency.txt"このパラメータは'オプションのパラメータのいずれかの後に最後に表示する必要があります
+
+|===
+
+
+== 注：
+
+このコマンドで生成されるレポートは、テクニカルサポートが問題を分析するために使用します。
+
+
+
+== 最小ファームウェアレベル
+
+7.83

@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-volumegroup.html 
+sidebar: sidebar 
+keywords: show, volume, group 
+summary: show volumeGroupコマンドは、ボリュームグループに関する情報を返します。 
+---
+= ボリュームグループを表示します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+show volumegroupコマンドは'ボリューム・グループに関する情報を返します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+このコマンドは、ボリュームグループに関する次の情報を返します。
+
+* ステータス（オンラインまたはオフライン）
+* 容量
+* 現在の所有者（スロットAのコントローラまたはスロットBのコントローラ）
+* RAIDレベル
+* ドライブメディアタイプ（HDDまたはSSD）
+* ドライブインターフェイスタイプ（Fibre Channel、iSCSI、InfiniBand、SAS）
+* トレイ損失の保護（yesまたはno）
+* セキュリティ対応-ボリュームグループがセキュリティ対応ドライブだけで構成されているかどうかを示します。セキュリティ対応ドライブには、FDEドライブとFIPSドライブがあります。
+* セキュア-ボリュームグループでドライブセキュリティがオンになっている（セキュリティ有効）かどうかを示します。
+* 関連付けられているボリュームと空き容量
+* 関連付けられているドライブ
+* Data Assurance機能およびData Assuranceが有効なボリュームがある
+* リソースプロビジョニング機能
+
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「volumeGroup」のように指定します
+ a| 
+情報を表示するボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドから返されるボリュームグループ情報の例を次に示します。
+
+[listing]
+----
+Name:              SecureGroup
+
+      Status:         Optimal
+      Capacity:       120.000 GB
+      Current owner: Controller in slot A
+
+      Quality of Service (QoS) Attributes
+
+         RAID level:                  5
+         Drive media type:            Hard Disk Drive
+         Drive interface type:        SAS
+         Shelf loss protection:       No
+         Secure Capable:              Yes
+         Secure:                      No
+         Data Assurance (DA) capable: Yes
+         DA enabled volume present:   No
+         Resource-provisioned:           Yes
+
+
+      Total Volumes:          1
+         Standard volumes:    1
+         Repository volumes:  0
+         Free Capacity:       110.000 GB
+
+      Associated drives - present (in piece order)
+      Total drives present: 5
+
+         Tray     Slot
+         99       1
+         99       2
+         99       3
+         99       4
+         99       5
+----
+
+
+== 最小ファームウェアレベル
+
+6.10

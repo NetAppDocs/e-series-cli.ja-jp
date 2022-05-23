@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/set-initiator.html 
+sidebar: sidebar 
+keywords: set, initiator 
+summary: set initiatorコマンドは、イニシエータオブジェクトを更新します。 
+---
+= イニシエータの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+set initiatorコマンドは'イニシエータ・オブジェクトを更新します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、廃止されたを置き換えます xref:set-iscsiinitiator.adoc[iSCSIイニシエータを設定する] コマンドを実行します
+
+====
+[NOTE]
+====
+このコマンドは、iSCSI、iSER、NVMe over RoCE、NVMe over InfiniBand、NVMe over Fibre Channelに対してのみ使用できます。
+
+====
+
+
+== 構文
+
+[listing]
+----
+
+set initiator (["initiatorName"] | <"initiatorQualifiedName">) ([userLabel="newInitiatorName"] |
+[host="newHostName"] | [chapSecret="newSecurityKey"])
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+イニシエータ
+ a| 
+プロパティを設定するイニシエータIDを指定できます。名前は二重引用符("`")で囲みますさらに、値がユーザラベルである場合は名前を角かっこ（[]）で、値が修飾名（iqnやnqnなど）である場合は名前を山かっこ（<>）で囲む必要があります。
+
+
+
+ a| 
+「userLabel」のように入力します
+ a| 
+イニシエータオブジェクトの新しいユーザラベルを入力できます。新しいユーザラベルは二重引用符（""）で囲みます。
+
+
+
+ a| 
+ホスト
+ a| 
+ホストポートを接続する新しいホストを入力できます。ホスト名は二重引用符（""）で囲みます。
+
+
+
+ a| 
+「チャプターシークレット」
+ a| 
+ピア接続の認証に使用する新しいセキュリティキーを入力できます。セキュリティキーは二重引用符（""）で囲みます。このパラメータは'iSCSI'およびiSERのホスト・インターフェイス・タイプにのみ適用できます
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.41

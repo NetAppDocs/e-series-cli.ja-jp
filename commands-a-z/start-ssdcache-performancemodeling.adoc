@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/start-ssdcache-performancemodeling.html 
+sidebar: sidebar 
+keywords: start, ssd, cache, performance, model 
+summary: start ssdCache performanceModelingコマンドは、SSDキャッシュのパフォーマンスモデリングを開始します。 
+---
+= SSDキャッシュのパフォーマンスモデリングを開始する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start ssdCache performanceModelingコマンドは'SSDキャッシュのパフォーマンスモデリングを開始します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+
+
+
+== ロール
+
+このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Support Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+パフォーマンスモデリングは、一定期間のI/Oアクティビティを監視および測定し、さまざまなSSDキャッシュサイズのパフォーマンスを予測します。パフォーマンスは、キャッシュヒット率と平均応答時間の2つの指標を使用して推定されます。パフォーマンスモデリングデータは'stop ssdCache performanceModelingコマンドを使用してオペレーションを停止するまで使用できません
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「ssdCache」
+ a| 
+パフォーマンスをモデリングするSSDキャッシュの名前。SSDキャッシュ名は角かっこ（[]）で囲みます。SSDキャッシュ名が特殊文字を含んでいる場合または数字のみで構成される場合は、SSDキャッシュ名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===
+
+
+== 注：
+
+パフォーマンスモデリングが終了し、以下のいずれかの条件に該当する場合にパフォーマンスモデリングデータを使用できるようになりました。
+
+* 「stop ssdCache performanceModeling」コマンドを実行します。
+* ストレージ管理ソフトウェアを使用してパフォーマンスモデリングデータを取得する。
+
+
+パフォーマンスモデリングが終了しても、次のいずれかの条件に該当する場合はデータを使用できません。
+
+* コントローラをリブートした。
+* SSDキャッシュ設定に変更を加えた。
+* SSDキャッシュの状態が変化した。
+
+
+
+
+== 最小ファームウェアレベル
+
+7.84

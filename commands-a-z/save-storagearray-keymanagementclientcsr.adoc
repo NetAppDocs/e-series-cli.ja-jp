@@ -1,0 +1,130 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementclientcsr.html 
+sidebar: sidebar 
+keywords: generate, key, management, certificate, sign, request, csr 
+summary: save storageArray keyManagementClientCSRコマンドは、ストレージアレイに対して生成された、ファイルに保存可能なCSRを要求します。 
+---
+= キー管理証明書署名要求（CSR）の生成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save storageArray keyManagementClientCSR'コマンドは、ストレージアレイ用に生成された、ファイルに保存可能なCSRを要求します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== コンテキスト（Context）
+
+[NOTE]
+====
+このコマンドは、外部キー管理にのみ適用されます。
+
+====
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementClientCSR commonName=pass:quotes["_common_name_"]
+organization=pass:quotes["_organization_"]
+locality=pass:quotes["_locality_"]
+country=pass:quotes["_country_"]
+file=pass:quotes["_file_"]
+[organizationalUnit=pass:quotes["_organizational unit_"]]
+[stateProvince=pass:quotes["_state_province_"]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「commonName」
+ a| 
+このパラメータに入力する値は、KMIPサーバ上で定義されているユーザ名のいずれかと一致する必要があります。
+
+
+
+ a| 
+「組織」
+ a| 
+ストレージアレイが属する組織の正式名称を指定できます。省略はせず、Inc、Corp、LLCなどのサフィックスもすべて含めてください。
+
+
+
+ a| 
+「ローカリティ」
+ a| 
+ストレージアレイが配置されている市区町村を指定できます。
+
+
+
+ a| 
+「country」
+ a| 
+ISO（国際標準化機構）3166-1 alpha-2の2桁の国別コード（USなど）を指定できます。
+
+
+
+ a| 
+'file'
+ a| 
+コントローラの署名済み証明書ファイルの保存先とするファイルとファイルの場所を指定できます。
+
+
+
+ a| 
+organizationalUnit
+ a| 
+証明書を処理する組織の部門を指定できます。
+
+
+
+ a| 
+「州」
+ a| 
+ストレージアレイが配置されている都道府県を指定できます。これは省略しないでください。
+
+|===
+
+
+== 例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "save storageArray keyManagementClientCSR commonName=pass:quotes["_192.0.2.1_"]
+organization=pass:quotes["_Widgets Are Us_, _Inc_."]
+locality=pass:quotes["_sedgwick_"]
+country=pass:quotes["_US_"]
+file=pass:quotes["_latestCertificate_"]
+organizationalUnit=pass:quotes["_Products Unit_"]
+stateProvince=pass:quotes["_Kansas_"];"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

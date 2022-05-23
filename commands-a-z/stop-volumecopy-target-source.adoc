@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/stop-volumecopy-target-source.html 
+sidebar: sidebar 
+keywords: stop, volume, copy 
+summary: stop VolumeCopy target sourceコマンドは、ボリュームコピー処理を停止します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。 
+---
+= ボリュームコピーの停止
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'stop VolumeCopy target source'コマンドは、ボリュームコピー操作を停止します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop volumeCopy target [_targetName_]] source pass:quotes[[_sourceName_]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「target」と入力します
+ a| 
+ボリュームコピー処理を停止するターゲットボリュームの名前。ターゲットボリューム名は角かっこ（[]）で囲みます。ターゲットボリューム名に特殊文字または数字が含まれている場合は、ターゲットボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+
+
+ a| 
+「source」を参照してください
+ a| 
+ボリュームコピー処理を停止するソースボリュームの名前。ソースボリューム名は角かっこ（[]）で囲みます。ソースボリューム名に特殊文字または数字が含まれている場合は、ソースボリューム名を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。
+
+|===

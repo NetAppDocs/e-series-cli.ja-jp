@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/save-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, ca, certificates 
+summary: save controller cAcertificateコマンドは、インストールされているCA証明書を指定されたコントローラから取得します。取得した証明書に含まれるのは、コントローラのWebサーバから要求されたCA証明書です。 
+---
+= インストールされているCA証明書を取得する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+save controller cAcertifate'コマンドは'インストールされているCA証明書を指定されたコントローラから取得します取得した証明書に含まれているのは、コントローラのWebサーバから要求されたCA証明書です。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+
+save controller[(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]]
+ path="fileLocation"
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「controller」と入力します
+ a| 
+ルート/中間証明書を取得するコントローラを指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+
+
+ a| 
+「すべて」
+ a| 
+署名済み証明書チェーンを解決するためにインポートされたすべての証明書の取得を指定できます。ユーザがインストールした証明書にはキー管理証明書が含まれています
+
+
+
+ a| 
+「別名」
+ a| 
+取得するユーザがインストールしたルート/中間証明書をエイリアスで指定できます。すべてのエイリアスをかっこで囲みます。複数のエイリアスを入力する場合は、エイリアスをスペースで区切ります。
+
+
+
+ a| 
+「path」
+ a| 
+コントローラのルート/中間証明書を保存するローカルの場所を指定できます。
+
+|===
+
+
+== 例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller[a] caCertificate all path="C:\";"
+
+SMcli -n Array1 -c "save controller[b] caCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最小ファームウェアレベル
+
+8.40

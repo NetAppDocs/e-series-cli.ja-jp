@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/start-storagearray-configdbdiagnostic.html 
+sidebar: sidebar 
+keywords: start, storage, array, configuration, database, diagnostic 
+summary: start storageArray configDbDiagnosticコマンドは、構成データベースに対して整合性チェックを実行します。 
+---
+= ストレージアレイの構成データベース診断を開始します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+start storageArray configDbDiagnosticコマンドは'構成データベースに対して整合性チェックを実行します
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+
+
+
+== ロール
+
+このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing]
+----
+start storageArray configDbDiagnostic
+[sourceLocation=(disk | onboard) |
+diagnosticType=(fileSystem | mirror) |
+controller[(a|b)]]
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+「sourceLocation」と入力します
+ a| 
+このパラメータは、データベースの場所を指定します。
+
+* 「disk」は、ドライブ上のデータベースから直接データが取得されることを示します
+* 「onboard」は、RPAメモリ上の場所からデータを取得することを示します
+
+
+デフォルトの場所は「disk」です。
+
+
+
+ a| 
+'diagnosticType'
+ a| 
+データベースで実行する診断テストのレベル。次のいずれかのレベルのテストを実行できます。
+
+`filesystem --このオプションは'データベースの構造的な整合性をチェックします
+
+mirror --このオプションを使用して実行されるテストは'sourceLocationパラメータの値によって異なります
+
+* 「* sourceLocation *」パラメータが「disk」に設定されている場合、ピア・コントローラはブロック・チェックを開始します。
+* 「* sourceLocation *」パラメータが「onboard」に設定されている場合、ピア・コントローラはレコード・チェックを開始します。
+
+
+[NOTE]
+====
+「mirror」オプションは、コマンドラインまたはスクリプトエディタからのみ実行できます。このオプションは、ストレージ管理ソフトウェアのGUIからは使用できません。mirrorオプションを指定すると'長時間実行される処理が開始され'停止することはできません
+
+====
+デフォルト値は「filesystem」です。
+
+
+
+ a| 
+「controller」と入力します
+ a| 
+診断テストを実行するデータベースが格納されているコントローラ。有効なコントローラ識別子は「a」または「b」です。「a」はスロットAのコントローラ、「b」はスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。
+
+|===
+
+
+== 注：
+
+このコマンドは、構成データベースに対して整合性チェックを実行します。すべてのデータベースレコードがチェックされます。エラーデータは、ディスク上のデータフォルダ内のファイルに自動的に書き込まれます。出力ファイルを指定する必要はありません。
+
+[NOTE]
+====
+diagnosticType'パラメータをmirrorに設定し'sourceLocation'パラメータをonboardに設定して整合性チェックを実行する原因 と'操作を長時間実行できますこれにより、ホストのI/O処理に悪影響が及ぶ可能性があります。この処理は、サポート部門から指示があった場合にのみ実行してください。
+
+====
+診断テストが完了すると、コントローラファームウェアは次のいずれかの結果を返します。
+
+* 「診断はエラーなしで完了しました。ZIPファイルが作成されていません
+* 「診断がエラーで終了しました。作成されたZIPファイルを参照してください
++
+'+...\Install_dir\data\FirmwareUpgradeReports\timestamp_buildNo.zip +`
+
+
+
+構成データベースの不整合が検出された場合、コントローラファームウェアは次の処理を実行します。
+
+* 不整合の概要 を返します
+* バイナリデータをZIPファイルに保存します
+
+
+ZIPファイルは次の場所に保存されます。
+
+'+...\Install_dir\data\FirmwareUpgradeReports\timestamp_buildNo.zip +`
+
+このバイナリデータを使用して問題の原因 を特定したり、バイナリデータを格納しているファイルをテクニカルサポートに送信したりできます。
+
+データベース設定診断テストを停止するには、「stop storageArray configDbDiagnostic」コマンドを使用します。
+
+また、ストレージ管理ソフトウェアのGUIからデータベース構成の診断テストを開始することもできます。ただし、ストレージ管理ソフトウェアのGUIから診断テストを停止することはできません。実行中の診断テストを停止するには'stop storageArray configDbDiagnostic'コマンドを使用する必要があります
+
+
+
+== 最小ファームウェアレベル
+
+7.75
+
+7.83で、次のパラメータが追加されました
+
+* 「sourceLocation」と入力します
+* 'diagnosticType'
+* 「controller」と入力します
+
