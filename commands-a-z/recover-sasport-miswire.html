@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>SASポート誤配線をリカバリします</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="SASポート誤配線をリカバリします" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/e-series-cli/commands-a-z/recover-sasport-miswire.html" />
+	<meta property="og:description" content="sasPortの誤配線コマンドは、誤配線状態からリカバリするための修正措置が実行されたことをコントローラに通知します。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/e-series-cli/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="sasPortの誤配線コマンドは、誤配線状態からリカバリするための修正措置が実行されたことをコントローラに通知します。">
+  <meta name="keywords" content=" recover, sas, port, mis-wire"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/e-series-cli/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/e-series-cli/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/e-series-cli/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/e-series-cli/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/e-series-cli/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/e-series-cli/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/e-series-cli/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/e-series-cli/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/e-series-cli/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/e-series-cli/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/e-series-cli/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/ja-jp/e-series-cli/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/e-series-cli/js/na-search.js'></script><script src='/ja-jp/e-series-cli/js/na-pagenav.js'></script><link rel='stylesheet' href='/ja-jp/e-series-cli/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/e-series-cli/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/e-series-cli/js/na-utility.js'></script>
+  <script src='/ja-jp/e-series-cli/js/clouddocs.js'></script>
+  <script src='/ja-jp/e-series-cli/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/e-series-cli/js/toc.js'></script>
+  <script src='/ja-jp/e-series-cli/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/ja-jp/e-series-cli/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/e-series-cli/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/e-series-cli/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/e-series-cli/js/jszip.min.js'></script>
+  <script src='/ja-jp/e-series-cli/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/issues/new?body=Page%3A%20[SASポート誤配線をリカバリします](https://docs.netapp.com/ja-jp/e-series-cli/commands-a-z/recover-sasport-miswire.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/e-series-cli/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/e-series-cli/blob/main/commands-a-z/recover-sasport-miswire.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/e-series-cli/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/e-series-cli/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/e-series-cli/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/e-series-cli/commands-a-z/recover-sasport-miswire.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/e-series-cli/commands-a-z/recover-sasport-miswire.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/e-series-cli/commands-a-z/recover-sasport-miswire.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/e-series-cli/commands-a-z/recover-sasport-miswire.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/e-series-cli/commands-a-z/recover-sasport-miswire.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/ja-jp/e-series-cli/pdfs/fullsite-sidebar/SANtricity_システムマネージャのコマンド.pdf" >
+          <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/はじめに.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            はじめに
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/コマンドのフォーマット.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            コマンドのフォーマット
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/CLIの構造.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            CLIの構造
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/スクリプトコマンドの構造.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            スクリプトコマンドの構造
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/書式ルール.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            書式ルール
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/カテゴリ別のコマンド.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            カテゴリ別のコマンド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/コマンドA_Z.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            コマンドA-Z
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/A.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            A
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/C.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            C
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/D.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            D
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/E.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            E
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/G.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            G
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/私.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            私
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/L.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            L
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/R.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            R
+          </a>
+          
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/e-series-cli/pdfs/pages/commands-a-z/recover-sasport-miswire.pdf" >
+    <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/s.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            s
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/保存___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            保存...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/設定___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            設定...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/表示___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            表示...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/SMcli____.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            SMcli ...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/開始___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            開始...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/停止___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            停止...
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/中断___.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            中断...
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ja-jp/e-series-cli/pdfs/sidebar/V.pdf" 
+            
+          >
+            <img src="/ja-jp/e-series-cli/images/pdf.png" width="16" height="16"/>
+            V
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/e-series-cli/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/index.html">
+        SANtricity CLIのドキュメント
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> はじめに</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/changes-in-the-cli-and-script-commands-in-this-release.html">
+        新機能
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> コマンドのフォーマット</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/overview-format-commands.html">
+        概要
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CLIの構造</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/structure-of-a-cli-command.html">
+        CLIコマンドの構造
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/interactive-mode.html">
+        対話型モード
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/cli-command-wrapper-syntax.html">
+        CLIラッパーの構文
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/command-line-parameters.html">
+        CLIパラメータ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> スクリプトコマンドの構造</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/structure-of-a-script-command.html">
+        スクリプトコマンドの構造
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/synopsis-of-the-script-commands.html">
+        スクリプトコマンドの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/recurring-syntax-elements.html">
+        共通の構文要素
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/naming-conventions.html">
+        命名規則
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 書式ルール</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/formatting-cli-commands.html">
+        CLIコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/formatting-rules-for-script-commands.html">
+        スクリプトコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/formatting-cli-commands-in-windows-powershell.html">
+        Windows PowerShell の場合
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/detailed-error-reporting.html">
+        詳細なエラーレポート
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/exit-status.html">
+        終了ステータス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/adding-comments-to-a-script-file.html">
+        スクリプトファイルにコメントを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/usage-guidelines.html">
+        スクリプトコマンドのガイドライン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/firmware-compatibility-levels.html">
+        ファームウェアの互換性レベル
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/new-https-mode.html">
+        SMcli httpsモード
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/get-started/learn-about-volume-group-migration.html">
+        ボリュームグループの移動
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カテゴリ別のコマンド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/administrator-commands.html">
+        管理者のコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/alert-configuration-commands.html">
+        アラート設定コマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/array-configuration-commands.html">
+        アレイ構成コマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/auto-support-commands.html">
+        AutoSupportのコマンドです
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/mirroring-commands.html">
+        ミラーリングコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/performance-tuning-commands.html">
+        パフォーマンス調整のコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/replication-commands.html">
+        レプリケーションコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/security-commands.html">
+        セキュリティコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/storage-monitor-personal-commands.html">
+        ストレージ監視担当者のコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-category/volume-configuration-commands.html">
+        ボリューム構成のコマンド
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> コマンドA-Z</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> A</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/activate-asynchronous-mirroring.html">
+        非同期ミラーリングをアクティブ化する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/activate-storagearray-firmware.html">
+        ストレージアレイファームウェアをアクティブにします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/activate-synchronous-mirroring.html">
+        同期ミラーリングをアクティブ化する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/add-array-label.html">
+        アレイラベルを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/add-certificate-from-array.html">
+        アレイから証明書を追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/add-certificate-from-file.html">
+        ファイルから証明書を追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/add-drives-to-ssd-cache.html">
+        SSDキャッシュにドライブを追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/add-volume-asyncmirrorgroup.html">
+        ボリュームasyncmirrorGroupを追加してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/autoconfigure-storagearray-hotspares.html">
+        storageArray hotsparesを自動設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/autoconfigure-storagearray.html">
+        storageArray autoconfigureを実行します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> C</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/change-ssd-cache-application-type.html">
+        SSDキャッシュのアプリケーションタイプを変更します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/check-asyncmirrorgroup-repositoryconsistency.html">
+        asyncmirrorGroupリポジトリの整合性を確認してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/check-repositoryconsistency.html">
+        リポジトリの整合性をチェックします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/check-storagearray-connectivity.html">
+        ストレージアレイの接続を確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/check-syncmirror.html">
+        SyncMirror を確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/check-volume-parity.html">
+        ボリュームのパリティをチェックします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-alldrivechannels-stats.html">
+        allDrivechannels統計情報をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-asyncmirrorfault.html">
+        asyncmirrorFaultをクリアしてください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-emailalert-configuration.html">
+        Eメールアラート設定をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-storagearray-configuration.html">
+        ストレージアレイの設定をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-storagearray-eventlog.html">
+        clear storageArray eventlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-storagearray-firmwarependingarea.html">
+        ストレージのファームウェア保留をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-storagearray-recoverymode.html">
+        clear storageArray recoverymode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-syslog-configuration.html">
+        syslog設定をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-volume-reservations.html">
+        ボリュームリザベーションをクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/clear-volume-unreadablesectors.html">
+        ボリュームの読み取り不能状態をクリアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-asyncmirrorgroup.html">
+        非同期ミラーグループを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-cgsnapimage-consistencygroup.html">
+        cgsnapimage consistencygroupを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-cgsnapvolume.html">
+        cgsnapvolumeを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-consistencygroup.html">
+        整合グループを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-diskpool.html">
+        ディスクプールを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-host.html">
+        ホストを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-hostgroup.html">
+        ホストグループを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-hostport.html">
+        ホストポートを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-initiator.html">
+        イニシエータを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-iscsiinitiator.html">
+        iscsiInitiatorを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-mapping-cgsnapvolume.html">
+        マッピングcgsnapvolumeを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-mapping-volume.html">
+        マッピングボリュームを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html">
+        Create RAID volume automatic drive select（RAIDボリュームの自動ドライブ選択の作成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html">
+        RAIDボリュームの空きエクステントベースの選択を作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html">
+        Create RAID volume manual drive select（RAIDボリュームの手動ドライブ選択）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-read-only-snapshot-volume.html">
+        読み取り専用のSnapshotボリュームを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snapgroup.html">
+        SnapGroupを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snapimage.html">
+        SnapImageを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snapshot-volume.html">
+        Snapshotボリュームを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snmpcommunity.html">
+        snmpcommunityを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snmptrapdestination.html">
+        snmptrapdestinationを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-snmpuser-username.html">
+        snmpuserユーザ名を作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-ssdcache.html">
+        SScacheを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-storagearray-directoryserver.html">
+        ストレージアレイディレクトリサーバを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-storagearray-securitykey.html">
+        ストレージアレイのセキュリティキーを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-storagearray-syslog.html">
+        ストレージアレイsyslogを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-syncmirror.html">
+        SyncMirror を作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-volume-diskpool.html">
+        ボリュームディスクプールを作成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-volumecopy.html">
+        ボリュームコピーを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/create-volumegroup.html">
+        ボリュームグループを作成します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> D</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/deactivate-storagearray-feature.html">
+        これを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/deactivate-storagearray.html">
+        これを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-asyncmirrorgroup.html">
+        非同期ミラーグループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-auditlog.html">
+        監査ログを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-certificates.html">
+        証明書を削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-cgsnapimage-consistencygroup.html">
+        cgsnapimage整合グループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-consistencygroup.html">
+        整合グループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-controller-cacertificate.html">
+        コントローラ証明書を削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-diskpool.html">
+        ディスクプールを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-emailalert.html">
+        Eメールアラートを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-host.html">
+        ホストを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-hostgroup.html">
+        ホストグループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-hostport.html">
+        ホストポートを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-initiator.html">
+        イニシエータの削除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-iscsiinitiator.html">
+        iscsiInitiatorを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-sgsnapvolume.html">
+        sgsnapvolumeを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snapgroup.html">
+        SnapGroupを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snapimage.html">
+        SnapImageを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snapvolume.html">
+        SnapVolumeを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snmpcommunity.html">
+        snmpcommunityを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snmptrapdestination.html">
+        snmptrapdestinationを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-snmpuser-username.html">
+        snmpuserユーザ名を削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-ssdcache.html">
+        SScacheを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-storagearray-directoryservers.html">
+        これには、ストレージアレイのディレクトリサーバを削除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-storagearray-keymanagementcertificate.html">
+        ストレージアレイのキー管理証明書を削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-storagearray-loginbanner.html">
+        これには、ストレージアレイのログインバナーを削除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-storagearray-syslog.html">
+        これには、ストレージシステムのsyslogを
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-storagearray-trustedcertificate.html">
+        storageArray trustedcertificateを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-syslog.html">
+        syslogを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-volume-from-disk-pool.html">
+        ディスクプールからボリュームを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-volume.html">
+        ボリュームを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/delete-volumegroup.html">
+        ボリュームグループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/diagnose-asyncmirrorgroup.html">
+        asyncmirrorGroupを診断します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/diagnose-controller-iscsihostport.html">
+        コントローラiscsihostportを診断します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/diagnose-controller.html">
+        コントローラを診断する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/diagnose-syncmirror.html">
+        SyncMirror を診断します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/disable-storagearray-externalkeymanagement-file.html">
+        storageArray externalKeyManagementファイルを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/disable-storagearray.html">
+        これを無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-controller-arraymanagementservercertificate.html">
+        コントローラアレイ管理サーバ証明書をダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-controller-cacertificate.html">
+        コントローラ証明書をダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-controller-trustedcertificate.html">
+        コントローラの認定証明書をダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-drive-firmware.html">
+        ドライブファームウェアをダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-storagearray-drivefirmware-file.html">
+        ファームウェアをダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-storagearray-firmware.html">
+        ストレージアレイのファームウェアをダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html">
+        storageArray keyManagement証明書をダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-storagearray-nvsram.html">
+        ストレージアレイのNVSRAMをダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-tray-configurationsettings.html">
+        トレイの構成設定をダウンロードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/download-tray-firmware-file.html">
+        トレイファームウェアファイルをダウンロードします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> E</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-controller-datatransfer.html">
+        コントローラのデータ転送を有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-diskpool-security.html">
+        ディスクプールのセキュリティを有効化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-or-disable-autosupport-individual-arrays.html">
+        AutoSupport 個々のアレイを有効または無効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-storagearray-externalkeymanagement-file.html">
+        storageArray externalKeyManagementファイルを有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-storagearray-feature-file.html">
+        ストレージアレイの機能ファイルを有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/enable-volumegroup-security.html">
+        ボリュームグループのセキュリティを有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/establish-asyncmirror-volume.html">
+        asyncmirrorボリュームを確立してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/export-storagearray-securitykey.html">
+        これには、storageArray securityKeyをエクスポートします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> G</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/getting-started-with-authentication.html">
+        認証の開始
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/getting-started-with-external-key-management.html">
+        外部キー管理の開始
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/getting-started-with-internal-key-management.html">
+        内部キー管理の開始
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 私</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/import-storagearray-securitykey-file.html">
+        storageArray securitykeyファイルをインポートします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> L</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/load-storagearray-dbmdatabase.html">
+        これには、storageArray dbmdatabaseをロードします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> R</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recopy-volumecopy-target.html">
+        VolumeCopyターゲットを再コピーします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recover-disabled-driveports.html">
+        無効なドライブポートをリカバリします
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recover-sasport-miswire.html">
+        sasportの誤配線をリカバリします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recover-volume.html">
+        ボリュームをリカバリします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recreate-storagearray-mirrorrepository.html">
+        ストレージアレイのミラーリポジトリを再作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/recreate-storagearray-securitykey.html">
+        storageArray securityKeyを再作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reduce-disk-pool-capacity.html">
+        ディスクプールの容量を減らしてください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-array-label.html">
+        アレイラベルを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-asyncmirrorgroup.html">
+        非同期ミラーグループを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-drives-from-ssd-cache.html">
+        SSDキャッシュからドライブを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-lunmapping.html">
+        lunmappingを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-member-volume-from-consistency-group.html">
+        整合性グループからメンバーボリュームを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-storagearray-directoryserver.html">
+        これで、ストレージアレイディレクトリサーバが削除され
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-syncmirror.html">
+        SyncMirror を削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-volume-asyncmirrorgroup.html">
+        ボリュームasyncmirrorGroupを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/remove-volumecopy-target.html">
+        ボリュームコピーターゲットを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/rename-ssd-cache.html">
+        SSDキャッシュの名前を変更します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/repair-data-parity.html">
+        データパリティを修復
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/repair-volume-parity.html">
+        ボリュームのパリティを修復します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/replace-drive-replacementdrive.html">
+        ドライブの交換用ドライブを交換します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-controller-arraymanagementsignedcertificate.html">
+        コントローラアレイの管理証明書をリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-controller.html">
+        コントローラをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-drive.html">
+        ドライブをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-iscsiipaddress.html">
+        iscsiipaddressをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html">
+        storageArray arvmstats asyncmirrorgroupをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-autosupport-schedule.html">
+        これで、ストレージアレイのAutoSupport スケジュールがリセットさ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-diagnosticdata.html">
+        storageArray diagnosticdataをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-hostportstatisticsbaseline.html">
+        これには、storageArray hostportstaticsbaselineをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-ibstatsbaseline.html">
+        これには、storageArray ibstatsbaselineをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-iscsistatsbaseline.html">
+        これには、storageArray iscsistatsbaselineをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-iserstatsbaseline.html">
+        これを行うと、これを行うことができます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-rlsbaseline.html">
+        storageArray rlsbaselineをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-sasphybaseline.html">
+        storageArray sasphybaselineをリセットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-socbaseline.html">
+        これで、ストレージアレイのソケットベースラインがリセット
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/reset-storagearray-volumedistribution.html">
+        これで、ストレージアレイのボリューム分散がリセットされます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-asyncmirrorgroup.html">
+        asyncmirrorGroupを再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-cgsnapvolume.html">
+        cgsnapvolumeを再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-snapimage-rollback.html">
+        SnapImageロールバックを再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-snapvolume.html">
+        SnapVolumeを再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-ssdcache.html">
+        SScacheを再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/resume-syncmirror.html">
+        SyncMirror を再開します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/revive-drive.html">
+        ドライブを回復します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/revive-snapgroup.html">
+        SnapGroupの回復
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/revive-snapvolume.html">
+        SnapVolumeの回復
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/revive-volumegroup.html">
+        ボリュームグループを回復します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> s</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保存...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-alldrives-logfile.html">
+        すべてのドライブをログファイルに保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-alltrays-logfile.html">
+        すべてのトレイのログファイルを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-auditlog.html">
+        監査ログを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html">
+        コントローラアレイ管理を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-controller-arraymanagementsignedcertificate.html">
+        コントローラアレイ管理の署名付き証明書を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-controller-cacertificate.html">
+        コントローラ証明書を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-controller-nvsram-file.html">
+        コントローラのNVSRAMファイルを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-drivechannel-faultdiagnostics-file.html">
+        ドライブチャネルフォールト診断ファイルを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-ioclog.html">
+        ioclogを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storage-array-diagnostic-data.html">
+        ストレージアレイの診断データを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html">
+        storageArray arvmstats asyncmirrorgroupを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-autoloadbalancestatistics-file.html">
+        これには、storageArray autoautoadbalancestatstatisticsファイルを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-autosupport-log.html">
+        これで、ストレージアレイのAutoSupport ログが保存さ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-configuration.html">
+        ストレージアレイの設定を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-controllerhealthimage.html">
+        これを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-dbmdatabase.html">
+        save storageArray dbmdatabaseという名前のコマンドを実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-dbmvalidatorinfo.html">
+        save storageArray dbmvalidatorinfo
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-firmwareinventory.html">
+        ストレージアレイファームウェアインベントリを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-hostportstatistics.html">
+        これには、storageArray hostportstatisticsを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-ibstats.html">
+        storageArray ibstatsを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-iscsistatistics.html">
+        これで、storageArray iscsiStatisticsを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-iserstatistics.html">
+        これを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-keymanagementcertificate.html">
+        ストレージアレイのキー管理証明書を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-keymanagementclientcsr.html">
+        save storageArray keymanagementclientcsr」というエラーが表示されます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-loginbanner.html">
+        save storageArray loginbanner」のように入力します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-performancestats.html">
+        ストレージアレイのパフォーマンス統計を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-rlscounts.html">
+        これを保存するには、storageArray lscountsを実行し
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-sasphycounts.html">
+        ストレージアレイのsasphycountsを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-soccounts.html">
+        ストレージアレイのソケット数を保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-statecapture.html">
+        これを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-supportdata.html">
+        ストレージアレイのサポートデータを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-trustedcertificate.html">
+        storageArray trustedcertificateを保存します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/save-storagearray-warningevents.html">
+        これで、ストレージアレイの警告イベントを保存できます
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-asyncmirrorgroup.html">
+        asyncmirrorGroupを設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-auditlog.html">
+        監査ログを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html">
+        AutoSupport https配信方法e2800またはe5700を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-cgsnapvolume.html">
+        cgsnapvolumeを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-consistency-group-attributes.html">
+        整合グループの属性を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-consistencygroup-addcgmembervolume.html">
+        consistencygroup addcgmembervolumeを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller-dnsservers.html">
+        コントローラのdnsserversを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller-hostport.html">
+        コントローラのホストポートを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller-iscsihostport.html">
+        コントローラiscsihostportを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller-ntpservers.html">
+        コントローラntpserversを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller-service-action-allowed-indicator.html">
+        コントローラの保守操作可能インジケータの設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-controller.html">
+        コントローラを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-disk-pool-modify-disk-pool.html">
+        set disk pool modify disk pool
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-disk-pool.html">
+        ディスクプールを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drive-hotspare.html">
+        ドライブのホットスペアを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drive-nativestate.html">
+        ドライブのnativestateを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drive-operationalstate.html">
+        ドライブ動作状態の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drive-securityid.html">
+        ドライブのセキュリティIDを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drive-serviceallowedindicator.html">
+        set drive serviceallowedindicator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-drivechannel.html">
+        ドライブチャネルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html">
+        EメールSMTP配信方法e2800またはe5700を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-emailalert.html">
+        Eメールアラートを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-event-alert.html">
+        イベントアラートを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-host.html">
+        ホストを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-hostchannel.html">
+        ホストチャネルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-hostgroup.html">
+        ホストグループを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-hostport.html">
+        ホストポートを設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-initiator.html">
+        イニシエータの設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-iscsiinitiator.html">
+        iscsiInitiatorを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-iscsitarget.html">
+        iscsitargetを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-isertarget.html">
+        isertargetを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-session-erroraction.html">
+        セッションエラーアクションを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapgroup-enableschedule.html">
+        SnapGroupの有効化スケジュールを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html">
+        SnapGroupの値を大きくしてリポジトリ容量を増やします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapgroup-mediascanenabled.html">
+        SnapGroup mediascanenabledを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapgroup.html">
+        SnapGroupを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapvolume-converttoreadwrite.html">
+        SnapVolume converttoreadwriteを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html">
+        SnapVolume増加率リポジトリ容量を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapvolume-mediascanenabled.html">
+        SnapVolume mediascanenabledを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snapvolume.html">
+        SnapVolumeを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snmpcommunity.html">
+        snmpcommunityを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snmpsystemvariables.html">
+        snmpsystemvariablesを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snmptrapdestination-trapreceiverip.html">
+        snmptrapdestination traprecipveripを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-snmpuser-username.html">
+        snmpuserユーザ名を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-autoloadbalancingenable.html">
+        これには、storageArray autoautoadbalancingenableを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-autosupport-schedule.html">
+        ストレージアレイのAutoSupport スケジュールを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-autosupportmaintenancewindow.html">
+        これには、storageArray autosupportmaintenancewindowを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-autosupportondemand.html">
+        これには、storageArray autosupportondemandを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-autosupportremotediag.html">
+        set storageArray autosupportremotedirect
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html">
+        set storageArray cachemirrdataassurancecheckenable
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-controllerhealthimageallowoverwrite.html">
+        set storageArray controllerhealthimageallowoverwrite
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-directoryserver-roles.html">
+        set storageArray directoryServer roles（ストレージシステムの役割を設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-directoryserver.html">
+        set storageArray directoryServer
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-externalkeymanagement.html">
+        set storageArray externalkeymanagement
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-hostconnectivityreporting.html">
+        これには、ストレージのホスト接続情報を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-icmppingresponse.html">
+        storageArray icmppingResponseを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-isnsipv4configurationmethod.html">
+        storageArray isnsipv4configurationmethodを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-isnsipv6address.html">
+        storageArray isnsipv6addressを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-isnslisteningport.html">
+        set storageArray isnslisteningport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-isnsregistration.html">
+        これには、storageArray isnsregistrationを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-isnsserverrefresh.html">
+        set storageArray isnsserverrefresh
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-learncycledate-controller.html">
+        set storageArray learncycleedate controller（ストレージコントローラの設定）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-localusername.html">
+        これには、storageArray localusernameを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-loginbanner.html">
+        set storageArray loginbanner
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-managementinterface.html">
+        set storageArray ManagementInterfaceの略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-odxenabled.html">
+        set storageArray odxenabledと入力します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-passwordlength.html">
+        set storageArray passwordlength
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-pqvalidateonreconstruct.html">
+        set storageArray pqvalidateonreconstruct
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-redundancymode.html">
+        storageArray redundancymodeを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-resourceprovisionedvolumes.html">
+        set storageArray resourceprovisionedvolumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-revocationchecksettings.html">
+        storageArray RevoationCheckSettingsを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-securitykey.html">
+        set storageArray securitykey（これを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-syslog.html">
+        これには、ストレージシステムのsyslogを
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-time.html">
+        これを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-traypositions.html">
+        ストレージアレイのトレイ位置を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-unnameddiscoverysession.html">
+        storageArray unnameddiscoverysessionを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-usersession.html">
+        これには、storageArray usersessionを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray-vaaienabled.html">
+        これには、storageArray vaaiEnabledを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-storagearray.html">
+        これを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-syncmirror.html">
+        SyncMirror を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-syslog.html">
+        syslogを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-target.html">
+        ターゲットを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-thin-volume-attributes.html">
+        シンボリュームの属性を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-tray-attribute.html">
+        トレイ属性を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-tray-drawer.html">
+        トレイドロワーの設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-tray-identification.html">
+        トレイIDを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-tray-serviceallowedindicator.html">
+        トレイサービスのallowedIndicatorを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html">
+        ボリュームグループ内のボリュームのボリュームグループ属性を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volume-logicalunitnumber.html">
+        ボリュームlogicalUnitNumberを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volume-ssdcacheenabled.html">
+        ボリュームssdcacheenabledを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volumecopy-target.html">
+        ボリュームコピーターゲットを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volumegroup-forcedstate.html">
+        volumeGroup forcedstateを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volumegroup.html">
+        ボリュームグループを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/set-volumes.html">
+        ボリュームを設定します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 表示...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-alldrives-downloadprogress.html">
+        すべてのドライブのダウンロードの進行状況を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-alldrives-performancestats.html">
+        すべてのドライブのパフォーマンス統計を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-alldrives.html">
+        すべてのドライブを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-allhostports.html">
+        すべてのホストポートを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-allsnmpcommunities.html">
+        show allsnmpcommunities
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-allsnmpusers.html">
+        show allsnmpusersを実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-array-label.html">
+        アレイラベルを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-asyncmirrorgroup-summary.html">
+        asyncmirrorgroupの概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-asyncmirrorgroup-synchronizationprogress.html">
+        asyncmirrorGroup同期の進捗状況を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-auditlog-configuration.html">
+        auditlog構成を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-auditlog-summary.html">
+        監査ログの概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-blockedeventalertlist.html">
+        Blockkedeventalertlistを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-certificates.html">
+        証明書を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-cgsnapimage.html">
+        cgsnapimageを表示する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-consistencygroup.html">
+        整合グループを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-controller-arraymanagementsignedcertificate-summary.html">
+        コントローラアレイ管理の署名証明書の概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-controller-cacertificate.html">
+        show controller cacertifate（コントローラ証明書の表示）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-controller-diagnostic-status.html">
+        コントローラ診断ステータスを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-controller-nvsram.html">
+        コントローラのNVSRAMを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-controller.html">
+        コントローラを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-diskpool.html">
+        ディスクプールを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-drivechannel-stats.html">
+        ドライブチャネルの統計情報を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-emailalert-summary.html">
+        Eメールアラートの概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-iscsisessions.html">
+        iscsisessionsを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-replaceabledrives.html">
+        置換後の縁を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-snapgroup.html">
+        SnapGroupを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-snapimage.html">
+        SnapImageを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-snapvolume.html">
+        SnapVolumeを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-snmpsystemvariables.html">
+        snmpsystemvariablesを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-ssd-cache-statistics.html">
+        SSDキャッシュの統計を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-ssd-cache.html">
+        SSDキャッシュを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-autoconfiguration.html">
+        show storageArray autoConfigurationをクリックします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-autosupport.html">
+        show storageArray storageArray storageArray autoConfigurationコマンドAutoSupport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-cachemirrordataassurancecheckenable.html">
+        show storageArray cachemirrdataassurancecheckenableコマンドを実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-controllerhealthimage.html">
+        show storageArray controllerhealthimage
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-dbmdatabase.html">
+        show storageArray dbmdatabaseを参照します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-directoryservices-summary.html">
+        show storageArray DirectoryServices summary
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-hostconnectivityreporting.html">
+        これには、ストレージ接続のレポートを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-hosttopology.html">
+        show storageArray hostTopologyコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-iscsinegotiationdefaults.html">
+        show storageArray iscsonegotiationdefaults」をデフォルトにします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-lunmappings.html">
+        show storageArray lunmappings
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-odxsetting.html">
+        show storageArray odxsetting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-powerinfo.html">
+        show storageArray powerInfo
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-revocationchecksettings.html">
+        show storageArray RevoationCheckSettingsのように設定されています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-syslog.html">
+        show storageArray syslog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-trustedcertificate-summary.html">
+        show storageArray trustedcertificate summary
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-unconfiguredinitiators.html">
+        show storageArray unconfiguredinitiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-unconfigurediscsiinitiators.html">
+        show storageArray unconfigurediscsiinitiatorsを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-unreadablesectors.html">
+        show storageArray unreadablesors
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray-usersession.html">
+        show storageArray usersessionというコマンドを実行します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-storagearray.html">
+        show storageArrayコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-syncmirror-candidates.html">
+        SyncMirror 候補を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-syncmirror-synchronizationprogress.html">
+        SyncMirror 同期の進捗状況を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-syslog-summary.html">
+        syslogの概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-textstring.html">
+        テキスト文字列を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volume-actionprogress.html">
+        ボリューム操作の進捗状況を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volume-performancestats.html">
+        ボリュームパフォーマンス統計の表示
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volume-reservations.html">
+        ボリューム予約を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volume-summary.html">
+        ボリュームの概要を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volume.html">
+        ボリュームを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumecopy-source-targetcandidates.html">
+        ボリュームコピーのソースターゲットキャンドルを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumecopy-sourcecandidates.html">
+        Show VolumeCopy sourceCandidates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumecopy.html">
+        ボリュームコピーの表示
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumegroup-exportdependencies.html">
+        ボリュームグループのエクスポート依存関係を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumegroup-importdependencies.html">
+        ボリュームグループのインポート依存関係を表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/show-volumegroup.html">
+        ボリュームグループを表示します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SMcli ...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-alerttest.html">
+        SMcliアラートテスト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportconfig-show.html">
+        SMcli -autosupportconfig showのコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportconfig-test.html">
+        SMcli -autosupportconfigテスト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportconfig.html">
+        SMcli autocsupportconfigのことです
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportlog.html">
+        SMcli -autosupportlog
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportschedule-reset.html">
+        SMcli -autosupportschedule reset」と入力します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-autosupportschedule-show.html">
+        SMcli -autosupportschedule showのコマンド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-enable-autosupportfeature.html">
+        SMcli enable autocsupportfeature」と表示されます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-enable-disable-autosupportondemand.html">
+        SMcli enable autosupportondemand
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-enable-disable-autosupportremotediag.html">
+        SMcli enable disable autosupportremotedirect
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/smcli-supportbundle-schedule.html">
+        SMcli supportbundle schedule
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 開始...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-asyncmirrorgroup-synchronize.html">
+        asyncmirrorGroupの同期を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-cgsnapimage-rollback.html">
+        cgsnapimageロールバックを開始する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-controller-iscsihostport-dhcprefresh.html">
+        コントローラiscsihostport dhcpreFreshを起動します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-controller.html">
+        コントローラを起動します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-diskpool-fullprovisioning.html">
+        diskpool fullprovisioningを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-diskpool-locate.html">
+        diskpoolの特定を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-diskpool-resourceprovisioning.html">
+        diskpoolリソースプロビジョニングを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drive-erase.html">
+        ドライブの消去を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drive-initialize.html">
+        ドライブの初期化を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drive-locate.html">
+        ドライブの特定を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drive-reconstruct.html">
+        ドライブの再構築を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drivechannel-faultdiagnostics.html">
+        ドライブチャネルフォールト診断を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-drivechannel-locate.html">
+        ドライブチャネルの特定を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-emailalert-test.html">
+        Eメールアラートテストを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-increasevolumecapacity-volume.html">
+        ボリュームの大容量化を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-ioclog.html">
+        ioclogを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-secureerase-drive.html">
+        ドライブのsecureEraseを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-snapimage-rollback.html">
+        SnapImageロールバックを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-snmptrapdestination.html">
+        snmptrapdestinationを起動します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-ssdcache-locate.html">
+        SScache locateを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-ssdcache-performancemodeling.html">
+        SScache performancemodingを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-autosupport-deliverytest.html">
+        storageArray AutoSupport deliverytestを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-autosupport-manualdispatch.html">
+        storageArray autodispatch(storageArray storageArray autodispatch)を開始しますAutoSupport
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-configdbdiagnostic.html">
+        storageArray configdbdiagnosticを起動します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-controllerhealthimage-controller.html">
+        開始storageArray controllerhealthimageコントローラ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-directoryservices-test.html">
+        storageArray DirectoryServicesテストを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html">
+        storageArray externalKeyManagementテストを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-isnsserverrefresh.html">
+        storageArray isnsserverrefreshを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-locate.html">
+        storageArray locateを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-ocspresponderurl-test.html">
+        storageArray ocspresponseurltestを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-storagearray-syslog-test.html">
+        これで、storageArray syslogテストが開始されます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-syncmirror-primary-synchronize.html">
+        SyncMirror プライマリ同期を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-syslog-test.html">
+        syslogテストを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-tray-locate.html">
+        トレイの特定の開始
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volume-initialization.html">
+        ボリュームの初期化を開始する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volume-initialize.html">
+        ボリュームの初期化を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-defragment.html">
+        ボリュームグループのデフラグを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-export.html">
+        ボリュームグループのエクスポートを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-fullprovisioning.html">
+        ボリュームグループのフルプロビジョニングを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-import.html">
+        ボリュームグループのインポートを開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-locate.html">
+        ボリュームグループの特定を開始します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/start-volumegroup-resourceprovisioning.html">
+        ボリュームグループリソースのプロビジョニングを開始します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 停止...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-asyncmirrorgroup-rolechange.html">
+        asyncmirrorGroupロール変更を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-cgsnapimage-rollback.html">
+        cgsnapimageのロールバックを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-cgsnapvolume.html">
+        cgsnapvolumeを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html">
+        整合グループpendingsnapimagecreationを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-diskpool-locate.html">
+        ディスクプールの特定を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-drive-locate.html">
+        ドライブの特定を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-drive-replace.html">
+        ドライブ交換を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-drivechannel-faultdiagnostics.html">
+        ドライブチャネルフォールト診断を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-drivechannel-locate.html">
+        ドライブチャネルの特定を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-pendingsnapimagecreation.html">
+        pendingsnapimagecreationを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-snapimage-rollback.html">
+        SnapImageロールバックを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-snapvolume.html">
+        SnapVolumeを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-ssdcache-locate.html">
+        SScache locateを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-ssdcache-performancemodeling.html">
+        SScacheのパフォーマンスの削除を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-storagearray-configdbdiagnostic.html">
+        storageArray configdbdiagnosticを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-storagearray-drivefirmwaredownload.html">
+        これで、ストレージドライブのドライブウェアのダウンロードが停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-storagearray-iscsisession.html">
+        これで、storageArray iscsisessionが停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-storagearray-locate.html">
+        storageArray locateを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-tray-locate.html">
+        トレイの特定を停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-volumecopy-target-source.html">
+        VolumeCopyターゲットソースを停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/stop-volumegroup-locate.html">
+        ボリュームグループの特定を停止します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 中断...</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/suspend-asyncmirrorgroup.html">
+        非同期ミラーグループを中断します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/suspend-ssdcache.html">
+        SScacheを一時停止します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/suspend-syncmirror-primaries.html">
+        SyncMirror プライマリを一時停止します
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> V</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/commands-a-z/validate-storagearray-securitykey.html">
+        storageArray securityKeyを検証します
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/e-series-cli/legal-notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/ja-jp/e-series-family/">E-Series</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/e-series-cli/">SANtricity&nbsp;commands</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">SASポート誤配線をリカバリします</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-23 14:12:04 +0000">05/23/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>「recover sasPortの誤配線」コマンドは、誤配線状態からリカバリするための修正措置が実行されたことをコントローラに通知します。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="サポートされているアレイ">サポートされているアレイ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ロール">ロール</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="コンテキストcontext">コンテキスト（Context）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>誤配線が検出されたために無効になったSASポートが、コントローラによって再有効化されます。SASの誤配線状態を修正してからこのコマンドを実行してください。</p>
+</div>
+<div class="paragraph">
+<p>SASの誤配線状態とは次のいずれかです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>無効なSASトポロジです</p>
+</li>
+<li>
+<p>コントローラのホストポートから拡張トレイへの接続</p>
+</li>
+<li>
+<p>イニシエータからドライブトポロジへの接続</p>
+</li>
+<li>
+<p>ESMの誤配線</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="構文">構文</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>recover sasPort miswire</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="パラメータ">パラメータ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>なし</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="注">注：</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>誤配線状態が検出されると、コントローラファームウェアは次の内容を報告します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>誤配線状態が存在することを示す重大MELイベント</p>
+</li>
+<li>
+<p>「Needs attention」状態です</p>
+</li>
+<li>
+<p>誤配線を示すリカバリアクション</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>また、誤配線が原因でアクセスパスが1つしかないドライブ、ESM、およびトレイ（ストレージアレイの下段のトレイなど）についても、「冗長性が失われました」という情報が報告されます。冗長性の損失情報はSASトポロジに固有のものではありません。</p>
+</div>
+<div class="paragraph">
+<p>SASポートの誤配線に関連するイベント通知を次に示します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SASの誤配線が検出されました</p>
+</li>
+<li>
+<p>HBAがドライブチャネルに接続されています</p>
+</li>
+<li>
+<p>ドライブチャネルはクロス配線されています</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>誤配線状態の際、SASドメインの整合性を保護するためにコントローラが1つ以上のSASポートを無効にする場合は、次の手順に従ってこの状態からリカバリしてください。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>間違った場所にあるケーブルを特定して取り外します。最後に新しいケーブルを取り付ける作業を行った場合は、これが最も可能性の高い方法です。そうでない場合は、ストレージアレイの一部ではないデバイスに接続されているケーブルまたはチャネル間で接続されているケーブルを探してください。リカバリイベントでは、誤配線が検出されたチャネル、および場合によってはトレイが報告されます</p>
+</li>
+<li>
+<p>ケーブルを取り外した後、またはケーブルを正しい場所に移動した後、「recover sasPort eぶ る」コマンドを実行します。誤配線が検出されたときに無効になったSASポートが、コントローラによって再有効化されます。</p>
+</li>
+<li>
+<p>誤配線が原因で取り外したケーブルまたは正しい場所に移動したケーブルが無効にしたポートへの唯一のアクセスをコントローラに提供していた場合、コントローラは無効にしたSASポートを再有効化できません。リカバリを完了するには、ストレージアレイ内のトレイの電源を再投入する必要があります。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="最小ファームウェアレベル">最小ファームウェアレベル</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>8.10で</p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">利用条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">Web サイトについてのフィードバックを</span>
+              <a target="_self" href="javascript:netapp_mailto()">お寄せください</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/ja-jp/announcements/">お知らせ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ja-jp/e-series-cli/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/e-series-cli/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/e-series-cli/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/e-series-cli/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/e-series-cli/js/www-ntap.js'></script>
+    <script src='/ja-jp/e-series-cli/js/tabbed-blocks.js'></script>
+  </body></html>
