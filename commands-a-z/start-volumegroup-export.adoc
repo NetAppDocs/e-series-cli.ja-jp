@@ -33,7 +33,7 @@ start volumeGroup exportコマンドは'ボリューム・グループをエク�
 
 [CAUTION]
 ====
-これらの手順を実行する前に、に記載されている手順を実行してください xref:../commands-category/learn-about-volume-group-migration.adoc[ボリュームグループの移行について説明します。]
+これらの手順を実行する前に、に記載されている手順を実行してください xref:../get-started/learn-about-volume-group-migration.html[ボリュームグループの移行について説明します。]
 
 ====
 [NOTE]

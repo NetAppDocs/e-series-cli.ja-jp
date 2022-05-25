@@ -3642,7 +3642,6 @@
   <block id="8e61c506c79e13d071037f231e80c38c" category="paragraph">start volumeGroup exportコマンドは'ボリューム・グループをエクスポート状態に移行します</block>
   <block id="f8e1a2f2bb89d0e20261b9118cc2babb" category="paragraph">その後、ボリュームグループを構成するドライブを取り外して、別のストレージアレイに再度取り付けることができます。</block>
   <block id="2ac0da7167150cceb962c2e130608bdb" category="inline-xref-macro">ボリュームグループの移行について説明します。</block>
-  <block id="0146caa36736a1cce0c481ebc7b5851b" category="paragraph">これらの手順を実行する前に、に記載されている手順を実行してください <block ref="2e35a658a01f1c02ff017d67706a89f8" category="inline-xref-macro-rx"></block></block>
   <block id="e1704c8c0969c15a2f512b9f0dc8f7d9" category="paragraph">ボリュームグループ内では、機能に関連付けられているボリュームをストレージアレイ間で移動することはできません。</block>
   <block id="10b695519051adb6cbf9a8849bbf4456" category="paragraph">エクスポートするボリュームグループの名前。ボリュームグループ名は角かっこ（[]）で囲みます。</block>
   <block id="068f0ca48bb4cd301b90287f7031ed63" category="paragraph">このコマンドが正常に実行されると'start volumeGroup importコマンドを実行して'ボリューム・グループの完全な状態への移動を完了できますこれにより'ボリューム・グループを新しいストレージ・アレイで使用できるようになります</block>
@@ -7437,4 +7436,5 @@
   <block id="2d30e328ae4f6dcf3d38d3968d0319a6" category="sidebar">SyncMirror プライマリを一時停止します</block>
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">storageArray securityKeyを検証します</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">カテゴリ別のコマンド</block>
+  <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">これらの手順を実行する前に、に記載されている手順を実行してください <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
 </blocks>
