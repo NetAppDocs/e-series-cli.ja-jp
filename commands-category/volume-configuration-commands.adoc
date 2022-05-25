@@ -202,7 +202,7 @@ link:../commands-a-z/start-volumegroup-export.html["ボリュームグループ�
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["ボリュームグループのフルプロビジョニングを開始します"]
 
-link:learn-about-volume-group-migration.html["ボリュームグループの移行について（CLIのみ）"]
+link:../get-started/learn-about-volume-group-migration.html["ボリュームグループの移行について（CLIのみ）"]
 
 link:../commands-a-z/start-volumegroup-import.html["ボリュームグループのインポートを開始します"]
 
