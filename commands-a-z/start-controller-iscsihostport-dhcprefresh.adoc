@@ -62,7 +62,7 @@ DHCPパラメータを更新するiSCSIホストポートのラベルまたは�
 
 詳細については、次を参照してください。
 
-<<Identifying an iSCSI host port label,"iSCSIホストポートラベルの識別">>
+ an iSCSI host port label,"iSCSIホストポートラベルの識別"
 
 |===
 

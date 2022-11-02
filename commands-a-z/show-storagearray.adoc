@@ -341,8 +341,6 @@ Date/Time: Thu Jun 03 14:54:55 MDT 2004
 LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
 Volume-2         Volume Disk Copy  10% COMPLETED  5 min
 ----
-権利。
-
 'longRunningOperations'パラメータによって返される情報フィールドには'次の意味があります
 
 * 「name」は、長時間の処理が現在実行されているボリュームの名前です。ボリューム名には、「Volume」がプレフィックスとして含まれている必要があります。

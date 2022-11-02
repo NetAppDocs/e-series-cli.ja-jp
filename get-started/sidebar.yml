@@ -2,8 +2,6 @@
 section: get-started
 title: はじめに
 entries:
-- title: 新機能
-  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
 - title: コマンドのフォーマット
   entries:
   - title: 概要
@@ -16,7 +14,9 @@ entries:
       url: "/get-started/interactive-mode.html"
     - title: CLIラッパーの構文
       url: "/get-started/cli-command-wrapper-syntax.html"
-    - title: CLIパラメータ
+    - title: ダウンロード可能なSMcliパラメータ
+      url: "/get-started/downloadable-smcli-parameters.html"
+    - title: 従来のCLIパラメータ
       url: "/get-started/command-line-parameters.html"
   - title: スクリプトコマンドの構造
     entries:

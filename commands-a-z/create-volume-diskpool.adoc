@@ -49,17 +49,7 @@ capacity=_volumeCapacity_]
 [dataAssurance=(none|enabled)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [raidLevel=(1 | 6)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[raidLevel=(1 | 6)]
+[blockSize=requestedBlockSizeValue]
 ----
 
 
@@ -139,6 +129,9 @@ capacity=_volumeCapacity_]
 「thinProvised`」
  a| 
 このパラメータを使用すると、新しいボリュームのシンプロビジョニングが有効になります。シンプロビジョニングを使用するには、このパラメータを「true」に設定します。シンプロビジョニングが不要な場合は、このパラメータをFALSEに設定します。
+
+
+NOTE: RAID 1レベルのボリュームにはシンプロビジョニングを使用できません。
 
 
 
@@ -223,6 +216,13 @@ raidLevel
  a| 
 ディスクプール内に作成されるボリュームのRAIDレベルを設定します。RAID1を指定するには'1'に設定しますRAID6を指定するには'6'に設定しますRAIDレベルが設定されていない場合は、デフォルトでRAID 6がディスクプールに使用されます。
 
+
+
+ a| 
+「ブロックサイズ」
+ a| 
+このパラメータは、作成するボリュームのブロックサイズを設定します。の値 `0` または、設定されていないパラメータはデフォルトのブロックサイズを使用します。
+
 |===
 
 
@@ -257,4 +257,4 @@ DA機能を使用する場合は、まず最初にDAがサポートされてい�
 
 7.83
 
-8.70で'_raidLevel_'パラメータが追加されました
+8.70で、が追加されました `_raidLevel_` および `_blockSize` パラメータ

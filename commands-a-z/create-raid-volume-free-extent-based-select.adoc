@@ -36,12 +36,14 @@ userLabel="_volumeName"_]
 [freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
 [dssPreAllocate=(TRUE | FALSE)]
 [securityType=(none | capable | enabled)]
 [dataAssurance=(none | enabled)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -142,6 +144,20 @@ capable --ボリュームグループとボリュームにはセキュリティ�
 
 有効-ボリューム・グループとボリュームでセキュリティが有効になっています
 
+
+
+ a| 
+「マッピング」
+ a| 
+このパラメータを使用すると、ホストにボリュームをマッピングできます。あとでマッピングする場合は、このパラメータをに設定します `none`。今すぐマッピングする場合は、このパラメータをに設定します `default`。ボリュームは、ストレージプールにアクセスできるすべてのホストにマッピングされます。デフォルト値はです `none`。
+
+
+
+ a| 
+「ブロックサイズ」
+ a| 
+このパラメータは、作成するボリュームのブロックサイズを設定します。値が0またはパラメータが設定されていない場合は、デフォルトのブロックサイズが使用されます。
+
 |===
 
 
@@ -233,3 +249,5 @@ ownerパラメータは'ボリュームを所有するコントローラを定�
 7.50で、「securityType」パラメータが追加されました。
 
 7.75で'dataAssuranceパラメータが追加されました
+
+11.70でにが追加されました `blockSize` パラメータ

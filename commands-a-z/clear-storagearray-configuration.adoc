@@ -62,7 +62,7 @@ clear storageArray configuration factoryReset
 
 
  a| 
-なし
+* なし *
  a| 
 パラメータを1つも入力しないと、セキュリティと識別に関連する情報を除くストレージアレイのすべての構成情報が削除されます。
 
