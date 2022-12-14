@@ -219,14 +219,10 @@
   <block id="b28de08f5f84620a8d9387e4bc82c145" category="list-text">ロールベースアクセス管理を使用して、さまざまなセキュリティ権限をさまざまなロールに割り当てることができます。ユーザ名引数を指定してコマンドを実行するには'-uオプションを使用します</block>
   <block id="31c49cbd47495cd0283671d9f563a6d0" category="list-text">以前は'*symbol*'モードで使用可能だったパスワード引数を'*https*'モードで使用して'特定のユーザロールのパスワードを指定することもできます-pオプションは'コマンド・ラインでパスワードを指定するために使用しますまたは'-Pオプションは'ファイルまたはstdin'からパスワードを読み込むことができます</block>
   <block id="a6531c9cca5e8e900e3ca0277d431ca8" category="paragraph">このトピックのいくつかの例では、新しいコマンドラインパラメータを使用しています。</block>
-  <block id="c908ce368d4fe8339cba1bf1e4ea861a" category="section-title">パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がアレイにインストールされている</block>
   <block id="16c398a12b24b49ad8fd9d8cf71bd34d" category="paragraph">次の例では、ユーザ名とパスワードの両方のオプションが指定されており、信頼された証明書がアレイにインストールされています。</block>
-  <block id="fa78d93e0beeed4f5375cf768e7a0381" category="section-title">パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がアレイにインストールされていない</block>
   <block id="57bccb659e7be24e1b2bfe3acd2728ae" category="paragraph">次の例では'ユーザー名とパスワードの両方のオプションが提供されていますが'信頼された証明書はアレイにインストールされておらず'-kオプションは使用されていません次の例は、返される出力を示しています。</block>
-  <block id="c063d79f0e133e1256a7a93c57688060" category="section-title">パスワードを必要とする処理、httpsクライアントモード、信頼された証明書がインストールされていないが、-kを指定して自己署名証明書を使用します</block>
   <block id="945538cd7afe8709efac27b96915389d" category="paragraph">次の例では、前の例と同様にユーザ名とパスワードの両方のオプションが指定されていますが、信頼された証明書がアレイにインストールされていません。ただし'この場合は'-kオプションを使用して自己署名証明書を使用しています</block>
   <block id="22d5e376747f8800631977368e13fe8a" category="paragraph">この例では'*symbol*'クライアント・モードを使用していますコマンドを正常に完了するには'passwordオプションのみが必要です</block>
-  <block id="350c6ef338d6ab3369b1b85476ddb126" category="section-title">読み取り専用の操作、symbolクライアントモード</block>
   <block id="8407b004173192880cab6c17030bbd4e" category="paragraph">この例では'*symbol*'クライアント・モードで'ユーザー名もパスワードも指定されていませんこのコマンドは、読み取り専用の処理の場合にのみ正常に完了します。</block>
   <block id="e09eb504f4a302a718a04fda53bbcb8c" category="section-title">読み取り専用の処理、httpクライアントモード</block>
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">次の例では'読み取り専用操作を使用していますが'*https*'クライアント・モードでは'ユーザ名とパスワードの両方が必要であり'自己署名証明書を受け入れるために'-kとともに指定されていますクライアント・モードでは'読み取り専用操作の場合でもパスワードが必要です</block>
@@ -4642,7 +4638,6 @@
   <block id="1f6350121cc6be42467adde5ceda9948" category="summary">set storageArray DirectoryServer rolesコマンドでは、指定したディレクトリサーバのロールマッピングを定義できます。ロールマッピングは、各種のSMcliコマンドを実行しようとするユーザを認証するために使用されます。</block>
   <block id="ba82f0e46ee4e71332f094495a7ef046" category="doc">ストレージアレイのディレクトリサーバのロールマッピングの設定</block>
   <block id="2ce33a36c7495d35412356b5df7429aa" category="paragraph">set storageArray DirectoryServer rolesコマンドでは、指定したディレクトリサーバのロールマッピングを定義できます。ロールマッピングは、各種のSMcliコマンドを実行しようとするユーザを認証するために使用されます。</block>
-  <block id="eed5ddc8f738970611f01ee16f2a17e5" category="section-title">必要なもの</block>
   <block id="9423165348dbe1106dd8519c5f376e8a" category="paragraph">マッピングできるロールは次のとおりです。</block>
   <block id="b146be7830b865aa772d4dd25fca1a78" category="list-text">* Storage admin *--ストレージ・オブジェクト（ボリュームやディスク・プールなど）への読み取り/書き込みのフル・アクセス。セキュリティ構成へのアクセスはありません。</block>
   <block id="892ec2709f7a0ff6e883205b45a6d6a5" category="list-text">* Security admin *--アクセス管理、証明書管理、監査ログ管理のセキュリティ構成へのアクセス、および従来の管理インターフェイス（SYMbol）のオン/オフの切り替え機能。</block>
@@ -7508,4 +7503,9 @@
   <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
   <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">ダウンロード可能なSMcliパラメータ</block>
   <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">従来のCLIパラメータ</block>
+  <block id="bc968b5475454c32c0accb20e0fffbde" category="section-title">パスワードを必要とする処理、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> クライアントモードでは、信頼された証明書がアレイにインストールされます</block>
+  <block id="7738c732553fe92af1f9ad5d112e48db" category="section-title">パスワードを必要とする処理、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> クライアントモードでは、信頼された証明書がアレイにインストールされません</block>
+  <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">パスワードを必要とする処理、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> クライアントモードでは、信頼された証明書はインストールされていませんが、-kを指定して自己署名証明書を使用します</block>
+  <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">読み取り専用の処理<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> クライアントモード</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">必要なもの</block>
 </blocks>

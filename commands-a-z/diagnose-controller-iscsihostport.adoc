@@ -64,7 +64,7 @@ testID=cableDiagnostics
 
 詳細については、次を参照してください。
 
- an iSCSI host port label,"iSCSIホストポートラベルの識別"
+<<iSCSIホストポートラベルの特定,"iSCSIホストポートラベルの識別">>
 
 
 
