@@ -89,13 +89,15 @@ xref:./commands-a-z/check-volume-parity.adoc[ボリュームのパリティを�
 廃止されたコマンドです。
 
 |===
-[]
-====
-== SANtricity 11.70.5
 
-リリース11.70.5では、CLIコマンドやスクリプトコマンドの変更はありません。
 
-== SANtricity 11.70.4
+== 4d73148eba8bbf93563afef1a810a39e
+
+リリース11.70.5では、CLIコマンドとスクリプトコマンドの変更はありません。
+
+
+
+== 06d2539958ee4762f25ee6e06e44b9f1
 
 次の表は、リリース11.70.4におけるCLIコマンドとスクリプトコマンドの変更点を示しています。
 
@@ -110,7 +112,9 @@ xref:./get-started/downloadable-smcli-parameters.adoc[SMcliコマンドライン
 を追加しました `-t` および `-T` 多要素認証用のアクセストークンパラメータの説明。
 
 |===
-== SANtricity 11.70.3
+
+
+== e5b376b9bdbfe1612d578d30462ed6ff
 
 次の表に、リリース11.70.3のCLIコマンドとスクリプトコマンドの変更点を示します。
 
@@ -160,7 +164,9 @@ xref:./commands-a-z/create-diskpool.html[ディスクプールを作成]
 「driveCount」パラメータ概要 を更新。
 
 |===
-== SANtricity 11.70.2
+
+
+== 3cffe633df330392f4d88b8478c9390b
 
 次の表は、リリース11.70.2のCLIコマンドとスクリプトコマンドの変更点を示しています。
 
@@ -217,7 +223,9 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[SNMPトラップの送信先�
 「username」および「engineid」パラメータを追加。
 
 |===
-== SANtricity 11.70.1
+
+
+== cfafd61e53ff8b90ff59654a31683d33
 
 次の表は、リリース11.70.1のCLIコマンドとスクリプトコマンドの変更点を示しています。
 
@@ -281,7 +289,9 @@ xref:./commands-a-z/recover-volume.adoc[RAIDボリュームをリカバリしま
 blocksizeパラメータを追加
 
 |===
-== SANtricity 11.70
+
+
+== 474034f7e02f357e3878ae2514a2b3fd
 
 次の表は、リリース11.70のCLIコマンドとスクリプトコマンドの変更点を示しています。
 
@@ -324,4 +334,3 @@ xref:./commands-a-z/recover-volume.adoc[RAIDボリュームをリカバリしま
 hostUnmapEnabled'パラメータが追加されました。
 
 |===
-====
