@@ -774,6 +774,8 @@ link:../commands-a-z/recover-sasport-miswire.html["SASポート誤配線をリ�
 
 link:../commands-a-z/create-snmpcommunity.html["SNMPコミュニティの登録"]
 
+link:../commands-a-z/create-snmpuser-username.html["SNMPv3 USMユーザを登録します"]
+
 link:../commands-a-z/create-snmptrapdestination.html["SNMPトラップの送信先を登録します"]
 
 link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）"]
@@ -816,6 +818,8 @@ link:../commands-a-z/show-allsnmpcommunities.html["SNMPコミュニティを表�
 
 link:../commands-a-z/show-snmpsystemvariables.html["SNMP MIB-IIシステムグループ変数を表示します"]
 
+link:../commands-a-z/show-allsnmpusers.html["SNMPv3 USMユーザを表示します"]
+
 link:../commands-a-z/show-syslog-summary.html["syslog設定を表示します"]
 
 link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["Eメール（SMTP）配信方法の指定（個々のE2800またはE5700アレイ）"]
@@ -830,7 +834,11 @@ link:../commands-a-z/start-snmptrapdestination.html["SNMPトラップの送信�
 
 link:../commands-a-z/start-syslog-test.html["syslog設定をテストします"]
 
+link:../commands-a-z/delete-snmpuser-username.html["SNMPv3 USMユーザの登録を解除します"]
+
 link:../commands-a-z/set-snmpcommunity.html["SNMPコミュニティを更新します"]
+
+link:../commands-a-z/set-snmpuser-username.html["SNMPv3 USMユーザを更新します"]
 
 link:../commands-a-z/set-snmpsystemvariables.html["SNMP MIB-IIシステムグループ変数を更新します"]
 

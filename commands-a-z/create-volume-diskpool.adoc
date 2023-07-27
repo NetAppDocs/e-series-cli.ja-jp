@@ -67,22 +67,7 @@ capacity=_volumeCapacity_]
 [(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
 [newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
 [repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
-[repositoryExpansionPolicy=(automatic|manual)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
-[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
-[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[warningThresholdPercent=pass:quotes][_warningThresholdPercentValue_]
 [repositoryExpansionPolicy=(automatic|manual)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 ----
@@ -235,6 +220,8 @@ raidLevel
 最善の結果を得るためには、シンボリュームの作成時に、リポジトリボリュームがすでに存在しているか、既存のディスクプールにリポジトリボリュームを作成する必要があります。シンボリュームの作成時に一部のオプションパラメータを指定しない場合は、ストレージ管理ソフトウェアによってリポジトリボリュームが作成されます。最も望ましい候補ボリュームは、すでに存在していて、サイズ要件の範囲内のリポジトリボリュームです。次に望ましい候補ボリュームは、ディスクプールの空きエクステント内に作成される新しいリポジトリボリュームです。
 
 シンボリュームのリポジトリボリュームは、ボリュームグループには作成できません。
+
+シンプロビジョニングボリュームはEF300またはEF600ではサポートされません。
 
 
 

@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/save-check-vol-parity-job-errors.html 
+sidebar: sidebar 
+keywords: save, check, volume, parity, job, errors 
+summary: save check volume parity job parity errorsコマンドは、チェックボリュームパリティジョブによってログに記録されたパリティエラーを指定したファイルに保存します。 
+---
+= 保存チェックボリュームパリティジョブのパリティエラー
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `save check volume parity job parity errors` コマンドは、ボリュームチェックパリティジョブによってログに記録されたパリティエラーを指定のファイルに保存します。出力ファイルは、廃止されたcheck volume parityコマンドと同じ形式で書き込まれるため、既存のrepair volume parityコマンドの入力として使用できます。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`jobId`
+ a| 
+ログに記録されたパリティエラーを取得して保存するジョブID。この値は必須です。
+
+
+
+ a| 
+'parityErrorFile'
+ a| 
+ログに記録されたパリティエラーを保存する場所を示すためにユーザーが指定したファイル。この値は必須です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.80

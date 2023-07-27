@@ -25,11 +25,75 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+== SANtricity 11.80
+
+次の表に、リリース11.80のCLIコマンドとスクリプトコマンドの変更点を示します。
+
+[cols="2*"]
+|===
+| コマンドを実行します | 概要 of Changeの略 
+
+
+ a| 
+xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[ボリュームチェックの保存carityジョブパリティエラー]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+xref:./commands-a-z/start-check-vol-parity-job.adoc[ボリュームのパリティチェックジョブの開始]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+xref:./commands-a-z/show-check-vol-parity-jobs.adoc[ボリュームパリティチェックジョブを表示します。]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+xref:./commands-a-z/show-check-vol-parity-job.adoc[ボリュームのパリティチェックジョブを表示します。]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+xref:./commands-a-z/stop-check-vol-parity-job.adoc[ボリュームのパリティチェックジョブを停止します。]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+xref:./get-started/command-line-parameters.adoc[従来のコマンドラインパラメータ]
+ a| 
+を追加しました `-useLegacyTransferPort` パラメータ
+
+
+
+ a| 
+xref:./commands-a-z/autoconfigure-storagearray.adoc[ストレージアレイを自動設定します]
+ a| 
+blocksizeパラメータを追加
+
+
+
+ a| 
+xref:./commands-a-z/check-volume-parity.adoc[ボリュームのパリティをチェックします]
+ a| 
+廃止されたコマンドです。
+
+|===
+[]
+====
 == SANtricity 11.70.5
 
 リリース11.70.5では、CLIコマンドやスクリプトコマンドの変更はありません。
-
-
 
 == SANtricity 11.70.4
 
@@ -46,8 +110,6 @@ xref:./get-started/downloadable-smcli-parameters.adoc[SMcliコマンドライン
 を追加しました `-t` および `-T` 多要素認証用のアクセストークンパラメータの説明。
 
 |===
-
-
 == SANtricity 11.70.3
 
 次の表に、リリース11.70.3のCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -98,9 +160,7 @@ xref:./commands-a-z/create-diskpool.html[ディスクプールを作成]
 「driveCount」パラメータ概要 を更新。
 
 |===
-
-
-== SANtricity 11.70.2の略
+== SANtricity 11.70.2
 
 次の表は、リリース11.70.2のCLIコマンドとスクリプトコマンドの変更点を示しています。
 
@@ -157,8 +217,6 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[SNMPトラップの送信先�
 「username」および「engineid」パラメータを追加。
 
 |===
-
-
 == SANtricity 11.70.1
 
 次の表は、リリース11.70.1のCLIコマンドとスクリプトコマンドの変更点を示しています。
@@ -223,8 +281,6 @@ xref:./commands-a-z/recover-volume.adoc[RAIDボリュームをリカバリしま
 blocksizeパラメータを追加
 
 |===
-
-
 == SANtricity 11.70
 
 次の表は、リリース11.70のCLIコマンドとスクリプトコマンドの変更点を示しています。
@@ -268,258 +324,4 @@ xref:./commands-a-z/recover-volume.adoc[RAIDボリュームをリカバリしま
 hostUnmapEnabled'パラメータが追加されました。
 
 |===
-
-
-== SANtricity 11.63
-
-次の表は、リリース11.63におけるCLIコマンドとスクリプトコマンドの変更点を示しています。
-
-[cols="2*"]
-|===
-| コマンドを実行します | 概要 of Changeの略 
-
-
- a| 
-xref:./commands-a-z/start-storagearray-autosupport-manualdispatch.adoc[ストレージアレイのAutoSupport 手動ディスパッチを開始します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[ボリュームグループのフルプロビジョニングを開始します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/start-diskpool-fullprovisioning.adoc[ディスクプールのフルプロビジョニングを開始します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/repair-data-parity.adoc[データパリティを修復]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/set-storagearray-resourceprovisionedvolumes.adoc[ストレージアレイリソースにプロビジョニングされたボリュームを設定してください]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/create-mapping-volume.adoc[ボリュームマッピングの作成]
- a| 
-「mapWaitPeriod」パラメータが追加されました。
-
-
-
- a| 
-xref:./commands-a-z/show-storagearray.adoc[ストレージアレイを表示します]
- a| 
-「profile」パラメータの結果に「Resource-Provisioned Volumes」エントリを追加しました。
-
-
-
- a| 
-xref:./commands-a-z/create-diskpool.adoc[ディスクプールを作成]
- a| 
-resourceProvisioningCapableパラメータを追加しました
-
-
-
- a| 
-xref:./commands-a-z/create-volumegroup.adoc[ボリュームグループを作成します]
- a| 
-resourceProvisioningCapableパラメータを追加しました
-
-
-
- a| 
-xref:./commands-a-z/show-volumegroup.adoc[ボリュームグループを表示します]
- a| 
-コマンド結果に「リソースプロビジョニング」情報を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[RAIDボリュームの作成（自動ドライブ選択）]
- a| 
-resourceProvisioningCapableパラメータを追加しました
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-manual-drive-select.adoc[RAIDボリュームの作成（手動ドライブ選択）]
- a| 
-resourceProvisioningCapableパラメータを追加しました
-
-
-
- a| 
-xref:./commands-a-z/show-diskpool.adoc[ディスクプールを表示します]
- a| 
-コマンド結果に「リソースプロビジョニング」情報を追加しました。
-
-|===
-
-
-== SANtricity 11.62
-
-次の表は、リリース11.62におけるCLIコマンドとスクリプトコマンドの変更点を示しています。
-
-[cols="2*"]
-|===
-| コマンドを実行します | 概要 of Changeの略 
-
-
- a| 
-xref:./commands-a-z/set-controller-hostport.adoc[コントローラのホストポートのプロパティを設定します]
- a| 
-host Portパラメータに'Physical'および'Virtual'の値を追加しました
-
-|===
-
-
-== SANtricity 11.61以下
-
-* 該当するコマンドでサポート対象アレイにEF600プラットフォームを追加しました。
-
-
-[cols="2*"]
-|===
-| コマンドを実行します | 概要 of Changeの略 
-
-
- a| 
-xref:./commands-a-z/save-storagearray-supportdata.adoc[ストレージアレイのサポートデータを保存します]
- a| 
-object-bundle.jsonデータ型が追加されました。
-
-
-
- a| 
-xref:./commands-a-z/show-alldrives.adoc[ドライブを表示します]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/activate-synchronous-mirroring.adoc[同期ミラーリングをアクティブ化する]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/recreate-storagearray-mirrorrepository.adoc[同期ミラーリングリポジトリボリュームを再作成します]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/create-raid-volume-automatic-drive-select.adoc[RAIDボリュームの作成（自動ドライブ選択）]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/show-storagearray-autoconfiguration.adoc[ストレージアレイの自動設定の表示]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/autoconfigure-storagearray.adoc[ストレージアレイを自動設定します]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/create-diskpool.adoc[ディスクプールを作成]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/create-volumegroup.adoc[ボリュームグループを作成します]
- a| 
-NVMe4Kの互換性を追加しました。
-
-
-
- a| 
-xref:./commands-a-z/save-storagearray-autoloadbalancestatistics-file.adoc[自動ロードバランシングの統計を保存します]
- a| 
-「ドライブがプライマリパスを喪失」に関する注記を追加しました
-
-
-
- a| 
-xref:./commands-a-z/set-storagearray-autoloadbalancingenable.adoc[自動ロードバランシングを有効または無効にするストレージアレイを設定します]
- a| 
-「ドライブがプライマリパスを喪失」に関する注記を追加しました
-
-
-
- a| 
-xref:./commands-a-z/add-certificate-from-array.adoc[アレイから証明書を追加します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/add-certificate-from-file.adoc[ファイルから証明書を追加します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/delete-certificates.adoc[証明書を削除します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/show-certificates.adoc[証明書を表示します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/add-array-label.adoc[アレイラベルを追加します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/remove-array-label.adoc[アレイラベルを削除します]
- a| 
-コマンドが追加されました
-
-
-
- a| 
-xref:./commands-a-z/show-array-label.adoc[アレイラベルを表示します]
- a| 
-コマンドが追加されました
-
-|===
+====

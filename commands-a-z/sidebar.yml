@@ -352,6 +352,8 @@ entries:
       url: "/commands-a-z/save-alltrays-logfile.html"
     - title: 監査ログを保存します
       url: "/commands-a-z/save-auditlog.html"
+    - title: 保存チェックボリュームパリティジョブのパリティエラー
+      url: "/commands-a-z/save-check-vol-parity-job-errors.html"
     - title: コントローラアレイ管理を保存します
       url: "/commands-a-z/save-controller-arraymanagementcsr.html"
     - title: コントローラアレイ管理の署名付き証明書を保存します
@@ -632,6 +634,8 @@ entries:
       url: "/commands-a-z/show-certificates.html"
     - title: cgsnapimageを表示する
       url: "/commands-a-z/show-cgsnapimage.html"
+    - title: ボリュームパリティチェックジョブを表示します。
+      url: "/commands-a-z/show-check-vol-parity-jobs.html"
     - title: 整合グループを表示します
       url: "/commands-a-z/show-consistencygroup.html"
     - title: コントローラアレイ管理の署名証明書の概要を表示します
@@ -766,6 +770,8 @@ entries:
       url: "/commands-a-z/start-asyncmirrorgroup-synchronize.html"
     - title: cgsnapimageロールバックを開始する
       url: "/commands-a-z/start-cgsnapimage-rollback.html"
+    - title: ボリュームのパリティチェックジョブの開始
+      url: "/commands-a-z/start-check-vol-parity-job.html"
     - title: コントローラiscsihostport dhcpreFreshを起動します
       url: "/commands-a-z/start-controller-iscsihostport-dhcprefresh.html"
     - title: コントローラを起動します
@@ -854,6 +860,8 @@ entries:
       url: "/commands-a-z/stop-cgsnapimage-rollback.html"
     - title: cgsnapvolumeを停止します
       url: "/commands-a-z/stop-cgsnapvolume.html"
+    - title: ボリュームのパリティチェックジョブを停止します。
+      url: "/commands-a-z/stop-check-vol-parity-job.html"
     - title: 整合グループpendingsnapimagecreationを停止します
       url: "/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html"
     - title: ディスクプールの特定を停止します

@@ -368,6 +368,8 @@ link:../commands-a-z/save-storagearray-arvmstats-asyncmirrorgroup.html["非同�
 
 link:../commands-a-z/save-auditlog.html["監査ログレコードを保存します"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["チェックボリュームパリティジョブのパリティエラーの保存"]
+
 link:../commands-a-z/save-controller-nvsram-file.html["コントローラのNVSRAMを保存します"]
 
 link:../commands-a-z/save-drivechannel-faultdiagnostics-file.html["ドライブチャネルの障害切り分け診断ステータスを保存します"]
@@ -582,6 +584,8 @@ link:../commands-a-z/show-storagearray-revocationchecksettings.html["証明書�
 
 link:../commands-a-z/show-array-label.html["アレイラベルを表示します"]
 
+link:../commands-a-z/show-check-vol-parity-jobs.html["ボリュームパリティチェックジョブを表示"]
+
 link:../commands-a-z/show-consistencygroup.html["整合グループを表示します"]
 
 link:../commands-a-z/show-cgsnapimage.html["整合性グループのSnapshotイメージの表示"]
@@ -698,6 +702,8 @@ link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["Aut
 
 link:../commands-a-z/start-storagearray-ocspresponderurl-test.html["OCSPサーバURLテストを開始します"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["ボリュームのパリティチェックジョブの開始"]
+
 link:../commands-a-z/start-cgsnapimage-rollback.html["整合性グループのSnapshotロールバックを開始する"]
 
 link:../commands-a-z/start-controller.html["コントローラのトレースを開始します"]
@@ -755,6 +761,8 @@ link:../commands-a-z/start-volumegroup-import.html["ボリュームグループ�
 link:../commands-a-z/start-volumegroup-locate.html["ボリュームグループの特定の開始"]
 
 link:../commands-a-z/start-volume-initialization.html["ボリュームの初期化を開始する"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["ボリュームパリティチェックジョブの停止"]
 
 link:../commands-a-z/stop-cgsnapimage-rollback.html["整合性グループのSnapshotロールバックを停止します"]
 

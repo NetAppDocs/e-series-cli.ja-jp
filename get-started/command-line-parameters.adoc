@@ -346,6 +346,13 @@ set session password=password
 
 
  a| 
+`-useLegacyTransferPort`
+ a| 
+転送ポートをに設定します。 `8443` デフォルトの代わりに `443`。
+
+
+
+ a| 
 「-v」
  a| 
 -dパラメータとともに使用した場合'構成ファイル内の既知のデバイスの現在のグローバルステータスを表示します

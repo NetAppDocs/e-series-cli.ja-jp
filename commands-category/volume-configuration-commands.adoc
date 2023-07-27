@@ -30,6 +30,8 @@ link:../commands-a-z/show-diskpool.html["ディスクプールを表示します
 
 link:../commands-a-z/start-diskpool-fullprovisioning.html["ディスクプールのフルプロビジョニングを開始します"]
 
+link:../commands-a-z/start-diskpool-resourceprovisioning.html["ディスクプールリソースのプロビジョニングを開始します"]
+
 link:../commands-a-z/start-diskpool-locate.html["ディスクプールの特定を開始します"]
 
 link:../commands-a-z/stop-diskpool-locate.html["ディスクプールの特定を停止します"]
@@ -154,6 +156,8 @@ link:../commands-a-z/repair-volume-parity.html["ボリュームのパリティ�
 
 link:../commands-a-z/repair-data-parity.html["データパリティを修復"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["チェックボリュームパリティジョブのパリティエラーの保存"]
+
 link:../commands-a-z/set-thin-volume-attributes.html["シンボリュームの属性を設定する"]
 
 link:../commands-a-z/set-volumes.html["ディスクプール内のボリュームのボリューム属性の設定"]
@@ -161,6 +165,8 @@ link:../commands-a-z/set-volumes.html["ディスクプール内のボリュー�
 link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["ボリュームグループ内のボリュームのボリューム属性の設定"]
 
 link:../commands-a-z/set-volume-logicalunitnumber.html["ボリュームマッピングを設定"]
+
+link:../commands-a-z/show-check-vol-parity-jobs.html["ボリュームパリティチェックジョブを表示"]
 
 link:../commands-a-z/show-volume.html["シンボリュームを表示します"]
 
@@ -172,7 +178,11 @@ link:../commands-a-z/show-volume-performancestats.html["ボリュームのパフ
 
 link:../commands-a-z/show-volume-reservations.html["ボリューム予約を表示します"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["ボリュームのパリティチェックジョブの開始"]
+
 link:../commands-a-z/start-volume-initialization.html["ボリュームの初期化を開始する"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["ボリュームパリティチェックジョブの停止"]
 
 
 
@@ -201,6 +211,8 @@ link:../commands-a-z/start-volumegroup-defragment.html["ボリュームグルー
 link:../commands-a-z/start-volumegroup-export.html["ボリュームグループのエクスポートの開始"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["ボリュームグループのフルプロビジョニングを開始します"]
+
+link:../commands-a-z/start-volumegroup-resourceprovisioning.html["ボリュームグループリソースのプロビジョニングを開始します"]
 
 link:../get-started/learn-about-volume-group-migration.html["ボリュームグループの移行について（CLIのみ）"]
 

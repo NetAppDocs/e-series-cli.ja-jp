@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/stop-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: stop, check, volume, parity, job, 
+summary: stop check volume parity jobコマンドは、実行中のチェックボリュームパリティジョブを停止します。 
+---
+= ボリュームのパリティチェックジョブを停止します。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `stop check volume parity job` コマンドは、実行中のボリュームチェックパリティジョブを停止します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+stop check volume parity job jobId=<job_id>;
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`jobId`
+ a| 
+停止するボリュームチェックパリティジョブに対応するジョブID。この値は必須です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.80

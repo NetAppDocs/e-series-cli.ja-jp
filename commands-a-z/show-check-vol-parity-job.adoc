@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/show-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: show, check, volume, parity, job, 
+summary: show check volume parity jobコマンドは、指定されたボリュームチェックパリティジョブとジョブのステータスを表示します。 
+---
+= ボリュームのパリティチェックジョブを表示します。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `show check volume parity job` コマンドは、指定したボリュームチェックパリティジョブとジョブのステータスを表示します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+show check volume parity job jobId=<job_id>;
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`jobId`
+ a| 
+ボリュームチェックパリティジョブID。この値は必須です。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.80

@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/start-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: start, check, volume, parity, job 
+summary: start check volume parity jobコマンドは、特定のボリューム上で新しいボリュームチェックパリティ処理を開始します。 
+---
+= ボリュームのパリティチェックジョブの開始
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `start check volume parity job` コマンドは、指定したボリュームで新しいボリュームパリティチェック処理を開始します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。
+
+
+
+== ロール
+
+このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+
+
+
+== 構文
+
+[listing, subs="+macros"]
+----
+start check volume[<volume_label>] parity job
+(startingLba=<start_lba> endingLba=<end_lba> scanPriority=<scan_priority> repairParityErrors=<true | false>
+repairMediaErrors=<true | false>);
+----
+
+
+== パラメータ
+
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`startingLba`
+ a| 
+パリティスキャンを開始するボリュームの論理ブロックアドレス。デフォルト値はです `0`。
+
+
+
+ a| 
+`endingLba`
+ a| 
+パリティスキャンを停止するボリュームの論理ブロックアドレス。デフォルト値はです `maximum volume lba`。
+
+
+
+ a| 
+`scanPriority`
+ a| 
+パリティスキャンの優先順位。デフォルト値はです `medium`
+
+
+
+ a| 
+`repairParityErrors`
+ a| 
+パリティスキャン中に検出されたパリティエラーの修復を自動的に試行するかどうかを指定します。デフォルト値はです `true`。
+
+
+
+ a| 
+`repairMediaErrors`
+ a| 
+パリティスキャン中に検出されたメディアエラーの修復を自動的に試行するかどうかを指定します。デフォルト値はです `true`。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+11.80

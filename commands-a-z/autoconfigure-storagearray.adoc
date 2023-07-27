@@ -51,6 +51,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 [securityType=(none | capable | enabled)]
 [secureDrives=(fips | fde)]
 [dataAssurance=(none | enabled)]
+[blockSize=(512 | 4096)]
 ----
 
 
@@ -178,6 +179,13 @@ raidLevel
 このパラメータは'securityType'パラメータとともに使用しますsecurityTypeパラメータに「none」を指定すると、「secureDrives」パラメータの値は無視されます。これは、セキュアでないボリュームグループにセキュアドライブタイプを指定する必要がないためです。
 
 ====
+
+
+ a| 
+「ブロックサイズ」
+ a| 
+作成されたボリュームのブロックサイズ（バイト）。サポートされている値はです `512` および `4096`。
+
 |===
 
 
