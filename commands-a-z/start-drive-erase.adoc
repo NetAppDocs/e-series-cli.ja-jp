@@ -54,7 +54,7 @@ start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID
 
 
  a| 
-「ドライブ」または「ドライブ」
+「ドライブ」
  a| 
 大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。
 
