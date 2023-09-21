@@ -4053,7 +4053,6 @@
   <block id="cd0e1bf7bec3124852b329e7ddbf676c" category="paragraph">ipv4address | IPv6Address</block>
   <block id="3b129c5535bfd1b293ee522199b2647b" category="summary">start drive eraseコマンドを実行すると、1つ以上のドライブのデータがすべて消去されます。</block>
   <block id="5c7cd3a54ac60bada240ddcb36cb2b2f" category="paragraph">start drive eraseコマンドを実行すると、1つまたは複数のドライブからすべてのデータが消去されます。</block>
-  <block id="8a6ff4179a3940cccf4dc20ba85a1162" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600Storageアレイで動作します。</block>
   <block id="a40cdbeba07769d11e789eb761201ae7" category="paragraph">このコマンドは、ドライブ上のすべてのデータを完全に削除する場合にのみ実行してください。ドライブがセキュリティ有効の場合、start drive eraseコマンドオプションは暗号化消去を実行し、ドライブのセキュリティ属性をセキュア対応にリセットします。</block>
   <block id="2531efef7e4f6d3357daf24da936c35a" category="paragraph">消去操作は元に戻せません。このコマンドを使用するときは、正しいドライブを選択していることを確認してください。</block>
   <block id="6ae797a72c66de004194304b30f25119" category="paragraph">drivesリストにストレージアレイのすべてのドライブを指定するとコマンドが拒否されます。</block>
@@ -7546,4 +7545,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。</block>
 </blocks>
