@@ -6160,7 +6160,6 @@
   <block id="d27ee9db41cb355edea349ea7588c692" category="paragraph">「newCapacity」です</block>
   <block id="8ec6fac1bb3dd6db9c73855881642036" category="paragraph">このパラメータは、シンボリュームの仮想容量を拡張します。仮想容量は、ボリュームにマッピングされているホストにボリュームが報告する値です。既存の容量以下の値を指定すると、エラーが原因 されます。サイズは'bytes'KB'MB`'GB'TB'の単位で定義されます</block>
   <block id="4bd944c067cd0308263d9df1c820d71f" category="paragraph">最小仮想容量は32MBです。</block>
-  <block id="b306bb1dc4b136b774d5f8dca7910774" category="paragraph">最大仮想容量は63TBです。</block>
   <block id="e167788620b4089b203eb07b9e11ba76" category="paragraph">repositoryMaxCapacity *'</block>
   <block id="c25c025f154c8960a89c48b38d090c3d" category="paragraph">このパラメータは、リポジトリボリュームの最大容量を設定します。リポジトリボリュームの物理容量よりも小さい値は指定できません。新しい値を指定した結果、容量が警告しきい値よりも少なくなる場合、コマンドからエラーが返されます。</block>
   <block id="6e1e474416e0564ab880c5863366af19" category="paragraph">repositoryMaxCapacityコマンドは'repositoryExpansionPolicy=automatic'と連携します</block>
@@ -6171,8 +6170,6 @@
   <block id="f1ab280b8906396f9d0a560168414811" category="paragraph">コマンド「addRepositoryCapacity」は、「repositoryExpansionPolicy=manual」と連動します。</block>
   <block id="de44d9b0c50726b618b8207ce1ec73ab" category="paragraph">「*hostReportingPolicy*`」</block>
   <block id="948966fb14713f2284165893e91b093c" category="paragraph">このパラメータは、シンボリュームのホストへの報告方法を変更します。有効な値は「standard」または「thin」です。</block>
-  <block id="52157289efd480729928e4e0118c38e6" category="paragraph">63TB</block>
-  <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="paragraph">64 TB</block>
   <block id="8252060fadb0366cba7cd1c3d9b88cc7" category="summary">download storageArray driveFirmware fileコマンドは、ストレージアレイ内のすべてのドライブにファームウェアイメージをダウンロードします。</block>
   <block id="9e56a4a70a6df59a0704a6194d9f0e16" category="doc">ストレージアレイのドライブファームウェアをダウンロードします</block>
   <block id="79d0244851982761ba330d1eb5c8b49d" category="paragraph">download storageArray driveFirmware fileコマンドは、ストレージアレイ内のすべてのドライブにファームウェアイメージをダウンロードします。</block>
@@ -7546,4 +7543,5 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。</block>
+  <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大仮想容量は256TBです。</block>
 </blocks>
