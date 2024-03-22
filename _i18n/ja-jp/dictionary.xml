@@ -7544,4 +7544,5 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大仮想容量は256TBです。</block>
+  <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">SANtricity System Manager組み込みCLIユーザアシスタンスへようこそ。このヘルプでは、コマンドラインインターフェイス（CLI）を使用してストレージアレイを設定、監視、および調整する方法について説明します。</block>
 </blocks>

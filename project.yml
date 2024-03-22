@@ -22,32 +22,6 @@ sidebar:
   - section: commands-a-z
   - title: 法的通知
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: はじめに
-    links:
-    - title: CLIの概要
-      url: get-started/overview-format-commands.html
-    - title: CLIコマンドの構造
-      url: get-started/structure-of-a-cli-command.html
-  - title: Eシリーズのドキュメント
-    links:
-    - title: Eシリーズシステムのドキュメント
-      url: https://docs.netapp.com/us-en/e-series/index.html
-    - title: SANtricity System Manager 11.8
-      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: SANtricity Unified Manager 6
-      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
-  - title: ツールのサポート
-    links:
-    - title: NetApp Interoperability Matrix を参照してください
-      url: http://mysupport.netapp.com/matrix/
-    - title: ネットアップナレッジベース
-      url: https://kb.netapp.com/
-    - title: Active IQ （ログインが必要）
-      url: https://activeiq.netapp.com/?source=aiqnsspage
-    - title: E シリーズ / SANtricity のダウンロード（ログインが必要）
-      url: https://mysupport.netapp.com/site/downloads#E
 product-family:
   name: E-Series
   repo: e-series-family

@@ -1,0 +1,31 @@
+---
+indexpage:
+  title: SANtricity システムマネージャのコマンド
+  summary: SANtricity コマンドの構文と使用法について説明します。
+  keywords: santricity, syntax, commands, user assistance
+  lead: SANtricity System Manager組み込みCLIユーザアシスタンスへようこそ。このヘルプでは、コマンドラインインターフェイス（CLI）を使用してストレージアレイを設定、監視、および調整する方法について説明します。
+  tiles:
+  - title: はじめに
+    links:
+    - title: CLIの概要
+      url: get-started/overview-format-commands.html
+    - title: CLIコマンドの構造
+      url: get-started/structure-of-a-cli-command.html
+  - title: Eシリーズのドキュメント
+    links:
+    - title: Eシリーズシステムのドキュメント
+      url: https://docs.netapp.com/us-en/e-series/index.html
+    - title: SANtricity System Manager 11.8
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: SANtricity Unified Manager 6
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+  - title: ツールのサポート
+    links:
+    - title: NetApp Interoperability Matrix を参照してください
+      url: http://mysupport.netapp.com/matrix/
+    - title: ネットアップナレッジベース
+      url: https://kb.netapp.com/
+    - title: Active IQ （ログインが必要）
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: E シリーズ / SANtricity のダウンロード（ログインが必要）
+      url: https://mysupport.netapp.com/site/downloads#E
