@@ -48,7 +48,7 @@ set controller NTPServers'コマンドは、コントローラのNTP設定を設
 [listing]
 ----
 
-set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 ----
 
 
@@ -99,20 +99,6 @@ NTP設定を変更するコントローラ。有効なコントローラ識別�
 ドメイン名を指定する場合は、コントローラがサーバのIPアドレスを解決できるようにDNSサーバも設定する必要があります。
 
 ====
-
-
- a| 
-「keyIdentifier」は「KeyType」です
-
-パスフレーズ
- a| 
-必要に応じて、次のパラメータでNTP認証を有効にするためのキークレデンシャルを指定できます。
-
-* 'key Identifier'は0～65535の整数です
-* 「KeyType」は、none、sha1、sha224、sha256、sha384、sha512のいずれかです。
-* 「passphrase」は、stringLiteralとして入力される40桁の16進数（0~9およびa~f）、または最長20バイトの英数字文字列のいずれかです。
-
-
 |===
 
 
@@ -122,9 +108,9 @@ NTP設定を変更するコントローラ。有効なコントローラ識別�
 ----
 set controller[a] NTPServers=disabled;
 set controller[a] NTPServers=auto;
-set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
-set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
-set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[a] NTPServers=("0.pool.ntp.org" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(192.168.1.105 "1.us.pool.ntp.org");
+set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334);
 ----
 
 

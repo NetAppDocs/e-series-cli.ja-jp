@@ -25,6 +25,23 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+== SANtricity 11.81
+
+次の表に、リリース11.81でのCLIコマンドとスクリプトコマンドの変更点を示します。
+
+[cols="2*"]
+|===
+| コマンドを実行します | 概要 of Changeの略 
+
+
+ a| 
+xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[デバイスの識別]
+ a| 
+を追加しました `identifyDevices` パラメータ
+
+|===
+
+
 == SANtricity 11.80
 
 次の表に、リリース11.80のCLIコマンドとスクリプトコマンドの変更点を示します。

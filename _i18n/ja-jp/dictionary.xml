@@ -5023,11 +5023,6 @@
   <block id="aa10cbdddfaa9b241492306fc663004c" category="paragraph">「住所」</block>
   <block id="81467412741bcb83b3995cc18b1516d9" category="paragraph">"DomainName"| IPv4Address | IPv6Address</block>
   <block id="d0ddb28e638271963e281c74aa6164ff" category="paragraph">ドメイン名を指定する場合は、コントローラがサーバのIPアドレスを解決できるようにDNSサーバも設定する必要があります。</block>
-  <block id="5f13d4f79dcde55f34ef328e9338aba4" category="paragraph">「keyIdentifier」は「KeyType」です</block>
-  <block id="764c2b587e12f15a3e09f6b9eac104d7" category="paragraph">必要に応じて、次のパラメータでNTP認証を有効にするためのキークレデンシャルを指定できます。</block>
-  <block id="29bb257c3542b33e69d33ea7fc33c433" category="list-text">'key Identifier'は0～65535の整数です</block>
-  <block id="01e68e6855a7e29f6658f124c09009fd" category="list-text">「KeyType」は、none、sha1、sha224、sha256、sha384、sha512のいずれかです。</block>
-  <block id="f6434eb840c71208dfb72ef5c786d39e" category="list-text">「passphrase」は、stringLiteralとして入力される40桁の16進数（0~9およびa~f）、または最長20バイトの英数字文字列のいずれかです。</block>
   <block id="a1f3afaef8deadb0480d323937491c5a" category="paragraph">8.42で、NTP認証用のキークレデンシャルパラメータが追加されました。</block>
   <block id="6b975d7e3a0158d41f798db9ebc7665d" category="summary">create snapGroupコマンドは、新しいSnapshotグループおよび関連するリポジトリボリュームを作成します。</block>
   <block id="dc6cbd29e6aaab91b2a92d369c5e5a32" category="doc">Snapshotグループを作成します</block>
@@ -6518,7 +6513,6 @@
   <block id="5388c504a5adecf71c7c88e13a75a2bc" category="paragraph"><block ref="5388c504a5adecf71c7c88e13a75a2bc" category="inline-link-macro-rx"></block></block>
   <block id="13e26b8fa55eca651252e74cc22ca8a8" category="paragraph"><block ref="13e26b8fa55eca651252e74cc22ca8a8" category="inline-link-macro-rx"></block></block>
   <block id="b618091fab8ba81a2d7825c6dd871932" category="paragraph"><block ref="b618091fab8ba81a2d7825c6dd871932" category="inline-link-macro-rx"></block></block>
-  <block id="2703ec3e21c52f00ef1fdb6211a17fb5" category="paragraph"><block ref="2703ec3e21c52f00ef1fdb6211a17fb5" category="inline-link-macro-rx"></block></block>
   <block id="c8324b99fd0ae7e4d262f7ad6fc5b428" category="paragraph"><block ref="c8324b99fd0ae7e4d262f7ad6fc5b428" category="inline-link-macro-rx"></block></block>
   <block id="5e3d5953db77c176dfbd744f2a4d2933" category="paragraph"><block ref="5e3d5953db77c176dfbd744f2a4d2933" category="inline-link-macro-rx"></block></block>
   <block id="189115fcec4dd11c1e3edee24940c599" category="paragraph"><block ref="189115fcec4dd11c1e3edee24940c599" category="inline-link-macro-rx"></block></block>
@@ -7341,7 +7335,6 @@
   <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60リリースでは、httpベースのバージョンのCLI（「Secure CLI」またはSMcli）をSANtricity System Managerから直接ダウンロードしてインストールできます。このダウンロード可能なバージョンのSMcliは、EF600、EF300、E5700、EF570、E2800、 およびEF280コントローラの場合：SANtricity システムマネージャからSMcliをダウンロードするには、* Settings *&gt;* System * and * Add-ons *&gt;* Command Line Interface *を選択します。</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">CLIコマンドを実行する管理システムに、Java Runtime Environment（JRE）バージョン8以降がインストールされている必要があります。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">従来のコマンドラインパラメータ</block>
-  <block id="720d9a5bd635c70358cdcb41b1eaefaf" category="paragraph">以前のバージョンのSMcliと同様、SANtricity System Managerからダウンロード可能なSMcliには、固有のパラメータセットがあります。SANtricity OS 11.53以前のリリースでのコマンドラインパラメータの使用方法については、を参照してください <block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">多要素認証</block>
   <block id="e228e60d948488385c1b528cc75ed77d" category="paragraph">SAML（Security Assertion Markup Language）が有効になっている場合は、CLIで使用できるのはアクセストークンのみです。SAMLが有効になっていない場合は、ユーザ名とパスワード、またはアクセストークンを使用できます。アクセストークンは、SANtricity システムマネージャを使用して生成できます。</block>
   <block id="e88aeb63b8ab6fc616194c065b4c2b62" category="paragraph"><block ref="b7cc4b6b2b8c0f37377b5cc259385de0" prefix="" category="inline-code"></block></block>
@@ -7545,4 +7538,23 @@
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大仮想容量は256TBです。</block>
   <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">SANtricity System Manager組み込みCLIユーザアシスタンスへようこそ。このヘルプでは、コマンドラインインターフェイス（CLI）を使用してストレージアレイを設定、監視、および調整する方法について説明します。</block>
+  <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">以前のバージョンのSMcliと同様、SANtricity System Managerからダウンロード可能なSMcliには、固有のパラメータセットがあります。SANtricity OS 11.53以前のリリースでのコマンドラインパラメータの使用方法については、を参照してください <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>。</block>
+  <block id="2115a9072c5575f3300b4b18e5722de6" category="section-title">デバイスの識別</block>
+  <block id="90f4cf9a1fcd3d43e57768f9bb55bbfb" category="paragraph">次のコマンドラインパラメータを使用すると、ホストが認識できるすべての該当するデバイスの情報を表示できます。</block>
+  <block id="222ae10a38daa5038e857b83e1adb270" category="admonition">SANtricity 11.81リリース以降のSMcli<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> パラメータは、以前にSMdevicesツールで使用できた機能を置き換えます。</block>
+  <block id="64ce8fcd5ac05bd3132098b5581a2dcf" category="paragraph"><block ref="35d5ed698aa483d3174ea619db10c0ac" prefix="" category="inline-code"></block></block>
+  <block id="f53cecbe90c0e9f04dc66481adf123c6" category="paragraph">ストレージアレイに関連付けられているすべてのSCSIネイティブブロックデバイスを検索します。検出された各デバイスについて、では、ネイティブOS固有のデバイス名、関連付けられているストレージアレイ、ボリューム名、LUN情報など、さまざまな情報が報告されます。</block>
+  <block id="312574efd0c8e7ddeea92ab871822aed" category="paragraph">次の例を参照してください。<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> LinuxおよびWindowsオペレーティングシステム内のパラメータ。</block>
+  <block id="edc9f0a5a5d57797bf68e37364743831" category="listing-title">Linux の場合</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="listing-title">Windows の場合</block>
+  <block id="94f04537971d7a4a561c607ec55952a2" category="section-title">その他の注意事項</block>
+  <block id="ba151d8fe1acd0cb9eca1b6945962e62" category="list-text">x86-64プラットフォームを実行するLinuxおよびWindowsオペレーティングシステムで、SCSIベースのホストインターフェイスのみで互換性があります。</block>
+  <block id="aaeaddd5c8faa1ad9f766c53197d7ab2" category="list-text">NVMeベースのホストインターフェイスはサポートされません。</block>
+  <block id="fb52873edf9c97b7281409c640b5ed20" category="list-text">。<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> パラメータでは、OSレベルでの再スキャンは原因されません。OSによって認識されている既存のデバイスを反復します。</block>
+  <block id="9c4b22635677ff419bec86d3f3219927" category="list-text">を実行するための十分なユーザ権限が必要です。<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="dbb8d2fd09a59e1ab8494de138ceffdb" category="list-text">これには、OSネイティブのブロックデバイスからの読み取りとSCSI Inquiryコマンドの実行が含まれます。</block>
+  <block id="5b1cc65d11915b727018c6056792dcef" category="section-title">SANtricity 11.81</block>
+  <block id="a92322756f07d387c173b27babcdad72" category="paragraph">次の表に、リリース11.81でのCLIコマンドとスクリプトコマンドの変更点を示します。</block>
+  <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
+  <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">を追加しました<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> パラメータ</block>
 </blocks>

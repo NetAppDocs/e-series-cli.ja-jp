@@ -270,7 +270,7 @@ link:../commands-a-z/recover-volume.html["RAIDボリュームをリカバリし�
 
 link:../commands-a-z/recover-sasport-miswire.html["SASポート誤配線をリカバリします"]
 
-link:../commands-a-z/recreate-storagearray-securitykey.adocV879933["外部セキュリティキーを再作成します"]
+link:../commands-a-z/recreate-storagearray-securitykey.html["外部セキュリティキーを再作成します"]
 
 link:../commands-a-z/recreate-storagearray-mirrorrepository.html["同期ミラーリングリポジトリボリュームを再作成します"]
 
