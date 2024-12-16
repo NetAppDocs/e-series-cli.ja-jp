@@ -7,8 +7,11 @@ summary: パフォーマンス調整のコマンド
 = パフォーマンス調整のコマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+次に、Eシリーズストレージシステムで使用できるパフォーマンス調整コマンドのリストを示します。
 
 
 

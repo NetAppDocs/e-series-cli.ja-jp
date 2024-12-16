@@ -7,7 +7,7 @@ summary: set snapVolume increase/decreaseRepositoryCapacityコマンドは、Sna
 = Snapshotボリュームのリポジトリボリューム容量の設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,30 +17,30 @@ set snapVolume increase/decreaseRepositoryCapacityコマンドは'スナップ�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
 == 容量を増やすための構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume[“snapVolumeName”] increaseRepositoryCapacity
 (repositoryVolumes="repos_xxxx" |
-repositoryVolumes=pass:quotes[(_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]] |
-repositoryVolumes=pass:quotes[(_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+repositoryVolumes=pass:quotes[(_volumeGroupName_)] [capacity=pass:quotes[_capacityValue_]] |
+repositoryVolumes=pass:quotes[(_diskPoolName_)] [capacity=pass:quotes[_capacityValue_]])
 ----
 
 
 == 容量を減らす場合の構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume pass:quotes[["_snapVolumeName_"]] decreaseRepositoryCapacity
 count=pass:quotes[_numberOfVolumes_]

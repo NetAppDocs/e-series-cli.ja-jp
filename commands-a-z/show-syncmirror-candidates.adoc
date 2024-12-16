@@ -7,7 +7,7 @@ summary: show SyncMirror candidatesコマンドは、同期ミラーリング構
 = 同期ミラーリングのボリューム候補を表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ show SyncMirror candidatesコマンドは'同期ミラーリング構成のセ�
 
 [NOTE]
 ====
-このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
 == ロール
 
-このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。
+該当なし
 
 
 
@@ -43,7 +43,7 @@ show SyncMirror candidatesコマンドは'同期ミラーリング構成のセ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[show syncMirror candidates primary="_volumeName_"
 remoteStorageArrayName="_storageArrayName_"]

@@ -7,7 +7,7 @@ summary: enable storageArray feature fileコマンドを使用すると、スト
 = ストレージアレイの機能を有効にします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ enable storageArray feature file'コマンドを使用すると'ストレージ�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
@@ -46,7 +46,7 @@ enable storageArray feature file'コマンドを使用すると'ストレージ�
 
 == 機能キーを有効にする構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray feature file="_filename_"]
 ----
@@ -64,7 +64,7 @@ file="C:\Program Files\CLI\dnld\ftrkey.key"
 
 == 機能パックを有効にする構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray featurePack file="_filename_"]
 ----
@@ -80,7 +80,7 @@ file="C:\Program Files\CLI\dnld\ftrpk.key"
 
 == 試用期間用に機能を有効にする構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[enable storageArray feature=_featureAttributeList_]
 ----

@@ -7,7 +7,7 @@ summary: Show array labelコマンドは、ストレージアレイラベルが�
 = アレイラベルを表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ Show array label'コマンドは'ストレージ・アレイ・ラベルが定�
 
 == サポートされているアレイ
 
-このコマンドは、EF600ストレージアレイを環境 します。
+このコマンドは、EF600およびEF300ストレージアレイを環境 します。
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[show storageArrayLabel label _userDefinedString_]
 show storageArrayLabel all

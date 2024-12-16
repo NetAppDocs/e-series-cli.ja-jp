@@ -7,7 +7,7 @@ summary: create storageArray securityKeyコマンドは、Full Disk Encryption�
 = ストレージアレイのセキュリティキーを作成します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ create storageArray securityKey'コマンドは'フルディスク暗号化(FDE)
 
 == サポートされているアレイ
 
-外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、およびEF300アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
+外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -37,7 +37,7 @@ create storageArray securityKey'コマンドは'フルディスク暗号化(FDE)
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create storageArray securityKey
 [keyIdentifier=pass:quotes[_"keyIdentifierString"_]]

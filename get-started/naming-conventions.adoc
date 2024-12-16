@@ -2,13 +2,16 @@
 permalink: get-started/naming-conventions.html 
 sidebar: sidebar 
 keywords: name, conventions 
-summary: 名前の最大文字数は30文字です。 
+summary: CLIコマンドで使用する名前については、特定のルールに従う必要があります。 
 ---
 = 命名規則
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+CLIコマンドで使用する名前については、特定のルールに従う必要があります。
 
 * 名前の最大文字数は30文字です。
 * 次のコンポーネントの名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。

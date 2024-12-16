@@ -7,7 +7,7 @@ summary: 認証を行うには、割り当てられたログインクレデン�
 = 認証の開始
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

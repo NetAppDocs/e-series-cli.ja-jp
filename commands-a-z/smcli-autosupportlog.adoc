@@ -7,7 +7,7 @@ summary: SMcli -autoSupportLogコマンドを使用すると、AutoSupport ロ�
 = AutoSupport ログをキャプチャまたは表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファ�
 
 == サポートされているアレイ
 
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
@@ -38,7 +38,7 @@ SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
 pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]

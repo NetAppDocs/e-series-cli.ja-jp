@@ -7,7 +7,7 @@ summary: start volumeGroup fullProvisioningコマンドは、ディスクプー�
 = ボリュームグループのフルプロビジョニングを開始します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ start volumeGroup fullProvisioningコマンドは'ディスク・プール内の
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

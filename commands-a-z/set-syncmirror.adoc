@@ -7,7 +7,7 @@ summary: set SyncMirror コマンドは、リモートミラーペアのプロ�
 = 同期ミラーリングを設定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ set SyncMirror コマンドは'リモート・ミラー・ペアのプロパテ�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
@@ -38,7 +38,7 @@ set SyncMirror コマンドは'リモート・ミラー・ペアのプロパテ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set syncMirror (localVolume pass:quotes[[_volumeName_]] |
 localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])

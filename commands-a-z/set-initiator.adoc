@@ -7,7 +7,7 @@ summary: set initiatorコマンドは、イニシエータオブジェクトを�
 = イニシエータの設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ set initiatorコマンドは'イニシエータ・オブジェクトを更新し
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -43,9 +43,8 @@ set initiatorコマンドは'イニシエータ・オブジェクトを更新し
 
 == 構文
 
-[listing]
+[source, cli]
 ----
-
 set initiator (["initiatorName"] | <"initiatorQualifiedName">) ([userLabel="newInitiatorName"] |
 [host="newHostName"] | [chapSecret="newSecurityKey"])
 ----

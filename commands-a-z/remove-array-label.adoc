@@ -7,7 +7,7 @@ summary: Remove array labelコマンドを使用すると、ストレージア�
 = アレイラベルを削除します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ Remove array label'コマンドを使用すると'ストレージ・アレイの
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete storageArrayLabel label pass:quotes[_userDefinedString_]
 delete storageArrayLabel all

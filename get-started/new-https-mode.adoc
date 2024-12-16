@@ -7,7 +7,7 @@ summary: 新しいSMcliは、追加のセキュリティ機能を提供するhtt
 = SMcli httpsモード
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

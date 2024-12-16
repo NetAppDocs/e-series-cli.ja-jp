@@ -7,8 +7,11 @@ summary: ストレージ監視担当者のコマンド
 = ストレージ監視担当者のコマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+ご使用のEシリーズストレージシステムで使用できるストレージ監視担当者のコマンドを次に示します。
 
 link:../commands-a-z/show-storagearray-usersession.html["ストレージアレイのユーザセッションを表示します"]
 

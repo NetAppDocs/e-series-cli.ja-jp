@@ -7,9 +7,10 @@ summary: 共通の構文要素は、スクリプトコマンドで使用でき�
 = 共通の構文要素
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 共通の構文要素は、スクリプトコマンドで使用できるパラメータとオプションの一般的なカテゴリです。次の表に、共通の構文要素で使用される表記規則を示します。
 
 [cols="2*"]

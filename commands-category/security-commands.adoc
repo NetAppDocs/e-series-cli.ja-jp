@@ -7,8 +7,11 @@ summary: セキュリティコマンド
 = セキュリティコマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+次に、Eシリーズストレージシステムで使用できるセキュリティコマンドの一覧を示します。
 
 
 

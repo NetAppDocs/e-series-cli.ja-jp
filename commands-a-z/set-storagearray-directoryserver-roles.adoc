@@ -7,7 +7,7 @@ summary: set storageArray DirectoryServer rolesコマンドでは、指定した
 = ストレージアレイのディレクトリサーバのロールマッピングの設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ set storageArray DirectoryServer rolesコマンドでは、指定したディレ
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -41,9 +41,8 @@ set storageArray DirectoryServer rolesコマンドでは、指定したディレ
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
 set storageArray directoryServer pass:quotes[["_domainId_"]]
     groupDN=pass:quotes["_groupDistinguishedName_"] roles=pass:quotes[("_role1_"..."_roleN_")]
 ----

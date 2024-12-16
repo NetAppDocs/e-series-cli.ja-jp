@@ -7,8 +7,11 @@ summary: ストレージ管理者、セキュリティ管理者、およびサ�
 = 管理者のコマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+Eシリーズストレージシステムで使用できる管理者コマンドは次のとおりです。
 
 
 
@@ -192,15 +195,15 @@ link:../commands-a-z/smcli-enable-autosupportfeature.html["EMW管理ドメイン
 
 link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["AutoSupport の有効化または無効化（すべてのアレイ）"]
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport メンテナンス期間の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupportメンテナンス時間の有効化または無効化"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["EMWでのAutoSupport OnDemand機能の有効化または無効化"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能を有効または無効にする"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["AutoSupport OnDemand Remote Diagnostics機能の有効化または無効化"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport Remote Diagnostics機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport リモート診断機能を有効または無効にします"]
 
 link:../commands-a-z/set-storagearray-hostconnectivityreporting.html["ホスト接続レポートの有効化または無効化"]
 
@@ -258,7 +261,7 @@ link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["非同�
 
 link:../commands-a-z/smcli-autosupportschedule-reset.html["AutoSupport メッセージ収集スケジュールをリセットします"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールをリセットします"]
 
 link:../commands-a-z/reset-controller.html["コントローラをリセットします"]
 
@@ -296,7 +299,7 @@ link:../commands-a-z/resume-ssdcache.html["SSDキャッシュを再開します"
 
 link:../commands-a-z/resume-syncmirror.html["同期ミラーリングを再開します"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログの取得（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログを取得します"]
 
 link:../commands-a-z/revive-drive.html["ドライブを回復します"]
 
@@ -356,7 +359,9 @@ link:../commands-a-z/smcli-supportbundle-schedule.html["サポートバンドル
 
 link:../commands-a-z/set-asyncmirrorgroup.html["非同期ミラーグループを設定します"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールの設定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupportディスパッチサイズ制限の設定"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupportメッセージ収集スケジュールの設定"]
 
 link:../commands-a-z/set-consistency-group-attributes.html["整合グループの属性を設定します"]
 
@@ -596,9 +601,9 @@ link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["非同期ミラー
 
 link:../commands-a-z/smcli-autosupportconfig.html["AutoSupport の配信方法を指定します"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["Eメール（SMTP）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["Eメール（SMTP）配信方法を指定します"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP（S）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["AutoSupport HTTP(S)配信方法の指定"]
 
 link:../commands-a-z/start-cgsnapimage-rollback.html["整合性グループのSnapshotロールバックを開始する"]
 
@@ -702,7 +707,7 @@ link:../commands-a-z/diagnose-asyncmirrorgroup.html["非同期ミラーグルー
 
 link:../commands-a-z/smcli-autosupportconfig-test.html["AutoSupport 構成をテストします"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 配信設定のテスト（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 配信設定をテストします"]
 
 link:../commands-a-z/start-emailalert-test.html["Eメールアラート設定のテスト"]
 
@@ -762,11 +767,11 @@ link:../commands-a-z/set-storagearray-odxenabled.html["ODX を有効または無
 
 link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["EMWでのAutoSupport OnDemand機能の有効化または無効化"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能を有効または無効にする"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["AutoSupport OnDemand Remote Diagnostics機能の有効化または無効化"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport Remote Diagnostics機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport リモート診断機能を有効または無効にします"]
 
 link:../commands-a-z/enable-storagearray-feature-file.html["ストレージアレイの機能を有効にします"]
 
@@ -778,9 +783,9 @@ link:../commands-a-z/create-snmpuser-username.html["SNMPv3 USMユーザを登録
 
 link:../commands-a-z/create-snmptrapdestination.html["SNMPトラップの送信先を登録します"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールをリセットします"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログの取得（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログを取得します"]
 
 link:../commands-a-z/revive-drive.html["ドライブを回復します"]
 
@@ -794,7 +799,7 @@ link:../commands-a-z/save-controller-nvsram-file.html["コントローラのNVSR
 
 link:../commands-a-z/set-asyncmirrorgroup.html["非同期ミラーグループを設定します"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールの設定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport メッセージの収集スケジュールを設定します"]
 
 link:../commands-a-z/set-controller-ntpservers.html["コントローラのNTPを設定します"]
 
@@ -808,7 +813,7 @@ link:../commands-a-z/set-storagearray-localusername.html["ストレージアレ�
 
 link:../commands-a-z/set-tray-serviceallowedindicator.html["トレイの保守操作可能インジケータの設定"]
 
-link:../commands-a-z/show-storagearray-autosupport.html["AutoSupport の設定の表示（E2800またはE5700ストレージアレイ）"]
+link:../commands-a-z/show-storagearray-autosupport.html["AutoSupport設定の表示"]
 
 link:../commands-a-z/show-blockedeventalertlist.html["ブロックされたイベントを表示する"]
 
@@ -822,11 +827,11 @@ link:../commands-a-z/show-allsnmpusers.html["SNMPv3 USMユーザを表示しま�
 
 link:../commands-a-z/show-syslog-summary.html["syslog設定を表示します"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["Eメール（SMTP）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["Eメール（SMTP）配信方法を指定します"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP（S）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["AutoSupport HTTP(S)配信方法の指定"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 配信設定のテスト（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport配信設定のテスト"]
 
 link:../commands-a-z/start-emailalert-test.html["Eメールアラート設定のテスト"]
 

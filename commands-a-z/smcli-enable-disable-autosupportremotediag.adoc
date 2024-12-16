@@ -7,7 +7,7 @@ summary: SMcli enable|disable autoSupportRemoteDiagコマンドは、AutoSupport
 = EMW管理ドメインレベルでのAutoSupport リモート診断機能の有効化または無効化（SMcliのみ）
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモ
 
 == サポートされているアレイ
 
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
@@ -46,7 +46,7 @@ SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモ
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli enable|disable autoSupportRemoteDiag
 ----

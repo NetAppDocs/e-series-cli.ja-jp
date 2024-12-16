@@ -7,7 +7,7 @@ summary: set iserTargetコマンドは、iSERターゲットのプロパティ�
 = iSERターゲットを設定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ set iserTargetコマンドは'iSERターゲットのプロパティを定義し�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set iserTarget pass:quotes[["_userLabel_"]]
 authenticationMethod=(none | chap) |

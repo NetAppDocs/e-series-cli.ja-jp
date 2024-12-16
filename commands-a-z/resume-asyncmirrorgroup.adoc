@@ -7,7 +7,7 @@ summary: resume asyncMirrorGroupコマンドは、非同期ミラーグループ
 = 非同期ミラーグループを再開します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ resume asyncMirrorGroupコマンドは'非同期ミラーグループ内のす�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700などの個 々 のストレージアレイを環境に設定します。 EF600およびEF300アレイ（すべてのSMcliパッケージがインストールされている必要があります。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -35,7 +35,7 @@ resume asyncMirrorGroupコマンドは'非同期ミラーグループ内のす�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 resume asyncMirrorGroup pass:quotes[[_"asyncMirrorGroupName"_]]
 [deleteRecoveryPointIfNecessary]

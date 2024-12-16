@@ -7,7 +7,7 @@ summary: asyncMirrorGroupコマンドは、非同期ミラーグループに関�
 = 非同期ミラーグループ接続をテストします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,20 +21,20 @@ summary: asyncMirrorGroupコマンドは、非同期ミラーグループに関�
 
 [NOTE]
 ====
-このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+該当なし
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[diagnose asyncMirrorGroup [_asyncMirrorGroupName_]]
 testID=(all | connectivity | latency | bandwidth | portConnections)

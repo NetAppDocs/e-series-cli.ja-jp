@@ -7,7 +7,7 @@ summary: set event alertコマンドは、特定のアラート対象イベン�
 = イベントアラートのフィルタリングを設定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -55,7 +55,7 @@ summary: set event alertコマンドは、特定のアラート対象イベン�
 
 == イベントアラートをブロックする構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set blockEventAlert pass:quotes[_eventType_]
 ----
@@ -63,7 +63,7 @@ set blockEventAlert pass:quotes[_eventType_]
 
 == イベントアラートをブロック解除する構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set unBlockEventAlert pass:quotes[_eventType_]
 ----

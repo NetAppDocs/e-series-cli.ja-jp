@@ -7,7 +7,7 @@ summary: set VolumeCopy targetコマンドは、ボリュームコピーペア�
 = ボリュームコピーを設定する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ set VolumeCopy targetコマンドは'ボリューム・コピー・ペアのプ�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -40,13 +40,12 @@ set VolumeCopy targetコマンドは'ボリューム・コピー・ペアのプ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set volumeCopy target pass:quotes[[_targetName_]]
 source pass:quotes[[_sourceName_]]
 [copyPriority=(highest | high | medium | low | lowest)]
 [targetReadOnlyEnabled=(TRUE | FALSE)]
-[copyType=(online | offline)]
 ----
 
 

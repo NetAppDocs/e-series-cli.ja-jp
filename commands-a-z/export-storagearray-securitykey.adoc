@@ -7,7 +7,7 @@ summary: export storageArray securityKeyコマンドは、ドライブセキュ�
 = ストレージアレイのセキュリティキーをエクスポートします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: export storageArray securityKeyコマンドは、ドライブセキュ�
 
 == サポートされているアレイ
 
-外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、およびEF300アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
+外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -40,7 +40,7 @@ summary: export storageArray securityKeyコマンドは、ドライブセキュ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 export storageArray securityKey
 pass:quotes[passPhrase="_passPhraseString_"]

@@ -7,10 +7,13 @@ summary: Windows PowerShellは、コマンドラインツールへのアクセ�
 = Windows PowerShellのCLIコマンドの表記規則
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。Windows PowerShellはWindowsコマンドプロンプトを改良したもので、一連のコマンドとスクリプト機能が強化されています。CLIコマンドとスクリプトコマンドはすべてWindows PowerShellで実行できますが、Windows PowerShellには独自の表記要件がいくつかあります。要件は次のとおりです。
+[role="lead"]
+Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。
+
+Windows PowerShellは、Windowsコマンドプロンプトを改良したもので、一連のコマンドとスクリプト機能が強化されています。CLIコマンドとスクリプトコマンドはすべてWindows PowerShellで実行できますが、Windows PowerShellには独自のフォーマット要件がいくつかあります。要件は次のとおりです。
 
 * SMcliコマンドはすべてピリオドとスラッシュ（/）で開始
 * SMcliのラッパーは.exe拡張子を持つ実行可能コマンド（SMcli.exe）として識別

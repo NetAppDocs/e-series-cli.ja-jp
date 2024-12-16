@@ -7,7 +7,7 @@ summary: stop check volume parity jobコマンドは、実行中のチェック�
 = ボリュームのパリティチェックジョブを停止します。
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: stop check volume parity jobコマンドは、実行中のチェック�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 stop check volume parity job jobId=<job_id>;
 ----

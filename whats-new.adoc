@@ -25,6 +25,51 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+== SANtricity 11.90
+
+次の表に、リリース11.90でのCLIコマンドとスクリプトコマンドの変更点を示します。
+
+[cols="2*"]
+|===
+| コマンドを実行します | 概要 of Changeの略 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-autosupport-dispatch-limit.html["AutoSupportディスパッチサイズ制限の設定"]
+ a| 
+コマンドが追加されました
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html["コントローラアレイの保存管理CSR"]
+ a| 
+パラメータを追加しました `KeySize`。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-email-smtp-delivery-method.html["Eメール（SMTP）の配信方法を設定する"]
+ a| 
+パラメータを追加しました `destinationAddress`。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storagearray-autosupport.html#examples["AutoSupport設定の表示"]
+ a| 
+コマンドの出力例にディスパッチサイズの制限と送信先Eメールアドレスが追加されました。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html["storageArray keyManagementCertificateをダウンロード"]
+ a| 
+パラメータを追加しました `privateKeyFile`。
+
+|===
+
+
 == SANtricity 11.81
 
 次の表に、リリース11.81でのCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -35,7 +80,7 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 
 
  a| 
-xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[デバイスの識別]
+https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-devices["デバイスの識別"]
  a| 
 を追加しました `identifyDevices` パラメータ
 

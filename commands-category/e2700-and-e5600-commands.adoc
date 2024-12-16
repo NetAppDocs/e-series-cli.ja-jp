@@ -6,9 +6,14 @@ summary: E2700およびE5600のコマンド
 ---
 = E2700およびE5600のコマンド
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+[role="lead"]
+E2700およびE5600システムで使用できるコマンドは次のとおりです。
+
+
+
+= E2700およびE5600のコマンド
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["非同期ミラーリングをアクティブ化する"]
 

@@ -7,7 +7,7 @@ summary: set emailAlertコマンドは、指定されたテクニカルサポー
 = Eメールアラートを設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,15 +17,14 @@ set emailAlertコマンドは'指定されたテクニカル・サポートま�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、およびEF300ストレージアレイを環境 します。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、管理ドメイン内のすべてのアレイを環境 コマンドで指定します。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300ストレージアレイに適用されます。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、コマンドは管理ドメイン内のすべてのアレイに適用されます。
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
 set emailAlert
     serverAddress=pass:quotes["_serverAddress_"] |
     serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]

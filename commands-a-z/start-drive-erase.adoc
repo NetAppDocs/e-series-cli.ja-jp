@@ -7,7 +7,7 @@ summary: start drive eraseコマンドを実行すると、1つ以上のドラ�
 = ドライブの消去を開始します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ start drive eraseコマンドを実行すると、1つまたは複数のドラ�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のアレイに適用されます。E2700およびE5600のストレージアレイでは動作しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -40,7 +40,7 @@ start drive eraseコマンドを実行すると、1つまたは複数のドラ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
 ----

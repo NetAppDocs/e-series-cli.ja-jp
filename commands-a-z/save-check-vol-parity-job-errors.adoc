@@ -7,7 +7,7 @@ summary: save check volume parity job parity errorsコマンドは、チェッ�
 = 保存チェックボリュームパリティジョブのパリティエラー
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: save check volume parity job parity errorsコマンドは、チェッ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
 ----

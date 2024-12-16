@@ -7,7 +7,7 @@ summary: recreate storageArray mirrorRepositoryコマンドは、以前のミラ
 = 同期ミラーリングリポジトリボリュームを再作成します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ recreate storageArray mirrorRepositoryコマンドは、以前のミラーリポ
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -40,7 +40,7 @@ recreate storageArray mirrorRepositoryコマンドは、以前のミラーリポ
 
 == 構文（ユーザ定義のドライブ）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 recreate storageArray mirrorRepository
 repositoryRAIDLevel=(1 | 3 | 5 | 6)
@@ -53,7 +53,7 @@ repositoryDrives=pass:quotes[(_trayID1_,pass:quotes[[_drawerID1,_]]pass:quotes[_
 
 == 構文（ユーザ定義のボリュームグループ）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 recreate storageArray mirrorRepository
 repositoryVolumeGroup=pass:quotes[_volumeGroupName_
@@ -63,7 +63,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_
 
 == 構文（ユーザ定義のドライブ数）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 recreate storageArray mirrorRepository
 repositoryRAIDLevel=(1 | 3 | 5 | 6)

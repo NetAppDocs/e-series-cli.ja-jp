@@ -1,39 +1,38 @@
 ---
 permalink: commands-a-z/save-controller-arraymanagementsignedcertificate.html 
 sidebar: sidebar 
-keywords: retrieve, installed, server, certificate 
-summary: save controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされているサーバ証明書を取得して、証明書の詳細を表示できます。 
+keywords: retrieve, installed, server, certificate, sign, request, csr 
+summary: save controller arrayManagementCSRコマンドは、証明書の詳細を表示できるように、コントローラにインストールされているサーバ証明書署名要求（CSR）を取得します。 
 ---
 = インストールされているサーバ証明書を取得する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-save controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされているサーバ証明書を取得して、証明書の詳細を表示できます。
+コマンドは `save controller arrayManagementCSR`、コントローラにインストールされているサーバのCertificate Signing Request（CSR；証明書署名要求）を取得して、証明書の詳細を表示できます。
 
 
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
-save controller [(a|b)] arrayManagementSignedCertificate
-     file=pass:quotes["_filename_"]
+save controller [(a|b)] arrayManagementCSR file=pass:quotes["_filename_"]
 ----
 
 
@@ -64,10 +63,10 @@ save controller [(a|b)] arrayManagementSignedCertificate
 [listing]
 ----
 
-SMcli -n Array1 -c "save controller [a] arrayManagementSignedCertificate
+SMcli -n Array1 -c "save controller [a] aarrayManagementCSR
    file="C:\controllerAcertificate.cer";"
 
-SMcli -n Array1 -c "save controller [b] arrayManagementSignedCertificate
+SMcli -n Array1 -c "save controller [b] arrayManagementCSR
    file="C:\controllerBcertificate.cer";"
 
 SMcli completed successfully.

@@ -7,8 +7,11 @@ summary: レプリケーションコマンド
 = レプリケーションコマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+Eシリーズストレージシステムで使用できるレプリケーションコマンドは次のとおりです。
 
 
 

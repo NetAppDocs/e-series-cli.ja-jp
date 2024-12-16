@@ -7,7 +7,7 @@ summary: clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラー
 = 非同期ミラーリングのエラーをクリアします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラーグルー
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700などの個 々 のストレージアレイを環境に設定します。 EF600およびEF300アレイ（すべてのSMcliパッケージがインストールされている必要があります。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -37,7 +37,7 @@ clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラーグルー
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 clear asyncMirrorFault(all |
 asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]] |

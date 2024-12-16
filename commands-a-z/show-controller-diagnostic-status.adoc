@@ -7,7 +7,7 @@ summary: show controllerコマンドは、start controller diagnosticコマン�
 = コントローラ診断ステータスを表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -19,7 +19,7 @@ show controllerコマンドは'start controller diagnostic'コマンドによっ
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
 ----

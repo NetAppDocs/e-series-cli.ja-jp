@@ -7,7 +7,7 @@ summary: save storageArray configurationコマンドは、現在のストレー�
 = ストレージアレイの構成を保存します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ save storageArray configurationコマンドは'現在のストレージ・アレ
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。
 
 
 
@@ -38,7 +38,7 @@ save storageArray configurationコマンドは'現在のストレージ・アレ
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 save storageArray configuration file=pass:quotes["_filename_"]
 (allconfig|[globalSettings=(TRUE | FALSE)]

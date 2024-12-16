@@ -7,7 +7,7 @@ summary: load storageArray dbmDatabaseコマンドは、ファイルまたはキ
 = ストレージアレイのDBMデータベースのロード
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ load storageArray dbmDatabaseコマンドは、ファイルまたはキャッシ
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -37,7 +37,7 @@ load storageArray dbmDatabaseコマンドは、ファイルまたはキャッシ
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 load storageArray dbmDatabase
 pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=onboard)]

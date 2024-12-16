@@ -7,7 +7,7 @@ summary: delete storageArray loginBannerコマンドを使用すると、以前�
 = ストレージアレイのログインバナーを削除します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,19 +17,19 @@ delete storageArray loginBanner'コマンドを使用すると'以前にアッ�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 delete storageArray loginBanner
 ----

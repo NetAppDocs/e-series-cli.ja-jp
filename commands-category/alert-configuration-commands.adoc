@@ -7,8 +7,11 @@ summary: アラート設定コマンド
 = アラート設定コマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+Eシリーズストレージシステムで使用できるアラート設定コマンドは次のとおりです。
 
 
 

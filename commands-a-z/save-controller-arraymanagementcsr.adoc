@@ -7,7 +7,7 @@ summary: save controller arrayManagementCSRコマンドは、コントローラ�
 = Webサーバ証明書署名要求（CSR）の生成
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ save controller arrayManagementCSR'コマンドは'コントローラの証明�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
 
 
 
@@ -35,7 +35,7 @@ CSRには、認証局（CA）による署名が必要です。署名された証
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 save controller [(a|b)] arrayManagementCSR
@@ -47,6 +47,7 @@ save controller [(a|b)] arrayManagementCSR
      locality=pass:quotes["_cityOrLocality_"]
      [stateProvince=pass:quotes["_stateOrRegion_"]]
      country=pass:quotes["_string_"]
+     keySize=["2048 | 3072 | 4096 "]
      file=pass:quotes["_filename_"]
 ----
 
@@ -118,6 +119,13 @@ organizationalUnit
 「country」
  a| 
 ISO（国際標準化機構）の2桁の国別コード（USなど）を指定できます。
+
+
+
+ a| 
+`keySize`
+ a| 
+サーバのキーサイズとして、、 `3072`、またはの `4096`値を指定できます `2048`。キーサイズが選択されていない場合、デフォルトのキーサイズは3072です。
 
 
 

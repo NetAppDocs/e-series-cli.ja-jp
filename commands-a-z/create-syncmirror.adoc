@@ -7,7 +7,7 @@ summary: create SyncMirror コマンドは、同期リモートミラーペア�
 = 同期ミラーリングを作成します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ create SyncMirror コマンドは'同期リモート・ミラー・ペアのプ�
 
 [NOTE]
 ====
-このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
 == ロール
 
-このコマンドをE2800またはE5700ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+該当なし
 
 
 
@@ -43,7 +43,7 @@ create SyncMirror コマンドは'同期リモート・ミラー・ペアのプ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create syncMirror primary=pass:quotes[_"primaryVolumeName_"
 secondary="_secondaryVolumeName_"

@@ -2,13 +2,16 @@
 permalink: get-started/structure-of-a-script-command.html 
 sidebar: sidebar 
 keywords: structure, script command 
-summary: すべてのスクリプトコマンドは次の構造になります。 
+summary: 正常に実行するには、スクリプトコマンドを適切な構造で記述する必要があります。 
 ---
 = スクリプトコマンドの構造
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+正常に実行するには、スクリプトコマンドを適切な構造で記述する必要があります。
 
 すべてのスクリプトコマンドは次の構造になります。
 

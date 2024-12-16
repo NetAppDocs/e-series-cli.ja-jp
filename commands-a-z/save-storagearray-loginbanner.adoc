@@ -7,7 +7,7 @@ summary: save storageArray loginBannerコマンドを使用すると、ログイ
 = ストレージアレイのログインバナーを保存します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ save storageArray loginBanner'コマンドを使用すると、ログインバ�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
@@ -29,7 +29,7 @@ save storageArray loginBanner'コマンドを使用すると、ログインバ�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 save storageArray loginBanner file="file_name"
 ----

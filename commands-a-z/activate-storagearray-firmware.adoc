@@ -7,7 +7,7 @@ summary: activate storageArray firmwareコマンド は、ストレージアレ�
 = ストレージアレイのファームウェアをアクティブ化します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ activate storageArray firmware'コマンドは'ストレージ・アレイのコ
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 activate storageArray firmware
 [healthCheckMelOverride=(TRUE | FALSE)]

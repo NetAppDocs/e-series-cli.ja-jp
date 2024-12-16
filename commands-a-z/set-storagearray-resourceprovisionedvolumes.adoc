@@ -7,7 +7,7 @@ summary: set storageArray resourceProvisionedVolumesコマンドは、DULBE機�
 = ストレージアレイリソースにプロビジョニングされたボリュームを設定してください
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ set storageArray resourceProvisionedVolumesコマンドは'DULBE機能を無効�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 set storageArray resourceProvisionedVolumes=(enable|disable)
 ----

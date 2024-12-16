@@ -7,8 +7,11 @@ summary: アレイ構成コマンド
 = アレイ構成コマンド
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+次に、Eシリーズストレージシステムで使用できるアレイ構成コマンドのリストを示します。
 
 
 

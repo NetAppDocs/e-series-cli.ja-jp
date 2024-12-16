@@ -7,7 +7,7 @@ summary: SMcli -autoSupportSchedule showコマンドは、日単位と週単位�
 = AutoSupport メッセージ収集スケジュールを表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ SMcli -autoSupportSchedule showコマンドは、日単位と週単位の両方�
 
 == サポートされているアレイ
 
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
@@ -40,7 +40,7 @@ SMcli -autoSupportSchedule showコマンドは、日単位と週単位の両方�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportSchedule show
 ----

@@ -7,7 +7,7 @@ summary: SMcli alertTestコマンドは、Windowsイベントログおよび設�
 = アラートをテストする
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ SMcli alertTestコマンドは、Windowsイベントログおよび設定され�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli -alertTest
 ----

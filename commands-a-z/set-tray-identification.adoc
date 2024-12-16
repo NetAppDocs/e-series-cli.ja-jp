@@ -7,7 +7,7 @@ summary: set trayコマンドは、ストレージアレイ内のコントロー
 = トレイIDを設定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ set trayコマンドは'ストレージ・アレイ内のコントローラ・�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set tray pass:quotes[["_serialNumber_"]] pass:quotes[id=_trayID_]
 ----

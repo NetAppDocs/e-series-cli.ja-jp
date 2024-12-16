@@ -7,7 +7,7 @@ summary: create snapImageコマンドは、1つ以上の既存のSnapshotグル�
 = Snapshotイメージを作成する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ create snapImageコマンドは'1つ以上の既存のスナップショット�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -35,7 +35,7 @@ Snapshotイメージを作成するには、Snapshotイメージを配置でき�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create snapImage (snapGroup=pass:quotes[_"snapGroupName" |
 snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]

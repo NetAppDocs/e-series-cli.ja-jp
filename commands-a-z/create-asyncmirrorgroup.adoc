@@ -7,7 +7,7 @@ summary: create asyncMirrorGroupコマンドを使用すると、ローカルス
 = 非同期ミラーグループを作成する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ create asyncMirrorGroup'コマンドは'ローカル・ストレージ・アレ�
 
 [NOTE]
 ====
-このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+該当なし
 
 
 
@@ -44,7 +44,7 @@ create asyncMirrorGroup'コマンドは'ローカル・ストレージ・アレ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create asyncMirrorGroup userLabel=pass:quotes[_"asyncMirrorGroupName"_]
 (remoteStorageArrayName=pass:quotes[_"storageArrayName"_] | remoteStorageArrayWWN=pass:quotes[_"wwID"_])

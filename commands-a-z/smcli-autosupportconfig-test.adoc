@@ -7,7 +7,7 @@ summary: テストメッセージを送信してAutoSupport の設定をテス�
 = AutoSupport 構成をテストします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -37,7 +37,7 @@ summary: テストメッセージを送信してAutoSupport の設定をテス�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig test reply-toEmail<address>
 ----

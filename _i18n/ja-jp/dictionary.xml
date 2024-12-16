@@ -132,7 +132,6 @@
   <block id="b804da49b73c928294f44e5ccc571706" category="paragraph">*斜体の用語*--コマンド内の斜体の用語は、指定する必要がある値または情報を示します。たとえば、次のような斜体の用語があるとします。</block>
   <block id="64c594f5129a65d0c5b781cd23d74699" category="paragraph">この場合は、斜体の用語を、スクリプトコマンドに含めるドライブの数に置き換えます。</block>
   <block id="6918f21cd845297dbffdbb53fe114dc6" category="paragraph">*セミコロン*--スクリプトコマンドはセミコロン(`;`)で終了する必要がありますコマンドライン上またはスクリプトファイル内では、複数のスクリプトコマンドを入力できます。たとえば、次のスクリプトファイルでは、セミコロンを使用して各スクリプトコマンドが区切られています。</block>
-  <block id="70c6fb2d6855a3bde6e8f77509cd46f3" category="summary">すべてのスクリプトコマンドは次の構造になります。</block>
   <block id="057a9f6979b14d39b3186b764f38dade" category="doc">スクリプトコマンドの構造</block>
   <block id="fde555a5950c3b4a8e2eacccd0410a2f" category="paragraph">すべてのスクリプトコマンドは次の構造になります。</block>
   <block id="6b5a72a170b51acf167ff0bf43635ff4" category="list-text">「command」は実行するアクションを示します。</block>
@@ -180,7 +179,6 @@
   <block id="dfe36a8699543e28a594277f08890a95" category="list-text">パラメータ名(`*batteryInstallDate*`など)</block>
   <block id="4d816980a97ddc27e81555ffdb06708b" category="list-text">オペレーション名(`*redundancyCheck*`など)</block>
   <block id="1906f0c0c690d5cc786e031952f21ea5" category="paragraph">ユーザ定義エントリ（ユーザラベルなど）は変数と呼ばれます。構文では斜体で表示されます(例: trayID'または'volumeGroupName')</block>
-  <block id="75cb823cd5ca0a1bca40888776191bd5" category="summary">Windows、Linux、またはSolarisオペレーティングシステムでCLIコマンドとスクリプトコマンドを実行する場合は、名前またはラベルの一部として使用されている二重引用符に特別な考慮が必要です。</block>
   <block id="bb0d07b5620d2e85d47a3dfc403a4ee0" category="doc">CLIコマンドの表記規則</block>
   <block id="02fcb96a2220221658b695dc783c341f" category="paragraph">Windows、Linux、またはSolarisオペレーティングシステムでCLIコマンドおよびスクリプトコマンドを実行する場合は、名前またはラベルの一部として使用される二重引用符（""）に特別な考慮が必要です。</block>
   <block id="88f31185f3b63664c188b018aa2994d0" category="paragraph">二重引用符（""）が名前または値の一部である場合は、各二重引用符の前にバックスラッシュ（\）を挿入する必要があります。</block>
@@ -195,7 +193,6 @@
   <block id="0113d123180a32d636b7a88fda0ca384" category="paragraph">Windows OSを使用する環境でSMcliコマンドをコマンドプロンプトから実行する場合、入力ファイルまたは出力ファイルのファイルパス名にエスケープ文字としてバックスラッシュ（「\」）を追加する必要があります。ロールベースアクセス管理ユーザを指定する-uオプションを提供して、セキュアなhttpsモードでSMcliを使用する場合は、バックスラッシュ（「\」）を追加する必要があります。* 例： *</block>
   <block id="0f0c0580ded0edce199f20b947f561e0" category="summary">CLIコマンドは、コマンドラッパーおよびラッパーに組み込まれた要素で構成されます。</block>
   <block id="5a8a6dcabe4b237ab44cc18e6346bcf8" category="doc">CLIコマンドの構造</block>
-  <block id="fb59cb2dc8e821d9c2c091c101fe6086" category="paragraph">CLIコマンドは、コマンドラッパーおよびラッパーに組み込まれた要素で構成されます。CLIコマンドは次の要素で構成されます。</block>
   <block id="eb1d90c07ee11d08251a5d743cf30635" category="list-text">SMcliという用語で識別されるコマンドラッパー</block>
   <block id="a2cb2c8630500fa717555ea7e8ecd83d" category="list-text">ストレージアレイの識別子</block>
   <block id="af8130d7d4ac9d981245dfeab40e7be9" category="list-text">実行する処理を定義するターミナル</block>
@@ -228,7 +225,6 @@
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">次の例では'読み取り専用操作を使用していますが'*https*'クライアント・モードでは'ユーザ名とパスワードの両方が必要であり'自己署名証明書を受け入れるために'-kとともに指定されていますクライアント・モードでは'読み取り専用操作の場合でもパスワードが必要です</block>
   <block id="d8095207a4a2e2a642c0fec2e59ed6d8" category="summary">スクリプトエンジンは、特定の文字またはコマンドを検索してコメントを表示します。スクリプトファイルには、3つの方法でコメントを追加できます。</block>
   <block id="9c7ddf7ade8d60b11271928432e9ddc8" category="doc">スクリプトファイルにコメントを追加します</block>
-  <block id="6e9f19fc4668940ba8f4d08fa9d8693a" category="paragraph">スクリプトエンジンは、特定の文字またはコマンドを検索してコメントを表示します。スクリプトファイルには、次の3つの方法でコメントを追加できます。</block>
   <block id="545944d3ed6b702648d0cff3bdddb3a9" category="list-text">2つのスラッシュ(`//')の後に'行末文字に達するまでコメントとしてテキストを追加しますスクリプトエンジンがコメントの処理後に行末文字を検出できない場合、エラーメッセージが表示されてスクリプト処理が終了します。通常、このエラーは、コメントがスクリプトの末尾に記述されていて、* Enter *キーを押し忘れた場合に発生します。</block>
   <block id="60b3f8c24959c89262e2b343157442cb" category="list-text">コメントとして「/*」と「*/」の間にテキストを追加します。スクリプトエンジンが開始と終了のコメント表記を検出できない場合、エラーメッセージが表示されてスクリプトの処理が終了します。</block>
   <block id="e782805f580a9e1271f7ace0eef0b6d1" category="list-text">スクリプトファイルの実行中に表示するコメントをスクリプトファイルに埋め込むには'show'文を使用します表示するテキストは二重引用符("`")で囲みます</block>
@@ -376,17 +372,14 @@
   <block id="328ce1e7b08cc5e66a5ab81f4b53d470" category="paragraph">'*securityType=enabled*'を設定する場合は'ストレージ・アレイのセキュリティ・キーを作成しておく必要があります（ストレージアレイのセキュリティキーを作成するには、create storageArray securityKeyコマンドを使用します）。</block>
   <block id="1a7fe2603f72d881bd3957f529d643c1" category="summary">SMcliおよびストレージ・アレイ名を入力し、CLIパラメータ、スクリプト・コマンド、またはスクリプト・ファイルを指定しない場合、コマンド・ライン・インターフェイスは対話型モードで動作します。</block>
   <block id="c66f19bf3e23bb1d8f53417edec7a608" category="doc">対話型モード</block>
-  <block id="b4c81425b278c15f09d39f40c52604f1" category="paragraph">SMcliおよびストレージ・アレイ名を入力し、CLIパラメータ、スクリプト・コマンド、またはスクリプト・ファイルを指定しない場合、コマンド・ライン・インターフェイスは対話型モードで動作します。対話型モードでは'SMcliを使用してコマンドを事前に修正することなく'個のコマンドを実行できます</block>
   <block id="d52e106dfae71aa8fe55bd08be1ee7a1" category="paragraph">対話型モードでは'1つのコマンドを入力して結果を表示し'次のコマンドを入力できます完全なSMcli文字列は入力されません対話型モードは、構成エラーを確認したり、構成の変更を迅速にテストしたりする場合に役立ちます。</block>
   <block id="d84642a0fa127291d74836c8f51b74d2" category="paragraph">対話型モードのセッションを終了するには、オペレーティングシステム固有のコマンドを入力します。Linuxの場合、このキーの組み合わせは* Control-D*です。Windowsの場合、このキーの組み合わせは* Ctrl + Z + Enter *です。</block>
   <block id="d5a07a929adbc3f8e1dccfa24e88da4b" category="summary">コマンドラインインターフェイス（ CLI ）は、ストレージアレイを設定および監視するためのソフトウェアアプリケーションです。</block>
   <block id="e469e58c2e81413c1d3a4e14f355fb8f" category="doc">CLIの概要</block>
-  <block id="e83cc2dd74c6dba773792359624042d0" category="paragraph">コマンドラインインターフェイス（ CLI ）は、ストレージアレイを設定および監視するためのソフトウェアアプリケーションです。CLIを使用すると、DOSプロンプト、Linuxオペレーティングシステムパス、Solarisオペレーティングシステムパスなどのオペレーティングシステムプロンプトからコマンドを実行できます。</block>
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">CLIを使用すると、ストレージ管理ソフトウェア内のユーティリティであるスクリプトエンジンに直接アクセスできます。スクリプトエンジンは、ストレージアレイを設定および管理するコマンドを実行します。スクリプトエンジンは、スクリプトファイル経由で、またはコマンドラインから直接コマンドを読み取り、コマンドによって指示された処理を実行します。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">スクリプトコマンドは、ストレージアレイを設定および管理します。スクリプトコマンドはCLIコマンドとは異なります。個々のスクリプトコマンドを入力するか、スクリプトコマンドのファイルを実行することができます。個々のスクリプトコマンドを入力する場合は、スクリプトコマンドをCLIコマンドに埋め込みます。スクリプトコマンドのファイルを実行する場合は、ファイル名をCLIコマンドに埋め込みます。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">本ドキュメントに記載されているソフトウェア機能の一部は、Eシリーズストレージシステムでは使用できない場合があります。利用可能な機能については、アカウント担当者にお問い合わせください。</block>
   <block id="ab2307dc857f6a7ccdbed0391d1f8d0a" category="paragraph">CLIは、SANtricity Storage Managerソフトウェアの機能です。</block>
-  <block id="16d9a06da671d438622dc19d0b30efcf" category="summary">次に、コマンドラインでスクリプトコマンドを記述する際のガイドラインを示します。</block>
   <block id="a756bcc5185086b47d7c3f4c343e3b89" category="doc">スクリプトコマンドのガイドライン</block>
   <block id="80e9d60e2926365dfd876497329f1728" category="paragraph">次に、コマンドラインでスクリプトコマンドを記述する際のガイドラインを示します。</block>
   <block id="1fdcd0e53c86070c975139e3c6ff054d" category="list-text">すべてのコマンドはセミコロン(`;`)で終了する必要があります</block>
@@ -396,7 +389,6 @@
   <block id="48d6a884d8f37b555371265c2dee9fd0" category="inline-link-macro">スクリプトファイルへのコメントの追加</block>
   <block id="4282b173d7baf6116764c5bdd1cc00cb" category="list-text">スクリプトコマンドの目的を簡単に理解できるように、スクリプトにコメントを追加します。（コメントを追加する方法については、を参照してください <block ref="f149c8102c078f2eb4ed2b611dbaebea" category="inline-link-macro-rx"></block>. ）</block>
   <block id="e9e024d3832155ada0ed8abccf96672b" category="paragraph">CLIコマンドとスクリプトコマンドでは大文字と小文字が区別されませんが、ユーザラベル（ボリューム、ホスト、ホストポートの場合など）では大文字と小文字が区別されます。ユーザラベルで識別されるオブジェクトにマッピングする場合は、ユーザラベルを正確に入力する必要があります。そうしないと、CLIコマンドとスクリプトコマンドが失敗します。</block>
-  <block id="9ce1523eff5e72a292ed6464a99b08b9" category="summary">次の表に、返される可能性がある終了ステータスと、各ステータスの意味を示します。</block>
   <block id="7cad7a53c4b37e36efac96e7af6321b2" category="doc">終了ステータス</block>
   <block id="3bdf0e76fb5a7a78d72a6a0680c1093f" category="cell">ステータスの値</block>
   <block id="a07bb1950747b5b0cf4b6797cc9f9937" category="cell">エラー名</block>
@@ -606,7 +598,6 @@
   <block id="4415f88f8516743ac7ab25e136f3173b" category="paragraph">パスワードファイルが見つからないか、読み取りできません。</block>
   <block id="39ac26f7b921944e6ea0de06a02c4ad4" category="summary">CLIで発生したエラーから収集されたデータはファイルに書き込まれます。</block>
   <block id="074df3c52a910f3969fbc1f14e1fbefc" category="doc">詳細なエラーレポート</block>
-  <block id="167a6c4027f992573b4d775e28eafdfd" category="paragraph">CLIで発生したエラーから収集されたデータはファイルに書き込まれます。CLIでの詳細なエラーレポートは次のように機能します。</block>
   <block id="2c50e0694d15c2512d9a42a2536a4fff" category="list-text">実行中のCLIコマンドとスクリプトコマンドを異常終了させる必要がある場合は、CLIの終了前にエラーデータが収集されて保存されます。</block>
   <block id="958fbecc69c740fa980b7085a41a2cce" category="list-text">CLIは、標準のファイル名にデータを書き込むことによってエラーデータを保存します。</block>
   <block id="5ef3285bd89f678aed3cc79938cf8247" category="list-text">CLIはデータを自動的にファイルに保存します。エラーデータの保存には、特殊なコマンドラインオプションは必要ありません。</block>
@@ -682,9 +673,7 @@
   <block id="3341b6c89b9c18a8abcaeece1a347742" category="list-text">「[\「1」]」</block>
   <block id="9c388eb7536c83f18dfbd3217a56330b" category="list-text">「[\“1Disk\”」</block>
   <block id="95142d41b600843560db694fa152c5c2" category="paragraph">名前の有効性が疑わしい場合は、二重引用符と角かっこの両方を使用してください。両方を使用すると、名前が問題なく機能し、原因 による処理の問題も発生しません。</block>
-  <block id="ba72f16b241252f7f1aca2bf704942d9" category="summary">スクリプトコマンドとコマンドパラメータは、すべてのバージョンのコントローラファームウェアで実行されるわけではありません。</block>
   <block id="7c4dc74c16d2654cc3a92740adf5ff8e" category="doc">ファームウェアの互換性レベル</block>
-  <block id="b5ae4dc34424ad0e2619845eacbbcfc2" category="paragraph">スクリプトコマンドとコマンドパラメータは、すべてのバージョンのコントローラファームウェアで実行されるわけではありません。以降のセクションのスクリプトコマンドでは、スクリプトコマンドを実行できる最小ファームウェアレベルを示します。スクリプト・コマンドでは'ファームウェア・レベルは最小ファームウェア・レベルという見出しの下に表示されます 次に、ファームウェアレベルに関する情報の解釈方法について説明します。</block>
   <block id="1bcc576b82fed619415d4157046a7fad" category="list-text">スクリプトコマンドにコントローラファームウェアの最小レベルがリストされていない場合、そのスクリプトコマンドと、スクリプトコマンドに関連付けられているすべてのパラメータは、どのレベルのコントローラファームウェアでも実行できます。</block>
   <block id="90f468710db30c16b02a8b002e1af686" category="list-text">コントローラファームウェアの番号に説明情報がない場合、コントローラファームウェアレベルの環境 スクリプトコマンド全体と、そのスクリプトコマンドのすべてのパラメータが含まれています。</block>
   <block id="f2a446829158644357aab7a7d67017cc" category="list-text">パラメータに関連付けられたコントローラファームウェアの番号は、そのパラメータを実行できるコントローラファームウェアの最小レベルを示します。</block>
@@ -700,7 +689,6 @@
   <block id="d5c71011e72512445dc6f7650a967d6e" category="paragraph">これらの表記は'スクリプト・コマンドと'*securityType*'を除くすべてのパラメータが'コントローラ・ファームウェアのバージョン7.84以上で実行されることを示しています`*securityType*`パラメータは、コントローラファームウェアのバージョン8.20_M3以上で実行されます。</block>
   <block id="832c4bddc90301ed87414e7217d12a80" category="summary">スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。</block>
   <block id="9ab03979fb14b675494053f695a63b30" category="doc">スクリプトコマンドの概要</block>
-  <block id="31ad42a7159183494415ade9a05bd59b" category="paragraph">スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。ただし、これらのコマンドは汎用カテゴリに分類され、このカテゴリはストレージアレイの設定や管理のためにコマンドを適用するときに再利用されます。次の表に、スクリプトコマンドの一般的な形式と各コマンドの定義を示します。</block>
   <block id="92e9d6227d5534e7afc27a11179c808e" category="cell">構文</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
   <block id="622d27cd104889791f5af80d64bd606f" category="paragraph">保留中の処理を実行します。</block>
@@ -819,7 +807,6 @@
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">アレイラベルを表示します</block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。</block>
   <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShellのCLIコマンドの表記規則</block>
-  <block id="decd8a350cdf754c968c86ee87e30c6c" category="paragraph">Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。Windows PowerShellはWindowsコマンドプロンプトを改良したもので、一連のコマンドとスクリプト機能が強化されています。CLIコマンドとスクリプトコマンドはすべてWindows PowerShellで実行できますが、Windows PowerShellには独自の表記要件がいくつかあります。要件は次のとおりです。</block>
   <block id="50d9f3447707fa32e9c0df1880bba9e0" category="list-text">SMcliコマンドはすべてピリオドとスラッシュ（/）で開始</block>
   <block id="caa5d9328bfc806fa16f762ba7bdcb27" category="list-text">SMcliのラッパーは.exe拡張子を持つ実行可能コマンド（SMcli.exe）として識別</block>
   <block id="a2957c139a7a919a4f46836dd373b576" category="list-text">スクリプトコマンドは単一引用符（''）で囲みます。</block>
@@ -831,7 +818,6 @@
   <block id="2ae51e93697811b3c5fb306ba137bddf" category="doc">ストレージアレイのログインバナーを保存します</block>
   <block id="f58d6ae76b26b1f9514f08ed78dc70a2" category="paragraph">save storageArray loginBanner'コマンドを使用すると、ログインバナーをローカルマシンに保存できます。バナーテキストには、ユーザがセッションを確立する前に表示される注意と同意を求めるメッセージを含めることができます。</block>
   <block id="6a21deb5d5cefe85b0876b69bb5e25f7" category="section-title">サポートされているアレイ</block>
-  <block id="66942dd539d913f5aa0651dbb640b206" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。</block>
   <block id="a5cd3ed116608dac017f14c046ea56bf" category="section-title">ロール</block>
   <block id="056c823c0ac1f7e29306ef5582a42a0b" category="paragraph">このコマンドは、どのロールのユーザも実行できます。</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
@@ -842,7 +828,6 @@
   <block id="ad20cd1d88bf85548fc7f4aad8b2ff3f" category="summary">create ssdCacheコマンドは、ソリッドステートディスク（SSD）を使用してストレージアレイの読み取りキャッシュを作成します。</block>
   <block id="7a8ba517b2b0f774908c695321c7c150" category="doc">SSDキャッシュを作成する</block>
   <block id="c56514971eec0f014ec1b676aab5b36f" category="paragraph">create ssdCacheコマンドは'SSD（ソリッド・ステート・ディスク）を使用してストレージ・アレイのリード・キャッシュを作成します</block>
-  <block id="c967c152924962a32a94352f0b12487e" category="paragraph">このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。</block>
   <block id="ad4e206408c1c59bfb8a057ba7857446" category="section-title">コンテキスト（Context）</block>
   <block id="5af36353908bc330d9b5fb13a131f0f6" category="paragraph">ハイパフォーマンスのSSDを使用して読み取りデータをキャッシュすると、アプリケーションのI/Oパフォーマンスと応答時間が向上し、特に高IOPのワークロードで、異なるワークロード間のパフォーマンスが継続的に向上します。SSDキャッシュにより、高価な高速SSDを最大限に活用できます。SSDキャッシュは、コントローラDRAM内のプライマリキャッシュに加えて使用されます。コントローラキャッシュでは、データはホスト読み取り後にDRAMに格納されます。SSDキャッシュでは、データはユーザ指定のベースボリュームからコピーされ、SSDにキャッシュされます。</block>
   <block id="3a5d58c890db51012b65be2246beb6e4" category="paragraph">「userLabel」のように入力します</block>
@@ -866,7 +851,6 @@
   <block id="bfa9dd21b33e030016582bb542fcbe38" category="summary">clear syslog configurationコマンドは、syslogアラート情報をクリアします。</block>
   <block id="9244f91c6b3e2a9d6ac651198714807b" category="doc">syslog設定をクリアします</block>
   <block id="9586f74eb24a2488626237b7a6418250" category="paragraph">clear syslog configurationコマンドは、syslogアラート情報をクリアします。</block>
-  <block id="53c3be6b58503440f9123aa4fc5ea614" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
   <block id="983e45d9f14c8e4b92b207877e7cabb0" category="paragraph">なし</block>
   <block id="ff7c0fcd6a31e735a61c001f75426961" category="section-title">例</block>
   <block id="1a2e5a82588de3119624b0d7cbca73cc" category="paragraph">8.40</block>
@@ -972,7 +956,6 @@
   <block id="fffd69d2853f1f107b133558c768aaf0" category="summary">clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラーグループおよび1つ以上の非同期ミラーグループメンバーボリュームから、非同期ミラーリングの「ティック」エラーをクリアします。</block>
   <block id="4e6da33ae880f7e07fcfd4639f861180" category="doc">非同期ミラーリングのエラーをクリアします</block>
   <block id="ad4a20ee721e029ee751bbb42cf04b43" category="paragraph">clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラーグループおよび1つ以上の非同期ミラーグループメンバーボリュームから、非同期ミラーリングの「スティッキー」エラーをクリアします。</block>
-  <block id="273a21cd07c16b799cb77535e713e261" category="paragraph">このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="f9432e6a00dc11ee6a94106ef6c14c77" category="paragraph">非同期ミラーグループとそのメンバーボリュームで、非同期ミラーリングの「スティッキー」エラーが発生することがあります。このエラーは単一時点で発生し、ミラーの機能には影響しません。このタイプの障害については確認が必要ですが、設定の変更が不要な場合もあります。</block>
   <block id="c9ccbbf2b9465b9a7caeee860cd1b259" category="paragraph">非同期ミラーグループとそのメンバーボリュームで、関連するスティッキーエラーが複数発生する場合があります。このコマンドは、非同期ミラーグループとそのメンバーボリュームに関連するすべてのエラーを解消します。ただし、非同期ミラーグループとそのメンバーボリュームの1つでそれぞれにエラーが発生した場合は、非同期ミラーグループでエラーを解消してもメンバーボリュームのエラーは解消されません。</block>
   <block id="8a608645da754a8fe766ffb5924b5e1b" category="paragraph">「すべて」</block>
@@ -991,7 +974,6 @@
   <block id="642b2e611a6c15b2f5fb455d24b6edb1" category="summary">set storageArray DirectoryServerコマンドは、ディレクトリサーバ設定を更新します。</block>
   <block id="5c6c0aa02ba6ba06faa440d5a3048f04" category="doc">ストレージアレイのディレクトリサーバを設定する</block>
   <block id="75a066b4c3aa3ea609eb16d1f5601cb1" category="paragraph">set storageArray DirectoryServer`コマンドは、ディレクトリサーバの設定を更新します。</block>
-  <block id="25fa160cee7d75f60d44ec70c633094c" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Security Adminロールが必要です。</block>
   <block id="4e388bc029eb72bc6e88f63d5a071ba2" category="paragraph">「DirectoryServer」を参照してください</block>
   <block id="ca4742f71cd010920d1b2a53b053b948" category="paragraph">設定を更新するドメインIDを指定できます。</block>
   <block id="f345ed2c5afee70e8fdb4ed024a0e826" category="paragraph">「ドメイン名」</block>
@@ -1019,7 +1001,6 @@
   <block id="18d25ac4e1abbe5bc0643c27231178cf" category="summary">export storageArray securityKeyコマンドは、ドライブセキュリティキーをファイルに保存します。</block>
   <block id="95fc98a15ab6c4bb300a1a053dffedac" category="doc">ストレージアレイのセキュリティキーをエクスポートします</block>
   <block id="118d5bbc4ed27615895f09f58be206b9" category="paragraph">「export storageArray securityKey」コマンドは、ドライブセキュリティキーをファイルに保存します。</block>
-  <block id="6ebc391412b3ac382d9abb2aaa4fb8a8" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、およびEF300アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
   <block id="59abeb230f23914068920f58b01cf787" category="paragraph">あるストレージアレイからキーファイルがエクスポートされたときに、そのキーを別のストレージアレイにインポートできます。これにより、ストレージアレイ間でセキュリティ対応ドライブを移動できます。</block>
   <block id="e0d2814cb7c67330fdfb68cd711796c2" category="paragraph">このコマンドは、内部と外部の両方のキー管理を環境 に行います。</block>
   <block id="676e9ec8d343c95a4afb8ac0c83a5112" category="paragraph">パスフレーズ</block>
@@ -1242,12 +1223,10 @@
   <block id="0a971bdaf647eec5727bb73b4fdaf62a" category="summary">set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。</block>
   <block id="4f856a887e5732ed9116694218089f06" category="doc">ストレージアレイでキャッシュミラーのData Assuranceチェックを有効または無効にする</block>
   <block id="a2f3cff920191a1785038eb770af11ac" category="paragraph">set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。</block>
-  <block id="0bdfae42fe218bd7d08ff2660ab19323" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。</block>
   <block id="ecd8f68d5c8a073ab5f744175bcfc48d" category="paragraph">8.41で、コマンドパラメータが新しくなりました。</block>
   <block id="330d0697424450147c0224569020bf9b" category="summary">set targetコマンドは、認証方式とエイリアス名など、iSCSI / iSERターゲットのプロパティを変更します。</block>
   <block id="c73e9b4ae3ed8b8ba0a635de95d8208d" category="doc">ターゲットのプロパティを設定します</block>
   <block id="1c1edc6454d7105c004699665c83b2d7" category="paragraph">set target'コマンドは'認証方式やエイリアス名など'iSCSI/iSERターゲットのプロパティを変更します</block>
-  <block id="54e516e39febe2ebcc5f3bffd2df256f" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
   <block id="b2ccf370a09daf06ddd9630f27982611" category="inline-xref-macro">iSERターゲットを設定します</block>
   <block id="319e65d371a6fe6e523ea6a09e56af7f" category="inline-xref-macro">iSCSIターゲットのプロパティを設定します</block>
   <block id="cb6e80c3adb58fd64bff9ec885ec2873" category="paragraph">このコマンドは、廃止されたを置き換えます <block ref="c3a474d57787ed83563f94d3d201793a" category="inline-xref-macro-rx"></block> および <block ref="588dcf26deb00109d89fe86c8089b2a3" category="inline-xref-macro-rx"></block> コマンド</block>
@@ -1609,7 +1588,6 @@
   <block id="8fb2868eed8d88530d8f58844179ebc4" category="paragraph">受信者アドレスを削除できます。Eメールアドレスは角かっこ（[]）で囲みます。</block>
   <block id="b6d01d3fed2ae70f1ab68fa1c953ca86" category="summary">set emailAlertコマンドは、指定されたテクニカルサポートまたは組織にEメールを送信するようにEメールを設定します。Eメールアラートには、イベントの概要、影響を受けるストレージに関する詳細情報、およびお客様の連絡先情報が含まれています。</block>
   <block id="77e64cab1c5aeff0d6ff879bc39b2a78" category="paragraph">set emailAlertコマンドは'指定されたテクニカル・サポートまたは組織に電子メールを送信するように電子メールを設定しますEメールアラートには、イベントの概要、影響を受けるストレージに関する詳細情報、およびお客様の連絡先情報が含まれています。</block>
-  <block id="5e2276c06dc9839b2244a1615f313cee" category="paragraph">このコマンドは、E2800、E5700、EF600、およびEF300ストレージアレイを環境 します。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、管理ドメイン内のすべてのアレイを環境 コマンドで指定します。</block>
   <block id="37dadb3bd1509e2e5c8dc4210b5f4175" category="paragraph">Eメールサーバのアドレスを設定できます。Eメールサーバのアドレスには、完全修飾ドメイン名、IPv4アドレス、またはIPv6アドレスを使用できます。</block>
   <block id="26f7eecdf5941d85272c9177d1862ce6" category="paragraph">「serverEncryption」</block>
   <block id="28d9c2bb47c0e47c85d8126cc9e27639" category="paragraph">サーバとの通信に使用される暗号化。次のいずれかの値を指定できます。</block>
@@ -1881,7 +1859,6 @@
   <block id="ecaf030c24638713fe94abe0ca535a48" category="summary">set session errorActionコマンドは、現在のスクリプトエンジンセッションの実行方法を定義します。</block>
   <block id="3b0dc5fce18b99ece74fdfb5a5a313f6" category="doc">セッションを設定します</block>
   <block id="1723c0a7383bfc685e3779b3853765ec" category="paragraph">「set session errorAction」コマンドは、現在のスクリプトエンジンセッションの実行方法を定義します。</block>
-  <block id="456383683c5088f07d792544fc457ea8" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。</block>
   <block id="0e1fdce28381353c30c42bbb5dd6b1ab" category="paragraph">このコマンドでは、セッションはコマンドの実行期間に限定されます。ストレージアレイに対してパラメータが永続的に設定されるわけではありません。</block>
   <block id="7ad0e6dd25358f967fc7ce521669868a" category="paragraph">「errorAction」</block>
   <block id="5b8b77d01a8aba074b63718bc49e6ac2" category="paragraph">処理中にエラーが発生した場合のセッションの応答方法。エラーが発生した場合にセッションを停止するか、セッションを続行するかを選択できます。デフォルト値は「stop」です。（このパラメータは、構文エラーではなく実行エラーに対する処理を定義します。エラー条件によっては、「continue」の値が無効になる場合があります）。</block>
@@ -1902,7 +1879,6 @@
   <block id="07f48b115daa521420831c0136a7e56d" category="paragraph">set storageArray AutoSupport smtpiveryMethodコマンドは、AutoSupport メッセージを電子メール（SMTP）に送信するための配信方法を設定します。</block>
   <block id="470b59d3367ed05a01d0c74b04a67967" category="paragraph">「deliveryMethod」を参照してください</block>
   <block id="33f9ca954ea5513b2c784e2fcab0a1bc" category="paragraph">AutoSupport による収集の配信方法を指定できます。有効な選択肢は次のとおりです。</block>
-  <block id="293c9ea246ff9985dc6f62a650f78986" category="list-text">HTTP</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="list-text">HTTPS</block>
   <block id="8a46dd7e06af963d90ed64259683cef0" category="paragraph">Eメール方式が設定されている場合、AutoSupport OnDemandとRemote Diagnosticsは無効になります。</block>
   <block id="75db12693721b1850aa4adb8cc6939a9" category="paragraph">mailRelayServer'</block>
@@ -2029,7 +2005,6 @@
   <block id="553ebae9cd1dfc9315e4c6dc90bfa01a" category="summary">set asyncMirrorGroupコマンドは、非同期ミラーグループのプライマリ側のコントローラ所有者が初期同期または再同期を実行する際に使用する同期設定と警告しきい値を変更します。</block>
   <block id="fc9b044768c82d7fb685f79ee8b827a2" category="doc">非同期ミラーグループを設定します</block>
   <block id="fd705ac66897df77a0026265c8b5f8ad" category="paragraph">set asyncMirrorGroup'コマンドは'非同期ミラー・グループのプライマリ側のコントローラ所有者が初期同期または再同期を実行するときに使用する同期設定と警告しきい値を変更します</block>
-  <block id="e68c89351e1337529a69bcee3f8df562" category="paragraph">このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
   <block id="d8d0c2507b31034e9a365f04cd0ab47a" category="paragraph">同期設定を変更すると、非同期ミラーグループ内のすべてのミラーペアの同期処理に適用されます。</block>
   <block id="4c44d5e494b32bb29e49e4b2f180be32" category="paragraph">変更する非同期ミラーグループの名前。非同期ミラーグループ名は角かっこ（[]）で囲みます。非同期ミラーグループ名に特殊文字または数字が含まれている場合は、名前を二重引用符（""）で囲んだ上で角かっこで囲む必要があります。</block>
   <block id="20d9e8f9f907ee1e7ee9c50bb0c26970" category="paragraph">容量を拡張する非同期ミラーグループリポジトリボリュームの名前。</block>
@@ -2476,7 +2451,6 @@
   <block id="1e3183fa9c4768ba6ea8c56138b2b0d7" category="summary">show allSnmpCommunitiesコマンドは、ストレージアレイで定義された簡易ネットワーク管理プロトコル（SNMP）コミュニティに関する情報を返します。SNMPコミュニティは、ルータ、スイッチ、プリンタ、ストレージデバイスなどのデバイスの集合です。 デバイスを管理および監視するためにグループ化されています。</block>
   <block id="0975f98624d38f4913a00dc3f8ddf5ec" category="doc">SNMPコミュニティを表示します</block>
   <block id="0f685797b01aaf0dfa71b1350a8336ef" category="paragraph">show allSnmpCommunitiesコマンドは、ストレージアレイに定義された簡易ネットワーク管理プロトコル（SNMP）コミュニティに関する情報を返します。SNMPコミュニティは、ルータ、スイッチ、プリンタ、ストレージデバイスなどのデバイスの集合です。 デバイスを管理および監視するためにグループ化されています。</block>
-  <block id="a39c61ebdd787f81d2ef2651ba656be6" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Admin、Support AdminまたはStorage Monitorロールが必要です。</block>
   <block id="e5dc820cd982e6a7faeea301825ed9dc" category="paragraph">返される情報には次のものがあります。</block>
   <block id="23f36d51bf3aedc99882833b5dc5bdd0" category="list-text">コミュニティの合計数</block>
   <block id="f8786e8fa8475e7edd68eca42e9f1a36" category="list-text">トラップの送信先の合計数</block>
@@ -2527,9 +2501,7 @@
   <block id="0f962521b49d47dcf9c4b9d6c884617e" category="paragraph">230.000 GB</block>
   <block id="ccbfcbba27ab12bc619c38927a800ab4" category="paragraph">700.000 GB</block>
   <block id="25dd1706a75f78cc0900750063b589db" category="paragraph">46%</block>
-  <block id="54f8d92440fdb8680638422c5aeb5222" category="summary">save controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされているサーバ証明書を取得して、証明書の詳細を表示できます。</block>
   <block id="6350cf44b8bafeee9673a59ff31baec3" category="doc">インストールされているサーバ証明書を取得する</block>
-  <block id="2c236ba971a663a09a2b6391a3ad104d" category="paragraph">save controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされているサーバ証明書を取得して、証明書の詳細を表示できます。</block>
   <block id="ca16722c9a4e4f39f5a7cff99cf1e3a9" category="paragraph">署名済み証明書のダウンロード元のコントローラを指定できます。有効なコントローラ識別子は、aまたはbで、aはスロットAのコントローラ、bはスロットBのコントローラですコントローラの識別子は角かっこ（[]）で囲みます。</block>
   <block id="bb89b1a0dde078e7c8f13c62720f07c3" category="paragraph">コントローラの署名済み証明書ファイルの保存先となるファイルを指定できます。</block>
   <block id="baf7f4c21406a048b4615ec7054b53a8" category="summary">set SnapVolume mediaScanEnabledコマンドは、スナップショットボリュームに使用されているドライブ上でメディアスキャンを実行します。</block>
@@ -2988,7 +2960,6 @@
   <block id="42213289fc7ae803ab9239664c70b88f" category="paragraph">SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の行に、有効化のステータスが表示されます。</block>
   <block id="5d7129f3e09d67ecf581cfd912b0c837" category="summary">Show certificatesコマンドを使用すると、CLIパッケージの信頼ストアにインストールされている証明書を表示できます。</block>
   <block id="5d58364fb87c53af866b649e5b47a41d" category="paragraph">[Show certificates]コマンドを使用すると、CLIパッケージの信頼ストアにインストールされている証明書を表示できます。</block>
-  <block id="8a42f0c79144717ab490ae2d4198bc3a" category="paragraph">このコマンドは、EF600ストレージアレイを環境 します。</block>
   <block id="786a0f81dadc771f8db9930de349475e" category="paragraph">ユーザ定義のエイリアスを使用して証明書を指定できます。</block>
   <block id="b9e83fd1503a2dd7bab92efbfd5f7768" category="summary">set storageArray autoSupportRemoteDiagコマンドは、AutoSupport OnDemand Remote Diagnostics機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。</block>
   <block id="dc3a6dee0b5355fcb3d1e9765eb81ec2" category="doc">AutoSupport リモート診断機能を有効または無効にします</block>
@@ -3079,7 +3050,6 @@
   <block id="ee262571ba548fbe81c1aa97ef4f2f86" category="paragraph">「管理インターフェイス」</block>
   <block id="ac8f3839a5773a065b3414ce6bebb08d" category="paragraph">コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。</block>
   <block id="e357d892ac66c8d6d5e523ad580e9e81" category="paragraph">mediaScanRate</block>
-  <block id="50162660a4c7641854ffdc02f97a5c51" category="paragraph">メディアスキャンを実行する日数。有効な値は「disabled」です。これはメディア・スキャンをオフにします。「1日」は最も速いスキャン・レート、「30日」は最も遅いスキャン・レートです。「disabled」または「1」から「30」以外の値を指定すると、メディアスキャンは機能しません。</block>
   <block id="637b982f91aba1b702abb9f163d52922" category="paragraph">「odxEnabled」</block>
   <block id="befcb849719f94c30e38a64c21226d79" category="paragraph">ストレージアレイのオフロードデータ転送（ODX）をオンまたはオフにします。</block>
   <block id="eabf26cd0c33eca2b95cab5d030534b4" category="paragraph">このパラメータは8.40リリースで廃止されました。代わりに'localUsername'またはシンボルの'symbol`パラメータを'password'または'adminPassword'パラメータとともに使用します</block>
@@ -3241,7 +3211,6 @@
   <block id="ff5885e71dace62d588bad77aea93830" category="summary">reset storageArray iserStatsBaselineコマンドは、ストレージアレイのiSERベースラインを0にリセットします。</block>
   <block id="7c4e811eda812cbcfa0928f4903c2de5" category="doc">ストレージアレイのiSERベースラインをリセットします</block>
   <block id="1848890ead65ea5acda8fff79a63d9f5" category="paragraph">reset storageArray iserStatsBaselineコマンドは、ストレージアレイのiSERベースラインを0にリセットします。</block>
-  <block id="0206e2ff1e70dfcbdbfefb1d515301c8" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E2700、E5600、E2800、E5700を含む個々のストレージアレイを環境 します。</block>
   <block id="9998c84ac6caade1ad4c4e5ac82282bf" category="inline-xref-macro">ストレージアレイのホストポート統計のベースラインをリセットします</block>
   <block id="2f26c8583d350771962b95babaa285ae" category="paragraph">このコマンドは廃止され、で置き換えられました <block ref="fea32d7d32837f58caf1422010242705" category="inline-xref-macro-rx"></block> コマンドを実行します</block>
   <block id="2042653060057154e4a699f8ffd4e34a" category="paragraph">このコマンドは、ハードウェアとファームウェアで維持される生の数を実際にリセットするわけではありません。代わりに、ファームウェアは現在のカウンタ値のSnapshotを作成し、これらの値を使用して、統計が取得されるときに数の違いを報告します。新しいベースライン時間は両方のコントローラに適用されるため、コントローラの数が相互に同期されます。一方のコントローラがリセットされ、もう一方のコントローラがリセットされない場合は、カウンタが同期されなくなります。統計とともに報告されるタイムスタンプデータが両方のコントローラで異なるため、クライアントはコントローラが同期されていないことを認識します。</block>
@@ -3385,7 +3354,6 @@
   <block id="3a67810abc8da793d40e0d9c714d2958" category="summary">show storageArray storageArray autoSupport AutoSupport コマンドは、ストレージアレイのAutoSupport バンドル収集設定を表示します。</block>
   <block id="b9a29215603a15544fa6c897c678da0a" category="doc">AutoSupport の設定を表示します</block>
   <block id="019fa4ba5e1d588b0e5c8dd094fde7d5" category="paragraph">show storageArray autoSupport AutoSupport コマンドを使用すると、ストレージアレイのAutoSupport バンドル収集設定が表示されます。</block>
-  <block id="7aa6059582dab6043ba0684c6b46d222" category="paragraph">このコマンドは、E2800、E5700、EF600、およびEF300ストレージアレイが対象です。</block>
   <block id="d999a9c760b0f5e1d68715c95898430c" category="list-text">配信方法がEメール（SMTP）：送信先のEメールアドレス、メールリレーサーバ、および送信者のEメールアドレスが表示されます</block>
   <block id="12e80b12563c6f7b86f4a49dc6ab595f" category="list-text">AutoSupport の日単位および週単位の優先される時間範囲</block>
   <block id="6cb7573099ab06421673f2c94e6cb330" category="list-text">ASUPの機能、シャーシのシリアル番号、および設定されている日次/週次スケジュールに関する情報</block>
@@ -3946,7 +3914,6 @@
   <block id="5097bc8fbff28c2f4afa7476a604bdc3" category="summary">show SyncMirror candidatesコマンドは、同期ミラーリング構成のセカンダリボリュームとして使用できる、リモートストレージアレイのボリューム候補に関する情報を返します。</block>
   <block id="a8e17accd53dd340f01e40847de30d62" category="doc">同期ミラーリングのボリューム候補を表示します</block>
   <block id="930e04129225117b7c5a0eb5ad942c41" category="paragraph">show SyncMirror candidatesコマンドは'同期ミラーリング構成のセカンダリ・ボリュームとして使用できる'リモート・ストレージ・アレイ上のボリューム候補に関する情報を返します</block>
-  <block id="6b2f4787f46eed5521ed0bacaae0e49a" category="paragraph">このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
   <block id="48ab786b5b5040ccb0e2c0cd87a481bf" category="paragraph">リモートミラーペアのプライマリボリュームにするローカルボリュームの名前。プライマリボリューム名は二重引用符（""）で囲みます。</block>
   <block id="fc706cee637f27d302720d92793d7179" category="paragraph">セカンダリボリュームの候補となるボリュームが配置されているリモートストレージアレイ。リモートストレージアレイ名に特殊文字が含まれている場合は、リモートストレージアレイ名も二重引用符（""）で囲む必要があります。</block>
   <block id="85fa9a30d7ee3fdcf94bd2162f2ae6a6" category="summary">show VolumeCopy source targetCandidatesコマンドは、ボリュームコピー処理のターゲットとして使用できるボリューム候補に関する情報を返します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。</block>
@@ -4111,7 +4078,6 @@
   <block id="844e115c06b70319729828aa4c6d56fe" category="paragraph">たとえば、SnapshotグループsnapGroup1内のSnapshotイメージ12345のロールバック処理を停止する場合は、次のコマンドを使用します。</block>
   <block id="7f913228bd889f3f12728be531fa8341" category="paragraph">SnapshotグループsnapGroup1内の最も新しいSnapshotイメージのロールバック処理を停止するには、次のコマンドを使用します。</block>
   <block id="8b46193971f20ebdc16ce2d4064d1dae" category="summary">set storageArray autoSupportMaintenanceWindowコマンドは、AutoSupport メンテナンス期間機能をオンまたはオフにします。</block>
-  <block id="acd961e5451a3ccd475d54650c2ae25b" category="doc">AutoSupport メンテナンス期間の有効化または無効化（個々のE2800またはE5700アレイ）</block>
   <block id="a0a0faefb77fa57036e29458886ee6a6" category="paragraph">set storageArray autoSupportMaintenanceWindowコマンドは、AutoSupport メンテナンスウィンドウ機能をオンまたはオフにします。</block>
   <block id="24b8427b4e70b8b26378cbd782dfe262" category="paragraph">メンテナンス期間を使用して、エラーイベント発生時に自動でチケットが作成されないようにします。通常運用モードでは、問題 がある場合、ストレージアレイはAutoSupport を使用してテクニカルサポートにケースをオープンします。AutoSupport がメンテナンス期間に入ると、この機能は抑制されます。</block>
   <block id="c7ae4920d8fe2ccd0f8d3c390a30c3df" category="paragraph">「メールアドレス」</block>
@@ -4354,7 +4320,6 @@
   <block id="f52aecf0776faaef4e3e7b1792bf10db" category="list-text">ステータス</block>
   <block id="74739b819e7e946ab0e4d50e101a32d6" category="list-text">データ転送率</block>
   <block id="2b744d319838b4a36538148e1431f379" category="list-text">ファームウェアレベル</block>
-  <block id="16e69abc3aaf761d2ea7bc0f880ca35b" category="list-text">SSDドライブの消耗度に関する情報（この情報はE2800およびE5700 / EF570でのみ有効で、アレイにSSDドライブが搭載されていない場合は表示されません）</block>
   <block id="66b8d84c12d6e8ce50edb846cfee502c" category="list-text">平均消去回数。</block>
   <block id="45a0f5d5d07e686083afb281fe1f91ee" category="list-text">スペアブロックの残量</block>
   <block id="89b430980ba2de7fe91a9ea8f7bf879a" category="list-text">使用済み寿命の割合（11.41リリースの新機能）。使用済み寿命は、これまでにSSDドライブに書き込まれたデータ量を、ドライブの理論上の合計書き込み量で割った値です。</block>
@@ -4482,7 +4447,6 @@
   <block id="546ec301b169abe769308bdcfaa856bf" category="paragraph">コントローラのルート/中間証明書を保存するローカルの場所を指定できます。</block>
   <block id="d7a3a52083e5c68118974beeeec2de99" category="summary">import storageArray securityKeyファイルコマンドは、ストレージアレイ間で移動した1本以上のFull Disk Encryption（FDE）ドライブのロックを解除します。</block>
   <block id="065910adcc06b080e3793d7744d86d88" category="paragraph">import storageArray securityKey fileコマンドは、ストレージアレイ間で移動した1つ以上のFull Disk Encryption（FDE）ドライブのロックを解除します。</block>
-  <block id="0f5e1305e8b34920cb18e64db1ad1240" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、またはEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
   <block id="2c6e388c7397d396aa8a67e31de9f708" category="paragraph">セキュリティキーが一致するドライブだけがロック解除されます。ロックが解除されると、新しいストレージアレイのセキュリティキーが適用されます。</block>
   <block id="fc0d1749f2422b74bdb55bf17391f0b1" category="paragraph">インポートされたFDEドライブの元のセキュリティキーを含むファイルのパスと名前。例：</block>
   <block id="f8341fc661bfb8ca199262da01e8dc70" category="paragraph">セキュリティキーの認証を提供する文字列。</block>
@@ -4496,7 +4460,6 @@
   <block id="2920c0d169038ec0d967eb9940f11f4e" category="paragraph">set drive operationalStateコマンドは'ドライブをFailed状態に設定します</block>
   <block id="ca34edbbfb4d63e2f49a5f8fea4e42e8" category="paragraph">ドライブを最適状態に戻すには'ドライブの再活性化コマンドを使用します</block>
   <block id="a19424436ff5a8c20a18ffbd066deca7" category="summary">reset storageArray autoSupport AutoSupport scheduleコマンドは、AutoSupport メッセージを管理ソフトウェアによって生成されたランダムな値に送信する、毎日または毎週の特定の時刻および曜日をリセットします。</block>
-  <block id="3d13704ad1c7a981cf21e6f8d0778a04" category="doc">AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）</block>
   <block id="42bb67454d2d38ca36a82f5b6b0559c9" category="paragraph">reset storageArray autoschedule' AutoSupport コマンドは、AutoSupport メッセージが管理ソフトウェアによって生成されたランダムな値に送信される毎日および毎週の時間と曜日をリセットします。</block>
   <block id="b349684735406339111877f12c790cea" category="list-text">管理ソフトウェアは、日単位と週単位のメッセージに関しては時刻を、週単位のメッセージに関しては曜日を、ランダムに選択します。</block>
   <block id="eca6d01389ba3951d9e44a4d6a67d9eb" category="list-text">管理ソフトウェアは、1つの管理ドメイン内の2つのストレージアレイがスケジュールされたAutoSupport メッセージを同時に送信しないように対処します。</block>
@@ -4555,7 +4518,6 @@
   <block id="5050ed8384d9b863b09472bcb61b2629" category="paragraph">このコマンドは、コントローラがロックダウンモードのときは実行されません。</block>
   <block id="f2400c6d98c11df02cbcad1bce2de5be" category="summary">save storageArray hostPortStatisticsコマンドは、ストレージアレイのホストポートの統計を保存します。</block>
   <block id="b728b39dd8719e0aa99ad692fd41d7fe" category="paragraph">save storageArray hostPortStatisticsコマンドは'ストレージ・アレイのホスト・ポートの統計情報を保存します</block>
-  <block id="23f2b3d774e4f254918d4c8fdee41588" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSecurity Adminロールが必要です。</block>
   <block id="36eb75b5172fc10f30e25c5e87cd0771" category="inline-xref-macro">ストレージアレイのiSCSI統計を保存します</block>
   <block id="faaa4a3d4ca79522f0bcdd45bbf1fea0" category="paragraph">このコマンドは、廃止されたを置き換えます <block ref="de2440a23bd95bf670dd35d1959ef77e" category="inline-xref-macro-rx"></block>、 <block ref="d07eb11322e1e56de080266d666873c1" category="inline-xref-macro-rx"></block>および <block ref="ef21bb1b6552b1c21201ce27295ef971" category="inline-xref-macro-rx"></block> コマンド</block>
   <block id="e0082d07bc980cfab795a0b8d33f0a9f" category="paragraph">一日の開始時刻以降に収集された統計を取得できます。パラメータは角かっこ（[]）で囲みます。</block>
@@ -5209,7 +5171,6 @@
   <block id="288c747beb9ea02441918c10be0f0835" category="summary">validate storageArray securityKeyコマンドは、セキュリティ対応ドライブが搭載されたストレージアレイのセキュリティキーを検証して、バックアップセキュリティキーファイルが破損していないことを確認します。</block>
   <block id="0997de78a2c4c3c3fb8d0bbf36292876" category="doc">ストレージアレイのセキュリティキーを検証します</block>
   <block id="040f96a185fb9e278945b3035413ef98" category="paragraph">「validate storageArray securityKey」コマンドは、バックアップセキュリティキーファイルが破損していないことを確認するために、セキュリティ対応ドライブを搭載したストレージアレイのセキュリティキーを検証します。</block>
-  <block id="8375b2e9dc5948fae1425a8f80381409" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE2800およびE5700のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
   <block id="a60102cf893cafd152ff949443e539aa" category="paragraph">セキュリティキーの検証では、ファイルの生成に使用したパスフレーズを使用してキーを復号化し、コントローラのメモリ（内部キーの場合）または外部サーバ（外部キーの場合）に保持されている値と照合します。</block>
   <block id="be77a29583b243db0d24b4ccb834859e" category="paragraph">セキュリティキーを含むファイルパスとファイル名。ファイルパスとファイル名は二重引用符（""）で囲みます。例：</block>
   <block id="aecdedf00e18a13fd6dba7cf8aa45196" category="summary">save storageArray autolog AutoSupport コマンドを使用すると、AutoSupport ログファイルを表示できます。このファイルには、ステータスに関する情報、送信アクティビティの履歴、およびAutoSupport メッセージの配信中に発生したエラーが格納されます。AutoSupportに対応したストレージアレイとAutoSupportが有効なストレージアレイのすべてについてログを使用できます。</block>
@@ -5456,7 +5417,6 @@
   <block id="c150cf10f9c24b3ae1712d9b340f9b68" category="summary">save storageArray configurationコマンドは、現在のストレージアレイボリューム構成を再作成するために使用できるスクリプトファイルを作成します。</block>
   <block id="22bc35cee3b727163050cc44b096050c" category="doc">ストレージアレイの構成を保存します</block>
   <block id="b76ed73bf33bc149b56bfcb72828ed9e" category="paragraph">save storageArray configurationコマンドは'現在のストレージ・アレイ・ボリューム構成を再作成するために使用できるスクリプト・ファイルを作成します</block>
-  <block id="58e6d6373e7b375f5f4cda1a6d3d57ec" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。</block>
   <block id="c1c3a56e1ceca488340db853c4392d01" category="paragraph">このコマンドは、現在のストレージアレイ上のリモートミラーリングまたはボリュームコピーの構成データをファイルに保存しません。</block>
   <block id="76f07b9b7c624b078c63894fcbc57b79" category="paragraph">設定の保存先となるファイルパスとファイル名。ファイル名は二重引用符（""）で囲みます。例：</block>
   <block id="cba05d40aab0daa948254107ad8de574" category="paragraph">'file="C:\Program Files\CLI\logs\saconf.cfgです</block>
@@ -5829,7 +5789,6 @@
   <block id="c33f4dd7cba462d4973823e2b1a0f1d1" category="summary">create storageArray securityKeyコマンドは、Full Disk Encryption（FDE）ドライブが搭載されたストレージアレイの新しいセキュリティキーを作成または変更します。</block>
   <block id="589358dbff1a589613308187d87d0307" category="doc">ストレージアレイのセキュリティキーを作成します</block>
   <block id="16b8756bee5437e27cf5846c5cfd3750" category="paragraph">create storageArray securityKey'コマンドは'フルディスク暗号化(FDE)ドライブを持つストレージアレイの新しいセキュリティキーを作成または変更します</block>
-  <block id="9a72b7800754129aaac262fd17574f77" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE2800、E5700、EF600、およびEF300アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
   <block id="a3e6ee2823bad8a4c789d06eea837cd4" category="paragraph">内部キー管理の場合、このコマンドは、内部キー管理機能を有効にしてセキュリティキーを作成します。キーを作成したら、「set storageArray securityKey」コマンドを使用してキーを使用可能にします。このコマンドを使用して、セキュリティキーを変更することもできます。</block>
   <block id="ac377e9234144193984246221664a133" category="paragraph">外部キー管理の場合、このコマンドは、機能を有効にしたときに最初に作成されたキーの代わりに使用するキーを作成します。外部キー管理機能をイネーブルにし、初期セキュリティキーを作成するには、「enable storageArray externalKeyManagement」コマンドを使用します。このコマンドを使用して、セキュリティキーを変更することもできます。</block>
   <block id="4026ec9a53cfa291ca88fe7ecf92271f" category="paragraph">「keyIdentifier」-内部キー管理にのみ適用されます</block>
@@ -6034,7 +5993,6 @@
   <block id="1a2705cf89cd2220c74c548d31d8637f" category="summary">create SyncMirror コマンドは、同期リモートミラーペアのプライマリボリュームとセカンダリボリュームの両方を作成します。このコマンドは、書き込みモード（同期書き込みモードまたは非同期書き込みモード）と同期優先度も設定します。</block>
   <block id="72816bb9383ae0ee07aa13ba46996d7e" category="doc">同期ミラーリングを作成します</block>
   <block id="52a24030d55704eb53281edf7f86ae57" category="paragraph">create SyncMirror コマンドは'同期リモート・ミラー・ペアのプライマリ・ボリュームとセカンダリ・ボリュームの両方を作成しますこのコマンドは、書き込みモード（同期書き込みモードまたは非同期書き込みモード）と同期優先度も設定します。</block>
-  <block id="03ddafa678ecdce3682b4cec2e1901c1" category="paragraph">このコマンドをE2800またはE5700ストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="4e6f20d94d9e42e80e6300e61c9556e3" category="paragraph">プライマリボリュームに使用する、ローカルストレージアレイ上の既存のボリュームの名前。プライマリボリューム名は二重引用符（""）で囲みます。</block>
   <block id="329ee9c730f0db06dc70767f13c32063" category="paragraph">' 二次</block>
   <block id="a11bdf6632ac28dcb833c3b98862f77e" category="paragraph">セカンダリボリュームに使用する、リモートストレージアレイ上の既存のボリュームの名前。セカンダリボリューム名は二重引用符（""）で囲みます。</block>
@@ -6246,7 +6204,6 @@
   <block id="e16c2d45985db7c2f3461f64f3562508" category="paragraph">ボリューム・グループ全体を削除する場合は'delete volumegroupコマンドも使用できます</block>
   <block id="836e087fc9f8e0c89c31602c36ec4195" category="paragraph">7.10で、「removeVolumeGroup」パラメータが追加されました。</block>
   <block id="0418acfe7f172be60f641a4dee74583b" category="summary">set storageArray AutoSupport httpdeliveryMethodコマンドは、AutoSupport メッセージをHTTP（S）に送信するための配信方法を設定します。</block>
-  <block id="b63d4a8fce6b86dfe0bd873d51df2e44" category="doc">AutoSupport HTTP（S）配信方法の指定（個々のE2800またはE5700アレイ）</block>
   <block id="b5f0f32e672745bd998c7baae84009c2" category="paragraph">set storageArray AutoSupport httpdeliveryMethodコマンドは、AutoSupport メッセージをHTTP（S）に送信するための配信方法を設定します。</block>
   <block id="a6b0c9dd751c30a74c1d6ab885b938c1" category="paragraph">HTTPまたはHTTPSプロトコルを使用して、テクニカルサポートのシステムに直接接続できます。</block>
   <block id="99c3d37edba75cd649292a42965ed08a" category="paragraph">Proxy Auto-Configuration（PAC）スクリプトファイルの場所を指定できます</block>
@@ -6479,17 +6436,12 @@
   <block id="526ea19b5b10d32080045d2bf02a001f" category="paragraph"><block ref="526ea19b5b10d32080045d2bf02a001f" category="inline-link-macro-rx"></block></block>
   <block id="40b5e794e0c5d66ba76dbffd4936cdf2" category="inline-link-macro">EMW管理ドメインレベルでのAutoSupport の有効化または無効化</block>
   <block id="d1d7e051cbfd58b90c0b20e58bd50caf" category="paragraph"><block ref="d1d7e051cbfd58b90c0b20e58bd50caf" category="inline-link-macro-rx"></block></block>
-  <block id="0d27d2d91cb54a5542603e0ac7441bf2" category="paragraph"><block ref="0d27d2d91cb54a5542603e0ac7441bf2" category="inline-link-macro-rx"></block></block>
   <block id="28acfac866a292ab1f1f2e9ff56a5f37" category="paragraph"><block ref="28acfac866a292ab1f1f2e9ff56a5f37" category="inline-link-macro-rx"></block></block>
   <block id="4ef8a44db31e99109be90a9f8a47ef4b" category="paragraph"><block ref="4ef8a44db31e99109be90a9f8a47ef4b" category="inline-link-macro-rx"></block></block>
-  <block id="8b34f939922724f8ca1a0c2fce89bd2e" category="inline-link-macro">AutoSupport OnDemand機能の有効化または無効化（個々のE2800またはE5700アレイ）</block>
-  <block id="eceb9e9ae30bee53654d1037dcbc3a5c" category="paragraph"><block ref="eceb9e9ae30bee53654d1037dcbc3a5c" category="inline-link-macro-rx"></block></block>
   <block id="9193a3a6d6eae0966fd3e95f00327e58" category="inline-link-macro">EMWでのAutoSupport OnDemand機能の有効化または無効化</block>
   <block id="5a4b5b6c09b76fd9a6e234cc5c8f02a1" category="paragraph"><block ref="5a4b5b6c09b76fd9a6e234cc5c8f02a1" category="inline-link-macro-rx"></block></block>
   <block id="e5799e751ba6a43582452605535ec6d9" category="inline-link-macro">AutoSupport OnDemand Remote Diagnostics機能の有効化または無効化</block>
   <block id="7f64e02de9bac52f6624004ce966c7bf" category="paragraph"><block ref="7f64e02de9bac52f6624004ce966c7bf" category="inline-link-macro-rx"></block></block>
-  <block id="de042c6e9339ad5e11dbef3eba62d68f" category="inline-link-macro">AutoSupport リモート診断機能の有効化または無効化（個々のE2800またはE5700アレイ）</block>
-  <block id="89b91b07adb5a3dcfb3ec3c5ceeb9d68" category="paragraph"><block ref="89b91b07adb5a3dcfb3ec3c5ceeb9d68" category="inline-link-macro-rx"></block></block>
   <block id="027f6fa25e8c6cb1dd4a84d3a6b4d3a2" category="paragraph"><block ref="027f6fa25e8c6cb1dd4a84d3a6b4d3a2" category="inline-link-macro-rx"></block></block>
   <block id="7ea19a28141d90151f591add5d5f4c23" category="paragraph"><block ref="7ea19a28141d90151f591add5d5f4c23" category="inline-link-macro-rx"></block></block>
   <block id="48da82b563c762c75c4472c5b3850ce0" category="paragraph"><block ref="48da82b563c762c75c4472c5b3850ce0" category="inline-link-macro-rx"></block></block>
@@ -6533,7 +6485,6 @@
   <block id="1c3cbf4675cd02c340c87cbf971b2757" category="paragraph"><block ref="1c3cbf4675cd02c340c87cbf971b2757" category="inline-link-macro-rx"></block></block>
   <block id="188959659c3c9598d3d7f3bbb214d9b9" category="paragraph"><block ref="188959659c3c9598d3d7f3bbb214d9b9" category="inline-link-macro-rx"></block></block>
   <block id="6821c52aa4b7edbcd583dfe534852fc5" category="paragraph"><block ref="6821c52aa4b7edbcd583dfe534852fc5" category="inline-link-macro-rx"></block></block>
-  <block id="1031ed2106e047126b3e17b6a0feb0b3" category="paragraph"><block ref="1031ed2106e047126b3e17b6a0feb0b3" category="inline-link-macro-rx"></block></block>
   <block id="8a487f9c730e86bf79dc7bff0f2a85b9" category="paragraph"><block ref="8a487f9c730e86bf79dc7bff0f2a85b9" category="inline-link-macro-rx"></block></block>
   <block id="9fcb1c693c81e749004e0d42c529a734" category="paragraph"><block ref="9fcb1c693c81e749004e0d42c529a734" category="inline-link-macro-rx"></block></block>
   <block id="b108eaaa22a288fb82dc88d1223317c1" category="paragraph"><block ref="b108eaaa22a288fb82dc88d1223317c1" category="inline-link-macro-rx"></block></block>
@@ -6553,8 +6504,6 @@
   <block id="a5597aaf9e765269137e95d6e2faed3f" category="paragraph"><block ref="a5597aaf9e765269137e95d6e2faed3f" category="inline-link-macro-rx"></block></block>
   <block id="72cbaa931863e75532e0237a06ea9846" category="paragraph"><block ref="72cbaa931863e75532e0237a06ea9846" category="inline-link-macro-rx"></block></block>
   <block id="f4d1acccaa71a7d3dc823feed3999987" category="paragraph"><block ref="f4d1acccaa71a7d3dc823feed3999987" category="inline-link-macro-rx"></block></block>
-  <block id="fc8179a226cf4b490f680b11e570fda9" category="inline-link-macro">AutoSupport ログの取得（個々のE2800またはE5700アレイ）</block>
-  <block id="ab6622d0616a5f2108306aa06557813b" category="paragraph"><block ref="ab6622d0616a5f2108306aa06557813b" category="inline-link-macro-rx"></block></block>
   <block id="7e5d2a73d9fad2c697230c2bb77c960c" category="paragraph"><block ref="7e5d2a73d9fad2c697230c2bb77c960c" category="inline-link-macro-rx"></block></block>
   <block id="775f5c208cbffc0851ce86d9965083f6" category="paragraph"><block ref="775f5c208cbffc0851ce86d9965083f6" category="inline-link-macro-rx"></block></block>
   <block id="4591c32e678bc31f823e5fb526568477" category="inline-link-macro">インストールされているキー管理CSR要求を取得します</block>
@@ -6593,8 +6542,6 @@
   <block id="2d7d86d8aea74f95da1eed2c998c4938" category="paragraph"><block ref="2d7d86d8aea74f95da1eed2c998c4938" category="inline-link-macro-rx"></block></block>
   <block id="c67fcc2f0be461ed1869274c654a9f53" category="paragraph"><block ref="c67fcc2f0be461ed1869274c654a9f53" category="inline-link-macro-rx"></block></block>
   <block id="bb180ca165fe397ea77e56cc2e1727b2" category="paragraph"><block ref="bb180ca165fe397ea77e56cc2e1727b2" category="inline-link-macro-rx"></block></block>
-  <block id="b8b2944d59a8e32a06d69a1329c85d45" category="inline-link-macro">AutoSupport メッセージ収集スケジュールの設定（個々のE2800またはE5700アレイ）</block>
-  <block id="9224081ddb2ebba35e092b9609ce41fa" category="paragraph"><block ref="9224081ddb2ebba35e092b9609ce41fa" category="inline-link-macro-rx"></block></block>
   <block id="58890bed2475e6e4a359116264f81b8e" category="paragraph"><block ref="58890bed2475e6e4a359116264f81b8e" category="inline-link-macro-rx"></block></block>
   <block id="d4f3e4f054f57657aacd266c88cf5a81" category="paragraph"><block ref="d4f3e4f054f57657aacd266c88cf5a81" category="inline-link-macro-rx"></block></block>
   <block id="87bcb060142c34bae4a50640104b7a81" category="paragraph"><block ref="87bcb060142c34bae4a50640104b7a81" category="inline-link-macro-rx"></block></block>
@@ -6683,10 +6630,7 @@
   <block id="8548e484e63f491339db974a0be1ad71" category="paragraph"><block ref="8548e484e63f491339db974a0be1ad71" category="inline-link-macro-rx"></block></block>
   <block id="70a851ae23cb2205bba1d632176590d7" category="paragraph"><block ref="70a851ae23cb2205bba1d632176590d7" category="inline-link-macro-rx"></block></block>
   <block id="f475da827ca5146d63e88c48fcce1009" category="paragraph"><block ref="f475da827ca5146d63e88c48fcce1009" category="inline-link-macro-rx"></block></block>
-  <block id="fcbe986fac160291e6d85c180a85317a" category="paragraph"><block ref="fcbe986fac160291e6d85c180a85317a" category="inline-link-macro-rx"></block></block>
   <block id="dedaab469c9719a939b1dd88ac01e25b" category="paragraph"><block ref="dedaab469c9719a939b1dd88ac01e25b" category="inline-link-macro-rx"></block></block>
-  <block id="d6d27704e9eefa567371004ccc2c9d4a" category="inline-link-macro">Eメール（SMTP）配信方法の指定（個々のE2800またはE5700アレイ）</block>
-  <block id="5f8aa3aa9bd012520927b5a1357f8ff1" category="paragraph"><block ref="5f8aa3aa9bd012520927b5a1357f8ff1" category="inline-link-macro-rx"></block></block>
   <block id="24464dadd1eefb1caa57d072993683ba" category="paragraph"><block ref="24464dadd1eefb1caa57d072993683ba" category="inline-link-macro-rx"></block></block>
   <block id="5abda05a4e4fb9a02a5e16fab5dbe3f6" category="paragraph"><block ref="5abda05a4e4fb9a02a5e16fab5dbe3f6" category="inline-link-macro-rx"></block></block>
   <block id="0e9e5b87fd61749a7ef177c2c3d95f8c" category="paragraph"><block ref="0e9e5b87fd61749a7ef177c2c3d95f8c" category="inline-link-macro-rx"></block></block>
@@ -6743,8 +6687,6 @@
   <block id="17b83b9735339f97820c25fad60b1553" category="paragraph"><block ref="17b83b9735339f97820c25fad60b1553" category="inline-link-macro-rx"></block></block>
   <block id="edbea3131a774ced865d5b090b23c6f5" category="paragraph"><block ref="edbea3131a774ced865d5b090b23c6f5" category="inline-link-macro-rx"></block></block>
   <block id="d265072c730a2db4ebb7ae032b3dd8b6" category="paragraph"><block ref="d265072c730a2db4ebb7ae032b3dd8b6" category="inline-link-macro-rx"></block></block>
-  <block id="ed8ff3e3e935d1f01db69b1edb27583f" category="inline-link-macro">AutoSupport 配信設定のテスト（個々のE2800またはE5700アレイ）</block>
-  <block id="25e35f8e194692fa821197447d509a7a" category="paragraph"><block ref="25e35f8e194692fa821197447d509a7a" category="inline-link-macro-rx"></block></block>
   <block id="3e9df718ef4cb4579cbb566abb3797ba" category="paragraph"><block ref="3e9df718ef4cb4579cbb566abb3797ba" category="inline-link-macro-rx"></block></block>
   <block id="59f7868c8dd882a0fc44709e9ede6cac" category="paragraph"><block ref="59f7868c8dd882a0fc44709e9ede6cac" category="inline-link-macro-rx"></block></block>
   <block id="a67128b93abe8a7db88a9450c83f8b6c" category="paragraph"><block ref="a67128b93abe8a7db88a9450c83f8b6c" category="inline-link-macro-rx"></block></block>
@@ -6804,9 +6746,6 @@
   <block id="15c050a6a9859238d1500e30a3507f10" category="section-title">すべてのストレージアレイ用のAutoSupport コマンド</block>
   <block id="e4b1a19d81413c02cbff8dc83cf04445" category="inline-link-macro">AutoSupport の有効化または無効化（個々のアレイ、E2800、E5700アレイのみ）</block>
   <block id="f08f0edf758a95b8fc4b6cbefc244dd6" category="paragraph"><block ref="f08f0edf758a95b8fc4b6cbefc244dd6" category="inline-link-macro-rx"></block></block>
-  <block id="1424867a14c9a2cc6892547d4dbda4df" category="section-title">E2800、E5700のAutoSupport コマンド</block>
-  <block id="19b9c937ff30bddaf295e386473f62d1" category="inline-link-macro">AutoSupport Remote Diagnostics機能の有効化または無効化（個々のE2800またはE5700アレイ）</block>
-  <block id="bd5a4e5c160e7e2886150485e8b7ce59" category="paragraph"><block ref="bd5a4e5c160e7e2886150485e8b7ce59" category="inline-link-macro-rx"></block></block>
   <block id="75d0cfb68b71d4c1551f137d574c98e2" category="summary">E2700およびE5600のコマンド</block>
   <block id="8530f14ba8e3bcb3452132e3bd4d090f" category="inline-link-macro">同期ミラーリングをアクティブ化します</block>
   <block id="666e69d8a1bbdaada561e5e80709030a" category="paragraph"><block ref="666e69d8a1bbdaada561e5e80709030a" category="inline-link-macro-rx"></block></block>
@@ -6857,7 +6796,6 @@
   <block id="fbeb1d72f27a56ff21cdced83b4aa7c0" category="section-title">自動ロードバランシングのコマンド</block>
   <block id="3fd189c2e587458713eb634145bec876" category="inline-link-macro">自動ロードバランシングを有効または無効にするストレージアレイを設定します</block>
   <block id="598a1b95e8b521f17974886964f9cbcc" category="paragraph"><block ref="598a1b95e8b521f17974886964f9cbcc" category="inline-link-macro-rx"></block></block>
-  <block id="fb832e8292b69e05ca19a3ac025cb97b" category="summary">E2800、E5700、EF600、およびEF300のコマンド</block>
   <block id="31c2f685d4833664806d295f3c7b4bc6" category="summary">SANtricity コマンドの構文と使用法について説明します。</block>
   <block id="9692ef191259605d058276292b4075e0" category="doc">SANtricity システムマネージャのコマンド</block>
   <block id="eba4a8577f6ea49ab0d9329cade5c5db" category="sidebar">SANtricity CLIのドキュメント</block>
@@ -7082,7 +7020,6 @@
   <block id="96b59f808698df6864754108a4c5ddbd" category="sidebar">設定...</block>
   <block id="ffacf3d692457ebf1248300f2834f31b" category="sidebar">asyncmirrorGroupを設定してください</block>
   <block id="d38d98bd152cc610b8b378e8e1c7c8fd" category="sidebar">監査ログを設定します</block>
-  <block id="0e75666e368c3133391e3e9b9523ef23" category="sidebar">AutoSupport https配信方法e2800またはe5700を設定します</block>
   <block id="9655870dc43c3f8521bf40f7ef9153fb" category="sidebar">cgsnapvolumeを設定する</block>
   <block id="16df982c84fa9faf95f5cfe511a88da3" category="sidebar">整合グループの属性を設定します</block>
   <block id="a36757c06c3eb71232d4624d16fc5074" category="sidebar">consistencygroup addcgmembervolumeを設定します</block>
@@ -7100,7 +7037,6 @@
   <block id="2af930af4da672ba35dfaf2943daa92e" category="sidebar">ドライブのセキュリティIDを設定します</block>
   <block id="df357b9536918c73b72fa718340518fc" category="sidebar">set drive serviceallowedindicator</block>
   <block id="dfd87893d597527d913aa918cda6183d" category="sidebar">ドライブチャネルを設定します</block>
-  <block id="fc658572d597be0a6ae14e8e5bb211aa" category="sidebar">EメールSMTP配信方法e2800またはe5700を設定します</block>
   <block id="74e78c646a8c24344aeb3dee04a792e9" category="sidebar">Eメールアラートを設定します</block>
   <block id="73ca504fee965cead780f40fe6a32275" category="sidebar">イベントアラートを設定します</block>
   <block id="4d9a2591bb8801345b9a59696f18cfc3" category="sidebar">ホストを設定します</block>
@@ -7326,10 +7262,8 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">カテゴリ別のコマンド</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">これらの手順を実行する前に、に記載されている手順を実行してください <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
-  <block id="e0180366a7542136793eb497779f0039" category="summary">SANtricity OS 11.60リリースには、httpベースのバージョンのCLI（Secure CLIまたはSMcliとも呼ばれます）をSANtricity System Managerから直接ダウンロードしてインストールする機能が含まれていました。</block>
   <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">ダウンロード可能なSMcliコマンドラインパラメータ</block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60以降のダウンロード可能なSMcliコマンドラインパラメータ</block>
-  <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">SANtricity OS 11.60リリースでは、httpベースのバージョンのCLI（「Secure CLI」またはSMcli）をSANtricity System Managerから直接ダウンロードしてインストールできます。このダウンロード可能なバージョンのSMcliは、EF600、EF300、E5700、EF570、E2800、 およびEF280コントローラの場合：SANtricity システムマネージャからSMcliをダウンロードするには、* Settings *&gt;* System * and * Add-ons *&gt;* Command Line Interface *を選択します。</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">CLIコマンドを実行する管理システムに、Java Runtime Environment（JRE）バージョン8以降がインストールされている必要があります。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">従来のコマンドラインパラメータ</block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">多要素認証</block>
@@ -7389,7 +7323,6 @@
   <block id="bcf0c6816d00842bd216f56545da7e12" category="list-text">最高のセキュリティを実現するには、ファイルを受け取るtrustコマンドを使用して、証明書がユーザ検証と実行中の間で変更されないようにする必要があります</block>
   <block id="6e560cf6c527d4c279a89d40d90f0f5f" category="summary">SANtricity OS 11.40リリースでは、Webサービスが組み込まれたE2800およびE5700コントローラ向けに、セキュアなHTTPSプロトコルを使用してコマンドラインを操作する機能が導入されました。これらのコントローラでは、必要に応じてSYMbolプロトコルを使用してコマンドラインを操作することもできます。</block>
   <block id="fcd00ec6de7f196ccf5dd2134ec8c2eb" category="section-title">11.53以前のコマンドラインパラメータ</block>
-  <block id="7f350558fa31543d0376cb3d9a59b5a6" category="paragraph">SANtricity OS 11.40リリースでは、Webサービスが組み込まれたE2800およびE5700コントローラ向けに、セキュアなHTTPSプロトコルを使用してコマンドラインを操作する機能が導入されました。これらのコントローラでは、必要に応じてSYMbolプロトコルを使用してコマンドラインを操作することもできます。SYMbolプロトコルは、E2700およびE5600コントローラでサポートされる唯一のプロトコルです。既存のスクリプトを引き続き使用できるようにし、移行の手間を最小限に抑えるために、CLIのオプションと構文はできるだけそのままにしてあります。ただし、E2800およびE5700コントローラのセキュリティ、認証、AutoSupport 、アラートメッセージの機能にはいくつかの変更があるため、これらのコントローラでは一部のCLI構文が廃止されています。一部の構文は、E2800またはE5700で新しいHTTPSプロトコルが使用される場合にのみ廃止されます。</block>
   <block id="992fcf8487a5a376d1da947a5fa72b2b" category="admonition">RAID 1レベルのボリュームにはシンプロビジョニングを使用できません。</block>
   <block id="57a99d03719693273aad8c6972e18af2" category="paragraph">このパラメータは、作成するボリュームのブロックサイズを設定します。の値<block ref="cfcd208495d565ef66e7dff9f98764da" prefix=" " category="inline-code"></block> または、設定されていないパラメータはデフォルトのブロックサイズを使用します。</block>
   <block id="a5c016ef7bdfc21e730e1ca6061742d6" category="paragraph">8.70で、が追加されました<block ref="ac82d3d2e40087720415657115e05003" prefix=" " category="inline-code"></block> および<block ref="1feb883ec49856bbc2f127143c719ed0" prefix=" " category="inline-code"></block> パラメータ</block>
@@ -7467,8 +7400,6 @@
   <block id="84b6254e1011f96e6fb4b9cee656d730" category="paragraph">を追加しました<block ref="ab1f19425d80842e646857a8f89eeecb" prefix=" " category="inline-code"></block> パラメータ</block>
   <block id="a74eb5af8064272ba51d646a8d151084" category="paragraph"><block ref="a74eb5af8064272ba51d646a8d151084" category="inline-xref-macro-rx"></block></block>
   <block id="138fadba8fa114a89807217041227cdc" category="paragraph">廃止されたコマンドです。</block>
-  <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">このコマンドは、E2700、E5600、E2800、E5700などの個 々 のストレージアレイを環境に設定します。 EF600およびEF300アレイ（すべてのSMcliパッケージがインストールされている必要があります。</block>
-  <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Support Adminロールが必要です。</block>
   <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80で、EF600およびEF300アレイのサポートが追加されました。</block>
   <block id="b5686fd94e2c11d0beb5597a3520313c" category="summary">show check volume parity jobコマンドは、指定されたボリュームチェックパリティジョブとジョブのステータスを表示します。</block>
   <block id="dd6daf5faf9779e778db769f3be87c3e" category="paragraph">。<block ref="444d9d2a89ab0f7e0925c167387212b0" prefix=" " category="inline-code"></block> コマンドは、指定したボリュームチェックパリティジョブとジョブのステータスを表示します。</block>
@@ -7519,7 +7450,6 @@
   <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
   <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">SANtricity 11.70</block>
   <block id="cc1ba14f8dc9bd7ba20e2aa654cde10b" category="inline-link">E シリーズ / EF シリーズ SANtricity OS に関する通知です</block>
-  <block id="df9168fd1981b1464f7c0d38b2207c30" category="paragraph"><block ref="df9168fd1981b1464f7c0d38b2207c30" category="inline-link-rx"></block></block>
   <block id="050910c569f1cb9044086ceee795e2f8" category="sidebar">SANtricity System Manager 11.8</block>
   <block id="1cf9153cf0b1bfe4b703e41b4509763e" category="sidebar">SANtricity Unified Manager 6</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
@@ -7530,7 +7460,6 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
-  <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">このコマンドは、E2800、E5700、EF600、またはEF300の個々のアレイを環境 します。E2700およびE5600のストレージアレイでは動作しません。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大仮想容量は256TBです。</block>
   <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">SANtricity System Manager組み込みCLIユーザアシスタンスへようこそ。このヘルプでは、コマンドラインインターフェイス（CLI）を使用してストレージアレイを設定、監視、および調整する方法について説明します。</block>
   <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">以前のバージョンのSMcliと同様、SANtricity System Managerからダウンロード可能なSMcliには、固有のパラメータセットがあります。SANtricity OS 11.53以前のリリースでのコマンドラインパラメータの使用方法については、を参照してください <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>。</block>
@@ -7550,10 +7479,141 @@
   <block id="dbb8d2fd09a59e1ab8494de138ceffdb" category="list-text">これには、OSネイティブのブロックデバイスからの読み取りとSCSI Inquiryコマンドの実行が含まれます。</block>
   <block id="5b1cc65d11915b727018c6056792dcef" category="section-title">SANtricity 11.81</block>
   <block id="a92322756f07d387c173b27babcdad72" category="paragraph">次の表に、リリース11.81でのCLIコマンドとスクリプトコマンドの変更点を示します。</block>
-  <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">を追加しました<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> パラメータ</block>
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">コントローラは「a」または「b」として識別されます。各コントローラには最大4つのホストチャネルを設定でき、各チャネルは1~8の番号で一意に識別されます。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有効なコントローラ識別子とホストチャネルの値は<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block>、<block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、です。<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block>、<block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block>、、<block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block><block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block>、<block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block>、、<block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block><block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>または。</block>
-  <block id="d67b41e45a16f6e51b2d5c893efb6386" category="paragraph">このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。</block>
   <block id="2bc4f5f65d530be66960542e14f46660" category="paragraph">このコマンドは、Fibre Channel経由の非同期ミラーリングにのみ使用できます。</block>
+  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
+  <block id="a354034e1792cd00f19c11de116a69f4" category="paragraph">このコマンドをE400、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
+  <block id="4818a1577bb873e9a1bea01f94e168fb" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。</block>
+  <block id="4ec343cf7b1916cb714cf2eed7cc2a56" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
+  <block id="076b233b5a4449b721cbb8368f8fb958" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Support Adminロールが必要です。</block>
+  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。</block>
+  <block id="4cd285c149380629899b809a1fcfca80" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
+  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
+  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
+  <block id="4808830345a823114a0ff2909f8a5d34" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。</block>
+  <block id="2ef945e8385c3b3383dd40b9f20b81c9" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。</block>
+  <block id="5a55cb40d8562db2ade7e87c8407da61" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
+  <block id="b4089211682b23edd69e88a53d0dea73" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
+  <block id="96fbedb8e23ee770715d64868d91f512" category="paragraph"><block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix="" category="inline-code"></block></block>
+  <block id="8f786c6665f112a9ec42e4921247dfaf" category="paragraph">署名済み証明書と一緒に秘密鍵をダウンロードできます。パラメータは<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>valueとともに使用する必要があります<block ref="71cc3f1d4dc205619a9d8134cb1e6c5d" prefix=" " category="inline-code"></block>。</block>
+  <block id="5c12358ddfa7bc3dbacf8a9e26ff15f7" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
+  <block id="c65db51b73509a7f00c37eaba7ab2a29" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、またはEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
+  <block id="f46b3f4800a69abecf156a53124b25a1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
+  <block id="672bddf25a5148ad89f2d0de107bf704" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。</block>
+  <block id="e127d5ca4333d5b79c57c2b351704e07" category="paragraph"><block ref="2496da2f393859299e91ec0dcf920087" prefix="" category="inline-code"></block></block>
+  <block id="4b2b7d34e1c9c58df14d668116c7e27a" category="paragraph">サーバのキーサイズとして、、<block ref="be767243ca8f574c740fb4c26cc6dceb" prefix=" " category="inline-code"></block>、またはの<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>値を指定できます<block ref="051928341be67dcba03f0e04104d9047" prefix=" " category="inline-code"></block>。キーサイズが選択されていない場合、デフォルトのキーサイズは3072です。</block>
+  <block id="2f16a4e1f295aafddbecc5b08af16dfa" category="summary">save controller arrayManagementCSRコマンドは、証明書の詳細を表示できるように、コントローラにインストールされているサーバ証明書署名要求（CSR）を取得します。</block>
+  <block id="41f378e1ae526513ccf1b18f5ef2e8cd" category="paragraph">コマンドは<block ref="1de7a3761ee490eb69b0d5dd1bc9f0c5" prefix=" " category="inline-code"></block>、コントローラにインストールされているサーバのCertificate Signing Request（CSR；証明書署名要求）を取得して、証明書の詳細を表示できます。</block>
+  <block id="7f838bc9deec658242ceadefd99b3992" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。</block>
+  <block id="f0e9f8c4af25d5525e5279cfcef7f2f1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSecurity Adminロールが必要です。</block>
+  <block id="52907868d469a177418995e68ae532d1" category="summary">配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。</block>
+  <block id="da0a49824cfffdf78423229085d4c3e9" category="doc">AutoSupportディスパッチサイズ制限の設定</block>
+  <block id="8827ec62bb9ef8459dad00c458fbe0a7" category="paragraph">は、<block ref="2da3a20c3f29f91772c0863129cf682b" prefix=" " category="inline-code"></block>配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。</block>
+  <block id="85b16c4ca5bf32600a6b672e3acfe5ba" category="paragraph">このコマンドを使用すると、ユーザはEメールサーバのサポート内容に基づいてEメールサイズを設定できます。サイズを大きくすると、サポートバンドルが切り捨てられる可能性が低くなります。</block>
+  <block id="a766435b022362f5648e0c4e8f4fc086" category="admonition">通常は、NetAppサポートから指示がないかぎり、HTTPSサイズを設定しないでください。</block>
+  <block id="0b003c45e2bea82dff19436ed2914393" category="paragraph"><block ref="5e056c500a1c4b6a7110b50d807bade5" prefix="" category="inline-code"></block></block>
+  <block id="e44f9cdc3f5de3ef655d78ea6ea1063c" category="paragraph">HTTPSディスパッチの最大サイズ（バイト）。最大サイズが設定されていない場合、デフォルトは50MiBです。値が「unlimited」または0の場合、サイズ制限はありません。指定できる最小サイズは2MiBです。</block>
+  <block id="ae1bde34794270bb273f407db5974619" category="paragraph"><block ref="0c83f57c786a0b4a39efab23731c7ebc" prefix="" category="inline-code"></block></block>
+  <block id="f03f94e81f0ba8cdc5f1bbeae4398791" category="paragraph">Eメール（SMTP）の最大配信サイズ（バイト）。最大サイズが設定されていない場合、デフォルトは5MiBです。値が「unlimited」または0の場合、サイズ制限はありません。指定できる最小サイズは2MiBです。</block>
+  <block id="1cb7e72b12a0a45d204da26fb8f1d92e" category="paragraph">8.90</block>
+  <block id="98df893211013e4bedd978a6731f31a9" category="doc">AutoSupport HTTP(S)配信方法の指定</block>
+  <block id="245aed6426acccf934bd6a10b9ad9de7" category="paragraph"><block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix="" category="inline-code"></block></block>
+  <block id="88210d391247e39637e08468431d164c" category="paragraph">AutoSupportディスパッチを送信するEメールアドレス。このパラメータを複数回指定すると、ディスパッチを複数のアドレスに送信できます。</block>
+  <block id="162df76e61114a9bc1095cea2e1e989f" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300ストレージアレイに適用されます。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、コマンドは管理ドメイン内のすべてのアレイに適用されます。</block>
+  <block id="43c3a57d07f46965c77984bf6d190860" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。</block>
+  <block id="980650206e421df11ba972784e263d5e" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
+  <block id="f67115ecdc36bb812b11a0ffbd6afb0c" category="doc">AutoSupportメンテナンス時間の有効化または無効化</block>
+  <block id="9f3cf5bf61b5f1c707c6850bc8b41cd9" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。</block>
+  <block id="0963d08ec539961ce732d53f279fde56" category="paragraph">このコマンドをE4000、2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
+  <block id="904d825f949c4d18e91d96fe2b4cccb7" category="paragraph">メディアスキャンを実行する日数。有効な値は、（メディアスキャンをオフにする）、または<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>day to<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block> days（<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>dayは最速のスキャン速度、<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>daysは最も遅いスキャン速度）です。<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>または<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>~<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>以外の値を指定すると<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>、メディアスキャンは機能しません。</block>
+  <block id="2fe5dde43e76b44ed3412b7f72a2ec67" category="list-text">SSDドライブの消耗度に関する情報（アレイにSSDドライブが搭載されていない場合は表示されません）：</block>
+  <block id="fd979bea5528b4b653c26b7095b2585b" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Admin、Support Admin、またはStorage Monitorロールが必要です。</block>
+  <block id="5b07c4793f70ad68331f8bbc6375b6a2" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のストレージアレイが対象です。</block>
+  <block id="e0edf8f3e094504eb3aad1bcfa63b7a4" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
+  <block id="2ddf6adc2ffbbed684ed33c230aba7a4" category="paragraph">このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。</block>
+  <block id="c0af9350de0f363c5a29eca79351e85f" category="paragraph">このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。</block>
+  <block id="53678d9fc91d730898effc66afed440c" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のアレイに適用されます。E2700およびE5600のストレージアレイでは動作しません。</block>
+  <block id="8e5de270187b60f585a76292f4955771" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、およびE5700のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
+  <block id="e0e0f1fd1b2a76e36519194e58e6a746" category="paragraph">Eシリーズストレージシステムで使用できる管理者コマンドは次のとおりです。</block>
+  <block id="a0a6d235683f3b056cb81207a953a70a" category="inline-link-macro">AutoSupportメンテナンス時間の有効化または無効化</block>
+  <block id="136305f16eda9c995d0dafe2ae33afa5" category="paragraph"><block ref="136305f16eda9c995d0dafe2ae33afa5" category="inline-link-macro-rx"></block></block>
+  <block id="4337e1e9ae1833f743a6ecf1e1d2cc16" category="inline-link-macro">AutoSupport OnDemand機能を有効または無効にする</block>
+  <block id="fbcc665052e7eece7504d9b0fa7e1fbc" category="paragraph"><block ref="fbcc665052e7eece7504d9b0fa7e1fbc" category="inline-link-macro-rx"></block></block>
+  <block id="dd265fc010ca9aeeda8af3ed045c143f" category="paragraph"><block ref="dd265fc010ca9aeeda8af3ed045c143f" category="inline-link-macro-rx"></block></block>
+  <block id="4388180ba8bee32fe0d5da2825a6ab8e" category="paragraph"><block ref="4388180ba8bee32fe0d5da2825a6ab8e" category="inline-link-macro-rx"></block></block>
+  <block id="c8bcea5e4e09a4efacf56501abebf738" category="paragraph"><block ref="c8bcea5e4e09a4efacf56501abebf738" category="inline-link-macro-rx"></block></block>
+  <block id="81272e11e04b2aab3ed70229486cd9a8" category="paragraph"><block ref="81272e11e04b2aab3ed70229486cd9a8" category="inline-link-macro-rx"></block></block>
+  <block id="1c29596e76fddad4525d647ab1ce71da" category="inline-link-macro">AutoSupportメッセージ収集スケジュールの設定</block>
+  <block id="1c94f20da8d04fd6812183af204b7ad0" category="paragraph"><block ref="1c94f20da8d04fd6812183af204b7ad0" category="inline-link-macro-rx"></block></block>
+  <block id="ad9ea75e27f49501cd9f1cbce1d4aa94" category="paragraph"><block ref="ad9ea75e27f49501cd9f1cbce1d4aa94" category="inline-link-macro-rx"></block></block>
+  <block id="667929bcd97aee938187018944e42c7d" category="paragraph"><block ref="667929bcd97aee938187018944e42c7d" category="inline-link-macro-rx"></block></block>
+  <block id="0520ab41af41ebec72b058bb70369c2c" category="paragraph"><block ref="0520ab41af41ebec72b058bb70369c2c" category="inline-link-macro-rx"></block></block>
+  <block id="c8e27990f9b14e5758d740da8c613fb4" category="paragraph"><block ref="c8e27990f9b14e5758d740da8c613fb4" category="inline-link-macro-rx"></block></block>
+  <block id="b4145d0681d490a7d2e0e89a3c70fbf1" category="inline-link-macro">AutoSupport設定の表示</block>
+  <block id="78cd161b32c70a39191c00ca15dfc73d" category="paragraph"><block ref="78cd161b32c70a39191c00ca15dfc73d" category="inline-link-macro-rx"></block></block>
+  <block id="282a66aa79bdcd790e54ba76f725ae71" category="inline-link-macro">AutoSupport配信設定のテスト</block>
+  <block id="59ed469f8c0fb1e7540b9c5e0e274379" category="paragraph"><block ref="59ed469f8c0fb1e7540b9c5e0e274379" category="inline-link-macro-rx"></block></block>
+  <block id="ca611b7f5b98899a7abee91397e031fa" category="paragraph">Eシリーズストレージシステムで使用できるアラート設定コマンドは次のとおりです。</block>
+  <block id="478f3d35dcc84bea1a78b7ac21781c63" category="paragraph">次に、Eシリーズストレージシステムで使用できるアレイ構成コマンドのリストを示します。</block>
+  <block id="27a16d7fcbdb2e5222cbb08871982f58" category="paragraph">次に、Eシリーズストレージシステムで使用できるauto supportコマンドのリストを示します。</block>
+  <block id="3debeae67dbeb507c3cb1a41e3d15efe" category="section-title">E4000、EF300、EF400、E2800、E5700用のAutoSupportコマンド</block>
+  <block id="b9aa6488935866e17a533f7cb9907f95" category="paragraph"><block ref="b9aa6488935866e17a533f7cb9907f95" category="inline-link-macro-rx"></block></block>
+  <block id="48dd72449a509b862d1dbc2e5df66c1d" category="paragraph"><block ref="48dd72449a509b862d1dbc2e5df66c1d" category="inline-link-macro-rx"></block></block>
+  <block id="91791fe8747c000ea0ee9806ad0b2697" category="paragraph">次に、Eシリーズストレージシステムで使用できるコマンドの一覧を示します。</block>
+  <block id="c71942c4a8b171695841ba7046fc3eca" category="inline-link-macro">AutoSupportリモート診断機能の有効化または無効化</block>
+  <block id="2fa9ab72f6f5ccc0cf969e1a230ce942" category="paragraph"><block ref="2fa9ab72f6f5ccc0cf969e1a230ce942" category="inline-link-macro-rx"></block></block>
+  <block id="fb10773226243f93cf4024b28436d09c" category="paragraph">E2700およびE5600システムで使用できるコマンドは次のとおりです。</block>
+  <block id="365f3ca0540bf35310ae0332b69b7733" category="summary">E4000、E2800、E5700、EF600、EF300のコマンド</block>
+  <block id="d98c52acb3963aab4c26465735d8ccd1" category="paragraph">以下に、E4000、E2800、E5700、EF600、およびEF300システムで使用できるコマンドを示します。</block>
+  <block id="a7e37cb158c978c104225254d414a1d2" category="paragraph">次に、Eシリーズストレージシステムで使用できるミラーリングコマンドのリストを示します。</block>
+  <block id="3c987a7895df93dcf7095d41701a10a9" category="paragraph">次に、Eシリーズストレージシステムで使用できるパフォーマンス調整コマンドのリストを示します。</block>
+  <block id="273c6d6b2b49f1a011b0804803e8c061" category="paragraph">Eシリーズストレージシステムで使用できるレプリケーションコマンドは次のとおりです。</block>
+  <block id="cb7623073f82d3677db1ad1bb88781e9" category="paragraph">次に、Eシリーズストレージシステムで使用できるセキュリティコマンドの一覧を示します。</block>
+  <block id="cda0a54617eafd4a642b731508c46594" category="paragraph">ご使用のEシリーズストレージシステムで使用できるストレージ監視担当者のコマンドを次に示します。</block>
+  <block id="e6758e83fedb51f643c556959edf8316" category="paragraph">次に、Eシリーズストレージシステムで使用できるボリューム構成コマンドのリストを示します。</block>
+  <block id="32ab50a97e637694ca3f82a504b945c5" category="section-title">スクリプトファイルにコメントを追加する方法</block>
+  <block id="ec6f7bfaf6737c1c0275c9a2144a4d8d" category="section-title">CLIコマンドラッパー構文の表記規則</block>
+  <block id="4051b543eb82d06a3875bc1d2c902524" category="paragraph">SYMbolプロトコルは、E2700およびE5600コントローラでサポートされる唯一のプロトコルです。既存のスクリプトを引き続き使用できるようにし、移行の手間を最小限に抑えるために、CLIのオプションと構文はできるだけそのままにしてあります。ただし、E2800およびE5700コントローラのセキュリティ、認証、AutoSupport 、アラートメッセージの機能にはいくつかの変更があるため、これらのコントローラでは一部のCLI構文が廃止されています。一部の構文は、E2800またはE5700で新しいHTTPSプロトコルが使用される場合にのみ廃止されます。</block>
+  <block id="0c691b598eb5dcf4dbe4aee57abd7fce" category="paragraph">CLIでの詳細なエラーレポートは、次のように機能します。</block>
+  <block id="7ab16c582be12bf2ea6a9bcbf26ef849" category="summary">SANtricity OS 11.60以降のリリースでは、SANtricityシステムマネージャからHTTPベースバージョンのCLI（Secure CLIまたはSMcliとも呼ばれる）を直接ダウンロードしてインストールできます。</block>
+  <block id="3bcaed463dcace2a5d7df8ac788e2faa" category="paragraph">SANtricity OS 11.60以降のリリースでは、SANtricityシステムマネージャからHTTPベースバージョンのCLI（「Secure CLI」またはSMcliとも呼ばれます）を直接ダウンロードしてインストールできます。</block>
+  <block id="326cbd85dc5f285361de38f20d31c9df" category="paragraph">SMcliのダウンロード版は、E4000、EF600、EF300、E5700、EF570、E2800、EF280の各コントローラで利用できます。SANtricityシステムマネージャからSMcliをダウンロードするには、*[設定]*[システム]*および*[アドオン]*[コマンドラインインターフェイス]*を選択します。</block>
+  <block id="afbe36b824d95e989a52e9001491c721" category="summary">終了ステータスは、実行されたコマンドに対して返されます。次の表に、返される可能性のある終了ステータスと各ステータスの意味を示します。</block>
+  <block id="4e0440694d3b4fa172c69a3cac707e21" category="paragraph">終了ステータスは、実行されたコマンドに対して返されます。次の表に、返される可能性のある終了ステータスと各ステータスの意味を示します。</block>
+  <block id="20b10ae58c66c5b5927a513b2111c0c0" category="section-title">終了ステータスの定義</block>
+  <block id="6fde9e35cfbe9b570c98b18c68aa40b2" category="summary">以降のセクションのスクリプトコマンドは、スクリプトコマンドを実行できる最小ファームウェアレベルを示しています。</block>
+  <block id="94077f6f150325fb211db641c09ce314" category="paragraph">スクリプトコマンドとコマンドパラメータは、すべてのバージョンのコントローラファームウェアで実行されるわけではありません。スクリプト・コマンドでは'ファームウェア・レベルは最小ファームウェア・レベルという見出しの下に表示されます 次に、ファームウェアレベルに関する情報の解釈方法について説明します。</block>
+  <block id="1e49df5be0b19054e9c0c14af53a4b02" category="paragraph">Windows PowerShellは、Windowsコマンドプロンプトを改良したもので、一連のコマンドとスクリプト機能が強化されています。CLIコマンドとスクリプトコマンドはすべてWindows PowerShellで実行できますが、Windows PowerShellには独自のフォーマット要件がいくつかあります。要件は次のとおりです。</block>
+  <block id="94bb5b961b405d7b81426727ccc3745a" category="summary">入力した値または名前に基づいて、CLIコマンドには特定の形式ルールが適用されます。</block>
+  <block id="ad6459132a0e9d663a3740bfbcd40e30" category="section-title">CLI形式のルール</block>
+  <block id="ef4148f48307b8c9275628c89160b45e" category="summary">対話型モードでは、コマンドの前にを付けずに個 々 のコマンドを実行できます<block ref="6c1c8c9ef027362a508a3965a2e7831b" prefix=" " category="inline-code"></block>。</block>
+  <block id="1ebdd2ce41d7ee389eba398f485abca0" category="summary">CLIコマンドで使用する名前については、特定のルールに従う必要があります。</block>
+  <block id="1f112336dfafee86bd5edd7429ea6243" category="paragraph">CLIを使用すると、DOSプロンプト、Linuxオペレーティングシステムパス、Solarisオペレーティングシステムパスなどのオペレーティングシステムプロンプトからコマンドを実行できます<block ref="d7aa32b0c582222819b91c8e0ccca765" prefix=" " category="inline-code"></block>。</block>
+  <block id="85aeffdc26f30cd5e36a41f6c2599ecb" category="paragraph">CLIコマンドは、次の要素で構成されています。</block>
+  <block id="d7219d378ce621ad5593ef3541fe98c9" category="summary">正常に実行するには、スクリプトコマンドを適切な構造で記述する必要があります。</block>
+  <block id="9206a3c52cc374d2c4bcd4c2435f0a4c" category="paragraph">正常に実行するには、スクリプトコマンドを適切な構造で記述する必要があります。</block>
+  <block id="969c9aafd3ad326a73ec93408a332797" category="paragraph">これらのコマンドは一般的なカテゴリに分類され、ストレージアレイの設定やメンテナンスにコマンドを適用する際に再利用されます。次の表に、スクリプトコマンドの一般的な形式と各コマンドの定義を示します。</block>
+  <block id="9f83268e1b8fb56b39b289fd0b017d6d" category="summary">スクリプトコマンドを記述する場合は、次のガイドラインに従ってください。</block>
+  <block id="5e40a8e83b3a3f822534bef7faa8799b" category="paragraph"><block ref="5e40a8e83b3a3f822534bef7faa8799b" category="inline-link-rx"></block></block>
+  <block id="11b408e3275d65fef594050a844c8104" category="section-title">SANtricity 11.90</block>
+  <block id="bb368ace2c104ebc1936c99e46744a7d" category="paragraph">次の表に、リリース11.90でのCLIコマンドとスクリプトコマンドの変更点を示します。</block>
+  <block id="277f6129cc659f62a7535c5645940126" category="paragraph"><block ref="277f6129cc659f62a7535c5645940126" category="inline-link-rx"></block></block>
+  <block id="cf7e9e105e18990ba410e1edfb66d617" category="inline-link">コントローラアレイの保存管理CSR</block>
+  <block id="7c2ee57c55f996ae9a0c1a10ddaeaa6e" category="paragraph"><block ref="7c2ee57c55f996ae9a0c1a10ddaeaa6e" category="inline-link-rx"></block></block>
+  <block id="bc5a1792a55da7335139be566f27d0fc" category="paragraph">パラメータを追加しました<block ref="74375e3e560ea0ccb01ea5e27866909a" prefix=" " category="inline-code"></block>。</block>
+  <block id="eba005731b64cdceb716385f6b0ab248" category="inline-link">Eメール（SMTP）の配信方法を設定する</block>
+  <block id="2a1fee9f320df717c9070db7c760a0fc" category="paragraph"><block ref="2a1fee9f320df717c9070db7c760a0fc" category="inline-link-rx"></block></block>
+  <block id="2fec64df4b8f4cad94037197121f99b0" category="paragraph">パラメータを追加しました<block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix=" " category="inline-code"></block>。</block>
+  <block id="f428d3f8fa259d23b94a6fdc0a8dc32a" category="inline-link">AutoSupport設定の表示</block>
+  <block id="77d8b5d953985ae2992c2ac0a2b2280d" category="paragraph"><block ref="77d8b5d953985ae2992c2ac0a2b2280d" category="inline-link-rx"></block></block>
+  <block id="79f5e5b1e1fbcae8b3d82e2c774aa0ba" category="paragraph">コマンドの出力例にディスパッチサイズの制限と送信先Eメールアドレスが追加されました。</block>
+  <block id="e873b0fb20d6ee2e171d5efa1a635264" category="inline-link">storageArray keyManagementCertificateをダウンロード</block>
+  <block id="49dc8933ffa823c7e0c676d71b74060a" category="paragraph"><block ref="49dc8933ffa823c7e0c676d71b74060a" category="inline-link-rx"></block></block>
+  <block id="2c6896158f13229becb081b45d1be339" category="paragraph">パラメータを追加しました<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>。</block>
+  <block id="4a8ad30f5e47d5591e164cfbf74f1d7a" category="paragraph"><block ref="4a8ad30f5e47d5591e164cfbf74f1d7a" category="inline-link-rx"></block></block>
+  <block id="5d41ad4f145ade32f5e478932b6efea5" category="sidebar">AutoSupportディスパッチサイズ制限の設定</block>
+  <block id="d941967741f1767955be20b5fca52617" category="sidebar">AutoSupport https配信方法の設定</block>
+  <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">EメールのSMTP配信方法の設定</block>
 </blocks>

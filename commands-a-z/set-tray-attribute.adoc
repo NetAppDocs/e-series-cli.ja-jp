@@ -7,7 +7,7 @@ summary: set trayコマンドは、トレイのユーザ定義属性を設定し
 = トレイ属性を設定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ set trayコマンドは'トレイのユーザー定義属性を設定します
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"]
 ----

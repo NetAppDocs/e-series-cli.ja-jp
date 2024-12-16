@@ -7,7 +7,7 @@ summary: show check volume parity jobsコマンドを使用すると、すべて
 = ボリュームパリティチェックジョブを表示
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: show check volume parity jobsコマンドを使用すると、すべて
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show check volume parity jobs;
 ----

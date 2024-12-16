@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: reset storageArray autoSupport AutoSupport scheduleコマンドは、AutoSupport メッセージを管理ソフトウェアによって生成されたランダムな値に送信する、毎日または毎週の特定の時刻および曜日をリセットします。 
 ---
-= AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）
+= AutoSupport メッセージ収集スケジュールをリセットします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ reset storageArray autoschedule' AutoSupport コマンドは、AutoSupport メ�
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
@@ -37,7 +37,7 @@ reset storageArray autoschedule' AutoSupport コマンドは、AutoSupport メ�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 reset storageArray autoSupport schedule
 ----

@@ -7,7 +7,7 @@ summary: 'recover volumeコマンドは"ドライブ上のユーザーデータ�
 = RAIDボリュームをリカバリします
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ recover volumeコマンドは'ドライブ上のユーザー・データ領域�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -45,7 +45,7 @@ recover volumeコマンドは'ドライブ上のユーザー・データ領域�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 recover volume (drive=pass:quotes[(_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_])) |
 (drives=pass:quotes[_trayID1_,pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn,_]pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn_])) |

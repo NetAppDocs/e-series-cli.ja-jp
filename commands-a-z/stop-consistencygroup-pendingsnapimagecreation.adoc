@@ -7,7 +7,7 @@ summary: stop consistencyGroup pendingSnapImageCreationコマンドは、Snapsho
 = 整合性グループ上の保留中のSnapshotイメージを停止します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: stop consistencyGroup pendingSnapImageCreationコマンドは、Snapsho
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -35,7 +35,7 @@ Snapshot整合性グループに保留中のSnapshotイメージがない場合�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 stop consistencyGroup pass:quotes[[_consistencyGroupName_]]pendingSnapImageCreation
 ----

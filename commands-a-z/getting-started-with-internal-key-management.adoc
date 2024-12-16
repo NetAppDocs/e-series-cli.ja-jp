@@ -7,7 +7,7 @@ summary: セキュリティキーは、ストレージアレイのセキュリ�
 = 内部キー管理の開始
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

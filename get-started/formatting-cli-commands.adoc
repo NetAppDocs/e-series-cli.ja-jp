@@ -2,13 +2,20 @@
 permalink: get-started/formatting-cli-commands.html 
 sidebar: sidebar 
 keywords: format, rules, cli, commands 
-summary: Windows、Linux、またはSolarisオペレーティングシステムでCLIコマンドとスクリプトコマンドを実行する場合は、名前またはラベルの一部として使用されている二重引用符に特別な考慮が必要です。 
+summary: 入力した値または名前に基づいて、CLIコマンドには特定の形式ルールが適用されます。 
 ---
 = CLIコマンドの表記規則
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+入力した値または名前に基づいて、CLIコマンドには特定の形式ルールが適用されます。
+
+
+
+== CLI形式のルール
 
 Windows、Linux、またはSolarisオペレーティングシステムでCLIコマンドおよびスクリプトコマンドを実行する場合は、名前またはラベルの一部として使用される二重引用符（""）に特別な考慮が必要です。
 

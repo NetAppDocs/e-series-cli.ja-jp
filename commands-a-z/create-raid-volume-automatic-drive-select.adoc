@@ -7,7 +7,7 @@ summary: create volumeコマンドは、ストレージアレイ内の複数の�
 = RAIDボリュームの作成（自動ドライブ選択）
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ create volumeコマンドは'ストレージ・アレイ内のドライブと'�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -38,7 +38,7 @@ create volumeコマンドは'ストレージ・アレイ内のドライブと'�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create volume driveCount=pass:quotes[_numberOfDrives_]
 [volumeGroupUserLabel=pass:quotes[_"volumeGroupUserLabel"_]]
@@ -46,29 +46,6 @@ raidLevel=(0 | 1 | 3 | 5 | 6)
 userLabel=pass:quotes[_"userLabel"_]
 driveMediaType=(HDD | SSD | unknown | allMedia)
 [driveType=(SAS | NVMe4K)]
-[capacity=pass:quotes[_volumeCapacity_]]
-[owner=(a|b)]
-[mapping=(none | default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[segmentSize=pass:quotes[_segmentSizeValue_]]
-[usageHint=(fileSystem | dataBase | multiMedia)]
-[trayLossProtect=(TRUE | FALSE)]
-[drawerLossProtect=(TRUE | FALSE)]
-[dssPreAllocate=(TRUE | FALSE)]
-[securityType=(none | capable | enabled)]
-[secureDrives=(fips | fde )]
-[dataAssurance=(none | enabled)]
-[resourceProvisioningCapable=(TRUE | FALSE)]
-[blockSize=blockSizeValue]
-----
-[listing, subs="+macros"]
-----
-create volume driveCount=pass:quotes[_numberOfDrives_]
-[volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
-raidLevel=(0 | 1 | 5 | 6)
-userLabel=pass:quotes[_"volumeName"_]
-driveMediaType=(HDD | SSD | unknown | allMedia)
-[driveType=SAS]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
 [mapping=(none | default)]

@@ -7,7 +7,7 @@ summary: start diskPool fullProvisioningコマンドは、ディスクプール�
 = ディスクプールのフルプロビジョニングを開始します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ start diskPool fullProvisioningコマンドは'ディスク・プール内のす
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 start diskPool[diskPoolName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

@@ -7,7 +7,7 @@ summary: check storageArray connectivityコマンドを使用すると、ロー�
 = ストレージアレイの接続を確認してください
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ check storageArray connectivity'コマンドは'ローカルストレージア�
 
 [NOTE]
 ====
-このコマンドは、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
 == ロール
 
-このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+該当なし
 
 
 
@@ -45,7 +45,7 @@ check storageArray connectivity'コマンドは'ローカルストレージア�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 check storageArray connectivity
 (remoteStorageArrayName=pass:quotes[_"storageArrayName"_]|

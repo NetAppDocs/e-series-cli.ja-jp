@@ -7,7 +7,7 @@ summary: Delete certificatesコマンドを使用すると、CLIパッケージ�
 = 証明書を削除します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ Delete certificatesコマンドを使用すると、CLIパッケージの信頼�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete localCertificate all | alias pass:quotes[_alias_]
 ----

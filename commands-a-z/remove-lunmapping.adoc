@@ -7,7 +7,7 @@ summary: remove lunMappingコマンドを実行すると、論理ユニット番
 = ボリュームのLUNマッピングを削除します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,19 +17,19 @@ remove lunMappingコマンドは'1つ以上のボリュームから論理ユニ�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 remove (volume pass:quotes[[_"volumeName"_]] | accessVolume) lunMapping
 (host=pass:quotes[_"hostName_" | hostGroup=(_"hostGroupName"_] | defaultGroup)
@@ -38,7 +38,7 @@ remove (volume pass:quotes[[_"volumeName"_]] | accessVolume) lunMapping
 
 == 複数ボリュームのLUN / NSIDマッピングからLUN / NSIDマッピングを削除するための構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 remove (allVolumes | volumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 lunMapping

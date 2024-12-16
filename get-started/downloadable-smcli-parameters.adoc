@@ -2,19 +2,22 @@
 permalink: get-started/downloadable-smcli-parameters.html 
 sidebar: sidebar 
 keywords: downloadable, smcli, command line, parameters, identify, devices, SAML, multifactor, authentication, https, certificate, array, 
-summary: SANtricity OS 11.60リリースには、httpベースのバージョンのCLI（Secure CLIまたはSMcliとも呼ばれます）をSANtricity System Managerから直接ダウンロードしてインストールする機能が含まれていました。 
+summary: SANtricity OS 11.60以降のリリースでは、SANtricityシステムマネージャからHTTPベースバージョンのCLI（Secure CLIまたはSMcliとも呼ばれる）を直接ダウンロードしてインストールできます。 
 ---
 = ダウンロード可能なSMcliコマンドラインパラメータ
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+SANtricity OS 11.60以降のリリースでは、SANtricityシステムマネージャからHTTPベースバージョンのCLI（「Secure CLI」またはSMcliとも呼ばれます）を直接ダウンロードしてインストールできます。
 
 
 
 == 11.60以降のダウンロード可能なSMcliコマンドラインパラメータ
 
-SANtricity OS 11.60リリースでは、httpベースのバージョンのCLI（「Secure CLI」またはSMcli）をSANtricity System Managerから直接ダウンロードしてインストールできます。このダウンロード可能なバージョンのSMcliは、EF600、EF300、E5700、EF570、E2800、 およびEF280コントローラの場合：SANtricity システムマネージャからSMcliをダウンロードするには、* Settings *>* System * and * Add-ons *>* Command Line Interface *を選択します。
+SMcliのダウンロード版は、E4000、EF600、EF300、E5700、EF570、E2800、EF280の各コントローラで利用できます。SANtricityシステムマネージャからSMcliをダウンロードするには、*[設定]*[システム]*および*[アドオン]*[コマンドラインインターフェイス]*を選択します。
 
 
 NOTE: CLIコマンドを実行する管理システムに、Java Runtime Environment（JRE）バージョン8以降がインストールされている必要があります。

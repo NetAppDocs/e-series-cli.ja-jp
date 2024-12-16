@@ -7,8 +7,11 @@ summary: AutoSupportのコマンドです
 = AutoSupportのコマンドです
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+次に、Eシリーズストレージシステムで使用できるauto supportコマンドのリストを示します。
 
 
 
@@ -44,24 +47,26 @@ link:../commands-a-z/save-storagearray-supportdata.html["ストレージアレ�
 
 
 
-== E2800、E5700のAutoSupport コマンド
+== E4000、EF300、EF400、E2800、E5700用のAutoSupportコマンド
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupport メンテナンス期間の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupportディスパッチサイズ制限の設定"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["AutoSupportメンテナンス時間の有効化または無効化"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport Remote Diagnostics機能の有効化または無効化（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["AutoSupport OnDemand機能を有効または無効にします"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログの取得（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["AutoSupport リモート診断機能を有効または無効にします"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールのリセット（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["AutoSupport ログを取得します"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールをリセットします"]
 
 link:../commands-a-z/show-storagearray-autosupport.html["AutoSupport の設定の表示（E2800またはE5700ストレージアレイ）"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport メッセージ収集スケジュールの設定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["AutoSupport メッセージの収集スケジュールを設定します"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["AutoSupport HTTP（S）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["AutoSupport HTTP(S)配信方法の指定"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["Eメール（SMTP）配信方法の指定（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["Eメール（SMTP）配信方法を指定します"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 配信設定のテスト（個々のE2800またはE5700アレイ）"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["AutoSupport 配信設定をテストします"]

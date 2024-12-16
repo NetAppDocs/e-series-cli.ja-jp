@@ -7,7 +7,7 @@ summary: activate storageArray featureコマンドは、同期ミラーリング
 = 同期ミラーリングをアクティブ化する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ activate storageArray feature'コマンドは'同期ミラーリング機能を�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -47,7 +47,7 @@ activate storageArray feature'コマンドは'同期ミラーリング機能を�
 
 == 構文（ユーザ定義のドライブ）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(0 |1 | 3 | 5 | 6)
@@ -59,7 +59,7 @@ repositoryDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]pass:quotes[_
 [drawerLossProtect=(TRUE | FALSE)]
 [dataAssurance=(none | enabled)]
 ----
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(0 |1 | 5 | 6)
@@ -73,7 +73,7 @@ repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[
 
 == 構文（ユーザ定義のボリュームグループ）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
@@ -83,7 +83,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
 
 == 構文（ユーザ定義のドライブ数）
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(1 | 3 | 5 | 6)
@@ -93,7 +93,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 [drawerLossProtect=(TRUE | FALSE)]
 [dataAssurance=(none | enabled)]
 ----
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 activate storageArray feature=syncMirror
 repositoryRAIDLevel=(1 | 5 | 6)

@@ -7,7 +7,7 @@ summary: activate storageArray featureコマンドは、非同期ミラーリン
 = 非同期ミラーリングをアクティブ化する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ activate storageArray feature'コマンドは'非同期ミラーリング機能�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700などの個 々 のストレージアレイを環境に設定します。 EF600およびEF300アレイ（すべてのSMcliパッケージがインストールされている必要があります。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。
 
 [NOTE]
 ====
@@ -28,7 +28,7 @@ activate storageArray feature'コマンドは'非同期ミラーリング機能�
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。
+このコマンドをE400、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
@@ -40,7 +40,7 @@ activate storageArray feature'コマンドは'非同期ミラーリング機能�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 activate storageArray feature=asyncRemoteMirror
 ----

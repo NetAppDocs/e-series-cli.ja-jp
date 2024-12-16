@@ -7,10 +7,15 @@ summary: このセクションでは、CLIコマンドラッパーの一般的�
 = CLIコマンドラッパーの構文
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 このセクションでは、CLIコマンドラッパーの一般的な構文を示します。CLIコマンドラッパーの構文で使用される表記規則を次の表に示します。
+
+
+
+== CLIコマンドラッパー構文の表記規則
 
 [cols="2*"]
 |===

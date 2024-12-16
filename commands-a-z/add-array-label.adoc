@@ -7,7 +7,7 @@ summary: Add array labelコマンドを使用すると、ユーザ定義のラ�
 = アレイラベルを追加します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ Add array label'コマンドを使用すると'ユーザー定義のラベルを
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]

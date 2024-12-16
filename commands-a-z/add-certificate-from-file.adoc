@@ -7,7 +7,7 @@ summary: '[Add certificate from file]コマンドを使用すると、ファイ�
 = ファイルから証明書を追加します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: '[Add certificate from file]コマンドを使用すると、ファイ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----

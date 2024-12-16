@@ -1,13 +1,13 @@
 ---
-permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+permalink: commands-a-z/set-autosupport-https-delivery-method.html 
 sidebar: sidebar 
-keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+keywords: 'Specify AutoSupport HTTP(S) delivery method' 
 summary: set storageArray AutoSupport httpdeliveryMethodコマンドは、AutoSupport メッセージをHTTP（S）に送信するための配信方法を設定します。 
 ---
-= AutoSupport HTTP（S）配信方法の指定（個々のE2800またはE5700アレイ）
+= AutoSupport HTTP(S)配信方法の指定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,25 +17,22 @@ set storageArray AutoSupport httpdeliveryMethodコマンドは、AutoSupport メ
 
 == サポートされているアレイ
 
-このコマンドは、E2800、E5700、EF600、またはEF300の個々のストレージアレイを環境 します。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
 
 
 
 == ロール
 
-このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
-set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
-   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
-proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
- [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+set storageArray autoSupport deliveryMethod=email mailRelayServer="mail.example.com" senderEmail="sender@example.com"
 ----
 
 
@@ -52,7 +49,6 @@ proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumbe
 AutoSupport による収集の配信方法を指定できます。有効な選択肢は次のとおりです。
 
 * E メール
-* HTTP
 * HTTPS
 
 

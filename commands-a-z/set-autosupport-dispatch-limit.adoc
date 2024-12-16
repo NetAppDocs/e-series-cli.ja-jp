@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-autosupport-dispatch-limit.html 
+sidebar: sidebar 
+keywords: Autosupport, bundle, dispatch, delivery type, size 
+summary: 配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。 
+---
+= AutoSupportディスパッチサイズ制限の設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+は、 `set storageArray autoSupport dispatchSizeLimit`配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。
+
+このコマンドを使用すると、ユーザはEメールサーバのサポート内容に基づいてEメールサイズを設定できます。サイズを大きくすると、サポートバンドルが切り捨てられる可能性が低くなります。
+
+
+NOTE: 通常は、NetAppサポートから指示がないかぎり、HTTPSサイズを設定しないでください。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
+
+
+
+== ロール
+
+このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+
+
+
+== 構文
+
+[source, cli, subs="+macros"]
+----
+
+set storageArray autoSupport dispatchSizeLimit (https=(<sizeInBytes>|unlimited)|email=(<sizeInBytes>|unlimited));
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`https`
+ a| 
+HTTPSディスパッチの最大サイズ（バイト）。最大サイズが設定されていない場合、デフォルトは50MiBです。値が「unlimited」または0の場合、サイズ制限はありません。指定できる最小サイズは2MiBです。
+
+
+
+ a| 
+`email`
+ a| 
+Eメール（SMTP）の最大配信サイズ（バイト）。最大サイズが設定されていない場合、デフォルトは5MiBです。値が「unlimited」または0の場合、サイズ制限はありません。指定できる最小サイズは2MiBです。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+8.90

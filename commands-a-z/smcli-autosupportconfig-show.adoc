@@ -7,7 +7,7 @@ summary: SMcli -autoSupportConfig showコマンドは、管理ドメインのAut
 = AutoSupport バンドル収集設定を表示します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -52,14 +52,14 @@ SMcli -autoSupportConfig showコマンドは、管理ドメインのAutoSupport 
 ====
 [NOTE]
 ====
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 ====
 
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig show
 ----

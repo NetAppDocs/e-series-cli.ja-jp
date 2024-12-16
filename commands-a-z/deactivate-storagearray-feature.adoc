@@ -7,7 +7,7 @@ summary: deactivate storageArray featureコマンドは、同期ミラーリン�
 = 同期ミラーリングを非アクティブ化する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ deactivate storageArray feature'コマンドは'同期ミラーリング機能�
 
 == サポートされているアレイ
 
-このコマンドは、E2700、E5600、E2800、E5700のアレイを含む個々のストレージアレイを環境 で処理します。 すべてのSMcliパッケージがインストールされていること。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
 == ロール
 
-このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
+このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
@@ -40,7 +40,7 @@ deactivate storageArray feature'コマンドは'同期ミラーリング機能�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 deactivate storageArray feature=syncMirror
 ----

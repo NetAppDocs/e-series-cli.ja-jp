@@ -7,7 +7,7 @@ summary: set controllerコマンドは、コントローラトレイまたはコ
 = コントローラの保守操作可能インジケータの設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ set controllerコマンドは、コントローラトレイまたはコントロ
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 set controller [(a| b)]
 serviceAllowedIndicator=(on | off)

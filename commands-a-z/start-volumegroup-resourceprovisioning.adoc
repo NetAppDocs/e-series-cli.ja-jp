@@ -7,7 +7,7 @@ summary: start volumeGroup resourceProvisioningコマンドは、指定された
 = ボリュームグループリソースのプロビジョニングを開始します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ start volumeGroup resourceProvisioningコマンドは'指定されたボリュ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
 ----

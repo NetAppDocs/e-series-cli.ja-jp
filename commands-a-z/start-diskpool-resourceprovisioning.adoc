@@ -7,7 +7,7 @@ summary: start diskPool resourceProvisioningコマンドは、所定のディス
 = ディスクプールリソースのプロビジョニングを開始します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ start diskPool resourceProvisioningコマンドを使用すると'所定のデ�
 
 == 構文
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----

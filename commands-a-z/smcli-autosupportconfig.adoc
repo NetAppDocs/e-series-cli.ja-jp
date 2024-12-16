@@ -7,7 +7,7 @@ summary: SMcli -autoSupportConfigコマンドは、AutoSupport メッセージ�
 = AutoSupport の配信方法を指定します
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ SMcli -autoSupportConfigコマンドは、AutoSupport メッセージを送信�
 
 == サポートされているアレイ
 
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
@@ -38,7 +38,7 @@ AutoSupport メッセージを送信するには、次の2種類の配信方法�
 
 == 配信方法がSMTPの場合の構文
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig deliveryMethod=SMTP
 mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>

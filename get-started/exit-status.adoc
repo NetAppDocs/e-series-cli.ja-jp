@@ -2,15 +2,20 @@
 permalink: get-started/exit-status.html 
 sidebar: sidebar 
 keywords: exit, status 
-summary: 次の表に、返される可能性がある終了ステータスと、各ステータスの意味を示します。 
+summary: 終了ステータスは、実行されたコマンドに対して返されます。次の表に、返される可能性のある終了ステータスと各ステータスの意味を示します。 
 ---
 = 終了ステータス
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-次の表に、返される可能性がある終了ステータスと、各ステータスの意味を示します。
+[role="lead"]
+終了ステータスは、実行されたコマンドに対して返されます。次の表に、返される可能性のある終了ステータスと各ステータスの意味を示します。
+
+
+
+== 終了ステータスの定義
 
 [cols="3*"]
 |===

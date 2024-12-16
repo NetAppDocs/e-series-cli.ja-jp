@@ -7,7 +7,7 @@ summary: SMcli enable autoSupportFeatureコマンドは、すべての管理対�
 = EMW管理ドメインレベルでのAutoSupport の有効化または無効化（SMcliのみ）
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ SMcli enable autoSupportFeatureコマンドは、すべての管理対象スト�
 
 == サポートされているアレイ
 
-このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
+このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
@@ -53,7 +53,7 @@ AutoSupport 機能を使用するには、Persistent Monitorが有効になっ�
 
 == 構文
 
-[listing]
+[source, cli]
 ----
 SMcli enable|disable autoSupportFeature
 ----
