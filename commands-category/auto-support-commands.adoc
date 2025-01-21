@@ -2,16 +2,16 @@
 permalink: commands-category/auto-support-commands.html 
 sidebar: sidebar 
 keywords: support, commands, bundle, collection, autosupport 
-summary: AutoSupportのコマンドです 
+summary: AutoSupportコマンド 
 ---
-= AutoSupportのコマンドです
+= AutoSupportコマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-次に、Eシリーズストレージシステムで使用できるauto supportコマンドのリストを示します。
+次に、Eシリーズストレージシステムで使用できるAutoSupportコマンドの一覧を示します。
 
 
 
