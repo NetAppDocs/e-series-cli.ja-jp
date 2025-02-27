@@ -47,7 +47,7 @@ link:../commands-a-z/save-storagearray-supportdata.html["ストレージアレ�
 
 
 
-== E4000、EF300、EF400、E2800、E5700用のAutoSupportコマンド
+== E4000、EF300、EF600、E2800、E5700用のAutoSupportコマンド
 
 link:../commands-a-z/set-autosupport-dispatch-limit.html["AutoSupportディスパッチサイズ制限の設定"]
 
