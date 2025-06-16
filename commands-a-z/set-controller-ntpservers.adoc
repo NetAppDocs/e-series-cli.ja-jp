@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, ntp 
 summary: set controller NTPServersコマンドは、コントローラのNTP設定を行い、コントローラがSNTP（Simple Network Time Protocol）を使用してクロックを外部ホストと自動的に同期できるようにします。 
 ---
-= コントローラのNTPを設定します
+= コントローラのNTP設定を行う - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

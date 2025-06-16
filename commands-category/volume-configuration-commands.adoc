@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volume, configuration, commands, diskpool, host topology, internet, storage, service, extension, group 
 summary: ボリューム構成のコマンド 
 ---
-= ボリューム構成のコマンド
+= SANtricity CLIボリューム構成コマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, locate 
 summary: stop driveChannel locateコマンドは、start driveChannel locateコマンドで点灯したドライブトレイのインジケータライトを消灯します。 
 ---
-= ドライブチャネルの特定を停止します
+= ドライブチャネルの検索を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

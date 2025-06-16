@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, server, certificate, sign, request, csr 
 summary: save controller arrayManagementCSRコマンドは、証明書の詳細を表示できるように、コントローラにインストールされているサーバ証明書署名要求（CSR）を取得します。 
 ---
-= インストールされているサーバ証明書を取得する
+= インストールされたサーバー証明書を取得する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

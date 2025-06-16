@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, copy 
 summary: remove VolumeCopy targetコマンドは、ボリュームコピーペアを削除します。 
 ---
-= ボリュームコピーを削除する
+= ボリュームコピーの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, battery, learn, cycle 
 summary: set storageArray learnCycleDateコントローラコマンドは、コントローラのバッテリ学習サイクルを設定します。 
 ---
-= ストレージアレイコントローラのバッテリ学習サイクルを設定します
+= ストレージアレイコントローラのバッテリ学習サイクルを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

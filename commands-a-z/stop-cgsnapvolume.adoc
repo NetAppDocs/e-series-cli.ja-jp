@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, volume 
 summary: stop cgSnapVolumeコマンドは、整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理を停止します。 
 ---
-= 整合性グループのSnapshotボリュームの停止
+= 整合性グループのスナップショットボリュームを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add certificate file, supported arrays, syntax, parameters, minimum firmware level 
 summary: '[Add certificate from file]コマンドを使用すると、ファイルから証明書を取得し、CLIパッケージの信頼ストアに追加できます。追加した証明書は、CLIパッケージでのみ使用されます。' 
 ---
-= ファイルから証明書を追加します
+= ファイルから証明書を追加する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

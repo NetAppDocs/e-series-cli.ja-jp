@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume 
 summary: show volume summaryコマンドは、ボリュームに関する情報を返します。 
 ---
-= ボリュームを表示します
+= ボリュームの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

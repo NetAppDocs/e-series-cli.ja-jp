@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, locate 
 summary: start storageArray locateコマンドは、ストレージアレイのインジケータライトを点灯させることでストレージアレイを特定します。 
 ---
-= ストレージアレイの特定の開始
+= ストレージアレイの検索を開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

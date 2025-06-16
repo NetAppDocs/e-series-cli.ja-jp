@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, thin, volume, attributes 
 summary: set volumeコマンドは、シンボリュームのプロパティを定義します。 
 ---
-= シンボリュームの属性を設定する
+= シンボリュームの属性を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

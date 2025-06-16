@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, volume, copy 
 summary: stop VolumeCopy target sourceコマンドは、ボリュームコピー処理を停止します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。 
 ---
-= ボリュームコピーの停止
+= ボリュームコピーを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

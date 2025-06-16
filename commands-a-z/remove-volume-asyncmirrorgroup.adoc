@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, asynchronous, mirror, group 
 summary: remove volume asyncMirrorGroupコマンドは、既存の非同期ミラーグループからメンバーボリュームを削除します。 
 ---
-= 非同期ミラーグループからボリュームを削除します
+= 非同期ミラーグループからボリュームを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

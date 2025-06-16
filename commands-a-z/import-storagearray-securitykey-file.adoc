@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
 summary: import storageArray securityKeyファイルコマンドは、ストレージアレイ間で移動した1本以上のFull Disk Encryption（FDE）ドライブのロックを解除します。 
 ---
-= ストレージアレイのセキュリティキーをインポートします
+= ストレージアレイのセキュリティキーのインポート - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

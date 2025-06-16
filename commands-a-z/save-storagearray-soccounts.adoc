@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, soc, counts 
 summary: save storageArray SOCCountsコマンドは、SOCエラー統計をファイルに保存します。 
 ---
-= ストレージアレイのSOCカウンタを保存します
+= ストレージアレイの SOC カウントを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

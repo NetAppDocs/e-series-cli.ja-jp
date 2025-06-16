@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, mirroring, asynchronous, synchronous, command 
 summary: ミラーリングコマンド 
 ---
-= ミラーリングコマンド
+= SANtricity CLIミラーリングコマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

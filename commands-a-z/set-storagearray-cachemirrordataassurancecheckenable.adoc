@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, cache, mirror, data, assurance, check 
 summary: set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。 
 ---
-= ストレージアレイでキャッシュミラーのData Assuranceチェックを有効または無効にする
+= ストレージアレイを設定してキャッシュミラーデータアシュアランスチェックを有効または無効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

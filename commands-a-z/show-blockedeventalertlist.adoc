@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, blocked, events 
 summary: show blockedEventAlertListコマンドは、set blockEventAlertコマンドによって現在ブロックされているイベントのリストを返します。このリスト内のイベントは、アラートの端末とパラメータ、つまりEメール、syslog、トラップの通知を使用して設定した通知を送信しないイベントです。 
 ---
-= ブロックされたイベントを表示する
+= ブロックされたイベントを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, check, volume, parity, job, errors 
 summary: save check volume parity job parity errorsコマンドは、チェックボリュームパリティジョブによってログに記録されたパリティエラーを指定したファイルに保存します。 
 ---
-= 保存チェックボリュームパリティジョブのパリティエラー
+= 保存ボリュームのパリティチェックジョブのパリティエラー - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

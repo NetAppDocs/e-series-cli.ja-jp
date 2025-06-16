@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, odx, set 
 summary: show storageArray odxsettingコマンドは、ストレージアレイのオフロードデータ転送（ODX）とVMware vStorage API Array Architecture（VAAI）の現在の設定を返します。 
 ---
-= ストレージアレイのODX設定の表示
+= ストレージアレイのODX設定を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

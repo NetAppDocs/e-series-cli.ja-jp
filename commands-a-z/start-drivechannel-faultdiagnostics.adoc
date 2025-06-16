@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive channel, fault, isolation, diagnostics 
 summary: start driveChannel faultDiagnosticsコマンドは、ドライブチャネルの障害切り分け診断を実行し、結果を保存します。 
 ---
-= ドライブチャネルの障害切り分け診断を開始します
+= ドライブチャネル障害分離診断の開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

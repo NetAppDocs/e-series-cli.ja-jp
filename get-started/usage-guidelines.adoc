@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: script command, guidelines 
 summary: スクリプトコマンドを記述する場合は、次のガイドラインに従ってください。 
 ---
-= スクリプトコマンドのガイドライン
+= SANtricity CLI スクリプト コマンドのガイドラインについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

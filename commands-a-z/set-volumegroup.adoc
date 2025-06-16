@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group 
 summary: set volumeGroupコマンドは、ボリュームグループのプロパティを定義します。 
 ---
-= ボリュームグループを設定します
+= ボリュームグループの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

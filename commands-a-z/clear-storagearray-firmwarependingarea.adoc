@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, firmware, pending, area 
 summary: clear storageArray firmwarePendingAreaコマンドを使用すると、以前に保留領域バッファからダウンロードしたファームウェアイメージまたはNVSRAM値を削除できます。 
 ---
-= ストレージアレイのファームウェア保留領域のクリア
+= ストレージアレイファームウェアの保留領域をクリアする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

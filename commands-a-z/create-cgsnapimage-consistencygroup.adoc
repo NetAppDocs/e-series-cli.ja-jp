@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot image 
 summary: cgSnapImage consistencyGroupコマンドを作成すると、Snapshot整合性グループのメンバーである各ベースボリュームの新しいSnapshotイメージが作成されます。 
 ---
-= 整合性グループのSnapshotイメージを作成する
+= 整合性グループのスナップショットイメージの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

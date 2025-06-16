@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, consistency, group, snapshot, image 
 summary: DELETE cgSnapImage consistencyGroupコマンドは、整合性グループ内のSnapshotイメージを削除します。 
 ---
-= 整合性グループのSnapshotイメージの削除
+= 整合性グループのスナップショットイメージの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

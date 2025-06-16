@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, certificate, revocation, check, set 
 summary: show storageArray revocationCheckSettingsコマンドを使用すると、ストレージアレイの証明書失効設定を表示できます。 
 ---
-= 証明書失効チェック設定を表示します
+= 証明書失効チェック設定を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: export, storage, array, security, key, command, save, drive, securitykey, file, context, role 
 summary: export storageArray securityKeyコマンドは、ドライブセキュリティキーをファイルに保存します。 
 ---
-= ストレージアレイのセキュリティキーをエクスポートします
+= ストレージアレイのセキュリティキーのエクスポート - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

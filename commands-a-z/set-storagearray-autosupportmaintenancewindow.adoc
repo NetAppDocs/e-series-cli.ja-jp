@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autoSupportMaintenanceWindowコマンドは、AutoSupport メンテナンス期間機能をオンまたはオフにします。 
 ---
-= AutoSupportメンテナンス時間の有効化または無効化
+= AutoSupport メンテナンス ウィンドウを有効または無効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

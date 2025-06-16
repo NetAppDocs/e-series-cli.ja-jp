@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, hot spare 
 summary: set drive hotspareコマンドは、1つ以上のドライブをホットスペアとして割り当てまたは割り当て解除します。 
 ---
-= ドライブのホットスペアを設定します
+= ドライブのホットスペアを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, media, scan 
 summary: set SnapVolume mediaScanEnabledコマンドは、スナップショットボリュームに使用されているドライブ上でメディアスキャンを実行します。 
 ---
-= Snapshotボリュームのメディアスキャンの設定
+= スナップショットボリュームのメディアスキャンを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, consistency, group, snapshot, volume 
 summary: resume cgSnapVolumeコマンドは、stop cgSnapVolumeコマンドで停止した整合性グループのSnapshotボリュームを作成するためのcopy-on-write処理を再開します。 
 ---
-= 整合性グループのSnapshotボリュームを再開します
+= 整合性グループスナップショットボリュームの再開 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

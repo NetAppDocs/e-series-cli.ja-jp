@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, disk pool 
 summary: delete diskPoolコマンドは、ディスクプールを削除します。 
 ---
-= ディスクプールを削除します
+= ディスクプールの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

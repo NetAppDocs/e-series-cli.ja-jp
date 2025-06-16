@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, iser, baseline 
 summary: reset storageArray iserStatsBaselineコマンドは、ストレージアレイのiSERベースラインを0にリセットします。 
 ---
-= ストレージアレイのiSERベースラインをリセットします
+= ストレージアレイの iSER ベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

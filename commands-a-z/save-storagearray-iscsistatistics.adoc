@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, iscsi, statistics 
 summary: save storageArray iscsiStatisticsコマンドは、ストレージアレイのiSCSIパフォーマンス統計をファイルに保存します。 
 ---
-= ストレージアレイのiSCSI統計を保存します
+= ストレージアレイの iSCSI 統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

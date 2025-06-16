@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, trusted, ca, certificates 
 summary: save storageArray trustedCertificateコマンドは、アレイにインストールされている信頼されたCA証明書を取得します。取得したファイルに含まれているのは、アレイのWebサーバから要求されたCA証明書です。 
 ---
-= インストールされている信頼されたCA証明書を
+= インストールされた信頼された CA 証明書を取得する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

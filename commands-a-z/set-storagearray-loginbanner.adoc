@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, login, banner 
 summary: set storageArray loginBannerコマンドを使用すると、ログインバナーとして使用するテキストファイルをアップロードできます。バナーテキストはユーザがSANtricity System Managerでセッションを確立する前またはコマンドを実行する前に表示されるもので、注意と同意を求めるメッセージを含めることができます。 
 ---
-= ストレージアレイのログインバナーを設定します
+= ストレージアレイのログインバナーを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

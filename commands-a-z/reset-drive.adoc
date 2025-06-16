@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, drive 
 summary: reset driveコマンドは、ボリュームグループまたはディスクプール内のドライブの電源を再投入して、動作に一貫性がないドライブまたは動作が最適でないドライブのリカバリを支援します。 
 ---
-= ドライブをリセットします
+= ドライブのリセット - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, local, user, password, symbol 
 summary: set storageArray localUsernameコマンドとset storageArray symbolコマンドでは、特定のロールのローカルユーザ名パスワードまたはSYMbolパスワードを設定できます。 
 ---
-= ストレージアレイのローカルユーザパスワードまたはSYMbolパスワードを設定します
+= ストレージアレイのローカルユーザーパスワードまたはSYMbolパスワードを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

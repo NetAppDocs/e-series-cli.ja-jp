@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, registration 
 summary: set storageArray isnsRegistrationコマンドでは、IPv4またはIPv6のInternet Storage Name Service（iSNS）サーバにストレージアレイを登録できます。 
 ---
-= ストレージアレイのiSNS登録を設定
+= ストレージアレイの iSNS 登録を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

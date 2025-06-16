@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
 summary: このコマンドは、ストレージアレイのAutoSupport （ASUP）機能を有効または無効にし、テクニカルサポートサイトへのメッセージ送信を可能にします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。 
 ---
-= AutoSupport の有効化または無効化（すべてのアレイ）
+= AutoSupport を有効または無効にする (すべての個別アレイ) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

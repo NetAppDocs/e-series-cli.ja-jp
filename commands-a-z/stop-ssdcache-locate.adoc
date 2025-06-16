@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, ssd, cache, locate 
 summary: stop ssdCache locateコマンドは、start ssdCache locateコマンドによってオンにされたソリッドステートディスク（SSD）のインジケータライトを消灯します。 
 ---
-= SSDキャッシュの場所の特定を停止します
+= SSD キャッシュの検索を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

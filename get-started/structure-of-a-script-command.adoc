@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, script command 
 summary: 正常に実行するには、スクリプトコマンドを適切な構造で記述する必要があります。 
 ---
-= スクリプトコマンドの構造
+= SANtricity CLI スクリプトコマンドの構造について学習します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

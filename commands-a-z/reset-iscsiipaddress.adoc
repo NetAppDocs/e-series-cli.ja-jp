@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, iscsi, ip address 
 summary: reset iscsiIpAddressコマンドは、リモートストレージアレイのIPアドレスをリセットして、ローカルストレージアレイとの接続を再確立します。 
 ---
-= iSCSI IPアドレスをリセットします
+= iSCSI IPアドレスのリセット - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

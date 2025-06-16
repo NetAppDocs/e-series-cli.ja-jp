@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, automatic, drive, select 
 summary: create volumeコマンドは、ストレージアレイ内の複数のドライブをまたがってボリュームグループを作成し、そのボリュームグループ内に新しいボリュームを作成します。ストレージアレイコントローラによって、ボリュームに含めるドライブが選択されます。 
 ---
-= RAIDボリュームの作成（自動ドライブ選択）
+= RAIDボリュームの作成（自動ドライブ選択） - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

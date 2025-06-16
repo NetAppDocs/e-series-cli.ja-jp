@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, command, run, diagnostic, tests, arrays, roles, context 
 summary: diagnostic controllerコマンドは、コントローラで診断テストを実行します。 
 ---
-= コントローラを診断する
+= コントローラの診断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

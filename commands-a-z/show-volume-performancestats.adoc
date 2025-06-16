@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, performance, statistics 
 summary: show volume performanceStatsコマンドは、ボリュームのパフォーマンスに関する情報を返します。 
 ---
-= ボリュームのパフォーマンス統計を表示します
+= ボリュームパフォーマンス統計を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

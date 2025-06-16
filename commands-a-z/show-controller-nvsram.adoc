@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller, nvsram 
 summary: show controller NVSRAMコマンドは、NVSRAMバイト値に関する情報を返します。 
 ---
-= コントローラのNVSRAMを表示します
+= コントローラのNVSRAMを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

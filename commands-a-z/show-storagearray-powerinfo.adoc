@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, power, information 
 summary: show storageArray powerInfoコマンドは、ストレージアレイ全体およびストレージアレイ内の各トレイで消費される電力量に関する情報を返します。 
 ---
-= ストレージアレイの電源情報を表示します
+= ストレージアレイの電源情報を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

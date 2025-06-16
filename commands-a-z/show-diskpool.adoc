@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, disk pool 
 summary: show diskPoolコマンドは、ディスクプールに関する情報を返します。 
 ---
-= ディスクプールを表示します
+= ディスクプールの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

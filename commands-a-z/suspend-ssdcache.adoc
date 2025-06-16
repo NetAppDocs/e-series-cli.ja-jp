@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, ssd cache 
 summary: suspend ssdCacheコマンドは、SSDキャッシュを使用しているすべてのボリュームのキャッシュを一時的に停止します。 
 ---
-= SSDキャッシュを中断します
+= SSD キャッシュを一時停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
 summary: delete syslogコマンドは、1つ以上のサーバをsyslog設定から削除して、アラートを受信しないようにします。 
 ---
-= syslogサーバを削除します
+= Syslogサーバーの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, volume 
 summary: create snapVolumeコマンドは、ベースボリュームのSnapshotイメージに対して読み取り/書き込みが可能なSnapshotボリュームを作成します。 
 ---
-= Snapshotボリュームを作成します
+= スナップショットボリュームの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

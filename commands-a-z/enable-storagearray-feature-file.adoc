@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
 summary: enable storageArray feature fileコマンドを使用すると、ストレージアレイへの永続的なアップグレードまたは試用期間用に機能を有効にできます。 
 ---
-= ストレージアレイの機能を有効にします
+= ストレージアレイ機能の有効化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

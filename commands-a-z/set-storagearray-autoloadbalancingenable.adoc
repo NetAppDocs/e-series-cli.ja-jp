@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, automatic, load, balance 
 summary: set storageArray autoLoadBalancingEnableコマンドは、自動ロードバランシング機能を有効または無効にします。 
 ---
-= 自動ロードバランシングを有効または無効にするストレージアレイを設定します
+= ストレージアレイの自動ロードバランシングを有効または無効に設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

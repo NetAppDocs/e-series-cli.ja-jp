@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool 
 summary: set diskPoolコマンドは、指定されたパラメータに基づいてディスクプールに関連付けられた属性を設定します。 
 ---
-= ディスクプールを設定する
+= ディスクプールの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, iscsi, initiator 
 summary: create iscsiInitiatorコマンドは、新しいiSCSIイニシエータオブジェクトを作成します。 
 ---
-= iSCSIイニシエータを作成する
+= iSCSI イニシエーターの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

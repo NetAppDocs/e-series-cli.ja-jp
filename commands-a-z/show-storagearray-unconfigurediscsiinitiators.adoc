@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, unconfigured, iscsi, initiators 
 summary: show storageArray unconfiguredIscsiInitiatorsコマンドは、ストレージアレイで検出されたイニシエータのうち、ストレージアレイトポロジに設定されていないイニシエータのリストを返します。 
 ---
-= ストレージアレイの未設定のiSCSIイニシエータの表示
+= ストレージアレイの未構成の iSCSI イニシエーターを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

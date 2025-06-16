@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, tray, positions 
 summary: set storageArray trayPositionsコマンドは、ストレージアレイ内のトレイの位置を定義します。このコマンドには、ストレージアレイ内のすべてのトレイを含める必要があります。 
 ---
-= ストレージアレイのトレイの位置を設定します
+= ストレージアレイトレイの位置を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

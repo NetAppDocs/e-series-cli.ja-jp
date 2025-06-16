@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, consistency, group, attributes 
 summary: set consistencyGroupコマンドは、Snapshot整合性グループのプロパティを定義します。 
 ---
-= 整合グループの属性を設定します
+= 整合性グループの属性を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, synchronization, progress 
 summary: show SyncMirror synchronizationProgressコマンドは、同期ミラーリング構成のプライマリボリュームとセカンダリボリューム間のデータ同期の進捗状況を返します。 
 ---
-= 同期ミラーリングのボリューム同期の進捗状況を表示します
+= 同期ミラーリングボリュームの同期の進行状況を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

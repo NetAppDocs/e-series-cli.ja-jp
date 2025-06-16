@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, reconstruction 
 summary: start drive reconstructコマンドは、ドライブの再構築を開始します。 
 ---
-= ドライブの再構築を開始します
+= ドライブ再構築の開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

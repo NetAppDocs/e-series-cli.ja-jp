@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool, modify 
 summary: set diskPoolコマンドは、ディスクプールに容量を追加（Dynamic Capacity ExpansionまたはDCE）するか、ディスクプール全体のコントローラ所有権を変更します。 
 ---
-= ディスクプールの設定（ディスクプールの変更）
+= ディスクプールの設定（ディスクプールの変更） - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

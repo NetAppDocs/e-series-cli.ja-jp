@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, synchronous, mirror, repository, volume 
 summary: recreate storageArray mirrorRepositoryコマンドは、以前のミラーリポジトリボリュームに定義されたパラメータを使用して、新しい同期ミラーリングリポジトリボリューム（ミラーリポジトリボリュームとも呼ばれます）を作成します。 
 ---
-= 同期ミラーリングリポジトリボリュームを再作成します
+= 同期ミラーリングリポジトリボリュームの再作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

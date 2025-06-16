@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, group 
 summary: show snapGroupコマンドは、1つ以上のSnapshotイメージグループに関する情報を返します。 
 ---
-= Snapshotグループの表示
+= スナップショットグループの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

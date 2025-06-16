@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, array, label 
 summary: Show array labelコマンドは、ストレージアレイラベルが定義されているか、または既存のすべてのストレージアレイラベルを返します。 
 ---
-= アレイラベルを表示します
+= アレイラベルの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

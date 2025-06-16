@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, incomplete, asynchronous, mirror, pair, group 
 summary: asyncMirrorGroupコマンドを実行すると、ストレージアレイ上の孤立したミラーペアボリュームが削除されます。 
 ---
-= 非同期ミラーグループから不完全な非同期ミラーペアを削除します
+= 非同期ミラーグループから不完全な非同期ミラーペアを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

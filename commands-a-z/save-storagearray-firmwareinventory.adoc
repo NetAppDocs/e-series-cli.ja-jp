@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, firmware, inventory 
 summary: save storageArray firmwareInventoryコマンドは、ストレージアレイで現在実行されているすべてのファームウェアのレポートをファイルに保存します。 
 ---
-= ストレージアレイのファームウェアインベントリを保存します
+= ストレージアレイのファームウェアインベントリを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

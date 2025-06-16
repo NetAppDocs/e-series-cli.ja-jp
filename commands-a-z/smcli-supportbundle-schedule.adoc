@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: schedule, automatic, support, bundle, collection, configuration 
 summary: SMcli supportbundle scheduleコマンドは、1つ以上のストレージアレイでサポートバンドルを保存するスケジュールを作成または削除します。システムと構成の情報をテクニカルサポートに送信して分析と診断を依頼するには、サポートバンドルに情報を収集します。 
 ---
-= サポートバンドルの自動収集のスケジュールを設定します
+= 自動サポートバンドル収集構成のスケジュール - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, configuration 
 summary: clear storageArray configurationコマンドは、ストレージアレイ構成全体またはストレージアレイ構成の一部をクリアするか、ボリュームグループとボリューム構成のみをクリアします。 
 ---
-= ストレージアレイの構成のクリア
+= ストレージアレイ構成のクリア - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

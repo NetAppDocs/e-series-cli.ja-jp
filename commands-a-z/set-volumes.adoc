@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, disk pool 
 summary: set volumesコマンドは、ディスクプール内のボリュームのプロパティを定義します。 
 ---
-= ディスクプール内のボリュームのボリューム属性を設定します
+= ディスクプール内のボリュームのボリューム属性を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

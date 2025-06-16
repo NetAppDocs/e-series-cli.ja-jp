@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, host, connectivity, report 
 summary: set storageArray hostConnectivityReportingコマンドは、コントローラでホスト接続レポートを有効または無効にします。 
 ---
-= ホスト接続レポートの有効化または無効化
+= ホスト接続レポートの有効化または無効化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

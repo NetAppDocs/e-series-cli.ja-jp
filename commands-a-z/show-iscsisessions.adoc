@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, current, iscsi, sessions 
 summary: show iscsiSessionsコマンドは、iSCSIイニシエータまたはiSCSIターゲットのiSCSIセッションに関する情報を返します。 
 ---
-= 現在のiSCSIセッションを表示します
+= 現在の iSCSI セッションを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

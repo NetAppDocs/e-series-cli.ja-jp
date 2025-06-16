@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller, diagnostic, status 
 summary: show controllerコマンドは、start controller diagnosticコマンドで開始されたコントローラ診断のステータスを返します。 
 ---
-= コントローラ診断ステータスを表示します
+= コントローラの診断ステータスを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, alerts 
 summary: SMcli alertTestコマンドは、Windowsイベントログおよび設定されているすべてのsyslogレシーバにテストアラートを送信します。 
 ---
-= アラートをテストする
+= テストアラート - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

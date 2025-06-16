@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, community 
 summary: set snmpcommunityコマンドは、既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティに新しい名前を設定します。 
 ---
-= SNMPコミュニティを更新します
+= SNMPコミュニティの更新 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

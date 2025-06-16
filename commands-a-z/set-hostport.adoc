@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, port 
 summary: set HostPortコマンドは、ホストポートのプロパティを変更します。 
 ---
-= ホストポートを設定する
+= ホストポートの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

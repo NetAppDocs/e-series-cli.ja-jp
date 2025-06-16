@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, group 
 summary: '[Forrevive SnapGroup]コマンドは"指定したスナップショット・グループを強制的に最適状態に設定します' 
 ---
-= Snapshotグループを回復します
+= スナップショットグループの復活 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

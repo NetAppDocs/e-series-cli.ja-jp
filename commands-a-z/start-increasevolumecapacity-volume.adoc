@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: increase, capacity, volume, disk pool, volume, group 
 summary: start increaseVolumeCapacityコマンドは、ディスクプールまたはボリュームグループ内の標準ボリュームまたはリポジトリボリュームの容量を拡張します。 
 ---
-= ディスクプールまたはボリュームグループ内のボリュームの容量の拡張
+= ディスクプールまたはボリュームグループ内のボリュームの容量を増やす - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

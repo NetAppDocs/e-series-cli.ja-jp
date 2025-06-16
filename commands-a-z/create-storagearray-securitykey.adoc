@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, security, key 
 summary: create storageArray securityKeyコマンドは、Full Disk Encryption（FDE）ドライブが搭載されたストレージアレイの新しいセキュリティキーを作成または変更します。 
 ---
-= ストレージアレイのセキュリティキーを作成します
+= ストレージアレイのセキュリティキーの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

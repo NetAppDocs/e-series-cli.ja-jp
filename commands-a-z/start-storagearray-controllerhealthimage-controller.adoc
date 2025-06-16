@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, controller, health, image 
 summary: start storageArray controllerHealthImage controllerコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、ストレージアレイコントローラのヘルスイメージを作成します。 
 ---
-= ストレージアレイコントローラのヘルスイメージの開始
+= ストレージアレイコントローラのヘルスイメージの開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

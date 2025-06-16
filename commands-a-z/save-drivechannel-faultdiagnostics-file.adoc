@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, drive, channel, fault, isolation, diagnostic, status 
 summary: save driveChannel faultDiagnostics fileコマンドは、start driveChannel faultDiagnosticsコマンドから返されたドライブチャネルの障害切り分け診断データを保存します。 
 ---
-= ドライブチャネルの障害切り分け診断ステータスを保存します
+= ドライブチャネル障害分離診断ステータスの保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

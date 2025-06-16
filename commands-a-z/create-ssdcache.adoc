@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, ssd, cache 
 summary: create ssdCacheコマンドは、ソリッドステートディスク（SSD）を使用してストレージアレイの読み取りキャッシュを作成します。 
 ---
-= SSDキャッシュを作成する
+= SSDキャッシュの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

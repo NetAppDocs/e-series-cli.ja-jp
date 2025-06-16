@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, external key, management, communication 
 summary: start storageArray externalKeyManagement testコマンドは、設定されているクレデンシャル（証明書、KMIPサーバのアドレス、KMIPポート番号）を使用して、ストレージアレイが外部KMIPサーバと通信できるかどうかを確認します。 
 ---
-= 外部キー管理通信のテスト
+= 外部キー管理通信のテスト - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

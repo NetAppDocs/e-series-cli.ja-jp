@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, initiator 
 summary: set iscsiInitiatorコマンドは、iSCSIイニシエータの属性を設定します。 
 ---
-= iSCSIイニシエータを設定する
+= iSCSIイニシエーターの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: autoconfigure, storage, array, hot spares, supported, roles, syntax, parameters, minimum firmware level 
 summary: autoConfigure storageArray hotsparesコマンドは、ストレージアレイ内のホットスペアを自動的に定義および設定します。このコマンドはいつでも実行できます。このコマンドは、ストレージアレイに最適なホットスペア対象範囲を指定します。 
 ---
-= ストレージアレイのホットスペアを自動設定します
+= ストレージアレイのホットスペアの自動構成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
 summary: 認証を行うには、割り当てられたログインクレデンシャルを使用してユーザがシステムにアクセスする必要各ユーザログインには、特定のロールとアクセス権限が設定されたユーザプロファイルが関連付けられます。 
 ---
-= 認証の開始
+= 認証を始める - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

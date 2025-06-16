@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache 
 summary: show ssdCacheコマンドは、SSDキャッシュに関する情報を表示します。 
 ---
-= SSDキャッシュを表示します
+= SSD キャッシュを表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

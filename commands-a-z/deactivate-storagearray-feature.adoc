@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, synchronous, mirror 
 summary: deactivate storageArray featureコマンドは、同期ミラーリング機能を非アクティブ化し、ミラーリポジトリボリュームを逆アセンブルし、セカンダリボリュームのコントローラ所有者を解放します。 
 ---
-= 同期ミラーリングを非アクティブ化する
+= 同期ミラーリングを無効化する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

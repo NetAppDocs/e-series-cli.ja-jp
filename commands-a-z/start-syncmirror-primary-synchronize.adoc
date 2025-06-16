@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, synchronous, mirror, synchronization 
 summary: start SyncMirror primary synchronizeコマンドは、同期ミラーリングを開始します。 
 ---
-= 同期ミラーリングを開始します
+= 同期ミラーリング同期の開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

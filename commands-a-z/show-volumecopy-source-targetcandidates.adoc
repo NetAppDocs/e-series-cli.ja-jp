@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, target, candidates 
 summary: show VolumeCopy source targetCandidatesコマンドは、ボリュームコピー処理のターゲットとして使用できるボリューム候補に関する情報を返します。このコマンドは、Snapshotボリュームコピーペアに対して有効です。 
 ---
-= ボリュームコピーのターゲット候補の表示
+= ボリュームコピーのターゲット候補を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

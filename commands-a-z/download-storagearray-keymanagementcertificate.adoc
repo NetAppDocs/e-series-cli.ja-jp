@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, management, key, certificate, command, intall, external, support, role 
 summary: download storageArray keyManagementCertificateコマンドは、外部キー管理証明書をストレージアレイにインストールします。 
 ---
-= ストレージアレイの外部キー管理証明書をインストール
+= ストレージアレイの外部キー管理証明書をインストールする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

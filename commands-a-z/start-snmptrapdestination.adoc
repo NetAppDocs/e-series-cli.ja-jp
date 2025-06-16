@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, snmp, trap, destination 
 summary: start snmpTrapDestinationコマンドは、特定の簡易ネットワーク管理プロトコル（SNMP）コミュニティまたはユーザのトラップレシーバーの接続とIDをテストします。このコマンドは、トラップレシーバーにトラップメッセージを送信することによって、トラップの送信先をテストします。 
 ---
-= SNMPトラップの送信先をテストします
+= SNMPトラップの送信先をテストする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

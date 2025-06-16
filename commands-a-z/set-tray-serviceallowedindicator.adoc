@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, service, action, allowed, indicator 
 summary: set tray serviceAllowedIndicatorコマンドは、電源ファンキャニスター、インターコネクトバッテリキャニスター、または環境サービスモジュール（ESM）キャニスターの保守操作可能インジケータライトをオンまたはオフにします。 
 ---
-= トレイの保守操作可能インジケータの設定
+= トレイサービスアクション許可インジケーターの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, image, rollback 
 summary: 'Resume(Resume) SnapImageロールバックコマンドは"一時停止状態になったロールバック操作を再開します' 
 ---
-= Snapshotイメージのロールバックを再開します
+= スナップショットイメージのロールバックを再開する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

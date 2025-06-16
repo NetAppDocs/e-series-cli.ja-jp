@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
 summary: download tray configurationsettingsコマンドは、ストレージアレイ内のすべてのドライブトレイまたはストレージアレイ内の特定のドライブトレイに工場出荷時のデフォルト設定をダウンロードします。 
 ---
-= トレイの設定をダウンロードします
+= ダウンロードトレイの構成設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, drive log 
 summary: save allDrives logfileコマンドは、ドライブログをファイルに保存します。 
 ---
-= ドライブログを保存します
+= ドライブログの保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

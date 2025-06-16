@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, event, alert, filter 
 summary: set event alertコマンドは、特定のアラート対象イベントに関連する通知を無効または有効にすることにより、アラートイベント通知を管理します。特定のアラート対象イベントに関する通知を無効にするには、そのイベントをブロックします。特定のアラート対象イベントに関する通知を有効にする場合は、そのイベントのブロックを解除します。 
 ---
-= イベントアラートのフィルタリングを設定します
+= イベントアラートフィルタリングの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, lun map 
 summary: remove lunMappingコマンドを実行すると、論理ユニット番号（LUN）またはネームスペースID（NSID）マッピングが1個以上のボリュームから削除されます。 
 ---
-= ボリュームのLUNマッピングを削除します
+= ボリュームLUNマッピングの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

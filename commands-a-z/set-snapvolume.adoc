@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rename, snapshot, volume 
 summary: set snapVolumeコマンドは、既存のSnapshotボリュームの名前を変更します。 
 ---
-= Snapshotボリュームの名前を変更します
+= スナップショットボリュームの名前変更 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

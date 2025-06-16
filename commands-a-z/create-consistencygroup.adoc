@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group 
 summary: create consistencyGroupコマンドは、スナップショットグループを含むことができる、新しい空のコンシステンシグループを作成します。set consistencyGroup addCGMemberコマンドを使用して、Snapshotグループを追加する必要があります。 
 ---
-= 整合グループを作成する
+= 整合性グループの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

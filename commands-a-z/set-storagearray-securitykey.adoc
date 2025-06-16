@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, internal, storage, array, security key 
 summary: set storageArray securityKeyコマンドは、ドライブセキュリティ機能を実装するためにストレージアレイ全体で使用されるセキュリティキーを設定します。 
 ---
-= ストレージアレイの内部セキュリティキーを設定します
+= 内部ストレージアレイのセキュリティキーを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

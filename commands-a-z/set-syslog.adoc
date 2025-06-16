@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, syslog, set 
 summary: set syslogコマンドは、syslogアラート情報を設定します。アラート対象のイベントが発生するたびにsyslogサーバにアラートを送信するように、イベントモニタを設定できます。 
 ---
-= syslogを設定します
+= Syslog設定を構成する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

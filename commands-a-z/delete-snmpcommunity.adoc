@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snmpcommunity, command, existing, simple, network, management, protocol, community, previously, create, effective, unregister, trap, destination, associate, remove 
 summary: delete snmpcommunityコマンドは、create snmpcommunityコマンドを使用して以前に作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）コミュニティを削除します。SNMPコミュニティを削除すると、コミュニティの登録が解除されます。そのコミュニティに関連付けられているトラップの送信先も削除されます。 
 ---
-= SNMPコミュニティの登録を解除します
+= SNMPコミュニティの登録解除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, user, name, command, simple, network, management, protocol, create, register, effective, unregister, trap, destination, associate, remove 
 summary: delete snmpUser usernameコマンドを使用すると、以前に「create snmpUser」コマンドを使用して作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）USMユーザが削除されます。SNMPユーザを削除すると、そのユーザの登録が解除されます。そのユーザに関連付けられているトラップの送信先も削除されます。 
 ---
-= SNMPv3 USMユーザの登録を解除します
+= SNMPv3 USM ユーザーの登録解除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: establish, asynmirror, volume, asynchronous, mirrored, remote, storage, array, secondary, existing 
 summary: Establish asyncMirror volumeコマンドは、既存の非同期ミラーグループにセカンダリボリュームを追加することで、リモートストレージアレイ上の非同期ミラーペアを作成します。 
 ---
-= 非同期ミラーペアを確立します
+= 非同期ミラーペアの確立 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

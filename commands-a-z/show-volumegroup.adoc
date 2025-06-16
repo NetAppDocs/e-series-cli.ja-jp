@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group 
 summary: show volumeGroupコマンドは、ボリュームグループに関する情報を返します。 
 ---
-= ボリュームグループを表示します
+= ボリュームグループの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel, asynchronous, mirror, group, role, reversal 
 summary: stop asyncMirrorGroup RoleChangeコマンドは、非同期ミラーグループ間の保留中のロール反転処理をキャンセルします。 
 ---
-= 非同期ミラーグループのロール反転をキャンセルします
+= 非同期ミラーグループの役割の逆転をキャンセルする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

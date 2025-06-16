@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, communities 
 summary: show allSnmpCommunitiesコマンドは、ストレージアレイで定義された簡易ネットワーク管理プロトコル（SNMP）コミュニティに関する情報を返します。SNMPコミュニティは、ルータ、スイッチ、プリンタ、ストレージデバイスなどのデバイスの集合です。 デバイスを管理および監視するためにグループ化されています。 
 ---
-= SNMPコミュニティを表示します
+= SNMPコミュニティを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

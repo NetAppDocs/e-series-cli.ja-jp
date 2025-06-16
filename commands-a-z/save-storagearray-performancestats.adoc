@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, performance, statistics 
 summary: save storageArray performanceStatsコマンドは、パフォーマンス統計をファイルに保存します。 
 ---
-= ストレージアレイのパフォーマンス統計を保存します
+= ストレージアレイのパフォーマンス統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, resource, provisioned, volumes 
 summary: set storageArray resourceProvisionedVolumesコマンドは、DULBE機能を無効にします。 
 ---
-= ストレージアレイリソースにプロビジョニングされたボリュームを設定してください
+= ストレージアレイリソースのプロビジョニングされたボリュームを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

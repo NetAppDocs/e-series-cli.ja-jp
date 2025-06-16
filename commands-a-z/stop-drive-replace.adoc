@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, replace 
 summary: stop drive replaceコマンドは、set driveコマンドまたはreplace driveコマンドで開始したデータコピー処理をcopyDriveユーザ入力で停止します。 
 ---
-= ドライブ交換を停止します
+= ドライブ交換の停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

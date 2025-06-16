@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
 summary: activate storageArray firmwareコマンド は、ストレージアレイのコントローラの保留中の設定領域にダウンロードしたファームウェアをアクティブ化します。 
 ---
-= ストレージアレイのファームウェアをアクティブ化します
+= ストレージアレイファームウェアのアクティブ化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

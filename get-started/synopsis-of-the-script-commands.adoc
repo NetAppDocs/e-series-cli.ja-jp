@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: synopsis, script commands 
 summary: スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。 
 ---
-= スクリプトコマンドの概要
+= SANtricity CLI スクリプトコマンドについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

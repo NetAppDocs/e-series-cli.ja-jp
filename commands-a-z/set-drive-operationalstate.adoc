@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, state 
 summary: set drive operationalStateコマンドは、ドライブをFailed状態に設定します。 
 ---
-= ドライブの状態を設定
+= ドライブの状態を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

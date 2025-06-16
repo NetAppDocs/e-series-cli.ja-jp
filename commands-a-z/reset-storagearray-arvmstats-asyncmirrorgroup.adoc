@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, asynchronous, mirror group, statistics 
 summary: reset storageArray arvmStats asyncMirrorGroupコマンドは、非同期ミラーグループ内の1つ以上のメンバーボリュームの同期統計を相対0にリセットします。 
 ---
-= 非同期ミラーグループの統計をリセットします
+= 非同期ミラーグループの統計をリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

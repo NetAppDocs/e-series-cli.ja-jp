@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, negotiation, defaults 
 summary: show storageArray iscsiNegotiationDefaultsコマンドは、イニシエータとターゲットのネゴシエーションによって決まる接続レベルの設定に関する情報を返します。 
 ---
-= ストレージアレイのネゴシエーションのデフォルトを表示します
+= ストレージアレイネゴシエーションのデフォルトを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

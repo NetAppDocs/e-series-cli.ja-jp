@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: name, conventions 
 summary: CLIコマンドで使用する名前については、特定のルールに従う必要があります。 
 ---
-= 命名規則
+= SANtricity CLI の命名規則について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

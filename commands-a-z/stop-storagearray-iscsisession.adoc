@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, iscsi session 
 summary: stop storageArray iscsiSessionコマンドは、ストレージアレイのiSCSIセッションを強制的に終了します。 
 ---
-= ストレージアレイのiSCSIセッションを停止します
+= ストレージアレイのiSCSIセッションを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

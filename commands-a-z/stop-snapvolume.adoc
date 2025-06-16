@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, volume 
 summary: stop snapVolumeコマンドは、Snapshotボリュームの処理を停止します。 
 ---
-= Snapshotボリュームの停止
+= スナップショットボリュームの停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

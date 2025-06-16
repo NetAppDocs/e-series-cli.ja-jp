@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, volume, distribution 
 summary: reset storageArray volumeDistributionコマンドは、すべてのボリュームを優先コントローラに再割り当て（移動）します。 
 ---
-= ストレージアレイのボリューム分散をリセットします
+= ストレージアレイのボリューム配分をリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

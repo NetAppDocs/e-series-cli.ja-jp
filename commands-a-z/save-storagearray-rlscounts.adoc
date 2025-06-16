@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, rls, counts 
 summary: save storageArray RLSCountsコマンドは、Read Link Status（RLS）カウンタをファイルに保存します。 
 ---
-= ストレージアレイのRLSカウンタを保存します
+= ストレージアレイのRLSカウントを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

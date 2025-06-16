@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, monitor, personnel, commands, asynchronous, autosupport, cache, array, synchronous 
 summary: ストレージ監視担当者のコマンド 
 ---
-= ストレージ監視担当者のコマンド
+= SANtricity CLI ストレージ モニター担当者コマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

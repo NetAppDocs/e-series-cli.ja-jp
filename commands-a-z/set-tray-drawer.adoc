@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drawer, service, action, allowed, indicator 
 summary: set tray drawerコマンドは、ドライブを格納するドロワーの保守操作可能インジケータライトをオンまたはオフにします。 
 ---
-= ドロワーの保守操作可能インジケータの設定
+= ドロワーサービスアクション許可インジケーターの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

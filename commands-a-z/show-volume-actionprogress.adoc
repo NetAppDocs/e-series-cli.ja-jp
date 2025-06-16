@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, action, progress 
 summary: show volume actionProgressコマンドは、ボリュームで長時間実行されている処理のうち、長時間実行されている処理の量に関する情報を返します。 
 ---
-= ボリューム操作の進捗状況を表示します
+= ボリュームアクションの進行状況を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

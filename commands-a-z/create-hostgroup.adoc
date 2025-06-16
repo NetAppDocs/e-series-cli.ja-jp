@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host group 
 summary: create hostGroupコマンドは、新しいホストグループを作成します。 
 ---
-= ホストグループを作成する
+= ホストグループの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

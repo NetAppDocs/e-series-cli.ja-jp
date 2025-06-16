@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, reservations 
 summary: show volume reservationsコマンドは、永続的予約が設定されているボリュームに関する情報を返します。 
 ---
-= ボリューム予約を表示します
+= ボリューム予約の表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

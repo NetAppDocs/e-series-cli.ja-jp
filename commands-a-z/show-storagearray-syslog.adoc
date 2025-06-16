@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, storage, array, syslog, configuration 
 summary: show storageArray syslogコマンドを使用すると、監査ログの格納に使用されるsyslogサーバの設定を表示できます。設定情報には、サーバIDとそのアドレス、プロトコル、およびポート番号が含まれます。 
 ---
-= ストレージアレイのsyslog設定を表示します
+= ストレージアレイのSyslog構成を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

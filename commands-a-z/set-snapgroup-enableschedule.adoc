@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, schedule 
 summary: set snapGroup enableScheduleコマンドは、SnapshotグループのSnapshotイメージを取得するスケジュールを定義します。 
 ---
-= Snapshotグループのスケジュールを設定します
+= スナップショットグループのスケジュールを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

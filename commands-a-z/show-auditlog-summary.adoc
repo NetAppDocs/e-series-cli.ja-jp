@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit, log, summary 
 summary: show auditLog summaryコマンドは、監査ログの概要情報を表示します。 
 ---
-= 監査ログの概要の表示
+= 監査ログの概要を表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, refresh 
 summary: set storageArray isnsServerRefreshコマンドは、iSNSサーバのネットワークアドレス情報を更新します。 
 ---
-= ストレージアレイのiSNSサーバの更新を設定します
+= ストレージアレイの iSNS サーバーの更新を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

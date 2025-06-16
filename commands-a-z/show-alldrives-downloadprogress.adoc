@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, download, progress 
 summary: show allDrives downloadProgressコマンドは、download drive firmwareコマンドまたはdownload storageArray driveFirmwareコマンドで対象となるドライブのファームウェアダウンロードのステータスを返します。 
 ---
-= ドライブのダウンロードの進捗状況を表示します
+= ドライブのダウンロード進行状況を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

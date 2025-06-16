@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, directory, server, role, map 
 summary: set storageArray DirectoryServer rolesコマンドでは、指定したディレクトリサーバのロールマッピングを定義できます。ロールマッピングは、各種のSMcliコマンドを実行しようとするユーザを認証するために使用されます。 
 ---
-= ストレージアレイのディレクトリサーバのロールマッピングの設定
+= ストレージアレイディレクトリサーバの役割マッピングを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

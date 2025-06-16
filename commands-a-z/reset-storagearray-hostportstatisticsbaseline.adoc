@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, host, port, statistics, baseline 
 summary: reset storageArray hostPortStatisticsBaselineコマンドは、ストレージアレイのホストポートの統計ベースラインをリセットします。 
 ---
-= ストレージアレイのホストポート統計のベースラインをリセットします
+= ストレージアレイのホストポート統計のベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

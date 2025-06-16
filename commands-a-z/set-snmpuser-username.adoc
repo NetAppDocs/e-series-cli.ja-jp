@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmpv3, usm, user 
 summary: set snmpUser usernameコマンドを実行すると、既存の簡易ネットワーク管理プロトコル（SNMP）USMユーザが更新されます。ユーザ名を持つユーザが1人だけの場合は、変更するUSMユーザがユーザ名で識別されます。ユーザ名とエンジンIDが同じでないユーザが複数ある場合、そのユーザはユーザ名とエンジンIDで識別されます。 
 ---
-= SNMPv3 USMユーザを更新します
+= SNMPv3 USMユーザーの更新 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: validate, storage array, security key 
 summary: validate storageArray securityKeyコマンドは、セキュリティ対応ドライブが搭載されたストレージアレイのセキュリティキーを検証して、バックアップセキュリティキーファイルが破損していないことを確認します。 
 ---
-= ストレージアレイのセキュリティキーを検証します
+= ストレージアレイのセキュリティキーの検証 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

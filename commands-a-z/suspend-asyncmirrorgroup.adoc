@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, asynchronous, mirror, group 
 summary: asyncMirrorGroupコマンドは、すべてのミラーペアのデータの同期を非同期ミラーグループレベルで中断します。 
 ---
-= 非同期ミラーグループを中断します
+= 非同期ミラーグループの一時停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

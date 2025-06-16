@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, array, label 
 summary: Remove array labelコマンドを使用すると、ストレージアレイのユーザ定義ラベルを削除できます。 
 ---
-= アレイラベルを削除します
+= アレイラベルの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

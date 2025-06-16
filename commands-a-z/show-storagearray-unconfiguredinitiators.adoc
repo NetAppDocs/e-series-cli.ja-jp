@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, unconfigured, initiators 
 summary: show storageArray unconfiguredInitiatorsコマンドは、ストレージアレイで検出されたイニシエータのうち、ストレージアレイトポロジに設定されていないイニシエータのリストを返します。 
 ---
-= 未設定のイニシエータの表示
+= 未構成のイニシエーターを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, ssd, cache, volume 
 summary: set volume ssdCacheEnabledコマンドは、特定のボリュームに対してSSDキャッシュ機能を使用したキャッシュをオンまたはオフにします。 
 ---
-= ボリュームのSSDキャッシュを設定します
+= ボリュームの SSD キャッシュを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add array label, supported, syntax, parameters, minimum firmware level 
 summary: Add array labelコマンドを使用すると、ユーザ定義のラベルを使用してストレージアレイを構成に追加できます。これにより、以降のコマンドでは、IPアドレスやホスト名の代わりにユーザ定義のラベルを使用してストレージアレイを指定できます。 
 ---
-= アレイラベルを追加します
+= アレイラベルの追加 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, candidates 
 summary: show SyncMirror candidatesコマンドは、同期ミラーリング構成のセカンダリボリュームとして使用できる、リモートストレージアレイのボリューム候補に関する情報を返します。 
 ---
-= 同期ミラーリングのボリューム候補を表示します
+= 同期ミラーリングボリュームの候補を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

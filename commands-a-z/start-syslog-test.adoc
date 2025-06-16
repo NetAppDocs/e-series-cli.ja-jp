@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, syslog, configuration 
 summary: start syslog testコマンドは、サンプルメッセージを送信してsyslog設定をテストします。 
 ---
-= syslog設定をテストします
+= Syslog 構成のテスト - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

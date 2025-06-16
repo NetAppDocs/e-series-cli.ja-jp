@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, asynchronous, mirror, group, statistics 
 summary: save storageArray arvmStats asyncMirrorGroupコマンドは、非同期ミラーグループ内の1つ以上のメンバーボリュームの同期統計をファイルに保存します。 
 ---
-= 非同期ミラーグループの統計を保存します
+= 非同期ミラーグループの統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

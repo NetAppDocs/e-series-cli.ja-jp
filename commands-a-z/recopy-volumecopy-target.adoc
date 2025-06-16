@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volumecopy, target, command, operation, volume, copy, pair, reinitiate, array, role, context 
 summary: recopy VolumeCopy targetコマンドは、既存のボリュームコピーペアを使用してボリュームコピー操作を再開します。 
 ---
-= ボリュームコピーの再コピー
+= ボリュームコピーの再コピー - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

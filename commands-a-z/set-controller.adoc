@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller 
 summary: set controllerコマンドは、コントローラの属性を定義します。 
 ---
-= コントローラを設定します
+= コントローラーの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

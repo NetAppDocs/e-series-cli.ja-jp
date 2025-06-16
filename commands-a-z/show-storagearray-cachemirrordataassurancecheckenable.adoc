@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, cache, mirror, data, assurance, check, enable 
 summary: show storageArray cacheMirrorDataAssuranceCheckEnableコマンドは、キャッシュミラーData Assuranceチェック機能の有効設定ステータスを返します。 
 ---
-= ストレージアレイのキャッシュミラーData Assuranceチェックが有効かどうかの表示
+= ストレージアレイキャッシュミラーデータアシュアランスチェックの有効化を表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

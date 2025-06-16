@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, audit, log, records 
 summary: delete auditLogコマンドは、監査ログ内のレコードの一部またはすべてを削除します。 
 ---
-= 監査ログレコードを削除します
+= 監査ログレコードの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

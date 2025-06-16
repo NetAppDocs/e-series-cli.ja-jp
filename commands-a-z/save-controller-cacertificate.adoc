@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, ca, certificates 
 summary: save controller cAcertificateコマンドは、インストールされているCA証明書を指定されたコントローラから取得します。取得した証明書に含まれるのは、コントローラのWebサーバから要求されたCA証明書です。 
 ---
-= インストールされているCA証明書を取得する
+= インストールされた CA 証明書を取得する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

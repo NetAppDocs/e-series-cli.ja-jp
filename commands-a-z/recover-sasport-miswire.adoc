@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, sas, port, mis-wire 
 summary: sasPortの誤配線コマンドは、誤配線状態からリカバリするための修正措置が実行されたことをコントローラに通知します。 
 ---
-= SASポート誤配線をリカバリします
+= SAS ポートの誤配線を修復する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

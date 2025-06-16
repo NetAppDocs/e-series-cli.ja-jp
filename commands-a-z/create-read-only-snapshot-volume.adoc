@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, read only, snapshot, volume 
 summary: create snapVolumeコマンドは、ベースボリュームのSnapshotイメージに対して読み取り専用のSnapshotボリュームを作成します。読み取り専用のSnapshotボリュームを読み取り/書き込みボリュームに変更するには、set SnapVolume convertToReadWriteコマンドを使用します。 
 ---
-= 読み取り専用Snapshotボリュームを作成します
+= 読み取り専用スナップショットボリュームの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

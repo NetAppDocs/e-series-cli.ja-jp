@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, member, consistency, group 
 summary: set consistencyGroup addCGMemberVolumeコマンドは、新しいベースボリュームをメンバーとして既存の整合性グループに追加します。 
 ---
-= 整合グループにメンバーを追加します
+= 整合性グループにメンバーを追加する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

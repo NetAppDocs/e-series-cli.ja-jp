@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, foreign, drive, native 
 summary: set drive nativeStateコマンドを使用すると、見つからない（外部）ドライブが元のボリュームグループに再び追加され、新しいストレージアレイのボリュームグループに追加されます。 
 ---
-= 外部ドライブをネイティブに設定します
+= 外部ドライブをネイティブに設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

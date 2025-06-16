@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, autosupport, configuration, e2800, e5700, storage, arrays 
 summary: show storageArray storageArray autoSupport AutoSupport コマンドは、ストレージアレイのAutoSupport バンドル収集設定を表示します。 
 ---
-= AutoSupport の設定を表示します
+= AutoSupport 構成の表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

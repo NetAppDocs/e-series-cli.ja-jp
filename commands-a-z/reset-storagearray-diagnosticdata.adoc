@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset ,storage, array, diagnostic, data 
 summary: reset storageArray diagnosticDataコマンドは、ストレージアレイの診断データが格納されているNVSRAMをリセットします。 
 ---
-= ストレージアレイの診断データをリセットします
+= ストレージアレイ診断データをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

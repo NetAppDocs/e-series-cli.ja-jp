@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, cache, command, data, purged, array, support, role, parameter 
 summary: delete ssdCacheコマンドは、SSDキャッシュを削除します。SSDキャッシュ内のすべてのデータがパージされます。 
 ---
-= SSDキャッシュを削除する
+= SSDキャッシュの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

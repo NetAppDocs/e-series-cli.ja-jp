@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, consistency, group 
 summary: show consistencyGroupコマンドは、1つ以上のコンシステンシグループに関する情報を返します。 
 ---
-= 整合グループを表示します
+= 整合性グループの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: reset storageArray autoSupport AutoSupport scheduleコマンドは、AutoSupport メッセージを管理ソフトウェアによって生成されたランダムな値に送信する、毎日または毎週の特定の時刻および曜日をリセットします。 
 ---
-= AutoSupport メッセージ収集スケジュールをリセットします
+= AutoSupport メッセージ収集スケジュールをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

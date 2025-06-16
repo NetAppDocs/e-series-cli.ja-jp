@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, diagnostic, data 
 summary: save storageArray diagnosticDataコマンドは、ストレージアレイの診断データをコントローラまたは環境サービスモジュール（ESM）からファイルに保存します。 
 ---
-= ストレージアレイの診断データを保存します
+= ストレージアレイ診断データを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

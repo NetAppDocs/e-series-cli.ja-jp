@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostgroup, command, support, role 
 summary: delete hostGroupコマンドは、ホストグループを削除します。 
 ---
-= ホストグループを削除します
+= ホストグループの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

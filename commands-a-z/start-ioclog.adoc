@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, input, output, controller, ioc, dump 
 summary: start IOCLogコマンドは、ホストとコントローラ間のデータ送信のIOCログをダンプします。 
 ---
-= 入出力コントローラ（IOC）ダンプを開始します
+= 入出力コントローラ（IOC）ダンプの開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

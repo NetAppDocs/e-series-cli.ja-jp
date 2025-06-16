@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, map 
 summary: create mapping volumeコマンドは、ボリュームからホストまたはホストグループへの論理マッピングを作成します。 
 ---
-= ボリュームマッピングの作成
+= ボリュームマッピングの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

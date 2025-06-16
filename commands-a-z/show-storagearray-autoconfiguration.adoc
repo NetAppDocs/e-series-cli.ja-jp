@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, auto, configuration 
 summary: autoConfigure storageArrayコマンドを実行すると、ストレージアレイが作成するデフォルトの自動設定がshow storageArray autoConfigurationコマンドで表示されます。 
 ---
-= ストレージアレイの自動設定の表示
+= ストレージアレイの自動構成を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

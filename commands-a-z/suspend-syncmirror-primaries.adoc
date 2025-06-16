@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: suspend, synchronous, mirror 
 summary: suspend SyncMirror primariesコマンドは、同期ミラーリング処理を一時停止します。 
 ---
-= 同期ミラーリングを中断します
+= 同期ミラーリングの一時停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

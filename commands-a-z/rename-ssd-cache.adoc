@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rename, ssd, cache 
 summary: set ssdCacheコマンドは、SSDキャッシュの名前を変更します。 
 ---
-= SSDキャッシュの名前を変更します
+= SSDキャッシュの名前変更 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, cli, commands 
 summary: 入力した値または名前に基づいて、CLIコマンドには特定の形式ルールが適用されます。 
 ---
-= CLIコマンドの表記規則
+= SANtricity CLIコマンドのフォーマットルール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

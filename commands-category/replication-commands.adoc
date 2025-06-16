@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replication, commands, consistency group, command, repository volume, 
 summary: レプリケーションコマンド 
 ---
-= レプリケーションコマンド
+= SANtricity CLI レプリケーションコマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace, drive 
 summary: ドライブの交換ドライブコマンドは、ボリュームグループ内のドライブを交換します。 
 ---
-= ドライブを交換します
+= ドライブの交換 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

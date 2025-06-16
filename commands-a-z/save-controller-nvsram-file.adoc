@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, controller, nvsram 
 summary: save controller NVSRAM fileコマンドは、選択された一連のコントローラNVSRAM領域をファイルに保存します。 
 ---
-= コントローラのNVSRAMを保存します
+= コントローラのNVSRAMを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

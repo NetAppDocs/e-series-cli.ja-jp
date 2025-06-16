@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, repository, consistency 
 summary: check repositoryConsistencyコマンドは、指定したオブジェクトの基になるリポジトリボリューム内のデータの分析に基づいてレポートを作成します。 
 ---
-= リポジトリの整合性を確認します
+= リポジトリの整合性をチェックする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

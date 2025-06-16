@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, storage, array, syslog, configuration 
 summary: set storageArray syslogコマンドを使用すると、syslogサーバのアドレス、プロトコル、またはポート番号を変更できます。 
 ---
-= ストレージアレイのsyslog設定の更新
+= ストレージアレイのSyslog構成の更新 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, configuration, database, diagnostic 
 summary: stop storageArray configDbDiagnosticコマンドは、start storageArray configDbDiagnosticコマンドで開始されたコントローラファームウェア内の構成データベースを検証するための診断テストを停止します。 
 ---
-= ストレージアレイの構成データベース診断を停止します
+= ストレージアレイ構成データベース診断を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

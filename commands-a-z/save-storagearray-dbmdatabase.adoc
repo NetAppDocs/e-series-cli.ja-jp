@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, database 
 summary: save storageArray dbmDatabaseコマンドは、RAID構成データまたはすべてのデータをホスト上のファイルにバックアップします。データの場所とコントローラは複数指定できます。 
 ---
-= ストレージアレイのDBMデータベースの保存
+= ストレージアレイDBMデータベースの保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

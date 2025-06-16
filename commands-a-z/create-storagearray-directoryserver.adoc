@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, directory server 
 summary: create storageArray DirectoryServerコマンドを使用すると、ユーザの認証および許可に使用する新しいディレクトリサーバを追加できます。 
 ---
-= ストレージアレイのディレクトリサーバを作成する
+= ストレージアレイディレクトリサーバーの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

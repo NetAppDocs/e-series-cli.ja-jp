@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, synchronous, mirroring 
 summary: resume SyncMirror コマンドは、中断した同期ミラーリング処理を再開します。 
 ---
-= 同期ミラーリングを再開します
+= 同期ミラーリングの再開 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

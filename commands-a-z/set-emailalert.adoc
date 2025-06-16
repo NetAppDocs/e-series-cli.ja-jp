@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, email, alert, set 
 summary: set emailAlertコマンドは、指定されたテクニカルサポートまたは組織にEメールを送信するようにEメールを設定します。Eメールアラートには、イベントの概要、影響を受けるストレージに関する詳細情報、およびお客様の連絡先情報が含まれています。 
 ---
-= Eメールアラートを設定
+= 電子メールアラート設定を構成する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

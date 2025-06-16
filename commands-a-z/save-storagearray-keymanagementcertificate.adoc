@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, external, key management, certificate 
 summary: save storageArray keyManagementCertificateコマンドは、インストールされている証明書を取得します。 
 ---
-= インストールされている外部キー管理証明書を取得します
+= インストールされた外部キー管理証明書を取得する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

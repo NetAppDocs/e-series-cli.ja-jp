@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, copy 
 summary: create VolumeCopyコマンドを使用すると、ボリュームコピーが作成され、ボリュームコピー処理が開始されます。このコマンドは、Snapshotイメージのボリュームコピーペアに対して有効です。 
 ---
-= ボリュームコピーを作成する
+= ボリュームコピーの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

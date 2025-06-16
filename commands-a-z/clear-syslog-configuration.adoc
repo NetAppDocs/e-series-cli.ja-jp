@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, syslog, configuration 
 summary: clear syslog configurationコマンドは、syslogアラート情報をクリアします。 
 ---
-= syslog設定をクリアします
+= Syslog 設定をクリアする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

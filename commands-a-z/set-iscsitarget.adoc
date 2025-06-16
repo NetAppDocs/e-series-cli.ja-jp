@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, target, properties 
 summary: set iscsiTargetコマンドは、iSCSIターゲットのプロパティを定義します。 
 ---
-= iSCSIターゲットのプロパティを設定します
+= iSCSI ターゲットのプロパティを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

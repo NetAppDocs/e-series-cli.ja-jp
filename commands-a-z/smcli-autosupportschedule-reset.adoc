@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: SMcli -autoSupportSchedule resetコマンドは、AutoSupport メッセージを送信する毎日/毎週の時間と曜日をリセットします。管理ソフトウェアが生成するデフォルトのランダムな値をそのまま使用することも、このコマンドで値を指定することもできます。 
 ---
-= AutoSupport メッセージ収集スケジュールをリセットします
+= AutoSupport メッセージ収集スケジュールをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

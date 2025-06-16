@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, volumes 
 summary: show snapVolumeコマンドは、1つ以上のSnapshotボリュームに関する情報を返します。 
 ---
-= Snapshotボリュームの表示
+= スナップショットボリュームの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

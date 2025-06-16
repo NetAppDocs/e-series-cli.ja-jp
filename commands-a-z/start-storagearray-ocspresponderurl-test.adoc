@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ocsp, server, url, test 
 summary: start storageArray ocspResponderUrlテストコマンドは、Online Certificate Status Protocol（OCSP）サーバの指定したURLへの接続が開いているかどうかをチェックします。 
 ---
-= OCSPサーバURLテストを開始します
+= OCSP サーバー URL テストを開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, script, commands 
 summary: 特定のスクリプトコマンドに固有の構文については、各スクリプトコマンド概要 の最後にある「メモ」セクションで説明しています。 
 ---
-= スクリプトコマンドの形式ルール
+= SANtricity CLI スクリプトコマンドのフォーマットルール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, group, command, entire, associated, support, role 
 summary: delete volumeGroupコマンドは、ボリュームグループ全体と関連付けられているボリュームを削除します。 
 ---
-= ボリュームグループを削除します
+= ボリュームグループの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, group 
 summary: set hostGroupコマンドは、ホストグループの名前を変更します。 
 ---
-= ホストグループを設定する
+= ホストグループの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

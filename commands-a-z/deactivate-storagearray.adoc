@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, asynchronous, mirroring 
 summary: これにより、非同期ミラーリング機能が非アクティブ化されます。 
 ---
-= 非同期ミラーリングを非アクティブ化する
+= 非同期ミラーリングを無効化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

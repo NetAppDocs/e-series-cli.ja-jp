@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, email, alert, recipient 
 summary: delete emailAlertコマンドは、電子メールアラート設定から受信者の電子メールアドレスを削除します。 
 ---
-= Eメールアラートの受信者を削除
+= メールアラートの受信者を削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

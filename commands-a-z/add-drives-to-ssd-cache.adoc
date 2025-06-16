@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add drives ssd cache, supported arrays, syntax, parameters, minimum firmware level 
 summary: set ssdCacheコマンドは、Solid State Disk（SSD；ソリッドステートディスク）を追加することで既存のSSDキャッシュの容量を拡張します。 
 ---
-= SSDキャッシュにドライブを追加
+= SSD キャッシュにドライブを追加する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

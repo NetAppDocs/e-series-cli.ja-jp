@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, initiator 
 summary: set initiatorコマンドは、イニシエータオブジェクトを更新します。 
 ---
-= イニシエータの設定
+= イニシエータの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

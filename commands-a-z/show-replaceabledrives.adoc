@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, replaceable, drives 
 summary: show replaceableDrivesコマンドを使用すると、ストレージアレイ内の交換可能ドライブがすべて表示されます。 
 ---
-= 交換可能ドライブを表示します
+= 交換可能なドライブの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

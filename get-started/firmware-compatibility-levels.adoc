@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: firmware, compatibility, levels 
 summary: 以降のセクションのスクリプトコマンドは、スクリプトコマンドを実行できる最小ファームウェアレベルを示しています。 
 ---
-= ファームウェアの互換性レベル
+= SANtricity CLIファームウェアの互換性レベルについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

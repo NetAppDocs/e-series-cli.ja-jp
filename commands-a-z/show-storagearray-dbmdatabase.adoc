@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, dbm, database 
 summary: show storageArray dbmDatabaseコマンドは、ストレージアレイのオンボードバックアップの場所のメタデータを取得して表示します。バックアップの場所が複数ある場合は、場所ごとにメタデータが表示されます。 
 ---
-= ストレージアレイのDBMデータベースの表示
+= ストレージアレイの DBM データベースを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

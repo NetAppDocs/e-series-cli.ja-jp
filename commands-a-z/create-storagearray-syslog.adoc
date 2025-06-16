@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, syslog, configuration 
 summary: create storageArray syslogコマンドを使用すると、監査ログを外部syslogサーバにアーカイブできます。ストレージアレイとsyslogサーバの間に接続が確立されると、監査ログは自動的にsyslogサーバに保存されます。 
 ---
-= ストレージアレイのsyslog設定を作成します
+= ストレージアレイのSyslog構成の作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

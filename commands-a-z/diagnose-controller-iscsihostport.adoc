@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, hostport, command, diagnostic, tests, copper, cable, host, interface, cards, support, roles 
 summary: DiagnoseController iscsiHostPortコマンドは、iSCSIホストインタフェースカードとコントローラ間の銅線ケーブル上で診断テストを実行します。 
 ---
-= コントローラのiSCSIホストケーブルを診断します
+= コントローラのiSCSIホストケーブルの診断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

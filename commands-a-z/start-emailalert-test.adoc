@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, email, alert, configuration 
 summary: start emailAlert testコマンドを使用すると、サンプルの電子メールメッセージを送信して、アラート設定をテストできます。 
 ---
-= Eメールアラート設定のテスト
+= テストメールアラート設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

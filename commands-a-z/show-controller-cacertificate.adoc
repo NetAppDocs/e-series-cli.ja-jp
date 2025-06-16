@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, installed, root, intermediate, ca, certificates, summary 
 summary: show controller cAcertificateコマンドは、指定されたコントローラからインストールされているCA証明書の概要を表示します。このコマンドを使用すると、delete controller cAcertificateコマンドを実行する前に、削除する証明書のエイリアス名を確認できます。 
 ---
-= インストールされているルート/中間CA証明書の概要の表示
+= インストールされたルート/中間 CA 証明書の概要を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

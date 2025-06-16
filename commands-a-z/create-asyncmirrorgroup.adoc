@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, asynchronous, mirror, group 
 summary: create asyncMirrorGroupコマンドを使用すると、ローカルストレージアレイとリモートストレージアレイの両方に、新しい空の非同期ミラーグループが作成されます。 
 ---
-= 非同期ミラーグループを作成する
+= 非同期ミラーグループの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

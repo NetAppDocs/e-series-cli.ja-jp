@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit log, configuration 
 summary: show auditLog configurationコマンドでは、ストレージアレイの監査ログ設定が表示されます。 
 ---
-= 監査ログ設定を表示します
+= 監査ログ設定の表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

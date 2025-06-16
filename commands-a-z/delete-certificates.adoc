@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, certificates 
 summary: Delete certificatesコマンドを使用すると、CLIパッケージの信頼ストアから証明書を削除できます。 
 ---
-= 証明書を削除します
+= 証明書の削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

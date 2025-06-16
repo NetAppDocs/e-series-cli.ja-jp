@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, installed, signed, certificate 
 summary: reset controller arrayManagementSignedCertificateコマンドは、コントローラにインストールされている署名済み証明書とルート/中間証明書をリセットします。すべてのルート証明書と中間証明書、および署名済み証明書は、1つの自己署名証明書に置き換えられます。 
 ---
-= インストールされている署名済み証明書をリセット
+= インストールされた署名済み証明書をリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, host, ports 
 summary: show allHostPortsコマンドは、設定されているホストポートに関する情報を返します。 
 ---
-= ホストポートを表示します
+= ホストポートの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

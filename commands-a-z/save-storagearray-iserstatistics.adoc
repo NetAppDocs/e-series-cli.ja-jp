@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, iser, statistics 
 summary: save storageArray iserStatisticsコマンドは、ストレージアレイのiSERパフォーマンス統計をファイルに保存します。 
 ---
-= ストレージアレイのiSER統計を保存します
+= ストレージアレイの iSER 統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

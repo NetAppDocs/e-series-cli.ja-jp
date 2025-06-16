@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, command, snmptrapdestination, existing, simple, network, management, protocol, trap, destination, previous, create, registered 
 summary: delete snmpTrapDestinationコマンドを使用すると、create snmpTrapDestinationコマンドを使用して以前に作成および登録した既存の簡易ネットワーク管理プロトコル（SNMP）トラップの送信先が削除されます。 
 ---
-= SNMPトラップの送信先の登録を解除します
+= SNMPトラップ送信先の登録解除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

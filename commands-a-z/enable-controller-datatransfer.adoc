@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, controller, datatransfer, command, revive, quiesced, running, diagnostics, role, syntax, parameter, firmware level 
 summary: コントローラデータ転送の有効化コマンドは、診断の実行中に休止したコントローラを回復します。 
 ---
-= コントローラのデータ転送を有効にします
+= コントローラのデータ転送を有効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

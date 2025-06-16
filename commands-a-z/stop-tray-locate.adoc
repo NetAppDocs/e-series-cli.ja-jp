@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, tray, locate 
 summary: 'stop tray locateコマンドは"start tray locateコマンドによって点灯したトレイのインジケータライトを消灯します' 
 ---
-= トレイの特定を停止します
+= トレイの位置特定を停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

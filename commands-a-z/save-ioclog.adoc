@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, input, output, controller, ioc, dump 
 summary: save IOCLogコマンドは、ストレージアレイ内のコントローラからホスト上のファイルにIOCダンプを保存します。 
 ---
-= 入出力コントローラ（IOC）ダンプを保存します
+= 入出力コントローラ（IOC）ダンプを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, manual, drive, select 
 summary: create volumeコマンドは、新しいボリュームグループとボリュームを作成し、ボリュームのドライブを指定できます。 
 ---
-= RAIDボリュームの作成（手動ドライブ選択）
+= RAIDボリュームの作成（手動ドライブ選択） - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

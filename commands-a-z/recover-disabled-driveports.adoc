@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, disable, drive ports 
 summary: recover disabled drivePortsコマンドは、無効なドライブポートをリカバリします。 
 ---
-= 無効なドライブポートをリカバリします
+= 無効になったドライブポートを回復する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

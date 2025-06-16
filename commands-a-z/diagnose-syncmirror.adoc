@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
 summary: SyncMirror コマンドは、同期ミラーリング機能が有効になっているストレージアレイ上の指定されたプライマリボリュームとミラーボリュームの間の接続をテストします。 
 ---
-= 同期ミラーリングの診断
+= 同期ミラーリングの診断 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

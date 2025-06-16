@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, infiniband, statistics 
 summary: save storageArray ibStatsコマンドは、ストレージアレイのInfiniBandパフォーマンス統計をファイルに保存します。 
 ---
-= ストレージアレイのInfiniBandの統計を保存します
+= ストレージアレイのInfiniBand統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

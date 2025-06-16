@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, configuration, database, diagnostic 
 summary: start storageArray configDbDiagnosticコマンドは、構成データベースに対して整合性チェックを実行します。 
 ---
-= ストレージアレイの構成データベース診断を開始します
+= ストレージアレイ構成データベース診断を開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

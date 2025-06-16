@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, events 
 summary: save storageArray warningEventsコマンドは、メジャーイベントログのイベントをファイルに保存します。 
 ---
-= ストレージアレイイベントを保存します
+= ストレージアレイイベントの保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

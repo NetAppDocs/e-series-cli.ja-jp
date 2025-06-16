@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, group, synchronization, progress 
 summary: show asyncMirrorGroup synchronizationProgressコマンドは、ローカルとリモートのストレージアレイ間の非同期ミラーグループで実行される、定期的な同期の進捗状況を表示します。 
 ---
-= 非同期ミラーグループの同期の進捗状況を表示します
+= 非同期ミラーグループの同期の進行状況を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

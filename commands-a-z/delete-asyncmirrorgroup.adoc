@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, asynchronous, mirror group 
 summary: DELETE asyncMirrorGroupコマンドは、ローカルストレージアレイとリモートストレージアレイから非同期ミラーグループを削除します。 
 ---
-= 非同期ミラーグループを削除します
+= 非同期ミラーグループの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, drive 
 summary: ドライブの回復コマンドは、指定したドライブを強制的に最適状態に設定します。 
 ---
-= ドライブを回復します
+= ドライブの復活 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, state, capture 
 summary: save storageArray stateCaptureコマンドは、ストレージアレイの状態キャプチャをファイルに保存します。 
 ---
-= ストレージアレイの状態キャプチャを保存します
+= ストレージアレイの状態キャプチャを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

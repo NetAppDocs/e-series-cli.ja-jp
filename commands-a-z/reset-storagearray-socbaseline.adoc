@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, soc, baseline 
 summary: reset storageArray SOCBaselineコマンドは、コントローラ経由でアクセスされるすべてのSwitch-On-a-Chip（SOC）デバイスのベースラインをリセットします。 
 ---
-= ストレージアレイのSOCベースラインをリセットします
+= ストレージアレイの SOC ベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

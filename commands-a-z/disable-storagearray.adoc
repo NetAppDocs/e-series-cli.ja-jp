@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, command, storage, feature 
 summary: disable storageArrayコマンドは、ストレージアレイ機能を無効にします。 
 ---
-= ストレージアレイの機能を無効にします
+= ストレージアレイ機能を無効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

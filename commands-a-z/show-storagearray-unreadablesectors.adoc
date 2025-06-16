@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, unreadable, sectors 
 summary: show storageArray unreadableSectorsコマンドは、ストレージアレイ内の読み取り不可能なすべてのセクターのアドレスを表形式で返します。 
 ---
-= ストレージアレイの読み取り不能セクターの表示
+= ストレージアレイの読み取り不可能なセクターを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

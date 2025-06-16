@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, volumegroup, security, command, non secure, volume, group 
 summary: enable volumeGroup securityコマンドは、セキュアでないボリュームグループをセキュアなボリュームグループに変換します。 
 ---
-= ボリュームグループのセキュリティを有効にします
+= ボリュームグループのセキュリティを有効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

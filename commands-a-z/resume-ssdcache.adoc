@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, ssd, cache 
 summary: resume ssdCacheコマンドは、suspend ssdCacheコマンドで一時的に停止されていたSSDキャッシュを使用して、すべてのボリュームのキャッシュを再開します。 
 ---
-= SSDキャッシュを再開します
+= SSDキャッシュを再開 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

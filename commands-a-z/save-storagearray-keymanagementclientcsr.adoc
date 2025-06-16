@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, key, management, certificate, sign, request, csr 
 summary: save storageArray keyManagementClientCSRコマンドは、ストレージアレイに対して生成された、ファイルに保存可能なCSRを要求します。 
 ---
-= キー管理証明書署名要求（CSR）の生成
+= キー管理証明書署名要求 (CSR) を生成する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

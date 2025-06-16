@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, array, management, server, certificate, command, install 
 summary: コントローラのdownload controller arrayManagementServerCertificateコマンドは、コントローラにサーバ証明書をインストールします。 
 ---
-= サーバの署名済み証明書をインストール
+= サーバー署名証明書のインストール - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

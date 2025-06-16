@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exit, status 
 summary: 終了ステータスは、実行されたコマンドに対して返されます。次の表に、返される可能性のある終了ステータスと各ステータスの意味を示します。 
 ---
-= 終了ステータス
+= SANtricity CLIの終了ステータスについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

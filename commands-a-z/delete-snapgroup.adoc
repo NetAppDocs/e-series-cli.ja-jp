@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapgroup, command, entire, snapshot, group, option, associate, repository, volume 
 summary: DELETE SnapGroupコマンドは、Snapshotグループ全体、およびオプションで関連付けられているリポジトリボリュームを削除します。 
 ---
-= Snapshotグループを削除します
+= スナップショットグループの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

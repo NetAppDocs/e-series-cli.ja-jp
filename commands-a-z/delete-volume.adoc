@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, one, standard, volume, supported, array, role 
 summary: delete volumeコマンドは、1つ以上の標準ボリュームを削除します。 
 ---
-= ボリュームを削除します
+= ボリュームの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

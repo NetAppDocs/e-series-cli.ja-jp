@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Autosupport, bundle, dispatch, delivery type, size 
 summary: 配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。 
 ---
-= AutoSupportディスパッチサイズ制限の設定
+= AutoSupport ディスパッチサイズ制限の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

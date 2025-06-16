@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, groups 
 summary: show asyncMirrorGroup summaryコマンドは、1つ以上の非同期ミラーグループの設定情報を表示します。 
 ---
-= 非同期ミラーグループを表示します
+= 非同期ミラーグループの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

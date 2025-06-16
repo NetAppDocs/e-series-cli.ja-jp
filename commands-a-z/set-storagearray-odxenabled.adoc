@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, odx 
 summary: set storageArray odxEnabledコマンドは、ストレージアレイのオフロードデータ転送（ODX）をオンまたはオフにします。 
 ---
-= ODX を有効または無効にします
+= ODX を有効化または無効化する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

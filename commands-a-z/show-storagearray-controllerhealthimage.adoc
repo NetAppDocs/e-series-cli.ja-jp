@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, controller, health, image 
 summary: show storageArray controllerHealthImageコマンドは、コントローラヘルスイメージをサポートするストレージアレイで、コントローラヘルスイメージが使用可能な場合は、コントローラキャッシュ上のコントローラヘルスイメージの詳細を表示します。 
 ---
-= ストレージアレイコントローラのヘルスイメージの表示
+= ストレージアレイコントローラのヘルスイメージを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

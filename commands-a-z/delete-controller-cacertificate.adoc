@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, install, root, intermediate, ca, certificates 
 summary: delete controller cAcertificateコマンドは、インストールされているルートまたは中間CA証明書を指定されたコントローラから削除します。 
 ---
-= インストールされているルート/中間CA証明書を削除します
+= インストールされたルート/中間 CA 証明書を削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

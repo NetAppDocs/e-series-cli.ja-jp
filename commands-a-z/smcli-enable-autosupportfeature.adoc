@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, emw, management, domain, level, smcli 
 summary: SMcli enable autoSupportFeatureコマンドは、すべての管理対象ストレージアレイのAutoSupport （ASUP）機能をオンにして、テクニカルサポートサイトにメッセージを送信できるようにします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。 
 ---
-= EMW管理ドメインレベルでのAutoSupport の有効化または無効化（SMcliのみ）
+= EMW管理ドメインレベルでAutoSupportを有効化または無効化する（SMcliのみ） - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

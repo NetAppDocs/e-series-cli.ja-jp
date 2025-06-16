@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storagearray, down, values, controller, support, role, command, array 
 summary: download storageArray NVSRAMコマンドは、ストレージアレイコントローラのNVSRAM値をダウンロードします。 
 ---
-= ストレージアレイのNVSRAMをダウンロードします
+= ストレージアレイNVSRAMのダウンロード - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, rollback 
 summary: stop cgSnapImage rollbackコマンドを実行すると、Snapshot整合性グループ内のメンバーベースボリュームへのロールバック処理が停止します。 
 ---
-= 整合性グループのSnapshotロールバックを停止します
+= 整合性グループのスナップショットのロールバックを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

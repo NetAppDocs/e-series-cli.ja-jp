@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, volume, parity 
 summary: repair volume parityコマンドは、ボリューム上のパリティエラーを修復します。 
 ---
-= ボリュームのパリティを修復します
+= ボリュームパリティの修復 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

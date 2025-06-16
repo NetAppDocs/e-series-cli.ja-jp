@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
 summary: セキュリティキーは、ストレージアレイのセキュリティ有効ドライブとコントローラで共有される文字列です。内部キー管理を使用する場合は、セキュリティキーを作成してコントローラの永続的メモリに保持します。 
 ---
-= 内部キー管理の開始
+= 内部キー管理の開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

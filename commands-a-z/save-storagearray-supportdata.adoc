@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, support, data 
 summary: save storageArray supportDataコマンドは、ストレージアレイのサポート関連情報をファイルに保存します。 
 ---
-= ストレージアレイのサポートデータを保存します
+= ストレージアレイのサポートデータを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

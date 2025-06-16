@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, ipv6, address 
 summary: set storageArray isnsIPv6Addressコマンドは、iSNSサーバのIPv6アドレスを設定します。 
 ---
-= ストレージアレイのiSNSサーバのIPv6アドレスの設定
+= ストレージアレイの iSNS サーバの IPv6 アドレスを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

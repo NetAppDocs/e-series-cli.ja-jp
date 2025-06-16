@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, configuration 
 summary: テストメッセージを送信してAutoSupport の設定をテストするには、SMcli -autoSupportConfig testコマンドを使用します。このコマンドは管理ドメインで動作します。テストメッセージに含めるサンプルデータとして、管理ドメイン内のAutoSupport対応のアレイが選択されます。 
 ---
-= AutoSupport 構成をテストします
+= AutoSupport 構成のテスト - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

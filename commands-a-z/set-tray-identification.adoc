@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, identification 
 summary: set trayコマンドは、ストレージアレイ内のコントローラトレイ、コントローラドライブトレイ、またはドライブトレイのトレイIDを設定します。 
 ---
-= トレイIDを設定します
+= トレイ識別の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

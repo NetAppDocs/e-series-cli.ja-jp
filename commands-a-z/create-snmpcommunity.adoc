@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, community 
 summary: create snmpcommunityコマンドは、新しい簡易ネットワーク管理プロトコル（SNMP）コミュニティ、コミュニティ名文字列を作成し、新しいコミュニティを既知のエンティティとしてSNMPエージェントに登録します。既存のコミュニティと同じ名前の新しいコミュニティを登録しようとすると拒否され、ファームウェアからエラーメッセージが返されます。 
 ---
-= SNMPコミュニティの登録
+= SNMPコミュニティの登録 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

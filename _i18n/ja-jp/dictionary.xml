@@ -115,7 +115,6 @@
   <block id="82d033b1d0a54aad1b2252562f056446" category="paragraph">「-?`」</block>
   <block id="f7b4ebdf47caf37f65695390e300edf8" category="paragraph">CLIコマンドの使用方法を表示します。</block>
   <block id="9ffd32c9234d40afa0a6b642e854507f" category="summary">特定のスクリプトコマンドに固有の構文については、各スクリプトコマンド概要 の最後にある「メモ」セクションで説明しています。</block>
-  <block id="a34f8e9b3e8c0a5db5363d6ba9f8d58b" category="doc">スクリプトコマンドの形式ルール</block>
   <block id="16239040ff489b7b750a9f4319c180ea" category="paragraph">*大文字と小文字の区別*--スクリプトコマンドでは大文字と小文字は区別されません。スクリプトコマンドは、小文字、大文字、または大文字と小文字を混在させて入力できます。（次のコマンドの説明では、コマンド名を読みやすくし、コマンドの目的を理解しやすくするために、大文字と小文字を混在させています）。</block>
   <block id="89691c5fe7e61ba9d8ec5ee5055f6f85" category="paragraph">*spaces *--コマンドの説明に示されているように、スクリプトコマンドにスペースを入力する必要があります。</block>
   <block id="34acea0cfbd046edcc6eae6cd380f6bc" category="paragraph">*角括弧*--角括弧は、次の2つの方法で使用されます。</block>
@@ -179,7 +178,6 @@
   <block id="dfe36a8699543e28a594277f08890a95" category="list-text">パラメータ名(`*batteryInstallDate*`など)</block>
   <block id="4d816980a97ddc27e81555ffdb06708b" category="list-text">オペレーション名(`*redundancyCheck*`など)</block>
   <block id="1906f0c0c690d5cc786e031952f21ea5" category="paragraph">ユーザ定義エントリ（ユーザラベルなど）は変数と呼ばれます。構文では斜体で表示されます(例: trayID'または'volumeGroupName')</block>
-  <block id="bb0d07b5620d2e85d47a3dfc403a4ee0" category="doc">CLIコマンドの表記規則</block>
   <block id="02fcb96a2220221658b695dc783c341f" category="paragraph">Windows、Linux、またはSolarisオペレーティングシステムでCLIコマンドおよびスクリプトコマンドを実行する場合は、名前またはラベルの一部として使用される二重引用符（""）に特別な考慮が必要です。</block>
   <block id="88f31185f3b63664c188b018aa2994d0" category="paragraph">二重引用符（""）が名前または値の一部である場合は、各二重引用符の前にバックスラッシュ（\）を挿入する必要があります。</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例：</block>
@@ -375,7 +373,6 @@
   <block id="d52e106dfae71aa8fe55bd08be1ee7a1" category="paragraph">対話型モードでは'1つのコマンドを入力して結果を表示し'次のコマンドを入力できます完全なSMcli文字列は入力されません対話型モードは、構成エラーを確認したり、構成の変更を迅速にテストしたりする場合に役立ちます。</block>
   <block id="d84642a0fa127291d74836c8f51b74d2" category="paragraph">対話型モードのセッションを終了するには、オペレーティングシステム固有のコマンドを入力します。Linuxの場合、このキーの組み合わせは* Control-D*です。Windowsの場合、このキーの組み合わせは* Ctrl + Z + Enter *です。</block>
   <block id="d5a07a929adbc3f8e1dccfa24e88da4b" category="summary">コマンドラインインターフェイス（ CLI ）は、ストレージアレイを設定および監視するためのソフトウェアアプリケーションです。</block>
-  <block id="e469e58c2e81413c1d3a4e14f355fb8f" category="doc">CLIの概要</block>
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">CLIを使用すると、ストレージ管理ソフトウェア内のユーティリティであるスクリプトエンジンに直接アクセスできます。スクリプトエンジンは、ストレージアレイを設定および管理するコマンドを実行します。スクリプトエンジンは、スクリプトファイル経由で、またはコマンドラインから直接コマンドを読み取り、コマンドによって指示された処理を実行します。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">スクリプトコマンドは、ストレージアレイを設定および管理します。スクリプトコマンドはCLIコマンドとは異なります。個々のスクリプトコマンドを入力するか、スクリプトコマンドのファイルを実行することができます。個々のスクリプトコマンドを入力する場合は、スクリプトコマンドをCLIコマンドに埋め込みます。スクリプトコマンドのファイルを実行する場合は、ファイル名をCLIコマンドに埋め込みます。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">本ドキュメントに記載されているソフトウェア機能の一部は、Eシリーズストレージシステムでは使用できない場合があります。利用可能な機能については、アカウント担当者にお問い合わせください。</block>
@@ -609,7 +606,6 @@
   <block id="b7cdd34e0764c77268f1dabd94633e4c" category="paragraph">CLIは、どちらかのタイプのエラーを検出すると、そのエラーを説明する情報をコマンドラインに直接書き込み、戻りコードを設定します。リターンコードによっては、CLIは、エラーの原因となった端末に関する追加情報 を書き込む場合もあります。また、想定していたコマンド構文に関する情報も書き込まれ、入力した構文のエラーを特定する上で役立ちます。</block>
   <block id="e7e70f1a42f0385a3b7f20bcca7c725d" category="paragraph">コマンドの実行中に例外が発生した場合、CLIはエラーをキャプチャします。コマンド処理の最後に（コマンド処理情報がコマンドラインに書き込まれたあと）、CLIはエラー情報を自動的にファイルに保存します。</block>
   <block id="958918e69b48e0d9846a5f4e4fc3e64c" category="paragraph">エラー情報を保存するファイルの名前は「exprpt.txt」です。CLIは'devmgr.datadir'システム・プロパティによって指定されたディレクトリに'exprpt.txt'ファイルを配置しようとします何らかの理由でCLIが'devmgr.datadir'で指定されたディレクトリにファイルを配置できない場合'CLIはCLIが実行されているディレクトリに'exprpt.txt'ファイルを保存しますファイル名や場所は変更できません。「exprpt.txt」ファイルは、例外が発生するたびに上書きされます。情報を"exprpt.txt"ファイルに保存する場合は'情報を新しいファイルまたは新しいディレクトリにコピーする必要があります</block>
-  <block id="225df3023bbec8bcdc760941a198bdcc" category="summary">ボリュームグループの移行について説明します</block>
   <block id="a51bd146136c0effef8bf09de49de95a" category="paragraph">ボリュームグループがNVMeまたはFIPS対応ドライブで構成されている場合は、ターゲットアレイへの移行を開始する前にドライブのロックを解除するために、セキュリティキーとパスフレーズをソースアレイから記録/保存する必要があります。セキュリティキーとパスフレーズが不明な場合やデータの整合性が不要な場合は、セキュリティの消去を実行できます。Eシリーズストレージシステムでは、異なる暗号化セキュリティドライブの混在はサポートされていません。セキュリティキーを使用してドライブのロックを解除し、FIPSドライブを消去し、ロックされたNVMeドライブのロックを解除またはリセットする方法の詳細については、SANtricity System Managerのオンラインヘルプを参照してください。</block>
   <block id="b675c1a78d8533024a8878b054c013a6" category="paragraph">ボリュームグループの移行では、ボリュームグループをエクスポートして、別のストレージアレイにインポートすることができます。ボリュームグループをエクスポートして、オフラインの状態でデータを格納することもできます。</block>
   <block id="331aca7f6d2f21d3d59fcbafe29ac125" category="paragraph">*データアクセスが失われる可能性*-ボリュームグループを移動する前、またはボリュームグループをインポートする前に、ボリュームグループをエクスポートする必要があります。</block>
@@ -688,7 +684,6 @@
   <block id="d418c21758873351ac7110c6230d39fa" category="paragraph">8.20.11 -「* securityType *」パラメータが追加されました。</block>
   <block id="d5c71011e72512445dc6f7650a967d6e" category="paragraph">これらの表記は'スクリプト・コマンドと'*securityType*'を除くすべてのパラメータが'コントローラ・ファームウェアのバージョン7.84以上で実行されることを示しています`*securityType*`パラメータは、コントローラファームウェアのバージョン8.20_M3以上で実行されます。</block>
   <block id="832c4bddc90301ed87414e7217d12a80" category="summary">スクリプトコマンドはストレージアレイのさまざまな要素（ホストトポロジ、ドライブ構成、コントローラ構成、ボリューム定義、ボリュームグループ定義など）の定義および管理に使用できるため、コマンドはかなりの数になります。</block>
-  <block id="9ab03979fb14b675494053f695a63b30" category="doc">スクリプトコマンドの概要</block>
   <block id="92e9d6227d5534e7afc27a11179c808e" category="cell">構文</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
   <block id="622d27cd104889791f5af80d64bd606f" category="paragraph">保留中の処理を実行します。</block>
@@ -720,7 +715,6 @@
   <block id="eb194bd624b79c01462f026fcc16a669" category="paragraph">処理を停止します。その後、中断した処理を再開でき、中断された地点から処理が続行されます。</block>
   <block id="2a6889fd51daa4adf5e849a64d54890a" category="paragraph">セキュリティキーを検証します。</block>
   <block id="11f48f6028fc13ed8d31867639998d8e" category="summary">このセクションでは、CLIコマンドラッパーの一般的な構文を示します。</block>
-  <block id="53e4bf7c03a168dc39f408a2e59f4b84" category="doc">CLIコマンドラッパーの構文</block>
   <block id="c558c32077e3c358acaec2447b67b869" category="paragraph">このセクションでは、CLIコマンドラッパーの一般的な構文を示します。CLIコマンドラッパーの構文で使用される表記規則を次の表に示します。</block>
   <block id="7df65e857e3ee61a91e73f3afc266725" category="paragraph">「a|b`</block>
   <block id="dbeaf36a6fb1ac5f367bf849475e568a" category="paragraph">「_italic」-「words_`」</block>
@@ -797,7 +791,6 @@
   <block id="bf6829a2035da1ee3f5c0ae93652732c" category="inline-xref-macro">ストレージアレイの自動設定の表示</block>
   <block id="e0a196896c0583bda51daf508bf2e9b3" category="inline-xref-macro">ストレージアレイを自動設定します</block>
   <block id="724ce6411c4e487216d71dfe6ca49cdf" category="inline-xref-macro">自動ロードバランシングの統計を保存します</block>
-  <block id="799587ec57d3ccaff63b5aeba6541ba1" category="inline-xref-macro">自動ロードバランシングを有効または無効にするストレージアレイを設定します</block>
   <block id="a524a99cfdf07f411dee8bf72266b7e5" category="inline-xref-macro">アレイから証明書を追加します</block>
   <block id="901711e6beac98bf77c83f0abcd06cc7" category="inline-xref-macro">ファイルから証明書を追加します</block>
   <block id="98c9f4fd330bc6425238005018128760" category="inline-xref-macro">証明書を削除します</block>
@@ -806,7 +799,6 @@
   <block id="88e4ef4e75f71281d90069877b8a1847" category="inline-xref-macro">アレイラベルを削除します</block>
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">アレイラベルを表示します</block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShellは、コマンドラインツールへのアクセスを提供する、対話型のスクリプティングシェルです。</block>
-  <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShellのCLIコマンドの表記規則</block>
   <block id="50d9f3447707fa32e9c0df1880bba9e0" category="list-text">SMcliコマンドはすべてピリオドとスラッシュ（/）で開始</block>
   <block id="caa5d9328bfc806fa16f762ba7bdcb27" category="list-text">SMcliのラッパーは.exe拡張子を持つ実行可能コマンド（SMcli.exe）として識別</block>
   <block id="a2957c139a7a919a4f46836dd373b576" category="list-text">スクリプトコマンドは単一引用符（''）で囲みます。</block>
@@ -1221,7 +1213,6 @@
   <block id="a76786ff93a54df9ac472f1227017018" category="paragraph">このパラメータは、SNMPマネージャへの認証エラーメッセージの送信をオンまたはオフにします。認証失敗メッセージを送信するには、パラメータを「true」に設定します。認証失敗メッセージを送信しないようにするには、パラメータをFALSEに設定します。デフォルトは「true」です。</block>
   <block id="65ad459f04e8c52b262b01040adb2da1" category="paragraph">8.30</block>
   <block id="0a971bdaf647eec5727bb73b4fdaf62a" category="summary">set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。</block>
-  <block id="4f856a887e5732ed9116694218089f06" category="doc">ストレージアレイでキャッシュミラーのData Assuranceチェックを有効または無効にする</block>
   <block id="a2f3cff920191a1785038eb770af11ac" category="paragraph">set storageArray cacheMirrorDataAssuranceCheckEnableコマンドを使用すると、キャッシュミラーのData Assuranceチェックを有効または無効にできます。</block>
   <block id="ecd8f68d5c8a073ab5f744175bcfc48d" category="paragraph">8.41で、コマンドパラメータが新しくなりました。</block>
   <block id="330d0697424450147c0224569020bf9b" category="summary">set targetコマンドは、認証方式とエイリアス名など、iSCSI / iSERターゲットのプロパティを変更します。</block>
@@ -1422,7 +1413,6 @@
   <block id="3d139976c1c55c3b2339037a0d3064ee" category="paragraph">'file="C:\Program Files\CLI\logs\sasphy.csv</block>
   <block id="006de594d826fba6c0735756bd2ba8df" category="paragraph">SAS PHYエラー統計を格納するファイルのデフォルト名は'SAS-phy-error-log.csv'です任意のファイル名を使用できますが'.csv拡張子を使用する必要があります</block>
   <block id="60229ca5c99f5f79f718787dae6e6bd8" category="summary">set volumesコマンドは、ディスクプール内のボリュームのプロパティを定義します。</block>
-  <block id="12e44abaed4e25a729a846c77e446e73" category="doc">ディスクプール内のボリュームのボリューム属性を設定します</block>
   <block id="bf06c203cdd9cc13c223c1d55e86a3f0" category="paragraph">set volumesコマンドは'ディスク・プール内のボリュームのプロパティを定義します</block>
   <block id="1c38ffc45b9eed61dc4f59ea613d7bbe" category="paragraph">ディスクプール内のボリューム数が32を超える構成では、このコマンドの実行中にタイムアウトとなり、ホストI/Oエラーまたは内部コントローラのリブートが発生する可能性があります。ホストI/Oエラーまたは内部コントローラのリブートが発生した場合は、ホストを休止状態にして処理をやり直してください。</block>
   <block id="a6b1cb7a50e60750de85cca4514e6b9a" category="paragraph">「allVolumes」</block>
@@ -2055,7 +2045,6 @@
   <block id="3a353a73ba5a318e8908e15d0ffa7770" category="list-text">ケーブルを取り外した後、またはケーブルを正しい場所に移動した後、「recover sasPort eぶ る」コマンドを実行します。誤配線が検出されたときに無効になったSASポートが、コントローラによって再有効化されます。</block>
   <block id="cabd0b41212389ef83363860bc8885d0" category="list-text">誤配線が原因で取り外したケーブルまたは正しい場所に移動したケーブルが無効にしたポートへの唯一のアクセスをコントローラに提供していた場合、コントローラは無効にしたSASポートを再有効化できません。リカバリを完了するには、ストレージアレイ内のトレイの電源を再投入する必要があります。</block>
   <block id="86f8ad5baca5c765cbae20b60fc051b7" category="summary">start increaseVolumeCapacityコマンドは、ディスクプールまたはボリュームグループ内の標準ボリュームまたはリポジトリボリュームの容量を拡張します。</block>
-  <block id="92925efe9ea6338363bb32d12325a085" category="doc">ディスクプールまたはボリュームグループ内のボリュームの容量の拡張</block>
   <block id="eb0eb459c4b030d19a12632181b31657" category="paragraph">start increaseVolumeCapacity volumeコマンドは'ディスク・プールまたはボリューム・グループ内の標準ボリュームまたはリポジトリ・ボリュームの容量を拡張します</block>
   <block id="06161399e996c50a2080df16e4f78c24" category="paragraph">このコマンドでは、標準ボリュームはシックボリュームとも呼ばれます。</block>
   <block id="27a7c6652ea41a703a6f5cffbe53deec" category="paragraph">このコマンドを使用してシンボリュームの容量を拡張することはできません。</block>
@@ -2520,7 +2509,6 @@
   <block id="1aec6c8ca08708b38dfdbe2d9937df18" category="paragraph">削除対象のメンバーボリュームを含む非同期ミラーグループの名前。非同期ミラーグループ名は二重引用符（""）で囲みます。</block>
   <block id="147c46e10fa709bdd898d82545ca48a9" category="paragraph">非同期ミラーグループからすべてのリポジトリメンバーを削除するかどうかを指定します。</block>
   <block id="eb898012b2c7229201036dae959b6f4c" category="summary">set volumeコマンドは、ボリュームグループ内のボリュームのプロパティを定義します。</block>
-  <block id="0ce231527ebd6152c54062aca57f49bf" category="doc">ボリュームグループ内のボリュームのボリューム属性を設定します</block>
   <block id="e09985b1b214254d8a7d853c6502babc" category="paragraph">set volumeコマンドは'ボリューム・グループ内のボリュームのプロパティを定義します</block>
   <block id="ed0d9147c134f6026e18fae4ef807490" category="paragraph">ほとんどのパラメータでは、1つ以上のボリュームのプロパティを定義できます。一部のパラメータでは、1つのボリュームのプロパティのみを定義することもできます。構文の定義は、複数のボリュームに適用できるパラメータと、1つのボリュームにしか適用できないパラメータを、別々に示しています。</block>
   <block id="a1596d4bec10e80dcf7cb002340b0680" category="paragraph">ボリュームグループ内のボリューム数が32を超える構成では、このコマンドの実行中にタイムアウトとなり、ホストI/Oエラーまたは内部コントローラのリブートが発生する可能性があります。ホストI/Oエラーまたは内部コントローラのリブートが発生した場合は、ホストI/Oを休止し、処理をやり直してください。</block>
@@ -2639,7 +2627,6 @@
   <block id="0b96ebb6bc2c17931297bb42ae92fdd6" category="paragraph">名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。</block>
   <block id="8c30d2438c1439840bac4ad622fb913b" category="paragraph">コピー優先度は、ボリュームコピーペアのソースボリュームとターゲットボリュームの間のデータのコピーに使用されるシステムリソースの量を定義します。最高の優先度レベルを選択すると、ほとんどのシステムリソースを使用してボリュームのコピーが実行されるため、ホストのデータ転送パフォーマンスが低下します。</block>
   <block id="fef563ac437ffe92676ddb5f4870b392" category="summary">SMcli enable|disable autoSupportRemoteDiagコマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。</block>
-  <block id="5985e51532f00463ea0d009e35d3f730" category="doc">EMW管理ドメインレベルでのAutoSupport リモート診断機能の有効化または無効化（SMcliのみ）</block>
   <block id="d696d59ee6929514ea1ab9ef31828954" category="paragraph">SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。</block>
   <block id="a7dcc0992cb74c432e1e0f6a766c5185" category="paragraph">このコマンドは、管理ドメイン内のすべてのASUP対応ストレージアレイに影響します。</block>
   <block id="0d9ea4e8fdd29724752b9a7c688f0e2a" category="paragraph">この機能を有効にする前に、まずAutoSupport 機能、次にAutoSupport OnDemand機能を管理ドメイン上で有効にします。</block>
@@ -2950,7 +2937,6 @@
   <block id="b2cb7cf614d982961d50df5bacc1c1c2" category="paragraph">信頼されたCA証明書を表すエイリアスを指定できます。このエイリアスは、信頼されたCA証明書に関する情報を検索する場合や、それらの証明書を削除する場合に使用されます。エイリアスは信頼された証明書に関連付けられており、一意である必要があります。</block>
   <block id="a0f8751dc93934b48b0842a50e8633e4" category="paragraph">信頼されたCA証明書を含むファイルを指定できます。使用できる拡張子は、.pem、.cer、.crt、.derです。</block>
   <block id="cf3eb43ecfe9ff5a2482d314a0d46897" category="summary">SMcli enable autoSupportFeatureコマンドは、すべての管理対象ストレージアレイのAutoSupport （ASUP）機能をオンにして、テクニカルサポートサイトにメッセージを送信できるようにします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。</block>
-  <block id="e3fc1c8c9213c6bd73399d183b9c4a81" category="doc">EMW管理ドメインレベルでのAutoSupport の有効化または無効化（SMcliのみ）</block>
   <block id="58b00cb497eb36843198cdc1d641b3f5" category="paragraph">SMcli enable autoSupportFeatureコマンドは、すべての管理対象ストレージアレイのAutoSupport （ASUP）機能をオンにし、テクニカルサポートサイトにメッセージを送信できるようにします。ASUP機能を有効にすると、サポート関連データを収集してテクニカルサポートに送信できるように、ASUP対応のストレージアレイが自動的に準備されます。このデータは、リモートでのトラブルシューティングや問題の分析に使用できます。</block>
   <block id="69dd35336eecdbd6a8324e4a1772268a" category="paragraph">AutoSupport 機能を使用するには、Persistent Monitorが有効になっている必要があります。</block>
   <block id="ccb66471af2d0622802b493378f06311" category="paragraph">これまでテクニカルサポートサイトに送信された顧客データはありません。</block>
@@ -3351,7 +3337,6 @@
   <block id="138f0c144b2c2d77c8cd30a209e42160" category="doc">ディスクプールの特定を停止します</block>
   <block id="5a8257139eee41d81db432bb93df7899" category="paragraph">stop diskPool locateコマンドは'start diskPool locateコマンドによってオンにされたドライブのインジケータ・ライトをオフにします</block>
   <block id="3a67810abc8da793d40e0d9c714d2958" category="summary">show storageArray storageArray autoSupport AutoSupport コマンドは、ストレージアレイのAutoSupport バンドル収集設定を表示します。</block>
-  <block id="b9a29215603a15544fa6c897c678da0a" category="doc">AutoSupport の設定を表示します</block>
   <block id="019fa4ba5e1d588b0e5c8dd094fde7d5" category="paragraph">show storageArray autoSupport AutoSupport コマンドを使用すると、ストレージアレイのAutoSupport バンドル収集設定が表示されます。</block>
   <block id="d999a9c760b0f5e1d68715c95898430c" category="list-text">配信方法がEメール（SMTP）：送信先のEメールアドレス、メールリレーサーバ、および送信者のEメールアドレスが表示されます</block>
   <block id="12e80b12563c6f7b86f4a49dc6ab595f" category="list-text">AutoSupport の日単位および週単位の優先される時間範囲</block>
@@ -7259,7 +7244,6 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">カテゴリ別のコマンド</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">これらの手順を実行する前に、に記載されている手順を実行してください <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
-  <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">ダウンロード可能なSMcliコマンドラインパラメータ</block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60以降のダウンロード可能なSMcliコマンドラインパラメータ</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">CLIコマンドを実行する管理システムに、Java Runtime Environment（JRE）バージョン8以降がインストールされている必要があります。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">従来のコマンドラインパラメータ</block>
@@ -7611,4 +7595,461 @@
   <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">E4000、EF300、EF600、E2800、E5700用のAutoSupportコマンド</block>
   <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMcliは、E4000、EF600、EF300、E5700、EF570、E2800、EF280、EF300C、EF600Cの各コントローラでダウンロード可能です。SANtricityシステムマネージャからSMcliをダウンロードするには、*[設定]*[システム]*および*[アドオン]*[コマンドラインインターフェイス]*を選択します。</block>
   <block id="d14e73691bb33d04604da5d4d66f9630" category="sidebar">SANtricity System Manager組み込みCLIユーザアシスタンスへようこそ。このヘルプでは、コマンドラインインターフェイス（CLI）を使用してストレージアレイを設定、監視、および調整する方法について説明します。</block>
+  <block id="005c36a73508bafe714d7c28636a6690" category="doc">非同期ミラーリングを有効にする - SANtricity CLI</block>
+  <block id="67b8a5ea93ae643bff796aec41a595da" category="doc">ストレージアレイファームウェアのアクティブ化 - SANtricity CLI</block>
+  <block id="bc85fa0f0fd1ceedb542c4b8b859dcee" category="doc">同期ミラーリングを有効にする - SANtricity CLI</block>
+  <block id="12856608d68a33cbe72594a7d9540217" category="doc">アレイラベルの追加 - SANtricity CLI</block>
+  <block id="0a2c65f489bae54378b7ad476a1e6424" category="doc">アレイから証明書を追加する - SANtricity CLI</block>
+  <block id="f17c5d851e2596993b9afa10dfa95c13" category="doc">ファイルから証明書を追加する - SANtricity CLI</block>
+  <block id="61d9f0699262e7806a0950c1f566ec58" category="doc">SSD キャッシュにドライブを追加する - SANtricity CLI</block>
+  <block id="ea6f10db24a0158f856705e05eef4fd5" category="doc">非同期ミラーグループにボリュームを追加する - SANtricity CLI</block>
+  <block id="a58246e032eb943bf69df48455b3219b" category="doc">ストレージアレイのホットスペアの自動構成 - SANtricity CLI</block>
+  <block id="5fd3f8ef44dc5d5c2c2fca274b5ff380" category="doc">ストレージアレイの自動構成 - SANtricity CLI</block>
+  <block id="51edd45492d71c667f8acd41fbe0c605" category="doc">SSD キャッシュ アプリケーションの種類を変更する - SANtricity CLI</block>
+  <block id="78b392a667c853bce601d347536fd664" category="doc">非同期ミラーグループの整合性をチェックする - SANtricity CLI</block>
+  <block id="d2a16adfad6f5941743ac184f2138079" category="doc">リポジトリの整合性をチェックする - SANtricity CLI</block>
+  <block id="2c4f8c6cdbed7998a3c085f8def49c45" category="doc">ストレージアレイの接続を確認する - SANtricity CLI</block>
+  <block id="c832da0a07ea055b89ac0b59d81f8789" category="doc">同期ミラーリングのステータスを確認する - SANtricity CLI</block>
+  <block id="2e6ffa6e35abba4ff76780c1d8c5e110" category="doc">ボリュームのパリティチェック - SANtricity CLI</block>
+  <block id="6b4e700a3d15e87bb7cd9142f5fe8b0e" category="doc">ドライブチャネル統計をクリアする - SANtricity CLI</block>
+  <block id="d9a6f9fe601f15e2754e4a0a652d5aae" category="doc">非同期ミラーリング障害のクリア - SANtricity CLI</block>
+  <block id="b69da91c13a58517a6086fb7419b47ea" category="doc">電子メールアラート設定のクリア - SANtricity CLI</block>
+  <block id="34e1ebf4a111d468ce79bff328a168f6" category="doc">ストレージアレイ構成のクリア - SANtricity CLI</block>
+  <block id="504c1e0ecb45485f7e19d0b5ef7d2cf3" category="doc">ストレージアレイのイベントログをクリアする - SANtricity CLI</block>
+  <block id="981b6d5deadf650da1b8ee0ddbb5f0e2" category="doc">ストレージアレイファームウェアの保留領域をクリアする - SANtricity CLI</block>
+  <block id="76399c915900c3c8dd213d25b9b95547" category="doc">ストレージアレイのリカバリモードをクリアする - SANtricity CLI</block>
+  <block id="ce87c774d43a3cf3a7ee89d9e37b7643" category="doc">Syslog 設定をクリアする - SANtricity CLI</block>
+  <block id="4166852febc547b38535cde1aa1cfb4d" category="doc">ボリューム予約のクリア - SANtricity CLI</block>
+  <block id="ab5405013880a50b2bf4fc87dff0bfb1" category="doc">ボリュームの読み取り不可能なセクターをクリアする - SANtricity CLI</block>
+  <block id="fd466847736d39467f51f37882f49fb4" category="doc">非同期ミラーグループの作成 - SANtricity CLI</block>
+  <block id="5c1fa9251daae5f4f16e5cb4cddd5934" category="doc">整合性グループのスナップショットイメージの作成 - SANtricity CLI</block>
+  <block id="9cc46ec6c5eefdabc7808151718da5e7" category="doc">整合性グループスナップショットボリュームの作成 - SANtricity CLI</block>
+  <block id="5dfbb4542d2252a24a76bd6f97d2b2e2" category="doc">整合性グループの作成 - SANtricity CLI</block>
+  <block id="9a377d0e408d40006fafad85f3957463" category="doc">ディスクプールの作成 - SANtricity CLI</block>
+  <block id="f10014b5f811ffe9cf0e7881ab83dae3" category="doc">ホストの作成 - SANtricity CLI</block>
+  <block id="d67d4367ad6facb674da5e01f150f4a2" category="doc">ホストグループの作成 - SANtricity CLI</block>
+  <block id="77d49c2db36bfc03f960f878d4c8b3b8" category="doc">ホストポートの作成 - SANtricity CLI</block>
+  <block id="f066c8c7718a3c91c03f107027645a4c" category="doc">イニシエーターの作成 - SANtricity CLI</block>
+  <block id="8c86ae314150ab12a7efab9b93640dd0" category="doc">iSCSI イニシエーターの作成 - SANtricity CLI</block>
+  <block id="9b3b3b16d6c729c53e59bfbe6ac37e44" category="doc">整合性グループスナップショットボリュームマッピングの作成 - SANtricity CLI</block>
+  <block id="99adeb2827528130fab9af8c94eee13e" category="doc">ボリュームマッピングの作成 - SANtricity CLI</block>
+  <block id="95171ca1a47ff9ab7693c06b1f145267" category="doc">RAIDボリュームの作成（自動ドライブ選択） - SANtricity CLI</block>
+  <block id="435014f1fe7ebef616b8e5374a499aa0" category="doc">RAIDボリュームの作成（空きエクステントに基づく選択） - SANtricity CLI</block>
+  <block id="200cc04eea595957b6251663e069f4cb" category="doc">RAIDボリュームの作成（手動ドライブ選択） - SANtricity CLI</block>
+  <block id="739fc0d96ced269d45916544bef28248" category="doc">読み取り専用スナップショットボリュームの作成 - SANtricity CLI</block>
+  <block id="70a1bd6a6ce94a09b03a24806c05ebf1" category="doc">スナップショットグループの作成 - SANtricity CLI</block>
+  <block id="1908e5347445b6efc1c90aef4831f9a4" category="doc">スナップショットイメージの作成 - SANtricity CLI</block>
+  <block id="757a750e63ed93b105b005a12062e1ea" category="doc">スナップショットボリュームの作成 - SANtricity CLI</block>
+  <block id="dba94d66d62939236aa8b6128cb273e2" category="doc">SNMPコミュニティの登録 - SANtricity CLI</block>
+  <block id="d198df8d0f6cbc517ccb18b6d064da1b" category="doc">SNMPトラップの宛先を登録する - SANtricity CLI</block>
+  <block id="a1ebd51b31899a01b342b87710ed0fb2" category="doc">SNMPv3 USM ユーザーの登録 - SANtricity CLI</block>
+  <block id="75d6a06bc2227a83b9563b5cbe662a8a" category="doc">SSDキャッシュの作成 - SANtricity CLI</block>
+  <block id="49d054e1a2bed6805cd18a14be0f6112" category="doc">ストレージアレイディレクトリサーバーの作成 - SANtricity CLI</block>
+  <block id="afd02d7abdcccc4a275fd78dc612db65" category="doc">ストレージアレイのセキュリティキーの作成 - SANtricity CLI</block>
+  <block id="76a6f138246872859dd77201e509ccdc" category="doc">ストレージアレイのSyslog構成の作成 - SANtricity CLI</block>
+  <block id="18eb4664e11a6e36e89a3315b00802e6" category="doc">同期ミラーリングの作成 - SANtricity CLI</block>
+  <block id="5c524efe873e996a554466592021106a" category="doc">ディスクプールにボリュームを作成する - SANtricity CLI</block>
+  <block id="51f0fca898df8c84c9744436064d6f7b" category="doc">ボリュームコピーの作成 - SANtricity CLI</block>
+  <block id="2e9378d750fba1571722e5f01a103270" category="doc">ボリュームグループの作成 - SANtricity CLI</block>
+  <block id="79e371c41d54e1a109f28bba4972d4aa" category="doc">同期ミラーリングを無効化する - SANtricity CLI</block>
+  <block id="5b13848f40804b92df92e8b2e74c9e82" category="doc">非同期ミラーリングを無効化 - SANtricity CLI</block>
+  <block id="d546d72f18a1b35f8696f239e488672d" category="doc">非同期ミラーグループの削除 - SANtricity CLI</block>
+  <block id="5b5fa8789c276a542c8658fbca52595c" category="doc">監査ログレコードの削除 - SANtricity CLI</block>
+  <block id="1ebf49384a50774c6f8e8e89fe176b23" category="doc">証明書の削除 - SANtricity CLI</block>
+  <block id="67dc5d816c2ca55e9793f2fbbbe38c0f" category="doc">整合性グループのスナップショットイメージの削除 - SANtricity CLI</block>
+  <block id="32303290bec027f492c8973f34bdc216" category="doc">整合性グループの削除 - SANtricity CLI</block>
+  <block id="e5536d6ffbe7ddca21b1a54c5c4f715e" category="doc">インストールされたルート/中間 CA 証明書を削除する - SANtricity CLI</block>
+  <block id="d95639af01814d0b6c146c322ff5146a" category="doc">ディスクプールの削除 - SANtricity CLI</block>
+  <block id="d1afca45100a598b7c7b718ec68f9ff3" category="doc">メールアラートの受信者を削除する - SANtricity CLI</block>
+  <block id="d1bd38dad03a2c484e36e8d1f1d0872b" category="doc">ホストの削除 - SANtricity CLI</block>
+  <block id="4efc7a016782872bb388c0663575ae41" category="doc">ホストグループの削除 - SANtricity CLI</block>
+  <block id="09c32cca573c42f8d3f39c7eb8d506e6" category="doc">ホストポートの削除 - SANtricity CLI</block>
+  <block id="b9742886d59e4570de017efb62495929" category="doc">イニシエータの削除 - SANtricity CLI</block>
+  <block id="1a11ebb7be6909943af16c1da78a4478" category="doc">iSCSIイニシエーターの削除 - SANtricity CLI</block>
+  <block id="daab452e282cd2f6e00cff75fc2e3f3d" category="doc">整合性グループのスナップショットボリュームの削除 - SANtricity CLI</block>
+  <block id="8abcd08a894cf444a59dbf3ec1e23fb0" category="doc">スナップショットグループの削除 - SANtricity CLI</block>
+  <block id="e14211f312568fdf5f4e1fd12261bed9" category="doc">スナップショットイメージの削除 - SANtricity CLI</block>
+  <block id="6d55e12d9f38b85eee691f192f5369ed" category="doc">スナップショットボリュームの削除 - SANtricity CLI</block>
+  <block id="23fb0d56da68f02e699a743e8486a7c2" category="doc">SNMPコミュニティの登録解除 - SANtricity CLI</block>
+  <block id="02f6e21729b6f7de09d0c95c0903409f" category="doc">SNMPトラップ送信先の登録解除 - SANtricity CLI</block>
+  <block id="ff4cbdbcb944197627eb3fb92999dc2b" category="doc">SNMPv3 USM ユーザーの登録解除 - SANtricity CLI</block>
+  <block id="68cf89bc4032166f0abce517503e748a" category="doc">SSDキャッシュの削除 - SANtricity CLI</block>
+  <block id="6bcfd69c50b85b6d7209b08c0bc8cd5c" category="doc">ストレージアレイディレクトリサーバーの削除 - SANtricity CLI</block>
+  <block id="eccf4b307574a066e9a7407be2013403" category="doc">インストールされた外部キー管理証明書を削除する - SANtricity CLI</block>
+  <block id="11e9df45f9680456b5e05bcbfaf42a0c" category="doc">ストレージアレイのログインバナーを削除する - SANtricity CLI</block>
+  <block id="af693cd1594d36107e2e0c0eccdc6270" category="doc">ストレージアレイのSyslog設定を削除する - SANtricity CLI</block>
+  <block id="b64177d18b6eaae65b73ae923fb26e01" category="doc">インストールされた信頼された CA 証明書を削除する - SANtricity CLI</block>
+  <block id="765d919c0ea4455bc7292a0dc11114db" category="doc">Syslogサーバーの削除 - SANtricity CLI</block>
+  <block id="a928fef7533ee74e5f9335e21f078682" category="doc">ディスクプールからボリュームを削除する - SANtricity CLI</block>
+  <block id="52359be666efea0125b9a390dd4d85fe" category="doc">ボリュームの削除 - SANtricity CLI</block>
+  <block id="803335491ded8016c6407a2004805598" category="doc">ボリュームグループの削除 - SANtricity CLI</block>
+  <block id="a1f60f07d97338cef902b19dc1714dbd" category="doc">非同期ミラーグループの接続をテストする - SANtricity CLI</block>
+  <block id="5f32e53bf65b2e40976d277e1958406a" category="doc">コントローラのiSCSIホストケーブルの診断 - SANtricity CLI</block>
+  <block id="9faddec54c85a84e6e7a28b27fcf8b4c" category="doc">コントローラの診断 - SANtricity CLI</block>
+  <block id="b2fa3386eac5b6ef940c476e6c5d25ec" category="doc">同期ミラーリングの診断 - SANtricity CLI</block>
+  <block id="b1ffb3cc12fd837ecdf15bab0b234bae" category="doc">外部セキュリティキー管理を無効にする - SANtricity CLI</block>
+  <block id="4c391819f753ade397beb393cc2c4b41" category="doc">ストレージアレイ機能を無効にする - SANtricity CLI</block>
+  <block id="a61b1c53f2d43943ab17d9d494fb75d2" category="doc">サーバー署名証明書のインストール - SANtricity CLI</block>
+  <block id="f7cd70d640ba0c8ee23df61079602c92" category="doc">ルート/中間 CA 証明書のインストール - SANtricity CLI</block>
+  <block id="972e5cb40d309028b90323979004ffba" category="doc">信頼できる CA 証明書をインストールする - SANtricity CLI</block>
+  <block id="d4279fc2897988f3bc961ad411389edf" category="doc">ドライブファームウェアのダウンロード - SANtricity CLI</block>
+  <block id="ad9e6d206a5f5d5de772574852df7485" category="doc">ストレージアレイドライブファームウェアのダウンロード - SANtricity CLI</block>
+  <block id="f8ee46e7a752cb9b016d7e341a1ff56c" category="doc">ストレージアレイファームウェア/NVSRAMのダウンロード - SANtricity CLI</block>
+  <block id="463378cd4a0dbea8865f6760eeb386a4" category="doc">ストレージアレイの外部キー管理証明書をインストールする - SANtricity CLI</block>
+  <block id="3b6e76802bce9c7d171fdf50c1c5a95f" category="doc">ストレージアレイNVSRAMのダウンロード - SANtricity CLI</block>
+  <block id="4f9e074522bffb74884234f2d91b5c05" category="doc">ダウンロードトレイの構成設定 - SANtricity CLI</block>
+  <block id="f70ab1d30e2967330625eb62c69f6a73" category="doc">環境カードファームウェアのダウンロード - SANtricity CLI</block>
+  <block id="355944a3c5691270ea0d65bcb5a8d25d" category="doc">コントローラのデータ転送を有効にする - SANtricity CLI</block>
+  <block id="0b9e5db02f4eb038f75e41a1605c98d8" category="doc">ディスクプールのセキュリティを有効にする - SANtricity CLI</block>
+  <block id="3f4555c80245327da09edd0903ebd62a" category="doc">AutoSupport を有効または無効にする (すべての個別アレイ) - SANtricity CLI</block>
+  <block id="04607e3a40db92f548b95f8c34c5f5c7" category="doc">外部セキュリティキー管理を有効にする - SANtricity CLI</block>
+  <block id="dc54a2fb9cfa8f4785c762cca5e5012f" category="doc">ストレージアレイ機能の有効化 - SANtricity CLI</block>
+  <block id="a3ae0f16af3632dfbb3f21e49956fd5c" category="doc">ボリュームグループのセキュリティを有効にする - SANtricity CLI</block>
+  <block id="4954c5bb5ce5141a5ce68b31e60c0359" category="doc">非同期ミラーペアの確立 - SANtricity CLI</block>
+  <block id="8f1a4d873b35d3a53dbc2b0cd0045722" category="doc">ストレージアレイのセキュリティキーのエクスポート - SANtricity CLI</block>
+  <block id="a31b32c2e30c19a34f066ce0ccde56da" category="doc">認証を始める - SANtricity CLI</block>
+  <block id="388523294499aaa99d2963caaa332317" category="doc">外部キー管理の開始 - SANtricity CLI</block>
+  <block id="fbf45569efeef51447cf89ed71471302" category="doc">内部キー管理の開始 - SANtricity CLI</block>
+  <block id="90f9604feaf4f1f2a54500ae0b92f857" category="doc">ストレージアレイのセキュリティキーのインポート - SANtricity CLI</block>
+  <block id="63a45e49456d076aa0458b90927e5a7b" category="doc">ストレージアレイ DBM データベースのロード - SANtricity CLI</block>
+  <block id="06b3d91daee6cf90e3b5387b4d2e85ae" category="doc">ボリュームコピーの再コピー - SANtricity CLI</block>
+  <block id="f618268c4a19fad794d36f52f88b02b9" category="doc">無効になったドライブポートを回復する - SANtricity CLI</block>
+  <block id="304b8d2dae6f61d70597de843ebc44ed" category="doc">SAS ポートの誤配線を修復する - SANtricity CLI</block>
+  <block id="c84c059779fe7c0eab8554e8930fd80b" category="doc">RAIDボリュームの回復 - SANtricity CLI</block>
+  <block id="dc537bb4fb9bfd9c176c91c02ca95670" category="doc">同期ミラーリングリポジトリボリュームの再作成 - SANtricity CLI</block>
+  <block id="26d497c7d257284f04d33abd6f6084df" category="doc">外部セキュリティキーの再作成 - SANtricity CLI</block>
+  <block id="32c99d9fefc74348447dce4dd5aa87c4" category="doc">ディスクプールの容量を減らす - SANtricity CLI</block>
+  <block id="1bec119991bc1bc67e04feefb1ebf419" category="doc">アレイラベルの削除 - SANtricity CLI</block>
+  <block id="14c43e1fa0759f4def1d78387dac9cfa" category="doc">非同期ミラーグループから不完全な非同期ミラーペアを削除する - SANtricity CLI</block>
+  <block id="633c055b85ef35662cc7ebb31dd2049c" category="doc">SSD キャッシュからドライブを削除する - SANtricity CLI</block>
+  <block id="6de87b1e584d49bc16946d3c583ee20c" category="doc">ボリュームLUNマッピングの削除 - SANtricity CLI</block>
+  <block id="73202d1c153f833dab44324bb84dc4ae" category="doc">整合性グループからメンバーボリュームを削除する - SANtricity CLI</block>
+  <block id="3537b7d3550903d4ed9d6e17b9542d82" category="doc">同期ミラーリングの削除 - SANtricity CLI</block>
+  <block id="2c4bb3df5f623c1af83bf67a2c2822dc" category="doc">非同期ミラーグループからボリュームを削除する - SANtricity CLI</block>
+  <block id="32269b89fc242f40c3937f757140c7cf" category="doc">ボリュームコピーの削除 - SANtricity CLI</block>
+  <block id="7092c5382562f3434e89a4b5bcf58192" category="doc">SSDキャッシュの名前変更 - SANtricity CLI</block>
+  <block id="9f7743669b46bf031392ae6716e6b5eb" category="doc">データパリティの修復 - SANtricity CLI</block>
+  <block id="3960aa443e97a4a1ad410200dff0e1e2" category="doc">ボリュームパリティの修復 - SANtricity CLI</block>
+  <block id="4629971ecc3de16ef5af44ecd76f6754" category="doc">ドライブの交換 - SANtricity CLI</block>
+  <block id="037e6c2e767dc44baed4727886fe3e8f" category="doc">インストールされた署名済み証明書をリセットする - SANtricity CLI</block>
+  <block id="8da276164b6d727f2b88e501130a1e5a" category="doc">コントローラのリセット - SANtricity CLI</block>
+  <block id="f2ec599c8bb98c0b338441f654e19b8e" category="doc">ドライブのリセット - SANtricity CLI</block>
+  <block id="9b4417e12876d7dd6c7977c22b93b5d1" category="doc">iSCSI IPアドレスのリセット - SANtricity CLI</block>
+  <block id="5a8f008fef7e030693b4f6c585aeb52e" category="doc">非同期ミラーグループの統計をリセットする - SANtricity CLI</block>
+  <block id="fe0b5e35ace9fa1455de90f22ce2fbd4" category="doc">AutoSupport メッセージ収集スケジュールをリセットする - SANtricity CLI</block>
+  <block id="8b1b8f6218b9aa4d453bec8ba351cbda" category="doc">ストレージアレイ診断データをリセットする - SANtricity CLI</block>
+  <block id="1cf2d0a90c4423e1df27926a42ea683b" category="doc">ストレージアレイのホストポート統計のベースラインをリセットする - SANtricity CLI</block>
+  <block id="6c0a34b1edd67a92d3b143795d071608" category="doc">ストレージアレイのInfiniBand統計ベースラインをリセットする - SANtricity CLI</block>
+  <block id="194641d3bdbc65d577eba6daa3f18aca" category="doc">ストレージアレイの iSCSI ベースラインをリセットする - SANtricity CLI</block>
+  <block id="7c7da0c10f5f52e4974265f1fc71b8e0" category="doc">ストレージアレイの iSER ベースラインをリセットする - SANtricity CLI</block>
+  <block id="f10adae9c9ec7630895b659121457c0f" category="doc">ストレージアレイのRLSベースラインをリセットする - SANtricity CLI</block>
+  <block id="88875befa5b4b70618a12bb3e447da27" category="doc">ストレージアレイの SAS PHY ベースラインをリセットする - SANtricity CLI</block>
+  <block id="ac3ac283e395fd0476d4573e98b18e25" category="doc">ストレージアレイの SOC ベースラインをリセットする - SANtricity CLI</block>
+  <block id="7db0a37b97d6e8362a2f20a0467c8a62" category="doc">ストレージアレイのボリューム配分をリセットする - SANtricity CLI</block>
+  <block id="8e9ad1e274101cdd92c4c6221e37597d" category="doc">非同期ミラーグループの再開 - SANtricity CLI</block>
+  <block id="096dde05acee64bdf4eabcbaf6427e51" category="doc">整合性グループスナップショットボリュームの再開 - SANtricity CLI</block>
+  <block id="12617a1ac0195150de7705d93b69628c" category="doc">スナップショットイメージのロールバックを再開する - SANtricity CLI</block>
+  <block id="01a86595cc3246cc1f444a6559b13020" category="doc">スナップショットボリュームの再開 - SANtricity CLI</block>
+  <block id="9226199421ef829a6bb020a8e8ee484a" category="doc">SSDキャッシュを再開 - SANtricity CLI</block>
+  <block id="35eaa23a93da910998167f6943ddf89f" category="doc">同期ミラーリングの再開 - SANtricity CLI</block>
+  <block id="de04ce9fa7b4502f461a1ad3242b3977" category="doc">ドライブの復活 - SANtricity CLI</block>
+  <block id="6304f749130a21f67d9848cfb65ace45" category="doc">スナップショットグループの復活 - SANtricity CLI</block>
+  <block id="762c01be118edba6d6658b1a85a03686" category="doc">スナップショットボリュームの復活 - SANtricity CLI</block>
+  <block id="755672f1b7dbf66fdfbc396f102c7ece" category="doc">ボリュームグループの復活 - SANtricity CLI</block>
+  <block id="bf0ba9deb78dd3845474d7a5de958275" category="doc">ドライブログの保存 - SANtricity CLI</block>
+  <block id="0bcef94a1383a489c21b411ffdd24f9f" category="doc">トレイログの保存 - SANtricity CLI</block>
+  <block id="9f5454ee6517de84f16ee904543b9891" category="doc">監査ログレコードを保存する - SANtricity CLI</block>
+  <block id="f9794eaac133b5e1c988f8dd3fc7b5df" category="doc">保存ボリュームのパリティチェックジョブのパリティエラー - SANtricity CLI</block>
+  <block id="ae659fcd0c293bddd2a71a94e9655883" category="doc">Webサーバーの証明書署名要求（CSR）を生成する - SANtricity CLI</block>
+  <block id="6e8c9b377a579d5daf18c1be6552a409" category="doc">インストールされたサーバー証明書を取得する - SANtricity CLI</block>
+  <block id="721e7047643e338ac5dff894203bd79c" category="doc">インストールされた CA 証明書を取得する - SANtricity CLI</block>
+  <block id="f38175190c66ea116f172e39e30b79cb" category="doc">コントローラのNVSRAMを保存する - SANtricity CLI</block>
+  <block id="2a442c8309fa985c6b7aa20442cd6f56" category="doc">ドライブチャネル障害分離診断ステータスの保存 - SANtricity CLI</block>
+  <block id="5da81cd8162b4040a145a3a5cfa237f5" category="doc">入出力コントローラ（IOC）ダンプを保存する - SANtricity CLI</block>
+  <block id="067a6f6bb2ae93f05fbab6fb8b93619d" category="doc">ストレージアレイ診断データを保存する - SANtricity CLI</block>
+  <block id="1a0dac721c6d3af2560591671d2b001e" category="doc">非同期ミラーグループの統計を保存する - SANtricity CLI</block>
+  <block id="5bd98adb3f2df21219d86b306bb82960" category="doc">自動ロードバランシング統計を保存する - SANtricity CLI</block>
+  <block id="d90059470c5e1244c241e56e6868eb26" category="doc">ストレージアレイ構成の保存 - SANtricity CLI</block>
+  <block id="e43ad0fac31d13d5394a08c80b0b8c42" category="doc">ストレージアレイコントローラのヘルスイメージを保存する - SANtricity CLI</block>
+  <block id="fe2233031dbd20ed9fd1c07c38246875" category="doc">ストレージアレイDBMデータベースの保存 - SANtricity CLI</block>
+  <block id="e2a2217398369d77276c34b6832875ba" category="doc">ストレージアレイDBMバリデータ情報ファイルを保存する - SANtricity CLI</block>
+  <block id="bf97fb0b070850aa66f7efe9ec671282" category="doc">ストレージアレイのファームウェアインベントリを保存する - SANtricity CLI</block>
+  <block id="d48c4b89c53c73b79a4c88a6bb122a77" category="doc">ストレージアレイのホストポート統計を保存する - SANtricity CLI</block>
+  <block id="bee3faa5a56c1c13b10a012f82949a5a" category="doc">ストレージアレイのInfiniBand統計を保存する - SANtricity CLI</block>
+  <block id="1a765a60404f641d5a67e6d9d9c7b26b" category="doc">ストレージアレイの iSCSI 統計を保存する - SANtricity CLI</block>
+  <block id="8426d510817a097e1e10da3d2299044b" category="doc">ストレージアレイの iSER 統計を保存する - SANtricity CLI</block>
+  <block id="ab8217d44a62df6672e2ca6856140397" category="doc">インストールされた外部キー管理証明書を取得する - SANtricity CLI</block>
+  <block id="1148a42a3f1391e7eab0603bbabf0520" category="doc">キー管理証明書署名要求 (CSR) を生成する - SANtricity CLI</block>
+  <block id="9e8e7893290ddf96429aa5fb05fac032" category="doc">ストレージアレイのログインバナーを保存する - SANtricity CLI</block>
+  <block id="10530ea7c5bd786c382bb911b6c9061c" category="doc">ストレージアレイのパフォーマンス統計を保存する - SANtricity CLI</block>
+  <block id="7c00547a628c15ecc02e009e50f8ff1b" category="doc">ストレージアレイのRLSカウントを保存する - SANtricity CLI</block>
+  <block id="4206788d80d091984bc0d5fc7d2c02bb" category="doc">ストレージアレイの SAS PHY カウントを保存する - SANtricity CLI</block>
+  <block id="df3c47b086fbbac244ffe5e1fc77aa75" category="doc">ストレージアレイの SOC カウントを保存する - SANtricity CLI</block>
+  <block id="c19b19bc223d129f4b0dbb1245a78dd0" category="doc">ストレージアレイの状態キャプチャを保存する - SANtricity CLI</block>
+  <block id="d16868325b64d0e6256c31e0e533924a" category="doc">ストレージアレイのサポートデータを保存する - SANtricity CLI</block>
+  <block id="5d64950dd0451ea71081746a33de8eca" category="doc">インストールされた信頼された CA 証明書を取得する - SANtricity CLI</block>
+  <block id="06d26ba3410497773dbac1234e938ed6" category="doc">ストレージアレイイベントの保存 - SANtricity CLI</block>
+  <block id="f9f150185a89e8938527928fe24a52ed" category="doc">非同期ミラーグループの設定 - SANtricity CLI</block>
+  <block id="5d95bcd120557e8c909e608efc732fd4" category="doc">監査ログ設定 - SANtricity CLI</block>
+  <block id="44d7108588ea51888a62f82fb116ab75" category="doc">AutoSupport ディスパッチサイズ制限の設定 - SANtricity CLI</block>
+  <block id="6e9dc202d9e85baa28d3a21188bea8ff" category="doc">AutoSupport HTTP(S)配信方法を指定する - SANtricity CLI</block>
+  <block id="2585a88518bfe31b2670bc0218a27105" category="doc">整合性グループのスナップショットボリュームを設定する - SANtricity CLI</block>
+  <block id="fbd42244a4f577a763f78f027323b789" category="doc">整合性グループの属性を設定する - SANtricity CLI</block>
+  <block id="da26e055c75810ad029bd7614cb3c676" category="doc">整合性グループにメンバーを追加する - SANtricity CLI</block>
+  <block id="066afee1df17dacac8f9fd525f2b7360" category="doc">コントローラのDNS設定を行う - SANtricity CLI</block>
+  <block id="ba18bb20fdac2c9e862d63b3f46eaab1" category="doc">コントローラのホストポートプロパティを設定する - SANtricity CLI</block>
+  <block id="be9a09269b77c56a957853a08c2edf42" category="doc">iSCSI ホストポートのネットワークプロパティを設定する - SANtricity CLI</block>
+  <block id="5f5f80b5e8b5e8c7ebb8f026d403a5f7" category="doc">コントローラのNTP設定を行う - SANtricity CLI</block>
+  <block id="930e2aaf7f874c62860302fc466048c2" category="doc">コントローラのサービスアクション許可インジケーターの設定 - SANtricity CLI</block>
+  <block id="0e4110d6d92a405f4523cb3f17f7752a" category="doc">コントローラーの設定 - SANtricity CLI</block>
+  <block id="66791453231d01b5fffe467da4812471" category="doc">ディスクプールの設定（ディスクプールの変更） - SANtricity CLI</block>
+  <block id="80b800ff645d8b6eb9b4ada4e4fe1ef3" category="doc">ディスクプールの設定 - SANtricity CLI</block>
+  <block id="dc708b2fc26550ca482f3f39121f29e4" category="doc">ドライブのホットスペアを設定する - SANtricity CLI</block>
+  <block id="411c2bc6575767f7be683052a4ca92b1" category="doc">外部ドライブをネイティブに設定する - SANtricity CLI</block>
+  <block id="e6d4014d3ab0bf11681d73268d3d78c0" category="doc">ドライブの状態を設定する - SANtricity CLI</block>
+  <block id="1c61d59dbca80ebdd9d23133098f5301" category="doc">FIPSドライブセキュリティ識別子の設定 - SANtricity CLI</block>
+  <block id="04f32a1288fac994ed8ee12fb33d346f" category="doc">ドライブサービスアクション許可インジケーターの設定 - SANtricity CLI</block>
+  <block id="6ea93b330d7ae35a3308b49d8a204d24" category="doc">ドライブチャネルステータスの設定 - SANtricity CLI</block>
+  <block id="343eafa07e9aa11d1648a4536826ae09" category="doc">電子メールアラート設定を構成する - SANtricity CLI</block>
+  <block id="becc8365179e28b5fd4adf0073638027" category="doc">イベントアラートフィルタリングの設定 - SANtricity CLI</block>
+  <block id="cb9963d672c1181e3aea11b618a751a2" category="doc">ホストの設定 - SANtricity CLI</block>
+  <block id="6c3e96a78384e25e2b3f678909c20056" category="doc">ホストチャネルの設定 - SANtricity CLI</block>
+  <block id="d516470ba9c729582e8b81783509f555" category="doc">ホストグループの設定 - SANtricity CLI</block>
+  <block id="48cdf48a8fb13e394cd244d3d9e3a5ea" category="doc">ホストポートの設定 - SANtricity CLI</block>
+  <block id="f2eb0540675fe32930d441ed62102e76" category="doc">イニシエータの設定 - SANtricity CLI</block>
+  <block id="645c27ba780d75659b9cc30e89240268" category="doc">iSCSIイニシエーターの設定 - SANtricity CLI</block>
+  <block id="1bbf6b77c960b65dd59db30158aed599" category="doc">iSCSI ターゲットのプロパティを設定する - SANtricity CLI</block>
+  <block id="396dae48263cc1a6acccb7761df52c94" category="doc">iSERターゲットの設定 - SANtricity CLI</block>
+  <block id="2b6788a3478449663072c884314d993e" category="doc">セッションの設定 - SANtricity CLI</block>
+  <block id="837aae416e7f9e42612b784b7c3e96b8" category="doc">スナップショットグループのスケジュールを設定する - SANtricity CLI</block>
+  <block id="7fece1dcfb939bf9e5eee63dbd2bdd89" category="doc">スナップショットグループリポジトリボリューム容量の設定 - SANtricity CLI</block>
+  <block id="da0f1a9cef203bf0f7b927c385f974c6" category="doc">スナップショットグループのメディアスキャンを設定する - SANtricity CLI</block>
+  <block id="3d64e0ee5ea0d706a8595a4346a9aa90" category="doc">スナップショットグループ属性の設定 - SANtricity CLI</block>
+  <block id="be3d6ccf283e840d7d4af6f999243384" category="doc">読み取り専用スナップショットボリュームを読み取り/書き込みボリュームに設定する - SANtricity CLI</block>
+  <block id="59b144ce58219e65bf805525e2cb87be" category="doc">スナップショットボリュームのリポジトリボリューム容量を設定する - SANtricity CLI</block>
+  <block id="8ba2129582acdd8aeca3e22e183c5539" category="doc">スナップショットボリュームのメディアスキャンを設定する - SANtricity CLI</block>
+  <block id="2e543614285939d3382ea5895110b803" category="doc">スナップショットボリュームの名前変更 - SANtricity CLI</block>
+  <block id="4295a4cbe69adaafe94535bae4759ec3" category="doc">SNMPコミュニティの更新 - SANtricity CLI</block>
+  <block id="e3ebcf74988ef36a1dd1a20651bf3227" category="doc">SNMP MIB II システムグループ変数の更新 - SANtricity CLI</block>
+  <block id="b0d7bcc4d4422f63f870be646218859e" category="doc">SNMPトラップの送信先を更新する - SANtricity CLI</block>
+  <block id="a27059a0bde02160f2af815a235ea2d5" category="doc">SNMPv3 USMユーザーの更新 - SANtricity CLI</block>
+  <block id="478d9eac74f211a6e4508c495b89cc50" category="doc">ストレージアレイの自動ロードバランシングを有効または無効に設定する - SANtricity CLI</block>
+  <block id="7cf360bea3336524dc26770dd53bb19d" category="doc">AutoSupport メンテナンス ウィンドウを有効または無効にする - SANtricity CLI</block>
+  <block id="aec0ea19527546f885748f34c8e84dc3" category="doc">ストレージアレイを設定してキャッシュミラーデータアシュアランスチェックを有効または無効にする - SANtricity CLI</block>
+  <block id="2896a57542dbfa813cf8ca9efd08302f" category="doc">ストレージアレイコントローラのヘルスイメージの上書きを許可する設定 - SANtricity CLI</block>
+  <block id="25d2b46b426ff50bb7dbf6dcd72275c9" category="doc">ストレージアレイディレクトリサーバの役割マッピングを設定する - SANtricity CLI</block>
+  <block id="b882bffdea9863d283f7f5e1bfd07c6b" category="doc">外部キー管理設定の設定 - SANtricity CLI</block>
+  <block id="8728af0bddcba152623eb6e4ae69fc6d" category="doc">ホスト接続レポートの有効化または無効化 - SANtricity CLI</block>
+  <block id="16bf2b7c9cda5762d10edbeec1977a01" category="doc">ストレージアレイのICMP応答を設定する - SANtricity CLI</block>
+  <block id="31236f8be341ba04c1278a8b21bc8e0f" category="doc">ストレージアレイの iSNS サーバーの IPv4 アドレスを設定する - SANtricity CLI</block>
+  <block id="85f6064b9997b9e6e12e9129557b3f20" category="doc">ストレージアレイの iSNS サーバの IPv6 アドレスを設定する - SANtricity CLI</block>
+  <block id="65ebff496bec0f12f091b4171a2c78d8" category="doc">ストレージアレイの iSNS サーバーのリスニングポートを設定する - SANtricity CLI</block>
+  <block id="c48556b73aa71b26fbdf7ef082c0660e" category="doc">ストレージアレイの iSNS 登録を設定する - SANtricity CLI</block>
+  <block id="922181eed729d70f5e1ba9580cc65836" category="doc">ストレージアレイの iSNS サーバーの更新を設定する - SANtricity CLI</block>
+  <block id="e9fa65b64bdc96d546c6f5bbb53137f4" category="doc">ストレージアレイコントローラのバッテリ学習サイクルを設定する - SANtricity CLI</block>
+  <block id="e80e39e9d1abb8f9d0e0e9e3a5b0da20" category="doc">ストレージアレイのローカルユーザーパスワードまたはSYMbolパスワードを設定する - SANtricity CLI</block>
+  <block id="55fb77acf8993d37e668139d365d4cca" category="doc">ストレージアレイのログインバナーを設定する - SANtricity CLI</block>
+  <block id="587197a04dfac2e0be72d0094d64c863" category="doc">ODX を有効化または無効化する - SANtricity CLI</block>
+  <block id="91aaa6a96fb60808b7fd9597535e0796" category="doc">ストレージアレイのパスワードの長さを設定する - SANtricity CLI</block>
+  <block id="85a46ed663704a7fe2d4a1fa32c91fea" category="doc">ストレージアレイの冗長モードを設定する - SANtricity CLI</block>
+  <block id="434db8fd853c9aabfc8681c41244482e" category="doc">ストレージアレイリソースのプロビジョニングされたボリュームを設定する - SANtricity CLI</block>
+  <block id="6431aaba0e797f0ffab144f38413d673" category="doc">証明書失効チェック設定の設定 - SANtricity CLI</block>
+  <block id="e6f70a57061ad31ee2b5ce4a2eed5e13" category="doc">内部ストレージアレイのセキュリティキーを設定する - SANtricity CLI</block>
+  <block id="4ac9e1a945eaafb353c2a61993ca086a" category="doc">ストレージアレイのSyslog構成の更新 - SANtricity CLI</block>
+  <block id="85bdffb1bf4856b76ad133dda8633bff" category="doc">ストレージアレイの時間を設定する - SANtricity CLI</block>
+  <block id="b7d1fda9defa85bcc496c7d235e4b8db" category="doc">ストレージアレイトレイの位置を設定する - SANtricity CLI</block>
+  <block id="8b0483e5e4d2e976495bd4388f823488" category="doc">ストレージアレイの名前なし検出セッションを設定する - SANtricity CLI</block>
+  <block id="4b49f9c3e0da2db04840a0e9e2b929dc" category="doc">ストレージアレイのユーザーセッションの設定 - SANtricity CLI</block>
+  <block id="23d4f6cae16b2c4ca5d65a01deae432a" category="doc">VAAI を有効化または無効化する - SANtricity CLI</block>
+  <block id="06b6b8855566a62a467552c032c88f85" category="doc">ストレージアレイの設定 - SANtricity CLI</block>
+  <block id="17013e984c9adc55ab6d4e0959626814" category="doc">同期ミラーリングの設定 - SANtricity CLI</block>
+  <block id="b3beae2e002662a954fd1e4c7bee5186" category="doc">Syslog設定を構成する - SANtricity CLI</block>
+  <block id="6b6255e14f0d98eedf32603c4df22770" category="doc">ターゲットプロパティの設定 - SANtricity CLI</block>
+  <block id="8bda48dc32e378642f84b2a07070d462" category="doc">シンボリュームの属性を設定する - SANtricity CLI</block>
+  <block id="38a1a96cc2807ce0a8cfa2644c504e1f" category="doc">トレイ属性の設定 - SANtricity CLI</block>
+  <block id="4ce44084e9a8be6d56a9deab94c3e3b6" category="doc">ドロワーサービスアクション許可インジケーターの設定 - SANtricity CLI</block>
+  <block id="984d9575a17cdfc26d5c647ce95bf2fc" category="doc">トレイ識別の設定 - SANtricity CLI</block>
+  <block id="b72f83bf254d1d872fb8b629fa6d5661" category="doc">トレイサービスアクション許可インジケーターの設定 - SANtricity CLI</block>
+  <block id="82ff34f626191648b36a2067c0303068" category="doc">ボリュームグループ内のボリュームのボリューム属性を設定する - SANtricity CLI</block>
+  <block id="0e66b159e1b56411f2acaccf22bd8cb2" category="doc">ボリュームマッピングの設定 - SANtricity CLI</block>
+  <block id="6013576e9e6ff479cad964b6d6cb1452" category="doc">ボリュームの SSD キャッシュを設定する - SANtricity CLI</block>
+  <block id="d8bd72b502dd260cc3ba2eda5cfde836" category="doc">ボリュームコピーの設定 - SANtricity CLI</block>
+  <block id="5bd426e378d19a0539f18cd0c6aabce5" category="doc">ボリュームグループの強制状態を設定する - SANtricity CLI</block>
+  <block id="e27ec150e65c0367ae2919834c3a961b" category="doc">ボリュームグループの設定 - SANtricity CLI</block>
+  <block id="91af049778cfffe2bba2149317a9e776" category="doc">ディスクプール内のボリュームのボリューム属性を設定する - SANtricity CLI</block>
+  <block id="2778b5e2b1249bec76b59a8fd3d516aa" category="doc">ドライブのダウンロード進行状況を表示する - SANtricity CLI</block>
+  <block id="76317680fbc5d6c38790d18a587c0a20" category="doc">ドライブのパフォーマンス統計を表示する - SANtricity CLI</block>
+  <block id="c6cb87fe259e9c27b1e9ecde61e21f9b" category="doc">ドライブの表示 - SANtricity CLI</block>
+  <block id="14688c179ab5b91923d24656238a7acb" category="doc">ホストポートの表示 - SANtricity CLI</block>
+  <block id="f30804f385685028d8661aea49090f86" category="doc">SNMPコミュニティを表示する - SANtricity CLI</block>
+  <block id="038f3a219ee3f3c8fbdd50622b03b889" category="doc">SNMPv3 USM ユーザーの表示 - SANtricity CLI</block>
+  <block id="1c72ce74bf32b2a5ad925620b58999c8" category="doc">アレイラベルの表示 - SANtricity CLI</block>
+  <block id="2cc51b23237c746b1cf6182bd8303990" category="doc">非同期ミラーグループの表示 - SANtricity CLI</block>
+  <block id="a09126bb24ddc3e2c30f4388b0025b61" category="doc">非同期ミラーグループの同期の進行状況を表示する - SANtricity CLI</block>
+  <block id="ae745d43c18044df8c50b058ef7cc21b" category="doc">監査ログ設定の表示 - SANtricity CLI</block>
+  <block id="1467fef0d9976dcc6a32eafa797ae992" category="doc">監査ログの概要を表示 - SANtricity CLI</block>
+  <block id="6ea261bb3289353475aaf3a6e5ce5bb2" category="doc">ブロックされたイベントを表示する - SANtricity CLI</block>
+  <block id="29409043b5a9f59f616bcc1f5d5369d0" category="doc">証明書の表示 - SANtricity CLI</block>
+  <block id="18e4e4f541b1270c710c3e978cc9763a" category="doc">整合性グループのスナップショットイメージを表示する - SANtricity CLI</block>
+  <block id="87807c6900003719eff87f81e6cab952" category="doc">ボリュームパリティチェックジョブの表示 - SANtricity CLI</block>
+  <block id="ccfb24184ef22ca50eaa8bdcc8637da1" category="doc">ボリュームパリティチェックジョブの表示 - SANtricity CLI</block>
+  <block id="6bcbb1208daf54ff6891bd6695cc540b" category="doc">整合性グループの表示 - SANtricity CLI</block>
+  <block id="60aebe2e4caf925f6162adf4e98e0608" category="doc">署名済み証明書の表示 - SANtricity CLI</block>
+  <block id="5a064aceaedc8db34187ce7ef5a81dbd" category="doc">インストールされたルート/中間 CA 証明書の概要を表示する - SANtricity CLI</block>
+  <block id="95b7224f997dc9ff3129125730546303" category="doc">コントローラの診断ステータスを表示する - SANtricity CLI</block>
+  <block id="bc21b1258ce8b69a931d8d8af3901dcc" category="doc">コントローラのNVSRAMを表示する - SANtricity CLI</block>
+  <block id="466687f57ce48ea4f75e61a9ab88f1da" category="doc">コントローラの表示 - SANtricity CLI</block>
+  <block id="19cad3d5ad56ca89bcda791d8582bd70" category="doc">ディスクプールの表示 - SANtricity CLI</block>
+  <block id="7d4223c5f5e9b2ed343220ab679d6241" category="doc">ドライブチャネル統計情報の表示 - SANtricity CLI</block>
+  <block id="d0a8058a87025c025fc40bf3fcade90c" category="doc">電子メールアラートの設定を表示する - SANtricity CLI</block>
+  <block id="b5e08dd56ef5f41a307807bf30b45f74" category="doc">現在の iSCSI セッションを表示する - SANtricity CLI</block>
+  <block id="20b502229fc8b5b0f8c26a5965e8d7a5" category="doc">交換可能なドライブの表示 - SANtricity CLI</block>
+  <block id="0ac4d28222354e00f9071f3584f66291" category="doc">スナップショットグループの表示 - SANtricity CLI</block>
+  <block id="adb4d61083a0c9e666805d56c43a2f5d" category="doc">スナップショットイメージを表示 - SANtricity CLI</block>
+  <block id="e5241c2f11fca1315326aa3aa8f26f81" category="doc">スナップショットボリュームの表示 - SANtricity CLI</block>
+  <block id="0ca1fa8aafb076c8f32f2b7aaa960792" category="doc">SNMP MIB II システムグループ変数を表示する - SANtricity CLI</block>
+  <block id="30e98ad1e8c888115c1ed450f133b98c" category="doc">SSD キャッシュ統計を表示する - SANtricity CLI</block>
+  <block id="f8cbdaa67d64ff906ef16f5ab73c6918" category="doc">SSD キャッシュを表示 - SANtricity CLI</block>
+  <block id="7e4e5050e51f14a471034225a2f7393b" category="doc">ストレージアレイの自動構成を表示する - SANtricity CLI</block>
+  <block id="156c227b1314532667a4a69c67d76b8d" category="doc">AutoSupport 構成の表示 - SANtricity CLI</block>
+  <block id="d3e04af0773bdfa9f8258a51278c4536" category="doc">ストレージアレイキャッシュミラーデータアシュアランスチェックの有効化を表示 - SANtricity CLI</block>
+  <block id="79190a5edbc92c9ff4c1d735d31fe23f" category="doc">ストレージアレイコントローラのヘルスイメージを表示する - SANtricity CLI</block>
+  <block id="f5d6b1a4a6ab287674f474408df3b267" category="doc">ストレージアレイの DBM データベースを表示する - SANtricity CLI</block>
+  <block id="e7c3d46e54ead3976bbedcd4b77be862" category="doc">ストレージアレイホストの接続レポートを表示する - SANtricity CLI</block>
+  <block id="270d635fa44995d158df73f2dc7eb459" category="doc">ストレージアレイホストトポロジの表示 - SANtricity CLI</block>
+  <block id="3c7b9c328520a30aa221cf3afff3f0a7" category="doc">ストレージアレイネゴシエーションのデフォルトを表示する - SANtricity CLI</block>
+  <block id="f2b84f20203e7d9132bba6063bfd64f2" category="doc">ストレージアレイのLUNマッピングを表示する - SANtricity CLI</block>
+  <block id="511b96a9e7d64a9f0b3fb6a19e780473" category="doc">ストレージアレイのODX設定を表示する - SANtricity CLI</block>
+  <block id="a039ad73ad9bc51937687a0f9848b0c8" category="doc">ストレージアレイの電源情報を表示する - SANtricity CLI</block>
+  <block id="8d13be50cd7b996ee90bf818af584f7f" category="doc">証明書失効チェック設定を表示する - SANtricity CLI</block>
+  <block id="8a287d2b29f8de8bdefa3d7392db8c75" category="doc">ストレージアレイのSyslog構成を表示する - SANtricity CLI</block>
+  <block id="a154887df888e3565a3be73d4dd5fb1f" category="doc">インストールされた信頼された CA 証明書の概要を表示する - SANtricity CLI</block>
+  <block id="7f17c8e8281c30457bd5acff4b4441b7" category="doc">未構成のイニシエーターを表示する - SANtricity CLI</block>
+  <block id="649d10a695d17256ecc6438c49c8c447" category="doc">ストレージアレイの未構成の iSCSI イニシエーターを表示する - SANtricity CLI</block>
+  <block id="6f0b63e19f8eecd41eb9496aca4b10f2" category="doc">ストレージアレイの読み取り不可能なセクターを表示する - SANtricity CLI</block>
+  <block id="84fe8f54db8c5504e4020cfbd89d57ef" category="doc">ストレージアレイのユーザーセッションを表示する - SANtricity CLI</block>
+  <block id="5e12bd1119c477648df0260c272fcdc3" category="doc">ストレージアレイの表示 - SANtricity CLI</block>
+  <block id="369ea0b080e29dbc409c9ffef2442ad7" category="doc">同期ミラーリングボリュームの候補を表示する - SANtricity CLI</block>
+  <block id="e1b17122217e83bb1149cde954c258ae" category="doc">同期ミラーリングボリュームの同期の進行状況を表示する - SANtricity CLI</block>
+  <block id="bd998bc8c6f04c61ec1c1f68244f1cfb" category="doc">Syslog 設定の表示 - SANtricity CLI</block>
+  <block id="18f7b88846694a89d4c3a86bc5b322b6" category="doc">文字列を表示 - SANtricity CLI</block>
+  <block id="d21ef43f00b20d3f7ad7ea6c4aa34afd" category="doc">ボリュームアクションの進行状況を表示する - SANtricity CLI</block>
+  <block id="9a5ec6fd73df1bb587a19b433782d480" category="doc">ボリュームパフォーマンス統計を表示する - SANtricity CLI</block>
+  <block id="b569df116891dad2e089a31a2ab6b5a2" category="doc">ボリューム予約の表示 - SANtricity CLI</block>
+  <block id="92155f1fec3da835a3ff77c3954c35af" category="doc">ボリュームの表示 - SANtricity CLI</block>
+  <block id="4b1ec08d27d4f418875cc92ea259f791" category="doc">シンボリュームの表示 - SANtricity CLI</block>
+  <block id="ec03be41ebcb38bee3170cfa1ca2a758" category="doc">ボリュームコピーのターゲット候補を表示する - SANtricity CLI</block>
+  <block id="fcb8b1ad2a3ecb59c2ab476b83180daa" category="doc">ボリュームコピーソース候補の表示 - SANtricity CLI</block>
+  <block id="d0fc1ff6f879860cbcd9c2bef7f95063" category="doc">ボリュームコピーの表示 - SANtricity CLI</block>
+  <block id="fad6ead6a919ca47ed1ae7233fce3729" category="doc">ボリュームグループのエクスポート依存関係を表示する - SANtricity CLI</block>
+  <block id="baa8a6db36d040c8d18802e763a40b6d" category="doc">ボリュームグループのインポート依存関係を表示する - SANtricity CLI</block>
+  <block id="90724c8ab8050f88c30fc61ebe7fe05d" category="doc">ボリュームグループの表示 - SANtricity CLI</block>
+  <block id="b49fa608a47c52f72f0860abdce3a30b" category="doc">テストアラート - SANtricity CLI</block>
+  <block id="26da5db3100d0a756599f439585ff54d" category="doc">AutoSupportバンドルコレクション設定の表示 - SANtricity CLI</block>
+  <block id="be37096a862fa43d8a97c4e0e5d4be7b" category="doc">AutoSupport 構成のテスト - SANtricity CLI</block>
+  <block id="41acb7360e0876145ebf042564444be1" category="doc">AutoSupport の配信方法を指定する - SANtricity CLI</block>
+  <block id="219a6c2f737547c7d67241a03a7e1703" category="doc">AutoSupport ログのキャプチャまたは表示 - SANtricity CLI</block>
+  <block id="4ab7a8f8c53824d6516ed5bc0f7dfe7b" category="doc">AutoSupport メッセージ収集スケジュールの表示 - SANtricity CLI</block>
+  <block id="691334917d58b68cc7b056e568b4c780" category="doc">EMW管理ドメインレベルでAutoSupportを有効化または無効化する（SMcliのみ） - SANtricity CLI</block>
+  <block id="dbaacd5578eb5e1a85f8f5f391585dff" category="doc">EMW管理ドメインレベルでAutoSupport OnDemand機能を有効化または無効化する（SMcliのみ） - SANtricity CLI</block>
+  <block id="1b9bb5091eb9ce2891761f72b9af647f" category="doc">EMW管理ドメインレベルでAutoSupportリモート診断機能を有効または無効にする（SMcliのみ） - SANtricity CLI</block>
+  <block id="6689cc8ff757357e80263aac4f0bd24d" category="doc">自動サポートバンドル収集構成のスケジュール - SANtricity CLI</block>
+  <block id="0a97a5582e066eec0e75b202decd2324" category="doc">非同期ミラーリング同期を開始する - SANtricity CLI</block>
+  <block id="9a61477e71e421dd419c085c559f38e4" category="doc">整合性グループスナップショットのロールバックを開始する - SANtricity CLI</block>
+  <block id="c5255e793a811946f82b332eda96a439" category="doc">ボリュームパリティチェックジョブの開始 - SANtricity CLI</block>
+  <block id="0c40fb12565993f4e408cc8bb339b0ec" category="doc">iSCSI DHCP 更新を開始する - SANtricity CLI</block>
+  <block id="a318607b3e2c5ae507bb0510233a397f" category="doc">コントローラのトレースを開始する - SANtricity CLI</block>
+  <block id="118173c4342d86355b19d5e1239c78a2" category="doc">ディスクプールのフルプロビジョニングを開始する - SANtricity CLI</block>
+  <block id="8cbf9e70bcf23228b716f1132f56272d" category="doc">ディスクプールの検索を開始する - SANtricity CLI</block>
+  <block id="aaac61e3e42f26d128242c4786e36902" category="doc">ディスクプールのリソースプロビジョニングを開始する - SANtricity CLI</block>
+  <block id="fa757da2c9ccc225a51504228aaa391d" category="doc">ドライブ消去の開始 - SANtricity CLI</block>
+  <block id="f9a3e71b3625251694b22941504665c5" category="doc">ドライブの初期化を開始する - SANtricity CLI</block>
+  <block id="2c5d04d07e48a6fc90fc0f47e2a2907d" category="doc">ドライブの検索を開始する - SANtricity CLI</block>
+  <block id="efb55d86b508c494720d4b1630d12028" category="doc">ドライブ再構築の開始 - SANtricity CLI</block>
+  <block id="675d002fa4194958f2347fb0c9365a60" category="doc">ドライブチャネル障害分離診断の開始 - SANtricity CLI</block>
+  <block id="cfb0f6e7ccd025a568622b470ef666ff" category="doc">ドライブチャネルの検索を開始する - SANtricity CLI</block>
+  <block id="913f18421fa0a29e968979742e51dc8f" category="doc">テストメールアラート設定 - SANtricity CLI</block>
+  <block id="529d2221aae9db9ace9fdc47cfcf1447" category="doc">ディスクプールまたはボリュームグループ内のボリュームの容量を増やす - SANtricity CLI</block>
+  <block id="0dae4d0d0b1ead46a5847f8501d3a308" category="doc">入出力コントローラ（IOC）ダンプの開始 - SANtricity CLI</block>
+  <block id="919c16d8699218d2d0f666b97a41ded3" category="doc">FDEセキュアドライブ消去を開始する - SANtricity CLI</block>
+  <block id="d0214b63d84f565ed92f39fd4038094c" category="doc">スナップショットイメージのロールバックを開始する - SANtricity CLI</block>
+  <block id="5cc193e166f328bdf99edd3e8178cab8" category="doc">SNMPトラップの送信先をテストする - SANtricity CLI</block>
+  <block id="f298945068838945662c8b8965a8b7ed" category="doc">SSD キャッシュの検索を開始する - SANtricity CLI</block>
+  <block id="ec724d3e650b5bfa66d84fd93f4f46fd" category="doc">SSD キャッシュ パフォーマンス モデリングを開始する - SANtricity CLI</block>
+  <block id="93c20d650760be804d5843c701dcdbfe" category="doc">AutoSupport 配信設定のテスト - SANtricity CLI</block>
+  <block id="11a86c832efec296ba2fadbd4dedc6e6" category="doc">ストレージアレイの AutoSupport 手動ディスパッチの開始 - SANtricity CLI</block>
+  <block id="70148fcc7fbd0e053017f2602a39e861" category="doc">ストレージアレイ構成データベース診断を開始する - SANtricity CLI</block>
+  <block id="220aff0b746d64227c6277f85a5b6a25" category="doc">ストレージアレイコントローラのヘルスイメージの開始 - SANtricity CLI</block>
+  <block id="e81e42e2f544782fd8bcc78e9cba96a4" category="doc">外部キー管理通信のテスト - SANtricity CLI</block>
+  <block id="3dfe7c7eacdb7ed25de385a373d7d835" category="doc">ストレージアレイの iSNS サーバーの更新を開始する - SANtricity CLI</block>
+  <block id="6606b7355a3cad5245fb64e92205fa91" category="doc">ストレージアレイの検索を開始する - SANtricity CLI</block>
+  <block id="61eb6e6c9f19f6ff1c9577a5f20dbb62" category="doc">OCSP サーバー URL テストを開始する - SANtricity CLI</block>
+  <block id="2c80ae6b7347ef6563ab968298df1b18" category="doc">ストレージアレイのSyslogテストを開始する - SANtricity CLI</block>
+  <block id="dcda764fd3602bf66eff50785e76bd4e" category="doc">同期ミラーリング同期の開始 - SANtricity CLI</block>
+  <block id="246c272dee9b7e00ee57d0817a8ffbdb" category="doc">Syslog 構成のテスト - SANtricity CLI</block>
+  <block id="c826e2c84eaa823bc7413cd99a58f29d" category="doc">トレイの位置特定を開始する - SANtricity CLI</block>
+  <block id="439c20f74478b8d1e1a478583ccc547e" category="doc">ボリュームの初期化を開始する - SANtricity CLI</block>
+  <block id="050119e21368e0439a456980eb29f276" category="doc">シンボリュームの初期化 - SANtricity CLI</block>
+  <block id="9d71a4467008c08ff27949408b0de45a" category="doc">ボリュームグループのデフラグを開始する - SANtricity CLI</block>
+  <block id="1588bf269dbd549d8ca6ab8c79e4c0b1" category="doc">ボリュームグループのエクスポートを開始する - SANtricity CLI</block>
+  <block id="24f614469b689fc9b8c13914c5f4027f" category="doc">ボリュームグループのフルプロビジョニングを開始する - SANtricity CLI</block>
+  <block id="07072175b6b88030c4108bc2112119a4" category="doc">ボリュームグループのインポートを開始する - SANtricity CLI</block>
+  <block id="596ed5aa438be8938af0f7f3b28792ae" category="doc">ボリュームグループの検索を開始する - SANtricity CLI</block>
+  <block id="c5f949582278d06b6e1b9411a5c1cd83" category="doc">ボリュームグループリソースのプロビジョニングを開始する - SANtricity CLI</block>
+  <block id="e44ef18583f4eb5f3e36be336a0e7436" category="doc">非同期ミラーグループの役割の逆転をキャンセルする - SANtricity CLI</block>
+  <block id="0758c7ef4554bf77d8c3fbc63aa02bb0" category="doc">整合性グループのスナップショットのロールバックを停止する - SANtricity CLI</block>
+  <block id="ea93de0d08823edd2ffcbfa6fbf3f99d" category="doc">整合性グループのスナップショットボリュームを停止する - SANtricity CLI</block>
+  <block id="5677591e686d39249525d2354a13f975" category="doc">ボリュームパリティチェックジョブの停止 - SANtricity CLI</block>
+  <block id="4c57d4e1ec387c37451ef856a800944b" category="doc">整合性グループ上の保留中のスナップショットイメージを停止する - SANtricity CLI</block>
+  <block id="6d7b2551f7130ef61938c67f0fa483a2" category="doc">ディスクプールの検索を停止する - SANtricity CLI</block>
+  <block id="647ba943a65085d3bbafb7a8a9a55960" category="doc">ドライブの検索を停止する - SANtricity CLI</block>
+  <block id="254aa707e54c4207b387262f493b620a" category="doc">ドライブ交換の停止 - SANtricity CLI</block>
+  <block id="5babf79e80b24b238ee38ff325444b44" category="doc">ドライブチャネル障害分離診断を停止する - SANtricity CLI</block>
+  <block id="7facb591c907c430d873c8bb048b635b" category="doc">ドライブチャネルの検索を停止する - SANtricity CLI</block>
+  <block id="8fd5a424cbc9f4dccc0fddb6c84b9dd6" category="doc">スナップショットグループの保留中のスナップショットイメージを停止する - SANtricity CLI</block>
+  <block id="1ceb1f08560dbfd519a1f5350de52d63" category="doc">スナップショットイメージのロールバックを停止する - SANtricity CLI</block>
+  <block id="c887f843cfaa5207f21ded2ede3d6f71" category="doc">スナップショットボリュームの停止 - SANtricity CLI</block>
+  <block id="bfdb284d77fa91a0bf339b12213d5a31" category="doc">SSD キャッシュの検索を停止する - SANtricity CLI</block>
+  <block id="6e931c73733d9634b41d0d993b34e388" category="doc">SSD キャッシュ パフォーマンス モデリングを停止する - SANtricity CLI</block>
+  <block id="75ca73164eb487a9ba43e1aa643e3a83" category="doc">ストレージアレイ構成データベース診断を停止する - SANtricity CLI</block>
+  <block id="a2825719e6486700d326b40509b80bf6" category="doc">ストレージアレイドライブのファームウェアのダウンロードを停止する - SANtricity CLI</block>
+  <block id="3d045609db70d0f1ffd3aed5039d0501" category="doc">ストレージアレイのiSCSIセッションを停止する - SANtricity CLI</block>
+  <block id="cf37c5a2c78e3b2891f4f76b52726940" category="doc">ストレージアレイの検索を停止する - SANtricity CLI</block>
+  <block id="813093623fc6bb5ee57455c32949cf8a" category="doc">トレイの位置特定を停止 - SANtricity CLI</block>
+  <block id="3b680e4806ba89aa469667f4896def10" category="doc">ボリュームコピーを停止する - SANtricity CLI</block>
+  <block id="e8896ca4203c5c16c4013b9cbeaadacf" category="doc">ボリュームグループの検索を停止する - SANtricity CLI</block>
+  <block id="f778cc83e7fd8fe1ff4739e4c0d160d5" category="doc">非同期ミラーグループの一時停止 - SANtricity CLI</block>
+  <block id="001582ee94dbe257db1029cee650f07a" category="doc">SSD キャッシュを一時停止する - SANtricity CLI</block>
+  <block id="26a1c1c6efefa05d44fc590320e04217" category="doc">同期ミラーリングの一時停止 - SANtricity CLI</block>
+  <block id="8a4d07e71e7d36a85ccb3beb4f17924d" category="doc">ストレージアレイのセキュリティキーの検証 - SANtricity CLI</block>
+  <block id="afd514e0104d1ebc0c51f118206391fe" category="doc">SANtricity CLI管理者コマンド</block>
+  <block id="1d39e1ed63f4f5905396b2928de848c9" category="doc">SANtricity CLIアラート設定コマンド</block>
+  <block id="04c1682362235c55241753a26ea4c427" category="doc">SANtricity CLIアレイ構成コマンド</block>
+  <block id="6ecada277de3cc0d76c13a8e475fabf0" category="doc">SANtricity AutoSupportコマンド</block>
+  <block id="3eda0abcfa6adf76c8b2be3b51ac6b7a" category="doc">SANtricity CLIミラーリングコマンド</block>
+  <block id="c2f5aba26d8fa2e0c603290e9fb99435" category="doc">SANtricity CLI パフォーマンスチューニングコマンド</block>
+  <block id="5d0559a132eeaa537a7b5d90994c97a6" category="doc">SANtricity CLI レプリケーションコマンド</block>
+  <block id="b6bebc197ba6d8954245ee93f9c804bb" category="doc">SANtricity CLI セキュリティコマンド</block>
+  <block id="73c9b363ff629a14cd1693e3b6e69e40" category="doc">SANtricity CLI ストレージ モニター担当者コマンド</block>
+  <block id="331d33d7a7238617ac154486f8e55c4e" category="doc">SANtricity CLIボリューム構成コマンド</block>
+  <block id="5e27e1b49d97c8a06e053d6d6f49c0c8" category="doc">SANtricity CLI スクリプトファイルにコメントを追加する</block>
+  <block id="287858dfcc22764b472503cc1e1f5d94" category="doc">SANtricity CLIコマンドラッパー構文について学ぶ</block>
+  <block id="e8ad2b3afd03143023d6840c982be5e6" category="doc">従来のSANtricity CLIコマンドラインパラメータについて学ぶ</block>
+  <block id="937ae65b4e52d36785cddb3c12ea7499" category="doc">SANtricity CLIの詳細なエラーレポートについて学ぶ</block>
+  <block id="3145754e4855858cb1cc89fa2376188f" category="doc">ダウンロード可能なSANtricity Secure CLI（SMcli）パラメータについて学ぶ</block>
+  <block id="563fb6ef5de7d13e640b5ffc7953d14e" category="doc">SANtricity CLIの終了ステータスについて学ぶ</block>
+  <block id="3c08eb24645fa240624a6f91f93f90c4" category="doc">SANtricity CLIファームウェアの互換性レベルについて学ぶ</block>
+  <block id="5ac7dea127bec6e62c95983c7736669d" category="doc">Windows PowerShell における SANtricity CLI コマンドのフォーマット規則</block>
+  <block id="5f53dbe6abe408d8a86aa6d580709bf2" category="doc">SANtricity CLIコマンドのフォーマットルール</block>
+  <block id="2c34dbebc71bf04eec35a11b1d9cbfac" category="doc">SANtricity CLI スクリプトコマンドのフォーマットルール</block>
+  <block id="a400145c3b8b870b8c5a6c644eabbf29" category="doc">SANtricity CLI インタラクティブ モードについて学ぶ</block>
+  <block id="30aabd0f3fb1d9aed3b4df1edd801136" category="doc">SANtricityソフトウェアのボリュームグループの移行について学ぶ</block>
+  <block id="9ab52d49eae6fe9c13882fef1d3e6158" category="doc">SANtricity CLI の命名規則について学ぶ</block>
+  <block id="e77479d03e13e5457b5143e09aaef40b" category="doc">httpsモードでのSANtricity Secure CLI（SMcli）について学ぶ</block>
+  <block id="6922805ac8c399933f9a380b55dc8685" category="doc">SANtricity CLIについて学ぶ</block>
+  <block id="72620124ac6533d0b7b4563bfd1db676" category="doc">SANtricity CLI の繰り返し構文要素について学習します</block>
+  <block id="466342d4ceed605fc65275c81c79450c" category="doc">SANtricity CLIコマンドの構造について学ぶ</block>
+  <block id="912cc2f8fec83a8f0f502fa5d8213432" category="doc">SANtricity CLI スクリプトコマンドの構造について学習します</block>
+  <block id="7749a7749c067a57803053149311ba25" category="doc">SANtricity CLI スクリプトコマンドについて学ぶ</block>
+  <block id="7aa1a554fa97ed75a945661977f56a71" category="doc">SANtricity CLI スクリプト コマンドのガイドラインについて学ぶ</block>
 </blocks>

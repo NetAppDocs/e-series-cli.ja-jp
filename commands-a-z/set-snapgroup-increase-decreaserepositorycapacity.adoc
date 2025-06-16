@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, repository, volume, capacity 
 summary: set snapGroup increase/decreaseRepositoryCapacityコマンドは、Snapshotグループのリポジトリボリュームの容量を増減します。 
 ---
-= Snapshotグループのリポジトリボリューム容量の設定
+= スナップショットグループリポジトリボリューム容量の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

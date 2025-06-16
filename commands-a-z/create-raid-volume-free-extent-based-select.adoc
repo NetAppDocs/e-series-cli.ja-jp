@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, free, extent, based, select 
 summary: create volumeコマンドは、ボリュームグループの空きスペースにボリュームを作成します。 
 ---
-= RAIDボリュームの作成（空きエクステントベースの選択）
+= RAIDボリュームの作成（空きエクステントに基づく選択） - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

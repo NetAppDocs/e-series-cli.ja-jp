@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recur, syntax, elements 
 summary: 共通の構文要素は、スクリプトコマンドで使用できるパラメータとオプションの一般的なカテゴリです。 
 ---
-= 共通の構文要素
+= SANtricity CLI の繰り返し構文要素について学習します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

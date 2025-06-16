@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, image 
 summary: show snapImageコマンドは、ユーザが以前に作成したSnapshotイメージに関する情報を返します。 
 ---
-= Snapshotイメージの表示
+= スナップショットイメージを表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

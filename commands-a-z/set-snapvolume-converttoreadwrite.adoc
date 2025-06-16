@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, read-only, snapshot, volume, read/write, volume 
 summary: set SnapVolume convertToReadWriteコマンドは、読み取り専用ボリュームであるSnapshotボリュームを、読み取り/書き込み可能なSnapshotボリュームに変更します。 
 ---
-= 読み取り専用Snapshotボリュームを読み取り/書き込みボリュームに設定します
+= 読み取り専用スナップショットボリュームを読み取り/書き込みボリュームに設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

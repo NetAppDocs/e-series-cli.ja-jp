@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, health, image, allow, overwrite 
 summary: set storageArray controllerHealthImageAllowOverWriteコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイで、新しいコントローラヘルスイメージによる既存のコントローラヘルスイメージの上書きを許可するフラグをコントローラに設定します。 
 ---
-= ストレージアレイコントローラのヘルスイメージの上書き許可の設定
+= ストレージアレイコントローラのヘルスイメージの上書きを許可する設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

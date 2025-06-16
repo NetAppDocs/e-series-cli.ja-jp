@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, group, snapshot, images 
 summary: stop pendingSnapImageCreationコマンドは、SnapshotまたはSnapshot整合性グループに作成する保留中のSnapshotイメージをすべてキャンセルします。 
 ---
-= Snapshotグループの保留中のSnapshotイメージを停止します
+= スナップショットグループの保留中のスナップショットイメージを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, synchronous, mirroring status 
 summary: check SyncMirror コマンドは、リモートミラーボリュームのステータスを返します。このコマンドを使用して、リモートミラーボリュームのステータスが最適になったタイミングを確認します。 
 ---
-= 同期ミラーリングのステータスを確認します
+= 同期ミラーリングのステータスを確認する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group, forced, state 
 summary: set volumeGroup forcedStateコマンドは、ボリュームグループを強制状態に移行します。 
 ---
-= ボリュームグループの強制状態を設定します
+= ボリュームグループの強制状態を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

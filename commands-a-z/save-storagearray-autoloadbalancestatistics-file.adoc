@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, auto-load, balance, statistics 
 summary: save storageArray autoLoadBalanceStatistics fileコマンドは、自動I/Oワークロードバランシングを提供し、ホストからの受信I/Oトラフィックが動的に管理されて両方のコントローラに分散されるようにします。 
 ---
-= 自動ロードバランシングの統計を保存します
+= 自動ロードバランシング統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

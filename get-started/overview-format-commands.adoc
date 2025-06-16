@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, cli 
 summary: コマンドラインインターフェイス（ CLI ）は、ストレージアレイを設定および監視するためのソフトウェアアプリケーションです。 
 ---
-= CLIの概要
+= SANtricity CLIについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

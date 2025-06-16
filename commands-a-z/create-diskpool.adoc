@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, disk pool 
 summary: create diskPoolコマンドは、指定したパラメータに基づいて新しいディスクプールを作成します。 
 ---
-= ディスクプールを作成
+= ディスクプールの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

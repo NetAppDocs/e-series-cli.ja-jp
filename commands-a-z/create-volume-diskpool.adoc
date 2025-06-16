@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, disk pool 
 summary: create volume diskPoolコマンドは、既存のディスクプール内に新しい標準RAIDボリュームまたはシンボリュームを作成します。 
 ---
-= ディスクプール内にボリュームを作成します
+= ディスクプールにボリュームを作成する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

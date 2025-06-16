@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, image 
 summary: create snapImageコマンドは、1つ以上の既存のSnapshotグループに新しいSnapshotイメージを作成します。 
 ---
-= Snapshotイメージを作成する
+= スナップショットイメージの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

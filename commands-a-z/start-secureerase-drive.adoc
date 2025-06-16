@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, fde, secure, drive, erase 
 summary: start secureErase driveコマンドは、Full Disk Encryption（FDE）ドライブのすべてのデータを消去して、FDEドライブとして再利用できるようにします。 
 ---
-= FDEドライブの完全消去を開始します
+= FDEセキュアドライブ消去を開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

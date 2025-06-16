@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, bundle, collection, set 
 summary: SMcli -autoSupportConfig showコマンドは、管理ドメインのAutoSupport バンドル収集設定を表示します。これらの設定は、AutoSupport を有効にしている管理ドメイン内のすべてのストレージアレイに適用されます。 
 ---
-= AutoSupport バンドル収集設定を表示します
+= AutoSupportバンドルコレクション設定の表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

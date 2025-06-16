@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, performance, statistics 
 summary: show allDrives performanceStatsコマンドは、ドライブのパフォーマンスに関する情報を返します。 
 ---
-= ドライブのパフォーマンス統計を表示します
+= ドライブのパフォーマンス統計を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

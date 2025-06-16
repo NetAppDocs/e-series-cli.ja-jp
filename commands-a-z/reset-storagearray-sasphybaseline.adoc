@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, sas, phy, baseline 
 summary: reset storageArray SASSPHYBaselineコマンドは、すべてのデバイスのSAS物理レイヤ（SAS PHY）ベースラインをリセットし、.csvファイルからエラーのリストを削除します。 
 ---
-= ストレージアレイのSAS PHYベースラインをリセットします
+= ストレージアレイの SAS PHY ベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

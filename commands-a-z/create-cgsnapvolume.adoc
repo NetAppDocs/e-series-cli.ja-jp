@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot, volume 
 summary: create cgSnapVolumeコマンドは、整合性グループのベースボリュームに特定のイメージのSnapshotボリュームを作成します。 
 ---
-= 整合性グループのSnapshotボリュームを作成します
+= 整合性グループスナップショットボリュームの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

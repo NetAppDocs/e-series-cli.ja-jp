@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, controller, health, image 
 summary: save storageArray controllerHealthImageコマンドは、コントローラヘルスイメージ機能をサポートするストレージアレイのコントローラヘルスイメージを、ホスト上の指定されたファイルに保存します。 
 ---
-= ストレージアレイコントローラのヘルスイメージを保存します
+= ストレージアレイコントローラのヘルスイメージを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array 
 summary: show storageArrayコマンドは、ストレージアレイに関する設定情報を返します。 
 ---
-= ストレージアレイを表示します
+= ストレージアレイの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

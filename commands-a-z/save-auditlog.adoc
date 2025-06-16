@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, audit log, records 
 summary: save auditLogコマンドは、監査ログレコードを取得します。 
 ---
-= 監査ログレコードを保存します
+= 監査ログレコードを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

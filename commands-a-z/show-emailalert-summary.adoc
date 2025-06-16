@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, email, alert, configuration 
 summary: show emailAlert summaryコマンドは、Eメールアラートの設定情報を表示します。 
 ---
-= Eメールアラート設定を表示します
+= 電子メールアラートの設定を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

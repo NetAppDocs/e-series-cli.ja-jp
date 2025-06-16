@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, synchronous, mirroring 
 summary: create SyncMirror コマンドは、同期リモートミラーペアのプライマリボリュームとセカンダリボリュームの両方を作成します。このコマンドは、書き込みモード（同期書き込みモードまたは非同期書き込みモード）と同期優先度も設定します。 
 ---
-= 同期ミラーリングを作成します
+= 同期ミラーリングの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

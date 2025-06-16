@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, diskpool, security, command, convert, non secure, diskpool, support, arrays, role, context 
 summary: enable diskPool securityコマンドは、セキュアでないディスクプールをセキュアなディスクプールに変換します。 
 ---
-= ディスクプールのセキュリティを有効にします
+= ディスクプールのセキュリティを有効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

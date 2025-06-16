@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host 
 summary: create hostコマンドを実行すると、新しいホストが作成されます。 
 ---
-= ホストを作成する
+= ホストの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

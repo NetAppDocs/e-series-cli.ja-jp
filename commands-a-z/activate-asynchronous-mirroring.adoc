@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, asynchronous, mirroring 
 summary: activate storageArray featureコマンドは、非同期ミラーリング機能をアクティブにします。 
 ---
-= 非同期ミラーリングをアクティブ化する
+= 非同期ミラーリングを有効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, unreadable, sectors 
 summary: clear volume unreadableSectorsコマンドは、1つ以上のボリュームで読み取り不能セクターの情報を消去します。 
 ---
-= ボリュームの読み取り不能セクターを消去します
+= ボリュームの読み取り不可能なセクターをクリアする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

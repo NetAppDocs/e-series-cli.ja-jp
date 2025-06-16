@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, host, port, statistics 
 summary: save storageArray hostPortStatisticsコマンドは、ストレージアレイのホストポートの統計を保存します。 
 ---
-= ストレージアレイのホストポートの統計を保存します
+= ストレージアレイのホストポート統計を保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

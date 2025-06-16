@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: interactive mode 
 summary: '対話型モードでは、コマンドの前にを付けずに個 々 のコマンドを実行できます `SMcli`。' 
 ---
-= 対話型モード
+= SANtricity CLI インタラクティブ モードについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

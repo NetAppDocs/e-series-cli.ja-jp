@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host 
 summary: set hostコマンドは、ホストをホストグループに割り当てるか別のホストグループに移動します。 
 ---
-= ホストを設定します
+= ホストの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

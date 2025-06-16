@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
 summary: disable storageArray externalKeyManagement fileコマンドは、Full Disk Encryptionドライブを含むストレージアレイの外部セキュリティキー管理を無効にします。 
 ---
-= 外部セキュリティキー管理を無効にします
+= 外部セキュリティキー管理を無効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

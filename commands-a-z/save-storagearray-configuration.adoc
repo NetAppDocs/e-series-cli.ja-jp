@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, configuration 
 summary: save storageArray configurationコマンドは、現在のストレージアレイボリューム構成を再作成するために使用できるスクリプトファイルを作成します。 
 ---
-= ストレージアレイの構成を保存します
+= ストレージアレイ構成の保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

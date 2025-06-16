@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, storage array, connectivity 
 summary: check storageArray connectivityコマンドを使用すると、ローカルストレージアレイとリモートストレージアレイに通信パスがあることが確認され、ローカルストレージアレイとリモートストレージアレイ間の接続の詳細が表示されます。 
 ---
-= ストレージアレイの接続を確認してください
+= ストレージアレイの接続を確認する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

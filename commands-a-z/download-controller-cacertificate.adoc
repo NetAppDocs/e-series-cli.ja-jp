@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
 summary: download controller cacertifateコマンドは、ルート/中間CA証明書をコントローラのWebサーバにインストールして、Webサーバの署名付き証明書を検証します。 
 ---
-= ルート/中間CA証明書をインストール
+= ルート/中間 CA 証明書のインストール - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

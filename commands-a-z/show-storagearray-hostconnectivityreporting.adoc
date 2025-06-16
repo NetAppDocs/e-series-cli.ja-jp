@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, connectivity, report 
 summary: show storageArray hostConnectivityReportingコマンドは、ホスト接続レポート機能の有効化ステータスを返します。 
 ---
-= ストレージアレイのホスト接続のレポートの表示
+= ストレージアレイホストの接続レポートを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

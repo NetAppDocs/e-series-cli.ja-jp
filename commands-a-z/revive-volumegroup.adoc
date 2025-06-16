@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, volume, group 
 summary: volumeGroupコマンドは、指定したボリュームグループとその関連する障害が発生したドライブを強制的に最適な状態に回復します。 
 ---
-= ボリュームグループを回復します
+= ボリュームグループの復活 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

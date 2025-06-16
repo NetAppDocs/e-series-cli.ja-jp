@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, lun, map 
 summary: show storageArray lunMappingsコマンドは、ストレージアレイでの論理ユニット番号（LUN）マッピングまたはネームスペースID（NSID）マッピングに関する情報を、ストレージアレイプロファイルから返します。 
 ---
-= ストレージアレイのLUNマッピングを表示します
+= ストレージアレイのLUNマッピングを表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

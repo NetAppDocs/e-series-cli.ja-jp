@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
 summary: DELETE sgSnapVolumeコマンドは、整合性グループのSnapshotボリュームを削除します。必要に応じて、リポジトリメンバーを削除することもできます。 
 ---
-= 整合性グループのSnapshotボリュームを削除します
+= 整合性グループのスナップショットボリュームの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, rls, baseline 
 summary: reset storageArray RLSBaselineコマンドは、すべてのRLSの数を0に設定することで、すべてのデバイスのRead Link Status（RLS）ベースラインをリセットします。 
 ---
-= ストレージアレイのRLSベースラインのリセット
+= ストレージアレイのRLSベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

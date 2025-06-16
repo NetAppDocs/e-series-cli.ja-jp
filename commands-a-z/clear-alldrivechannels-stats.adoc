@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, drive channel, statistics 
 summary: clear allDriveChannels statsコマンドは、すべてのドライブチャネルの統計情報をリセットします。 
 ---
-= ドライブチャネルの統計をクリアします
+= ドライブチャネル統計をクリアする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, images, consistency, group 
 summary: stop consistencyGroup pendingSnapImageCreationコマンドは、Snapshot整合性グループに作成される保留中のSnapshotイメージをすべて停止します。 
 ---
-= 整合性グループ上の保留中のSnapshotイメージを停止します
+= 整合性グループ上の保留中のスナップショットイメージを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

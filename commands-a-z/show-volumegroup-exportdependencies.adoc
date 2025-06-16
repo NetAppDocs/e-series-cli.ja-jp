@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group, export, dependencies 
 summary: show volumeGroup exportDependenciesコマンドは、1つのストレージアレイから2つ目のストレージアレイに移動するボリュームグループ内のドライブの依存関係のリストを表示します。 
 ---
-= ボリュームグループのエクスポート依存関係の表示
+= ボリュームグループのエクスポート依存関係を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

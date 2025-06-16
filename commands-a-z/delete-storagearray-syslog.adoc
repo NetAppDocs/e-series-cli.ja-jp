@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, syslog, command, allow, delete, specified, configuration, storing, audit, logs, role 
 summary: delete storageArray syslogコマンドを使用すると、監査ログの格納に使用する指定されたsyslog設定を削除できます。 
 ---
-= ストレージアレイのsyslog設定を削除します
+= ストレージアレイのSyslog設定を削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

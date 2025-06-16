@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, member, volume, consistency group 
 summary: set consistencyGroupコマンドは、既存のSnapshot整合性グループからメンバーボリュームを削除します。 
 ---
-= 整合性グループからメンバーボリュームを削除します
+= 整合性グループからメンバーボリュームを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

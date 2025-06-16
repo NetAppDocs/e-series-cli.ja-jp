@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, thin, volume 
 summary: show volumeコマンドは、指定したシンボリュームの拡張履歴または消費容量を返します。 
 ---
-= シンボリュームを表示します
+= シンボリュームの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group, import, dependencies 
 summary: show volumeGroup importDependenciesコマンドは、あるストレージアレイから別のストレージアレイに移動するボリュームグループ内のドライブの依存関係のリストを表示します。 
 ---
-= ボリュームグループのインポート依存関係の表示
+= ボリュームグループのインポート依存関係を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
 summary: asyncMirrorGroupコマンドは、非同期ミラーグループに関連付けられているローカルストレージアレイとリモートストレージアレイ間の通信に関する問題を診断します。 
 ---
-= 非同期ミラーグループ接続をテストします
+= 非同期ミラーグループの接続をテストする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

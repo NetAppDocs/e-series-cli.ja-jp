@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, recovery, mode 
 summary: clear storageArray recoveryModeコマンドを使用すると、ストレージアレイのリカバリモードが強制的に終了します。 
 ---
-= ストレージアレイのリカバリモードをクリアします
+= ストレージアレイのリカバリモードをクリアする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

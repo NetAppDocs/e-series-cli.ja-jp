@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, cli, commands 
 summary: CLIコマンドは、コマンドラッパーおよびラッパーに組み込まれた要素で構成されます。 
 ---
-= CLIコマンドの構造
+= SANtricity CLIコマンドの構造について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

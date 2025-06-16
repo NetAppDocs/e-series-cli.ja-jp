@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, import 
 summary: start volumeGroup importコマンドは、ボリュームグループを完了状態に移行して、新たに導入したボリュームグループを新しいストレージアレイで使用できるようにします。 
 ---
-= ボリュームグループのインポートを開始します
+= ボリュームグループのインポートを開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

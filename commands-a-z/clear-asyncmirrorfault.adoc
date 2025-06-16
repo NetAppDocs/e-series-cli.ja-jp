@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, asynchronous mirroring, fault 
 summary: clear asyncMirrorFaultコマンドは、1つ以上の非同期ミラーグループおよび1つ以上の非同期ミラーグループメンバーボリュームから、非同期ミラーリングの「ティック」エラーをクリアします。 
 ---
-= 非同期ミラーリングのエラーをクリアします
+= 非同期ミラーリング障害のクリア - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, check, volume, parity, job, 
 summary: stop check volume parity jobコマンドは、実行中のチェックボリュームパリティジョブを停止します。 
 ---
-= ボリュームのパリティチェックジョブを停止します。
+= ボリュームパリティチェックジョブの停止 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, group 
 summary: create volumeGroupコマンドは、一連の未割り当てドライブを入力したときに、空き容量のあるボリュームグループまたは1個のボリュームを含むボリュームグループを作成します。 
 ---
-= ボリュームグループを作成します
+= ボリュームグループの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, service, action, allowed, indicator 
 summary: set controllerコマンドは、コントローラトレイまたはコントローラドライブトレイ内のコントローラの、保守操作可能インジケータライトをオンまたはオフにします 
 ---
-= コントローラの保守操作可能インジケータの設定
+= コントローラのサービスアクション許可インジケーターの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

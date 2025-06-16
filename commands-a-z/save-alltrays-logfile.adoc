@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, tray log 
 summary: save allTrays logfileコマンドは、ログセンスデータをファイルに保存します。 
 ---
-= トレイログを保存します
+= トレイログの保存 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, map 
 summary: set volume logicalUnitNumberコマンドは、ボリュームとホストまたはホストグループの間に論理ユニット番号（LUN）またはネームスペースID（NSID）マッピングを定義します。 
 ---
-= ボリュームマッピングを設定
+= ボリュームマッピングの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

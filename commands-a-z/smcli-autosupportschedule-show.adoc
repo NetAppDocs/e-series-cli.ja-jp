@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, message, collection, schedule 
 summary: SMcli -autoSupportSchedule showコマンドは、日単位と週単位の両方のAutoSupport メッセージの収集と処理のスケジュールを表示します。 
 ---
-= AutoSupport メッセージ収集スケジュールを表示します
+= AutoSupport メッセージ収集スケジュールの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

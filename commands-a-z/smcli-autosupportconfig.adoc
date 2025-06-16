@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, autosupport, delivery, method 
 summary: SMcli -autoSupportConfigコマンドは、AutoSupport メッセージを送信する配信方法を設定します。 
 ---
-= AutoSupport の配信方法を指定します
+= AutoSupport の配信方法を指定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

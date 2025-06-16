@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, locate 
 summary: ドライブの特定の停止コマンドは、start drive locateコマンドによって点灯したドライブのインジケータライトを消灯します。 
 ---
-= ドライブの特定を停止します
+= ドライブの検索を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, mib ii, system, group, variables 
 summary: show snmpSystemVariablesコマンドは、簡易ネットワーク管理プロトコル（SNMP）システム変数に関する情報を返します。システム変数は、Management Information Base II（MIB-II）データベースで管理されます。 
 ---
-= SNMP MIB-IIシステムグループ変数を表示します
+= SNMP MIB II システムグループ変数を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

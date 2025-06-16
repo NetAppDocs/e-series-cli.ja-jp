@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volume, group, migration, learn, data, access, export, import, component 
 summary: ボリュームグループの移行では、ボリュームグループをエクスポートして、別のストレージアレイにインポートすることができます。ボリュームグループをエクスポートして、オフラインの状態でデータを格納することもできます。 
 ---
-= ボリュームグループの移行について説明します
+= SANtricityソフトウェアのボリュームグループの移行について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

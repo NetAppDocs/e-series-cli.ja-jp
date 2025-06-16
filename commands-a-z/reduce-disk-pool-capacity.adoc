@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reduce, disk pool, capacity 
 summary: set diskPoolコマンドは、ドライブをプールから論理的に削除することでディスクプールの容量を削減します。 
 ---
-= ディスクプールの容量を減らしてください
+= ディスクプールの容量を減らす - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

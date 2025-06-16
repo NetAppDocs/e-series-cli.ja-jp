@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, infiniband, statistics, baseline 
 summary: reset storageArray ibStatsBaselineコマンドは、ストレージアレイのInfiniBand統計ベースラインを0にリセットします。 
 ---
-= ストレージアレイのInfiniBandの統計ベースラインをリセットします
+= ストレージアレイのInfiniBand統計ベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

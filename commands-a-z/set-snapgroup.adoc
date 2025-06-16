@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, attributes 
 summary: set snapGroupコマンドは、Snapshotグループのプロパティを定義します。 
 ---
-= Snapshotグループの属性を設定します
+= スナップショットグループ属性の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

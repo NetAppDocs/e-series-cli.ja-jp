@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add volume, asynchronous, mirror group, supported arrays, roles, context, syntax, parameter, minimum firmware level 
 summary: add volume asyncMirrorGroupコマンドは、非同期ミラーグループにプライマリボリュームを追加します。 
 ---
-= 非同期ミラーグループにボリュームを追加します
+= 非同期ミラーグループにボリュームを追加する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

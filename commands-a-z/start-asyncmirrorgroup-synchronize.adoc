@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, asynchronous, mirror, synchronization 
 summary: start asyncMirrorGroup synchronizeコマンドは、非同期ミラーリングの同期を開始します。 
 ---
-= 非同期ミラーリングの同期を開始します
+= 非同期ミラーリング同期を開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

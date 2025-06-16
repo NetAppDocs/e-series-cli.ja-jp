@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, web server, certificate, sign, request, csr 
 summary: save controller arrayManagementCSRコマンドは、コントローラの証明書署名要求（CSR）を生成します。 
 ---
-= Webサーバ証明書署名要求（CSR）の生成
+= Webサーバーの証明書署名要求（CSR）を生成する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

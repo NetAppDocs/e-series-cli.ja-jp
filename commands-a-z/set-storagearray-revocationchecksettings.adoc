@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, certificate, revocation, check, set 
 summary: set storageArray revocationCheckSettingsコマンドを使用すると、失効チェックを有効または無効にしたり、Online Certificate Status Protocol（OCSP）サーバを設定したりできます。 
 ---
-= 証明書失効チェックの設定を行います
+= 証明書失効チェック設定の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, time 
 summary: set storageArray timeコマンドは、コントローラのクロックをこのコマンドを実行するホストのクロックと同期することで、ストレージアレイの両方のコントローラのクロックを設定します。 
 ---
-= ストレージアレイの時刻を設定します
+= ストレージアレイの時間を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

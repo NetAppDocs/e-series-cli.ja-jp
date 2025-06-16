@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, validator, information, file 
 summary: save storageArray dbmValidatorInfoコマンドは、ストレージアレイのデータベース管理（DBM）検証情報をXMLファイルに保存します。 
 ---
-= ストレージアレイのDBMバリデータ情報ファイルを保存します
+= ストレージアレイDBMバリデータ情報ファイルを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

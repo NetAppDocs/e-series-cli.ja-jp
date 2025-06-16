@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, fips, drive, security, identifier 
 summary: set drive securityIDコマンドは、FIPSドライブをメーカー出荷時の設定にリセットするために使用します。 
 ---
-= FIPSドライブのセキュリティ識別子を設定する
+= FIPSドライブセキュリティ識別子の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, attribute 
 summary: set trayコマンドは、トレイのユーザ定義属性を設定します 
 ---
-= トレイ属性を設定します
+= トレイ属性の設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, normal, thin, disk pool, roles, support 
 summary: delete volumeコマンドは、通常のボリュームまたはシンボリュームをディスクプールから削除します。 
 ---
-= ディスクプールからボリュームを削除します
+= ディスクプールからボリュームを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

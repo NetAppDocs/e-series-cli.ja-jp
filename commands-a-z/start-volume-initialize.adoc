@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: initialize, thin volume 
 summary: start volume initializeコマンドは、シンボリュームを初期化または再初期化します。 
 ---
-= シンボリュームの初期化
+= シンボリュームの初期化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

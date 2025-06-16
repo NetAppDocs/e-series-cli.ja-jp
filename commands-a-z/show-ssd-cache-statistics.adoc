@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache, statistics 
 summary: show ssdCacheコマンドは、SSDキャッシュの使用状況に関するデータを表示します。 
 ---
-= SSDキャッシュの統計を表示します
+= SSD キャッシュ統計を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

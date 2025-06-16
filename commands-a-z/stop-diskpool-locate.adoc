@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, disk pool, locate 
 summary: 'stop diskPool locateコマンドは"start diskPool locateコマンドによってオンにされたドライブのインジケータライトをオフにします' 
 ---
-= ディスクプールの特定を停止します
+= ディスクプールの検索を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

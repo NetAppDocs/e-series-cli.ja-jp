@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, comments, script file 
 summary: スクリプトエンジンは、特定の文字またはコマンドを検索してコメントを表示します。スクリプトファイルには、3つの方法でコメントを追加できます。 
 ---
-= スクリプトファイルにコメントを追加します
+= SANtricity CLI スクリプトファイルにコメントを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

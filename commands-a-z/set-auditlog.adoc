@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, audit log 
 summary: set auditLogコマンドは、監査ログの設定を構成します。 
 ---
-= 監査ログを設定します
+= 監査ログ設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

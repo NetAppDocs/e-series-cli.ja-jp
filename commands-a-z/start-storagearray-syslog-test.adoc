@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, syslog, test 
 summary: start storageArray syslog testコマンドを使用すると、ストレージアレイとsyslogサーバ間の通信をテストできます。 
 ---
-= ストレージアレイのsyslogテストを開始します
+= ストレージアレイのSyslogテストを開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

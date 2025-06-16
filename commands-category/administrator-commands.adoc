@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, security, support, administrator, commands, autosupport, array, volume, asynchronous, application 
 summary: ストレージ管理者、セキュリティ管理者、およびサポート管理者のコマンドです 
 ---
-= 管理者のコマンド
+= SANtricity CLI管理者コマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

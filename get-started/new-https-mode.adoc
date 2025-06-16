@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: new, smcli, https mode 
 summary: 新しいSMcliは、追加のセキュリティ機能を提供するhttpsモードで動作します。 
 ---
-= SMcli httpsモード
+= httpsモードでのSANtricity Secure CLI（SMcli）について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

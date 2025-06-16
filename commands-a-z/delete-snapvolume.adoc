@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
 summary: delete snapVolumeコマンドは、Snapshotボリュームを削除します。また、オプションで関連付けられているSnapshotリポジトリメンバーも削除します。 
 ---
-= Snapshotボリュームを削除します
+= スナップショットボリュームの削除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

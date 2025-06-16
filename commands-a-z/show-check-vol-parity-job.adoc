@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, check, volume, parity, job, 
 summary: show check volume parity jobコマンドは、指定されたボリュームチェックパリティジョブとジョブのステータスを表示します。 
 ---
-= ボリュームのパリティチェックジョブを表示します。
+= ボリュームパリティチェックジョブの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

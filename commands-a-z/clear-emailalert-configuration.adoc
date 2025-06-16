@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear email, alert, configuration 
 summary: clear emailAlert configurationコマンドは、電子メールアラート設定をデフォルト値にクリアします。 
 ---
-= Eメールアラート設定のクリア
+= 電子メールアラート設定のクリア - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

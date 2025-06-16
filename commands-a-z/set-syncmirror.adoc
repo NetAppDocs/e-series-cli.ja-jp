@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, synchronous, mirror 
 summary: set SyncMirror コマンドは、リモートミラーペアのプロパティを定義します。 
 ---
-= 同期ミラーリングを設定します
+= 同期ミラーリングの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

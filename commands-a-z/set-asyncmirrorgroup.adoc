@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, asynchronous, mirror, group 
 summary: set asyncMirrorGroupコマンドは、非同期ミラーグループのプライマリ側のコントローラ所有者が初期同期または再同期を実行する際に使用する同期設定と警告しきい値を変更します。 
 ---
-= 非同期ミラーグループを設定します
+= 非同期ミラーグループの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

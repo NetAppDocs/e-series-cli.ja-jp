@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, trap, destination 
 summary: set snmpTrapDestination trapReciverIPコマンドは、SNMPトラップの送信先に関する認証エラーメッセージの送信をオンまたはオフにします。エラーは、SNMPエージェントがSNMPマネージャからメッセージを受信したが、メッセージに無効なコミュニティ名またはユーザ名が含まれている場合に発生します。 
 ---
-= SNMPトラップの送信先を更新してください
+= SNMPトラップの送信先を更新する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

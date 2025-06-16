@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
 summary: download controller trustedCertificateコマンドは、コントローラのWebサーバに信頼されたCA証明書をインストールして、LDAPサーバの署名付き証明書を検証します。 
 ---
-= 信頼されたCA証明書をインストール
+= 信頼できる CA 証明書をインストールする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

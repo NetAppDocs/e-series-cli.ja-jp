@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configuration, commands, array, controller, health, image, hostport, feature, management 
 summary: アレイ構成コマンド 
 ---
-= アレイ構成コマンド
+= SANtricity CLIアレイ構成コマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

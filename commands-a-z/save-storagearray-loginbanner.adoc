@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, login, banner 
 summary: save storageArray loginBannerコマンドを使用すると、ログインバナーをローカルマシンに保存できます。バナーテキストには、ユーザがセッションを確立する前に表示される注意と同意を求めるメッセージを含めることができます。 
 ---
-= ストレージアレイのログインバナーを保存します
+= ストレージアレイのログインバナーを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

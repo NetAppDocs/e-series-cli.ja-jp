@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, trap, destination 
 summary: create snmpTrapDestinationコマンドを使用すると、新しい簡易ネットワーク管理プロトコル（SNMP）トラップの送信先が作成されます。トラップの送信先は、トラップメッセージを受信するSNMPマネージャです。 
 ---
-= SNMPトラップの送信先を登録します
+= SNMPトラップの宛先を登録する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

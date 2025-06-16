@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, initiator 
 summary: イニシエータオブジェクトの作成には、create initiatorコマンドを使用します。 
 ---
-= イニシエータを作成する
+= イニシエーターの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

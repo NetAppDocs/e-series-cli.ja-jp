@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host, port 
 summary: create HostPortコマンドは、ホストバスアダプタ（HBA）またはホストチャネルアダプタ（HCA）に新しいホストポートIDを作成します。 
 ---
-= ホストポートを作成する
+= ホストポートの作成 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

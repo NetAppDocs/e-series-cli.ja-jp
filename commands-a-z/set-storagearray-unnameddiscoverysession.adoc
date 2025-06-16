@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, unnamed, discovery, session 
 summary: set storageArray unnamedDiscoverySessionコマンドを使用すると、ストレージアレイは名前のない検出セッションに参加できます。 
 ---
-= ストレージアレイの名前のない検出セッションを設定します
+= ストレージアレイの名前なし検出セッションを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

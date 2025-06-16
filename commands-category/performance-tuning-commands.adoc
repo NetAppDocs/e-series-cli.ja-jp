@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: performance, tuning, commands, automatic, load balance, cache commands 
 summary: パフォーマンス調整のコマンド 
 ---
-= パフォーマンス調整のコマンド
+= SANtricity CLI パフォーマンスチューニングコマンド
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, drive, firmware, download 
 summary: stop storageArray driveFirmwareDownloadコマンドは、download storageArray driveFirmwareコマンドで開始したストレージアレイ内のドライブへのファームウェアダウンロードを停止します。 
 ---
-= ストレージアレイドライブのファームウェアダウンロードを停止します
+= ストレージアレイドライブのファームウェアのダウンロードを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, group 
 summary: set volumeコマンドは、ボリュームグループ内のボリュームのプロパティを定義します。 
 ---
-= ボリュームグループ内のボリュームのボリューム属性を設定します
+= ボリュームグループ内のボリュームのボリューム属性を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

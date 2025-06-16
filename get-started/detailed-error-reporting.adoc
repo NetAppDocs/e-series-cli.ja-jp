@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: detailed, error, report 
 summary: CLIで発生したエラーから収集されたデータはファイルに書き込まれます。 
 ---
-= 詳細なエラーレポート
+= SANtricity CLIの詳細なエラーレポートについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

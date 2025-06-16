@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'Specify AutoSupport HTTP(S) delivery method' 
 summary: set storageArray AutoSupport httpdeliveryMethodコマンドは、AutoSupport メッセージをHTTP（S）に送信するための配信方法を設定します。 
 ---
-= AutoSupport HTTP(S)配信方法の指定
+= AutoSupport HTTP(S)配信方法を指定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

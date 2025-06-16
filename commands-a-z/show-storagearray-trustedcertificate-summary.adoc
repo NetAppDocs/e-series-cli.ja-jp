@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, installed, trusted, ca, certificates, summary 
 summary: show storageArray trustedCertificate summaryコマンドは、アレイからインストールされた信頼されたCA証明書の概要を表示します。このコマンドを使用してdelete storageArray trustedCertificateコマンドを実行する前に、削除する証明書のエイリアス名を確認しておくと便利です。 
 ---
-= インストールされている信頼されたCA証明書の概要の
+= インストールされた信頼された CA 証明書の概要を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

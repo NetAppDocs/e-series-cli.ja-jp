@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, host, port, network, properties 
 summary: set controller iscsiHostPortコマンドは、ホストポートのネットワークプロパティ（IPv4およびIPv6のプロパティ、ポート速度、最大フレームペイロードなど）を変更します。 
 ---
-= iSCSIのホストポートのネットワークプロパティを設定します
+= iSCSI ホストポートのネットワークプロパティを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

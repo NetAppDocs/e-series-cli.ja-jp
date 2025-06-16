@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, locate 
 summary: stop storageArray locateコマンドは、start storageArray locateコマンドによって点灯されたストレージアレイのインジケータライトを消灯します。 
 ---
-= ストレージアレイの特定の停止
+= ストレージアレイの検索を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

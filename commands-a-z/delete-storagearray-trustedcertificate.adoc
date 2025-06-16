@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
 summary: delete storageArray trustedCertificateコマンドは、指定されたユーザがインストールしたCA証明書をアレイのWebサーバから削除します。 
 ---
-= インストールされている信頼されたCA証明書を
+= インストールされた信頼された CA 証明書を削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, redundancy, mode 
 summary: set storageArray redundancyModeコマンドは、ストレージアレイの冗長モードをシンプレックスまたはデュプレックスに設定します。 
 ---
-= ストレージアレイの冗長性モードを設定します
+= ストレージアレイの冗長モードを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

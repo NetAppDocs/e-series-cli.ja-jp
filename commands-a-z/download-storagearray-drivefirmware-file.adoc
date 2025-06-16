@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, drive, firmware, command, images, roles, supported 
 summary: download storageArray driveFirmware fileコマンドは、ストレージアレイ内のすべてのドライブにファームウェアイメージをダウンロードします。 
 ---
-= ストレージアレイのドライブファームウェアをダウンロードします
+= ストレージアレイドライブファームウェアのダウンロード - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

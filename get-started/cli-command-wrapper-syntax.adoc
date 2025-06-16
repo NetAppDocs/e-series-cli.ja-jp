@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cli, command, wrapper, syntax 
 summary: このセクションでは、CLIコマンドラッパーの一般的な構文を示します。 
 ---
-= CLIコマンドラッパーの構文
+= SANtricity CLIコマンドラッパー構文について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

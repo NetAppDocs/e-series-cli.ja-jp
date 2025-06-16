@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, icmp, response 
 summary: set storageArray icmpPingResponseコマンドは、セッションおよび接続のネゴシエーション可能な設定のデフォルト値を返します。このデフォルト値は、ストレージアレイでのネゴシエーションの開始点を表します。 
 ---
-= ストレージアレイのICMP応答を設定します
+= ストレージアレイのICMP応答を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

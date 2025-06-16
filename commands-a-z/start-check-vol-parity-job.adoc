@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, check, volume, parity, job 
 summary: start check volume parity jobコマンドは、特定のボリューム上で新しいボリュームチェックパリティ処理を開始します。 
 ---
-= ボリュームのパリティチェックジョブの開始
+= ボリュームパリティチェックジョブの開始 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, str 
 summary: show textstringコマンドは、スクリプトファイルからテキスト文字列を表示します。このコマンドは、MS-DOSとUNIXのechoコマンドに似ています。 
 ---
-= 文字列を表示します
+= 文字列を表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

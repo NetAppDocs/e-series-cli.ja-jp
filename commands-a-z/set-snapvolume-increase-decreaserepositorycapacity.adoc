@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, repository, capacity 
 summary: set snapVolume increase/decreaseRepositoryCapacityコマンドは、Snapshotボリュームのリポジトリボリュームの容量を増減します。 
 ---
-= Snapshotボリュームのリポジトリボリューム容量の設定
+= スナップショットボリュームのリポジトリボリューム容量を設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

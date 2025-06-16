@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive 
 summary: show allDrivesコマンドは、ストレージアレイ内のドライブに関する情報を返します。 
 ---
-= ドライブを表示します
+= ドライブの表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

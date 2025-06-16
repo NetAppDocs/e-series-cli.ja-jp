@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: load, storage array, database, command, management 
 summary: load storageArray dbmDatabaseコマンドは、ファイルまたはキャッシュからイメージを取得することによって、データベース管理（DBM）データベースイメージをリストアします。 
 ---
-= ストレージアレイのDBMデータベースのロード
+= ストレージアレイ DBM データベースのロード - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

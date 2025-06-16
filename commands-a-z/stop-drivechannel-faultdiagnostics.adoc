@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, fault, isolation, diagnostics 
 summary: stop driveChannel faultDiagnosticsコマンドは、ドライブチャネルの障害切り分け診断を停止します。これにより、start drive channel fault isolation diagnosticsコマンドが完了する前に停止します。 
 ---
-= ドライブチャネルの障害切り分け診断を停止します
+= ドライブチャネル障害分離診断を停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

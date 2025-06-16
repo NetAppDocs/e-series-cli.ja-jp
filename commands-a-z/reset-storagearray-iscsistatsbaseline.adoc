@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, iscsi, baseline 
 summary: reset storageArray iscsiStatsBaselineコマンドは、ストレージアレイのiSCSIベースラインを0にリセットします。 
 ---
-= ストレージアレイのiSCSIベースラインをリセットします
+= ストレージアレイの iSCSI ベースラインをリセットする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, dns 
 summary: set controller dnsServersコマンドは、コントローラのDomain Name System（DNS;ドメインネームシステム）設定を更新します。DNSは、コントローラとネットワークタイムプロトコル（NTP）サーバの完全修飾ドメイン名を解決するために使用されます。 
 ---
-= コントローラのDNSを設定します
+= コントローラのDNS設定を行う - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

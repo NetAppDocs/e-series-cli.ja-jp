@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, media, scan 
 summary: set snapGroup mediaScanEnabledコマンドは、スナップショットグループ上でメディアスキャンを実行します。 
 ---
-= Snapshotグループのメディアスキャンの設定
+= スナップショットグループのメディアスキャンを設定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

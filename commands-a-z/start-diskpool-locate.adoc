@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, locate 
 summary: 'start diskPool locateコマンドは"ドライブのインジケータライトを点滅させることにより"指定したディスクプールを構成するために論理的にグループ化されたドライブを特定します' 
 ---
-= ディスクプールの特定を開始します
+= ディスクプールの検索を開始する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

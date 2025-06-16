@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, syslog, configuration 
 summary: show syslog summaryコマンドは、syslogアラートの設定情報を表示します。 
 ---
-= syslog設定を表示します
+= Syslog 設定の表示 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, user, session 
 summary: set storageArray userSessionコマンドを使用すると、非アクティブな状態が一定の時間続いたユーザセッションは切断されるよう、System Managerでタイムアウトを設定できます。 
 ---
-= ストレージアレイのユーザセッションを設定します
+= ストレージアレイのユーザーセッションの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

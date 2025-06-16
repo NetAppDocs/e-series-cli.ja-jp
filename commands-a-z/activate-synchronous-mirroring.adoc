@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, synchronous mirroring, supported arrays, roles, context, syntax, parameters, data assurance management, minimum firmware level 
 summary: activate storageArray featureコマンドは、同期ミラーリング機能をアクティブ化し、ミラーリポジトリボリュームを作成します。 
 ---
-= 同期ミラーリングをアクティブ化する
+= 同期ミラーリングを有効にする - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

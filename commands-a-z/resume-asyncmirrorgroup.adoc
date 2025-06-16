@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, asynchronous, mirror, group 
 summary: resume asyncMirrorGroupコマンドは、非同期ミラーグループに含まれるすべてのミラーペア間のデータ転送を再開します。 
 ---
-= 非同期ミラーグループを再開します
+= 非同期ミラーグループの再開 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, sas, phy, counts 
 summary: save storageArray SASSPHYCountsコマンドは、SAS物理レイヤ（SAS PHY）カウンタをファイルに保存します。 
 ---
-= ストレージアレイのSAS PHYカウンタを保存します
+= ストレージアレイの SAS PHY カウントを保存する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

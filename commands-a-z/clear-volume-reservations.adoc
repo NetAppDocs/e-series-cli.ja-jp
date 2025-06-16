@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, reservations 
 summary: clear volume reservationsコマンドは、永続的なボリューム予約をクリアします。 
 ---
-= ボリュームリザベーションをクリアします
+= ボリューム予約のクリア - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

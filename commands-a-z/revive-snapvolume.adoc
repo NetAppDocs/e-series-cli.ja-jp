@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, volume 
 summary: '[revive SnapVolume]コマンドは、指定したスナップショットボリュームを強制的に最適状態に設定します。' 
 ---
-= Snapshotボリュームを回復します
+= スナップショットボリュームの復活 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

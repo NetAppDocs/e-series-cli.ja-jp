@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, ssd, cache, performance, model 
 summary: stop ssdCache performanceModelingコマンドは、パフォーマンスモデリング処理を停止し、SSDキャッシュのパフォーマンスモデリングデータを表示します。 
 ---
-= SSDキャッシュのパフォーマンスモデリングを停止する
+= SSD キャッシュ パフォーマンス モデリングを停止する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, volume, parity 
 summary: ボリュームのパリティチェックコマンドは、ボリュームのパリティエラーとメディアエラーをチェックして、チェック結果をファイルに書き込みます。 
 ---
-= ボリュームのパリティをチェックします
+= ボリュームのパリティチェック - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

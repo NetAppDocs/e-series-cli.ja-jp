@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, drives, ssd, cache 
 summary: set ssdCacheコマンドは、ソリッドステートディスク（SSD）を削除することでSSDキャッシュの容量を縮小します。 
 ---
-= SSDキャッシュからドライブを削除します
+= SSD キャッシュからドライブを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
