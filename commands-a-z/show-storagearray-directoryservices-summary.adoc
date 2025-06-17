@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, directory, services, summary 
 summary: show storageArray DirectoryServices summaryコマンドは、ディレクトリサービスの設定の概要を表示します。 
 ---
-= ストレージアレイのディレクトリサービスの概要を表示します
+= ストレージアレイのディレクトリサービスの概要を表示する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

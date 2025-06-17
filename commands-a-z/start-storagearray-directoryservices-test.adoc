@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, storage, array, directory, server 
 summary: start storageArray DirectoryServices testコマンドは、設定されているすべてのディレクトリサーバとの通信をチェックし、サーバドメイン設定を検証します。 
 ---
-= ストレージアレイのディレクトリサーバをテストする
+= ストレージアレイディレクトリサーバーのテスト - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

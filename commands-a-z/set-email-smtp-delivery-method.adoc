@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
 summary: set storageArray AutoSupport smtpiveryMethodコマンドは、AutoSupport メッセージをEメール（SMTP）に送信するための配信方法を設定します。 
 ---
-= Eメール（SMTP）配信方法を指定します
+= メール（SMTP）配信方法を指定する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

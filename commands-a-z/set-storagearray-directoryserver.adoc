@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, directory, server 
 summary: set storageArray DirectoryServerコマンドは、ディレクトリサーバ設定を更新します。 
 ---
-= ストレージアレイのディレクトリサーバを設定する
+= ストレージアレイディレクトリサーバーの設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

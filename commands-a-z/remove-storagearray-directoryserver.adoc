@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, storage array, directory, server, role, mapping 
 summary: remove storageArray DirectoryServerコマンドは、指定されたディレクトリサーバ用に定義されているロールマッピングを削除します。 
 ---
-= ストレージアレイのディレクトリサーバのロールマッピングの削除
+= ストレージアレイディレクトリサーバの役割マッピングを削除する - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
