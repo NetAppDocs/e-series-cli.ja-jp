@@ -43,4 +43,4 @@ show storageArray hostIoProtocolInfo;
 
 == 最小ファームウェアレベル
 
-12.0
+12.00

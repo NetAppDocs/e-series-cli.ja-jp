@@ -14,7 +14,7 @@ summary: set storageArray ManagementInterfaceコマンドは、コントロー�
 set storageArray ManagementInterfaceコマンドは、コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。
 
 
-NOTE: SANtricity 12.0以降、ストレージアレイは常に `restOnly=true`モードで動作するため、このコマンドは削除されました。
+NOTE: SANtricity 12.00以降、ストレージアレイは常に `restOnly=true`モードで動作するため、このコマンドは削除されました。
 
 
 
