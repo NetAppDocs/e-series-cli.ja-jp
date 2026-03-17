@@ -25,6 +25,44 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+== SANtricity 12.0
+
+次の表は、リリース12.0におけるCLIコマンドとスクリプト コマンドの変更点をまとめたものです。
+
+[cols="2*"]
+|===
+| コマンドを実行します | 概要 of Changeの略 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["ストレージアレイホストI/Oプロトコルの設定"]
+ a| 
+コマンドを追加しました。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storage-array-host-io-protocol.html["ストレージアレイホストI／Oプロトコル情報を表示する"]
+ a| 
+コマンドを追加しました。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/start-storagearray-externalkeymanagement-test.html["外部キー管理通信のテスト"]
+ a| 
+KMS通信テストの結果をコマンド出力に追加しました。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managementinterface.html["ストレージアレイ管理インターフェイスを設定します"]
+ a| 
+コマンドを削除しました。
+
+|===
+
+
 == SANtricity 11.90
 
 次の表に、リリース11.90でのCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -214,14 +252,14 @@ xref:./commands-a-z/start-volumegroup-fullprovisioning.adoc[ボリュームグ�
 
 
  a| 
-xref:./commands-a-z/recreate-storagearray-securitykey.html[外部セキュリティキーを再作成します]
+xref:./commands-a-z/recreate-storagearray-securitykey.adoc[外部セキュリティキーを再作成します]
  a| 
 「deleteOldKey」パラメータが追加されました。
 
 
 
  a| 
-xref:./commands-a-z/create-diskpool.html[ディスクプールを作成]
+xref:./commands-a-z/create-diskpool.adoc[ディスクプールを作成]
  a| 
 「driveCount」パラメータ概要 を更新。
 

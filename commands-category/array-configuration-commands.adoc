@@ -99,6 +99,8 @@ link:../commands-a-z/reset-storagearray-hostportstatisticsbaseline.html["スト�
 
 link:../commands-a-z/save-storagearray-hostportstatistics.html["ストレージアレイのホストポートの統計を保存します"]
 
+link:../commands-a-z/set-storagearray-host-io-protocol.html["ストレージアレイホストI/Oプロトコルを設定します"]
+
 link:../commands-a-z/set-controller-hostport.html["コントローラのホストポートのプロパティを設定します"]
 
 link:../commands-a-z/set-target.html["ターゲットのプロパティを設定します"]
@@ -108,6 +110,8 @@ link:../commands-a-z/set-controller-iscsihostport.html["iSCSIのホストポー�
 link:../commands-a-z/set-iscsiinitiator.html["iSCSIイニシエータを設定する"]
 
 link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["ストレージアレイの未設定のiSCSIイニシエータの表示"]
+
+link:../commands-a-z/show-storage-array-host-io-protocol.html["ストレージアレイホストI/Oプロトコルを表示する"]
 
 link:../commands-a-z/show-storagearray-unconfiguredinitiators.html["未設定のイニシエータの表示"]
 

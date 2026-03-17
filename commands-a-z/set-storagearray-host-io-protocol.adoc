@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/set-storagearray-host-io-protocol.html 
+sidebar: sidebar 
+keywords: set, storage, array, host, io, protocol 
+summary: storageArray hostIoProtocolの設定コマンドは、ストレージアレイレベルでホストI/Oプロトコルを設定します。 
+---
+= ストレージアレイホストI/Oプロトコルの設定 - SANtricity CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `set storageArray hostIoProtocol`コマンドは、ストレージアレイレベルでホストI/Oプロトコルを設定します。
+
+
+
+== サポートされているアレイ
+
+このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
+
+
+
+== ロール
+
+E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Support Adminロールが必要です。
+
+
+
+== 構文
+
+[source, cli, subs="+macros"]
+----
+set storageArray hostIoProtocol={"FC" | "ISCSI" | "ISER" | "nvmeIb" | "nvmeFc" | "nvmeRoce" | "SAS" | "SRP"}
+----
+
+
+== パラメータ
+
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+`set storageArray hostIoProtocol`
+ a| 
+ストレージアレイに使用するホストI/Oプロトコルを指定できます。有効な選択肢は、FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、SAS、またはSRPです。
+
+|===
+
+
+== 最小ファームウェアレベル
+
+12.0

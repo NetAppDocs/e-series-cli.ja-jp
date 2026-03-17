@@ -528,6 +528,8 @@ entries:
       url: "/commands-a-z/set-storagearray-externalkeymanagement.html"
     - title: これには、ストレージのホスト接続情報を設定します
       url: "/commands-a-z/set-storagearray-hostconnectivityreporting.html"
+    - title: storageArray の hostIoProtocol を設定
+      url: "/commands-a-z/set-storagearray-host-io-protocol.html"
     - title: storageArray icmppingResponseを設定します
       url: "/commands-a-z/set-storagearray-icmppingresponse.html"
     - title: storageArray isnsipv4configurationmethodを設定します
@@ -686,6 +688,8 @@ entries:
       url: "/commands-a-z/show-storagearray-directoryservices-summary.html"
     - title: これには、ストレージ接続のレポートを表示します
       url: "/commands-a-z/show-storagearray-hostconnectivityreporting.html"
+    - title: storageArray hostIoProtocolInformationを表示
+      url: "/commands-a-z/show-storage-array-host-io-protocol.html"
     - title: show storageArray hostTopologyコマンド
       url: "/commands-a-z/show-storagearray-hosttopology.html"
     - title: show storageArray iscsonegotiationdefaults」をデフォルトにします

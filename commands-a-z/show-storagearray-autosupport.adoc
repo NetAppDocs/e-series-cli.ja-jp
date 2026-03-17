@@ -17,13 +17,13 @@ show storageArray autoSupport AutoSupport コマンドを使用すると、ス�
 
 == サポートされているアレイ
 
-このコマンドは、E4000、E2800、E5700、EF600、およびEF300のストレージアレイが対象です。
+このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイのいずれでも動作します。
 
 
 
 == ロール
 
-このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Admin、Support Admin、またはStorage Monitorロールが必要です。
+E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport AdminまたはStorage Monitorロールが必要です。
 
 
 

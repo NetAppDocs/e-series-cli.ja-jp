@@ -376,7 +376,6 @@
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">CLIを使用すると、ストレージ管理ソフトウェア内のユーティリティであるスクリプトエンジンに直接アクセスできます。スクリプトエンジンは、ストレージアレイを設定および管理するコマンドを実行します。スクリプトエンジンは、スクリプトファイル経由で、またはコマンドラインから直接コマンドを読み取り、コマンドによって指示された処理を実行します。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">スクリプトコマンドは、ストレージアレイを設定および管理します。スクリプトコマンドはCLIコマンドとは異なります。個々のスクリプトコマンドを入力するか、スクリプトコマンドのファイルを実行することができます。個々のスクリプトコマンドを入力する場合は、スクリプトコマンドをCLIコマンドに埋め込みます。スクリプトコマンドのファイルを実行する場合は、ファイル名をCLIコマンドに埋め込みます。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">本ドキュメントに記載されているソフトウェア機能の一部は、Eシリーズストレージシステムでは使用できない場合があります。利用可能な機能については、アカウント担当者にお問い合わせください。</block>
-  <block id="ab2307dc857f6a7ccdbed0391d1f8d0a" category="paragraph">CLIは、SANtricity Storage Managerソフトウェアの機能です。</block>
   <block id="a756bcc5185086b47d7c3f4c343e3b89" category="doc">スクリプトコマンドのガイドライン</block>
   <block id="80e9d60e2926365dfd876497329f1728" category="paragraph">次に、コマンドラインでスクリプトコマンドを記述する際のガイドラインを示します。</block>
   <block id="1fdcd0e53c86070c975139e3c6ff054d" category="list-text">すべてのコマンドはセミコロン(`;`)で終了する必要があります</block>
@@ -848,8 +847,6 @@
   <block id="1a2e5a82588de3119624b0d7cbca73cc" category="paragraph">8.40</block>
   <block id="6d43cb3c696995e6401895eb7f796367" category="summary">create volumeGroupコマンドは、一連の未割り当てドライブを入力したときに、空き容量のあるボリュームグループまたは1個のボリュームを含むボリュームグループを作成します。</block>
   <block id="9033a3ccdba951bc32dcae4625771ad8" category="paragraph">create volumegroupコマンドは'未割り当てドライブのセットを入力すると'空き容量のあるボリューム・グループまたは1つのボリュームを持つボリューム・グループを作成します</block>
-  <block id="493b94633ddc6a0787d6f81edce51389" category="paragraph">このコマンドは、E2700、E5600、E2800、E5700を含む個々のストレージアレイ環境 SMcliパッケージがすべてインストールされていれば、EF600およびEF300アレイ</block>
-  <block id="0ac29acf0d9d736c28e41361a4dd4086" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="a537046f5a9794596cc0de6721bc7156" category="paragraph">作成するボリュームグループに割り当てるドライブ。大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。</block>
   <block id="27827eafe545a4ec5a6f65bbefb700f1" category="paragraph">raidLevel</block>
   <block id="d79eb7b9cb0d7237808dcdd9400420ea" category="paragraph">ボリュームが含まれているボリュームグループのRAIDレベル。有効な値は'0`'1' 3`'5`または'6`です</block>
@@ -878,7 +875,6 @@
   <block id="04a89f6222559bcfd96ade14020414dc" category="list-text">capable --ボリュームグループとボリュームにはセキュリティを設定する機能がありますが'セキュリティは有効になっていません</block>
   <block id="33cc045aa5e80c8b261c3b7ec5363106" category="list-text">有効-ボリューム・グループとボリュームでセキュリティが有効になっています</block>
   <block id="22bbe7cc6b304b85470bc52a030df23d" category="paragraph">「resourceProvisioningCapability」</block>
-  <block id="ca1a46dc2dc2b5162ee71f85f2908d8c" category="paragraph">リソースプロビジョニング機能が有効かどうかを指定する設定。リソースプロビジョニングをディセーブルにするには、このパラメータをFALSEに設定します。デフォルト値は「true」です。</block>
   <block id="25b49016b88e4b8ba70e5ccf70308d23" category="section-title">ドライブとボリュームグループ</block>
   <block id="549f85288cdf8090735073dfe97943ed" category="paragraph">ボリュームグループは、ストレージアレイのコントローラによって論理的にグループ化された一連のドライブです。ボリュームグループ内のドライブ数は、RAIDレベルとコントローラファームウェアによって制限されます。ボリュームグループを作成する際は、次のガイドラインに従ってください。</block>
   <block id="135d47fb44c28bb4a8373b3ccb13b5fb" category="list-text">ファームウェアバージョン7.10以降では、あとから使用するために容量をリザーブできるように、空のボリュームグループを作成できます。</block>
@@ -1879,8 +1875,6 @@
   <block id="3d9bdef2e7abec1617d66c49ac79224a" category="paragraph">「_start storageArray AutoSupport deliveryTest_」コマンドを使用してテストメッセージを送信し、配信方法が正しく設定されていることを確認します。</block>
   <block id="1a4e509a921af1d26cf3a82537a2783b" category="summary">start volumeGroup resourceProvisioningコマンドは、指定されたボリュームグループでリソースプロビジョニングを有効にし、ボリュームグループ内の各ボリュームで非同期処理を実行するリソースプロビジョニング有効化処理を開始します。リソースのプロビジョニングでは、ボリュームグループ内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。</block>
   <block id="7710f4628a58f181c0098dfeaa5522f9" category="paragraph">start volumeGroup resourceProvisioningコマンドは'指定されたボリュームグループでリソースプロビジョニングを有効にし'ボリュームグループ内の各ボリュームで非同期オペレーションを実行するリソースプロビジョニングを開始しますリソースをプロビジョニングするには、ボリュームグループ内のすべてのドライブがNVMeのDULBE機能をサポートしている必要があります。</block>
-  <block id="51d14daebf47942cba93531e75da6df2" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、EF600およびEF300アレイを含むすべてのストレージアレイを環境 します。</block>
-  <block id="e3d98f0701b3ce54eae2021e986f589c" category="paragraph">このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage AdminまたはSupport Adminのロールが必要です。</block>
   <block id="e937f5b811c52d80b38da404f68bb9bf" category="paragraph">ボリュームグループでリソースのプロビジョニングを無効にするには、フルプロビジョニングコマンドとオプションを使用して、リソースのプロビジョニングを無効にします。すべてのドライブがDULBE対応で、ストレージアレイの「resourceProvisionedVolumes」設定が「true」の場合、ボリュームグループは作成時にリソースをプロビジョニングします。</block>
   <block id="568a1c4dfd0ebaa9f2ae968fffd64a4e" category="paragraph">「volumeGroupName」と入力します</block>
   <block id="da1d163125a598ebfee2a7be9377074f" category="paragraph">リソースプロビジョニング機能を有効にするボリュームグループ。ボリュームグループ名は角かっこ（[]）で囲みます。</block>
@@ -1964,7 +1958,6 @@
   <block id="2b4eebf5cddedcb415d099d436cddc4b" category="paragraph">Snapshotグループは、空の場合、またはSnapshotイメージが含まれている場合に削除できます。Snapshotグループ内のすべてのSnapshotイメージが、Snapshotグループと一緒に削除されます。Snapshotグループ内の既存のSnapshotイメージに関連付けられているSnapshotボリュームがある場合は、各Snapshotボリュームが停止され、Snapshotイメージとの関連付けが解除されます。Snapshotグループを削除すると、関連付けられているリポジトリボリュームも削除されます。デフォルトでは、リポジトリボリューム内のすべてのメンバーボリュームが、未使用でマッピングされていない標準ボリュームとして保持されます。メンバー・ボリュームを削除するには'deleteRepositoryMembers'パラメータをTRUEに設定するか'このパラメータを使用しないでくださいメンバー・ボリュームを保持するには'deleteRepositoryMembers'パラメータを'FALSE'に設定します</block>
   <block id="3ac2ae2f311b9a99c93e008865d43ee3" category="summary">Remove array labelコマンドを使用すると、ストレージアレイのユーザ定義ラベルを削除できます。</block>
   <block id="f7c4d1638cca8e35298b6279e814c1ad" category="paragraph">Remove array label'コマンドを使用すると'ストレージ・アレイのユーザー定義ラベルを削除できます</block>
-  <block id="2d7a70f29e27325f9061fc060147f639" category="paragraph">このコマンドは、EF600およびEF300ストレージアレイを環境 します。</block>
   <block id="93292b886dea7281a41d0b1f15f0c656" category="paragraph">「userDefinedString」</block>
   <block id="a04a6d8e349cb879fdb3cb5a0d615020" category="paragraph">ストレージアレイのユーザ定義のラベルを指定できます。</block>
   <block id="fad8c1abc737c1d4b9a7f989ea897957" category="paragraph">8.60</block>
@@ -2155,7 +2148,6 @@
   <block id="88402f398309648d99632dd84f695988" category="list-text">このスケジュールは05：10：2014（2014年5月10日）に終了</block>
   <block id="c0d8694e265ecd1c02d1c658f8f52afb" category="summary">set storageArray resourceProvisionedVolumesコマンドは、DULBE機能を無効にします。</block>
   <block id="ea5873faa3a54e14ad5b394046f4bcab" category="paragraph">set storageArray resourceProvisionedVolumesコマンドは'DULBE機能を無効にします</block>
-  <block id="798cf5ce29a58c7b25e71c588600bc90" category="paragraph">このコマンドをEF600およびEF300ストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="9916db1fb324eddbd8009e84252ebe31" category="paragraph">リソースプロビジョニングは、大容量のボリュームを迅速に初期化するための機能です。</block>
   <block id="425013f9affebdfd307a15b3b0d92bba" category="paragraph">リソースプロビジョニングボリュームは、SSDボリュームグループまたはプール内のシックボリュームです。ボリュームの作成時にドライブ容量が割り当てられますが（ボリュームに割り当てられます）、ドライブブロックの割り当てが解除されます（マッピングが解除されます）。リソースプロビジョニングボリュームでは、時間制限付きのバックグラウンド初期化は実行されません。代わりに、各RAIDストライプは、ストライプ内のボリュームブロックへの最初の書き込み時に初期化されます</block>
   <block id="e361db30b1320387a5a06de717cc2672" category="paragraph">リソースプロビジョニングボリュームはSSDボリュームグループおよびプールでのみサポートされます。グループまたはプール内のすべてのドライブでNVMe Deallocated or Unwritten Logical Block Error Enable（DULBE）エラーリカバリ機能がサポートされます。リソースでプロビジョニングされたボリュームを作成すると、そのボリュームに割り当てられていたすべてのドライブブロックが割り当て解除（マッピング解除）されます。ブロックの割り当てを解除すると、SSDの消耗度が改善され、書き込みパフォーマンスが最大化されます。向上率はドライブのモデルと容量によって異なります。</block>
@@ -3213,7 +3205,6 @@
   <block id="c970bec1629f871f237c6878071d884f" category="paragraph">set storageArray odxEnabledコマンドは、ストレージアレイのオフロードデータ転送（ODX）をオンまたはオフにします。</block>
   <block id="eff39fcee33d70dce8145b0e779812a0" category="paragraph">ストレージアレイではもともとODXがオンになっています。ODXを実行しない場合や、ODXが原因でストレージアレイに問題が発生している場合は、このコマンドを使用してODXをオフにします。影響を受けるストレージアレイは、コマンドの実行元のストレージアレイのみです。</block>
   <block id="3a912690ececcbe120b969bd8fc69966" category="paragraph">ODXをオンまたはオフにするための設定。ODXをオンにするには、このパラメータを「true」に設定します。ODXをオフにするには、このパラメータをFALSEに設定します。デフォルト設定では、ODXはオンになっています。</block>
-  <block id="a27439d41e4d1da74ea84fd8ec69c6d6" category="paragraph">ODXを使用すると、バッファ読み取りとバッファ書き込みの処理を使用せずにデータを転送できます。データ転送処理にホストが直接関与する必要はありません。ODXが有効になっていない場合、ソースストレージからホストにデータが読み取られ、ホストからターゲットストレージに書き込まれます。ODXが有効な場合は、データ転送処理はストレージインフラによって直接管理されます。データはホストを経由せずに、ソースストレージからターゲットストレージに直接移動されます。</block>
   <block id="7fd394b3aba1a459257a5bc772eedaf5" category="summary">create volumeコマンドは、新しいボリュームグループとボリュームを作成し、ボリュームのドライブを指定できます。</block>
   <block id="ba13f7f543c37e1bd1e647a55d5220e3" category="paragraph">create volumeコマンドは'新しいボリューム・グループとボリュームを作成し'ボリュームのドライブを指定できます</block>
   <block id="b51a39717fa2ac17232fba7903c63d30" category="paragraph">作成するボリュームに割り当てるドライブ。大容量ドライブトレイの場合は、ドライブのトレイIDの値、ドロワーIDの値、およびスロットIDの値を指定します。小容量ドライブトレイの場合は、ドライブのトレイIDの値とスロットIDの値を指定します。トレイIDの値は'0～99ですドロワーIDの値は「1」～「5」です。</block>
@@ -3646,7 +3637,6 @@
   <block id="da22f440facb3666eaabf9ad3aa39429" category="paragraph">ストレージアレイのボリュームグループに属しているドライブは、ネイティブとみなされます。ストレージアレイのボリュームグループに属していないドライブ、またはボリュームグループのドライブが新しいストレージアレイに転送される際に一緒にインポートされなかったドライブは、外部ドライブとみなされます。後者の場合は、新しいストレージアレイに不完全なボリュームグループが作成されます。</block>
   <block id="dc285ce81bf0530aebeda687aec339c9" category="paragraph">この処理は、緊急のリカバリ目的で、1つ以上のドライブのステータスを外部からネイティブに変更して元のボリュームグループ内で元のステータスに戻す必要がある場合にのみ使用します。</block>
   <block id="62856a7f1916d7319c95c63c31bc889f" category="paragraph">*データ破損またはデータ損失の可能性*--前述した以外の理由でこのコマンドを使用すると、通知なしにデータが失われる可能性があります。</block>
-  <block id="e550583407050aac7add146f54c875ba" category="paragraph">スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルに応じて0または1で始まります。E2800、E5700、EF600、およびEF300コントローラと互換性があるドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラと互換性のあるドライブトレイのスロットID番号は1から始まります。</block>
   <block id="9c17a4a2cdf0912f4d9331b0b4e75592" category="paragraph">すべてのドライブを選択するための設定。</block>
   <block id="6a61ed4a17f493246b07eb150243fc94" category="summary">reset storageArray SASSPHYBaselineコマンドは、すべてのデバイスのSAS物理レイヤ（SAS PHY）ベースラインをリセットし、.csvファイルからエラーのリストを削除します。</block>
   <block id="aaddc8458e2ec4db4bc4354e46056f40" category="doc">ストレージアレイのSAS PHYベースラインをリセットします</block>
@@ -4463,7 +4453,6 @@
   <block id="10a61ca5e06c94732fd7b2b0d309ce36" category="paragraph">自動ロードバランシングは、ストレージアレイの状況に応じて無効にすることができます。たとえば、次のような場合です。</block>
   <block id="8217b6cf459810a77b151eeab55af7e7" category="list-text">特定のボリュームのコントローラ所有権については、ワークロードを分散するために自動的に変更されないようにする場合。</block>
   <block id="d44be56633d0f5b5cc74cae0e83ceb99" category="list-text">高度に調整された環境で、コントローラ間の負荷分散が特定の要件を満たすように意図的に設定されている。</block>
-  <block id="3122c046dc8cba068a03aa68a1ac7240" category="paragraph">SANtricity Storage Managerで、個別のストレージアレイの自動ロードバランシング機能を有効または無効にするには、*ストレージアレイ*&gt;*構成*&gt;*自動ロードバランシング*メニューオプションを選択します。</block>
   <block id="5e085fb4c29ff4949db8d7841016a93a" category="paragraph">SANtricity システムマネージャで、*Settings*&gt;*System*を選択し、*Additional Settings*セクションまで下にスクロールして、E**イネーブル/ディセーブル自動ロードバランシング**リンクをクリックし、**Enable/Disable automatic load balancing **チェックボックスを選択して、個々のストレージアレイの機能をイネーブルまたはディセーブルにします。</block>
   <block id="ad7f2b132a88e6ddf059d269897b9f7a" category="summary">reset storageArray RLSBaselineコマンドは、すべてのRLSの数を0に設定することで、すべてのデバイスのRead Link Status（RLS）ベースラインをリセットします。</block>
   <block id="15de7c826924b8e353c35af3cc957d9d" category="doc">ストレージアレイのRLSベースラインのリセット</block>
@@ -7242,7 +7231,6 @@
   <block id="2d30e328ae4f6dcf3d38d3968d0319a6" category="sidebar">SyncMirror プライマリを一時停止します</block>
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">storageArray securityKeyを検証します</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">カテゴリ別のコマンド</block>
-  <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">これらの手順を実行する前に、に記載されている手順を実行してください <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60以降のダウンロード可能なSMcliコマンドラインパラメータ</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">CLIコマンドを実行する管理システムに、Java Runtime Environment（JRE）バージョン8以降がインストールされている必要があります。</block>
@@ -7322,8 +7310,6 @@
   <block id="183bf6a11cdfba8a784da30f0b6fe98e" category="paragraph"><block ref="183bf6a11cdfba8a784da30f0b6fe98e" category="inline-xref-macro-rx"></block></block>
   <block id="15be8376d068bc8b336d134596e6b779" category="paragraph"><block ref="15be8376d068bc8b336d134596e6b779" category="inline-xref-macro-rx"></block></block>
   <block id="b8a49e0477f4912fed8b11000c163cd5" category="paragraph"><block ref="b8a49e0477f4912fed8b11000c163cd5" category="inline-xref-macro-rx"></block></block>
-  <block id="b36598cc51fefae2fc91706fd03c8eef" category="paragraph"><block ref="b36598cc51fefae2fc91706fd03c8eef" category="inline-xref-macro-rx"></block></block>
-  <block id="6d75466b80c625b48fc8ba8590e96c95" category="paragraph"><block ref="6d75466b80c625b48fc8ba8590e96c95" category="inline-xref-macro-rx"></block></block>
   <block id="f66791a36a8e67b4d2634d7f1e8c68c5" category="paragraph">次の表は、リリース11.70.2のCLIコマンドとスクリプトコマンドの変更点を示しています。</block>
   <block id="b0712e32c143076d1b1765d28c4ff86d" category="paragraph"><block ref="b0712e32c143076d1b1765d28c4ff86d" category="inline-xref-macro-rx"></block></block>
   <block id="4e932b7c5213821b7cad243423b94008" category="paragraph"><block ref="4e932b7c5213821b7cad243423b94008" category="inline-xref-macro-rx"></block></block>
@@ -7389,7 +7375,6 @@
   <block id="8ebe5bb4f19a0865e0dca0fc02a8ad6a" category="paragraph">11.80</block>
   <block id="8fe6e97510e09ec53b4d8934ee3aa8d2" category="paragraph">シンプロビジョニングボリュームはEF300またはEF600ではサポートされません。</block>
   <block id="7d4fdfb752f88986444792e93b73869f" category="paragraph">作成されたボリュームのブロックサイズ（バイト）。サポートされている値はです<block ref="10a7cdd970fe135cf4f7bb55c0e3b59f" prefix=" " category="inline-code"></block> および<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>。</block>
-  <block id="43553b7327b1a67ac5cd1a8f34257215" category="paragraph">スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルに応じて0または1で始まります。E2800、E5700、EF600、およびEF300コントローラと互換性があるドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラと互換性のあるドライブトレイのスロットID番号は1から始まります。</block>
   <block id="08117640ccc49245e4b0a9cfe59d3d24" category="summary">show check volume parity jobsコマンドを使用すると、すべてのボリュームチェックパリティジョブとそのステータスが表示されます。</block>
   <block id="5419272dcf0119b1498b0ee6cd83a7d7" category="paragraph">。<block ref="892bb8e3c297dc4bbfaa485b428ef7c7" prefix=" " category="inline-code"></block> コマンドは、すべてのボリュームチェックパリティジョブとそのステータスを表示します。</block>
   <block id="697582c632d5495c3bdf4f125d6e44ad" category="list-text">ステータス（最適、デグレード、失敗、不明など）</block>
@@ -7461,30 +7446,17 @@
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">コントローラは「a」または「b」として識別されます。各コントローラには最大4つのホストチャネルを設定でき、各チャネルは1~8の番号で一意に識別されます。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有効なコントローラ識別子とホストチャネルの値は<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block>、<block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、です。<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block>、<block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block>、、<block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block><block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block>、<block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block>、、<block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block><block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>または。</block>
   <block id="2bc4f5f65d530be66960542e14f46660" category="paragraph">このコマンドは、Fibre Channel経由の非同期ミラーリングにのみ使用できます。</block>
-  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
   <block id="4818a1577bb873e9a1bea01f94e168fb" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。</block>
   <block id="4ec343cf7b1916cb714cf2eed7cc2a56" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
-  <block id="076b233b5a4449b721cbb8368f8fb958" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Support Adminロールが必要です。</block>
-  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。</block>
   <block id="4cd285c149380629899b809a1fcfca80" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
-  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
-  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
-  <block id="4808830345a823114a0ff2909f8a5d34" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。</block>
-  <block id="2ef945e8385c3b3383dd40b9f20b81c9" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。</block>
-  <block id="5a55cb40d8562db2ade7e87c8407da61" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
   <block id="b4089211682b23edd69e88a53d0dea73" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
   <block id="96fbedb8e23ee770715d64868d91f512" category="paragraph"><block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix="" category="inline-code"></block></block>
   <block id="8f786c6665f112a9ec42e4921247dfaf" category="paragraph">署名済み証明書と一緒に秘密鍵をダウンロードできます。パラメータは<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>valueとともに使用する必要があります<block ref="71cc3f1d4dc205619a9d8134cb1e6c5d" prefix=" " category="inline-code"></block>。</block>
-  <block id="5c12358ddfa7bc3dbacf8a9e26ff15f7" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、およびEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
-  <block id="c65db51b73509a7f00c37eaba7ab2a29" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、またはEF300のアレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、コマンド環境 は個々のストレージアレイを対象とします。</block>
-  <block id="f46b3f4800a69abecf156a53124b25a1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
   <block id="672bddf25a5148ad89f2d0de107bf704" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。</block>
   <block id="e127d5ca4333d5b79c57c2b351704e07" category="paragraph"><block ref="2496da2f393859299e91ec0dcf920087" prefix="" category="inline-code"></block></block>
   <block id="4b2b7d34e1c9c58df14d668116c7e27a" category="paragraph">サーバのキーサイズとして、、<block ref="be767243ca8f574c740fb4c26cc6dceb" prefix=" " category="inline-code"></block>、またはの<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>値を指定できます<block ref="051928341be67dcba03f0e04104d9047" prefix=" " category="inline-code"></block>。キーサイズが選択されていない場合、デフォルトのキーサイズは3072です。</block>
   <block id="2f16a4e1f295aafddbecc5b08af16dfa" category="summary">save controller arrayManagementCSRコマンドは、証明書の詳細を表示できるように、コントローラにインストールされているサーバ証明書署名要求（CSR）を取得します。</block>
   <block id="41f378e1ae526513ccf1b18f5ef2e8cd" category="paragraph">コマンドは<block ref="1de7a3761ee490eb69b0d5dd1bc9f0c5" prefix=" " category="inline-code"></block>、コントローラにインストールされているサーバのCertificate Signing Request（CSR；証明書署名要求）を取得して、証明書の詳細を表示できます。</block>
-  <block id="7f838bc9deec658242ceadefd99b3992" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。ただし、このコマンドでLDAPパラメータを指定できるのは、Security Adminロールが割り当てられたユーザだけです。</block>
-  <block id="f0e9f8c4af25d5525e5279cfcef7f2f1" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage AdminまたはSecurity Adminロールが必要です。</block>
   <block id="52907868d469a177418995e68ae532d1" category="summary">配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。</block>
   <block id="da0a49824cfffdf78423229085d4c3e9" category="doc">AutoSupportディスパッチサイズ制限の設定</block>
   <block id="8827ec62bb9ef8459dad00c458fbe0a7" category="paragraph">は、<block ref="2da3a20c3f29f91772c0863129cf682b" prefix=" " category="inline-code"></block>配信タイプごとにAutoSupportバンドルとディスパッチの最大サイズを設定します。</block>
@@ -7498,16 +7470,9 @@
   <block id="98df893211013e4bedd978a6731f31a9" category="doc">AutoSupport HTTP(S)配信方法の指定</block>
   <block id="245aed6426acccf934bd6a10b9ad9de7" category="paragraph"><block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix="" category="inline-code"></block></block>
   <block id="88210d391247e39637e08468431d164c" category="paragraph">AutoSupportディスパッチを送信するEメールアドレス。このパラメータを複数回指定すると、ディスパッチを複数のアドレスに送信できます。</block>
-  <block id="162df76e61114a9bc1095cea2e1e989f" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300ストレージアレイに適用されます。ただし、E2700アレイまたはE5600アレイの場合は、スクリプトコマンドではなくSMcliコマンドとして、このコマンドを使用できます。この場合、コマンドは管理ドメイン内のすべてのアレイに適用されます。</block>
-  <block id="43c3a57d07f46965c77984bf6d190860" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。</block>
-  <block id="980650206e421df11ba972784e263d5e" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、2700、E5600、E2800、E5700、EF600、EF300を含む個 々 のストレージアレイに適用されます。</block>
   <block id="f67115ecdc36bb812b11a0ffbd6afb0c" category="doc">AutoSupportメンテナンス時間の有効化または無効化</block>
-  <block id="9f3cf5bf61b5f1c707c6850bc8b41cd9" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。</block>
-  <block id="0963d08ec539961ce732d53f279fde56" category="paragraph">このコマンドをE4000、2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="904d825f949c4d18e91d96fe2b4cccb7" category="paragraph">メディアスキャンを実行する日数。有効な値は、（メディアスキャンをオフにする）、または<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>day to<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block> days（<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>dayは最速のスキャン速度、<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>daysは最も遅いスキャン速度）です。<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>または<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>~<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>以外の値を指定すると<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>、メディアスキャンは機能しません。</block>
   <block id="2fe5dde43e76b44ed3412b7f72a2ec67" category="list-text">SSDドライブの消耗度に関する情報（アレイにSSDドライブが搭載されていない場合は表示されません）：</block>
-  <block id="fd979bea5528b4b653c26b7095b2585b" category="paragraph">このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Storage Admin、Support Admin、またはStorage Monitorロールが必要です。</block>
-  <block id="5b07c4793f70ad68331f8bbc6375b6a2" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のストレージアレイが対象です。</block>
   <block id="e0edf8f3e094504eb3aad1bcfa63b7a4" category="paragraph">このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
   <block id="2ddf6adc2ffbbed684ed33c230aba7a4" category="paragraph">このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。</block>
   <block id="c0af9350de0f363c5a29eca79351e85f" category="paragraph">このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。</block>
@@ -8063,4 +8028,67 @@
   <block id="689cb466298a6f4a3ed62c1390e5efa5" category="doc">再構築時にストレージアレイのPQ検証を設定する - SANtricity CLI</block>
   <block id="e35c8154d8766fae2d703fd86691dd17" category="doc">ストレージアレイのディレクトリサービスの概要を表示する - SANtricity CLI</block>
   <block id="9c2c5321d557134684387393df84bc13" category="doc">ストレージアレイディレクトリサーバーのテスト - SANtricity CLI</block>
+  <block id="f1458dfe0156e178d063fffb0b355082" category="paragraph">このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。</block>
+  <block id="6635f83938e82bc8676e415cc739ad24" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。</block>
+  <block id="8f00905cb7ba3940ea55da3a0649515c" category="paragraph">このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。</block>
+  <block id="b5688d019a222ed30ed22462db820c7a" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Support Adminロールが必要です。</block>
+  <block id="603e6b6fce48db9c00c02f28f6e1084d" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80プラットフォームではサポートされていません。</block>
+  <block id="7fdc059c711dc4aa7656bec95b155570" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
+  <block id="d484cf3b6cdf19ede69a359211870b4c" category="paragraph">このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。</block>
+  <block id="072cbb224b14d7d563dbaeee33c9dcdb" category="paragraph">すべてのスロットIDの最大値は24です。スロットIDの値は、トレイのモデルに応じて0または1から始まります。E2800、E5700、EF600、EF300、EF50、およびEF80コントローラと互換性のあるドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラと互換性のあるドライブトレイのスロットID番号は1から始まります。</block>
+  <block id="4945e6169379454c2fe7e86a083f4650" category="paragraph">このパラメータが<block ref="c0d83f0b82a6b30de8811e69e6d95c61" prefix=" " category="inline-code"></block>に設定されている場合、ディスクプールまたはボリュームグループの作成には、DULBE対応ドライブのみが使用されます。パラメータが<block ref="946003f97ccc52d5d3b54ac0ec31bbfc" prefix=" " category="inline-code"></block>に設定されている場合、または指定されていない場合は、DULBE機能のチェックは実行されません。ボリュームグループまたはディスクプール用に選択されたすべてのドライブがDULBE対応である場合、ストレージアレイレベルのフラグによって、ボリュームグループまたはディスクプールがリソースプロビジョニングとして作成されるかどうかが決まります。</block>
+  <block id="55cab4509665f273f7c44474fce83285" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。</block>
+  <block id="edd0291f2e16a8bc7c9430623d2baa35" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、EF300、EF50、およびEF80アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、このコマンドは個々のストレージアレイに適用されます。</block>
+  <block id="052bc51a74599d1aef7c689c67bda706" category="paragraph">外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、EF300、EF50、またはEF80アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、このコマンドは個々のストレージアレイに適用されます。</block>
+  <block id="5b2b2ba5c38b735bedd01dd6b7a47a10" category="paragraph">E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。</block>
+  <block id="b48ff6704d566bc3f9e6d92ed5905e02" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。</block>
+  <block id="ada72b7218199fcaf70f8afa707f7bb5" category="paragraph">このコマンドは、EF600、EF300、EF50、EF80アレイを含む、あらゆる個々のストレージアレイに適用されます（ただし、すべてのSMcliパッケージがインストールされている必要があります）。</block>
+  <block id="90e25734afa06f8db0ee1a7321dc86a6" category="paragraph">EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。</block>
+  <block id="557d199997f55869a004b844f0c59b25" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。ただし、このコマンドをLDAPパラメータとともに使用できるのは、Security Adminロールを持つユーザーに限られます。</block>
+  <block id="513f5294900031c5964fcbf868b59f9f" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSecurity Adminロールが必要です。</block>
+  <block id="7026a775b2ba39eb0f51ddb5728687dc" category="paragraph">このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。</block>
+  <block id="fc4e87b143b42128823a24a7cf01e8ea" category="paragraph">スロットIDの最大値はすべて24です。スロットIDの値は、トレイのモデルによって0または1のいずれかから始まります。E2800、E5700、EF600、EF300、EF50、およびEF80コントローラに対応するドライブトレイのスロットID番号は0から始まります。E2700およびE5600コントローラに対応するドライブトレイのスロットID番号は1から始まります。</block>
+  <block id="9054de2b6a754e07f05e9e69a6faac77" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。ただし、E2700またはE5600アレイの場合、このコマンドはスクリプトコマンドではなく、SMcliコマンドとして使用できます。この場合、このコマンドは管理ドメイン内のすべてのアレイに適用されます。</block>
+  <block id="682cb8daf0b7eb2ccd4b398d43ba82bb" category="paragraph">このコマンドは、すべての SMcli パッケージがインストールされている限り、E2700、E5600、E2800、E5700、EF600、EF300、EF50、EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。</block>
+  <block id="e2fe8749741801b7e5e9acfcf68625d3" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。</block>
+  <block id="135e7f05b5a80028ab17a34e0c15e6db" category="paragraph">このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。</block>
+  <block id="88d98337f3d4b9c813cb3a46deea6644" category="summary">storageArray hostIoProtocolの設定コマンドは、ストレージアレイレベルでホストI/Oプロトコルを設定します。</block>
+  <block id="5802de4ead66c595cdb0ce72973b18c2" category="doc">ストレージアレイホストI/Oプロトコルの設定 - SANtricity CLI</block>
+  <block id="d13da51d358cffe624beb9300684e1e6" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix=" " category="inline-code"></block>コマンドは、ストレージアレイレベルでホストI/Oプロトコルを設定します。</block>
+  <block id="36212b3014245fb1e729ddc31e4ff763" category="paragraph"><block ref="777e8152565ada0c3a16a8b8868d3bc6" prefix="" category="inline-code"></block></block>
+  <block id="aff266832a5aa34647a402c2095b347f" category="paragraph">ストレージアレイに使用するホストI/Oプロトコルを指定できます。有効な選択肢は、FC、ISCSI、ISER、nvmeIb、nvmeFc、nvmeRoce、SAS、またはSRPです。</block>
+  <block id="195863009ffa903e83ad7fd7e7db63b1" category="paragraph">12.0</block>
+  <block id="18cec728afa90cbfc8c9587fe229cdc9" category="admonition">SANtricity 12.0以降、ストレージアレイは常に<block ref="a8172f9966e53474dd873f0dbdf427b2" prefix=" " category="inline-code"></block>モードで動作するため、このコマンドは削除されました。</block>
+  <block id="1727ed989c7f4287136d81d78aeb960e" category="paragraph">該当なし。</block>
+  <block id="dd91b573b380dac94dc1f2ddbc34f95e" category="paragraph">ODXは、バッファリングされた読み取りおよび書き込み操作を使用せずにデータを転送する方法を提供し、データ転送操作にホストが直接関与する必要がありません。ODXが有効になっていない場合、データはソースストレージからホストに読み込まれ、その後ホストからターゲットストレージに書き込まれます。ODXを有効にすると、データ転送操作はストレージインフラストラクチャによって直接管理されます。データはホストを経由せず、同一アレイ内のソースストレージからターゲットストレージへ直接転送されます。</block>
+  <block id="f52bb2576426b38ae1623297e50f54fb" category="paragraph">E4000、2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。</block>
+  <block id="0110920bc6a519ef2a443b84713239ae" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport AdminまたはStorage Monitorロールが必要です。</block>
+  <block id="6522f06d72bd9ed5a98704211222570f" category="summary">show storageArray hostIoProtocolInformation コマンドは、特定のストレージアレイのI/Oプロトコル設定に関する情報を表示します。</block>
+  <block id="30355f130890e35ca642ec20bd17f3c9" category="doc">ストレージアレイホストI/Oプロトコル情報の表示 - SANtricity CLI</block>
+  <block id="cb118bbc70d791b9469a575577b2aefe" category="paragraph"><block ref="a308c90c11e9795c80746daf2f7fe34d" prefix=" " category="inline-code"></block>コマンドは、特定のストレージアレイのI/Oプロトコル設定に関する情報を表示します。</block>
+  <block id="a66f4caa7df92b8826bf6476345258fe" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイのいずれでも動作します。</block>
+  <block id="20b2eaf64e5131632b89c872747ebaaa" category="paragraph">E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。</block>
+  <block id="529c6b5226ce3cbcfbd7a63cd78196a8" category="paragraph">以下の例は、ストレージアレイが外部キー管理サーバーと通信できる場合のコマンドの出力を示しています。出力には、キー管理サーバー、クライアント証明書、およびサーバー証明書のステータスが含まれます。</block>
+  <block id="b2289f45959bc5dd068ec87f21fe210a" category="paragraph"><block ref="83837700f50f9958c28e587392a24278" category="inline-xref-macro-rx"></block>に記載されている手順を先に実行せずに、これらの手順を実行しないでください。</block>
+  <block id="60989f5a2558386ddb4c2559384e95bd" category="paragraph">EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
+  <block id="1660e94baa2e7fa520e456d40eca4831" category="inline-link-macro">ストレージアレイホストI/Oプロトコルを設定します</block>
+  <block id="f0888fb3aa312077dce57036c8135bd9" category="paragraph"><block ref="f0888fb3aa312077dce57036c8135bd9" category="inline-link-macro-rx"></block></block>
+  <block id="baa909145cb669e385ef78f654ff4722" category="inline-link-macro">ストレージアレイホストI/Oプロトコルを表示する</block>
+  <block id="58530a0009c8cc999005ce98a138d938" category="paragraph"><block ref="58530a0009c8cc999005ce98a138d938" category="inline-link-macro-rx"></block></block>
+  <block id="eb20bd68d51ddb7d412e8786688d5d9e" category="paragraph">CLI は SANtricity System Manager ソフトウェアの機能です。</block>
+  <block id="be43ea6917c922321b76286fc855b28a" category="section-title">SANtricity 12.0</block>
+  <block id="160e51ef785e785be752dfd8326b229a" category="paragraph">次の表は、リリース12.0におけるCLIコマンドとスクリプト コマンドの変更点をまとめたものです。</block>
+  <block id="91211127bc342537dd67ab9a6314a5a6" category="inline-link">ストレージアレイホストI/Oプロトコルの設定</block>
+  <block id="52655bee7facdcf1b5306b5469555402" category="paragraph"><block ref="52655bee7facdcf1b5306b5469555402" category="inline-link-rx"></block></block>
+  <block id="4dec79ab819ec52648ee90d15be1f390" category="paragraph">コマンドを追加しました。</block>
+  <block id="ed71bb5211290e88ed7206400f7940ff" category="inline-link">ストレージアレイホストI／Oプロトコル情報を表示する</block>
+  <block id="f91cb053d56091917222661ede88efc7" category="paragraph"><block ref="f91cb053d56091917222661ede88efc7" category="inline-link-rx"></block></block>
+  <block id="dbe80fab80517a2b25c4bbb4e4dce430" category="paragraph"><block ref="dbe80fab80517a2b25c4bbb4e4dce430" category="inline-link-rx"></block></block>
+  <block id="586a7e2316e2d3d1c8205410c34c2a6b" category="paragraph">KMS通信テストの結果をコマンド出力に追加しました。</block>
+  <block id="110858530dad34efb40d59e6ff21a78b" category="paragraph"><block ref="110858530dad34efb40d59e6ff21a78b" category="inline-link-rx"></block></block>
+  <block id="eccb5442bea7872d32768d562584db8e" category="paragraph">コマンドを削除しました。</block>
+  <block id="77bbf46ed60fb3f4f7f0535a4fb7d116" category="paragraph"><block ref="77bbf46ed60fb3f4f7f0535a4fb7d116" category="inline-xref-macro-rx"></block></block>
+  <block id="9e0e2266a81338fbfaf354427a1629c8" category="paragraph"><block ref="9e0e2266a81338fbfaf354427a1629c8" category="inline-xref-macro-rx"></block></block>
+  <block id="777e8152565ada0c3a16a8b8868d3bc6" category="sidebar">storageArray の hostIoProtocol を設定</block>
+  <block id="a308c90c11e9795c80746daf2f7fe34d" category="sidebar">storageArray hostIoProtocolInformationを表示</block>
 </blocks>

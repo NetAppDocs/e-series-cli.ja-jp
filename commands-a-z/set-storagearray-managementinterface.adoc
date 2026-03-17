@@ -14,16 +14,19 @@ summary: set storageArray ManagementInterfaceコマンドは、コントロー�
 set storageArray ManagementInterfaceコマンドは、コントローラの管理インターフェイスを変更します。ストレージアレイとその管理ソフトウェア間の機密性を確保したり、外部ツールにアクセスしたりするには、管理インターフェイスのタイプを変更します。
 
 
+NOTE: SANtricity 12.0以降、ストレージアレイは常に `restOnly=true`モードで動作するため、このコマンドは削除されました。
+
+
 
 == サポートされているアレイ
 
-このコマンドは、E4000、E2800、E5700、EF600、またはEF300の個 々 のストレージアレイに適用されます。E2700またはE5600のストレージアレイに対しては機能しません。
+このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
 == ロール
 
-このコマンドをE4000、E2800、E5700、EF600、またはEF300のストレージアレイに対して実行するには、Security Adminロールが必要です。
+E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
@@ -63,3 +66,8 @@ SMcli -n Array1 -c "set storageArray managementInterface restOnly=true;"
 
 SMcli completed successfully.
 ----
+
+
+== 最小ファームウェアレベル
+
+該当なし。
