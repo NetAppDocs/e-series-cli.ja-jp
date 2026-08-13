@@ -15,24 +15,28 @@ start volumeGroup resourceProvisioningコマンドは'指定されたボリュ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、EF80アレイを含む、あらゆる個々のストレージアレイに適用されます（ただし、すべてのSMcliパッケージがインストールされている必要があります）。
 
 
 
+[[roles]]
 == ロール
 
 EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 ボリュームグループでリソースのプロビジョニングを無効にするには、フルプロビジョニングコマンドとオプションを使用して、リソースのプロビジョニングを無効にします。すべてのドライブがDULBE対応で、ストレージアレイの「resourceProvisionedVolumes」設定が「true」の場合、ボリュームグループは作成時にリソースをプロビジョニングします。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -56,6 +61,7 @@ pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 11.73

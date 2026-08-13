@@ -15,18 +15,21 @@ delete storageArray trustedCertificate'コマンドは'指定されたユーザ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ aliases=("_alias1_" ... "_aliasN_]"))]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -58,6 +62,7 @@ aliases=("_alias1_" ... "_aliasN_]"))]
 |===
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -72,6 +77,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

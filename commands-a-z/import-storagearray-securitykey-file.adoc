@@ -15,18 +15,21 @@ import storageArray securityKey fileコマンドは、ストレージアレイ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、EF300、EF50、またはEF80アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、このコマンドは個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 セキュリティキーが一致するドライブだけがロック解除されます。ロックが解除されると、新しいストレージアレイのセキュリティキーが適用されます。
@@ -38,6 +41,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -48,6 +52,7 @@ passPhrase="passPhraseString"
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -86,6 +91,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[notes]]
 == 注：
 
 コントローラファームウェアによってロックが作成され、FDEドライブへのアクセスが制限されます。FDEドライブには、Security Capableという状態があります。セキュリティキーを作成すると、状態はSecurity Enabledに設定され、これによって、ストレージアレイ内に存在するすべてのFDEドライブへのアクセスが制限されます。
@@ -106,6 +112,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.40

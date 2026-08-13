@@ -15,18 +15,21 @@ set storageArray autoLoadBalancingEnableコマンドは、自動ロードバラ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -57,6 +61,7 @@ autoLoadBalancingEnable
 |===
 
 
+[[what-is-automatic-load-balancing]]
 == 自動ロードバランシングとは何ですか？
 
 自動ロードバランシング機能を使用すると、負荷の変化に動的に対応してボリュームのコントローラ所有権が自動的に調整されるため、コントローラ間でワークロードが移動する際の負荷の不均衡が解消され、I/Oリソースの管理が強化されます。
@@ -71,6 +76,7 @@ autoLoadBalancingEnable
 
 
 
+[[enabling-and-disabling-automatic-load-balancing]]
 == 自動ロードバランシングの有効化と無効化
 
 自動ロードバランシングは、SANtricity OS（コントローラソフトウェア）8.30以降に付属のすべてのストレージアレイでデフォルトで有効になります。Linux、Windows、VMwareのマルチパスドライバでは、自動ロードバランシング機能を使用できます。コントローラをSANtricity OS（コントローラソフトウェア）8.25以前から8.30以降にアップグレードした場合、自動ロードバランシングはストレージアレイでデフォルトで無効になります。
@@ -85,6 +91,7 @@ SANtricity システムマネージャで、*Settings*>*System*を選択し、*A
 
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -100,6 +107,7 @@ SMcli completed successfully.
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.30

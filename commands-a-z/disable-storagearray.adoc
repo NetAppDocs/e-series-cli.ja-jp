@@ -15,24 +15,28 @@ disable storageArrayコマンドは'ストレージ・アレイ機能を無効�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 show storageArrayコマンドを実行して、ストレージアレイ内で有効になっているすべての機能の識別子のリストを表示します。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -46,12 +50,14 @@ pass: quotes [`_featureAttributeList_`]には'これらの属性値の1つ以上
 
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.20で'driveSecurity'属性が追加され'その他の属性がすべて削除されました

@@ -15,18 +15,21 @@ set syslog'コマンドは'syslogアラート情報を設定しますアラー�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 * syslogサーバのアドレスを確認しておく必要があります。このアドレスは、完全修飾ドメイン名、IPv4アドレス、またはIPv6アドレスのいずれかで指定できます。
@@ -35,6 +38,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -47,6 +51,7 @@ set syslog [defaultFacility=pass:quotes[_facilityNumber_]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -94,6 +99,7 @@ syslogメッセージに使用されるメッセージング形式。次のい�
 |===
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -108,6 +114,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

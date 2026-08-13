@@ -15,18 +15,21 @@ show allSnmpCommunitiesコマンドは、ストレージアレイに定義され
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 返される情報には次のものがあります。
@@ -38,6 +41,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -49,6 +53,7 @@ snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -90,6 +95,7 @@ SNMPコミュニティの合計数とSNMPトラップの送信先の合計数の
 |===
 
 
+[[notes]]
 == 注：
 
 SNMPは、マネージャと管理対象デバイスが属する1つ以上のコミュニティをサポートします。SNMP要求のデータパケットには、未加工のパスワードとして機能する_community string_inが含まれます。SNMPエージェントは、認識できないコミュニティストリングを含むGET要求やSET要求を拒否できます。コミュニティストリングは、エージェントからマネージャに送信されるトラップ通知にも含まれます。
@@ -116,6 +122,7 @@ DETAILS
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.30

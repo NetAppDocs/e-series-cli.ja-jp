@@ -15,18 +15,21 @@ show storageArray iscsiNegotiationDefaultsコマンドは、イニシエータ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,18 +38,21 @@ show storageArray iscsiNegotiationDefaults
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[notes]]
 == 注：
 
 返される情報には、コントローラトレイのデフォルト設定（つまり、ネゴシエーションの開始点である設定）および現在のアクティブな設定が含まれます。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

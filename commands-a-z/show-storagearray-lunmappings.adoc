@@ -15,24 +15,28 @@ show storageArray lunMappingsコマンドは、ストレージアレイの論理
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 デフォルトグループのLUNマッピングまたはNSIDマッピングは常に表示されます。パラメータを指定せずにこのコマンドを実行すると、すべてのLUNマッピングまたはNSIDマッピングが返されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -42,6 +46,7 @@ hostgroup pass:quotes[["_hostGroupName_"]])
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -64,6 +69,7 @@ LUNマッピングまたはNSIDマッピングを表示する特定のホスト�
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドから返されるホストトポロジ情報の例を次に示します。
@@ -78,6 +84,7 @@ Access Volume 7   A,B         Default Group  Optimal
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

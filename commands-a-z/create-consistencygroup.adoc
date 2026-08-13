@@ -15,18 +15,21 @@ create consistencyGroupコマンドは'スナップショット・グループ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -41,6 +44,7 @@ create consistencyGroup userLabel=pass:quotes[_"consistencyGroupName"_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -90,6 +94,7 @@ Snapshot処理をスケジュールする機能をオンにするかオフにす
 |===
 
 
+[[notes]]
 == 注：
 
 整合性グループは論理エンティティであり、グループに追加するすべてのSnapshotイメージをバッチ形式で管理できます。整合性グループは、Snapshotイメージに関して整合性の要件や依存関係を相互に持つSnapshotグループの集まりです。この収集用に作成して使用するSnapshotイメージは、整合性の依存関係に従って管理する必要があります。
@@ -104,12 +109,14 @@ Snapshotイメージの整合性グループ上での処理は単一の要求と
 
 
 
+[[auto-delete]]
 == 自動削除
 
 各Snapshotグループでは、Snapshotイメージの自動削除を実行して、グループ内のSnapshotイメージの総数を指定したレベル以下に保つように設定できます。Snapshotグループ内のSnapshotイメージの数が上限に達すると、「autoDeleteLimit」パラメータは、Snapshotグループ内に新しいSnapshotイメージが作成されるたびにSnapshotイメージを自動的に削除します。autoDeleteLimitパラメータは、パラメータで定義されたイメージの最大数に達するまで、Snapshotグループ内の最も古いSnapshotイメージを削除します。この処理によってリポジトリ容量が解放されて、残りのSnapshotイメージに対するcopy-on-write要求に使用できるようになります。
 
 
 
+[[scheduling-snapshot-images-in-a-consistency-group]]
 == 整合性グループのSnapshotイメージのスケジュール設定
 
 enableSchedule'パラメータとschedule'パラメータを使用すると'スナップショットをスケジュールすることができますこれらのパラメータを使用すると、日単位、週単位、または月単位（曜日単位または日付単位）でSnapshotをスケジュールできます。enableScheduleパラメータは'スナップショットをスケジュールする機能をオンまたはオフにしますスケジューリングをイネーブルにする場合は'schedule'パラメータを使用して'スナップショットをいつ実行するかを定義します
@@ -972,6 +979,7 @@ enableSchedule=true schedule timeZone="America/Chicago"
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

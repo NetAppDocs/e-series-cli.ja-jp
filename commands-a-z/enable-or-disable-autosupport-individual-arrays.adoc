@@ -15,18 +15,21 @@ summary: このコマンドは、ストレージアレイのAutoSupport （ASUP�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 この機能を有効にしたあとに、必要に応じてAutoSupport OnDemand機能を有効にし、さらに必要に応じてAutoSupport リモート診断機能を有効にすることができます。
@@ -40,6 +43,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -48,6 +52,7 @@ set storageArray autoSupport (enable | disable)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -63,6 +68,7 @@ AutoSupport を有効または無効にできます。OnDemand機能とRemote Di
 |===
 
 
+[[examples]]
 === 例
 
 [listing]
@@ -74,6 +80,7 @@ AutoSupport を有効または無効にできます。OnDemand機能とRemote Di
 ----
 
 
+[[verification]]
 == 検証
 
 このAutoSupport 機能を有効にしたかどうかを確認するには、「show storageArray autoSupport」コマンドを使用します。表示される出力の最初の行に、有効化のステータスが表示されます。
@@ -84,6 +91,7 @@ The AutoSupport feature is enabled on this storage array.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.86 -モデルE2700およびE5600までのすべてのストレージアレイ用のコマンドが追加されました

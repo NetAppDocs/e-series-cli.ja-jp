@@ -15,18 +15,21 @@ SyncMirror コマンドは'同期ミラーリング機能が有効になって�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ SyncMirror コマンドは'同期ミラーリング機能が有効になって�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ testID=connectivity
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -74,6 +79,7 @@ testID=connectivity
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

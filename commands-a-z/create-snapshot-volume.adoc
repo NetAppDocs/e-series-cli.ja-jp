@@ -15,18 +15,21 @@ create snapVolumeコマンドは'ベース・ボリュームのスナップシ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 Snapshotボリュームをホストにマッピングすると、ホスト書き込みはすべて、Snapshotボリュームに関連付けられているリポジトリボリュームに配置されます。新しいSnapshotボリュームを既存のリポジトリボリュームに割り当てることができます。また、ボリュームグループまたはディスクプールに新しいリポジトリボリュームを作成することもできます。
@@ -38,6 +41,7 @@ Snapshotボリュームをホストにマッピングすると、ホスト書き
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -50,6 +54,7 @@ create snapVolume userLabel=pass:quotes[_"snapVolumeName_" snapImageID="_snapCGI
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -123,6 +128,7 @@ repositoryFullLimit
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
@@ -144,6 +150,7 @@ repositoryVolume="repos_1234" repositoryFullLimit=80;
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

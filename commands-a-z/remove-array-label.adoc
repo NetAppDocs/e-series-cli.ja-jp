@@ -15,12 +15,14 @@ Remove array label'コマンドを使用すると'ストレージ・アレイの
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ delete storageArrayLabel all
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -44,6 +47,7 @@ delete storageArrayLabel all
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.60

@@ -15,9 +15,10 @@ activate storageArray feature'コマンドは'非同期ミラーリング機能�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
-このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E2700、E5600、E2800、E5700、EF600、EF300を含むあらゆるストレージ アレイに適用されます。
 
 [NOTE]
 ====
@@ -26,18 +27,21 @@ activate storageArray feature'コマンドは'非同期ミラーリング機能�
 ====
 
 
+[[roles]]
 == ロール
 
-E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
+このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 非同期ミラーリング機能をアクティブ化したら、非同期ミラーグループと非同期ミラーペアを設定する必要があります。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -46,12 +50,14 @@ activate storageArray feature=asyncRemoteMirror
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

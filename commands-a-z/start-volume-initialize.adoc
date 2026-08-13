@@ -15,18 +15,21 @@ start volume initialize'コマンドは'シン・ボリュームを初期化ま�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 使用するパラメータに応じて操作が異なります。
@@ -42,6 +45,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -53,6 +57,7 @@ pass:quotes[[diskPool=_diskPoolName_ capacity=_capacityValue_]]
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -111,6 +116,7 @@ retainRepositoryMembers
 |===
 
 
+[[notes]]
 == 注：
 
 volumeパラメータでボリュームを指定しない場合'このコマンドはリポジトリ内のメタデータをリセットし'実際には'ホストに対してシン・ボリュームが空であると表示されます「* volume *」パラメータでボリュームを指定した場合、そのボリュームは新しく作成されたボリュームに置き換えられます。「existingRepositoryLabel」パラメータを使用してボリュームを指定した場合は、既存のボリュームに置き換えられます。別のディスク・プールにある既存のボリュームを'existingRepositoryLabel'パラメータで指定すると'シン・ボリュームは新しいディスク・プールに所有権を変更します
@@ -168,6 +174,7 @@ Immediate Availability Format（IAF）は、64TBを超えるボリュームに�
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

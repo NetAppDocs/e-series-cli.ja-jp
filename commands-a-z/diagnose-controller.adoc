@@ -15,24 +15,28 @@ summary: diagnostic controllerコマンドは、コントローラで診断テ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 診断テストは、データがドライブに書き込まれ、ドライブから読み取られるループバックテストで構成されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ pass:quotes[[patternFile="_filename_"]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -88,6 +93,7 @@ pass:quotes[[patternFile="_filename_"]]
 |===
 
 
+[[notes]]
 == 注：
 
 データのループバックテストを実行するときは、データパターンを含むファイルをオプションで指定できます。ファイルを指定しない場合は、コントローラファームウェアによってデフォルトのパターンが指定されます。
@@ -112,6 +118,7 @@ One or more controller discrete lines failed the diagnostic test.
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10で、読み取りテスト、書き込みテスト、データのループバックテストが追加されました。

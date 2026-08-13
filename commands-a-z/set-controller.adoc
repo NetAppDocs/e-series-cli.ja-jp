@@ -15,18 +15,21 @@ set controllerコマンドは、コントローラの属性を定義します。
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -44,6 +47,7 @@ set controller [(a|b)]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -124,6 +128,7 @@ rloginEnabled
 |===
 
 
+[[identifying-an-iscsi-host-port-label]]
 == iSCSIホストポートラベルの特定
 
 ホストポートのラベルを指定する必要があります。ホストポートのラベルを指定する手順は、次のとおりです。
@@ -172,6 +177,7 @@ iscsiHostPort[3]
 ====
 
 
+[[options-for-the-ethernetport-parameter]]
 == ethernetPortパラメータのオプション
 
 [listing]
@@ -212,6 +218,7 @@ portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
 ----
 
 
+[[options-for-the-iscsihostport-parameter]]
 == iSCSIHostPortパラメータのオプション
 
 [listing]
@@ -300,6 +307,7 @@ portSpeed=[( 10 | 25)]
 ----
 
 
+[[notes]]
 == 注：
 
 [NOTE]
@@ -340,6 +348,7 @@ iscsiHostPortパラメータのportSpeedオプションの値は'メガビット
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.15で'bootp'パラメータが削除され'新しいEthernetポート・オプションと新しいiSCSIホスト・ポート・オプションが追加されました

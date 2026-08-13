@@ -15,18 +15,21 @@ set storageArray resourceProvisionedVolumesコマンドは'DULBE機能を無効�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、EF80アレイを含む、あらゆる個々のストレージアレイに適用されます（ただし、すべてのSMcliパッケージがインストールされている必要があります）。
 
 
 
+[[roles]]
 == ロール
 
 EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 リソースプロビジョニングは、大容量のボリュームを迅速に初期化するための機能です。
@@ -37,6 +40,7 @@ EF600、EF300、EF50、およびEF80ストレージアレイでこのコマン�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -45,6 +49,7 @@ set storageArray resourceProvisionedVolumes=(enable|disable)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -65,6 +70,7 @@ resourceProvisionedVolumes
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.63

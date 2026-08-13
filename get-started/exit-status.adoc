@@ -15,6 +15,7 @@ summary: 終了ステータスは、実行されたコマンドに対して返�
 
 
 
+[[exit-status-definitions]]
 == 終了ステータスの定義
 
 [cols="3*"]

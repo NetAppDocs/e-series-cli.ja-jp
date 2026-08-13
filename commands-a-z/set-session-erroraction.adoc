@@ -15,24 +15,28 @@ summary: set session errorActionコマンドは、現在のスクリプトエン
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Admin、Support Admin、Security Admin、またはStorage Monitorロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドでは、セッションはコマンドの実行期間に限定されます。ストレージアレイに対してパラメータが永続的に設定されるわけではありません。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -52,6 +56,7 @@ performanceMonitorIterations=iterationValue
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -103,6 +108,7 @@ performanceMonitorIterations=iterationValue
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドでは、オプションのパラメータを1つ以上指定できます。
@@ -113,6 +119,7 @@ performanceMonitorIterations=iterationValue
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 5.20

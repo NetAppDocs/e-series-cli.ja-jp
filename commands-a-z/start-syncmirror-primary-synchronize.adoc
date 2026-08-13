@@ -15,18 +15,21 @@ start SyncMirror primary synchronizeコマンドは'同期ミラーリングの�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ start SyncMirror primary synchronizeコマンドは'同期ミラーリングの�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ pass:quotes[start syncMirror primary ["_volumeName_"]] synchronize
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -59,6 +64,7 @@ pass:quotes[start syncMirror primary ["_volumeName_"]] synchronize
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

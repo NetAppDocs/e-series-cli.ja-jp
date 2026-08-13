@@ -15,18 +15,21 @@ set storageArray trayPositionsコマンドは、ストレージアレイ内の�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ set storageArray trayPositions=pass:quotes[(controller | _trayID_ ... _trayIDn_)
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -50,6 +54,7 @@ set storageArray trayPositions=pass:quotes[(controller | _trayID_ ... _trayIDn_)
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドでは、トレイIDの「trayPositions」リスト内の位置によって、ストレージアレイ内のトレイの位置を定義します。たとえば、IDが84のコントローラトレイとIDが1、12のドライブトレイがある場合、 そして50、「trayPositions」シーケンス(841 12 50`)は、コントローラトレイを1番目の位置に、ドライブトレイ1を2番目の位置に、ドライブトレイ12を3番目の位置に、ドライブトレイ50を4番目の位置にそれぞれ配置します。trayPositionsシーケンス(`1 84 50 12`)は'コントローラトレイを2番目の位置に'ドライブトレイ1を1番目の位置に'ドライブトレイ50を3番目の位置に'ドライブトレイ12を4番目の位置に配置します
@@ -66,6 +71,7 @@ set storageArray trayPositions=pass:quotes[(controller | _trayID_ ... _trayIDn_)
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

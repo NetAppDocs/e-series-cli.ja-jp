@@ -15,18 +15,21 @@ activate storageArray feature'コマンドは'同期ミラーリング機能を�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドを使用すると、次の3つのいずれかの方法でミラーリポジトリボリュームを定義できます。
@@ -45,6 +48,7 @@ activate storageArray feature'コマンドは'同期ミラーリング機能を�
 ====
 
 
+[[syntax-user-defined-drives]]
 == 構文（ユーザ定義のドライブ）
 
 [source, cli, subs="+macros"]
@@ -71,6 +75,7 @@ repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[
 ----
 
 
+[[syntax-user-defined-volume-group]]
 == 構文（ユーザ定義のボリュームグループ）
 
 [source, cli, subs="+macros"]
@@ -81,6 +86,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
 ----
 
 
+[[syntax-user-defined-number-of-drives]]
 == 構文（ユーザ定義のドライブ数）
 
 [source, cli, subs="+macros"]
@@ -105,6 +111,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -195,6 +202,7 @@ repositoryDriveCount
 |===
 
 
+[[notes]]
 == 注：
 
 repositoryDrivesパラメータでは、大容量ドライブトレイと小容量ドライブトレイの両方がサポートされます。大容量ドライブトレイには、ドライブを格納するドロワーがあります。ドロワーをドライブトレイから引き出して、ドライブへのアクセスを提供します。小容量ドライブトレイにはドロワーはありません。大容量ドライブトレイの場合は、ドライブトレイの識別子（ID）、ドロワーのID、ドライブが配置されているスロットのIDを指定する必要があります。小容量ドライブトレイの場合は、ドライブトレイのIDと、ドライブが格納されているスロットのIDだけを指定する必要があります。小容量ドライブトレイの場合、ドライブトレイのIDを指定し、ドロワーのIDを「0」に設定し、ドライブが格納されているスロットのIDを指定する方法もあります。
@@ -211,6 +219,7 @@ repositoryDrivesパラメータ用に選択したドライブが他のパラメ�
 
 
 
+[[data-assurance-management]]
 == Data Assurance管理
 
 Data Assurance（DA）機能を使用すると、ストレージシステム全体のデータの整合性が向上します。ホストとドライブの間でデータが移動されたときにストレージアレイがエラーの有無をチェックします。この機能を有効にすると、ボリューム内の各データブロックに巡回冗長検査（CRC）と呼ばれるエラーチェック用のコードが付加されます。データブロックが移動されると、ストレージアレイはこれらのCRCコードを使用して、転送中にエラーが発生したかどうかを判断します。破損している可能性があるデータはディスクに書き込まれず、ホストにも返されません。
@@ -226,6 +235,7 @@ DA機能を使用する場合は、まず最初にDAがサポートされてい�
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10で、RAIDレベル6機能が追加されました。

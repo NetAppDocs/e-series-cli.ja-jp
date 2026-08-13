@@ -15,12 +15,14 @@ summary: set event alertコマンドは、特定のアラート対象イベン�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、E2700とE5600のストレージアレイにのみ適用されます。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -30,6 +32,7 @@ summary: set event alertコマンドは、特定のアラート対象イベン�
 ====
 
 
+[[context]]
 == コンテキスト（Context）
 
 ストレージアレイを定義する際に、アラートを設定し、イベントアラートの管理方法を定義できます。アラートを送信するようにストレージアレイを設定した場合は、アラート対象イベントが発生したときに指定の受信者に通知が送信されます。通知には、次のいずれかまたはすべての種類を使用できます。
@@ -53,6 +56,7 @@ summary: set event alertコマンドは、特定のアラート対象イベン�
 ====
 
 
+[[syntax-to-block-an-event-alert]]
 == イベントアラートをブロックする構文
 
 [source, cli, subs="+macros"]
@@ -61,6 +65,7 @@ set blockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[syntax-to-unblock-an-event-alert]]
 == イベントアラートをブロック解除する構文
 
 [source, cli, subs="+macros"]
@@ -69,6 +74,7 @@ set unBlockEventAlert pass:quotes[_eventType_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -86,6 +92,7 @@ _eventType_`
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.10で

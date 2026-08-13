@@ -15,18 +15,21 @@ set storageArray DirectoryServer rolesコマンドでは、指定したディレ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[what-youll-need]]
 == 必要なもの
 
 マッピングできるロールは次のとおりです。
@@ -39,6 +42,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ set storageArray directoryServer pass:quotes[["_domainId_"]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -83,6 +88,7 @@ set storageArray directoryServer pass:quotes[["_domainId_"]]
 |===
 
 
+[[examples]]
 == 例
 
 [listing]

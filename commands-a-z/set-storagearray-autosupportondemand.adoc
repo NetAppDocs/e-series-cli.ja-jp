@@ -15,24 +15,28 @@ set storageArray autoSupportOnDemand'コマンドは、AutoSupport OnDemand機�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 この機能を有効にする前に、まずストレージアレイでAutoSupport 機能を有効にする必要があります。この機能を有効にすると、必要に応じてAutoSupport リモート診断機能を有効にすることができます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -41,6 +45,7 @@ set storageArray autoSupportOnDemand (enable | disable)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -56,6 +61,7 @@ AutoSupport OnDemand機能を有効または無効にすることができます
 |===
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -67,6 +73,7 @@ SMcli completed successfully.
 ----
 
 
+[[verification]]
 == 検証
 
 show storageArray storageArray autoSupport AutoSupport コマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の2行には、AutoSupport 機能とAutoSupport OnDemand機能の有効ステータスが順番に表示されます。
@@ -79,6 +86,7 @@ The AutoSupport Remote Diagnostics feature is enabled on this storage array.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

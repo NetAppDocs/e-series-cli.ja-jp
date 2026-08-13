@@ -15,6 +15,7 @@ check storageArray connectivity'コマンドは'ローカルストレージア�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、一部制限付きで個々のストレージアレイを環境 接続します。E2700またはE5600のアレイに対して実行する場合は、制限はありません。
@@ -26,12 +27,14 @@ check storageArray connectivity'コマンドは'ローカルストレージア�
 ====
 
 
+[[roles]]
 == ロール
 
 該当なし
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 非同期ミラーグループを作成する前に、ローカルストレージアレイとリモートストレージアレイが相互に通信できるかどうかを確認する必要があります。このコマンドを実行すると、該当するすべてのホストポート上のリモートストレージアレイが照会され、リモートストレージアレイに接続されているポートが特定されます。テストの結果として、ローカルストレージアレイ上のすべてのポートのリスト、およびそのポート経由でアクセス可能なリモートストレージアレイのポートアドレスのリストが作成されます。
@@ -43,6 +46,7 @@ check storageArray connectivity'コマンドは'ローカルストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -53,6 +57,7 @@ remoteStorageArrayWwid=<pass:quotes[_wwID_]>)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -74,6 +79,7 @@ remoteStorageArrayWwid
 |===
 
 
+[[notes]]
 == 注：
 
 2つのストレージアレイ間のミラーを確立する前に、Fibre Channel接続またはiSCSI接続を使用して、2つのストレージアレイを接続する必要があります。
@@ -84,6 +90,7 @@ remoteStorageArrayWwid
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

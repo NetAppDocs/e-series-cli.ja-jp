@@ -15,18 +15,21 @@ save storageArray supportDataコマンドは、ストレージアレイのサポ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 次の表に、収集可能なサポートデータの種類を示します。
@@ -475,6 +478,7 @@ Xヘッダーデータファイル
 |===
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -490,6 +494,7 @@ csbTimeStamp=pass:quotes[_hh:mm_]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -514,12 +519,14 @@ csbTimeStamp=pass:quotes[_hh:mm_]]
 |===
 
 
+[[notes]]
 == 注：
 
 ファームウェアレベル7.86以降では、ファイル名の拡張子は `.7z`。7.86より前のバージョンのファームウェアを実行している場合、ファイル拡張子は `.zip`。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.80で'force'パラメータが追加されました

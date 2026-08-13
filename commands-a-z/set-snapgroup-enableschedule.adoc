@@ -15,18 +15,21 @@ set snapGroup enableScheduleコマンドは'スナップショット・グルー
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -37,6 +40,7 @@ schedule (immediate | snapshotSchedule)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -59,6 +63,7 @@ schedule (immediate | snapshotSchedule)
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
@@ -107,6 +112,7 @@ enableSchedule=true schedule timeZone="America/Chicago"
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

@@ -15,18 +15,21 @@ show diskPoolコマンドは'ディスク・プールに関する情報を返し
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドは、ディスクプールに関する次の情報を返します。
@@ -52,6 +55,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -60,6 +64,7 @@ pass:quotes[show diskPool [_diskPoolName_]]
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -75,12 +80,14 @@ pass:quotes[show diskPool [_diskPoolName_]]
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドは、ストレージアレイプロファイルのディスクプールに関する内容を表示する場合に使用します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

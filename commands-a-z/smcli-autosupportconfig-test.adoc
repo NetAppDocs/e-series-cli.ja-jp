@@ -15,12 +15,14 @@ summary: テストメッセージを送信してAutoSupport の設定をテス�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E2800またはE5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -35,6 +37,7 @@ summary: テストメッセージを送信してAutoSupport の設定をテス�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -43,6 +46,7 @@ SMcli -autoSupportConfig test reply-toEmail<address>
 ----
 
 
+[[parameters]]
 == パラメータ
 
 次の表に、AutoSupport テストメッセージを送信するためのパラメータを示します。
@@ -67,12 +71,14 @@ SMTP配信タイプのAutoSupport メッセージの返信先のEメールアド
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25
 
 
 
+[[example-of-testing-using-httphttps-delivery]]
 == HTTP / HTTPS配信を使用したテストの例
 
 HTTPまたはHTTPS配信タイプを使用する場合のこのコマンドの使用例を次に示します。配信用のEメールアドレスは指定しません。
@@ -86,6 +92,7 @@ SMcli completed successfully.
 ----
 
 
+[[example-of-testing-using-smtp-delivery]]
 == SMTP配信を使用したテストの例
 
 このコマンドの使用例を次に示します。SMTP配信方式を使用する場合は、「reply-toEmail」パラメータを使用して宛先アドレスを指定できます。

@@ -15,6 +15,7 @@ set trayコマンドは'トレイのユーザー定義属性を設定します
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -23,6 +24,7 @@ set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -52,6 +54,7 @@ set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.16

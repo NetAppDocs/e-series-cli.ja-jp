@@ -15,12 +15,14 @@ summary: show blockedEventAlertListコマンドは、set blockEventAlertコマ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、E2700とE5600のストレージアレイにのみ適用されます。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -30,6 +32,7 @@ summary: show blockedEventAlertListコマンドは、set blockEventAlertコマ�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -38,6 +41,7 @@ show blockedEventAlertList
 ----
 
 
+[[example]]
 == 例
 
 出力には、ブロックされたイベントごとに1行があり、16進数形式でイベントの種類とイベントの概要 が表示されます。出力の例を次に示します。
@@ -51,12 +55,14 @@ Script execution complete.
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.10で

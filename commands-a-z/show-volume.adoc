@@ -15,18 +15,21 @@ show volumeコマンドは'指定したシン・ボリュームの拡張履歴�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -38,6 +41,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]])
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -99,6 +103,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]])
 |===
 
 
+[[notes]]
 == 注：
 
 「expansionHistory」パラメータを指定すると、次の例のような情報が返されます。
@@ -141,6 +146,7 @@ consumedCapacityパラメータを指定すると、次の例のような情報�
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

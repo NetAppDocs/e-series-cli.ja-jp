@@ -27,6 +27,7 @@ summary: 以降のセクションのスクリプトコマンドは、スクリ�
 ====
 
 
+[[examples-of-firmware-compatibility-levels]]
 == ファームウェアの互換性レベルの例
 
 create hostGroupコマンドには'次のセクションがあります

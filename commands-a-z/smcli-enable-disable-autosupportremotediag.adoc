@@ -15,12 +15,14 @@ SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -44,6 +46,7 @@ SMcli enable | disable autoSupportRemoteDiagコマンドは、AutoSupport リモ
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -52,12 +55,14 @@ SMcli enable|disable autoSupportRemoteDiag
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[verification]]
 == 検証
 
 SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の3行には、AutoSupport 機能とAutoSupport OnDemand機能の有効ステータス、およびAutoSupport Remote Diagnostics機能のステータスが順番に表示されます。
@@ -73,6 +78,7 @@ management station.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25

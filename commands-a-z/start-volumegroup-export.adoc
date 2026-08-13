@@ -15,18 +15,21 @@ start volumeGroup exportコマンドは'ボリューム・グループをエク�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 その後、ボリュームグループを構成するドライブを取り外して、別のストレージアレイに再度取り付けることができます。
@@ -43,6 +46,7 @@ xref:../get-started/learn-about-volume-group-migration.adoc[ボリュームグ�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -51,6 +55,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -66,6 +71,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドが正常に実行されると'start volumeGroup importコマンドを実行して'ボリューム・グループの完全な状態への移動を完了できますこれにより'ボリューム・グループを新しいストレージ・アレイで使用できるようになります
@@ -76,6 +82,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] export
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

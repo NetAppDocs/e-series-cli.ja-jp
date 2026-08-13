@@ -15,18 +15,21 @@ set consistencyGroupコマンドは'スナップショット・コンシステ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -40,6 +43,7 @@ set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -90,6 +94,7 @@ repositoryFullLimit
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
@@ -100,12 +105,14 @@ repositoryFullLimit
 
 
 
+[[auto-delete]]
 == 自動削除
 
 各SnapshotグループでSnapshotイメージの自動削除を実行して、グループ内のSnapshotイメージの総数を指定したレベル以下に保つように設定できます。Snapshotグループ内のSnapshotイメージの数が上限に達すると、「autoDeleteLimit」パラメータは、Snapshotグループ内に新しいSnapshotイメージが作成されるたびにSnapshotイメージを自動的に削除します。autoDeleteLimitパラメータは、パラメータで定義されたイメージの最大数に達するまで、Snapshotグループ内の最も古いSnapshotイメージを削除します。このようにSnapshotイメージが削除されることでリポジトリ容量が解放されて、残りのSnapshotイメージに対するcopy-on-write要求に使用できるようになります。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

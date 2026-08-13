@@ -15,24 +15,28 @@ start diskPool resourceProvisioningコマンドを使用すると'所定のデ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、EF80アレイを含む、あらゆる個々のストレージアレイに適用されます（ただし、すべてのSMcliパッケージがインストールされている必要があります）。
 
 
 
+[[roles]]
 == ロール
 
 EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 ディスクプールでリソースのプロビジョニングを無効にするには、フルプロビジョニングコマンドとオプションを使用して、リソースのプロビジョニングを無効にします。すべてのドライブがDULBE対応で'ストレージアレイのresourceProvisionedVolumes設定が「true」の場合'ディスクプールは作成時にリソースをプロビジョニングします
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -56,6 +61,7 @@ start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 11.73

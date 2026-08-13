@@ -15,18 +15,21 @@ recreate storageArray mirrorRepositoryコマンドは、以前のミラーリポ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -38,6 +41,7 @@ recreate storageArray mirrorRepositoryコマンドは、以前のミラーリポ
 
 
 
+[[syntax-user-defined-drives]]
 == 構文（ユーザ定義のドライブ）
 
 [source, cli, subs="+macros"]
@@ -51,6 +55,7 @@ repositoryDrives=pass:quotes[(_trayID1_,pass:quotes[[_drawerID1,_]]pass:quotes[_
 ----
 
 
+[[syntax-user-defined-volume-group]]
 == 構文（ユーザ定義のボリュームグループ）
 
 [source, cli, subs="+macros"]
@@ -61,6 +66,7 @@ repositoryVolumeGroup=pass:quotes[_volumeGroupName_
 ----
 
 
+[[syntax-user-defined-number-of-drives]]
 == 構文（ユーザ定義のドライブ数）
 
 [source, cli, subs="+macros"]
@@ -79,6 +85,7 @@ repositoryDriveCount=pass:quotes[_numberOfDrives_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -189,6 +196,7 @@ driveMediaType
 |===
 
 
+[[notes]]
 == 注：
 
 ミラーリポジトリボリュームのストレージスペースに対して入力した値が小さすぎると、ミラーリポジトリボリュームに必要なスペースの量を示すエラーメッセージがコントローラファームウェアから返されます。コマンドではミラーリポジトリボリュームの変更は試行されません。ミラーリポジトリボリュームのストレージスペースの値に関するエラーメッセージに記載されている値を使用して、コマンドを再入力できます。
@@ -201,6 +209,7 @@ repositoryDrivesパラメータでは、大容量ドライブトレイと小容�
 
 
 
+[[data-assurance-management]]
 == Data Assurance管理
 
 Data Assurance（DA）機能を使用すると、ストレージシステム全体のデータの整合性が向上します。ホストとドライブの間でデータが移動されたときにストレージアレイがエラーの有無をチェックします。この機能を有効にすると、ボリューム内の各データブロックに巡回冗長検査（CRC）と呼ばれるエラーチェック用のコードが付加されます。データブロックが移動されると、ストレージアレイはこれらのCRCコードを使用して、転送中にエラーが発生したかどうかを判断します。破損している可能性があるデータはディスクに書き込まれず、ホストにも返されません。
@@ -216,6 +225,7 @@ DA機能を使用する場合は、まず最初にDAがサポートされてい�
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

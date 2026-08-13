@@ -15,24 +15,28 @@ save storageArray dbmValidatorInfoコマンドは'ストレージ・アレイの
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 テクニカルサポートでは、このXMLファイルを使用してバリデータ文字列（セキュリティコード）を生成できます。バリデータ文字列は'ストレージ・アレイを既存の構成にリストアするときに'load storageArray dbmDatabase'コマンドに含める必要があります
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -41,6 +45,7 @@ save storageArray dbmValidatorInfo file=pass:quotes["_filename_"] dbmDatabase=pa
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -67,6 +72,7 @@ dbmDatabase="C:\Array Backups\DBMbackup_03302010.dbm"このコマンドでは'�
 |===
 
 
+[[notes]]
 == 注：
 
 バリデータ文字列を取得するためにXML情報ファイルを生成する場合は、データベースをリストアするコントローラに接続した状態でこのコマンドを実行する必要があります。次の例は、XMLファイルの形式を示しています。
@@ -90,6 +96,7 @@ dbmDatabase="C:\Array Backups\DBMbackup_03302010.dbm"このコマンドでは'�
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.75

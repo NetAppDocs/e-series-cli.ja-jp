@@ -26,6 +26,7 @@ SMcli supportbundle scheduleコマンドは'1つまたは複数のストレー�
 
 
 
+[[syntax-for-creating-a-dailyweekly-schedule]]
 == 日次/週次スケジュールを作成するための構文
 
 [source, cli, subs="+macros"]
@@ -40,6 +41,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-creating-a-monthlyyearly-schedule]]
 == 月次/年次スケジュールを作成するための構文
 
 [source, cli, subs="+macros"]
@@ -58,6 +60,7 @@ pass:quotes[data=_pathName_]
 ----
 
 
+[[syntax-for-removing-a-schedule]]
 == スケジュールを削除するための構文
 
 [NOTE]
@@ -72,6 +75,7 @@ pass:quotes[(all|_storageArrayName_)]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 次の表に、日次/週次スケジュールのパラメータを示します。
@@ -332,6 +336,7 @@ file="C:\Program Files\CLI\sup\data.txt"
 |===
 
 
+[[notes]]
 == 注：
 
 allパラメータを使用してすべてのストレージ・アレイに共通のスケジュールを設定すると'個のストレージ・アレイのスケジュールは削除されますすべてのストレージアレイに1つのスケジュールが設定されている場合、新たに検出されたストレージアレイには同じスケジュールが適用されます。すべてのストレージアレイに1つのスケジュールを設定したあとに単一のストレージアレイにスケジュールを設定すると、新たに検出されたストレージアレイにはスケジュールは設定されません。
@@ -383,6 +388,7 @@ weekNumber=First dayOfWeek=Friday
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

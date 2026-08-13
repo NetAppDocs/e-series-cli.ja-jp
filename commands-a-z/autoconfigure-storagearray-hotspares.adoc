@@ -15,18 +15,21 @@ autoConfigure storageArray hotsparesコマンドは、ストレージアレイ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,18 +38,21 @@ autoConfigure storageArray hotSpares
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[notes]]
 == 注：
 
 「autoconfigure storageArray hotspares」コマンドを実行すると、コントローラファームウェアは、ストレージアレイ内のドライブの総数とタイプに基づいて、作成するホットスペアの数を決定します。SASドライブの場合、コントローラファームウェアはストレージアレイ用に1つのホットスペアを作成し、ストレージアレイのドライブ60本ごとに1つずつ追加のホットスペアを作成します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

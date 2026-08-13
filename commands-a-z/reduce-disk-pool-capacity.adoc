@@ -15,18 +15,21 @@ set diskPool'コマンドは'プールからドライブを論理的に削除す
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドでは、Dynamic Capacity Reduction（DCR）機能を使用します。この機能により、選択したドライブをディスクプールから削除し、必要に応じてそのドライブを再利用できます。
@@ -35,6 +38,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ removeDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 ----
 
 
+[[parameter]]
 == パラメータ
 
 |===
@@ -70,6 +75,7 @@ removeDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 |===
 
 
+[[notes]]
 == 注：
 
 ディスクプール名は一意である必要があります。ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
@@ -86,6 +92,7 @@ DCR処理によって、設定された容量がプール利用率のしきい�
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.10で

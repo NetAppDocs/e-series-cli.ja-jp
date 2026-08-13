@@ -15,6 +15,7 @@ Eシリーズストレージシステムで使用できる管理者コマンド�
 
 
 
+[[storage-administrators-commands]]
 == ストレージ管理者のコマンド
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["非同期ミラーリングをアクティブ化する"]
@@ -727,6 +728,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMPトラッ�
 
 
 
+[[support-administrators-commands]]
 == サポート管理者のコマンド
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["非同期ミラーリングをアクティブ化する"]
@@ -851,6 +853,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMPトラッ�
 
 
 
+[[security-administrators-commands]]
 == セキュリティ管理者のコマンド
 
 link:../commands-a-z/create-storagearray-directoryserver.html["ストレージアレイのディレクトリサーバを作成する"]

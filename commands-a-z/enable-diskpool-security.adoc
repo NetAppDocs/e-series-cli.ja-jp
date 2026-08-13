@@ -15,18 +15,21 @@ enable diskPool securityコマンドは'セキュアでないディスク・プ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ pass:quotes[enable diskPool [_diskPoolName_]] security
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -59,12 +64,14 @@ Security Enabled状態にするディスクプールの名前。ディスクプ�
 |===
 
 
+[[notes]]
 == 注：
 
 ディスクプール名は一意である必要があります。ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

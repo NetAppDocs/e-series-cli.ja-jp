@@ -15,18 +15,21 @@ check SyncMirror コマンドは'リモート・ミラー・ボリュームの�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE4000、E2800、またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ check SyncMirror コマンドは'リモート・ミラー・ボリュームの�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=p
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -65,6 +70,7 @@ check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=p
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドは、ステータスが最適になるか、タイムアウト間隔が経過するまで待機します。非同期同期ミラーリングユーティリティの実行時にこのコマンドを使用します。

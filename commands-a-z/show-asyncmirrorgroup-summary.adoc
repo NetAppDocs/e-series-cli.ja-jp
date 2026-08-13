@@ -15,18 +15,21 @@ summary: show asyncMirrorGroup summaryコマンドは、1つ以上の非同期�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
-このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
+このコマンドは、すべてのSMcliパッケージがインストールされていれば、E2700、E5600、E2800、E5700、EF600、EF300を含むあらゆるストレージ アレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
-E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
+このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドでは、不完全な非同期ミラーペアも含め、各非同期ミラーグループに関連付けられている非同期ミラーペアも表示されます。
@@ -35,6 +38,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ asyncMirrorGroups pass:quotes[[_asyncMirrorGroupName1_ ... _asyncMirrorGroupName
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -93,6 +98,7 @@ asyncMirrorGroups pass:quotes[[_asyncMirrorGroupName1_ ... _asyncMirrorGroupName
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

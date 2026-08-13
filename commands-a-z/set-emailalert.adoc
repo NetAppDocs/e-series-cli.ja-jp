@@ -15,12 +15,14 @@ set emailAlertコマンドは'指定されたテクニカル・サポートま�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。ただし、E2700またはE5600アレイの場合、このコマンドはスクリプトコマンドではなく、SMcliコマンドとして使用できます。この場合、このコマンドは管理ドメイン内のすべてのアレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -38,6 +40,7 @@ set emailAlert
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -119,6 +122,7 @@ Eメールアラートで使用する追加の連絡先情報が含まれてい�
 |===
 
 
+[[examples]]
 == 例
 
 [listing, subs="+macros"]
@@ -140,6 +144,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

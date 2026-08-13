@@ -15,18 +15,21 @@ enable storageArray feature file'コマンドを使用すると'ストレージ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドは、次のいずれかの処理を実行します。
@@ -44,6 +47,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax-to-enable-a-feature-key]]
 == 機能キーを有効にする構文
 
 [source, cli, subs="+macros"]
@@ -62,6 +66,7 @@ file="C:\Program Files\CLI\dnld\ftrkey.key"
 
 
 
+[[syntax-to-enable-a-feature-pack]]
 == 機能パックを有効にする構文
 
 [source, cli, subs="+macros"]
@@ -78,6 +83,7 @@ file="C:\Program Files\CLI\dnld\ftrpk.key"
 
 
 
+[[syntax-to-enable-a-feature-for-a-trial-period]]
 == 試用期間用に機能を有効にする構文
 
 [source, cli, subs="+macros"]
@@ -91,6 +97,7 @@ pass:quotes[enable storageArray feature=_featureAttributeList_]
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25で、有効ではなくなった属性がすべて削除されました。

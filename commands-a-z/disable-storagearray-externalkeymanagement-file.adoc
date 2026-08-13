@@ -15,18 +15,21 @@ disable storageArray externalKeyManagement fileコマンドは、Full Disk Encry
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -38,6 +41,7 @@ pass:quotes[saveFile=(_TRUE_ | _FALSE_)]
 ----
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -52,6 +56,7 @@ pass:quotes[saveFile=(_TRUE_ | _FALSE_)]
 ====
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -90,6 +95,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[notes]]
 == 注：
 
 パスフレーズは次の条件を満たしている必要があります。
@@ -109,6 +115,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

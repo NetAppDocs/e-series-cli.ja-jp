@@ -15,6 +15,7 @@ activate storageArray firmware'コマンドは'ストレージ・アレイのコ
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -24,6 +25,7 @@ activate storageArray firmware
 ----
 
 
+[[parameter]]
 == パラメータ
 
 |===
@@ -42,6 +44,7 @@ activate storageArray firmware
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.10で、「healthCheckMelOverride」パラメータが追加されました。

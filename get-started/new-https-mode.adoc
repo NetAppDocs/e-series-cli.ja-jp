@@ -35,6 +35,7 @@ SMcliは、追加のセキュリティ機能を提供する「* https *」モー
 
 
 
+[[operations-requiring-a-password-https-client-mode-trusted-certificate-is-installed-on-the-array]]
 == パスワードを必要とする処理、 `https` クライアントモードでは、信頼された証明書がアレイにインストールされます
 
 次の例では、ユーザ名とパスワードの両方のオプションが指定されており、信頼された証明書がアレイにインストールされています。
@@ -53,6 +54,7 @@ SMcli completed successfully.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-is-installed-on-the-array]]
 == パスワードを必要とする処理、 `https` クライアントモードでは、信頼された証明書がアレイにインストールされません
 
 次の例では'ユーザー名とパスワードの両方のオプションが提供されていますが'信頼された証明書はアレイにインストールされておらず'-kオプションは使用されていません次の例は、返される出力を示しています。
@@ -68,6 +70,7 @@ SMcli failed.
 ----
 
 
+[[operations-requiring-a-password-https-client-mode-no-trusted-certificate-installed-but-using-k-for-self-signed-certificate]]
 == パスワードを必要とする処理、 `https` クライアントモードでは、信頼された証明書はインストールされていませんが、-kを指定して自己署名証明書を使用します
 
 次の例では、前の例と同様にユーザ名とパスワードの両方のオプションが指定されていますが、信頼された証明書がアレイにインストールされていません。ただし'この場合は'-kオプションを使用して自己署名証明書を使用しています
@@ -100,6 +103,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-symbol-client-mode]]
 == 読み取り専用の処理 `symbol` クライアントモード
 
 この例では'*symbol*'クライアント・モードで'ユーザー名もパスワードも指定されていませんこのコマンドは、読み取り専用の処理の場合にのみ正常に完了します。
@@ -127,6 +131,7 @@ SMcli completed successfully.
 ----
 
 
+[[read-only-operations-http-client-mode]]
 == 読み取り専用の処理、httpクライアントモード
 
 次の例では'読み取り専用操作を使用していますが'*https*'クライアント・モードでは'ユーザ名とパスワードの両方が必要であり'自己署名証明書を受け入れるために'-kとともに指定されていますクライアント・モードでは'読み取り専用操作の場合でもパスワードが必要です

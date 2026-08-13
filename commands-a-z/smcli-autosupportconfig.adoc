@@ -15,12 +15,14 @@ SMcli -autoSupportConfigコマンドは、AutoSupport メッセージを送信�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +38,7 @@ AutoSupport メッセージを送信するには、次の2種類の配信方法�
 
 
 
+[[syntax-for-smtp-delivery-method]]
 == 配信方法がSMTPの場合の構文
 
 [source, cli]
@@ -45,6 +48,7 @@ mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
 ----
 
 
+[[parameters-for-the-smtp-delivery-method]]
 == 配信方法がSMTPの場合のパラメータ
 
 [cols="2*"]
@@ -74,6 +78,7 @@ AutoSupport メッセージの送信元Eメールアドレスを指定できま�
 |===
 
 
+[[syntax-for-httphttps-delivery-methods]]
 == 配信方法がHTTP / HTTPSの場合の構文
 
 [listing]
@@ -84,6 +89,7 @@ hostAddress:<address>portNumber=<portNumber> [userName=<userName>password=<passw
 ----
 
 
+[[parameters-for-the-httphttps-delivery-methods]]
 == 配信方法がHTTP / HTTPSの場合のパラメータ
 
 次の表に、配信方法がHTTP / HTTPSの場合のパラメータを示します。
@@ -150,12 +156,14 @@ proxyServer
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25
 
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -172,6 +180,7 @@ userName=user password=0987654321
 ----
 
 
+[[verification]]
 == 検証
 
 SMcli -autoSupportConfig testコマンドを使用してテストメッセージを送信し、配信方法が正しく設定されていることを確認します。

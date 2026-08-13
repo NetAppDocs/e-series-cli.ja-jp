@@ -8091,4 +8091,8 @@
   <block id="c9f4c41100461402ef108c1e6ccc6adf" category="paragraph"><block ref="c9f4c41100461402ef108c1e6ccc6adf" category="inline-link-rx"></block></block>
   <block id="aff9d49ee54e3ad13ffa0735d2a02e5a" category="section-title">SANtricity 12.00</block>
   <block id="84dbef0be771e89569bcfffb6b44a589" category="paragraph">次の表は、リリース12.00におけるCLIコマンドとスクリプト コマンドの変更点をまとめたものです。</block>
+  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされていれば、E2700、E5600、E2800、E5700、EF600、EF300を含むあらゆるストレージ アレイに適用されます。</block>
+  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage Adminロールが必要です。</block>
+  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。</block>
+  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
 </blocks>

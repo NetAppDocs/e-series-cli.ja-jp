@@ -15,12 +15,14 @@ SMcli autoSupportSchedule resetコマンドは、AutoSupport メッセージが�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +38,7 @@ SMcli autoSupportSchedule resetコマンドは、AutoSupport メッセージが�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -46,6 +49,7 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -82,12 +86,14 @@ SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25
 
 
 
+[[example]]
 == 例
 
 [listing]
@@ -99,6 +105,7 @@ SMcli -autoSupportSchedule dailyTime = 10：00am - 11：00am DayOfWeek =[月曜�
 
 
 
+[[verification]]
 == 検証
 
 管理ドメインのスケジュールの変更結果を確認するには'SMcli -autoSupportSchedule showコマンドを使用します

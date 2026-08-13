@@ -15,18 +15,21 @@ show volumeGroup importDependenciesコマンドは'あるストレージ・ア�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -58,6 +62,7 @@ pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドは特定のボリュームグループの依存関係を返します。ボリュームグループはエクスポート状態または強制状態である必要があります。表示された依存関係を維持することを決定した場合は'cancelImportパラメータを適用してドライブをスピンダウンできます
@@ -66,6 +71,7 @@ start volumeGroup importコマンドを実行する前に'show volumeGroup impor
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

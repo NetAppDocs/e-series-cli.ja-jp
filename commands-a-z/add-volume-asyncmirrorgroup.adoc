@@ -15,29 +15,33 @@ add volume asyncMirrorGroupコマンドは'非同期ミラー・グループに�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、一部制限付きで個々のストレージアレイを環境 接続します。E2700またはE5600のアレイに対して実行する場合は、制限はありません。
 
 [NOTE]
 ====
-このコマンドは、E4000、E2800、E5700、EF600、EF300、EF50、およびEF80プラットフォームではサポートされていません。
+このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。
 
 ====
 
 
+[[roles]]
 == ロール
 
 該当なし
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドは、プライマリボリュームを追加する非同期ミラーグループを含むローカルストレージアレイでのみ有効です。非同期ミラーグループには、リポジトリボリュームがあり、非同期ミラーグループに含まれるすべての「ポイントインタイム」イメージのデータの保存に使用されます。非同期ミラーグループ内の各プライマリボリュームには、リモートストレージアレイに対応するミラーボリュームがあります。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -50,6 +54,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 ----
 
 
+[[parameter]]
 == パラメータ
 
 |===
@@ -110,6 +115,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 |===
 
 
+[[notes]]
 == 注：
 
 * ミラーアクティビティに使用されるローカルストレージアレイとリモートストレージアレイで、非同期ミラーリング機能が有効化され、アクティブ化されている必要があります。
@@ -119,6 +125,7 @@ repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityVal
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

@@ -15,24 +15,28 @@ create hostコマンドを実行すると'新しいホストが作成されま�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 E2700およびE5600のストレージアレイの場合、新しいホストの作成先とするホストグループを指定しない場合、新しいホストはデフォルトグループ内に作成されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -43,6 +47,7 @@ create host userLabel=pass:quotes[_"hostName"_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -71,6 +76,7 @@ create host userLabel=pass:quotes[_"hostName"_]
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、ハイフン、アンダースコアを任意に組み合わせて使用できます。名前の最大文字数は30文字です。
@@ -83,6 +89,7 @@ create host userLabel=pass:quotes[_"hostName"_]
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 5.20

@@ -15,18 +15,21 @@ set ssdCacheコマンドは、ソリッドステートディスク（SSD）を�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Support Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ removeDrives=pass:quotes[(_trayID1_,]pass:quotes[[_drawerID1_,]]pass:quotes[_slo
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -61,12 +65,14 @@ SSDを削除するSSDキャッシュの名前。SSDキャッシュ名は角か�
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドを使用して、SSDキャッシュからすべてのSSDを削除することはできません。少なくとも1本のSSDをSSDキャッシュに残しておく必要があります。SSDキャッシュを完全に削除する場合は、代わりに「delete ssdCache」コマンドを使用します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

@@ -15,18 +15,21 @@ summary: save check volume parity job parity errorsコマンドは、チェッ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、EF80アレイを含む、あらゆる個々のストレージアレイに適用されます（ただし、すべてのSMcliパッケージがインストールされている必要があります）。
 
 
 
+[[roles]]
 == ロール
 
 EF600、EF300、EF50、およびEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -56,6 +60,7 @@ save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 11.80

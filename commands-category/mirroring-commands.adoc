@@ -15,6 +15,7 @@ summary: ミラーリングコマンド
 
 
 
+[[asynchronous-mirroring-commands]]
 == 非同期ミラーリングのコマンド
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["非同期ミラーリングをアクティブ化する"]
@@ -61,6 +62,7 @@ link:../commands-a-z/diagnose-asyncmirrorgroup.html["非同期ミラーグルー
 
 
 
+[[synchronous-mirroring-commands]]
 == 同期ミラーリングのコマンド
 
 link:../commands-a-z/activate-synchronous-mirroring.html["同期ミラーリングをアクティブ化します"]

@@ -15,12 +15,14 @@ Add certificate from arrayコマンドを使用すると'アレイから証明�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -30,6 +32,7 @@ pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -44,6 +47,7 @@ pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.60

@@ -15,12 +15,14 @@ SMcli alertTestコマンドは、Windowsイベントログおよび設定され�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、E2700とE5600のストレージアレイにのみ適用されます。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -30,6 +32,7 @@ SMcli alertTestコマンドは、Windowsイベントログおよび設定され�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -38,12 +41,14 @@ SMcli -alertTest
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

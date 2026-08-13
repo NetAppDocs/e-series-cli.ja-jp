@@ -15,18 +15,21 @@ set storageArray autoschedule' AutoSupport コマンドは、AutoSupport メッ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 * AutoSupport が有効な場合、管理ソフトウェアは日単位のAutoSupport メッセージと週単位のAutoSupport メッセージの両方を送信します。
@@ -36,6 +39,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ weeklyTime=pass:quotes[_startTime-endTime_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -75,6 +80,7 @@ weeklyTime=pass:quotes[_startTime-endTime_]
 |===
 
 
+[[examples]]
 === 例
 
 [listing]
@@ -88,12 +94,14 @@ SMcli completed successfully.
 ----
 
 
+[[verification]]
 === 検証
 
 スケジュールの変更結果を確認するには、「show storageArray autoSupport AutoSupport 」コマンドを使用します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40

@@ -15,24 +15,28 @@ stop ssdCache performanceModelingコマンドは'パフォーマンスモデリ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Support Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドを実行する前に'start ssdCache performanceModelingコマンドを使用して'パフォーマンスモデリング操作を開始する必要があります必要に応じて、データをファイルに保存することができます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -42,6 +46,7 @@ pass:quotes[stop ssdCache [_ssdCacheName_]] performanceModeling pass:quotes[[fil
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -68,6 +73,7 @@ pass:quotes[stop ssdCache [_ssdCacheName_]] performanceModeling pass:quotes[[fil
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドから返されるパフォーマンスモデリング情報の例を次に示します。モニタのサイズによって、情報がどのように折り返されるかが決まり、情報がどのように表示されるかが決まります。
@@ -118,6 +124,7 @@ Cache Capacity    Cache Hit %
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.84

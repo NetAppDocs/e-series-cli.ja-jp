@@ -15,18 +15,21 @@ summary: export storageArray securityKeyコマンドは、ドライブセキュ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 外部キー管理が有効になっている場合、このコマンドはE4000、E2800、E5700、EF600、EF300、EF50、およびEF80アレイにのみ適用されます。内部キー管理が有効になっている場合、すべてのSMcliパッケージがインストールされていれば、このコマンドは個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 あるストレージアレイからキーファイルがエクスポートされたときに、そのキーを別のストレージアレイにインポートできます。これにより、ストレージアレイ間でセキュリティ対応ドライブを移動できます。
@@ -38,6 +41,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ pass:quotes[file="_fileName_"]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -79,6 +84,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 |===
 
 
+[[notes]]
 == 注：
 
 ドライブの移動先となるストレージアレイには、インポートするドライブ以上の容量を持つドライブが必要です。
@@ -102,6 +108,7 @@ file="C:\Program Files\CLI\sup\drivesecurity.slk"
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.40

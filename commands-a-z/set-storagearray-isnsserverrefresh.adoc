@@ -15,24 +15,28 @@ set storageArray isnsServerRefreshコマンドは、iSNSサーバのネットワ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドはIPv4に対してのみ有効です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -41,12 +45,14 @@ set storageArray isnsServerRefresh
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[notes]]
 == 注：
 
 DHCPサーバがフル機能で動作していない場合やDHCPサーバが応答しない場合は、更新処理に2~3分かかることがあります。
@@ -55,6 +61,7 @@ DHCPサーバがフル機能で動作していない場合やDHCPサーバが応
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

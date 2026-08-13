@@ -15,18 +15,21 @@ start volumeGroup defr`コマンドは'指定したボリュームグループ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -44,6 +48,7 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] defragment
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -59,12 +64,14 @@ pass:quotes[start volumeGroup [_volumeGroupName_]] defragment
 |===
 
 
+[[notes]]
 == 注：
 
 ボリュームグループ内のボリューム数が32を超えると、ホストI/Oエラーが発生する可能性があります。また、ボリュームグループ定義が設定される前にタイムアウト時間が終了したために、内部コントローラのリブートが発生する場合もあります。この問題 が表示された場合は、ホストI/O処理を休止し、もう一度コマンドを実行します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

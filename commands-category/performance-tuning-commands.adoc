@@ -15,6 +15,7 @@ summary: パフォーマンス調整のコマンド
 
 
 
+[[automatic-load-balancing-commands]]
 == 自動ロードバランシングのコマンド
 
 link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["自動ロードバランシングの統計を保存します"]
@@ -23,6 +24,7 @@ link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["自動ロー
 
 
 
+[[ssd-cache-commands]]
 == SSDキャッシュのコマンド
 
 link:../commands-a-z/add-drives-to-ssd-cache.html["SSDキャッシュにドライブを追加"]

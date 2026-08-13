@@ -15,18 +15,21 @@ set SyncMirror コマンドは'リモート・ミラー・ペアのプロパテ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべてのSMcliパッケージがインストールされていれば、E4000、E2700、E5600、E2800、E5700を含む個 々 のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドをE2800またはE5700のストレージアレイに対して実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -36,6 +39,7 @@ set SyncMirror コマンドは'リモート・ミラー・ペアのプロパテ�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -51,6 +55,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -135,6 +140,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドでは、オプションのパラメータを1つ以上指定できます。
@@ -145,6 +151,7 @@ localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

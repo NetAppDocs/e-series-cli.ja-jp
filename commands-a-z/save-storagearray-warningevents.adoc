@@ -15,18 +15,21 @@ save storageArray warningEventsコマンドは、メジャーイベントログ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドは、メジャーイベントログのイベントをファイルに保存します。保存できるイベントは次のとおりです。
@@ -44,6 +47,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -56,6 +60,7 @@ file=pass:quotes["_filename_"]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -129,6 +134,7 @@ file=pass:quotes["_filename_"]
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.77で、次のパラメータが追加されました

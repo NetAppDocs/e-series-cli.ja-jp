@@ -15,18 +15,21 @@ set drive securityIDコマンドは'FIPSドライブを元の製造元の設定�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -38,6 +41,7 @@ FDEドライブを消去するには'start secureEraseコマンドを使用し�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ set drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -77,12 +82,14 @@ set drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]
 |===
 
 
+[[notes]]
 == 注：
 
 'drive'パラメータは'大容量ドライブトレイと小容量ドライブトレイの両方をサポートします大容量ドライブトレイには、ドライブを格納するドロワーがあります。ドロワーをドライブトレイから引き出して、ドライブへのアクセスを提供します。小容量ドライブトレイにはドロワーはありません。大容量ドライブトレイの場合は、ドライブトレイの識別子（ID）、ドロワーのID、ドライブが配置されているスロットのIDを指定する必要があります。小容量ドライブトレイの場合は、ドライブトレイのIDと、ドライブが格納されているスロットのIDだけを指定する必要があります。小容量ドライブトレイの場合、ドライブトレイのIDを指定し、ドロワーのIDを「0」に設定し、ドライブが格納されているスロットのIDを指定する方法もあります。
 
 
 
+[[example]]
 == 例
 
 [listing]
@@ -91,6 +98,7 @@ set drive [1,31,4] securityID="V2zdvLTdGWdWyTALGHns";
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25

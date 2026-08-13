@@ -15,18 +15,21 @@ set storageArray icmpPingResponse'コマンドは'セッションと接続のネ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -50,12 +54,14 @@ set storageArray icmpPingResponse=(TRUE | FALSE)
 |===
 
 
+[[notes]]
 == 注：
 
 Internet Control Message Protocol（ICMP）は、ネットワーク内のオペレーティングシステムが、要求されたサービスを使用できない、ホストまたはルータにアクセスできないなど、IPに関連するエラーメッセージ、テストパケット、および情報メッセージを送信するために使用されます。ICMP応答コマンドは、ICMPエコー要求メッセージを送信し、ICMPエコー応答メッセージを受信して、ホストに到達できるかどうか、およびそのホストとのパケットの送受信にかかる時間を判断します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

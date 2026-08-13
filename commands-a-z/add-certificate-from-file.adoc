@@ -15,12 +15,14 @@ summary: '[Add certificate from file]コマンドを使用すると、ファイ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -29,6 +31,7 @@ pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -50,6 +53,7 @@ pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.60

@@ -15,18 +15,21 @@ summary: '[revive SnapVolume]コマンドは、指定したスナップショッ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 Snapshotボリュームは次のいずれかです。
@@ -44,6 +47,7 @@ Snapshotボリュームが失敗状態でない場合はエラーメッセージ
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -52,6 +56,7 @@ revive snapVolume pass:quotes[[_snapVolumeName_]]
 ----
 
 
+[[parameter]]
 == パラメータ
 
 |===
@@ -66,12 +71,14 @@ revive snapVolume pass:quotes[[_snapVolumeName_]]
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

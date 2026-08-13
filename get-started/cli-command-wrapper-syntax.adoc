@@ -15,6 +15,7 @@ summary: このセクションでは、CLIコマンドラッパーの一般的�
 
 
 
+[[conventions-for-cli-command-wrapper-syntax]]
 == CLIコマンドラッパー構文の表記規則
 
 [cols="2*"]
@@ -70,6 +71,7 @@ summary: このセクションでは、CLIコマンドラッパーの一般的�
 ====
 
 
+[[example-in-https-client-mode]]
 == httpsクライアントモードでの例
 
 次の例では'で説明している'https'クライアント・モードのコマンド・ライン・パラメータを示します xref:command-line-parameters.adoc[コマンドラインパラメータ]。
@@ -86,6 +88,7 @@ clientTypeを指定せずに'-u'オプションと'username'変数を指定し�
 ====
 
 
+[[examples-in-symbol-client-mode]]
 == symbolクライアントモードの例
 
 次の例は'で説明する'symbolクライアントモードのコマンドラインパラメータを示しています xref:command-line-parameters.adoc[コマンドラインパラメータ]。

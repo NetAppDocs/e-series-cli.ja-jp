@@ -15,24 +15,28 @@ set tray drawerコマンドは'ドライブを格納するドロワーの保守�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 ドロワーは大容量ドライブトレイで使用されます。ドロワーをドライブトレイから引き出して、ドライブへのアクセスを提供します。このコマンドは、ドロワーを使用するドライブトレイのみに使用します。ストレージアレイが保守操作可能インジケータライト機能をサポートしていない場合、このコマンドはエラーを返します。ストレージアレイがこのコマンドをサポートしていてもインジケータライトをオンまたはオフにできない場合、このコマンドはエラーを返します。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -42,6 +46,7 @@ serviceAllowedIndicator=(on | off | forceOnWarning)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -73,6 +78,7 @@ serviceAllowedIndicator=(on | off | forceOnWarning)
 |===
 
 
+[[notes]]
 == 注：
 
 このコマンドを入力するには、ドライブトレイが次の条件を満たしている必要があります。
@@ -96,6 +102,7 @@ serviceAllowedIndicator=(on | off | forceOnWarning)
 
 
 
+[[use-of-the-forceonwarning-parameter]]
 == forceOnWarningパラメータの使用
 
 コンポーネントを取り外す準備をしていて、ボリュームがドロワー損失から保護されないことを通知する警告を無視するには、次のパラメータを入力します。
@@ -113,6 +120,7 @@ forceOnWarningパラメータは'コンポーネントをコントローラフ�
 ====
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.60

@@ -15,12 +15,14 @@ SMcli enable autoSupportFeatureコマンドは、すべての管理対象スト�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -51,6 +53,7 @@ AutoSupport 機能を使用するには、Persistent Monitorが有効になっ�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -59,12 +62,14 @@ SMcli enable|disable autoSupportFeature
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[verification]]
 == 検証
 
 SMcli -autoSupportConfig showコマンドを使用して、この機能を有効にしているかどうかを確認します。表示される出力の最初の行に、有効化のステータスが表示されます。
@@ -75,6 +80,7 @@ The AutoSupport feature is activated on this storage management station.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.86

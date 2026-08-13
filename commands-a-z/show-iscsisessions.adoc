@@ -15,18 +15,21 @@ show iscsiSessionsコマンドは'iSCSIイニシエータまたはiSCSIターゲ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -39,6 +42,7 @@ show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -69,6 +73,7 @@ iSCSIターゲットがiSCSI修飾名（IQN）を使用している場合は、I
 |===
 
 
+[[example]]
 == 例
 
 [listing]
@@ -94,6 +99,7 @@ SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiInitiator <\"iq
 ----
 
 
+[[notes]]
 == 注：
 
 このコマンドを引数なしで入力すると、現在実行中のすべてのiSCSIセッションに関する情報が返されます。次のコマンドは、現在のすべてのiSCSIセッションに関する情報を返します。
@@ -112,6 +118,7 @@ iqn.yyyy-mm.naming-authority:unique name
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

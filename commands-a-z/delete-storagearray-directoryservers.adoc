@@ -15,18 +15,21 @@ delete storageArray directoryServersコマンドを使用すると、1つ以上�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ pass:quotes[delete storageArray (allDirectoryServers |
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -63,6 +67,7 @@ IDは角かっこ（[]）で囲みます。複数指定する場合は、それ�
 |===
 
 
+[[examples]]
 == 例
 
 [listing]
@@ -76,6 +81,7 @@ SMcli completed successfully.
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.40で、コマンドが追加されました。

@@ -15,18 +15,21 @@ summary: show snapImageコマンドは、ユーザが以前に作成したSnapsh
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax-for-showing-a-specific-snapshot-image]]
 == 特定のSnapshotイメージを表示するための構文
 
 [source, cli, subs="+macros"]
@@ -37,6 +40,7 @@ snapImages pass:quotes[["_snapImageName1_" ... "_snapImageNamen_"]])
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -91,6 +95,7 @@ Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっ�
 |===
 
 
+[[notes]]
 == 注：
 
 Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
@@ -119,6 +124,7 @@ show snapImages ["snapGroup1:12345 snapGroup2:newest snapGroup3:oldest"];
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

@@ -15,18 +15,21 @@ RESUME SnapImage rollbackコマンドは'一時停止状態になったロール
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 処理のエラーが原因で、ロールバック処理が一時停止状態になることがあります。これにより、ストレージアレイの要注意状態が発生します。
@@ -40,6 +43,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -48,6 +52,7 @@ resume snapImage pass:quotes[[_snapImageName_]] rollback
 ----
 
 
+[[parameter]]
 == パラメータ
 
 |===
@@ -75,6 +80,7 @@ Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっ�
 |===
 
 
+[[notes]]
 == 注：
 
 Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
@@ -91,6 +97,7 @@ resume snapImage ["snapgroup1:12345"] rollback;
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

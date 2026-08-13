@@ -15,18 +15,21 @@ set storageArray unnamedDiscoverySession'コマンドを使用すると'スト�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,6 +38,7 @@ set storageArray unnamedDiscoverySession=(TRUE | FALSE)
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -50,6 +54,7 @@ set storageArray unnamedDiscoverySession=(TRUE | FALSE)
 |===
 
 
+[[notes]]
 == 注：
 
 検出は、イニシエータが使用可能なターゲットを判別するプロセスです。検出は、電源投入/初期化時に実行されます。また、バストポロジが変更された場合（追加デバイスが追加された場合など）も実行されます。
@@ -58,6 +63,7 @@ set storageArray unnamedDiscoverySession=(TRUE | FALSE)
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

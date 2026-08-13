@@ -15,6 +15,7 @@ SANtricity OS 11.60以降のリリースでは、SANtricityシステムマネー
 
 
 
+[[11-60-and-newer-downloadable-smcli-command-line-parameters]]
 == 11.60以降のダウンロード可能なSMcliコマンドラインパラメータ
 
 SMcliは、E4000、EF600、EF300、E5700、EF570、E2800、EF280、EF300C、EF600Cの各コントローラでダウンロード可能です。SANtricityシステムマネージャからSMcliをダウンロードするには、*[設定]*[システム]*および*[アドオン]*[コマンドラインインターフェイス]*を選択します。
@@ -26,6 +27,7 @@ NOTE: CLIコマンドを実行する管理システムに、Java Runtime Environ
 
 
 
+[[multifactor-authentication]]
 === 多要素認証
 
 SAML（Security Assertion Markup Language）が有効になっている場合は、CLIで使用できるのはアクセストークンのみです。SAMLが有効になっていない場合は、ユーザ名とパスワード、またはアクセストークンを使用できます。アクセストークンは、SANtricity システムマネージャを使用して生成できます。
@@ -83,6 +85,7 @@ SAML（Security Assertion Markup Language）が有効になっている場合は
 |===
 
 
+[[general-https-mode-command-line-parameters]]
 === 一般的なhttpsモードのコマンドラインパラメータ
 
 ダウンロード可能なSMcliは、httpsモードのみをサポートしています。httpsモードで一般的に使用されるコマンドラインパラメータを次に示します。
@@ -177,6 +180,7 @@ CLIコマンドの使用方法を表示します。
 |===
 
 
+[[managing-stored-arrays]]
 === 格納されているアレイの管理
 
 次のコマンド・ライン・パラメータでは、ローカルに保存されたラベルを使用して、格納されたアレイを管理できます。
@@ -184,6 +188,7 @@ CLIコマンドの使用方法を表示します。
 
 NOTE: ローカルに格納されたラベルが、SANtricity システムマネージャに表示される実際のストレージアレイ名と一致しない場合があります。
 
+[[managearrays]]
 [cols="2*"]
 |===
 | パラメータ | 定義（ Definition ） 
@@ -228,6 +233,7 @@ NOTE: ローカルに格納されたラベルが、SANtricity システムマネ
 NOTE: SMcliは、ローカルに保存されたラベルを追加する場合、ストレージアレイに接続しません。
 
 |===
+[[storedcertificates]]
 [cols="2*"]
 |===
 | パラメータ | 定義（ Definition ） 
@@ -282,6 +288,7 @@ NOTE: SMcliは、ローカルに保存されたラベルを追加する場合、
 |===
 
 
+[[identify-devices]]
 === デバイスの識別
 
 次のコマンドラインパラメータを使用すると、ホストが認識できるすべての該当するデバイスの情報を表示できます。
@@ -289,6 +296,7 @@ NOTE: SMcliは、ローカルに保存されたラベルを追加する場合、
 
 NOTE: SANtricity 11.81リリース以降のSMcli `identifyDevices` パラメータは、以前にSMdevicesツールで使用できた機能を置き換えます。
 
+[[identifyDevices]]
 [cols="2*"]
 |===
 | パラメータ | 定義（ Definition ） 

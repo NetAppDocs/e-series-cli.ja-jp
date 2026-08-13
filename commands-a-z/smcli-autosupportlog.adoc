@@ -15,12 +15,14 @@ SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンド環境 は、管理ドメイン内のE2700とE5600のすべてのストレージアレイを一度に削除します。E4000、E2800、E5700のストレージアレイには適用されません。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドを使用すると、次の2種類のログを表示できます。
@@ -36,6 +38,7 @@ SMcli -autoSupportLogコマンドを使用すると、AutoSupport ログファ�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -45,6 +48,7 @@ pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 次の表に、コマンドのパラメータを示します。
@@ -100,12 +104,14 @@ AutoSupport ログを表示するストレージアレイのWorld Wide Identifie
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.25
 
 
 
+[[example]]
 == 例
 
 [listing]
@@ -114,6 +120,7 @@ SMcli -autosupportLog -n StorageArrayName inputArchive=0 outputLog=ASUPTransmiss
 ----
 
 
+[[verification]]
 == 検証
 
 要求したAutoSupport ログを確認します。ログは、ストレージ管理ソフトウェアがインストールされているクライアントディレクトリにあります。

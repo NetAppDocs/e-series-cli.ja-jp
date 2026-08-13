@@ -15,6 +15,7 @@ Eシリーズストレージシステムで使用できるアラート設定コ�
 
 
 
+[[embedded-snmp-configuration]]
 == 組み込みのSNMP設定
 
 link:../commands-a-z/create-snmpcommunity.html["SNMPコミュニティの登録"]
@@ -39,6 +40,7 @@ link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["SNMPトラッ�
 
 
 
+[[email-alert-configuration-e2700-or-e5600-arrays]]
 == Eメールアラート設定- E2700またはE5600アレイ
 
 link:../commands-a-z/set-emailalert.html["Eメールアラートを設定"]
@@ -51,6 +53,7 @@ link:../commands-a-z/smcli-alerttest.html["アラートをテストする"]
 
 
 
+[[ssd-cache-commands]]
 == SSDキャッシュのコマンド
 
 link:../commands-a-z/clear-emailalert-configuration.html["Eメールアラート設定のクリア"]
@@ -65,6 +68,7 @@ link:../commands-a-z/start-emailalert-test.html["Eメールアラート設定の
 
 
 
+[[syslog-configuration]]
 == syslog設定
 
 link:../commands-a-z/clear-syslog-configuration.html["syslog設定をクリアします"]

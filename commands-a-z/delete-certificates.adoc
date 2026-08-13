@@ -15,12 +15,14 @@ Delete certificatesコマンドを使用すると、CLIパッケージの信頼�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -29,6 +31,7 @@ delete localCertificate all | alias pass:quotes[_alias_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -43,6 +46,7 @@ delete localCertificate all | alias pass:quotes[_alias_]
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.60

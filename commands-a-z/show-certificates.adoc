@@ -15,12 +15,14 @@ summary: Show certificatesコマンドを使用すると、CLIパッケージの
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、EF600、EF300、EF50、およびEF80ストレージ アレイに適用されます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -29,6 +31,7 @@ show localCertificate all | alias alias
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -44,6 +47,7 @@ show localCertificate all | alias alias
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.60

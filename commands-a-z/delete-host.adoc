@@ -15,18 +15,21 @@ delete hostコマンドは'1つまたは複数のホストを削除します
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ delete host pass:quotes[[_hostName_]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -49,12 +53,14 @@ delete host pass:quotes[[_hostName_]]
 |===
 
 
+[[notes]]
 == 注：
 
 ホストとは、ストレージアレイに接続されていて、ホスト上のホストポート経由でストレージアレイ上のボリュームにアクセスするコンピュータのことです。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 5.20

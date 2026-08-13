@@ -15,18 +15,21 @@ show storageArray odxsettingコマンドは、ストレージアレイのオフ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはStorage Monitorロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 このコマンドの設定は、次のいずれかになります。
@@ -39,6 +42,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -47,12 +51,14 @@ show storageArray odxsetting
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[notes]]
 == 注：
 
 このコマンドから返されるODXとVAAIの情報の例を次に示します。
@@ -65,6 +71,7 @@ vaaiEnabled True | False | Inconsistent | Unknown
 ----
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.20で

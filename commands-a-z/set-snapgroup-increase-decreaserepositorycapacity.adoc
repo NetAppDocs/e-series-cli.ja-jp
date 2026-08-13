@@ -15,18 +15,21 @@ set snapGroup increase/decreaseRepositoryCapacityコマンドは'スナップシ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax-for-increasing-capacity]]
 == 容量を増やすための構文
 
 [source, cli, subs="+macros"]
@@ -38,6 +41,7 @@ pass:quotes[[capacity=_capacityValue_]])))
 ----
 
 
+[[syntax-for-decreasing-capacity]]
 == 容量を減らす場合の構文
 
 [listing, subs="+macros"]
@@ -48,6 +52,7 @@ count=pass:quotes[_numberOfVolumes_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -102,6 +107,7 @@ Snapshotグループから削除するリポジトリボリュームの数。整
 |===
 
 
+[[notes]]
 == 注：
 
 ユーザラベルには、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。ユーザラベルの最大文字数は30文字です。
@@ -120,6 +126,7 @@ Snapshotグループのリポジトリボリュームは、次の合計サイズ
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

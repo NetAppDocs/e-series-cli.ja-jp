@@ -15,18 +15,21 @@ save storageArray loginBanner'コマンドを使用すると、ログインバ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 このコマンドは、どのロールのユーザも実行できます。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,6 +38,7 @@ save storageArray loginBanner file="file_name"
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -50,6 +54,7 @@ save storageArray loginBanner file="file_name"
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 8.41

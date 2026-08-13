@@ -15,18 +15,21 @@ set storageArray isnsIPv6Addressコマンドは、iSNSサーバのIPv6アドレ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -35,6 +38,7 @@ set storageArray isnsIPv6Address=pass:quotes[_ipAddress_]
 ----
 
 
+[[parameter]]
 == パラメータ
 
 [cols="2*"]
@@ -50,12 +54,14 @@ iSNSサーバに使用するIPv6アドレス。
 |===
 
 
+[[notes]]
 == 注：
 
 iSNSプロトコルは、TCP / IPネットワーク上のiSCSIデバイスとFibre Channelデバイスの自動検出、管理、および設定を支援します。iSNSは、Fibre Channelネットワークと同等のインテリジェントなストレージ検出/管理サービスを提供します。これにより、ストレージエリアネットワークとほぼ同じ容量で機能する汎用IPネットワークが実現します。また、iSNSは、Fibre ChannelファブリックサービスをエミュレートしてiSCSIデバイスとFibre Channelデバイスの両方を管理する機能によって、IPネットワークとFibre Channelネットワークのシームレスな統合を支援します。iSNSは、iSCSIデバイス、Fibre Channelデバイス、またはその組み合わせで構成されるストレージネットワークで価値を発揮します。
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.10

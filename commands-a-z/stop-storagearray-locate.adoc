@@ -15,18 +15,21 @@ stop storageArray locateコマンドは'start storageArray locateコマンドに
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli]
@@ -35,12 +38,14 @@ stop storageArray locate
 ----
 
 
+[[parameters]]
 == パラメータ
 
 なし
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10

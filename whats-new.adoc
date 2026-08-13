@@ -25,6 +25,7 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+[[santricity-12-00]]
 == SANtricity 12.00
 
 次の表は、リリース12.00におけるCLIコマンドとスクリプト コマンドの変更点をまとめたものです。
@@ -63,6 +64,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-managem
 |===
 
 
+[[santricity-11-90]]
 == SANtricity 11.90
 
 次の表に、リリース11.90でのCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -108,6 +110,7 @@ https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-ke
 |===
 
 
+[[santricity-11-81]]
 == SANtricity 11.81
 
 次の表に、リリース11.81でのCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -125,6 +128,7 @@ https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parame
 |===
 
 
+[[santricity-11-80]]
 == SANtricity 11.80
 
 次の表に、リリース11.80のCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -191,12 +195,14 @@ xref:./commands-a-z/check-volume-parity.adoc[ボリュームのパリティを�
 |===
 
 
+[[santricity-11-70-5]]
 == SANtricity 11.70.5
 
 リリース11.70.5では、CLIコマンドとスクリプトコマンドの変更はありません。
 
 
 
+[[santricity-11-70-4]]
 == SANtricity 11.70.4
 
 次の表は、リリース11.70.4におけるCLIコマンドとスクリプトコマンドの変更点を示しています。
@@ -214,6 +220,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[SMcliコマンドライン
 |===
 
 
+[[santricity-11-70-3]]
 == SANtricity 11.70.3
 
 次の表に、リリース11.70.3のCLIコマンドとスクリプトコマンドの変更点を示します。
@@ -266,6 +273,7 @@ xref:./commands-a-z/create-diskpool.adoc[ディスクプールを作成]
 |===
 
 
+[[santricity-11-70-2]]
 == SANtricity 11.70.2の略
 
 次の表は、リリース11.70.2のCLIコマンドとスクリプトコマンドの変更点を示しています。
@@ -325,6 +333,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[SNMPトラップの送信先�
 |===
 
 
+[[santricity-11-70-1]]
 == SANtricity 11.70.1
 
 次の表は、リリース11.70.1のCLIコマンドとスクリプトコマンドの変更点を示しています。
@@ -391,6 +400,7 @@ blocksizeパラメータを追加
 |===
 
 
+[[santricity-11-70]]
 == SANtricity 11.70
 
 次の表は、リリース11.70のCLIコマンドとスクリプトコマンドの変更点を示しています。

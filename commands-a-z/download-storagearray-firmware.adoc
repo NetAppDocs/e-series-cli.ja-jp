@@ -15,24 +15,28 @@ download storageArray firmware'コマンドは、ファームウェアと、オ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage AdminまたはSupport Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 NVSRAM値のみをダウンロードする場合は、「download storageArray NVSRAM」コマンドを使用します。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -46,6 +50,7 @@ healthCheckNeedsAttnOverride=(TRUE | FALSE)
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -134,6 +139,7 @@ NVSRAMのみをダウンロードする場合は、このパラメータは無�
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 5.00

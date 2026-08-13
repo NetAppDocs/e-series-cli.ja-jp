@@ -17,6 +17,7 @@ show controllerコマンドは'start controller diagnostic'コマンドによっ
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -25,6 +26,7 @@ show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -47,6 +49,7 @@ show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
 |===
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.70で、コントローラ診断ステータスの機能が追加されました。

@@ -15,18 +15,21 @@ summary: remove storageArray DirectoryServerコマンドは、指定されたデ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、個々のE4000、E2800、E5700、EF600、EF300、EF50、およびEF80ストレージアレイに適用されます。E2700またはE5600ストレージアレイでは動作しません。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Security Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ remove storageArray directoryServer pass:quotes[[_domainId_]]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -69,6 +73,7 @@ remove storageArray directoryServer pass:quotes[[_domainId_]]
 |===
 
 
+[[examples]]
 == 例
 
 [listing]

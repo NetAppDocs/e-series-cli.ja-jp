@@ -15,24 +15,28 @@ create cgSnapVolumeコマンドは'整合性グループのベース・ボリュ
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 整合性グループから1つ以上のベースボリュームを選択してSnapshotボリュームに含めることができます。整合性グループのSnapshotボリュームを作成する場合は、表示可能な内容を含むボリュームを作成することになります。
 
 
 
+[[syntax-with-user-specified-base-volumes]]
 == ユーザ指定のベースボリュームを含む構文
 
 [source, cli, subs="+macros"]
@@ -43,6 +47,7 @@ members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
 ----
 
 
+[[syntax-when-setting-the-consistency-group-snapshot-volume-to-read-only]]
 == 整合性グループのSnapshotボリュームを読み取り専用に設定する場合の構文
 
 [source, cli, subs="+macros"]
@@ -53,6 +58,7 @@ readOnly
 ----
 
 
+[[syntax-when-setting-the-repository-full-limit]]
 == リポジトリフル制限を設定する場合の構文
 
 [source, cli, subs="+macros"]
@@ -69,6 +75,7 @@ repositoryFullLimit=pass:quotes[_percentValue_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -159,6 +166,7 @@ Snapshotボリュームへの書き込みを可能にするか、Snapshotボリ�
 |===
 
 
+[[notes]]
 == 注：
 
 名前には、英数字、アンダースコア（_）、ハイフン（-）、シャープ（#）を任意に組み合わせて使用できます。名前の最大文字数は30文字です。
@@ -224,6 +232,7 @@ cgSnapImageID="snapCG1:oldest";
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

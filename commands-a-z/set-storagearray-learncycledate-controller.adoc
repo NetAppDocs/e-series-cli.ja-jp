@@ -15,18 +15,21 @@ set storageArray learnCycleDate controllerコマンドは、コントローラ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[context]]
 == コンテキスト（Context）
 
 [NOTE]
@@ -46,6 +49,7 @@ E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージア�
 ====
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -56,6 +60,7 @@ day=_dayOfTheWeek_)] pass:quotes[time=_HH:MM_]
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -97,6 +102,7 @@ day=_dayOfTheWeek_)] pass:quotes[time=_HH:MM_]
 |===
 
 
+[[example]]
 == 例
 
 [listing]
@@ -105,6 +111,7 @@ set storageArray learnCycleDate controller [a] daysToNextLearnCycle=4 time=08:30
 ----
 
 
+[[notes]]
 == 注：
 
 学習サイクルは、7日間に1回だけ実行されるように設定できます。
@@ -115,6 +122,7 @@ set storageArray learnCycleDate controller [a] daysToNextLearnCycle=4 time=08:30
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.15

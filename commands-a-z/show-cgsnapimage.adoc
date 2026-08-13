@@ -15,18 +15,21 @@ summary: show CGSnapImageコマンドを使用すると、1つ以上のSnapshot�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -39,6 +42,7 @@ allCGSnapImages
 ----
 
 
+[[parameters]]
 == パラメータ
 
 [cols="2*"]
@@ -83,6 +87,7 @@ Snapshotイメージ名は、二重引用符（""）で囲んだ上で角かっ�
 |===
 
 
+[[notes]]
 == 注：
 
 Snapshotイメージの名前は、次の2つの部分がコロン（：）で区切られています。
@@ -113,6 +118,7 @@ show CGsnapImages ["snapCGroup1:12345 snapCGroup2:newest snapCGroup3:oldest"];
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 7.83

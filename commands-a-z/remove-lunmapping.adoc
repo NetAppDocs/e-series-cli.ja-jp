@@ -15,18 +15,21 @@ remove lunMappingコマンドは'1つ以上のボリュームから論理ユニ�
 
 
 
+[[supported-arrays]]
 == サポートされているアレイ
 
 このコマンドは、すべての SMcli パッケージがインストールされている限り、E4000、E2700、E5600、E2800、E5700、EF600、EF300、EF50、および EF80 アレイを含む、あらゆる個々のストレージアレイに適用されます。
 
 
 
+[[roles]]
 == ロール
 
 E4000、E2800、E5700、EF600、EF300、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、Storage Adminロールが必要です。
 
 
 
+[[syntax]]
 == 構文
 
 [source, cli, subs="+macros"]
@@ -36,6 +39,7 @@ remove (volume pass:quotes[[_"volumeName"_]] | accessVolume) lunMapping
 ----
 
 
+[[syntax-for-removing-lun-or-nsid-mapping-from-more-than-one-volume-lun-or-nsid-mapping]]
 == 複数ボリュームのLUN / NSIDマッピングからLUN / NSIDマッピングを削除するための構文
 
 [source, cli, subs="+macros"]
@@ -45,6 +49,7 @@ lunMapping
 ----
 
 
+[[parameters]]
 == パラメータ
 
 |===
@@ -109,6 +114,7 @@ LUN / NSIDマッピングを削除する複数のボリュームの名前。以�
 |===
 
 
+[[notes]]
 == 注：
 
 アクセスボリュームは、ストレージ管理ソフトウェアとストレージアレイコントローラ間の通信に使用されるSAN環境内のボリュームです。アクセスボリュームがLUNアドレスまたはNSIDアドレスを使用し、アプリケーションデータストレージには使用できない20MBのストレージスペースを使用します。アクセスボリュームは、インバンド管理されるストレージアレイでのみ必要です。
@@ -122,6 +128,7 @@ LUN / NSIDマッピングを削除する複数のボリュームの名前。以�
 
 
 
+[[minimum-firmware-level]]
 == 最小ファームウェアレベル
 
 6.10
