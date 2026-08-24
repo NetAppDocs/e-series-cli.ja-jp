@@ -8095,4 +8095,8 @@
   <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage Adminロールが必要です。</block>
   <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">このコマンドは、E4000、E2800、E5700、EF600、およびEF300のプラットフォームではサポートされていません。</block>
   <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">このコマンドをE2800、E5700、EF600、またはEF300のストレージ アレイに対して実行するには、Storage AdminまたはSupport Adminロールが必要です。</block>
+  <block id="eae2e5eb79bc312f455a69dcdb128d40" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされている限り、個々のEF50またはEF80ストレージアレイに適用されます。</block>
+  <block id="c540831e3a9e23851bfed87fe9daa839" category="paragraph">EF50またはEF80ストレージアレイでこのコマンドを実行するには、サポート管理者ロールが必要です。</block>
+  <block id="3aaeeffd59a60bb91c9bd0ba462a25c0" category="paragraph">このコマンドは、すべてのSMcliパッケージがインストールされている限り、E4000、EF50、またはEF80ストレージアレイに適用されます。</block>
+  <block id="2c7b4ae92e40349e885951530fef1b89" category="paragraph">E4000、EF50、またはEF80ストレージアレイでこのコマンドを実行するには、サポート管理者ロールが必要です。</block>
 </blocks>
