@@ -25,6 +25,74 @@ summary: このトピックでは、SANtricity System Managerの最新リリー�
 ====
 
 
+[[santricity-12-10]]
+== SANtricity 12.10
+
+以下の表は、リリース12.10におけるCLIおよびスクリプトコマンドの変更点を示しています。
+
+[cols="2*"]
+|===
+| コマンドを実行します | 概要 of Changeの略 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-storagearray-host-io-protocol.html["ストレージアレイホストI/Oプロトコルの設定"]
+ a| 
+コマンドに `nvmeTcp`オプションを追加しました。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-automatic-drive-select.html["RAIDボリュームの作成（自動ドライブ選択）"]
+ a| 
+ `userLabel`パラメータの文字制限を30文字から60文字に拡大しました。
+
+
+NOTE: SANtricity 12.10 から以前のバージョンへのダウングレードは、 `userLabel`パラメータが 30 文字を超える場合はサポートされていません。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-free-extent-based-select.html["RAIDボリュームの作成（空きエクステントベースの選択）"]
+ a| 
+ `userLabel`パラメータの文字制限を30文字から60文字に拡大しました。
+
+
+NOTE: SANtricity 12.10 から以前のバージョンへのダウングレードは、 `userLabel`パラメータが 30 文字を超える場合はサポートされていません。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-raid-volume-manual-drive-select.html["RAIDボリュームの作成（手動ドライブ選択）"]
+ a| 
+ `userLabel`パラメータの文字制限を30文字から60文字に拡大しました。
+
+
+NOTE: SANtricity 12.10 から以前のバージョンへのダウングレードは、 `userLabel`パラメータが 30 文字を超える場合はサポートされていません。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/create-volume-diskpool.html["ディスクプール内にボリュームを作成します"]
+ a| 
+ `userLabel`パラメータの文字制限を30文字から60文字に拡大しました。
+
+
+NOTE: SANtricity 12.10 から以前のバージョンへのダウングレードは、 `userLabel`パラメータが 30 文字を超える場合はサポートされていません。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/recover-volume.html["RAIDボリュームをリカバリします"]
+ a| 
+ `userLabel`パラメータの文字制限を30文字から60文字に拡大しました。
+
+
+NOTE: SANtricity 12.10 から以前のバージョンへのダウングレードは、 `userLabel`パラメータが 30 文字を超える場合はサポートされていません。
+
+|===
+
+
 [[santricity-12-00]]
 == SANtricity 12.00
 

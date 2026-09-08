@@ -2,7 +2,7 @@
 permalink: commands-a-z/set-controller-hostport.html 
 sidebar: sidebar 
 keywords: set, controller, host, port, properties 
-summary: set controller HostPortコマンドは、iSCSI、iSER、NVMe over InfiniBand、およびNVMe over RoCEのホストポートのネットワークプロパティを変更します。プロパティの変更には、IPv4とIPv6のプロパティ、ポート速度、最大フレームペイロードが含まれます。 
+summary: セットコントローラーhostPortコマンドは、iSCSI、iSER、NVMe over InfiniBand、およびNVMe over RoCEのホストポートタイプのネットワークプロパティを変更します。プロパティの変更には、IPv4およびIPv6プロパティ、ポート速度、および最大フレームペイロードが含まれます。 
 ---
 = コントローラのホストポートプロパティを設定する - SANtricity CLI
 :allow-uri-read: 

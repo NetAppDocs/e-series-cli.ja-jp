@@ -2,7 +2,7 @@
 permalink: commands-a-z/set-storagearray-pqvalidateonreconstruct.html 
 sidebar: sidebar 
 keywords: set, storage, array, pq validation, reconstruct 
-summary: set storageArray pqValidateOnReconstructコマンドは、再構築時のストレージアレイのP/Q検証を設定します。この機能を有効にすると、データ+Pとデータ+Qの両方を使用してデータが再構築され、再構築結果の整合性がチェックされたうえで、続行方法が決定されます。 
+summary: セットstorageArray pqValidateOnReconstructコマンドは、再構築時にストレージアレイのP/Q検証状態を設定します。この機能が有効になっている場合、データPとデータQの両方を使用してデータが再構築され、処理方法を決定する前に結果の一貫性がチェックされます。 
 ---
 = 再構築時にストレージアレイのPQ検証を設定する - SANtricity CLI
 :allow-uri-read: 

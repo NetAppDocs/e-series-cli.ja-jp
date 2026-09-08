@@ -2,7 +2,7 @@
 permalink: commands-a-z/smcli-enable-disable-autosupportremotediag.html 
 sidebar: sidebar 
 keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
-summary: SMcli enable|disable autoSupportRemoteDiagコマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは、サポートデータを要求して問題をリモートで診断できます。 
+summary: SMcli の enable/disable autoSupportRemoteDiag コマンドは、AutoSupport リモート診断機能をオンまたはオフにします。この機能により、テクニカルサポートは問題をリモートで診断するためのサポートデータを要求できます。 
 ---
 = EMW管理ドメインレベルでAutoSupportリモート診断機能を有効または無効にする（SMcliのみ） - SANtricity CLI
 :allow-uri-read: 

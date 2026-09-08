@@ -2,7 +2,7 @@
 permalink: commands-a-z/smcli-enable-disable-autosupportondemand.html 
 sidebar: sidebar 
 keywords: enable, disable, autosupport, ondemand, feature, emw, management, domain, level, smcli 
-summary: SMcli enable | disable autoSupportOnDemandコマンドは、AutoSupport OnDemand機能をオンまたはオフにします。この機能を使用すると、テクニカルサポートはAutoSupport データ送信を調整でき、不足しているサポートデータの再送信を要求できます。 
+summary: SMcli enable disable autoSupportOnDemand コマンドは、AutoSupport OnDemand 機能をオンまたはオフにします。この機能により、テクニカルサポートは AutoSupport データ送信を調整し、不足しているサポートデータの再送信を要求することができます。 
 ---
 = EMW管理ドメインレベルでAutoSupport OnDemand機能を有効化または無効化する（SMcliのみ） - SANtricity CLI
 :allow-uri-read: 
